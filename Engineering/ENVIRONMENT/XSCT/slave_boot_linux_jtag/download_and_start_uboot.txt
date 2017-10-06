@@ -1,0 +1,12 @@
+connect
+ta 2
+targets
+source c:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO/AXI_CDMA/axi_cdma_standalone.sdk/axi_cdma_wrapper_hw_platform_0/ps7_init.tcl
+ps7_init
+ps7_post_config
+dow c:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO/AXI_CDMA/ug1165-zynq-embedded-design-tutorial/PetalinuxImages/u-boot.elf
+con
+disconnect
+exit
+
+

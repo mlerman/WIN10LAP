@@ -1,0 +1,84 @@
+<h1>close or disconnect the console in the SDK</h1>
+<hr/>
+Copy du SDK avec jst run
+****** Xilinx Software Commandline Tool (XSCT) v2017.2.1
+  **** Build date : Aug  9 2017-16:50:25
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+XSDB Server URL: TCP:localhost:58600
+xsct% XSDB Server Channel: tcfchan#0
+xsct% INFO: [Hsi 55-1698] elapsed time for repository loading 2 seconds
+attempting to launch hw_server
+
+****** Xilinx hw_server v2017.2.1
+  **** Build date : Aug  9 2017-16:50:22
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+INFO: hw_server application started
+INFO: Use Ctrl-C to exit hw_server application
+
+
+
+****** Xilinx hw_server v2017.2.1
+
+  **** Build date : Aug  9 2017-16:50:22
+
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+
+INFO: hw_server application started
+
+INFO: Use Ctrl-C to exit hw_server application
+
+
+
+
+INFO: To connect to this hw_server instance use url: TCP:127.0.0.1:3121
+
+
+
+Info: ARM Cortex-A9 MPCore #1 (target 3) Stopped at 0xffffff34 (Suspended)
+Info: ARM Cortex-A9 MPCore #0 (target 2) Stopped at 0x3ff8e4f4 (Suspended)
+Info: ARM Cortex-A9 MPCore #0 (target 2) Stopped at 0x0 (Vector Catch)
+
+Downloading Program -- C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO/AXI_CDMA/axi_cdma_standalone.sdk/cdma_app/Debug/cdma_app.elf
+	section, .text: 0x00100000 - 0x001109d7
+	section, .init: 0x001109d8 - 0x001109ef
+	section, .fini: 0x001109f0 - 0x00110a07
+	section, .rodata: 0x00110a08 - 0x00111237
+	section, .data: 0x00111238 - 0x00112293
+	section, .eh_frame: 0x00112294 - 0x00112297
+	section, .mmu_tbl: 0x00114000 - 0x00117fff
+	section, .ARM.exidx: 0x00118000 - 0x00118007
+	section, .init_array: 0x00118008 - 0x0011800b
+	section, .fini_array: 0x0011800c - 0x0011800f
+	section, .bss: 0x00118010 - 0x0011a4b7
+	section, .heap: 0x0011a4b8 - 0x0011c4bf
+	section, .stack: 0x0011c4c0 - 0x0011fcbf
+
+  0%    0MB   0.0MB/s  ??:?? ETA
+ 33%    0MB   0.1MB/s  ??:?? ETA
+ 66%    0MB   0.1MB/s  ??:?? ETA
+ 99%    0MB   0.1MB/s  ??:?? ETA
+100%    0MB   0.1MB/s  00:01    
+
+Setting PC to Program Start Address 0x00100000
+Successfully downloaded C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO/AXI_CDMA/axi_cdma_standalone.sdk/cdma_app/Debug/cdma_app.elf
+Info: ARM Cortex-A9 MPCore #0 (target 2) Running
+<hr/>
+je ne sais pas comment faire un script xsct sous windows.
+<hr>
+<img src="scr6.png"> 
+<hr> 
+<img src="scr5.png"> 
+<hr> 
+<img src="scr4.png"> 
+<hr> 
+<img src="scr3.png"> 
+<hr> 
+<img src="scr2.png"> 
+<hr> 
+<img src="scr1.png"> 
+<hr> 
