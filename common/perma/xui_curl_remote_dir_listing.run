@@ -1,0 +1,13 @@
+rem echo %TARGETDIR%
+rem remove C:\
+set TARGETDIR=%TARGETDIR:C:\=%
+set TARGETDIR=%TARGETDIR:\=/%
+rem echo %TARGETDIR%
+
+rem test if need proxy or not
+rem C:\"Program Files"\cURL\bin\curl -U mlerman:past33N. -x http://fmproxy.micron.com:8080 ftp://mldav:normerel@siliconkit.com/micronsov/%TARGETDIR% -o list.html
+
+rem no proxy does not work!
+C:\"Program Files"\cURL\bin\curl ftp://mldav:normerel@siliconkit.com/micronsov/%TARGETDIR% -o list.html
+
+start list.html

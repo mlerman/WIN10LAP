@@ -1,0 +1,2 @@
+echo http://%HOST%%URLDIR%> clipb.txt
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe  clipboard readfile clipb.txt

@@ -1,0 +1,11 @@
+echo %DATE%
+echo %TIME%
+set datetimef=%date:~-4%_%date:~3,2%_%date:~0,2%__%time:~0,2%_%time:~3,2%_%time:~6,2%
+echo %datetimef% zipfolderErr.bat %0 7za.exe a -tzip -mx0 %1 %2 %3 %4 >> list
+
+rem problem recurent dans access log je ne sais pas d'ou ca vient. avec fname == ""
+rem j'ai fait un hack pour enlever ce cas dans zipfolder.php
+rem fe80::a99d:7aa3:484f:c53c - - [11/Jan/2016:15:09:57 -0800] "GET /mlscript/zipfolder.php?fname=&targetdir=C:\\UniServer\\www HTTP/1.0" 200 - "-" "-"
+
+
+
