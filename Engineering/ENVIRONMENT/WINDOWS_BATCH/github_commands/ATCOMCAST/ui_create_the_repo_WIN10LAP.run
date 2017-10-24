@@ -7,7 +7,7 @@ git init
 git add README.md
 git commit -m "Creation of the root"
 
-curl -u mlerman:normerel14 https://api.github.com/user/repos -d "{\"name\" : \"%REPONAME%\"}"
+curl -u mlerman:compagniePI https://api.github.com/user/repos -d "{\"name\" : \"%REPONAME%\"}"
 
 git remote add origin https://github.com/mlerman/%REPONAME%.git
 git push -u origin master
