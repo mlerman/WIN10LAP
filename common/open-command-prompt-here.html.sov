@@ -1247,7 +1247,9 @@ if($CurrOS!="Linux")
 &nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="shorturl" onclick="window.open('/s/?code=<?php echo $code; ?>','shortenanurl','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/url_in_code.png" title="Add short URL in source code" /></a>
 &nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="shorturl" onclick="window.open('/doc/files/common/webconsole.php?HOME_DIRECTORY=<?php echo $proj_dir;?>','shortenanurl','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/command_promt-16.png" title="Console Windows" /></a>
 &nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="shorturl" onclick="window.open('http://mlerman-vm-mint/doc/files/common/webconsole.php?HOME_DIRECTORY=<?php echo $proj_dir_lin;?>','shortenanurl','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/command_promt-16.png" title="Console Linux" /></a>
+&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="shorturl" onclick="window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/eXtplorer/index.php?lang=english&homedir=<?php echo $proj_dir;?>','shortenanurl','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/extplorer16.png" title="Add short URL in source code" /></a>
 &nbsp;<span><?php if (file_exists($dir."/.outtop")) { echo file_get_contents($dir."/.outtop");} ?></span>
+
 <br/>
 <fieldset style="float: left;">
 
@@ -1554,7 +1556,7 @@ fclose($handle);
 <?php echo file_get_contents($proj_dir."/.recentedit"); ?>
 
 <?php
-if($CurrOS!="Windows 7")
+if($CurrOS=="Linux")
 {
 ?>
 <script>
@@ -2394,6 +2396,9 @@ for (i = 0; i < listItemAnchors.length; i++) {
 	if(s.indexOf("github.com/mlerman") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/images/github-sociocon.png' title='"+s+"'/>";
 	  }
+	if(s.indexOf("github_win10lap") > -1) {
+	  listItemAnchors[i].innerHTML="<img src='/doc/images/github-sociocon.png' title='"+s+"'/>";
+	  }
 	if(s.indexOf("git_create_repo") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/images/github-plus.png' title='"+s+"'/>";
 	  }
@@ -2402,6 +2407,12 @@ for (i = 0; i < listItemAnchors.length; i++) {
 	  }
 	if(s.indexOf("git_upload") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/images/github-up.png' title='"+s+"'/>";
+	  }
+	if(s.indexOf("ui_push_to_github") > -1) {
+	  listItemAnchors[i].innerHTML="<img src='/doc/images/github-up.png' title='"+s+"'/>";
+	  }
+	if(s.indexOf("force_push_to_github") > -1) {
+	  listItemAnchors[i].innerHTML="<img src='/doc/images/github-fup.png' title='"+s+"'/>";
 	  }
 	if(s.indexOf("set_env_var") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/images/env-varable.png' title='"+s+"'/>";
@@ -2539,6 +2550,12 @@ for (i = 0; i < listItemAnchors.length; i++) {
 	if(s.indexOf("ui_minimenu_always_on_top.run") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/images/minib.png' title='"+s+"'/>";
 	  }
+	if(s.indexOf("ui_archive.run") > -1) {
+	  listItemAnchors[i].innerHTML="<img src='/doc/images/archive48.png' title='"+s+"'/>";
+	  }
+	if(s.indexOf("ui_reset_processor.run") > -1) {
+	  listItemAnchors[i].innerHTML="<img src='/doc/images/Reset_button48.png' title='"+s+"'/>";
+	  }
 
 
 }
@@ -2673,16 +2690,16 @@ echo("</script>\n");
 
 
 
-<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/common/open-command-prompt-here.html");  return false;'><img src="/doc/images/text.png" title="open-command-prompt-here.html"/></a>&nbsp; 
+<!--a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/common/open-command-prompt-here.html");  return false;'><img src="/doc/images/text.png" title="open-command-prompt-here.html"/></a-->&nbsp; 
 <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/doc/files/common/open-command-prompt-here.html");  return false;'><img src="/doc/images/text.png" title="open-command-prompt-here.html"/></a>&nbsp; 
 <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/doc/files/common/downloadfile.php");  return false;'><img src="/doc/images/text.png" title="downloadfile.php"/></a>&nbsp; 
 <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/doc/files/common/downloadfile.php");  return false;'><img src="/doc/images/text.png" title="downloadfile.php"/></a>&nbsp; 
 <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/doc/files/common/instantedithead.js");  return false;'><img src="/doc/images/text.png" title="instantedithead.js"/></a>&nbsp; 
 <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/doc/files/common/updatehead.php");  return false;'><img src="/doc/images/text.png" title="updatehead.php"/></a>&nbsp; 
-<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/viewfile/view.php");  return false;'><img src="/doc/images/text.png" title="view.php"/></a>&nbsp; 
-<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/viewfile/viewdos.php");  return false;'><img src="/doc/images/text.png" title="viewdos.php"/></a>&nbsp; 
+<!--a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/viewfile/view.php");  return false;'><img src="/doc/images/text.png" title="view.php"/></a>&nbsp; 
+<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/viewfile/viewdos.php");  return false;'><img src="/doc/images/text.png" title="viewdos.php"/></a-->&nbsp; 
 <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/doc/files/common/write_ckfile.php");  return false;'><img src="/doc/images/text.png" title="write_ckfile.php"/></a>&nbsp; 
-
+<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/doc/files/common/psexec.php");  return false;'><img src="/doc/images/text.png" title="psexec.php"/></a>&nbsp; 
 <iframe id="other" src="/doc/files/common/othersites.php?urldir=<?php echo $urldir; ?>" />
 <br/><br/><br/>
 

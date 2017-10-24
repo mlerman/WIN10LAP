@@ -1,8 +1,0 @@
-
-AddType text/html .html
-AddOutputFilter INCLUDES .html
-
-Options +Includes
-
-AddType application/x-httpd-php .html
-
