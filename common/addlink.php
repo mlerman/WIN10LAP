@@ -4,7 +4,8 @@ $url=$_GET['url'];
 echo "url=".$url."<br/>";
 $parent=$_GET['parent'];
 echo "parent=".$parent."<br/>\n";
-$linkfile=realpath("..")."/doc/files".$parent.".links";
+//$linkfile=realpath("..")."/doc/files".$parent.".links";
+$linkfile="c:/UniServer/www/doc/files".$parent.".links";
 echo "linkfile=".$linkfile."<br/>\n";
 
 // check if it does not start with http:// or https://
