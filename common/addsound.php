@@ -13,7 +13,8 @@ $targetdir=substr($path,0,$pos+1);
 echo "targetdir=".$targetdir."<br/>\n";
 
 //echo realpath("..")."<br/>\n";;
-$sound=realpath("..")."/doc/files".$parent.".sound";
+//$sound=realpath("..")."/doc/files".$parent.".sound";
+$sound="c:/UniServer/www/doc/files".$parent.".sound";
 echo ".sound path=".$sound."<br/>\n";
 
 $fname="ui_edit_this.run";
