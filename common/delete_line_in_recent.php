@@ -2,7 +2,7 @@
 //echo "line=".$_GET["line"]." current dir=".getcwd();
 //file_put_contents("debug.txt", "delete_line_in_recent_php line=".$_GET["line"]);
 // set file to read 
-$file = '../local/recent.txt'; 
+$file = 'c:/UniServer/www/local/recent.txt'; 
 // open file 
 $fh = fopen($file, 'r') or die('Could not open file: '.$file); 
 
