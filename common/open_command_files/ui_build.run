@@ -1,0 +1,5 @@
+@echo off
+cls
+echo Enter below the command to build this project
+c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\WINDOWS_BATCH\mousePause\mp.bat "Click 'OK' to exit [X]"
+
