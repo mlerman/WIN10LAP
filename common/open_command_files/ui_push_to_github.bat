@@ -19,7 +19,9 @@ echo current directory name: %currentfolder%
 cd c:\UniServer\www\doc\files\
 rem goto test
 
-#git config --global http.proxy proxy:8080
+rem git config --global http.proxy proxy:8080
+git config --global --unset http.proxy
+
 git config --global user.email "michael_lerman@yahoo.com"
 git config --global user.name "Mikhael Lerman"
 
