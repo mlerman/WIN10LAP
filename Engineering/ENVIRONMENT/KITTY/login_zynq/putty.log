@@ -1,17 +1,10 @@
-=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2017.10.06 16:58:08 =~=~=~=~=~=~=~=~=~=~=~=
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2017.10.09 14:20:27 =~=~=~=~=~=~=~=~=~=~=~=
 root
 Password: 
-login[2648]: root login on 'ttyPS0'
+login[939]: root login on 'ttyPS0'
 root@Xilinx-ZC702-2014_4:~# 
 root@Xilinx-ZC702-2014_4:~# 
-root@Xilinx-ZC702-2014_4:~# 
-root@Xilinx-ZC702-2014_4:~# ifconfig eth0
-eth0      Link encap:Ethernet  HWaddr 00:0A:35:00:1C:47  
-          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-          RX packets:708 errors:229 dropped:229 overruns:0 frame:0
-          TX packets:2559 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1000 
-          RX bytes:57677 (56.3 KiB)  TX bytes:874422 (853.9 KiB)
-          Interrupt:54 Base address:0xb000 
-
+root@Xilinx-ZC702-2014_4:~# random: nonblocking pool is initialized
+ifconfig eth0 netmask 255.255.255.0
+ifconfig: SIOCSIFNETMASK: Cannot assign requested address
 root@Xilinx-ZC702-2014_4:~# 
