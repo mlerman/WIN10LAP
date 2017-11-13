@@ -19,6 +19,7 @@ echo current directory name: %currentfolder%
 
 cd c:\UniServer\www\doc\files\
 
+#git config --global http.proxy proxy:8080
 git config --global user.email "michael_lerman@yahoo.com"
 git config --global user.name "Mikhael Lerman"
 
