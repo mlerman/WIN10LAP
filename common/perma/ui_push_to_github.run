@@ -20,7 +20,7 @@ cd c:\UniServer\www\doc\files\
 git add -A %THISPLACEBACKSLASH%\
 git remote set-url origin https://mlerman@github.com/mlerman/%REPONAME%.git
 rem git status
-git commit -m "commit for %currentfolder% project"
+git commit -m "commit for %currentfolder% project from %COMPUTERNAME%"
 rem echo username hint: ati, password hint: nrl14
 git push origin master
 

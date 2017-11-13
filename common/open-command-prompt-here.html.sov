@@ -1239,6 +1239,12 @@ if($CurrOS!="Linux")
 &nbsp;<a href="/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/" target="chartime" onclick="javascript:void window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/','1481656702602','width=800,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/copyclip.png" title="frequent copy paste" /></a>
 &nbsp;<a href="#" id="lastrecentproj" onmouseover="getLastProject();" title="most recent project not set"><img src="/doc/images/recent16.png"  /></a>
 &nbsp;<a href="<?php echo $urldir; ?>"><img src="/doc/images/chrome16.png" title="index.html" /></a>
+<?php
+//$githuburl=$urldir;
+//$githuburl=str_replace("/doc/files/","",$githuburl);
+$githuburl="https://github.com/mlerman/WIN10LAP/tree/master".$display_link;
+?>
+&nbsp;<a href="<?php echo $githuburl; ?>"><img src="/doc/images/github16.png" title="show in github" /></a>
 <?php if (file_exists($dir."/.code")) { 
   $code = file_get_contents($dir."/.code");} 
   $code = str_replace("\\","\\\\",$code);
@@ -1247,7 +1253,11 @@ if($CurrOS!="Linux")
 &nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="shorturl" onclick="window.open('/s/?code=<?php echo $code; ?>','shortenanurl','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/url_in_code.png" title="Add short URL in source code" /></a>
 &nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="shorturl" onclick="window.open('/doc/files/common/webconsole.php?HOME_DIRECTORY=<?php echo $proj_dir;?>','shortenanurl','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/command_promt-16.png" title="Console Windows" /></a>
 &nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="shorturl" onclick="window.open('http://mlerman-vm-mint/doc/files/common/webconsole.php?HOME_DIRECTORY=<?php echo $proj_dir_lin;?>','shortenanurl','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/command_promt-16.png" title="Console Linux" /></a>
-&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="shorturl" onclick="window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/eXtplorer/index.php?lang=english&homedir=<?php echo $proj_dir;?>','shortenanurl','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/extplorer16.png" title="Add short URL in source code" /></a>
+&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="shorturl" onclick="window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/eXtplorer/index.php?lang=english&homedir=<?php echo $proj_dir;?>','shortenanurl','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/extplorer16.png" title="ExtPlorer" /></a>
+
+&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="pullpush" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/ui_push_to_github.bat','pullpush','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/github_dn16.png" title="Github pull" /></a>&nbsp;
+&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="pullpush" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/ui_push_to_github.bat','pullpush','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/github_up16.png" title="Github push" /></a>&nbsp;
+
 &nbsp;<span><?php if (file_exists($dir."/.outtop")) { echo file_get_contents($dir."/.outtop");} ?></span>
 
 <br/>
@@ -1464,8 +1474,12 @@ if(cmdin.indexOf("new ") == 0) {
 return true;
 }
 
+
+
 function OnButtonRun()
 {
+	window.open('', 'runThisOnServer', 'width=600,height=800,resizeable,scrollbars');
+	document.fform.target = 'runThisOnServer';
     document.fform.action = "prompt-action.php"
     document.fform.submit();             // Submit the page
     return true;
@@ -1677,11 +1691,30 @@ if ($handle = opendir($dir)) {
 ?>
 </div>
 <a name="view"></a>
+<script>
+function open_div_in_window()
+{
+var divText = document.getElementById("lightbluediv").outerHTML;
+var divWindow = window.open('','','toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, directories=no, status=no, width=550, height=650');
+var doc = divWindow.document;
+doc.open();
+doc.write(divText);
+doc.close();
+}
+</script>
 <!-- http://mlerman-lap/s/1t -->
 <table width="100%">
   <tr>
     <td><hr /></td>
-    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><img src="/doc/images/up.png" onclick="window.scrollTo(0, 0);" style="cursor:pointer" title="Scroll all the way up">&nbsp;<a href="#view"><img src="/doc/images/eye.gif"></a>&nbsp;<a href="#feu"><img src="/doc/images/link-icon.gif" onclick="location.reload(true);"></a>&nbsp;<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<span class="winlink" ><strong>Interactive windows batch files in this &#34;<script>document.write("<?php echo $prjname; ?>");</script>&#34; project </strong><small>(download and run local)</small>&nbsp;<input size="6" id="addf" value="ui_test.run"/><a href="#" onclick="AddFile('addf');"><img src="/doc/images/add_file.png"></a>  
+    <td style="width:1px; padding: 0 10px; white-space: nowrap;">
+		<img src="/doc/images/up.png" onclick="window.scrollTo(0, 0);" style="cursor:pointer" title="Scroll all the way up">
+		&nbsp;<a href="#view"><img src="/doc/images/eye.gif"></a>&nbsp;<a href="#feu"><img src="/doc/images/link-icon.gif" onclick="location.reload(true);"></a>
+	    &nbsp;<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />
+		<img src="/doc/images/detach16.gif" onclick="open_div_in_window();">
+		&nbsp;<span class="winlink" >
+		<strong>Interactive windows batch files in this &#34;<script>document.write("<?php echo $prjname; ?>");</script>&#34; project </strong>
+		<small>(download and run local)</small>
+		&nbsp;<input size="6" id="addf" value="ui_test.run"/><a href="#" onclick="AddFile('addf');"><img src="/doc/images/add_file.png"></a>  
         <div class="checkbox_wrapper">
             <input type="checkbox" class="cd_box" name=".ckcd" <?php echo file_get_contents($proj_dir."/.ckcd"); ?> onclick="getFileFromServer('/doc/files/common/write_ckfile.php?target=<?php echo $proj_dir."/.ckcd"; ?>&value='+this.checked, function(text){ show_write(text)}); location.reload(true);"/>
             <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd</label>
@@ -1750,7 +1783,7 @@ if ($handle = opendir($dir)) {
   </tr>
 </table>
 <!-- http://mlerman-lap/s/S -->
-<div class="newspaper" style="background-color: lightblue; opacity: 0.6">
+<div class="newspaper" style="background-color: lightblue; opacity: 0.6" id="lightbluediv">
 <?php
 if($CurrOS=="Linux") echo "<small>Disabled because you are using ".$CurrOS."</small><br/>";
 $dirperma="perma";
@@ -2403,13 +2436,16 @@ for (i = 0; i < listItemAnchors.length; i++) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/images/github-plus.png' title='"+s+"'/>";
 	  }
 	if(s.indexOf("git_download") > -1) {
-	  listItemAnchors[i].innerHTML="<img src='/doc/images/github-down.png' title='"+s+"'/>";
+	  listItemAnchors[i].innerHTML="<img src='/doc/images/github-fdown.png' title='"+s+"'/>";
 	  }
 	if(s.indexOf("git_upload") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/images/github-up.png' title='"+s+"'/>";
 	  }
 	if(s.indexOf("ui_push_to_github") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/images/github-up.png' title='"+s+"'/>";
+	  }
+	if(s.indexOf("ui_pull_from_github") > -1) {
+	  listItemAnchors[i].innerHTML="<img src='/doc/images/github-down.png' title='"+s+"'/>";
 	  }
 	if(s.indexOf("force_push_to_github") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/images/github-fup.png' title='"+s+"'/>";
@@ -2556,6 +2592,9 @@ for (i = 0; i < listItemAnchors.length; i++) {
 	if(s.indexOf("ui_reset_processor.run") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/images/Reset_button48.png' title='"+s+"'/>";
 	  }
+	if(s.indexOf("ui_open_jtagterminal") > -1) {
+	  listItemAnchors[i].innerHTML="<img src='/doc/images/jtagterminal.png' title='"+s+"'/>";
+	  }
 
 
 }
@@ -2690,6 +2729,7 @@ echo("</script>\n");
 
 
 
+<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/doc/files/common/permalinux/mntFiles.rn");  return false;'><img src="/doc/images/text.png" title="mntFiles.rn"/></a>&nbsp; 
 <!--a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/common/open-command-prompt-here.html");  return false;'><img src="/doc/images/text.png" title="open-command-prompt-here.html"/></a-->&nbsp; 
 <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/doc/files/common/open-command-prompt-here.html");  return false;'><img src="/doc/images/text.png" title="open-command-prompt-here.html"/></a>&nbsp; 
 <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/doc/files/common/downloadfile.php");  return false;'><img src="/doc/images/text.png" title="downloadfile.php"/></a>&nbsp; 
