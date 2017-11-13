@@ -17,6 +17,10 @@ echo current directory name: %currentfolder%
 
 
 cd c:\UniServer\www\doc\files\
+
+rem git config --global http.proxy proxy:8080
+git config --global --unset http.proxy
+
 git add -A %THISPLACEBACKSLASH%\
 git remote set-url origin https://mlerman@github.com/mlerman/%REPONAME%.git
 rem git status

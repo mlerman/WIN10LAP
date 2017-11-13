@@ -17,7 +17,6 @@ for %%a in (.) do set currentfolder=%%~na
 echo current directory name: %currentfolder%
 
 cd c:\UniServer\www\doc\files\
-rem goto test
 
 rem git config --global http.proxy proxy:8080
 git config --global --unset http.proxy
