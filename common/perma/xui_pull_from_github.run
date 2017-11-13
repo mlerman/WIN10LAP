@@ -15,8 +15,13 @@ echo REPONAME=%REPONAME%
 for %%a in (.) do set currentfolder=%%~na
 echo current directory name: %currentfolder%
 
-
+echo on
 cd c:\UniServer\www\doc\files\
+
+git config --global http.proxy proxy:8080
+git config --global user.email "michael_lerman@yahoo.com"
+git config --global user.name "Mikhael Lerman"
+
 git add -A %THISPLACEBACKSLASH%\
 git remote set-url origin https://mlerman@github.com/mlerman/%REPONAME%.git
 rem git status
