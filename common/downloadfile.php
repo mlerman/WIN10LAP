@@ -211,11 +211,13 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
   $text.=$textbat;
 
   $text.="\n# ======= add auto delete =======\n";
-  $text.='rm -- "$0"'."\n";
+  $text.='#rm -- "$0"'."\n";
 
   //file_put_contents($fname, $text);
   if($CurrOS=='Linux') {
     header('Content-type: "application/octet-stream"');
+    //header('Content-type: "application/x-shellscript"');
+
   } else {	// this must be android
     header('Content-type: "text/x-shellscript"');		// this tells Android with what to open this file
 														// to prevent the error message: "can't open file"
@@ -265,7 +267,8 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
   $text.="rem Interactive batch file from ".$_SERVER["HTTP_HOST"]."\r\n";
   $text.="rem running ".$fname."\r\n";
   $text.="rem perma is ".$perma."\r\n";
-  $text.="rem Change directory to ".$targetdirxp." is added by the server script.\r\n";
+  //$text.="rem Change directory to ".$targetdirxp." is added by the server script.\r\n";
+  $text.="rem Change directory added by the server script.\r\n";
   $text.="set HOST=".$host."\r\n";
   $text.="set URLDIR=".$urldir."\r\n";
   $text.="set TARGETDIR=".$targetdirxp."\r\n";

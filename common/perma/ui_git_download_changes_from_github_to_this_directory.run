@@ -28,15 +28,6 @@ echo REPONAME=%REPONAME%
 for %%a in (.) do set currentfolder=%%~na
 echo current directory name: %currentfolder%
 
-rem cd c:\UniServer\www\doc\files\
-rem echo current dir is %cd%
-rem git remote set-url origin https://mlerman@github.com/mlerman/%REPONAME%.git
-rem git fetch
-rem echo execute git checkout HEAD %THISPLACESLASH%/ mais ne fait rien ???
-rem git checkout -f HEAD %THISPLACESLASH%/
-rem returning to the directory
-rem cd %THISDIR%
-
 echo downloading the directory form github into folder from_github_repo
 rem return json
 if exist from_github_repo rd /q /s from_github_repo

@@ -18,8 +18,22 @@ echo current directory name: %currentfolder%
 
 cd c:\UniServer\www\doc\files\
 
-rem git config --global http.proxy proxy:8080
-git config --global --unset http.proxy
+if "%COMPUTERNAME%" == "LAPTOP-7KQRMTC0" ( echo this is LAPTOP-7KQRMTC0 WIN10LAP
+  echo user is mlerman
+  git config --global --unset http.proxy
+)
+
+if "%COMPUTERNAME%" == "WIN7-PC" ( echo this is WIN7-PC 
+  echo user is mlerman
+  git config --global --unset http.proxy
+)
+
+if "%COMPUTERNAME%" == "XSJMIKHAELL30" ( echo this is XSJMIKHAELL30 
+  echo user is mikhaell
+  git config --global http.proxy proxy:8080
+)
+
+
 
 git config --global user.email "michael_lerman@yahoo.com"
 git config --global user.name "Mikhael Lerman"
