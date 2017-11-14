@@ -35,14 +35,22 @@ if not exist from_github_repo md from_github_repo
 cd from_github_repo
 if exist output.json del output.json /Q
 
+set PROXYARG=
+if "%COMPUTERNAME%" == "XSJMIKHAELL30" ( echo this is XSJMIKHAELL30 
+  echo user is mikhaell
+  set PROXYARG=-x proxy:8080
+)
+
+echo PROXYARG is %PROXYARG%
+
 rem c:\"Program Files"\cURL\bin\curl.exe  -H 'Accept: application/vnd.github.v3.raw' -O -L -o output.json https://api.github.com/repos/mlerman/WIN10LAP/contents/%THISPLACESLASH%/
-c:\UniServer\www\doc\files\ThisPC\install_curl_static\curl.exe -H 'Accept: application/vnd.github.v3.raw' -O -L -o output.json https://api.github.com/repos/mlerman/WIN10LAP/contents/%THISPLACESLASH%/
+c:\UniServer\www\doc\files\ThisPC\install_curl_static\curl.exe %PROXYARG% -H 'Accept: application/vnd.github.v3.raw' -O -L -o output.json https://api.github.com/repos/mlerman/WIN10LAP/contents/%THISPLACESLASH%/
 
 rem type output.json
 c:\UniServer\www\doc\files\ThisPC\install_jq\jq-win64.exe ".[] | .download_url" output.json > durl.txt
 rem type durl.txt
 FOR /F "tokens=*" %%i in (durl.txt) DO ( echo %%i
-c:\UniServer\www\doc\files\ThisPC\install_curl_static\curl.exe -O %%i
+c:\UniServer\www\doc\files\ThisPC\install_curl_static\curl.exe %PROXYARG% -O %%i
 )
 del durl.txt /Q
 del output.json /Q
