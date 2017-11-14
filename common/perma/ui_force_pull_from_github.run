@@ -39,7 +39,7 @@ git remote set-url origin https://mlerman@github.com/mlerman/%REPONAME%.git
 rem git status
 git commit -m "commit for %currentfolder% project from %COMPUTERNAME%"
 rem echo username hint: ati, password hint: nrl14
-git pull -f origin master
+git pull -f origin master --allow-unrelated-histories
 
 rem returning to the directory
 cd %THISDIR%
