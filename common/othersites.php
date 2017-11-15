@@ -2,7 +2,7 @@
 $link =  "//$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 //   //mlerman-lap/doc/files/Engineering/ENVIRONMENT/NODE/fill_sd_ajax/open-command-prompt-here.html
 $escaped_link = htmlspecialchars($link, ENT_QUOTES, 'UTF-8');
-$pos=strpos($escaped_link,"/doc/files");
+$pos=strrpos($escaped_link,"/doc/files");
 //   //mlerman-lap/doc/files/Engineering/ENVIRONMENT/NODE/fill_sd_ajax/open-command-prompt-here.html
 //                ^ = 13                                              ^ = -30
 
@@ -10,12 +10,13 @@ $pos=strpos($escaped_link,"/doc/files");
 //   //mlerman-lap/common/othersites.php?urldir=/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/open-command-prompt-here/
                                           //    ^ 43                                                                   
 $dir_loc=substr($escaped_link, $pos, -1);
+file_put_contents("debug.txt",$dir_loc."\n", FILE_APPEND);
 
 $clienthost = gethostbyaddr($_SERVER['REMOTE_ADDR']);
-//$clienthost = "mlerman-lap";								// hack temporaire
 $clienthost = str_replace(".micron.com", "", $clienthost);
-$clienthost = str_replace(".xilinx.com", "", $clienthost);
+$clienthost = str_replace(".xlnx.xilinx.com", "", $clienthost);
 $clienthost = strtolower($clienthost);
+
 ?>
 
 &nbsp;<a href="http://<?php echo $clienthost.$dir_loc; ?>/open-command-prompt-here.html" id="homelink" target="_parent"><img src="/doc/images/home.png" title="Go to <?php echo $clienthost; ?>" id="hometitle"/></a>
@@ -27,7 +28,6 @@ $clienthost = strtolower($clienthost);
 
 function http_response($url){
     $resURL = curl_init(); 
-	if(!$result) file_put_contents("error.txt",'curl_init failed'."\n", FILE_APPEND);
     curl_setopt($resURL, CURLOPT_URL, $url); 
     curl_setopt($resURL, CURLOPT_BINARYTRANSFER, 1); 
     curl_setopt($resURL, CURLOPT_HEADERFUNCTION, 'curlHeaderCallback'); 
