@@ -14,6 +14,7 @@ $dir_loc=substr($escaped_link, $pos, -1);
 $clienthost = gethostbyaddr($_SERVER['REMOTE_ADDR']);
 //$clienthost = "mlerman-lap";								// hack temporaire
 $clienthost = str_replace(".micron.com", "", $clienthost);
+$clienthost = str_replace(".xilinx.com", "", $clienthost);
 $clienthost = strtolower($clienthost);
 ?>
 
@@ -21,8 +22,12 @@ $clienthost = strtolower($clienthost);
 
 <?php
 
+//Go to your php.ini file and remove the ; mark from the beginning of the following line:
+//;extension=php_curl.dll
+
 function http_response($url){
     $resURL = curl_init(); 
+	if(!$result) file_put_contents("error.txt",'curl_init failed'."\n", FILE_APPEND);
     curl_setopt($resURL, CURLOPT_URL, $url); 
     curl_setopt($resURL, CURLOPT_BINARYTRANSFER, 1); 
     curl_setopt($resURL, CURLOPT_HEADERFUNCTION, 'curlHeaderCallback'); 
@@ -30,19 +35,19 @@ function http_response($url){
     curl_exec ($resURL); 
     $intReturnCode = curl_getinfo($resURL, CURLINFO_HTTP_CODE); 
     curl_close ($resURL); 
+
     if ($intReturnCode != 200 && $intReturnCode != 302 && $intReturnCode != 304) { return false; } else return true;
 }
 
 //echo "urldir : ".$_GET['urldir']."<br/>";
 
 $urldir=$_GET['urldir'];
-$othersites = file('../local/allsites.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+$othersites = file('./allsites.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
 //print_r ($othersites);
 
 foreach ($othersites as $value) {
 	$url_othersite=$value.$urldir."open-command-prompt-here.html";
-//echo $value.$urldir.'favicon.ico'."<br/>";
 	if(http_response($value.$urldir.'favicon.ico')) {
 		$tag_othersite='<img src="'.$value.$urldir.'favicon.ico" title="go to '.$value.'" height="16" width="16"/>';
 		echo '&nbsp;<a href="'.$url_othersite.'" target="_parent">'.$tag_othersite.'</a>';

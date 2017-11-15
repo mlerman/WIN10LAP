@@ -1,0 +1,2 @@
+curl_init failed
+curl_init failed
