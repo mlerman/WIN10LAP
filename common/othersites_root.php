@@ -14,8 +14,8 @@ function http_response($url){
 //echo "urldir : ".$_GET['urldir']."<br/>";
 
 $urldir=$_GET['urldir'];
-$othersites = file('../local/allsites.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-
+$othersites = file('./allsites.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+//file_put_contents("debug.txt","all get data : ".print_r($othersites, true)."\n", FILE_APPEND);
 //print_r ($othersites); echo "<br/>";
 
 
@@ -64,8 +64,8 @@ foreach ($othersites as $value) {
 		$i++;
 		
 		echo '<ul id="CM'.$i.'" class="SimpleContextMenu">'."\n";
-		echo '<li><a href="'.$value.'/mlscript/downloadfile.php?fname=ui_tightvnc_remote.run&targetdir=C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\WINDOWS_BATCH\associate_extension&targetfile=associate_extension&urldir=/doc/files/Engineering/ENVIRONMENT/WINDOWS_BATCH/associate_extension/&host='.$host.'&perma=C:\UniServer\www\common\perma"><img src="../doc/images/tightvncs.png"/></a></li>'."\n";
-		echo '<li><a href="'.$value.'/doc/files/ThisPC/install_uniserver/prompt-action.php?cmd=update_from_anywhere.bat&rawdisplay=1" target="_blank"><img src="../doc/images/update-gear.png"/></a></li>'."\n";
+		echo '<li><a href="'.$value.'/mlscript/downloadfile.php?fname=ui_tightvnc_remote.run&targetdir=C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\WINDOWS_BATCH\associate_extension&targetfile=associate_extension&urldir=/doc/files/Engineering/ENVIRONMENT/WINDOWS_BATCH/associate_extension/&host='.$host.'&perma=C:\UniServer\www\common\perma"><img src="/doc/images/tightvncs.png" title="Remote connect"/></a></li>'."\n";
+		echo '<li><a href="'.$value.'/doc/files/ThisPC/install_uniserver/prompt-action.php?cmd=update_from_anywhere.bat&rawdisplay=1" target="_blank"><img src="/doc/images/update-gear.png" title="Update from here"/></a></li>'."\n";
 		echo '</ul>'."\n";
 
 
