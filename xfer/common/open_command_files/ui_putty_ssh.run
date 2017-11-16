@@ -1,9 +1,0 @@
-@echo off
-cls
-if exist putty.log del putty.log /Q
-call get_zedboard_IP.bat
-rem Zedboard
-rem start c:\UniServer\www\doc\files\ThisPC\putty\putty.exe -ssh root@%ZEDIP% -pw root
-rem Localhost
-start c:\UniServer\www\doc\files\ThisPC\putty\putty.exe -ssh mlerman@%ZEDIP% -pw normerel
-exit

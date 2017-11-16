@@ -1,3 +1,0 @@
-rem echo ^<a href=^"http://%HOST%%URLDIR%open-command-prompt-here.html^"^>ml^</a^>> clipb.txt
-rem c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe  clipboard readfile clipb.txt
-c:\UniServer\www\doc\files\ThisPC\clipAnchor\clipAnchor.exe "http://%HOST%%URLDIR%open-command-prompt-here.html"

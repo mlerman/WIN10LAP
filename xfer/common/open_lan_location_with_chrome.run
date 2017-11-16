@@ -1,9 +1,0 @@
-cls
-echo HOST=%HOST%
-echo URLDIR=%URLDIR%
-set udir=%URLDIR:~5%
-set udir=%udir:/=\%
-echo target=\\%HOST%\%udir%
-
-start C:\"Program Files (x86)"\Google\Chrome\Application\chrome.exe http://%HOST%%URLDIR%open-command-prompt-here.html
-

@@ -1,8 +1,0 @@
-call c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\WINDOWS_BATCH\mousePause\mp.bat "Are you sure? close terminal [X] to break"
-start /WAIT c:\UniServer\www\doc\files\ThisPC\install_notify-send\notify-send.exe -i important "Attention!" "The project %removedir% will delete"
-
-del *.* /Q /S
-set removedir=%cd%
-cd ..
-echo now in %cd%
-rd %removedir% /s /q

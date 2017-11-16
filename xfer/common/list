@@ -1,4 +1,0 @@
-2017_ 1_Sa__18_47_10 zipfolder.bat C:\UniServer\www\mlscript\zipfolder.bat 7za.exe a -tzip -mx0 _constructor.zip C:\UniServer\www\doc\files\test\_constructor   
-2017_ 1_Su__16_48_45 zipfolder.bat C:\UniServer\www\mlscript\zipfolder.bat 7za.exe a -tzip -mx0 _constructor.zip C:\UniServer\www\doc\files\test\_constructor   
-2017_ 1_Su__19_33_48 zipfolderErr.bat C:\UniServer\www\mlscript\zipfolderErr.bat 7za.exe a -tzip -mx0 C:\UniServer\www\doc\files\common    
-2017_ 1_Tu__17_33_12 zipfolder.bat C:\UniServer\www\mlscript\zipfolder.bat 7za.exe a -tzip -mx0 install_vmware.zip C:\UniServer\www\doc\files\ThisPC\install_vmware   

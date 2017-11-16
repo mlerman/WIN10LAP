@@ -1,6 +1,0 @@
-#xdotool windowunmap $(xdotool getwindowfocus)
-sleep 4 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin 
-sudo krusader --left=$LINDIRECTORY --right=$URLDIR
-sleep 5
-
-
