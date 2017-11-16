@@ -39,7 +39,7 @@ git config --global user.email "michael_lerman@yahoo.com"
 git config --global user.name "Mikhael Lerman"
 
 rem remove previous add
-git rm -r --cached c:\UniServer\www\doc\files\ 2>&1
+git rm -r --cached c:\UniServer\www\doc\files\ >nul
 rem add only this project and subdir
 git add -A %THISPLACEBACKSLASH%\ 2>&1
 git remote set-url origin https://mlerman@github.com/mlerman/%REPONAME%.git 2>&1
