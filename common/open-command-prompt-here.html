@@ -2438,7 +2438,10 @@ for (i = 0; i < listItemAnchors.length; i++) {
 	if(s.indexOf("git_download") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/images/github-fdown.png' title='"+s+"'/>";
 	  }
-	if(s.indexOf("git_upload") > -1) {
+	if(s.indexOf("ui_force_pull") > -1) {
+	  listItemAnchors[i].innerHTML="<img src='/doc/images/github-fdown.png' title='"+s+"'/>";
+	  }
+	if(s.indexOf("git_force_pullupload") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/images/github-up.png' title='"+s+"'/>";
 	  }
 	if(s.indexOf("ui_push_to_github") > -1) {
