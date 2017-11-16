@@ -36,13 +36,17 @@ if "%COMPUTERNAME%" == "XSJMIKHAELL30" ( echo this is XSJMIKHAELL30
 
 git add -A %THISPLACEBACKSLASH%\
 git remote set-url origin https://mlerman@github.com/mlerman/%REPONAME%.git
+
 rem git status
-
-git commit -m "commit for %currentfolder% project from %COMPUTERNAME%"
-git clean  -d  -fx .
-
+rem git commit -m "commit for %currentfolder% project from %COMPUTERNAME%"
+rem git clean  -d  -fx .
 rem echo username hint: ati, password hint: nrl14
-git pull -f origin master --allow-unrelated-histories
+
+git fetch origin
+git reset --hard origin/master
+git pull
+
+rem git pull -f origin master --allow-unrelated-histories
 
 rem returning to the directory
 cd %THISDIR%
