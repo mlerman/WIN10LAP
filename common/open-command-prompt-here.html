@@ -14,11 +14,17 @@ $pos=strpos($escaped_link_cut,"/doc/files");
 $host=$_SERVER[HTTP_HOST];
 $urldir=substr($display_link, $pos);										// /doc/files/Engineering/ENVIRONMENT/PHP_SERVER/open-command-prompt-here
 $display_link=substr($display_link, $pos+10);							// /Engineering/ENVIRONMENT/PHP_SERVER/open-command-prompt-here/
-$proj_dir=substr($_GET["reqfname"], 0, strrpos($_GET["reqfname"], "/"));  // C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/open-command-prompt-here
-$proj_dir_lin=str_replace("C:/UniServer/www/doc/","/home/user/",$proj_dir);
 
 //$dir=     substr($_GET["reqfname"], 0, strrpos($_GET["reqfname"], "/"));  // C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/open-command-prompt-here
 $dir="C:/UniServer/www/doc/files".substr($display_link, 0, -1);
+
+
+//$proj_dir=substr($_GET["reqfname"], 0, strrpos($_GET["reqfname"], "/"));  // C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/open-command-prompt-here
+$proj_dir=$dir;
+$proj_dir_lin=str_replace("C:/UniServer/www/doc/","/home/user/",$proj_dir);
+
+
+
 $urldirpapa=substr($urldir,0, strrpos(substr($urldir,0,-1),"/"));
 
 $clienthost = gethostbyaddr($_SERVER['REMOTE_ADDR']);
