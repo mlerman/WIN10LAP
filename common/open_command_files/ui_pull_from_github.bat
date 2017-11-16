@@ -37,6 +37,7 @@ if "%COMPUTERNAME%" == "XSJMIKHAELL30" ( echo this is XSJMIKHAELL30
 
 git config --global user.email "michael_lerman@yahoo.com"
 git config --global user.name "Mikhael Lerman"
+git config --global core.safecrlf false
 
 rem remove previous add
 git rm -r --cached c:\UniServer\www\doc\files\ >nul
