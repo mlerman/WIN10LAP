@@ -1,3 +1,0 @@
-c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe elevate cmd /K "net start vpnagent & exit"
-start C:\"Program Files (x86)"\Cisco\"Cisco AnyConnect Secure Mobility Client"\vpnui.exe
-

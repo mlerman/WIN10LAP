@@ -1,3 +1,0 @@
-sudo hwclock -s
-#read -p "Press [Enter] key to continue..." 
-notify-send "System clock synchronized with the hardware clock"

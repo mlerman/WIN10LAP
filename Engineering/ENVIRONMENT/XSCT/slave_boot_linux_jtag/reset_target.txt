@@ -1,8 +1,0 @@
-connect
-ta 2
-targets
-rst
-disconnect
-exit
-
-

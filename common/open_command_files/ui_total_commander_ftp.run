@@ -1,4 +1,0 @@
-@echo off
-cls
-echo Enter below the coresponding target locations
-start c:\totalcmd\TOTALCMD.EXE /O "%cd%/table.shtml" "ftp://mlroot:PASSWORD@siliconkit.com/fav/table.shtml"

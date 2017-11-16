@@ -1,1 +1,0 @@
-copy nircmdc.exe %windir% /Y

@@ -1,3 +1,0 @@
-copy ui_anyOS.run c:\UniServer\www\common\perma\ui_anyOS.run /Y
-copy ui_anyOS.run c:\UniServer\www\common\permalinux\ui_anyOS.rn /Y
-copy ui_anyOS.run ui_anyOS.rn /Y

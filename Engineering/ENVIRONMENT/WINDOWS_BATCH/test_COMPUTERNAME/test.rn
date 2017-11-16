@@ -1,5 +1,0 @@
-if [ "$HOSTNAME" = xsjmikhaell50 ]; then
-    printf '%s\n' "xsjmikhaell50 "
-else
-    printf '%s\n' "uh-oh, not on foo"
-fi
