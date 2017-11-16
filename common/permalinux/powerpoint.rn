@@ -1,0 +1,10 @@
+# minimize the window
+sleep 1 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin 
+
+#if [ ! -f new.odp ]; then
+  cp /home/user/files/Blank/blank.odp $$.odp
+#fi
+
+sudo xdg-open $$.odp
+sleep 15
+#read -p "Press [Enter] key to continue..."
