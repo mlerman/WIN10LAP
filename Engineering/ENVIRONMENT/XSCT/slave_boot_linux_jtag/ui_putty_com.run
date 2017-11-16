@@ -1,0 +1,46 @@
+@echo off
+cls
+
+tasklist /FI "IMAGENAME eq putty.exe" /FO CSV > searcho.log
+find /c "putty.exe" searcho.log >nul
+if %errorlevel% neq 0 goto endputty
+:puttyrunning
+echo putty is already running. Press enter to kill
+pause
+Taskkill /IM putty.exe /F
+:endputty
+del searcho.log
+echo putty is not running.
+
+
+del putty.log /Q
+echo Enter below a string that identifies the COM port device. Identify the string in the Device Manager.
+echo You can also use PARAM1 for that.
+rem set COMMANUFACTURER=JLink CDC UART
+rem set COMMANUFACTURER=USB Serial Port
+rem set COMMANUFACTURER=Gadget Serial
+set COMMANUFACTURER=Silicon Labs CP210x
+call get_param1.bat
+if NOT "%PARAM1%" == ""  set COMMANUFACTURER=%PARAM1% 
+echo %COMMANUFACTURER%
+c:\UniServer\www\doc\files\ThisPC\install_devcon\devcon.exe Find =Ports>list
+rem test if list contains "No matching devices found"
+find /c "No matching devices found" list
+if %errorlevel% equ 1 goto done
+type list
+rem pause
+c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\WINDOWS_BATCH\mousePause\mp.bat "Click 'OK' to exit [X]"
+goto fin
+:done
+findstr /C:"%COMMANUFACTURER%" list>list2
+type list2
+rem [part 1] c'est (COM
+rem [part 2] c'est le numero du port
+c:\UniServer\www\doc\files\ThisPC\install_sfk\sfk.exe extract list2 -text "/(COM*)/ set PUTTYCOMPORTNUMBER=[part 2]/" -tofile getportnumber.bat
+call getportnumber.bat
+start c:\UniServer\www\doc\files\ThisPC\putty\putty.exe -serial -sercfg 115200,8,n,1 com%PUTTYCOMPORTNUMBER%
+del getportnumber.bat /Q
+del list /Q
+del list2 /Q
+:fin
+exit
