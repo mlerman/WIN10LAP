@@ -10,7 +10,7 @@ $pos=strrpos($escaped_link,"/doc/files");
 //   //mlerman-lap/common/othersites.php?urldir=/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/open-command-prompt-here/
                                           //    ^ 43                                                                   
 $dir_loc=substr($escaped_link, $pos, -1);
-file_put_contents("debug.txt",$dir_loc."\n", FILE_APPEND);
+//file_put_contents("debug.txt",$dir_loc."\n", FILE_APPEND);
 
 $clienthost = gethostbyaddr($_SERVER['REMOTE_ADDR']);
 $clienthost = str_replace(".micron.com", "", $clienthost);
