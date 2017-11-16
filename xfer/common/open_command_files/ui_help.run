@@ -1,0 +1,4 @@
+@echo off
+cls
+echo Write below the command that display the help screen.
+c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\WINDOWS_BATCH\mousePause\mp.bat "Click 'OK' to exit [X]"

@@ -1,0 +1,5 @@
+#echo was : $URLDIR
+#echo now : ${URLDIR/\/home\/user\/files/\/doc\/files}
+#pause
+
+echo http://$HOST$URL| xsel -ib

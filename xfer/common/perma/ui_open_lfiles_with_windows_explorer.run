@@ -1,0 +1,26 @@
+echo HOST=%HOST%
+echo URLDIR=%URLDIR%
+set udir=%URLDIR:~5%
+set udir=%udir:/=\%
+rem echo target=\\%HOST%\%udir%
+
+net use \\MLERMAN-VM-MINT\lfiles normerel /user:WINNTDOM\mlerman
+set err=%errorlevel%
+echo err is %err%
+if "%err%" == "0" ( echo PASSES>.result
+set STRRESULT=Passes
+set ICON=info
+goto endresult
+)
+echo FAILED>.result
+set STRRESULT=Failed
+set ICON=error
+:endresult
+
+echo res %STRRESULT%
+echo Running %0 > lfiles.log
+echo result is %STRRESULT% >> lfiles.log
+
+rem pause
+start \\MLERMAN-VM-MINT\lfiles\
+start c:\UniServer\www\doc\files\ThisPC\install_notify-send\notify-send.exe -i favicon.ico "%STRRESULT%" "opening lfiles on mlerman-vm-mint\nSee details in lfiles.log"
