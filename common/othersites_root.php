@@ -14,7 +14,7 @@ function http_response($url){
 //echo "urldir : ".$_GET['urldir']."<br/>";
 
 $urldir=$_GET['urldir'];
-$othersites = file('./allsites.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+$othersites = file('c:/UniServer/www/local/allsites.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 //file_put_contents("debug.txt","all get data : ".print_r($othersites, true)."\n", FILE_APPEND);
 //print_r ($othersites); echo "<br/>";
 
