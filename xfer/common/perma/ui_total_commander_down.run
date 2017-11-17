@@ -1,0 +1,1 @@
+start c:\totalcmd\TOTALCMD.EXE /O "%TARGETDIR%" "%USERPROFILE%\Downloads"

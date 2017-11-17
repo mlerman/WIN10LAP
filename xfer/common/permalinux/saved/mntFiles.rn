@@ -1,0 +1,18 @@
+[ -f /home/user/files/Engineering/ENVIRONMENT/WINDOWS_BATCH/cloneThisUniserver/favicon.ico ] && echo "Already mounted" && notify-send "The shared folder 'files' is already mounted" && exit || echo "To be mounted"
+[ -d /home/user/files ] && echo 'Directory found' || sudo mkdir -p /home/user/files
+
+#echo "Enter Windows password"
+#read -s pass
+#sudo mount -t cifs -o username=mlerman,password=$pass,uid=mlerman,gid=users //mlerman-lap/files /home/user/files
+# was //mlerman-lap now //laptop-7kqrmtc0
+# was past33Z. now 2232
+# was //laptop-7kqrmtc0 //172.20.4.131
+# TODO il faut prendre ce qu'il y a dans l'url example http://172.20.4.145/mlscript/downloadfile.php?fname=mntFiles.rn etc
+# dans ce cas extraire 172.20.4.145
+
+#sudo mount -t cifs -o username=mlerman,password=2232,uid=mlerman,gid=users //$IHOST/files /home/user/files
+
+sudo mount.cifs -o username=mikhaell,password="miky est stupide past33X.",uid=mlerman,gid=users //$IHOST.xlnx.xilinx.com/files /home/user/files
+
+[ -f /home/user/files/Engineering/ENVIRONMENT/WINDOWS_BATCH/cloneThisUniserver/favicon.ico ] && echo "Just mounted now" && notify-send "The shared folder files is now mounted" && exit || echo "Pause"
+#read -p "Press [Enter] key to continue..."
