@@ -1,0 +1,7 @@
+connect
+ta 9
+fpga -f c:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO/ZU3/project_1.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+disconnect
+exit
+
+

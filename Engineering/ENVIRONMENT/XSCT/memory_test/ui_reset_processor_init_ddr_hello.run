@@ -1,0 +1,4 @@
+set XSCT=call c:\Xilinx\SDK\2017.2\bin\xsct.bat -quiet -interactive
+type reset_processor_init_ddr_hello.txt |  %XSCT%
+pause
+
