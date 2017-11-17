@@ -1,5 +1,0 @@
-rem c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe elevate cmd /K "start c:\"Program Files"\Everything\Everything.exe -s "%PARAM1%" -config c:\UniServer\www\doc\files\ThisPC\install_everything\Everything.ini & exit"
-start c:\"Program Files"\Everything\Everything.exe -s "%PARAM1%" -config c:\UniServer\www\doc\files\ThisPC\install_everything\Everything.ini
-
-
-
