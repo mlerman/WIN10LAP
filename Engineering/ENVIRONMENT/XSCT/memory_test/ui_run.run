@@ -1,0 +1,3 @@
+call ui_program_fpga.run
+call ui_reset_processor_init_ddr.run
+call ui_mem_test_sequence.run
