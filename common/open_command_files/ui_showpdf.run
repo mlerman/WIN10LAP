@@ -1,0 +1,18 @@
+if exist get_pdf_filename.bat goto callbat
+echo first time call : SELECT THE PDF FILE FOR THIS ICON
+call c:\UniServer\www\common\chooserPDF.bat
+echo SELECTED0 : %SELECTED0%
+IF NOT "%SELECTED0%"==""  ( echo 0 : %SELECTED0%
+    rem create now get_pdf_filename.bat
+    set PDFFILE=%SELECTED0%
+    echo set PDFFILE=%SELECTED0%> get_pdf_filename.bat
+)
+
+:callbat
+echo not the first time
+call get_pdf_filename.bat
+echo PDFFILE is %PDFFILE%
+if NOT "%PDFFILE%"=="" ( echo PDFFILE is %PDFFILE%
+   start c:\"Program Files (x86)"\Adobe\"Acrobat Reader DC"\Reader\AcroRd32.exe /n /A "page=1&zoom=100,0,120" "%PDFFILE%"
+)
+

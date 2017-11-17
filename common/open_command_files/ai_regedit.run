@@ -1,0 +1,5 @@
+@echo off
+cls
+echo Write below the path of the target key
+c:\UniServer\www\doc\files\ThisPC\install_regjump\regjump.exe HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\MYSERVICE
+
