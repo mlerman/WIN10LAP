@@ -18,7 +18,6 @@ if (isset($_GET["targetfile"])) {
 if (!file_exists($targetdir."\\".$targetfile)) {
 	$bool=copy("c:\\UniServer\\www\\doc\\files\\common\\open_command_files\\empty.txt", $targetdir."\\".$targetfile);
 }
-
 ?>
 
 <script>
