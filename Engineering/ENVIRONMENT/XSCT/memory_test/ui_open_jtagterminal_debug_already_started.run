@@ -1,6 +1,0 @@
-set XSCT=call c:\Xilinx\SDK\2017.2\bin\xsct.bat -quiet -interactive
-
-type open_jtagterminal_debug_already_started.txt |  %XSCT%
-
-
-rem pause

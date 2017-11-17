@@ -1,5 +1,0 @@
-setws C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO/ZU3/project_1.sdk/
-projects -build
-exit
-
-
