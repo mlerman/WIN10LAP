@@ -40,7 +40,9 @@ git config --global user.name "Mikhael Lerman"
 git config --global core.safecrlf false
 
 rem remove previous add
-git rm -r --cached c:\UniServer\www\doc\files\ >nul
+rem ceci efface les fichier dans le repo github
+rem git rm -r --cached c:\UniServer\www\doc\files\ >nul
+
 rem add only this project and subdir
 git add -A %THISPLACEBACKSLASH%\ 2>&1
 git remote set-url origin https://mlerman@github.com/mlerman/%REPONAME%.git 2>&1
