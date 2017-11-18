@@ -1,2 +1,0 @@
-if exist c:\UniServer\www\doc\files\ThisPC\install_cmder\vendor\conemu-maximus5\Logs\*.log del c:\UniServer\www\doc\files\ThisPC\install_cmder\vendor\conemu-maximus5\Logs\*.log /Q
-c:\UniServer\www\doc\files\ThisPC\install_cmder\Cmder.exe /START "%cd%"

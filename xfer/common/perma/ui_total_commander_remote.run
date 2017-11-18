@@ -1,6 +1,0 @@
-echo %HOST%
-echo %TARGETDIR%
-set NEWDIR=%TARGETDIR:~20%
-echo %NEWDIR%
-echo \\%HOST%%NEWDIR%
-start c:\totalcmd\TOTALCMD.EXE /O %TARGETDIR% \\%HOST%%NEWDIR%

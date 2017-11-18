@@ -1,1 +1,0 @@
-start c:\"Program Files"\grepWin\grepWin.exe /execute /searchpath:"c:\UniServer\www\doc\files\" /filemask:"ui_grepWin*.bat"
