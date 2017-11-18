@@ -1,0 +1,23 @@
+@echo off
+if exist get_cd_directory.bat goto callbat
+echo first time call : SELECT THE RIGHT PANEL DIRECTORY FOR THIS ICON
+call c:\UniServer\www\common\chooserCD.bat
+echo SELECTED0 : %SELECTED0%
+IF NOT "%SELECTED0%"==""  ( echo 0 : %SELECTED0%
+    rem create now get_cd_directory.bat
+    set RIGHTPANEL=%SELECTED0%
+    echo set RIGHTPANEL=%SELECTED0%> get_cd_directory.bat
+)
+:callbat
+echo not the first time
+call get_cd_directory.bat
+
+for %%a in (%RIGHTPANEL:\= %) do set THELOCALSINGLESOURCEFILE=%%a
+echo THELOCALSINGLESOURCEFILE is %THELOCALSINGLESOURCEFILE%
+
+set RIGHTPATH=%RIGHTPANEL%
+set LEFTDESC="%THELOCALSINGLESOURCEFILE% in local directory"
+set RIGHTDESC=""
+start C:\"Program Files"\Devart\"Code Compare"\CodeCompare.exe /T1 %LEFTDESC% /T2 %RIGHTDESC% %THELOCALSINGLESOURCEFILE% %RIGHTPATH%
+
+echo %cd%\%THELOCALSINGLESOURCEFILE%> .code

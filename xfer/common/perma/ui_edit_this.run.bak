@@ -1,0 +1,115 @@
+for /f "delims=" %%a  in ("%TARGETFILE%") do set "Extension=%%~xa"
+
+if /i "%Extension%"==".png" ( echo %TARGETFILE% is an image using paint
+start %windir%\system32\mspaint.exe %TARGETFILE%
+goto EOF
+)
+
+if /i "%Extension%"==".doc" ( echo %TARGETFILE% is a MS Word document
+start %TARGETFILE%
+goto EOF
+)
+
+if /i "%Extension%"==".rtf" ( echo %TARGETFILE% is a MS Word document
+start %TARGETFILE%
+goto EOF
+)
+
+if /i "%Extension%"==".docx" ( echo %TARGETFILE% is a MS Word document
+start %TARGETFILE%
+goto EOF
+)
+
+if /i "%Extension%"==".odt" ( echo %TARGETFILE% is a MS Word document
+start %TARGETFILE%
+goto EOF
+)
+
+if /i "%Extension%"==".xls" ( echo %TARGETFILE% is a MS Excel document
+start %TARGETFILE%
+goto EOF
+)
+
+if /i "%Extension%"==".xlsx" ( echo %TARGETFILE% is a MS Excel document
+start %TARGETFILE%
+goto EOF
+)
+
+if /i "%Extension%"==".pot" ( echo %TARGETFILE% is a Powerpoint presentation
+start %TARGETFILE%
+goto EOF
+)
+
+if /i "%Extension%"==".pptx" ( echo %TARGETFILE% is a Powerpoint presentation
+start %TARGETFILE%
+goto EOF
+)
+
+if /i "%Extension%"==".odp" ( echo %TARGETFILE% is a Powerpoint presentation
+start %TARGETFILE%
+goto EOF
+)
+
+if /i "%Extension%"==".ppt" ( echo %TARGETFILE% is a Powerpoint presentation
+start %TARGETFILE%
+goto EOF
+)
+
+if /i "%Extension%"==".pdf" ( echo %TARGETFILE% is a PDF file
+start C:\"Program Files (x86)"\"Foxit Software"\"PDF Editor"\PDFEdit.exe %TARGETFILE%
+goto EOF
+)
+
+if /i "%Extension%"==".bin" ( echo %TARGETFILE% is a binay file
+start c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\WINDOWS_VSTUDIO\HexEdit4\ReleaseVS2010\HexEdit.exe %TARGETFILE%
+goto EOF
+)
+
+goto jenesuispaspretpouratom
+if /i "%Extension%"==".html" ( echo %TARGETFILE% is HTML
+if not exist "%cd%\%TARGETFILE%" copy nul %cd%\%TARGETFILE%
+cd c:\Users\mlerman\AppData\Local\atom\app-1.4.0\
+start atom %cd%\%TARGETFILE%
+goto EOF
+)
+
+if /i "%Extension%"==".js" ( echo %TARGETFILE% is javascript
+if not exist "%cd%\%TARGETFILE%" copy nul %cd%\%TARGETFILE%
+cd c:\Users\mlerman\AppData\Local\atom\app-1.4.0\
+start atom %cd%\%TARGETFILE%
+goto EOF
+)
+
+:jenesuispaspretpouratom
+
+
+if /i "%TARGETFILE%"==".head" ( echo .head file
+rem if not exist create .head and go to line 2
+if not exist "%cd%\%TARGETFILE%" echo.>%cd%\%TARGETFILE% & echo ^<hr/^>>>%cd%\%TARGETFILE% & echo.>>%cd%\%TARGETFILE% & echo ^<hr/^>>>%cd%\%TARGETFILE% & echo.>>%cd%\%TARGETFILE% & echo ^<hr/^>>>%cd%\%TARGETFILE% & start c:\"Program Files (x86)"\Notepad++\notepad++.exe -n2 %cd%\%TARGETFILE%
+rem if exist don't go to line 2
+if exist "%cd%\%TARGETFILE%" start c:\"Program Files (x86)"\Notepad++\notepad++.exe %cd%\%TARGETFILE%
+goto EOF
+)
+
+rem notepad++
+if exist "%TARGETDIR%%TARGETFILE%" ( echo exist on network location
+
+SET "var="&for /f "delims=0123456789" %%i in ("%PARAM1%") do set var=%%i
+if defined var (goto :string_line) else (goto :numeric_line)
+
+:numeric_line
+start c:\"Program Files (x86)"\Notepad++\notepad++.exe %TARGETDIR%%TARGETFILE% -n%PARAM1%
+goto EOF
+
+
+:string_line
+  for /f "delims=:" %%N in ('findstr /n /C:"%PARAM1%" %TARGETDIR%%TARGETFILE%') do  ( set line=%%N
+)
+echo found line = %line%
+start c:\"Program Files (x86)"\Notepad++\notepad++.exe %TARGETDIR%%TARGETFILE% -n%line%
+goto EOF
+)
+
+if not exist "%cd%\%TARGETFILE%" copy nul %cd%\%TARGETFILE%
+start c:\"Program Files (x86)"\Notepad++\notepad++.exe %cd%\%TARGETFILE%
+

@@ -1,0 +1,5 @@
+cd %cd%
+call c:\UniServer\www\common\constructor_new_side.bat %cd% %PARAM1% %2 %3 %4 %5 %6 %7 %8 %9
+exit
+
+

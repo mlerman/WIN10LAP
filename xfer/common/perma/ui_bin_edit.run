@@ -1,0 +1,10 @@
+echo on
+cd %cd%
+echo %TARGETDIR%
+call c:\UniServer\www\common\chooser.bat
+cd c:\UniServer\www\doc\files\ThisPC\install_jotti\
+IF NOT "%SELECTED0%"==""  ( echo 0 : %SELECTED0%
+    start c:\"Program Files (x86)"\HxD\HxD.exe %SELECTED0%
+)
+
+
