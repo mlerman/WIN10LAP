@@ -16,6 +16,7 @@ echo REPONAME=%REPONAME%
 for %%a in (.) do set currentfolder=%%~na
 echo current directory name: %currentfolder%
 
+
 cd c:\UniServer\www\doc\files\
 
 if "%COMPUTERNAME%" == "LAPTOP-7KQRMTC0" ( echo this is LAPTOP-7KQRMTC0 WIN10LAP
@@ -34,7 +35,6 @@ if "%COMPUTERNAME%" == "XSJMIKHAELL30" ( echo this is XSJMIKHAELL30
 )
 
 
-
 git config --global user.email "michael_lerman@yahoo.com"
 git config --global user.name "Mikhael Lerman"
 git config --global core.safecrlf false
@@ -42,15 +42,15 @@ git config --global core.safecrlf false
 rem remove previous add
 rem ceci efface les fichier dans le repo github
 rem git rm -r --cached c:\UniServer\www\doc\files\ >nul
+rem git reset --hard origin/master
+
 
 rem add only this project and subdir
-git add -A %THISPLACEBACKSLASH%\ 2>&1
-git remote set-url origin https://mlerman@github.com/mlerman/%REPONAME%.git 2>&1
-rem git status
-rem commit only this directory
-git commit -m "commit for %currentfolder% project from %COMPUTERNAME%" -- %THISPLACEBACKSLASH%\ 2>&1
-rem echo username hint: ati, password hint: nrlPI
-git push origin master 2>&1
+git add -A %THISPLACEBACKSLASH%\  2>&1
+git remote set-url origin https://mlerman@github.com/mlerman/%REPONAME%.git  2>&1
+git checkout  -f -- %THISPLACEBACKSLASH%\ 2>&1
+
+
 rem returning to the directory
 :test
 cd %THISDIR%
