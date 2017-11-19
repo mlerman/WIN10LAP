@@ -57,4 +57,4 @@ rem returning to the directory
 cd %THISDIR%
 
 :end
-rem pause
+pause
