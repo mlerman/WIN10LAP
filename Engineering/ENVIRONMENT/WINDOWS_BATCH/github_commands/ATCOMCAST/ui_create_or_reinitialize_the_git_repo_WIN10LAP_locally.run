@@ -7,10 +7,17 @@ git init
 rem git add README.md
 rem git commit -m "Creation of the root"
 
+rem si on veut creer dans github le repo
 rem curl -u mlerman:compagniePI https://api.github.com/user/repos -d "{\"name\" : \"%REPONAME%\"}"
 rem git remote add origin https://github.com/mlerman/%REPONAME%.git
 
 dir  /A:H *.git
+
+rem on doit faire pull car sinon on ne peut pas utiliser
+echo eventuellement faire un backup ici
+pause
+
+call c:\UniServer\www\doc\files\common\open_command_files\ui_pull_from_github.bat
 
 rem returning to the directory
 cd %THISDIR%
