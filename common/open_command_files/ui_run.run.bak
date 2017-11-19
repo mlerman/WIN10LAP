@@ -1,0 +1,48 @@
+if exist .result del .result /Q
+set NEXTURL1=http://mlerman-lap/doc/files/Engineering/ENVIRONMENT/WINDOWS_BATCH/create_html_popup_message_with_link/open-command-prompt-here.html
+set NEXTTARGET1=create_html_popup_message_with_link
+set NEXTURL2=
+set NEXTTARGET2=
+set NEXTURL3=
+set NEXTTARGET3=
+@echo off
+cls
+
+rem [!!!] enter command below here
+rem start ...
+
+if errorlevel 0 ( echo PASSES>.result
+set STRRESULT=Passes
+set ICON=info
+goto endresult
+)
+echo FAILED>.result
+set STRRESULT=Failed
+set ICON=error
+:endresult
+
+rem detecting who launched
+rem echo user is %USERNAME% running in Windows 7
+rem echo Detecting permissions...
+net session >nul 2>&1
+   if %errorLevel% == 0 (
+       echo Likely launched by system
+   ) else (
+       echo Launched locally by user %USERNAME% running in Windows 7
+   )
+
+rem [!!!] comment next line to add sound
+rem goto skipsound
+find "PASSES" .result 1>nul && nircmdc mediaplay 1500 c:\UniServer\www\doc\files\ThisPC\speech\success.mp3 
+find "FAILED" .result 1>nul && nircmdc mediaplay 1500 c:\UniServer\www\doc\files\ThisPC\speech\failed.mp3   
+:skipsound
+
+rem [!!!] uncomment for adding a pause
+rem c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\WINDOWS_BATCH\mousePause\mp.bat "Click 'OK' to exit [X]"
+
+start c:\UniServer\www\doc\files\ThisPC\install_notify-send\notify-send.exe -i %ICON% "%STRRESULT%" "The program has finished in project %CURRENTFOLDER%"
+
+rem [!!!] uncomment for adding next step
+rem optionally redirect with a next link uncomment as needed
+rem start C:\"Program Files (x86)"\Google\Chrome\Application\chrome.exe --app=http://mlerman-lap/common/next.php?step1=%NEXTURL1%^&target1=%NEXTTARGET1%^&step2=%NEXTURL2%^&target2=%NEXTTARGET2%^&step3=%NEXTURL3%^&target3=%NEXTTARGET3%
+rem pause
