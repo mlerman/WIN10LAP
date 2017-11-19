@@ -1,0 +1,17 @@
+set THISDIR=%CD%
+set REPONAME=WIN10LAP
+cd c:\UniServer\www\doc\files\
+rem echo "# REPONAME" >> README.md
+rem echo "# Repository of code from the DELL Windows 10 laptop" >> README.md
+git init
+rem git add README.md
+rem git commit -m "Creation of the root"
+
+rem curl -u mlerman:compagniePI https://api.github.com/user/repos -d "{\"name\" : \"%REPONAME%\"}"
+rem git remote add origin https://github.com/mlerman/%REPONAME%.git
+
+dir  /A:H *.git
+
+rem returning to the directory
+cd %THISDIR%
+pause
