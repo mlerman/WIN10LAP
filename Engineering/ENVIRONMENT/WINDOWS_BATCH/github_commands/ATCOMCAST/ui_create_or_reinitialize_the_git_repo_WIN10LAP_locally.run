@@ -17,7 +17,16 @@ rem on doit faire pull car sinon on ne peut pas utiliser
 echo eventuellement faire un backup ici
 pause
 
-call c:\UniServer\www\doc\files\common\open_command_files\ui_pull_from_github.bat
+rem call c:\UniServer\www\doc\files\common\open_command_files\ui_pull_from_github.bat
+call c:\UniServer\www\local\set_git_usep.bat
+git remote set-url origin https://%GITUSEP%@github.com/mlerman/%REPONAME%.git
+git reset --hard HEAD
+
+rem git fetch origin
+rem git rebase origin/master
+rem git pull
+
+git pull origin master
 
 rem returning to the directory
 cd %THISDIR%
