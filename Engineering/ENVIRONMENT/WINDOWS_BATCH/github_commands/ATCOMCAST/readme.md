@@ -1,1 +1,2 @@
-[ATCOMCAST](http://localhost/doc/files/Engineering/ENVIRONMENT/WINDOWS_BATCH/github_commands/ATCOMCAST/open-command-prompt-here.html#)
+[ATCOMCAST - localhost](http://localhost/doc/files/Engineering/ENVIRONMENT/WINDOWS_BATCH/github_commands/ATCOMCAST/open-command-prompt-here.html#)
+[ATCOMCAST - win7-pc](http://win7-pc/doc/files/Engineering/ENVIRONMENT/WINDOWS_BATCH/github_commands/ATCOMCAST/open-command-prompt-here.html#)
