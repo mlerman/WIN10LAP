@@ -1,0 +1,10 @@
+echo HOST=%HOST%
+echo URLDIR=%URLDIR%
+set udir=%URLDIR:~5%
+set udir=%udir:/=\%
+echo target=\\%HOST%\%udir%
+
+rem net use \\%HOST%\%udir% /delete
+rem net use \\%HOST%\%udir% /user:%HOST%\Guest lab123
+
+start \\%HOST%\%udir%

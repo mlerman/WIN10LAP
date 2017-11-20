@@ -1,0 +1,32 @@
+if exist wpad.dat del wpad.dat /Q
+c:\UniServer\www\doc\files\ThisPC\install_curl_static\curl.exe -O http://htmlprod-vip.micron.com/wpad.dat
+findstr /m "proxy.micron.com" wpad.dat
+if %errorlevel%==0 (
+echo Micron proxy
+set http_proxy=http://proxy.micron.com:8080
+set https_proxy=https://proxy.micron.com:8080
+goto endwpad
+)
+echo Not micron
+:endwpad
+del wpad.dat /Q
+
+echo %TARGETDIR%
+call c:\UniServer\www\common\chooser.bat
+cd c:\UniServer\www\doc\files\ThisPC\install_jotti\
+IF NOT "%SELECTED0%"==""  ( echo 0 : %SELECTED0%
+    JottiScan.exe %SELECTED0%
+)
+IF "%SELECTED0%"=="" goto EOF
+JottiCheck.exe -s %SELECTED0%> jottylog.txt
+type jottylog.txt
+setlocal DisableDelayedExpansion
+findstr /n "URL: " jottylog.txt > linefound.tmp
+type linefound.tmp
+rem put the file in a variable
+for /f "delims=" %%x in (linefound.tmp) do set JOTTYURL=%%x
+echo JOTTYURL is %JOTTYURL%
+set JOTTYURL=%JOTTYURL:~7%
+echo JOTTYURL is ===%JOTTYURL%===
+start C:\"Program Files (x86)"\Google\Chrome\Application\chrome.exe %JOTTYURL%
+rem pause

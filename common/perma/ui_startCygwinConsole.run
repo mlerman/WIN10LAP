@@ -1,0 +1,3 @@
+@echo run make in folder hello_world_cpp
+set HOME=%cd%
+start C:\cygwin64\bin\mintty.exe -i /Cygwin-Terminal.ico -s 110,50 -

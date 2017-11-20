@@ -1,0 +1,18 @@
+cd %cd%
+
+set UNIQFNAME=%date%
+:: remove '.'
+set UNIQFNAME=%UNIQFNAME:/=%
+:: remove ':'
+set UNIQFNAME=%UNIQFNAME%-%time%
+set UNIQFNAME=%UNIQFNAME:.=%
+set UNIQFNAME=%UNIQFNAME::=%
+set UNIQFNAME=%UNIQFNAME: =%
+
+echo %UNIQFNAME%.odp
+
+copy c:\UniServer\www\common\open_command_files\blank.odp %cd%\%UNIQFNAME%.odp /Y
+start c:\"Program Files (x86)"\"Microsoft Office"\Office12\POWERPNT.EXE %cd%\%UNIQFNAME%.odp /q
+exit
+
+

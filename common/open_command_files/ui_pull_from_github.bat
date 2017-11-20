@@ -38,11 +38,18 @@ if "%COMPUTERNAME%" == "XSJMIKHAELL30" ( echo this is XSJMIKHAELL30
 git config --global user.email "michael_lerman@yahoo.com"
 git config --global user.name "Mikhael Lerman"
 git config --global core.safecrlf false
+<<<<<<< HEAD
 git config --global core.sparsecheckout true
+=======
+>>>>>>> 676f16f6710e4bfd5aea496140d2993e716b76c0
 
 rem remove previous add
 rem ceci efface les fichier dans le repo github
 rem git rm -r --cached c:\UniServer\www\doc\files\ >nul
+<<<<<<< HEAD
+=======
+rem ceci aussi
+>>>>>>> 676f16f6710e4bfd5aea496140d2993e716b76c0
 rem git reset --hard origin/master
 
 
@@ -52,7 +59,11 @@ git remote set-url origin https://mlerman@github.com/mlerman/%REPONAME%.git  2>&
 rem git status
 rem git commit -m "commit for %currentfolder% project from %COMPUTERNAME%"
 rem echo username hint: ati, password hint: nrl14
+<<<<<<< HEAD
 git pull origin master 2>&1
+=======
+git pull origin master --allow-unrelated-histories 2>&1
+>>>>>>> 676f16f6710e4bfd5aea496140d2993e716b76c0
 
 
 rem returning to the directory
@@ -60,4 +71,8 @@ rem returning to the directory
 cd %THISDIR%
 
 :end
+<<<<<<< HEAD
 rem pause
+=======
+rem pause
+>>>>>>> 676f16f6710e4bfd5aea496140d2993e716b76c0

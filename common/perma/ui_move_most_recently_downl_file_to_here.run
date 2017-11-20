@@ -1,0 +1,31 @@
+@echo off
+cls
+set DOWNLOADDIR=c:\Users\%USERNAME%\Downloads\
+echo Hello...
+FOR /F "delims=|" %%I IN ('DIR %DOWNLOADDIR%*.* /B /O:-D') DO ( rem echo %%I 
+  if "%%~xI" NEQ "" if "%%~xI" NEQ ".run" if "%%~xI" NEQ ".bat" ( rem echo yes extension
+    rem pause
+    echo running COPY %DOWNLOADDIR%%%I %cd% 
+    rem pause 
+    rem mv "%DOWNLOADDIR%%%I" %cd% 
+    set FILEMOVED=%DOWNLOADDIR%%%I
+    rem start c:\UniServer\www\doc\files\ThisPC\install_notify-send\notify-send.exe -i important "Attention!" "The recent download file %%I has moved"
+    goto endfor
+    rem EXIT 
+  )
+)
+:endfor
+echo FILEMOVED is %FILEMOVED%
+rem first rename without spaces then move
+powershell -command "Dir '%FILEMOVED%' | Rename-Item -NewName { $_.Name -replace ' ','_' }"
+
+FOR /F %%I IN ('DIR %DOWNLOADDIR%*.* /B /O:-D') DO ( rem echo %%I 
+  if "%%~xI" NEQ "" if "%%~xI" NEQ ".run" if "%%~xI" NEQ ".bat" ( rem echo yes extension
+    move "%DOWNLOADDIR%%%I" %cd% 
+    start c:\UniServer\www\doc\files\ThisPC\install_notify-send\notify-send.exe -i important "Attention!" "The recent download file %%I has moved"
+    goto endfor2
+    rem EXIT 
+  )
+)
+:endfor2
+rem pause

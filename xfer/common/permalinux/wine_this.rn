@@ -1,0 +1,10 @@
+echo this is wine_this.sh
+echo current dir is :
+pwd
+echo TARGETFILE is $TARGETFILE
+#ls -l $TARGETFILE
+cp $TARGETFILE $TARGETFILE.bat
+clear
+wine cmd /c $TARGETFILE.bat
+rm $TARGETFILE.bat
+#read -p "Press [Enter] key to continue..."

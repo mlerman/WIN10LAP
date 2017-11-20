@@ -1,0 +1,3 @@
+echo set PARAM1=%PARAM1%>get_param1.bat
+
+call c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\WINDOWS_BATCH\mousePause\mp.bat "PARAM1 set to %PARAM1%"

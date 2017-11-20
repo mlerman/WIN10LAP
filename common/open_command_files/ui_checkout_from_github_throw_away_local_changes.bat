@@ -43,12 +43,21 @@ rem add only this project and subdir
 git add -A %THISPLACEBACKSLASH%\  2>&1
 git remote set-url origin https://mlerman@github.com/mlerman/%REPONAME%.git  2>&1
 git fetch origin
+<<<<<<< HEAD
 rem git checkout HEAD %THISPLACEBACKSLASH%\ 2>&1
 git checkout -t -f -b master -- %THISPLACEBACKSLASH%\ 2>&1
+=======
+git checkout HEAD %THISPLACEBACKSLASH%\ 2>&1
+
+>>>>>>> 676f16f6710e4bfd5aea496140d2993e716b76c0
 
 rem returning to the directory
 :test
 cd %THISDIR%
 
 :end
+<<<<<<< HEAD
 rem pause
+=======
+rem pause
+>>>>>>> 676f16f6710e4bfd5aea496140d2993e716b76c0

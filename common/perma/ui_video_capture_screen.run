@@ -1,0 +1,20 @@
+cls
+@echo off
+
+rem echo "Enter 'stop' in the VLC console window to stop recording. then 'quit'"
+rem pause
+
+set COUNTER=0
+:loop
+set /A COUNTER+=1
+rem echo %COUNTER%
+if not exist vid%COUNTER%.mp4 ( echo filename is available
+start C:/"Program Files (x86)"/VideoLAN/VLC/vlc.exe screen:// -I rc --screen-fps 30 :screen-follow-mouse --screen-mouse-image=c:\UniServer\www\doc\images\mouserecorder48.png :sout=#transcode{vcodec=h264}:std{access=file,mux=mp4,dst='%cd%/vid%COUNTER%.mp4'}
+rem start C:/"Program Files (x86)"/VideoLAN/VLC/vlc.exe screen:// -I rc --screen-fps 30 :screen-follow-mouse --screen-mouse-image=c:\UniServer\www\doc\images\mouserecorder48.png :sout=#transcode{vcodec=h264,vb=800,scale=1,acodec=mp4a,ab=128,channels=2,samplerate=44100}:std{access=file,mux=ts,dst=%cd%/vid%COUNTER%.avi}
+goto suite
+)
+goto loop
+:suite
+c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\WINDOWS_BATCH\mousePause\mp.bat "Enter 'stop' in the vlc.exe console window to stop recording. File : vid%COUNTER%.mp4"
+rem C:/"Program Files (x86)"/VideoLAN/VLC/vlc.exe vlc://quit
+

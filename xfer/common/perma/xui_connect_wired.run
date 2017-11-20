@@ -1,0 +1,1 @@
+nircmdc elevate cmd /K "c:\UniServer\www\common\perma\admin_connect_wired_at_elpida.bat & exit"

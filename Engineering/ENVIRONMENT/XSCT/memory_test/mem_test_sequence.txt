@@ -1,0 +1,130 @@
+set tcl_interactive false
+connect
+targets -set -nocase -filter {name =~ "Cortex-A53*#0"}
+
+set str "read is "
+set memspace {}
+
+# uncomment one line
+#set memspace "XX"
+set memspace "PA"
+#set memspace "EL0"
+#set memspace "EL1"
+#set memspace "EL2"
+#set memspace "EL3"
+puts "memspace is $memspace"
+
+#puts "writing memory"
+
+set wval 12345678
+set add 00000000
+
+mwr -address-space $memspace 0x$add 0x$wval
+puts "reading memory"
+set var [mrd -address-space $memspace -value 0x00000000]
+set var [format %X $var]
+puts "read is $var at address $add"
+	if {$var=="$wval"} {	
+		; 
+	} else {
+		puts "******************** Error *************************"
+	}
+
+
+	
+set add 00010000
+
+mwr -address-space $memspace 0x$add 0x$wval
+puts "reading memory"
+set var [mrd -address-space $memspace -value 0x00000000]
+set var [format %X $var]
+puts "read is $var at address $add"
+	if {$var=="$wval"} {	
+		; 
+	} else {
+		puts "******************** Error *************************"
+	}
+
+
+set add 00100000
+
+mwr -address-space $memspace 0x$add 0x$wval
+puts "reading memory"
+set var [mrd -address-space $memspace -value 0x00000000]
+set var [format %X $var]
+puts "read is $var at address $add"
+	if {$var=="$wval"} {	
+		; 
+	} else {
+		puts "******************** Error *************************"
+	}
+	
+set add 01000000
+
+mwr -address-space $memspace 0x$add 0x$wval
+puts "reading memory"
+set var [mrd -address-space $memspace -value 0x00000000]
+set var [format %X $var]
+puts "read is $var at address $add"
+	if {$var=="$wval"} {	
+		; 
+	} else {
+		puts "******************** Error *************************"
+	}
+	
+set add 10000000
+
+mwr -address-space $memspace 0x$add 0x$wval
+puts "reading memory"
+set var [mrd -address-space $memspace -value 0x00000000]
+set var [format %X $var]
+puts "read is $var at address $add"
+	if {$var=="$wval"} {	
+		; 
+	} else {
+		puts "******************** Error *************************"
+	}
+
+set add 20000000
+
+mwr -address-space $memspace 0x$add 0x$wval
+puts "reading memory"
+set var [mrd -address-space $memspace -value 0x00000000]
+set var [format %X $var]
+puts "read is $var at address $add"
+	if {$var=="$wval"} {	
+		; 
+	} else {
+		puts "******************** Error *************************"
+	}
+
+set add 40000000
+
+mwr -address-space $memspace 0x$add 0x$wval
+puts "reading memory"
+set var [mrd -address-space $memspace -value 0x00000000]
+set var [format %X $var]
+puts "read is $var at address $add"
+	if {$var=="$wval"} {	
+		; 
+	} else {
+		puts "******************** Error *************************"
+	}
+
+#set add 80000000
+
+#mwr -address-space $memspace 0x$add 0x$wval
+#puts "reading memory"
+#set var [mrd -address-space $memspace -value 0x00000000]
+#set var [format %X $var]
+#puts "read is $var at address $add"
+#	if {$var=="$wval"} {	
+#		; 
+#	} else {
+#		puts "******************** Error *************************"
+#	}
+
+disconnect
+exit
+
+

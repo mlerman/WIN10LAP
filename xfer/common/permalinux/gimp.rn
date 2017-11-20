@@ -1,0 +1,25 @@
+# minimize the window
+#sleep 1 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin 
+
+COUNTER=1
+echo scr$COUNTER.png
+while [ -f ./scr$COUNTER.png ]; do
+  echo The counter is $COUNTER
+  let COUNTER=COUNTER+1 
+done
+echo available filename is scr$COUNTER.png
+#if [ ! -f ./scr$COUNTER.png ]; then
+  cp /home/user/files/Blank/blank.png scr$COUNTER.png
+#fi 
+
+cp .head temp
+echo '<img src="scr'$COUNTER'.png"/>' > .head
+echo '<hr/>' >> .head
+cat temp>>.head
+rm temp
+
+#read -p "Press [Enter] key to continue..."
+
+pinta scr$COUNTER.png
+
+

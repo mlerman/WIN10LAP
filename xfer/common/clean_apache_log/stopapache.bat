@@ -1,0 +1,1 @@
+call c:\UniServer\alt_diag\run_as_service\apache_stop_service_nopause.bat
