@@ -1,0 +1,8 @@
+With extended asm you can read and write C variables from assembler and perform jumps from assembler code to C labels. 
+Extended asm syntax uses colons (‘:’) to delimit the operand parameters after the assembler template:
+
+asm [volatile] ( AssemblerTemplate 
+                 : OutputOperands 
+                 [ : InputOperands
+                 [ : Clobbers ] ])
+<hr/> 
