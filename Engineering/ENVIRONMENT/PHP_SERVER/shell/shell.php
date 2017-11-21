@@ -1,5 +1,5 @@
 <?php
-$users = array('mlerman'=>'normerel'); // change this!
+$users = array('myuser'=>'mypassword'); // change this!
 $home = realpath('.'); // config
 
 function authenticate($u) {
