@@ -51,7 +51,7 @@ git update-index --no-assume-unchanged %THISPLACEBACKSLASH%\*
 
 rem add only this project and subdir
 git add -A %THISPLACEBACKSLASH%\ 2>&1
-call c:\UniServer\www\local\set_git_usep.bat
+call c:\UniServer\www\local\set_git_usep.bat 2>&1
 git remote set-url origin https://%GITUSEP%@github.com/mlerman/%REPONAME%.git 2>&1
 rem git status
 rem commit only this directory
