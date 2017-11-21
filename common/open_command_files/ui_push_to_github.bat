@@ -47,7 +47,8 @@ rem git rm -r --cached c:\UniServer\www\doc\files\ >nul
 rem focus only on the current directory
 rem untrack all files except this directory
 git update-index --assume-unchanged c:\UniServer\www\doc\files\*
-git update-index --no-assume-unchanged %THISPLACEBACKSLASH%\*
+git update-index --no-assume-unchanged c:\UniServer\www\doc\files\%THISPLACEBACKSLASH%\*
+echo toto c:\UniServer\www\doc\files\%THISPLACEBACKSLASH%\* 2>&1
 
 rem add only this project and subdir
 git add -A %THISPLACEBACKSLASH%\ 2>&1
@@ -56,7 +57,6 @@ git remote set-url origin https://%GITUSEP%@github.com/mlerman/%REPONAME%.git 2>
 rem git status
 rem commit only this directory
 git commit -m "commit for %currentfolder% project from %COMPUTERNAME%" -- %THISPLACEBACKSLASH%\ 2>&1
-rem echo username hint: ati, password hint: nrlPI
 git push origin master 2>&1
 rem returning to the directory
 :test
