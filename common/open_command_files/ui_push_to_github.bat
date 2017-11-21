@@ -48,7 +48,6 @@ rem focus only on the current directory
 rem untrack all files except this directory
 git update-index --assume-unchanged c:\UniServer\www\doc\files\*
 git update-index --no-assume-unchanged c:\UniServer\www\doc\files\%THISPLACEBACKSLASH%\*
-echo toto c:\UniServer\www\doc\files\%THISPLACEBACKSLASH%\* 2>&1
 
 rem add only this project and subdir
 git add -A %THISPLACEBACKSLASH%\ 2>&1
