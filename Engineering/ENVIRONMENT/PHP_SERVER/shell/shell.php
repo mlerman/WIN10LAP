@@ -1,7 +1,7 @@
 <?php
 $myusername=file_get_contents("c:\UniServer\www\local\myusername.txt");
 $mypassword=file_get_contents("c:\UniServer\www\local\mypassword.txt");
-$users = array('mlerman'=>'normerel'); // change this!
+$users = array($myusername=>$mypassword); // change this!
 $home = realpath('.'); // config
 
 function authenticate($u) {
