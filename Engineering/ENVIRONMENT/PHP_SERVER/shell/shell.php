@@ -4,6 +4,19 @@ $mypassword=file_get_contents("c:\UniServer\www\local\mypassword.txt");
 $users = array($myusername=>$mypassword); // change this!
 $home = realpath('.'); // config
 
+$HOME_DIRECTORY="";
+if (isset($_GET["HOME_DIRECTORY"])) {
+  $HOME_DIRECTORY=$_GET["HOME_DIRECTORY"];
+}
+
+$send_cmd="";
+if (isset($_GET["cmd"])) {
+  $send_cmd=$_GET["cmd"];
+}
+
+// this break, only for test
+//echo "running shell.php send_cmd : ".$send_cmd."<br/>";
+
 function authenticate($u) {
   if (!isset($_SERVER['PHP_AUTH_USER'])) die(header('WWW-Authenticate: Basic realm="shell.php"',401));
   if (!isset($u[$_SERVER['PHP_AUTH_USER']]) || $u[$_SERVER['PHP_AUTH_USER']]!=$_SERVER['PHP_AUTH_PW']) die();
@@ -28,6 +41,7 @@ function bash()
   global $commands;
   global $style;
   global $microAjax;
+  global $send_cmd;
   //if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') die('Windows not supported');	//ml removed for testing
   $jsonCommands = json_encode($commands);
   $suggestions = links(array( 'cd \'~\''=>'cd \'~\'',
@@ -52,8 +66,10 @@ $style
 </style>
 <script type="text/javascript">
 $microAjax
-var ls = 'dir';
-var ls = 'echo starting shell...';
+//var ls = 'dir';
+//var ls = 'echo starting shell...';
+<!-- {$send_cmd} -->
+var ls = '{$send_cmd}';
 function focus()
 { document.forms[0].elements[0].focus();
   window.scrollTo(0,document.forms[0].elements[0].offsetTop);  
