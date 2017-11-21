@@ -38,6 +38,7 @@ if "%COMPUTERNAME%" == "XSJMIKHAELL30" ( echo this is XSJMIKHAELL30
 git config --global user.email "michael_lerman@yahoo.com"
 git config --global user.name "Mikhael Lerman"
 git config --global core.safecrlf false
+git config --global status.showUntrackedFiles no
 
 rem remove previous add
 rem ceci efface les fichier dans le repo github
