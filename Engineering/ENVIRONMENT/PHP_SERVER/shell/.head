@@ -1,0 +1,13 @@
+<img src="scr1.png"/> 
+<hr/> 
+ca dit windows not supported
+si on skip server error
+<hr>
+[Tue Nov 21 11:20:03.805889 2017] [php7:error] [pid 8932:tid 1840] [client 192.168.253.1:54192] PHP Fatal error:  
+Uncaught Error: Call to undefined function posix_getpwuid() 
+in C:UniServerwwwdocfilesEngineeringENVIRONMENTPHP_SERVERshellshell.php:32nStack trace:n#0 
+C:UniServerwwwdocfilesEngineeringENVIRONMENTPHP_SERVERshellshell.php(561): bash()n#1 {main}n  thrown in 
+C:UniServerwwwdocfilesEngineeringENVIRONMENTPHP_SERVERshellshell.php on line 32, 
+referer: http://laptop-7kqrmtc0/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell/open-command-prompt-here.html
+
+<hr>
