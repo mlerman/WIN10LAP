@@ -14,11 +14,16 @@ for %%a in (..) do set parentfolder=%%~na
 echo parent directory name: %parentfolder%
 
 echo currentfolder : %currentfolder%>readme.md
+echo.>>readme.md
 echo parentfolder : %parentfolder%>>readme.md
+echo.>>readme.md
 echo HOST : %HOST%>>readme.md
+echo.>>readme.md
 echo URLDIR : %URLDIR%>>readme.md
+echo.>>readme.md
 echo TARGETDIR : %TARGETDIR%>>readme.md
-echo ^<BR/^>>>readme.md
-echo [currentfolder - %HOST%]^(http://%HOST%%URLDIR%open-command-prompt-here.html^)>>readme.md
+echo ___>>readme.md
+:test
+echo [%currentfolder% - %HOST%]^(http://%HOST%%URLDIR%open-command-prompt-here.html^)>>readme.md
 
-pause
+rem pause
