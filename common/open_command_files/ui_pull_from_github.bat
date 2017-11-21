@@ -45,6 +45,11 @@ rem ceci efface les fichier dans le repo github
 rem git rm -r --cached c:\UniServer\www\doc\files\ >nul
 rem git reset --hard origin/master
 
+rem focus only on the current directory
+rem untrack all files except this directory
+git update-index --assume-unchanged c:\UniServer\www\doc\files\*
+git update-index --no-assume-unchanged %THISPLACEBACKSLASH%\*
+
 
 rem add only this project and subdir
 git add -A %THISPLACEBACKSLASH%\  2>&1
