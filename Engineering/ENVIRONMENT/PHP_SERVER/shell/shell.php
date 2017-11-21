@@ -34,6 +34,7 @@ function bash()
                                //'upload'=>'upload',
 							   'pwd'=>'pwd',
 							   'echo %cd%'=>'echo %cd%',
+							   'clear'=>'clear',
 							   'dir'=>'dir'
 							 )
 					   );
@@ -52,6 +53,7 @@ $style
 <script type="text/javascript">
 $microAjax
 var ls = 'dir';
+var ls = 'echo starting shell...';
 function focus()
 { document.forms[0].elements[0].focus();
   window.scrollTo(0,document.forms[0].elements[0].offsetTop);  
