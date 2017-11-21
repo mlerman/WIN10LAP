@@ -1,5 +1,7 @@
 <?php
-$users = array('myuser'=>'mypassword'); // change this!
+$myusername=file_get_contents("c:\UniServer\www\local\myusername.txt");
+$mypassword=file_get_contents("c:\UniServer\www\local\mypassword.txt");
+$users = array('mlerman'=>'normerel'); // change this!
 $home = realpath('.'); // config
 
 function authenticate($u) {
@@ -28,7 +30,13 @@ function bash()
   global $microAjax;
   //if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') die('Windows not supported');	//ml removed for testing
   $jsonCommands = json_encode($commands);
-  $suggestions = links(array('cd \'~\''=>'cd \'~\'','upload'=>'upload'));
+  $suggestions = links(array( 'cd \'~\''=>'cd \'~\'',
+                               //'upload'=>'upload',
+							   'pwd'=>'pwd',
+							   'echo %cd%'=>'echo %cd%',
+							   'dir'=>'dir'
+							 )
+					   );
   if (function_exists('posix_getpwuid'))
 	$processUser = posix_getpwuid(posix_geteuid());
   else {
@@ -43,7 +51,7 @@ $style
 </style>
 <script type="text/javascript">
 $microAjax
-var ls = 'ls -al';
+var ls = 'dir';
 function focus()
 { document.forms[0].elements[0].focus();
   window.scrollTo(0,document.forms[0].elements[0].offsetTop);  
