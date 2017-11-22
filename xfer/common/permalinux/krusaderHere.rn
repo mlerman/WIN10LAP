@@ -1,5 +1,0 @@
-sleep 4 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin
-krusader --left=$LINDIRECTORY --right=$URLDIR
-sleep 15
-
-

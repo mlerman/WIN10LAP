@@ -1,2 +1,0 @@
-PowerShell -ExecutionPolicy ByPass -File c:\UniServer\www\common\always_on_top.ps1
-rem start c:\UniServer\www\common\titles.ahk

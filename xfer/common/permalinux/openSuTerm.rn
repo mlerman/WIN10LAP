@@ -1,3 +1,0 @@
-# minimize the window
-xdotool windowminimize $(xdotool getwindowfocus)
-sudo nohup gnome-terminal --geometry=180x25

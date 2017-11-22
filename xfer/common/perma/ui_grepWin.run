@@ -1,1 +1,0 @@
-start c:\"Program Files"\grepWin\grepWin.exe /searchfor:"echo" /execute /searchpath:"c:\UniServer\www\doc\files\|c:\UniServer\www\common\|c:\UniServer\www\mlscript\|c:\UniServer\www\local\|c:\UniServer\www\viewfile\|c:\UniServer\www\s\|c:\UniServer\www\jquery-fileTree\" /filemask:"*.bat|*.run|*.rn|*.sh|wgetrc|*.txt|*.php"

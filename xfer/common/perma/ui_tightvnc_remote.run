@@ -1,8 +1,0 @@
-echo running %0 : tightvnc when visualizing remote
-echo TARGETDIR : %TARGETDIR%
-echo TARGETFILE : %TARGETFILE%
-echo HOST : %HOST%
-echo URLDIR : %URLDIR%
-
-cd "C:\Program Files\TightVNC\"
-start tvnviewer.exe  -password=lab123 %HOST%
