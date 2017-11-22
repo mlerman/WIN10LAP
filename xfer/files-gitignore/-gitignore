@@ -9,6 +9,8 @@ clipb.txt
 new.txt
 *.msi
 *.exe
+*.xz
+*.o
 
 
 
