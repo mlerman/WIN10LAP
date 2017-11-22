@@ -1,0 +1,2 @@
+echo /cygdrive/c/UniServer/www%URLDIR%> clipb.txt
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe  clipboard readfile clipb.txt
