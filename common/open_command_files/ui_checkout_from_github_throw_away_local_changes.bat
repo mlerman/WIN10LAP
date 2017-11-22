@@ -43,11 +43,20 @@ rem untrack all files except this directory
 git update-index --assume-unchanged c:\UniServer\www\doc\files\*
 git update-index --no-assume-unchanged %THISPLACEBACKSLASH%\*
 
+echo 10 2>&1
 rem add only this project and subdir
 git add -A %THISPLACEBACKSLASH%\  2>&1
 git remote set-url origin https://mlerman@github.com/mlerman/%REPONAME%.git  2>&1
-git fetch origin
+echo 20 2>&1
+git remote update 2>&1
+echo 21 2>&1
+git fetch origin 2>&1
+echo 30 2>&1
+git commit -m "before checkout" 2>&1
+echo 30 2>&1
+
 git checkout HEAD %THISPLACEBACKSLASH%\ 2>&1
+echo 40 2>&1
 
 rem returning to the directory
 :test
