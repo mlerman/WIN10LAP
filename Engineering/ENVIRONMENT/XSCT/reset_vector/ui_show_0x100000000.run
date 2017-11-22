@@ -1,0 +1,7 @@
+echo make sure other session of XSCT are disconnected, ex in the SDK
+set XSCT=call c:\Xilinx\SDK\2017.2\bin\xsct.bat -quiet -interactive
+
+type show_0x100000000.txt |  %XSCT%
+
+
+pause

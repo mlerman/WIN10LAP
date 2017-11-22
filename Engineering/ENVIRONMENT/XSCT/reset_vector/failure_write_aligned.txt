@@ -1,0 +1,9 @@
+connect
+ta 9
+
+mwr 0x100 0xffffffff 100
+
+disconnect
+exit
+
+

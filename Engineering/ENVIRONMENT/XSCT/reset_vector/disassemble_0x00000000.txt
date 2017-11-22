@@ -1,0 +1,10 @@
+connect
+ta 9
+
+puts "reading memory"
+dis 0x00000000 20
+
+disconnect
+exit
+
+

@@ -1,0 +1,10 @@
+connect
+
+targets -set -nocase -filter {name =~ "Cortex-A53*#0"}
+
+nxt
+after 1000
+disconnect
+exit
+
+

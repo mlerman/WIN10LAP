@@ -1,0 +1,9 @@
+connect
+ta 9
+source c:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO/davedir/project_1.sdk/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+psu_post_config
+disconnect
+exit
+
+

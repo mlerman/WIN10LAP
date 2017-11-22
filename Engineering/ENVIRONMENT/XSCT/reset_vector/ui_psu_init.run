@@ -1,0 +1,6 @@
+set XSCT=call c:\Xilinx\SDK\2017.2\bin\xsct.bat -quiet -interactive
+
+type psu_init.txt |  %XSCT%
+
+
+pause

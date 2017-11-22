@@ -1,0 +1,10 @@
+connect
+ta 9
+
+puts "reading memory"
+mrd 0x80000000 100
+
+disconnect
+exit
+
+

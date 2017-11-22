@@ -1,0 +1,8 @@
+connect
+ta 9
+
+locals status
+disconnect
+exit
+
+

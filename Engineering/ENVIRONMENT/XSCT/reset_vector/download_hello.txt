@@ -1,0 +1,7 @@
+connect
+ta 9
+dow c:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO/davedir/project_1.sdk/hello_world/Debug/hello_world.elf
+disconnect
+exit
+
+

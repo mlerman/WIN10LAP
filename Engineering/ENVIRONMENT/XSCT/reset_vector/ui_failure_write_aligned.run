@@ -1,0 +1,4 @@
+echo make sure other session of XSCT are disconnected, ex in the SDK
+set XSCT=call c:\Xilinx\SDK\2017.2\bin\xsct.bat -quiet -interactive
+
+type failure_write_aligned.txt |  %XSCT%

@@ -1,0 +1,14 @@
+
+connect
+ta 9
+
+puts "reading memory UARTPS_FIFO_OFFSET"
+
+
+mrd 0xFF000010 10
+
+
+disconnect
+exit
+
+
