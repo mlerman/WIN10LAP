@@ -54,6 +54,7 @@ git fetch origin 2>&1
 echo 30 2>&1
 rem a commit will delete a file in the repo
 rem git commit -m "before checkout" 2>&1
+git reset --hard origin/master 2>&1
 echo 30 2>&1
 
 git checkout HEAD %THISPLACEBACKSLASH%\ 2>&1
