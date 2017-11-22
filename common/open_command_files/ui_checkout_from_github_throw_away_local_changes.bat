@@ -34,22 +34,26 @@ if "%COMPUTERNAME%" == "XSJMIKHAELL30" ( echo this is XSJMIKHAELL30
   git config --global http.proxy proxy:8080
 )
 
-
+echo 10 2>&1
 git config --global user.email "michael_lerman@yahoo.com"
 git config --global user.name "Mikhael Lerman"
 git config --global core.safecrlf false
+echo 20 2>&1
 
 rem focus only on the current directory
 rem untrack all files except this directory
 git update-index --assume-unchanged c:\UniServer\www\doc\files\*
 git update-index --no-assume-unchanged %THISPLACEBACKSLASH%\*
+echo 30 2>&1
 
 rem add only this project and subdir
 git add -A %THISPLACEBACKSLASH%\  2>&1
 git remote set-url origin https://mlerman@github.com/mlerman/%REPONAME%.git  2>&1
 git fetch origin
+echo 40 2>&1
 rem git checkout HEAD %THISPLACEBACKSLASH%\ 2>&1
 git checkout -t -f -b master -- %THISPLACEBACKSLASH%\ 2>&1
+echo 50 2>&1
 
 rem returning to the directory
 :test
