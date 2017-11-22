@@ -52,7 +52,7 @@ git remote update 2>&1
 echo 21 2>&1
 git fetch origin 2>&1
 echo 30 2>&1
-git commit -m "before checkout" 2>&1
+rem git commit -m "before checkout" 2>&1
 echo 30 2>&1
 
 git checkout HEAD %THISPLACEBACKSLASH%\ 2>&1
