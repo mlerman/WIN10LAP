@@ -1,0 +1,14 @@
+.gitignore
+.htaccess
+.time
+favicon.ico
+favicon.bmp
+open-command-prompt-here.html
+nohup.out
+clipb.txt
+new.txt
+*.msi
+*.exe
+
+
+
