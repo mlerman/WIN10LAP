@@ -1,0 +1,8 @@
+echo pause 1
+read -p "Press [Enter] key to continue..."
+echo pause 2
+read -p "Press [Enter] key to continue..."
+echo pause 3
+read -p "Press [Enter] key to continue..."
+echo pause 4 finale
+read -p "Press [Enter] key to continue..."

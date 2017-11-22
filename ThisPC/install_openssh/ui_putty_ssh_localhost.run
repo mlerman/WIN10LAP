@@ -1,0 +1,10 @@
+rem start c:\UniServer\www\doc\files\ThisPC\putty\putty.exe -ssh mlerman@localhost -pw 2232
+echo %TARGETDIR%
+del putty.log /Q
+start c:\UniServer\www\doc\files\ThisPC\install_kitty\kitty_portable.exe -ssh mlerman@localhost -pw 2232 -cmd "cd /cygdrive/c/UniServer/www/doc/files/ThisPC/install_openssh\n"
+sleep 5
+start c:\UniServer\www\doc\files\ThisPC\install_kitty\kitty_portable.exe -sendcmd "./test.rn\n"
+
+exit
+
+

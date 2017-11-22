@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<!-- saved from url=(0098)http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/ -->
+<html itemscope="" itemtype="http://schema.org/Article"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<link href="https://plus.google.com/100292833634918081724" rel="publisher">
+<title>How To Get SSH Command-Line Access to Windows 7 Using Cygwin</title>
+
+<meta property="fb:page_id" content="65878196434">
+<meta name="verify-v1" content="WiU7236KQY8e6jcxePbZscPXDuMvJ3b9ydseGd4G5AE=">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="REVISIT-AFTER" content="1 DAYS">
+<link rel="alternate" type="application/rss+xml" title="How-To Geek RSS Feed" href="http://feeds.howtogeek.com/HowToGeek">
+<meta property="og:title" itemprop="name" name="title" content="How To Get SSH Command-Line Access to Windows 7 Using Cygwin">
+<meta property="og:type" content="article">
+<meta property="og:description" name="og:description" itemprop="og:description" content="Are you comfortable with Linux/Unix and want SSH access to your Windows 7 machine? Cygwin provides this functionality and gives you a familiar environment to work with in a few simple steps.">
+<meta property="og:image" content="http://cdn8.howtogeek.com/thumbcache/140/160/31ecc53edca1e7d430a036f5ba2344ac/wp-content/uploads/2011/01/banner3.png">
+<link rel="image_src" href="http://cdn8.howtogeek.com/thumbcache/140/160/31ecc53edca1e7d430a036f5ba2344ac/wp-content/uploads/2011/01/banner3.png">
+<link rel="stylesheet" href="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/A.howtogeek.css,q1406184258.pagespeed.cf.YpVny0iJSz.css" type="text/css">
+<link href="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="http://cdn8.howtogeek.com/public/favicon.ico" type="image/x-icon">
+<script async="" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/beacon.js"></script><script async="" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/cross-check.js"></script><script charset="UTF-8" type="text/javascript" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/impl.5-122-125549-5-Release.js"></script><script src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/quant.js" async="" type="text/javascript"></script><script async="" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/analytics.js"></script><script src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/cb=gapi.loaded_1" async=""></script><script src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/plusone.js" gapi_processed="true"></script><script id="twitter-wjs" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/widgets.js"></script><script async="" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/loader.js"></script><script type="text/javascript" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/jquery.min.js"></script><style type="text/css"></style>
+<script type="text/javascript">var statsUrl='/public/stats.php?id=41560&1410037949';</script>	<script type="text/javascript" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/howtogeek.js,qupd=1408523054.pagespeed.jm.2oOF1lP5ap.js"></script>
+<link rel="shortlink" href="http://www.howtogeek.com/?p=41560">
+<link rel="canonical" href="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/How To Get SSH Command-Line Access to Windows 7 Using Cygwin.htm">
+<meta property="og:url" content="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/"><script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[];(function(){var src='//www.googletagservices.com/tag/js/gpt.js';document.write('<scr'+'ipt src="'+src+'"></scr'+'ipt>');})();(function(){var src='//ox-d.tmn.servedbyopenx.com/w/1.0/jstag?ef=db&nc=10518929-TMNP.HOWTOGEEK';document.write('<scr'+'ipt src="'+src+'"></scr'+'ipt>');})();</script><script src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/gpt.js"></script><iframe src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/container.htm" style="visibility: hidden; display: none;"></iframe><script src="http://ox-d.tmn.servedbyopenx.com/w/1.0/jstag?ef=db&nc=10518929-TMNP.HOWTOGEEK"></script>
+<script type="text/javascript">googletag.cmd.push(function(){googletag.defineSlot('/10518929/tmnp.howtogeek/infotech',[[300,250],[300,600],[300,1050]],'div-gpt-ad-1342044737928-1').addService(googletag.pubads());googletag.defineSlot('/10518929/tmnp.howtogeek/infotech',[[728,90]],'div-gpt-ad-1342044737928-2').addService(googletag.pubads());googletag.defineSlot('/10518929/tmnp.howtogeek-btf/infotech',[[160,600],[120,600]],'div-gpt-ad-1342044737928-12').addService(googletag.pubads());googletag.defineSlot('/10518929/tmnp.howtogeek-btf/infotech',[[728,90],[970,66],[970,90],[970,250]],'div-gpt-ad-1342044737928-14').addService(googletag.pubads());googletag.defineSlot('/10518929/tmnp.howtogeek/infotech',[650,141],'div-1342-1').addService(googletag.pubads()).setTargeting('adsense1','adsense1');googletag.defineSlot('/10518929/tmnp.howtogeek/infotech',[650,140],'div-1342-2').addService(googletag.pubads()).setTargeting('adsense2','adsense2');googletag.defineSlot('/10518929/tmnp.howtogeek/infotech',[300,300],'div-1342-3').addService(googletag.pubads()).setTargeting('adsense3','adsense3');googletag.pubads().setTargeting("URL",encodeURIComponent(window.location.href));googletag.enableServices();});</script><script async="" type="text/javascript" src="http://partner.googleadservices.com/gpt/pubads_impl_48.js"></script>
+<script type="text/javascript">window._taboola=window._taboola||[];_taboola.push({article:'auto'});!function(e,f,u){e.async=1;e.src=u;f.parentNode.insertBefore(e,f);}(document.createElement('script'),document.getElementsByTagName('script')[0],'http://cdn.taboola.com/libtrc/howtogeek-howtogeek/loader.js');</script>
+<style type="text/css">.trc_rbox_container{direction:ltr;text-align:left}.trc_rbox_header{border-style:solid;border-width:0}.in_trc_header{position:relative!important;float:right;margin:0}#trc_rbox_css_loaded{overflow:hidden;width:0;height:0}.trc_rbox{margin-top:0}.trc_rbox_div{margin:0 0 3px;direction:ltr;padding:0;box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;-webkit-box-sizing:border-box;overflow:auto;position:relative;width:auto;*width:auto;border:solid #CCC 1px}.loading-animation span{display:block}.videoCube{zoom:1;cursor:pointer;float:none;overflow:hidden;box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;-webkit-box-sizing:border-box}div.videoCube:hover,.videoCube_hover{cursor:pointer}.videoCube span.video-title:hover,.videoCube_hover span.video-title{text-decoration:underline}.videoCube a{text-decoration:none;border:0;color:#000;cursor:pointer}.videoCube a:hover,.videoCube_hover a,.videoCube a:link,.videoCube a{text-decoration:none!important;outline:0}.videoCube a .thumbBlock{float:left;display:block;overflow:hidden!important}.videoCube a img,.videoCube img{border:0;_border:0;display:block;margin:0;height:auto;width:auto}.videoCube .video-label{display:block;overflow:hidden}.videoCube .video-title{width:auto!important;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.videoCube .video-duration a{}.videoCube .video-duration{height:0;float:left;position:relative;color:#fff;font-size:11px}.videoCube .video-duration dt{border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;background-color:#000;opacity:.6;filter:alpha(opacity=60)}.sponsored-default .video-description{font-weight:400;color:#000;font-size:9px;max-height:22px;*height:22px;overflow:hidden;line-height:9px}.video-duration.video-duration-detail div{color:#fff}.sponsored-default{background-color:#f7f6c6;padding-bottom:0!important}.trc_rbox .sponsored{position:relative;display:block;overflow:visible;height:auto;width:auto;padding-right:0;text-align:right;font-size:9px}.sponsored-url{white-space:nowrap;float:left;overflow:hidden;width:98%;height:auto;margin-top:0;margin-left:1px;padding-bottom:2px;color:green;font-size:9px;text-decoration:underline}.sponsored-default .video-title{height:26px;font-size:11px;line-height:13px;max-height:26px;*height:26px}.sponsored-default .thumbBlock img{}.sponsored-default .thumbBlock{text-align:center;background-color:transparent}.trc_rbox_div{height:410px}.videoCube{direction:ltr;font-size:11px;margin:0;color:#000;border-width:0}.videoCube.vertical:first-child{border-top:0;margin-top:0}.videoCube.horizontal:first-child{border-left:0;margin-left:0}.trc_rbox .trc_rbox_div .videoCube.vertical{_margin-top:expression(this.previousSibling==null?'0':'default')}.trc_rbox .trc_rbox_div .videoCube.horizontal{_margin-left:expression(this.previousSibling==null?'0':'default')}div.videoCube:hover,.videoCube_hover{background-color:#EBF0FF;color:#000}.videoCube .thumbBlock{margin-right:5px;margin-left:1px;border-style:solid}.videoCube a img,.videoCube img{border-color:#ececec}.videoCube .overlayImg{}.videoCube .video-label-box{margin-left:81px}.videoCube .video-label dt{font-weight:700}.videoCube .video-title{height:auto;margin-bottom:3px;white-space:normal}.videoCube .trc_inline_detail_spacer{display:inline-block;white-space:pre}.sponsored-default{padding-bottom:0}.loading-animation{font-family:sans;font-size:1.5em;text-align:center;color:gray;height:100%}.trc_rbox_header{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;text-decoration:none;color:#000}.trc_header_right_part{position:absolute;left:50%;top:0}.branding_div{overflow:visible;float:right}.branding_div img{height:20px}.trc_pager div{float:left;font-family:sans;cursor:pointer;margin-left:2px;margin-right:2px}.trc_pager_prev,.trc_pager_next{}.trc_pager{font-weight:400}.trc_pager_pages{display:block!important}.trc_related_container div.horizontal{float:left;box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;-webkit-box-sizing:border-box}.trc_related_container div.vertical{}.trc_related_container DIV.videoCube.thumbnail_top .thumbBlock,.trc_related_container DIV.videoCube.thumbnail_bottom .thumbBlock{float:none}@media screen and (-webkit-min-device-pixel-ratio:0){.sponsored-url{margin-top:2px}}.vidiscovery-note{display:none}.pager_disabled{cursor:auto}.videoCube .thumbBlock .trc_sponsored_overlay_base{display:block;width:auto;margin-left:0;position:absolute;color:#fff!important}.videoCube .thumbBlock .trc_sponsored_overlay{filter:alpha(opacity=60);opacity:.6;display:block;position:absolute;*left:0}.videoCube .thumbBlock .trc_sponsored_overlay_base .sponsored{position:relative;display:block;overflow:visible;width:auto;text-align:center;padding:0 5px;margin-top:0}.videoCube .thumbBlock .trc_sponsored_overlay_base.round .trc_sponsored_overlay{border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px}.videoCube .thumbBlock .trc_sponsored_overlay_base.round{margin-left:4px}.thumbnail-emblem{background-color:transparent;background-repeat:no-repeat;position:absolute;z-index:50}.playerCube .thumbnail-overlay,.videoCube .thumbnail-overlay{position:absolute;background-color:transparent;background-repeat:no-repeat;z-index:50}.videoCube:hover .thumbnail-overlay,.videoCube_hover .thumbnail-overlay{position:absolute;background-color:transparent;background-repeat:no-repeat;z-index:50}.thumbnail_bottom{padding-bottom:8px}.trc_pager_next img,trc_pager_next pager_disabled img,trc_pager_next:hover img{-moz-transform:scaleX(-1);-o-transform:scaleX(-1);-webkit-transform:scaleX(-1);transform:scaleX(-1);filter:FlipH;-ms-filter:"FlipH"}.trc_cover_iframe{position:absolute;z-index:100000;top:0;left:0;background:#000;opacity:.4;filter:alpha(opacity=40);border:0}.trc_lightbox_base{z-index:100001;position:fixed}.trc_lightbox_overlay{background-color:transparent;position:absolute;z-index:100002}.trc_lightbox_transparent{position:absolute;z-index:100003}#trc_lightbox_header{font-family:"Trebuchet MS",Helvetica,sans-serif}.trc_whitebox{background-color:#fff;position:relative;z-index:100004;padding:0 20px 20px;margin:0 auto;border:2px solid #000;-moz-box-shadow:3px 3px 20px #000;-webkit-box-shadow:3px 3px 20px #000;box-shadow:3px 3px 20px #000;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}.trc_whiteboxCloseButton{width:32px;height:32px;border:0;position:absolute;right:-16px;top:-14px;cursor:pointer;background:url(//cdn.taboola.com/taboola-generic/close.png) no-repeat top left transparent;color:#fff;color:transparent;font-size:0}.trc_related_container .logoDiv{font-family:Arial,Helvetica,sans-serif;white-space:nowrap;font-size:9px}.trc_related_container .logoDiv a{font-size:9px;text-decoration:none!important;color:#000;margin-right:1px;vertical-align:text-bottom}.logoDiv a span:hover{text-decoration:underline}.trc_rbox_header .logoDiv{font-size:1em}.trc_related_container .vertical-start-shade{background-image:url(//cdn.taboola.com/taboola-generic/shade-down.png);height:10px;width:auto;position:absolute;z-index:5}.trc_related_container .vertical-end-shade{background-image:url(//cdn.taboola.com/taboola-generic/shade-up.png);height:10px;width:auto;position:absolute;z-index:5}.trc_related_container .horizontal-start-shade{background-image:url(//cdn.taboola.com/taboola-generic/shade-right.png);height:auto;width:10px;position:absolute;z-index:5}.trc_related_container .horizontal-end-shade{background-image:url(//cdn.taboola.com/taboola-generic/shade-left.png);height:auto;width:10px;position:absolute;z-index:5}DIV.trc_autoplaylist-box{margin:6px auto 0;border:0;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;padding:4px;font-family:"Trebuchet MS",Helvetica,sans-serif;width:320px;background:#191919;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#191919', endColorstr='#393939');-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#191919, endColorstr=#393939)";background:-webkit-gradient(linear,left top,left bottom,from(#191919),to(#393939));background:-moz-linear-gradient(top,#191919,#393939);background:linear-gradient(top,#191919,#393939)}DIV.trc_autoplaylist-box .trc-next-up-header{font-size:14px;color:#CCC;float:left;line-height:31px;margin:0 4px 0 6px;overflow:hidden;white-space:nowrap}DIV.trc_autoplaylist-box .trc-next-up-countdown{color:#fff;font-weight:700;font-size:15px;padding-left:4px}DIV.trc_autoplaylist-box .nextup{cursor:pointer}DIV.trc_autoplaylist-box .nextup .thumbblock{border:solid #FEFEFE 1px;margin-right:10px}DIV.trc_autoplaylist-box:hover .nextup .thumbblock SPAN.thumbnail-overlay{background-image:url(//cdn.taboola.com/taboola-generic/lightbox-overlay.png)}DIV.trc_autoplaylist-box .nextup .video-label-box{color:#fff;font-weight:700;font-size:12px;line-height:14px}.trc-syndication-link{text-decoration:none;color:inherit}.playerCube{width:100%;height:100%;position:relative;cursor:pointer}.playerCube .thumbnail-overlay{width:100%;height:100%;top:0;left:0;position:absolute}.trc_related_container .whatsThisSyndicated{position:absolute;cursor:pointer}.trc_related_container .whatsThisSyndicated.a-bottom-right,.trc_related_container .static-text.bottom-right{bottom:0;right:0}.trc_related_container .whatsThisSyndicated.a-top-right,.trc_related_container .static-text.top-right{top:0;right:0}.trc_related_container .whatsThisSyndicated.a-bottom-left,.trc_related_container .static-text.bottom-left{bottom:0;left:0}.trc_related_container .whatsThisSyndicated.a-top-left,.trc_related_container .static-text.top-left{top:0;left:0}.trc_related_container .videoCube .thumbBlock .branding{position:absolute;bottom:0;z-index:1;width:100%;margin:0;padding:5px 0;text-align:center}.trc_related_container .videoCube .thumbBlock .static-text{position:absolute;z-index:1;margin:0;padding:5px;background-color:#000;color:#fff;display:block;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:400;text-align:left;text-decoration:none;opacity:.7}.trc_related_container .static-text.top{width:100%;top:0;padding:5px 0}.trc_related_container .static-text.bottom{width:100%;bottom:0;padding:2px 0}.trc-inplayer-rbox{background:#333;background:rgba(30,30,30,.9);*background:#333;bottom:0;position:absolute;height:300px;text-align:center}.trc-inplayer-rbox .trc_rbox_container{margin:50px auto 0;width:640px}.trc_rbox.trc-auto-size{width:100%;height:100%}.videoCube.thumbnail_under .thumbBlock{margin-left:0;margin-right:0}.videoCube.thumbnail_under .label-box-overlay{width:100%;height:100%;position:absolute;background:#000;opacity:.75;filter:alpha(opacity=75);top:0;_display:none}.videoCube.thumbnail_under .video-labels-anchor{width:100%;height:auto;position:absolute;z-index:1;left:0;bottom:0;min-height:2.58em;max-height:2.58em;padding-top:2px;padding-bottom:2px;_background-color:#CECECE;-webkit-transition:all .2s linear;-moz-transition:all .2s linear;-ms-transition:all .2s linear;-o-transition:all .2s linear;transition:all .2s linear;line-height:1.25em}.videoCube.thumbnail_under .video-labels-anchor span.video-title,.videoCube.thumbnail_under .video-labels-anchor span.branding{position:relative;z-index:1;padding:0 3px;margin:0}.videoCube.thumbnail_under .video-title{min-height:2.58em}.videoCube.thumbnail_under:hover .video-labels-anchor{opacity:1;max-height:6.45em}.trc-auto-size .trc_rbox_outer .trc_rbox_div{height:auto;width:auto}.trc-auto-size .trc_rbox_div .videoCube{height:auto}.trc-auto-size .trc_rbox_div .videoCube.trc-first-recommendation{margin-top:0}.trc_rbox .trc_rbox_outer .trc_rbox_div .videoCube.trc-first-in-row{margin-left:0}.trc_related_container .trc_elastic{font-size:13px;line-height:18px;color:#333;background-color:#fff;box-shadow:#666 0 0 0 4px;margin:20px}.trc_elastic .trc_rbox{width:auto}.trc_elastic .videoCube{overflow:hidden}.trc_elastic .videoCube .thumbBlock{display:block;background-color:transparent;background-position:center center;background-repeat:no-repeat;background-size:cover;position:absolute;display:inline-block;top:0;right:0;bottom:0;left:0;margin-left:0;margin-right:0}.trc_elastic .thumbBlock_holder{position:relative;width:100%}.trc_elastic .videoCube_aspect{width:1px}.trc_elastic .trc_rbox .trc_rbox_div{height:auto}.trc_elastic .video-label-box{display:block}.trc_user_exclude_btn{background:url(//cdn.taboola.com/libtrc/static/thumbnails/f539211219b796ffbb49949997c764f0.png) no-repeat scroll 0 0 transparent;width:12px;height:12px;position:absolute;right:2px;top:2px;z-index:9000;cursor:pointer;visibility:hidden}.trc_undo_btn{font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:14px;font-weight:400;color:#36C;text-decoration:underline;cursor:pointer;position:absolute;right:2px;top:2px;padding:0 1px;z-index:11000;visibility:hidden}.videoCube:hover .trc_user_exclude_btn,.videoCube_hover .trc_user_exclude_btn,.trc_user_excluded.videoCube:hover .trc_undo_btn,.trc_user_excluded.videoCube_hover .trc_undo_btn,.trc_undo_btn.trc_anchor{visibility:visible}.videoCube.trc_user_excluded .trc_user_exclude_btn{visibility:hidden}.trc_fade{opacity:0;filter:alpha(opacity=0);visibility:hidden;transition:opacity 500ms 0s,visibility 0s 500ms;-webkit-transition:opacity 500ms 0s,visibility 0s 500ms;-moz-transition:opacity 500ms 0s,visibility 0s 500ms;-o-transition:opacity 500ms 0s,visibility 0s 500ms;-ms-transition:opacity 500ms 0s,visibility 0s 500ms}.trc_fade.trc_in,.trc_user_excluded .trc_exclude_overlay{visibility:visible;opacity:1;filter:alpha(opacity=100);transition-delay:0s,0s;-moz-transition-delay:0s,0s;-webkit-transition-delay:0s,0s;-o-transition-delay:0s,0s;-ms-transition-delay:0s,0s}.trc_excludable .trc_exclude_overlay{position:absolute;z-index:10000;top:0;left:0;width:100%;height:100%;cursor:default;background-color:#fff}.videoCube.trc_excludable .trc_exclude_overlay.trc_fade{filter:alpha(opacity=80)\9}.videoCube.trc_user_excluded .trc_exclude_overlay{visibility:visible;opacity:.8;filter:alpha(opacity=80)}.videoCube.trc_user_excluded .thumbBlock{filter:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#grayscale");filter:gray;-webkit-filter:grayscale(100%)}.videoCube.trc_user_excluded:hover a .video-label-box .video-title,.videoCube_hover.trc_user_excluded a .video-label-box .video-title{text-decoration:none}.videoCube.trc_user_excluded a .video-label-box *,.videoCube.trc_user_excluded:hover a .video-label-box *,.videoCube_hover.trc_user_excluded a .video-label-box *{color:#000;overflow:hidden;-webkit-transition:color 500ms 0s;-moz-transition:color 500ms 0s;-ms-transition:color 500ms 0s;-o-transition:color 500ms 0s;transition:color 500ms 0s}.videoCube.trc_user_excluded a .video-label-box .label-box-overlay{background-color:#BBB;-webkit-transition:background-color 500ms 0s;-moz-transition:background-color 500ms 0s;-ms-transition:background-color 500ms 0s;-o-transition:background-color 500ms 0s;transition:background-color 500ms 0s}.videoCube.thumbnail_under.trc_user_excluded .video-labels-anchor,.videoCube.thumbnail_under.trc_user_excluded:hover .video-labels-anchor{max-height:none;-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none}.trc_related_container .trc_clearer{clear:both;height:0;overflow:hidden;font-size:0;line-height:0;visibility:hidden}.trc_mobile_disclosure_link,.trc_mobile_attribution_link{display:none}.trc_desktop_disclosure_link,.trc_desktop_attribution_link{display:inline}@media screen and (max-width:767px){.trc_mobile_disclosure_link{display:inline}.trc_mobile_attribution_link{display:inline}.trc_desktop_disclosure_link{display:none}.trc_desktop_attribution_link{display:none}}.trc_related_container .logoDiv,.trc_related_container .trc_header_ext .logoDiv{float:right}.trc_related_container .logoDiv+.logoDiv{margin-right:2px}.trc_related_container .attribution-disclosure-link-sponsored,.trc_related_container .attribution-disclosure-link-hybrid{display:none}.trc_related_container .trc-content-sponsored .attribution-disclosure-link-sponsored{display:block}.trc_related_container .trc-content-hybrid .attribution-disclosure-link-hybrid{display:block}.trc_related_container .trc-widget-footer:hover a span,.trc_related_container .trc_header_ext:hover a span{text-decoration:underline!important}.trc_related_container{clear:both}.rbox-blended .video-title{font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:17.5px;font-weight:bold;max-height:2.58em;*height:2.58em;color:black;text-decoration:none;}.rbox-blended .video-description{font-family:Arial, Helvetica, sans-serif;font-size:10px;line-height:11px;font-weight:normal;max-height:2.2em;*height:2.2em;color:black;text-decoration:none;}.rbox-blended .trc_rbox_div{width:auto;_width:99%;height:410px;border-width:1px;padding:0;}.rbox-blended .videoCube .video-duration{left:36px;display:block;}.rbox-blended .videoCube .video-label-box{margin-left:81px;margin-right:0px;}.rbox-blended .video-label,.rbox-blended .sponsored,.rbox-blended .sponsored-url{font-family:Arial, Helvetica, sans-serif;}.rbox-blended .trc_rbox_header{font-family:Arial, Helvetica, sans-serif;font-size:16px;font-weight:bold;text-decoration:none;color:black;border-width:0;background:transparent;border-style:none none solid none;border-color:#D6D5D3;padding:0;}.rbox-blended .sponsored-url{font-size:9px;font-weight:bold;text-decoration:underline;color:green;}.rbox-blended .sponsored{font-size:9px;font-weight:normal;text-decoration:none;color:#9C9A9C;}.rbox-blended .video-category{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.rbox-blended .video-duration-detail{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.rbox-blended .video-rating{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.rbox-blended .video-uploader{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.rbox-blended .video-views{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.rbox-blended .video-published-date{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.rbox-blended .sponsored-default .video-title{max-height:2.58em;*height:2.58em;}.rbox-blended .sponsored-default .video-description{max-height:2.2em;*height:2.2em;}.rbox-blended .videoCube{width:auto;_width:auto;background-color:transparent;border-width:1px;border-color:#D6D5D3;padding:3px;height:auto;margin-left:0px;margin-top:0px;border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;}.rbox-blended div.videoCube:hover,.rbox-blended  div.videoCube_hover{background-color:transparent;}.rbox-blended .sponsored-default{background-color:#F7F6C6;}.rbox-blended div.sponsored-default:hover,.rbox-blended  div.sponsored-default.videoCube_hover{background-color:inherit;}.rbox-blended .videoCube .thumbnail-overlay{background-image:null;background-position:5% 5%;}.rbox-blended .videoCube:hover .thumbnail-overlay,.rbox-blended  .videoCube_hover .thumbnail-overlay{background-image:null;}.rbox-blended .trc_rbox_border_elm{border-color:darkgray;}.rbox-blended .videoCube .thumbBlock{border-width:0px;border-color:darkgray;}.rbox-blended div.videoCube:hover .thumbBlock{border-color:inherit;}.rbox-blended .pager_enabled{color:#0056b3;}.rbox-blended .trc_pager_counter{color:#000000;}.rbox-blended .pager_disabled{color:#7d898f;}.rbox-blended .trc_pager_prev:hover,.rbox-blended  .trc_pager_next:hover{color:#6497ED;}.rbox-blended .trc_pager_selected{color:#0056b3;}.rbox-blended .trc_pager_unselected{color:#7d898f;}.rbox-blended div.trc_pager_pages div:hover{color:#6497ED;}.rbox-blended .trc_lightbox_overlay{background-color:#000000;opacity:0.70;filter:alpha(opacity=70);}.rbox-blended .video-label-box{text-align:left;}.rbox-blended .trc_sponsored_overlay{background-color:black;}.rbox-blended .thumbnail-emblem{background-position:5% 5%;}.rbox-blended .videoCube .sponsored{margin-top:-7px;}.rbox-blended{width:300px;_width:300px;border-width:0px;border-style:solid solid solid solid;border-color:#000000;padding:0;}.rbox-blended .videoCube.vertical{border-style:solid none none none;}.rbox-blended .videoCube.horizontal{border-style:none none none solid;}.rbox-blended .trc_pager_prev,.rbox-blended .trc_pager_next{font-size:12px;font-weight:normal;text-decoration:none;}.rbox-blended .trc_pager_pages div{font-size:12px;font-weight:normal;text-decoration:none;}.rbox-blended .video-external-data{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.rbox-blended .trc_pager div{font-family:serif;}.rbox-blended .playerCube .thumbnail-overlay{background-image:null;background-position:5% 5%;}.rbox-blended .playerCube:hover .thumbnail-overlay,.rbox-blended  .playerCube_hover .thumbnail-overlay{background-image:null;}.rbox-blended .playerCube .videoCube{background-color:transparent;border-color:#D6D5D3;border-width:1px;border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;margin-left:0px;margin-top:0px;padding:3px;}.rbox-blended .playerCube .videoCube.horizontal{border-style:none none none none;}.rbox-blended .playerCube .videoCube .video-label-box{margin-left:81px;margin-right:0px;}.rbox-blended .playerCube .video-duration-detail{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.rbox-blended .playerCube .video-external-data{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.rbox-blended .playerCube .video-label-box{text-align:left;}.rbox-blended .playerCube .video-published-date{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.rbox-blended .playerCube .video-category{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.rbox-blended .playerCube .video-description{font-family:Arial, Helvetica, sans-serif;font-size:10px;line-height:11px;font-weight:normal;text-decoration:none;max-height:2.2em;*height:2.2em;color:black;}.rbox-blended .playerCube .videoCube .video-duration{display:block;left:36px;}.rbox-blended .playerCube .videoCube .thumbBlock{border-width:0px;border-color:darkgray;}.rbox-blended .playerCube .video-rating{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.rbox-blended .playerCube .video-uploader{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.rbox-blended .playerCube .video-views{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.rbox-blended .playerCube .video-title{font-family:Arial, Helvetica, sans-serif;text-decoration:none;font-size:14px;line-height:17.5px;font-weight:bold;max-height:2.58em;*height:2.58em;color:black;}.rbox-blended .playerCube div.videoCube:hover,.rbox-blended  div.videoCube_hover{background-color:transparent;}.rbox-blended .whatsThisSyndicated{font-family:Arial, Verdana, sans-serif;font-size:9px;font-weight:normal;color:black;text-decoration:none;padding:0;}.rbox-blended div.syndicatedItem:hover,.rbox-blended  div.syndicatedItem.videoCube_hover{background-color:transparent;}.rbox-blended div.syndicatedItem:hover .thumbBlock{border-color:inherit;}.rbox-blended .videoCube.syndicatedItem{background-color:transparent;border-color:#D6D5D3;border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;border-width:1px;}.rbox-blended .videoCube.syndicatedItem.horizontal{border-style:none none none solid;}.rbox-blended .videoCube.syndicatedItem .thumbBlock{border-color:darkgray;border-width:0px;}.rbox-blended .videoCube.syndicatedItem .thumbnail-overlay{background-image:null;background-position:5% 5%;}.rbox-blended .videoCube.syndicatedItem.vertical{border-style:solid none none none;}.rbox-blended .videoCube.syndicatedItem .video-duration{display:block;left:36px;}.rbox-blended .videoCube.syndicatedItem .video-label-box{margin-left:0px;}.rbox-blended .syndicatedItem{background-color:transparent;}.rbox-blended .syndicatedItem .video-description{max-height:2.2em;*height:2.2em;color:black;font-family:Arial, Helvetica, sans-serif;font-size:10px;font-weight:normal;line-height:11px;text-decoration:none;}.rbox-blended .syndicatedItem .video-title{max-height:2.58em;*height:2.58em;color:black;font-family:Arial, Helvetica, sans-serif;font-size:14px;line-height:17.5px;font-weight:bold;text-decoration:none;}.rbox-blended .syndicatedItem .sponsored{color:#9C9A9C;font-size:9px;font-weight:normal;text-decoration:none;}.rbox-blended .syndicatedItem .sponsored-url{color:green;font-size:9px;font-weight:bold;text-decoration:underline;}.rbox-blended .syndicatedItem .video-category{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.rbox-blended .syndicatedItem .video-duration-detail{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.rbox-blended .syndicatedItem .video-external-data{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.rbox-blended .syndicatedItem .video-published-date{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.rbox-blended .syndicatedItem .video-rating{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.rbox-blended .syndicatedItem .video-uploader{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.rbox-blended .syndicatedItem .video-views{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.rbox-blended .syndicatedItem .branding{color:black;font-size:10px;font-weight:normal;text-decoration:none;font-family:Arial, Helvetica, sans-serif;background-image:null;text-align:left;}.rbox-blended .videoCube.syndicatedItem .thumbBlock .branding{text-align:left;background-color:transparent;display:block;left:0px;color:black;font-size:10px;font-weight:normal;text-decoration:none;font-family:Arial, Helvetica, sans-serif;background-image:null;}.rbox-blended .videoCube.syndicatedItem .thumbBlock .static-text{text-align:left;background-color:black;display:block;color:white;font-size:10px;font-weight:normal;text-decoration:none;font-family:Arial, Helvetica, sans-serif;}.rbox-blended .videoCube.syndicatedItem:hover .thumbnail-overlay,.rbox-blended  .videoCube_hover.syndicatedItem .thumbnail-overl{:null;}.thumbs-2r .video-title{font-family:Arial, Helvetica, sans-serif;font-size:14.0px;line-height:19.0px;font-weight:bold;max-height:76.0px;*height:76.0px;color:#172232;text-decoration:none;}.thumbs-2r .video-description{font-family:Arial, Helvetica, sans-serif;font-size:10px;line-height:11px;font-weight:normal;max-height:2.2em;*height:2.2em;color:black;text-decoration:none;}.thumbs-2r .trc_rbox_div{width:auto;_width:99%;height:410px;border-width:0;padding:0;}.thumbs-2r .videoCube .video-duration{left:36px;display:none;}.thumbs-2r .videoCube .video-label-box{margin-left:0;margin-right:0px;}.thumbs-2r .video-label,.thumbs-2r .sponsored,.thumbs-2r .sponsored-url{font-family:Arial, Helvetica, sans-serif;}.thumbs-2r .trc_rbox_header{font-family:Tahoma, Geneva, sans-serif;font-size:16.0px;font-weight:bold;text-decoration:none;color:#666;border-width:0;background:transparent;border-style:none;border-color:#D6D5D3;padding:0 0 6px 0;}.thumbs-2r .sponsored-url{font-size:9px;font-weight:bold;text-decoration:underline;color:green;}.thumbs-2r .sponsored{font-size:9px;font-weight:normal;text-decoration:none;color:#9C9A9C;}.thumbs-2r .video-category{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-2r .video-duration-detail{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-2r .video-rating{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-2r .video-uploader{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-2r .video-views{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-2r .video-published-date{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-2r .sponsored-default .video-title{max-height:2.58em;*height:2.58em;}.thumbs-2r .sponsored-default .video-description{max-height:2.2em;*height:2.2em;}.thumbs-2r .videoCube{width:auto;_width:auto;background-color:transparent;border-width:1px;border-color:#D6D5D3;padding:0;height:auto;margin-left:0px;margin-top:0px;border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;}.thumbs-2r div.videoCube:hover,.thumbs-2r  div.videoCube_hover{background-color:transparent;}.thumbs-2r .sponsored-default{background-color:#F7F6C6;}.thumbs-2r div.sponsored-default:hover,.thumbs-2r  div.sponsored-default.videoCube_hover{background-color:inherit;}.thumbs-2r .videoCube .thumbnail-overlay{background-image:null;background-position:5% 5%;}.thumbs-2r .videoCube:hover .thumbnail-overlay,.thumbs-2r  .videoCube_hover .thumbnail-overlay{background-image:null;}.thumbs-2r .trc_rbox_border_elm{border-color:darkgray;}.thumbs-2r .videoCube .thumbBlock{border-width:0px;border-color:darkgray;}.thumbs-2r div.videoCube:hover .thumbBlock{border-color:inherit;}.thumbs-2r .pager_enabled{color:#0056b3;}.thumbs-2r .trc_pager_counter{color:#000000;}.thumbs-2r .pager_disabled{color:#7d898f;}.thumbs-2r .trc_pager_prev:hover,.thumbs-2r  .trc_pager_next:hover{color:#6497ED;}.thumbs-2r .trc_pager_selected{color:#0056b3;}.thumbs-2r .trc_pager_unselected{color:#7d898f;}.thumbs-2r div.trc_pager_pages div:hover{color:#6497ED;}.thumbs-2r .trc_lightbox_overlay{background-color:#000000;opacity:0.70;filter:alpha(opacity=70);}.thumbs-2r .video-label-box{text-align:left;}.thumbs-2r .trc_sponsored_overlay{background-color:black;}.thumbs-2r .thumbnail-emblem{background-position:5% 5%;}.thumbs-2r .videoCube .sponsored{margin-top:-7px;}.thumbs-2r{width:300px;_width:300px;border-width:0px;border-style:none;border-color:#000000;padding:0;}.thumbs-2r .videoCube.vertical{border-style:solid none none none;}.thumbs-2r .videoCube.horizontal{border-style:none;}.thumbs-2r .trc_pager_prev,.thumbs-2r .trc_pager_next{font-size:12px;font-weight:normal;text-decoration:none;}.thumbs-2r .trc_pager_pages div{font-size:12px;font-weight:normal;text-decoration:none;}.thumbs-2r .video-external-data{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-2r .trc_pager div{font-family:serif;}.thumbs-2r .playerCube .thumbnail-overlay{background-image:null;background-position:5% 5%;}.thumbs-2r .playerCube:hover .thumbnail-overlay,.thumbs-2r  .playerCube_hover .thumbnail-overlay{background-image:null;}.thumbs-2r .playerCube .videoCube{background-color:transparent;border-color:#D6D5D3;border-width:1px;border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;margin-left:0px;margin-top:0px;padding:3px;}.thumbs-2r .playerCube .videoCube.horizontal{border-style:none none none none;}.thumbs-2r .playerCube .videoCube .video-label-box{margin-left:81px;margin-right:0px;}.thumbs-2r .playerCube .video-duration-detail{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-2r .playerCube .video-external-data{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-2r .playerCube .video-label-box{text-align:left;}.thumbs-2r .playerCube .video-published-date{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-2r .playerCube .video-category{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-2r .playerCube .video-description{font-family:Arial, Helvetica, sans-serif;font-size:10px;line-height:11px;font-weight:normal;text-decoration:none;max-height:2.2em;*height:2.2em;color:black;}.thumbs-2r .playerCube .videoCube .video-duration{display:block;left:36px;}.thumbs-2r .playerCube .videoCube .thumbBlock{border-width:0px;border-color:darkgray;}.thumbs-2r .playerCube .video-rating{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-2r .playerCube .video-uploader{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-2r .playerCube .video-views{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-2r .playerCube .video-title{font-family:Arial, Helvetica, sans-serif;text-decoration:none;font-size:14px;line-height:17.5px;font-weight:bold;max-height:2.58em;*height:2.58em;color:black;}.thumbs-2r .playerCube div.videoCube:hover,.thumbs-2r  div.videoCube_hover{background-color:transparent;}.thumbs-2r .whatsThisSyndicated{font-family:Arial, Verdana, sans-serif;font-size:9px;font-weight:normal;color:black;text-decoration:none;padding:0;}.thumbs-2r div.syndicatedItem:hover,.thumbs-2r  div.syndicatedItem.videoCube_hover{background-color:transparent;}.thumbs-2r div.syndicatedItem:hover .thumbBlock{border-color:inherit;}.thumbs-2r .videoCube.syndicatedItem{background-color:transparent;border-color:#D6D5D3;border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;border-width:1px;}.thumbs-2r .videoCube.syndicatedItem.horizontal{border-style:none;}.thumbs-2r .videoCube.syndicatedItem .thumbBlock{border-color:darkgray;border-width:0px;}.thumbs-2r .videoCube.syndicatedItem .thumbnail-overlay{background-image:null;background-position:5% 5%;}.thumbs-2r .videoCube.syndicatedItem.vertical{border-style:solid none none none;}.thumbs-2r .videoCube.syndicatedItem .video-duration{display:none;left:36px;}.thumbs-2r .videoCube.syndicatedItem .video-label-box{margin-left:0px;}.thumbs-2r .syndicatedItem{background-color:transparent;}.thumbs-2r .syndicatedItem .video-description{max-height:2.2em;*height:2.2em;color:black;font-family:Arial, Helvetica, sans-serif;font-size:10px;font-weight:normal;line-height:11px;text-decoration:none;}.thumbs-2r .syndicatedItem .video-title{max-height:57.0px;*height:57.0px;color:#172232;font-family:Arial, Helvetica, sans-serif;font-size:14.0px;line-height:19.0px;font-weight:bold;text-decoration:none;}.thumbs-2r .syndicatedItem .sponsored{color:#9C9A9C;font-size:9px;font-weight:normal;text-decoration:none;}.thumbs-2r .syndicatedItem .sponsored-url{color:green;font-size:9px;font-weight:bold;text-decoration:underline;}.thumbs-2r .syndicatedItem .video-category{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.thumbs-2r .syndicatedItem .video-duration-detail{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.thumbs-2r .syndicatedItem .video-external-data{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.thumbs-2r .syndicatedItem .video-published-date{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.thumbs-2r .syndicatedItem .video-rating{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.thumbs-2r .syndicatedItem .video-uploader{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.thumbs-2r .syndicatedItem .video-views{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.thumbs-2r .syndicatedItem .branding{color:#999999;font-size:11.0px;font-weight:bold;text-decoration:none;font-family:Arial, Helvetica, sans-serif;background-image:null;text-align:left;}.thumbs-2r .videoCube.syndicatedItem .thumbBlock .branding{text-align:left;background-color:transparent;display:none;left:0px;color:black;font-size:10px;font-weight:normal;text-decoration:none;font-family:Arial, Helvetica, sans-serif;background-image:null;}.thumbs-2r .videoCube.syndicatedItem .thumbBlock .static-text{text-align:left;background-color:black;display:none;color:white;font-size:10px;font-weight:normal;text-decoration:none;font-family:Arial, Helvetica, sans-serif;}.thumbs-2r .videoCube.syndicatedItem:hover .thumbnail-overlay,.thumbs-2r  .videoCube_hover.syndicatedItem .thumbnail-overl{:null;}.thumbs-mobile-2r .video-title{font-family:Arial, Helvetica, sans-serif;font-size:12.0px;line-height:16.0px;font-weight:bold;max-height:64.0px;*height:64.0px;color:#333;text-decoration:none;}.thumbs-mobile-2r .video-description{font-family:Arial, Helvetica, sans-serif;font-size:10px;line-height:11px;font-weight:normal;max-height:2.2em;*height:2.2em;color:black;text-decoration:none;}.thumbs-mobile-2r .trc_rbox_div{width:auto;_width:99%;height:410px;border-width:0;padding:0;}.thumbs-mobile-2r .videoCube .video-duration{left:36px;display:none;}.thumbs-mobile-2r .videoCube .video-label-box{margin-left:0;margin-right:0px;}.thumbs-mobile-2r .video-label,.thumbs-mobile-2r .sponsored,.thumbs-mobile-2r .sponsored-url{font-family:Arial, Helvetica, sans-serif;}.thumbs-mobile-2r .trc_rbox_header{font-family:helvetica, arial, sans-serif;font-size:16.0px;font-weight:bold;text-decoration:none;color:#333;border-width:0;background:transparent;border-style:none;border-color:#D6D5D3;padding:0 0 6px 0;}.thumbs-mobile-2r .sponsored-url{font-size:9px;font-weight:bold;text-decoration:underline;color:green;}.thumbs-mobile-2r .sponsored{font-size:9px;font-weight:normal;text-decoration:none;color:#9C9A9C;}.thumbs-mobile-2r .video-category{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-mobile-2r .video-duration-detail{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-mobile-2r .video-rating{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-mobile-2r .video-uploader{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-mobile-2r .video-views{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-mobile-2r .video-published-date{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-mobile-2r .sponsored-default .video-title{max-height:2.58em;*height:2.58em;}.thumbs-mobile-2r .sponsored-default .video-description{max-height:2.2em;*height:2.2em;}.thumbs-mobile-2r .videoCube{width:auto;_width:auto;background-color:transparent;border-width:1px;border-color:#D6D5D3;padding:0;height:auto;margin-left:0px;margin-top:0px;border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;}.thumbs-mobile-2r div.videoCube:hover,.thumbs-mobile-2r  div.videoCube_hover{background-color:transparent;}.thumbs-mobile-2r .sponsored-default{background-color:#F7F6C6;}.thumbs-mobile-2r div.sponsored-default:hover,.thumbs-mobile-2r  div.sponsored-default.videoCube_hover{background-color:inherit;}.thumbs-mobile-2r .videoCube .thumbnail-overlay{background-image:null;background-position:5% 5%;}.thumbs-mobile-2r .videoCube:hover .thumbnail-overlay,.thumbs-mobile-2r  .videoCube_hover .thumbnail-overlay{background-image:null;}.thumbs-mobile-2r .trc_rbox_border_elm{border-color:darkgray;}.thumbs-mobile-2r .videoCube .thumbBlock{border-width:0px;border-color:darkgray;}.thumbs-mobile-2r div.videoCube:hover .thumbBlock{border-color:inherit;}.thumbs-mobile-2r .pager_enabled{color:#0056b3;}.thumbs-mobile-2r .trc_pager_counter{color:#000000;}.thumbs-mobile-2r .pager_disabled{color:#7d898f;}.thumbs-mobile-2r .trc_pager_prev:hover,.thumbs-mobile-2r  .trc_pager_next:hover{color:#6497ED;}.thumbs-mobile-2r .trc_pager_selected{color:#0056b3;}.thumbs-mobile-2r .trc_pager_unselected{color:#7d898f;}.thumbs-mobile-2r div.trc_pager_pages div:hover{color:#6497ED;}.thumbs-mobile-2r .trc_lightbox_overlay{background-color:#000000;opacity:0.70;filter:alpha(opacity=70);}.thumbs-mobile-2r .video-label-box{text-align:left;}.thumbs-mobile-2r .trc_sponsored_overlay{background-color:black;}.thumbs-mobile-2r .thumbnail-emblem{background-position:5% 5%;}.thumbs-mobile-2r .videoCube .sponsored{margin-top:-7px;}.thumbs-mobile-2r{width:300px;_width:300px;border-width:0px;border-style:none;border-color:#000000;padding:0;}.thumbs-mobile-2r .videoCube.vertical{border-style:solid none none none;}.thumbs-mobile-2r .videoCube.horizontal{border-style:none;}.thumbs-mobile-2r .trc_pager_prev,.thumbs-mobile-2r .trc_pager_next{font-size:12px;font-weight:normal;text-decoration:none;}.thumbs-mobile-2r .trc_pager_pages div{font-size:12px;font-weight:normal;text-decoration:none;}.thumbs-mobile-2r .video-external-data{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-mobile-2r .trc_pager div{font-family:serif;}.thumbs-mobile-2r .playerCube .thumbnail-overlay{background-image:null;background-position:5% 5%;}.thumbs-mobile-2r .playerCube:hover .thumbnail-overlay,.thumbs-mobile-2r  .playerCube_hover .thumbnail-overlay{background-image:null;}.thumbs-mobile-2r .playerCube .videoCube{background-color:transparent;border-color:#D6D5D3;border-width:1px;border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;margin-left:0px;margin-top:0px;padding:3px;}.thumbs-mobile-2r .playerCube .videoCube.horizontal{border-style:none none none none;}.thumbs-mobile-2r .playerCube .videoCube .video-label-box{margin-left:81px;margin-right:0px;}.thumbs-mobile-2r .playerCube .video-duration-detail{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-mobile-2r .playerCube .video-external-data{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-mobile-2r .playerCube .video-label-box{text-align:left;}.thumbs-mobile-2r .playerCube .video-published-date{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-mobile-2r .playerCube .video-category{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-mobile-2r .playerCube .video-description{font-family:Arial, Helvetica, sans-serif;font-size:10px;line-height:11px;font-weight:normal;text-decoration:none;max-height:2.2em;*height:2.2em;color:black;}.thumbs-mobile-2r .playerCube .videoCube .video-duration{display:block;left:36px;}.thumbs-mobile-2r .playerCube .videoCube .thumbBlock{border-width:0px;border-color:darkgray;}.thumbs-mobile-2r .playerCube .video-rating{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-mobile-2r .playerCube .video-uploader{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-mobile-2r .playerCube .video-views{font-size:10px;font-weight:normal;text-decoration:none;color:black;}.thumbs-mobile-2r .playerCube .video-title{font-family:Arial, Helvetica, sans-serif;text-decoration:none;font-size:14px;line-height:17.5px;font-weight:bold;max-height:2.58em;*height:2.58em;color:black;}.thumbs-mobile-2r .playerCube div.videoCube:hover,.thumbs-mobile-2r  div.videoCube_hover{background-color:transparent;}.thumbs-mobile-2r .whatsThisSyndicated{font-family:Arial, Verdana, sans-serif;font-size:9px;font-weight:normal;color:black;text-decoration:none;padding:0;}.thumbs-mobile-2r div.syndicatedItem:hover,.thumbs-mobile-2r  div.syndicatedItem.videoCube_hover{background-color:transparent;}.thumbs-mobile-2r div.syndicatedItem:hover .thumbBlock{border-color:inherit;}.thumbs-mobile-2r .videoCube.syndicatedItem{background-color:transparent;border-color:#D6D5D3;border-radius:0px;-moz-border-radius:0px;-webkit-border-radius:0px;border-width:1px;}.thumbs-mobile-2r .videoCube.syndicatedItem.horizontal{border-style:none;}.thumbs-mobile-2r .videoCube.syndicatedItem .thumbBlock{border-color:darkgray;border-width:0px;}.thumbs-mobile-2r .videoCube.syndicatedItem .thumbnail-overlay{background-image:null;background-position:5% 5%;}.thumbs-mobile-2r .videoCube.syndicatedItem.vertical{border-style:solid none none none;}.thumbs-mobile-2r .videoCube.syndicatedItem .video-duration{display:none;left:36px;}.thumbs-mobile-2r .videoCube.syndicatedItem .video-label-box{margin-left:0px;}.thumbs-mobile-2r .syndicatedItem{background-color:transparent;}.thumbs-mobile-2r .syndicatedItem .video-description{max-height:2.2em;*height:2.2em;color:black;font-family:Arial, Helvetica, sans-serif;font-size:10px;font-weight:normal;line-height:11px;text-decoration:none;}.thumbs-mobile-2r .syndicatedItem .video-title{max-height:48.0px;*height:48.0px;color:#333;font-family:Arial, Helvetica, sans-serif;font-size:12.0px;line-height:16.0px;font-weight:bold;text-decoration:none;}.thumbs-mobile-2r .syndicatedItem .sponsored{color:#9C9A9C;font-size:9px;font-weight:normal;text-decoration:none;}.thumbs-mobile-2r .syndicatedItem .sponsored-url{color:green;font-size:9px;font-weight:bold;text-decoration:underline;}.thumbs-mobile-2r .syndicatedItem .video-category{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.thumbs-mobile-2r .syndicatedItem .video-duration-detail{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.thumbs-mobile-2r .syndicatedItem .video-external-data{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.thumbs-mobile-2r .syndicatedItem .video-published-date{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.thumbs-mobile-2r .syndicatedItem .video-rating{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.thumbs-mobile-2r .syndicatedItem .video-uploader{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.thumbs-mobile-2r .syndicatedItem .video-views{color:black;font-size:10px;font-weight:normal;text-decoration:none;}.thumbs-mobile-2r .syndicatedItem .branding{color:#999999;font-size:11.0px;font-weight:bold;text-decoration:none;font-family:Arial, Helvetica, sans-serif;background-image:null;text-align:left;}.thumbs-mobile-2r .videoCube.syndicatedItem .thumbBlock .branding{text-align:left;background-color:transparent;display:none;left:0px;color:black;font-size:10px;font-weight:normal;text-decoration:none;font-family:Arial, Helvetica, sans-serif;background-image:null;}.thumbs-mobile-2r .videoCube.syndicatedItem .thumbBlock .static-text{text-align:left;background-color:black;display:none;color:white;font-size:10px;font-weight:normal;text-decoration:none;font-family:Arial, Helvetica, sans-serif;}.thumbs-mobile-2r .videoCube.syndicatedItem:hover .thumbnail-overlay,.thumbs-mobile-2r  .videoCube_hover.syndicatedItem .thumbnail-overl{:null;}.thumbs-2r img {
+	max-width: none;
+}
+
+/* override bootstrap default span definitions */
+.thumbs-2r [class*="span"] {
+    float:none;
+    margin-left:0px;
+}
+
+
+.thumbs-2r .trc_rbox_header {
+	line-height: 1.2em;
+	position: relative;
+	height: auto;
+}
+
+.thumbs-2r .trc_rbox_header_span .trc_header_right_column {
+	display: none;
+	background: transparent;
+	height: auto;
+}
+
+.thumbs-2r .trc_rbox_header .logoDiv {
+        font-size: inherit;
+	line-height: 1.2em;
+}
+
+.thumbs-2r .logoDiv a {
+    vertical-align: baseline;
+}
+
+.thumbs-2r .logoDiv a span {
+    display: inline;
+    color: #000000;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+.thumbs-2r .videoCube a {
+    padding: 0;
+}
+
+.thumbs-2r .thumbBlock {
+    margin: 0;
+}
+
+.trc_elastic .thumbs-2r .video-label-box {
+    height: 76.0px;
+}
+
+.thumbs-2r .videoCube .video-label-box {
+    margin-top: 5px;
+}
+
+.thumbs-2r .videoCube .video-label-box .video-title {
+    text-decoration: none;
+    margin: 0;
+}
+
+.thumbs-2r .videoCube:hover .video-label-box .video-title {
+    text-decoration: underline;
+}
+
+.thumbs-2r .video-label-box .branding {
+    display: block;
+}
+
+.thumbs-2r .syndicatedItem .branding {
+    line-height: 19.0px;
+}
+.thumbs-2r .trc_header_left_column {
+	background: transparent;
+	display: inline;
+	height: auto;
+}
+
+.thumbs-2r .trc_rbox_header .trc_header_ext {
+	position: relative;
+	top: auto;
+	right: auto;
+}
+.thumbs-mobile-2r img {
+	max-width: none;
+}
+
+/* override bootstrap default span definitions */
+.thumbs-mobile-2r [class*="span"] {
+    float:none;
+    margin-left:0px;
+}
+
+
+.thumbs-mobile-2r .trc_rbox_header {
+	line-height: 1.2em;
+	position: relative;
+	height: auto;
+}
+
+.thumbs-mobile-2r .trc_rbox_header_span .trc_header_right_column {
+	display: none;
+	background: transparent;
+	height: auto;
+}
+
+.thumbs-mobile-2r .trc_rbox_header .logoDiv {
+        font-size: inherit;
+	line-height: 1.2em;
+}
+
+.thumbs-mobile-2r .logoDiv a {
+    vertical-align: baseline;
+}
+
+.thumbs-mobile-2r .logoDiv a span {
+    display: inline;
+    color: #000000;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+.thumbs-mobile-2r .videoCube a {
+    padding: 0;
+}
+
+.thumbs-mobile-2r .thumbBlock {
+    margin: 0;
+}
+
+.trc_elastic .thumbs-mobile-2r .video-label-box {
+    height: 64.0px;
+}
+
+.thumbs-mobile-2r .videoCube .video-label-box {
+    margin-top: 5px;
+}
+
+.thumbs-mobile-2r .videoCube .video-label-box .video-title {
+    text-decoration: none;
+    margin: 0;
+}
+
+.thumbs-mobile-2r .videoCube:hover .video-label-box .video-title {
+    text-decoration: underline;
+}
+
+.thumbs-mobile-2r .video-label-box .branding {
+    display: block;
+}
+
+.thumbs-mobile-2r .syndicatedItem .branding {
+    line-height: 16.0px;
+}
+.thumbs-mobile-2r .trc_header_left_column {
+	background: transparent;
+	display: inline;
+	height: auto;
+}
+
+.thumbs-mobile-2r .trc_rbox_header .trc_header_ext {
+	position: relative;
+	top: auto;
+	right: auto;
+}
+</style><style type="text/css">.trc_popover_aug_container { position: static;}#tbl-aug-lpqnmu #tbl-aug-kcwne0 #tbl-aug-qhzwzh .trc_popover {position: absolute; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 16px; color: #000000; cursor: default; position: absolute; top: 0; right: 0; z-index: 12000; width: 180px; padding: 1px; text-align: left; white-space: normal; background-color: #ffffff; border: 1px solid #ccc; border: 1px solid rgba(0, 0, 0, 0.2); -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); -webkit-background-clip: padding-box; -moz-background-clip: padding; background-clip: padding-box;-moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box;}#tbl-aug-lpqnmu #tbl-aug-kcwne0 #tbl-aug-qhzwzh .trc_popover iframe{width: 100%;}#tbl-aug-lpqnmu #tbl-aug-kcwne0 #tbl-aug-qhzwzh .trc_popover .trc_popover_arrow, .trc_popover .trc_popover_arrow:after { position: absolute; display: block; width: 0; height: 0; border-color: transparent; border-style: solid; }#tbl-aug-lpqnmu #tbl-aug-kcwne0 #tbl-aug-qhzwzh .trc_popover .trc_popover_arrow { border-width: 11px; }#tbl-aug-lpqnmu #tbl-aug-kcwne0 #tbl-aug-qhzwzh .trc_popover .trc_popover_arrow:after { border-width: 10px; content: "";}#tbl-aug-lpqnmu #tbl-aug-kcwne0 #tbl-aug-qhzwzh .trc_popover.trc_bottom { margin-top: 10px; }#tbl-aug-lpqnmu #tbl-aug-kcwne0 #tbl-aug-qhzwzh .trc_popover.trc_bottom .trc_popover_arrow { top: -11px; right: 11px; margin-left: -11px; border-bottom-color: #999; border-bottom-color: rgba(0, 0, 0, 0.25); border-top-width: 0; }#tbl-aug-lpqnmu #tbl-aug-kcwne0 #tbl-aug-qhzwzh .trc_popover.trc_bottom .trc_popover_arrow:after { top: 1px; margin-left: -10px; border-bottom-color: #ffffff; border-top-width: 0; }#tbl-aug-lpqnmu #tbl-aug-kcwne0 #tbl-aug-qhzwzh .trc_popover_fade.trc_in { visibility: visible; opacity: 1; filter: alpha(opacity=100); transition-delay: 0s, 0s; -moz-transition-delay: 0s, 0s; -webkit-transition-delay: 0s, 0s; -o-transition-delay: 0s, 0s; -ms-transition-delay: 0s, 0s;}#tbl-aug-lpqnmu #tbl-aug-kcwne0 #tbl-aug-qhzwzh .trc_popover_fade { visibility: hidden; opacity: 0; filter: alpha(opacity=0); transition: opacity 500ms 0s, visibility 0s 500ms; -webkit-transition: opacity 500ms 0s, visibility 0s 500ms;  -moz-transition: opacity 500ms 0s, visibility 0s 500ms; -o-transition: opacity 500ms 0s, visibility 0s 500ms; -ms-transition: opacity 500ms 0s, visibility 0s 500ms;}</style></head>
+<body class="v3" data-twttr-rendered="true"><noscript>&lt;meta HTTP-EQUIV="refresh" content="0;url='http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/?PageSpeed=noscript'" /&gt;&lt;style&gt;&lt;!--table,div,span,font,p{display:none} --&gt;&lt;/style&gt;&lt;div style="display:block"&gt;Please click &lt;a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/?PageSpeed=noscript"&gt;here&lt;/a&gt; if you are not redirected within a few seconds.&lt;/div&gt;</noscript>
+<div id="doc4" class="yui-t7">
+<div id="hd">
+<div id="htgHeader">
+<div class="logo">
+<h1 id="printH1">How-To Geek</h1><a href="http://www.howtogeek.com/" class="home"><script pagespeed_no_defer="">(function(){var g=encodeURIComponent,h=window,k=document,l="width",m="documentElement",n="height",p="length",q=this,r=function(b,d){var a=b.split("."),c=q;a[0]in c||!c.execScript||c.execScript("var "+a[0]);for(var e;a[p]&&(e=a.shift());)a[p]||void 0===d?c[e]?c=c[e]:c=c[e]={}:c[e]=d};var t=function(b){var d=b[p];if(0<d){for(var a=Array(d),c=0;c<d;c++)a[c]=b[c];return a}return[]};var u=function(b){var d=h;if(d.addEventListener)d.addEventListener("load",b,!1);else if(d.attachEvent)d.attachEvent("onload",b);else{var a=d.onload;d.onload=function(){b.call(this);a&&a.call(this)}}};var v,w=function(b,d,a,c,e){this.f=b;this.h=d;this.i=a;this.c=e;this.e={height:h.innerHeight||k[m].clientHeight||k.body.clientHeight,width:h.innerWidth||k[m].clientWidth||k.body.clientWidth};this.g=c;this.b={};this.a=[];this.d={}},x=function(b,d){var a,c,e=d.getAttribute("pagespeed_url_hash");if(a=e)if(a=!(e in b.d))if(0>=d.offsetWidth&&0>=d.offsetHeight)a=!1;else{c=d.getBoundingClientRect();var f=k.body;a=c.top+("pageYOffset"in h?h.pageYOffset:(k[m]||f.parentNode||f).scrollTop);c=c.left+("pageXOffset"in
+h?h.pageXOffset:(k[m]||f.parentNode||f).scrollLeft);f=a.toString()+","+c;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.e[n]&&c<=b.e[l])}a&&(b.a.push(e),b.d[e]=!0)};w.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&x(this,b)};r("pagespeed.CriticalImages.checkImageForCriticality",function(b){v.checkImageForCriticality(b)});r("pagespeed.CriticalImages.checkCriticalImages",function(){y(v)});var y=function(b){b.b={};for(var d=["IMG","INPUT"],a=[],c=0;c<d[p];++c)a=a.concat(t(k.getElementsByTagName(d[c])));if(0!=a[p]&&a[0].getBoundingClientRect){for(c=0;d=a[c];++c)x(b,d);a="oh="+b.i;b.c&&(a+="&n="+b.c);if(d=0!=b.a[p])for(a+="&ci="+g(b.a[0]),c=1;c<b.a[p];++c){var e=","+g(b.a[c]);131072>=a[p]+e[p]&&(a+=e)}b.g&&(e="&rd="+g(JSON.stringify(z())),131072>=a[p]+e[p]&&(a+=e),d=!0);A=a;if(d){c=b.f;b=b.h;var f;if(h.XMLHttpRequest)f=new XMLHttpRequest;else if(h.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(s){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(B){}}f&&(f.open("POST",c+(-1==c.indexOf("?")?"?":"&")+"url="+g(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}},z=function(){var b={},d=k.getElementsByTagName("IMG");if(0==d[p])return{};var a=d[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var c=0;a=d[c];++c){var e=a.getAttribute("pagespeed_url_hash");e&&(!(e in b)&&0<a[l]&&0<a[n]&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a[l]>=b[a.src].k&&a[n]>=b[a.src].j)&&(b[e]={rw:a[l],rh:a[n],ow:a.naturalWidth,oh:a.naturalHeight})}return b},A="";r("pagespeed.CriticalImages.getBeaconData",function(){return A});r("pagespeed.CriticalImages.Run",function(b,d,a,c,e,f){var s=new w(b,d,a,e,f);v=s;c&&u(function(){h.setTimeout(function(){y(s)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/','drp9p91z_a',true,false,'0X-SGJjVKaE');</script><img src="data:image/gif;base64,R0lGODlhAQABAIAAADoSLQAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="How-To Geek" pagespeed_url_hash="1811801075" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+<div class="logo2">
+<div id="div-gpt-ad-1342044737928-2">
+<script type="text/javascript">googletag.cmd.push(function(){googletag.display('div-gpt-ad-1342044737928-2');});</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="bd">
+<div class="yui-g" id="htgNavBar2" style="min-height:37px;">
+<div id="htgNavBar">
+<a href="http://www.howtogeek.com/" title="How-To Geek Home" id="home"></a>
+<ul id="mnuMainul">
+<li>
+<a id="mnuMainMenu" href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#" class="arrow">ARTICLES</a>
+<div class="subMenu">
+<div class="subMenuSection">
+<h4>SECTIONS</h4>
+<ul style="width:100px;">
+<li><h2><a href="http://www.howtogeek.com/t/windows/">WINDOWS</a></h2></li>
+<li><h2><a href="http://www.howtogeek.com/t/linux/">LINUX</a></h2></li>
+<li><h2><a href="http://www.howtogeek.com/t/office/">OFFICE</a></h2></li>
+<li><h2><a href="http://www.howtogeek.com/t/wallpaper/">WALLPAPER</a></h2></li>
+</ul>
+<ul>
+<li><h2><a href="http://www.howtogeek.com/t/mobile/">MOBILE</a></h2></li>
+<li><h2><a href="http://www.howtogeek.com/t/hardware/">HARDWARE</a></h2></li>
+<li><h2><a href="http://www.howtogeek.com/t/infotech/">IT TECH</a></h2></li>
+<li><h2><a href="http://www.howtogeek.com/t/news/">NEWS</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left:20px;">
+<div class="submenudetail sm300" onclick="window.location=&#39;/t/features&#39;">
+<div id="ftquest"></div>
+<span>FEATURED ARTICLES</span>
+<p>Read just our best, feature-length articles without all the extra stuff.</p><div style="clear:both;"></div>
+</div>
+<div style="clear:both;"></div>
+<div onclick="window.location=&#39;http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/&#39;" class="submenudetail sm300">
+<div id="gtquest"></div>
+<span>GEEK TRIVIA</span>
+<p>How To Get SSH Command-Line Access to Windows 7 Using Cygwin</p>
+<div style="clear:both;"></div>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div class="subMenuSection" style="margin-left:30px;">
+<!--<div class="submenudetail sm330" onclick="window.location='/books/windows-8/'">
+								<img src="http://www.howtogeek.com/geekers/up/sshot51103afc72508.png">
+								<span>HOW-TO GEEK BOOKS</span><p>Read our first book, the HTG Guide to Windows 8, or check our upcoming books.</p>
+								<div style="clear:both;"></div>
+							</div>-->
+<ul style="margin-top:0px;">
+<li><h2><a style="color:#CCC;" href="http://www.howtogeek.com/about/" rel="nofollow">ABOUT</a></h2></li>
+<li><h2><a style="color:#CCC;" href="http://www.howtogeek.com/contact/" rel="nofollow">CONTACT</a></h2></li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+<ul>
+<li><a class="mnuMainItem" href="http://discuss.howtogeek.com/">DISCUSSION</a></li>
+</ul>
+<ul id="mnuMainul2">
+<li><a id="mnuSubNow" class="mnuMainItem arrow" href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#">SUBSCRIBE</a>
+<div class="subMenu" style="padding-bottom:10px">
+<div class="subMenuSection" style="margin-left:20px;">
+<h4>FOLLOW US</h4>
+<ul style="width:100px;">
+<li><h2><a class="icon-twitter" href="https://twitter.com/intent/user?original_referer=http://www.howtogeek.com&region=following&screen_name=howtogeeksite&tw_p=followbutton&variant=2.0" target="_blank">TWITTER</a></h2></li>
+<li><h2><a class="icon-google-plus" href="http://plus.google.com/+howtogeek">GOOGLE+</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left:0px;">
+<h4>&nbsp;</h4>
+<ul style="width:100px;">
+<li><h2><a class="icon-facebook" href="http://facebook.com/thehowtogeek" rel="nofollow">FACEBOOK</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left:20px;">
+<div id="subemsub" class="submenudetail sm400 noclick" style="padding-bottom:20px">
+<div id="emquest"><div class="fs1" aria-hidden="true" data-icon=""></div></div>
+<span>GET UPDATES BY EMAIL</span>
+<form action="http://www.howtogeek.com/em/subscribe" method="get">
+<input type="hidden" name="list" value="weekday">
+<input type="hidden" name="tr" value="topmenu">
+<input type="text" id="fromaddress" name="emailaddress" style="z-index:-9;left:-1500;top:-1500;height:1px;width:1px;position:absolute;">
+<p>Enter your email below to get exclusive access to our best articles and tips before everybody else.</p>
+<p><input type="text" id="from" name="email" value="Enter Your Email Here" style="width:200px;color:#BBB;margin-left:59px;"><input id="sub1" name="sub1" type="submit" value="Get Your Newsletter Now" style="background:#55A8DF;margin-left:59px;width:212px;margin-top:6px;"></p>
+<div style="clear:both;"></div>
+</form>
+</div>
+</div>
+<div class="subMenuSection" style="margin-left:20px;">
+<h4>RSS</h4>
+<ul style="width:130px;">
+<li><h2><a class="icon-feed" href="http://feeds.howtogeek.com/howtogeek">ALL ARTICLES</a></h2></li>
+<li><h2><a class="icon-feed" href="http://www.howtogeek.com/t/features/feed/" rel="nofollow">FEATURES ONLY</a></h2></li>
+</ul>
+</div>
+<div class="subMenuSection" style="margin-left:0px;">
+<h4>&nbsp;</h4>
+<ul style="width:150px;">
+<li><h2><a class="icon-feed" href="http://www.howtogeek.com/t/reviews/feed/" rel="nofollow">GADGET REVIEWS</a></h2></li>
+<li><h2><a class="icon-feed" href="http://www.howtogeek.com/trivia/feed/" rel="nofollow">TRIVIA</a></h2></li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+<ul>
+<li><a class="mnuMainItem" href="http://www.howtogeek.com/t/gadgets">GADGETS</a></li>
+</ul>
+<ul>
+<li><a class="mnuMainItem" href="http://www.howtogeek.com/school/">GEEK SCHOOL</a></li>
+</ul>
+<ul>
+<li>
+<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/follow_button.1409790579.htm" class="twitter-follow-button mnuTwitterButton twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 150px; height: 20px;"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','twitter-wjs');</script>
+</li>
+</ul>
+<div id="searchwrapper" class="searchinactive">
+<span id="searchhover">SEARCH</span>
+<form action="http://www.howtogeek.com/search/" method="get" id="sea">
+<input type="text" name="q" id="s" value="">
+<input id="searchsubmit" type="submit" value="" style="">
+</form>
+</div>
+<div style="clear:both"></div>
+</div>
+<div style="clear:both"></div>
+</div>
+<div class="yui-g" id="headerpanel"></div>
+<div class="yui-ge">
+<div class="yui-u first">
+<div class="content" id="htgArticle">
+<h1 id="printHeader" style="display:none">How-To Geek</h1>
+<!-- abovepost -->
+<div class="thepost" id="post-41560">
+<div style="width:650px;margin-bottom:0px;margin-top:-10px;min-height:24px;">
+<div style="clear:both;"></div>
+</div>
+<h2><a href="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/How To Get SSH Command-Line Access to Windows 7 Using Cygwin.htm" rel="bookmark" title="How To Get SSH Command-Line Access to Windows 7 Using Cygwin">How To Get SSH Command-Line Access to Windows 7 Using Cygwin</a></h2>
+<div class="thecontent">
+<!-- google_ad_section_start -->
+<p><img style="border-bottom: 0px; border-left: 0px; display: inline; margin-left: 0px; border-top: 0px; margin-right: 0px; border-right: 0px" title="banner" border="0" alt="banner" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/650x310xbanner3.png.pagespeed.ic.d8xNBJe7ls.png" width="650" height="310" pagespeed_url_hash="1454864636" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> </p>
+<p>Are you comfortable with Linux/Unix and want SSH access to your Windows 7 machine? Cygwin provides this functionality and gives you a familiar environment to work with in a few simple steps.</p>
+<p>We’re assuming you’ve got Cygwin installed and configured. If not, check out our article, <a href="http://www.howtogeek.com/howto/41382/how-to-use-linux-commands-in-windows-with-cygwin/">How To Use Linux Commands in Windows with Cygwin</a> to get started.<span id="more-41560"></span></p>
+<div id="div-1342-1" style="margin-top:10px;padding-top:10px;border-top:1px solid #CCC;margin-bottom:10px;border-bottom:1px solid #CCC;"><script type="text/javascript">googletag.cmd.push(function(){googletag.display('div-1342-1');});</script></div><h3>Installing OpenSSH</h3>
+<p>OpenSSH is what we’ll be using, so if you don’t have it installed, find Cygwin’s setup.exe file and run it.</p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="17-open setup" border="0" alt="17-open setup" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/574x427x17opensetup.png.pagespeed.ic.a4oMhQ6kEP.png" width="574" height="427" pagespeed_url_hash="2328841162" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> </p>
+<p>You can keep all of the same defaults as when you originally set up Cygwin. On the package selection screen, search for “open” and look under the “Net” menu.</p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="18-install openssh" border="0" alt="18-install openssh" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/630x492x18installopenssh.png.pagespeed.ic.0W9edfNs__.png" width="630" height="492" pagespeed_url_hash="4120029979" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> </p>
+<p>You’ll see a package called “openssh”. Click under the “New” column, where it says “Skip” until you see an X appear in the “Bin?” column. Look at the previous screenshot for where to click if you’re confused. Hit “Next” and finish up the rest of the setup process, just like you did last time.</p>
+<h3>Configuring OpenSSH in Cygwin</h3>
+<p>Unlike in most Linux distros, OpenSSH won’t automatically configure itself to run and just work. We need to perform a few easy steps. First, right-click your Cygwin shortcut, and click on “Run as administrator”:</p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="00-run as admin" border="0" alt="00-run as admin" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/326x413x00runasadmin.png.pagespeed.ic.S-IZ9smdso.png" width="326" height="413" pagespeed_url_hash="1126306247" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> </p>
+<p>This will make sure we have the proper privileges for everything. You’ll see an empty Cygwin window come up.</p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="01-cygwin window" border="0" alt="01-cygwin window" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/650x341x01cygwinwindow.png.pagespeed.ic.cp3TWAPhzK.png" width="650" height="341" pagespeed_url_hash="626596309" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> </p>
+<p>Enter the following command:</p>
+<blockquote><p>ssh-host-config</p>
+</blockquote>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="02-ssh-host-config" border="0" alt="02-ssh-host-config" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/650x341x02command1.png.pagespeed.ic.fHvns0o9Sl.png" width="650" height="341" pagespeed_url_hash="1226257433" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> </p>
+<p>You’ll see the script generate some default files, and then you’ll be prompted for whether or not you want to enable “Privilege Separation.” It’s on by default in standard installations of OpenSSH on other systems, so go ahead and say “yes” to the prompt.</p>
+<p><a href="http://cdn8.howtogeek.com/wp-content/uploads/2011/01/03privsep.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="03-priv sep" border="0" alt="03-priv sep" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/650x341x03privsep_thumb.png.pagespeed.ic.xtN7i-beId.png" width="650" height="341" pagespeed_url_hash="1844544436" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a> </p>
+<p>You’ll be prompted to create a new account with special privileges. Select “yes” and the script will continue.</p>
+<p><a href="http://cdn8.howtogeek.com/wp-content/uploads/2011/01/04newacct.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="04-new acct" border="0" alt="04-new acct" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/650x341x04newacct_thumb.png.pagespeed.ic.wNqQX5QU4G.png" width="650" height="341" pagespeed_url_hash="475111667" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a> </p>
+<p>Next, you’ll be asked if you want sshd to run as a service. This will allow you to get SSH access regardless of whether or not Cygwin is currently running, which is what we want. Go ahead and hit “yes” to continue.</p>
+<p><a href="http://cdn8.howtogeek.com/wp-content/uploads/2011/01/05sshdasservice.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="05-sshd as service" border="0" alt="05-sshd as service" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/650x341x05sshdasservice_thumb.png.pagespeed.ic.Lr6tf-wvu8.png" width="650" height="341" pagespeed_url_hash="1203484030" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a> </p>
+<p>Next, you’ll be asked to enter a value for the daemon. Enter the following:</p>
+<blockquote><p>ntsec</p>
+</blockquote>
+<p><a href="http://cdn8.howtogeek.com/wp-content/uploads/2011/01/06daemonntsec.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="06-daemon ntsec" border="0" alt="06-daemon ntsec" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/650x341x06daemonntsec_thumb.png.pagespeed.ic.BvRHmcgpRI.png" width="650" height="341" pagespeed_url_hash="431243045" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a> </p>
+<p>You’ll see the script give you some information on your system and then it will ask you to create a privileged account with the default username “cyg_server”. The default works well, so type “no” when it asks you if you want to use a different account name, although you can change this if you really like.</p>
+<p><a href="http://cdn8.howtogeek.com/wp-content/uploads/2011/01/07privacctcyg_server.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="07-priv acct cyg_server" border="0" alt="07-priv acct cyg_server" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/650x341x07privacctcyg_server_thumb.png.pagespeed.ic.LjNJOeOwwY.webp" width="650" height="341" pagespeed_url_hash="1244801418" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a> </p>
+<p>Of course, you’ll have to enter a password for this account as well.</p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="08-password" border="0" alt="08-password" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/650x341x08password.png.pagespeed.ic.fVHF7eLXUH.webp" width="650" height="341" pagespeed_url_hash="47810832" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> </p>
+<p>Cygwin will show you your password in plain text for verification, so be sure you’re in a secure place. You’ll see some extra info come up and if all’s well, you’ll get a message that says it successfully completed.</p>
+<p><a href="http://cdn8.howtogeek.com/wp-content/uploads/2011/01/09finhostconfig.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="09-fin host config" border="0" alt="09-fin host config" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/650x341x09finhostconfig_thumb.png.pagespeed.ic.hZa7ZJvYrj.png" width="650" height="341" pagespeed_url_hash="2699077376" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a> </p>
+<p>You can either restart, or enter the following command to start the sshd service:</p>
+<blockquote><p>net start sshd</p>
+</blockquote>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="10-net start sshd" border="0" alt="10-net start sshd" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/650x341x10netstartsshd.png.pagespeed.ic.EUJioUMMGg.png" width="650" height="341" pagespeed_url_hash="1843724901" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> </p>
+<p>Now, you can type “exit” to close this Cygwin instance.</p>
+<h3>User Configuration of SSH</h3>
+<p>Next, we’ll create the appropriate SSH keys for your user account. Open up Cygwin normally, and enter the following command:</p>
+<blockquote><p>ssh-user-config</p>
+</blockquote>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="11-ssh-user-config" border="0" alt="11-ssh-user-config" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/650x341x11sshuserconfig.png.pagespeed.ic.IfWnF7lyss.png" width="650" height="341" pagespeed_url_hash="1743405414" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> </p>
+<p>You’ll be asked to create specific keys for your user account, so use what you need. I went ahead and said “no” to the first question, and “yes” to the second.</p>
+<p><a href="http://cdn8.howtogeek.com/wp-content/uploads/2011/01/12passphrase.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="12-passphrase" border="0" alt="12-passphrase" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/650x341x12passphrase_thumb.png.pagespeed.ic.rMtCSGufTI.png" width="650" height="341" pagespeed_url_hash="3761977515" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a> </p>
+<p>SSH2 is more secure, so that’s what I recommend to you. After entering a password, you’ll be asked if you want to use that ID to access your machine. Type “yes”.</p>
+<p><a href="http://cdn8.howtogeek.com/wp-content/uploads/2011/01/13usethisid.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="13-use this id" border="0" alt="13-use this id" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/650x341x13usethisid_thumb.png.pagespeed.ic.nC4PlEyLmB.png" width="650" height="341" pagespeed_url_hash="1968445646" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a> </p>
+<p>Next, you’ll be asked to create an SSH2 DSA ID file, if you want to use password-less access. I declined at this step.</p>
+<p><a href="http://cdn8.howtogeek.com/wp-content/uploads/2011/01/14notodsa.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="14-no to dsa" border="0" alt="14-no to dsa" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/650x341x14notodsa_thumb.png.pagespeed.ic.AyML05I-rN.png" width="650" height="341" pagespeed_url_hash="2650943903" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a> </p>
+<p>That’s it! You’re all configured. If you want to test your configuration really quickly, enter the following command in your Cygwin window:</p>
+<blockquote><p>ssh –v localhost</p>
+</blockquote>
+<p><a href="http://cdn8.howtogeek.com/wp-content/uploads/2011/01/15test.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="15-test" border="0" alt="15-test" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/650x341x15test_thumb.png.pagespeed.ic.CZGGnoxEIU.webp" width="650" height="341" pagespeed_url_hash="3501762" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a> </p>
+<p>The –v option stands for “verbose” and gives you all of the details of the process. You’ll be asked if you want to continue connecting, so enter “yes” and then enter your password at the prompt. Remember that when you enter your username, it is case-sensitive!</p>
+<p><a href="http://cdn8.howtogeek.com/wp-content/uploads/2011/01/16exit.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="16-exit" border="0" alt="16-exit" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/650x341x16exit_thumb.png.pagespeed.ic.6MPqy_LstD.png" width="650" height="341" pagespeed_url_hash="3166223987" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a> </p>
+<p></p>
+<p>If everything worked out well, you’ll see a normal bash prompt.</p>
+<h3>Minor Issues</h3>
+<p>If you find yourself stuck at any of the configuration steps, make sure that the Windows User Account you’re running has Administrative access. You may get weird errors if you try to run the host configuration as a normal user, so make sure you run Cygwin with admin privileges during that step. If, when you exit, you get a prompt about leaving your batch jobs running, you can hit “no” to terminate them.</p>
+<p>Lastly, if you test SSH access from another machine and get an error, make sure that your firewall isn’t blocking access to port 22 (or 23 if you’re using SFTP).</p>
+<hr>
+<p>This works extremely well if you like the ability to get SSH/SFTP access to your files on a Windows 7 machine and you also want a familiar shell to do that with. Cygwin mounts Windows drives to “/cygdrive/driveletter” in case you were wondering. ;-)</p>
+<!-- google_ad_section_end -->
+</div>
+<div style="clear:both;height:0px;"></div>
+<!-- discourse comments begin -->
+<style>#discusslink{color:#585858;text-decoration:none}#discusslink:hover{color:#00f;text-decoration:none}.commenttext img{max-width:618px}</style>
+<div style="width:650px;padding-top:10px;"><span style="font-family:bebas_neueregular;font-size:19px;z-index:1;position:relative;top:-9px;padding-right: 10px;float: left;background-color:#FFF;font-weight:normal;color: #868686;"><a id="discusslink" href="http://discuss.howtogeek.com/">JOIN THE DISCUSSION</a></span><div style="border-top:4px solid #CCC;"></div></div>
+<div style="clear:both;height:0px;"></div>
+<div style="margin-top:0px;/* margin-bottom:10px; */padding: 10px;background: #DDD;width: 630px;border: 1px solid #CCC;border-bottom: none;">
+<div id="pdfdownload" style="display:none;float: right;padding: 2px 6px;font-size: 11px;line-height: 22px;color: #333;font-weight: bold;font-weight: bold;margin-top: -2px;">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAMAAADzapwJAAAABGdBTUEAALGOfPtRkwAAAvdQTFRFDAwMDQ0NFRUVFhYWFxcX////Dg4OEBAQGRkZCQkJDw8PAQAABgYCCwEBDAAADAICDQAADgAADgEBDwEBEAEBEAIBCwEBEwsBTExMRQUFbW1teHh4enp6goKCYwYGZjAwaW5ua2trb29vcnJydHR0dXV1dnZ2d3d3ZggIdnZ2jo6OgUcNsrKypjgIp29Mqampqqqqqqqsq6urrKysr6+vsbGxsrKys7Ozq0AJxsbG2tra3NzctgICtwICuAICuQEBvQcHwAAAwAEBwAwMxAEBxQICxgICxiAgxiIiyAICyBAQy8vLzMzMzs7O0dHR08TC1hUB1+Ti2IZ82L242gAA2lRB2tra2wAA29vb3AAA3JiL3Nzc3QAA3Uo43WRV3Y6E3lJB3lRF3lhH3oBz3t7e3vDy4Ew44Fpb4Ftb4Gdp4Glr4VE/4VdX4VlG4Vtb4V5e4eHh4gAA4l5f4l9f4mJi4sXA4wAA41xL42Vl42Zm4+Pj4/b14/z85AAA5E485Kmc5OTk5O7w5Pn55Pv75Pz85P7+5gAA5kAr5kAu5kUz5svF5uTk5vb55y8e50w955qQ5+Tk5+bm5+fn6Cgo6MvI6Ojo6Onp6O3u6enp6ff46zUj6z4+611J68nA6+nr6+vp6/P16/n87BwJ7Do67EJC7Ovr7Ozs7O3t7PPz7PP17PXz7QAA7UdH7WdU7e3t7ff37g8D7hEA7hgG7hoI7hwN7ioq7kMt7vDw7vHx7vLz7v7+8J6R8KCT8PDw8PHx8P7+8QAA8Q0A8TU18Ucy8VlZ8fHx8fv78f7+8gsA8l9e8pGE8vLy8vLz8vf48vz98wAA8wgA85aJ88rD8/Pz8/7+9U1N9VZW9aui9fX19ff39f7+9hwN9h0N9mFh9srF9vPx9vb29v7+91pG93xs95mL98S8+AAA+F1L+Kqf+Pj4+P7++ZGE+bmu+fn5+f39+f7++3Nz+7mv+9vV++3r+/n5+/v7+/z8+/7+/Pz8/P7+/fv7/f39/v7+dYGD4AAAADx0Uk5TAAAAAAAACQkKCwsqOVhYWFhYWFhYWFxdiaKnqaurrKysrKysrKysrK6wscnQ0tLS0tLS0tLS0tLV4/b5r4ygEgAAAX9JREFUGNNNkU9LAkEYxt9Z3V13NVSsCKWLpSIdJIkiRCKICII+QZ+gS9+la0QdOnWpiA4d6lJ0C0IQkdQyKxXdWHR31f0z06yu5HMYmB/PPM87M4iFFYaAo+2LioEIdgNiIfE6puQbstIAKHYDeGFAEcKKxT6U3hbaBt0x1DN0ov7HeV6ouMozbjKBwfQQOajdNC6nBbBDHIne2kZ09vQEbd5L/27M8qGQ/3A3Jh4EJ93Aph/3wzux5prl4L7d7S6VUTXCT5mAnEqTysBP1t6tqqHhScZeerY6haw/ltPlL7tsHIK4PBKvceLlaik1nltSNKNv8kfFgPDcmXfcFul4QkXuLLXu6xaiy6aDkd6MHKvdULaqAWIka5ytKnXZpadzMJxCx467V29ZymqLUkKr+paT3Wgzgblf+vRdX4+A/jPC5FPygLSVbNSD5I5evDbC3sUoD0rmPSlkcmFekOMi2J8Wj2kuk3A9DhkWoeIKbRvzXtpNMMIYGIIBBFWHP0uksdW4JD6xAAAAAElFTkSuQmCC" style="
+					    padding-right: 6px;
+					    width: 16px;
+					    height: 16px;
+					    margin-top: 2px;
+					    float: left;" pagespeed_url_hash="1692130506" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/?format=pdf" rel="nofollow" id="pdfdownloadlink">Download PDF</a></div>
+<!-- Place this tag where you want the +1 button to render. -->
+<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 300px; height: 24px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 300px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1410039639194" name="I0_1410039639194" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/fastbutton.htm" data-gapiattached="true" title="+1"></iframe></div>
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">(function(){var po=document.createElement('script');po.type='text/javascript';po.async=true;po.src='https://apis.google.com/js/plusone.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(po,s);})();</script>
+<div style="clear:both;"></div>
+</div>
+<div id="postiddiv" post="41560"></div>
+<div style="clear:both;"></div>
+<div class="articleExtras" style="background: #FEFEFE;border-top:none;">
+<div style="width:450px;float:left;" id="authorinfobox">
+<p style="font-weight:normal;color:#333;">Yatri Trivedi is a monk-like geek. When he's not overdosing on meditation and geek news of all kinds, he's hacking and tweaking something, often while mumbling in 4 or 5 other languages.</p>
+</div>
+<div style="width:130px;float:right;">
+<ul class="normul" style="margin-bottom:6px;">
+<li>Published 01/28/11</li>
+<li><span id="pv3">232,611 Views</span></li>
+</ul>
+</div>
+<div style="clear:both"></div>
+</div>
+<div style="clear:both;"></div>
+<div style="width:650px;margin-bottom:0px;">
+<div id="div-1342-2"><script type="text/javascript">googletag.cmd.push(function(){googletag.display('div-1342-2');});</script></div>	<div style="clear:both;"></div>
+</div>
+<div class="below-post-features" style="height:528px;overflow:hidden;">
+<div id="taboola-below-article" style="height:500px;" class=" trc_related_container trc_spotlight_widget"><div class="trc_rbox_container" style="display: block;"><div><div id="trc_wrapper_40972" class="trc_rbox thumbs-2r trc-content-sponsored " style="overflow: hidden; display: block;"><div id="trc_header_40972" class="trc_rbox_header trc_rbox_border_elm"><div class="trc_header_ext"><div class="logoDiv link-attribution "><a class="trc_desktop_attribution_link trc_attribution_position_top" rel="nofollow" href="http://www.taboola.com/en/popup?template=colorbox&taboola_utm_source=howtogeek-howtogeek&taboola_utm_medium=bytaboola&taboola_utm_content=thumbs-2r:below-article:" target="_blank"><span>by Taboola</span></a><a class="trc_mobile_attribution_link trc_attribution_position_top" rel="nofollow" href="http://www.taboola.com/en/popup?template=colorbox&taboola_utm_source=howtogeek-howtogeek&taboola_utm_medium=bytaboola&taboola_utm_content=thumbs-2r:below-article:" target="_blank"><span>by Taboola</span></a></div><div class="logoDiv link-disclosure  attribution-disclosure-link-sponsored"><a class="trc_desktop_disclosure_link trc_attribution_position_top" rel="nofollow" href="http://www.taboola.com/en/popup?template=colorbox&taboola_utm_source=howtogeek-howtogeek&taboola_utm_medium=bytaboola&taboola_utm_content=thumbs-2r:below-article:" target="_blank"><span>Sponsored Links</span></a><a class="trc_mobile_disclosure_link trc_attribution_position_top" rel="nofollow" href="http://www.taboola.com/en/popup?template=colorbox&taboola_utm_source=howtogeek-howtogeek&taboola_utm_medium=bytaboola&taboola_utm_content=thumbs-2r:below-article:" target="_blank"><span>Sponsored Links</span></a></div><div class="logoDiv link-disclosure  attribution-disclosure-link-hybrid"><a class="trc_desktop_disclosure_link trc_attribution_position_top" rel="nofollow" href="http://www.taboola.com/en/popup?template=colorbox&taboola_utm_source=howtogeek-howtogeek&taboola_utm_medium=bytaboola&taboola_utm_content=thumbs-2r:below-article:" target="_blank"><span>Promoted Links</span></a><a class="trc_mobile_disclosure_link trc_attribution_position_top" rel="nofollow" href="http://www.taboola.com/en/popup?template=colorbox&taboola_utm_source=howtogeek-howtogeek&taboola_utm_medium=bytaboola&taboola_utm_content=thumbs-2r:below-article:" target="_blank"><span>Promoted Links</span></a></div></div><span class="trc_rbox_header_span"><span class="trc_inner_header trc_header_left_column">FROM THE WEB</span><span class="trc_inner_header trc_header_right_column">From The Web</span></span></div><div id="outer_40972" class="trc_rbox_outer" style="overflow: hidden;"><div id="rbox-t2v" class="trc_rbox_div trc_rbox_border_elm" style="overflow: hidden;"></div></div><div class="trc_clearer"></div></div></div></div></div>
+<script type="text/javascript">window._taboola=window._taboola||[];_taboola.push({mode:'thumbs-2r',container:'taboola-below-article',placement:'below-article'});</script>
+<script>window._taboola=window._taboola||[];_taboola.push({flush:true});</script>
+</div>
+<div style="clear:both;"></div>
+<div id="showcomments" class="showcomments" style="">
+<a id="sc1" href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/?showcomments=1#comments">SHOW ARCHIVED READER COMMENTS (23)</a>
+</div>
+<div id="commentsWrap" post="41560" replyto="0">
+<div id="sc2">
+<!-- You can start editing here. -->
+<h3 id="comments">Comments <span id="commentnumber">(23)</span></h3>
+<ol class="commentlist">
+<li class="comment-def" id="comment-116393">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-116393" title="">January 28, 2011</a></div>
+<div class="commentauthor"><div class="ca2">Gene</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>Why not simply use PuTTY? It’s open source and free.</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-alt" id="comment-116416">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-116416" title="">January 29, 2011</a></div>
+<div class="commentauthor"><div class="ca2">Max</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>PuTTY lets you use Windows to SSH into another computer. Cygwin lets you actually run a SSH service on your Windows machine so you can SSH into it from another computer. Also, Cygwin is open source and free as well.</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-def" id="comment-116420">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-116420" title="">January 29, 2011</a></div>
+<div class="commentauthor"><div class="ca2">xilmiki</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>PuTTY is simple and not require install, why use this, time to spend?</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-alt" id="comment-116424">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-116424" title="">January 29, 2011</a></div>
+<div class="commentauthor"><div class="ca2">Alexzm1</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>PuTTY its a SSH client<br>
+not a SSH Server</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-def" id="comment-116445">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-116445" title="">January 29, 2011</a></div>
+<div class="commentauthor"><div class="ca2">jasray</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>Much better and more convenient SSH servers available for Windows (free and secure); to go through the convoluted process here is pointless. Terminal command from Linux to Windows is equally simplified, or, as others have mentioned PuTTy/KiTTy is a breeze. Not quite sure what the author has in mind in promoting the above procedure. Hmmmm . . . . </p>
+<p>Such a shame because other methods allow using non-standard ports (absolutely necessary in most lockdown situations) and DNS forwarding (absolutely essential). </p>
+<p>Maybe he’ll share further knowledge later on down the road.</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-alt" id="comment-116449">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-116449" title="">January 29, 2011</a></div>
+<div class="commentauthor"><div class="ca2">Trevor</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>How can there be so many people who use PuTTy who also don’t know why that’s not what we’re talking about here?!</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-def" id="comment-116450">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-116450" title="">January 29, 2011</a></div>
+<div class="commentauthor"><div class="ca2">jasray</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>Yes, that is a good question; one needs an SSH server on the Windows (or Linux) machine or router (e.g. DD-WRT) and one can use PuTTy as a client from either a Linux or Windows machine to connect. Likewise, it’s as easy to use the command line in Linux; however, much better SSH servers exist for Windows, and the command on Linux is so simple a five year old could do it. </p>
+<p>One can, as pointed out in the article, mix and match systems. A person using Windows can connect to a SSH server running on Linux; a person using Linux can connect to a SSH server on Windows. The question remains: Why such a choice as Cygwin when other SSH servers (opinion only) provide a much easier, more secure, and readily understandable approach.</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-alt" id="comment-116451">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-116451" title="">January 29, 2011</a></div>
+<div class="commentauthor"><div class="ca2">Alexander</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>Hey,<br>
+I had some problems with SSH1 (kept telling me I had the wrong password, even though I input the right one). But SSH2 works well.<br>
+…any advice on how to change the configuration (ie. password)? and how to SSH into other systems? I kind of want to replace PuTTy on my computer and use Cygwin instead :)</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-def" id="comment-116510">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-116510" title="">January 30, 2011</a></div>
+<div class="commentauthor"><div class="ca2">joe_Da_Schmoe</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>so why not copssh????</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-alt" id="comment-116512">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-116512" title="">January 30, 2011</a></div>
+<div class="commentauthor"><div class="ca2">squeeky</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>Looks like copssh uses cygwin. The developer has obviously hidden many of the above steps from the user.</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-def" id="comment-116588">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-116588" title="">January 31, 2011</a></div>
+<div class="commentauthor"><div class="ca2">Rasputin Paskudniak</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>Well, I got stopped at the step ssh-user-config, the second major segment of this exercise.</p>
+<p>Here’s the screen shot:<br>
+1$ ssh-user-config<br>
+*** ERROR: There is no home directory set for you in /etc/passwd.<br>
+*** ERROR: Setting $HOME is not sufficient!</p>
+<p>Who is it talking to, me or user cyg_server?</p>
+<p>In either case, /etc/passwd shows that both I and cyg_server have home directories, although cyg_server’s home directory is a bit weird – /var/empty<br>
+So is cyg_server’s shell: /bin/false – though that should be OK for a daemon.</p>
+<p>BTW, that home direcotry has some interesting permissions, and clearly was not just created.</p>
+<p>drwxr-xr-x+ 1 cyg_server root 0 Dec 21 20:02 /var/empty</p>
+<p>So I am stumped at this point. Was I missing an undocumented dependency (as happened with a2ps)</p>
+<p>Clues, anyone?</p>
+<p>Thanks.</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-alt" id="comment-116658">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-116658" title="">February 1, 2011</a></div>
+<div class="commentauthor"><div class="ca2">Horses4Courses</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>Why would you actually want to do this? If you want better scripting then just use Perl (for Windows) or Powershell. I can totally understand dual-booting Linux (maybe Ubuntu) and Windows on the same machine, but I just don’t understand why you’d want to run cygwin on Windows (plus cygwin is a pain in the ass).</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-def" id="comment-117123">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-117123" title="">February 7, 2011</a></div>
+<div class="commentauthor"><div class="ca2">Greg</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>Great post, very helpful for those of us who understand what it was clearly intended for.</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-alt" id="comment-117850">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-117850" title="">February 13, 2011</a></div>
+<div class="commentauthor"><div class="ca2">halka</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>(And those are few and far between, or so it seems.)</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-def" id="comment-119127">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-119127" title="">February 23, 2011</a></div>
+<div class="commentauthor"><div class="ca2">John</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>I got through all the steps but my ssh login attempt hangs:</p>
+<p>$ ssh -vvv localhost<br>
+OpenSSH_5.8p1, OpenSSL 0.9.8r 8 Feb 2011<br>
+debug1: Reading configuration data /etc/ssh_config<br>
+debug2: ssh_connect: needpriv 0<br>
+debug1: Connecting to localhost [::1] port 22.<br>
+debug1: Connection established.<br>
+debug3: Incorrect RSA1 identifier<br>
+debug3: Could not load “/home/john/.ssh/id_rsa” as a RSA1 public key<br>
+debug2: key_type_from_name: unknown key type ‘—–BEGIN’<br>
+debug3: key_read: missing keytype<br>
+debug2: key_type_from_name: unknown key type ‘Proc-Type:’<br>
+debug3: key_read: missing keytype<br>
+debug2: key_type_from_name: unknown key type ‘DEK-Info:’<br>
+debug3: key_read: missing keytype<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug2: key_type_from_name: unknown key type ‘—–END’<br>
+debug3: key_read: missing keytype<br>
+debug1: identity file /home/john/.ssh/id_rsa type 1<br>
+debug1: identity file /home/john/.ssh/id_rsa-cert type -1<br>
+debug3: Incorrect RSA1 identifier<br>
+debug3: Could not load “/home/john/.ssh/id_dsa” as a RSA1 public key<br>
+debug2: key_type_from_name: unknown key type ‘—–BEGIN’<br>
+debug3: key_read: missing keytype<br>
+debug2: key_type_from_name: unknown key type ‘Proc-Type:’<br>
+debug3: key_read: missing keytype<br>
+debug2: key_type_from_name: unknown key type ‘DEK-Info:’<br>
+debug3: key_read: missing keytype<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug2: key_type_from_name: unknown key type ‘—–END’<br>
+debug3: key_read: missing keytype<br>
+debug1: identity file /home/john/.ssh/id_dsa type 2<br>
+debug1: identity file /home/john/.ssh/id_dsa-cert type -1<br>
+debug3: Incorrect RSA1 identifier<br>
+debug3: Could not load “/home/john/.ssh/id_ecdsa” as a RSA1 public key<br>
+debug2: key_type_from_name: unknown key type ‘—–BEGIN’<br>
+debug3: key_read: missing keytype<br>
+debug2: key_type_from_name: unknown key type ‘Proc-Type:’<br>
+debug3: key_read: missing keytype<br>
+debug2: key_type_from_name: unknown key type ‘DEK-Info:’<br>
+debug3: key_read: missing keytype<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug3: key_read: missing whitespace<br>
+debug2: key_type_from_name: unknown key type ‘—–END’<br>
+debug3: key_read: missing keytype<br>
+debug1: identity file /home/john/.ssh/id_ecdsa type 3<br>
+debug1: identity file /home/john/.ssh/id_ecdsa-cert type -1</p>
+<p>(hangs now … does nothing until I press Ctrl-C)</p>
+<p>I’m using Windows 7.</p>
+<p>Here are some of the permissions on relevant files:<br>
+$ ls -l /etc/ssh*<br>
+-rw-r–r– 1 cyg_server None 1547 Feb 23 13:39 /etc/ssh_config<br>
+-rw——- 1 cyg_server Administrators 668 Feb 17 00:15 /etc/ssh_host_dsa_key<br>
+-rw-r–r– 1 cyg_server Administrators 607 Feb 17 00:15 /etc/ssh_host_dsa_key.pub<br>
+-rw——- 1 cyg_server Administrators 227 Feb 17 00:15 /etc/ssh_host_ecdsa_key<br>
+-rw-r–r– 1 cyg_server Administrators 179 Feb 17 00:15 /etc/ssh_host_ecdsa_key.pub<br>
+-rw——- 1 cyg_server Administrators 982 Feb 17 00:15 /etc/ssh_host_key<br>
+-rw-r–r– 1 cyg_server Administrators 647 Feb 17 00:15 /etc/ssh_host_key.pub<br>
+-rw——- 1 cyg_server Administrators 1679 Feb 17 00:15 /etc/ssh_host_rsa_key<br>
+-rw-r–r– 1 cyg_server Administrators 399 Feb 17 00:15 /etc/ssh_host_rsa_key.pub</p>
+<p>$ ls -al<br>
+total 24<br>
+drw-rw-rw-+ 1 john Administrators 4096 Feb 23 14:13 .<br>
+drwxr-xr-x+ 1 ???????? ???????? 4096 Feb 22 23:40 ..<br>
+-rw——- 1 john None 2651 Feb 23 14:01 authorized_keys<br>
+-rw——- 1 john None 771 Feb 23 14:00 id_dsa<br>
+-rw-r–r– 1 john None 607 Feb 23 14:00 id_dsa.pub<br>
+-rw——- 1 john None 314 Feb 23 14:01 id_ecdsa<br>
+-rw-r–r– 1 john None 179 Feb 23 14:01 id_ecdsa.pub<br>
+-rw——- 1 john None 1766 Feb 23 14:01 id_rsa<br>
+-rw-r–r– 1 john None 399 Feb 23 14:01 id_rsa.pub</p>
+<p>I’ve opened the Windows FIrewall port 22 (and verified that it was open on the cyg_server account), as well as port 22 on my router.</p>
+<p>But I doubt the firewall is the issue, since the ssh client is able to “talk” to the server … the session startup just hangs …</p>
+<p>any ideas?</p>
+<p>tks,<br>
+John</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-alt" id="comment-120390">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-120390" title="">March 5, 2011</a></div>
+<div class="commentauthor"><div class="ca2">Rashy</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>What bout PuTTY?</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-def" id="comment-127098">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-127098" title="">April 11, 2011</a></div>
+<div class="commentauthor"><div class="ca2">DrRob</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>Putty is not an SSH demon. It is just a client. There are other demons out there such as FreeSSHd but I’ve also had problems with that.</p>
+<p>One problem I have with ssh with cygwin is that it is not quite the same as starting a cygwin shell from the desktop. Some command run on desktop cygwin shell that do not run from ssh shell. Clearly the actually shells are different somehow.</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-alt" id="comment-129270">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-129270" title="">April 28, 2011</a></div>
+<div class="commentauthor"><div class="ca2">Misty</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>Hi…<br>
+I am trying to configure Cygwin, but after this step</p>
+<p>“You’ll see the script give you some information on your system and then it will ask you to create a privileged account with the default username “cyg_server”. The default works well, so type “no” when it asks you if you want to use a different account name, although you can change this if you really like”</p>
+<p>, when it asks for password, and i try to enter a password,</p>
+<p>“Of course, you’ll have to enter a password for this account as well.”<br>
+“Cygwin will show you your password in plain text for verification, so be sure you’re in a secure place. You’ll see some extra info come up and if all’s well, you’ll get a message that says it successfully.. ”</p>
+<p>It does not display the password, but asks me to reenter, even thou I re enter it shows the error<br>
+“Creating the user ‘cyg_server’ failed! Reason: System error 5 has occured. ”</p>
+<p>Can you tell me where I am going wrong?</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-def" id="comment-133343">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-133343" title="">May 28, 2011</a></div>
+<div class="commentauthor"><div class="ca2">flurion</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>@Misty. I solved the same problem by running CYGWIN shell as administrator</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-alt" id="comment-136872">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-136872" title="">June 24, 2011</a></div>
+<div class="commentauthor"><div class="ca2">acepelon</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>It is funny how many people mention Putty here considering how horrible it is compared to other SSH clients. Skipping the fact that the author wasn’t talking about an SSH client, might I recommend those who want a better experience with SSH (free) to try Poderosa? Not Ponderosa, but Poderosa. </p>
+<p><a href="http://sourceforge.net/projects/poderosa/" rel="nofollow" class="external">http://sourceforge.net/projects/poderosa/</a></p>
+<p>Poderosa has support for creating tabs for Cygwin. Cygwin stand-alone is horrible but through Poderosa is great. </p>
+<p>Give it a shot.</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-def" id="comment-136990">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-136990" title="">June 25, 2011</a></div>
+<div class="commentauthor"><div class="ca2">hari</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>How to install, where is the link to click and install in at desktop? I could not see any link which I could click.pls help me to install it.thanks</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-alt" id="comment-138524">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-138524" title="">July 8, 2011</a></div>
+<div class="commentauthor"><div class="ca2">Joe Poniatowski</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>Nice post. I too am amazed at the number of people suggesting PuTTY, as it is clearly not intended for the same purpose. And to the person suggesting Powershell as a better scripting tool: Powershell is great, but not portable to non-windows machines. Shell scripts run in cygwin, Linux, BSD, etc. with little to no modifications.</p>
+</div>
+</li><!-- #comment-## -->
+<li class="comment-def" id="comment-146573">
+<div class="commentmetadata date"><a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#comment-146573" title="">September 15, 2011</a></div>
+<div class="commentauthor"><div class="ca2">Ankit</div></div>
+<div style="clear:both;"></div>
+<div class="commenttext"><p>Why not simply use mRemoteNG ? It’s open source and free.</p>
+</div>
+</li><!-- #comment-## -->
+</ol>
+<div style="clear:both;"></div>
+</div>
+<div id="respond"></div>
+</div>
+<div style="clear:both;"></div>
+<div class="contsep"></div>
+<div class="contsep"></div>
+</div>
+<div style="clear:both;"></div>
+<img src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/stats.php" alt="" id="htgstats" style="display:none"></div>
+</div>
+<div class="yui-u">
+<div class="sidebar">	<div onclick="window.location=&#39;http://www.howtogeek.com/trivia/what-was-the-first-planet-discovered-by-telescope/&#39;" class="triviahomebox" style="margin-top:20px;">
+<h4>GEEK TRIVIA</h4>
+<a href="http://www.howtogeek.com/trivia/what-was-the-first-planet-discovered-by-telescope/" class="title" rel="bookmark">What Was The First Planet Discovered By Telescope?</a>
+</div>
+<div class="sidebar-glossary">
+<h4 class="sidebarh4">DID YOU KNOW?</h4><div class="glossaryhomebox" style="padding:10px;"><p>Ronald Reagan was a Trekkie through and through: during his stint as U.S. President he enjoyed two private screenings of 80s-era Star Trek films and, after his presidency was over, visited the set of Star Trek: The Next Generation to see everything up close and meet the cast and crew.</p>
+</div>
+</div>
+<div id="side78"><!-- tmnp.howtogeek 300x250 ATF -->
+<div id="div-gpt-ad-1342044737928-1">
+<script type="text/javascript">googletag.cmd.push(function(){googletag.display('div-gpt-ad-1342044737928-1');});</script>
+</div></div>	<div class="sidebar-glossary lazyloaddiv">
+<h4 class="sidebarh4">BEST OF HOW-TO GEEK</h4>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/137681/how-to-automatically-clear-private-data-when-you-close-your-browser/" class="title" rel="bookmark"><span><img src="data:image/webp;base64,UklGRlYEAABXRUJQVlA4IEoEAACwEgCdASo8ACgAPm0wkUWkIyGYDAVUQAbEoAnTlBUl5LZo5Iy1Wsmt3n3nwZ8hnvr874YUQvs/xD7y/eQnFpl8RWk+mm+QD619gb9betN6Lpcm2DBt/yuur13QfLGL12WFjZYyo9+qSircrcKszI1NXS2eYo+UBl7sPlvTRon3x9A0nPYpOzheAtJbJOGU4eqo5lVXntB3CfEiJQ1+7AD+5G5qMieHWguzriEXdzh8fuWnO/Pzvxa7vHgsYwXcRkS8eiwpc6BgHreKpE4dtCZnZbSh1b4d4wowvgtE8Bua2ovu/T+KjHsHqW0epX5p0lMuda1BKKeMzZo3axtZtgwmmdvBaoogfkdjhcVCmX+nrYh0IcXwCRW4RbPOLygL/OCuzNQMbKAJDGC78KlYjrG+3JK4WLSCL9UFFbvCLXo7nZSOSrbdwAbvnuo1wn7DfZo5iT6Y10HABr5KTcq2bKjXDMNz9YXdhefPpeoH0gWUAOF8KdcK6B1YrOGM1di5yaQYtTbx3jf3EYMB+dHaqG+Dl7E+q35f292ib2bfo98xYriYNwRB4EBu7dclx5zKUwQavq+9fnm2nPydttDKvKXNelDXWELUyq5UsU44+0BGNCvP8dL+K0sG4P8m1mwMKOb4wGWB0uCB9CBrnG/jfIGvX3nvd8xLA/uWgu65941XTE5wss98RNtt5v1OgJbngXXUOzer8iR1w9kKdf5fgfjpU/ggadK/Va8smB3+aiR8X3OHUJD9jJg5s9LfytlCxqwWYtsNbMyKiR5d08st/nfrzHYxdkjmxzedgIS6ILQPEoezAVnJNftzzOxxxv6jjtaQ65zQnAF7R/f1IgalC4PGN+1Qhlk5IOHEpnT7vmf8X6vQ5Pnn1jI43T2LAdB3nmxlqdfBOAytwwvmrcYsWzLff5icjTb9UpY+jeT3b6xBR5HeNem19LE8hBEGGMapHaEI/nQ8LDt89LvPynZXhMsBxveONkPro6iTS7dM/sQ/kJ8HphEx/R32lByHjlk2G1PF9IqLwr8UarzmNECHvj/1lZq5POUbfvh5wckJVpO6SI8ljap07RwU2hs+coddu7Krg+gyDIfqHERw1g/HzEurvWWdg0vwUGqHUmH5rsXPlXO6TPpAiezZV97COKiMdMh1EZT8KYMIkVKya2W3ImpGApGTItILgASfaX6tWB/aoQHWFPvHO4S2pn9ekDBS5pI8/4rCbjP/kmeX1rmHy2Y9rcSt6Zqg/fThXftUl9oXzVmfFKvOXpuu82COrHsP5qnDdpRO4hhKKFrL+gSWM/sd55I+Co97cyI4Q0RZg5jSxVjMN7iSiLT0wKe6lsktwbcFQnnfjLCRsenAbzf0Xe07fiJBLnBfKGKlAAqX/Tv+lMxAYq8nLAJAXwi/SIE4qXxsh7RnVO1eT5LtdH6ZCHdNLOw7YedWYq0xFoBgMDsZvOAqLrxmRXYdAAA=" pagespeed_url_hash="2439362139" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/137681/how-to-automatically-clear-private-data-when-you-close-your-browser/" class="title" rel="bookmark">How to Automatically Clear Private Data When You Close Your Browser</a>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/132470/how-to-service-your-own-computer-7-easy-things-computer-repair-places-do/" class="title" rel="bookmark"><span><img src="data:image/webp;base64,UklGRtADAABXRUJQVlA4IMQDAAAQEACdASo8ACgAPm0sj0WkIqEYDVaoQAbEoAnTLxx9Op9P0AjGx70fGN7NkCUneG/gD7+1FxxeromkeR76v4EoV4HT6F15mydrWd9JrP0hSVEkYY6UPI5XHpJSn64qr9oUP7PkdB2pmlxeyPxg3f7Av/LC3SJTrXDUAqlnSvNGLY0E+2D9vTRngAD++bAb0fPVXg/T7i7xfvGNnfgRXxbRH1NvWvTuk66axHmI3WdrM4V7OV2ZW7FDJ4fW+Wkz31RJbxfacyn3NbROsLo6hG14Vm2EjBx9cApolgbORWWjz5u1BfXPodrKDUSS5VupmPHjbxjp0m/K+sTQ8qyTSdmBdqHn3uYjM+7972Po2nzpExS26pVdZvpMOGSRAvq4IH0I3aVBROIpbwYCHiQjzcJj6Lta9ttX6eOTZryFUSgqJg1bBVMduQo7PQtM9LFBapp1tt+ahNxTHlgIt+vbcvZuradwZWbUFIhkL4O92eeQ9Lb2tROhUNNIOVuKbSYl3tS7UeInK1iwg3/Q626a1lSiGbhUPyDdM4q7+P/nat63r4ElQ7XQ2vqfjD5xCtCgyV05OOdT4mnV8l78vz7cvkUEFyYV6igDUl61Z1opAHZ8JzP9iUlBdR8JjSXsK0iADgt9aYeilJtYHix8TGNEvwr1Rxk1w9u9STp71O/OmzAaCQL4vc4GfOlDovXrFewtpDdoLfs/xYU7y4gac+K8Q0eUtRHbke9HNxV5gn7n3zGOQnrXiFeOmc5PiaY+6uohkVxhg4Y3jH/sSQbg4zm4ylfzOii5lP77dVm+ctZMAIiQ3tNW0y+2peiBWlUCZWcFOZrfxo+XmbMZx2CWupUp0D0bANsqqKFtp4ipnmWrNInjnB9vz2Kw3yPbWuBN/iDqePDOhu45NVcT2TcB7nHr+LdzDja3QtRUyrwrnL7iV1jNXmaxwnrUBAyvrZwqFtqnS1BFTk9YLBn390YjNviVzbKr01bda2f36kI187spz4DmG7S66wPJSpqBkYHuk8yWnowlJ7zYPLBV1Vc034e/gDg5NlAEcwKxx2VDy3qU/aDEl1425CADyGqLOh5HjyRlQY1iTcnNXDaCfK5b6C9GuNpT7srpQzzXDBpqmehN6G3J5kVy2Bad2FiGfu9Rt+4oZg7syITTBGY+21dxkmwplcNKXBv0mmBynTmJuoCGE/fqePHfDuslJF/hwzPM+dZVt7Ub57KAWFGNHb9/KFi2PWgK0/50IbVccYTnDBn1i8ib7egrkIcqcqyLgZkVGJyBUHo4hwAA" pagespeed_url_hash="1269673496" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/132470/how-to-service-your-own-computer-7-easy-things-computer-repair-places-do/" class="title" rel="bookmark">How to Service Your Own Computer: 7 Easy Things Computer Repair Places Do</a>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/146410/how-to-automate-your-always-on-raspberry-pi-download-box/" class="title" rel="bookmark"><span><img src="data:image/webp;base64,UklGRrQDAABXRUJQVlA4IKgDAACQEACdASo8ACgAPm0yk0akIyGhKrv6AIANiWwAnTL/+yfDeaLYn7FuMBm+U3sx9L+22u2DecK7RxRtFazZ3K4dWnjQPKFqC9IlM7AYN8TcmiQeLx1GXQbJCGaD14qi8KOUFxSAFhqCNSnNZSHHJAGFNledsTze8xIqd5emAZ+O2ruAURaI2QocmpHfD6gA/vQzNFPr6WPcBT5tZnJeJKwRoyk0kNHPZMHeMBTNSwWj5lMxQVqW8f/ChXnPgJ2v/xgMN9jBXaeVxf7hhaDneVUhn/6kISJnf1YZ9BfLI32Okx9JWr0RxpdkPp+V8Jh9MJ/OhW32sdXDfwCSwjoYKeqbqFk2WJhnMt9dIEMlZXy4PK/QU7YZS2XWQ7ytk5bhKe32ucJIPd4+LDpx1iexhuSLbhQ4bjr+hMzmPUTh3bky6V+w4GPVwGZItB+I22pqyscEG8wC2uiHQh7C+bJoR44oMBV6rxvFir93Dpvhbk1fnZ8+FdOcTC1Eka9CTqTVZncQugR2N+oRY4hm3A8wBTiTZb+P1UoRmFzpHa9AwX3px6vzJdKXnJH4NDWZcJOJippQc6B/5Pn4hUJxPKUJf3CsovkH5O0/NbHuc316Tpeej4iNyt/1ykM519UmCq6RHW61SRPA3O4QMCXAcgOs9/FXJS8p1CjBY6Y9J2WBaiznjNgTwVegUINeLS9lmOxsZSedEdz0vnGZ9IhDb0G6AQxr16RYTX81FAIxJy/DCa13DqR7j7dULLHPY8djn+vDOnTL4nW562Bp+v+f6ufMQD9s1zNV5oRbDSBoupCWuPVHQiVPcH6ok/fhWC0KyuzHWhnvDsCFUlZ5PPO8hg2QfuF1AX9hUMToSEvDXJKmgLBQijIWruuy8bCrM+RVopFrsvCkFvyupBduxm+w5Y+YhOtJcsOIxNWAvF7x9mpReCfa/BO0yYYibZcN0YYZ5itpL2MX2nsZGGmkjnojhRPe1NVSVxsAok7vxxtj9vbWhdmjFaojPKklHVgxkd+TDfgDZvGJgzEaYCzlN2rExmY/m7A1PLjGyHkRsW7EOGrtWevEuvJFFq0znXZwZRcYsfN2p0/x/3s8d+95n+/+JR23T87ijLR2EMbM8q/26edAlLnTbCTQ29F/UzqFbGPtSZy1p5xXueY2WezU9ogeDNDsZ2QtztIO7gnuMMXqhSu8aIKRCr0c9Fn+5v4qmRMEs8ILa95Q25sJwC4oV3XoVdHrXY4ikBQLjWNwQAA=" pagespeed_url_hash="1837228533" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/146410/how-to-automate-your-always-on-raspberry-pi-download-box/" class="title" rel="bookmark">How to Automate Your Always-On Raspberry Pi Download Box</a>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/191230/6-advanced-tips-for-securing-the-applications-on-your-pc-with-emet/" class="title" rel="bookmark"><span><img src="data:image/webp;base64,UklGRqYEAABXRUJQVlA4IJoEAACwEwCdASo8ACgAPm0sk0YkIqGhLVzKSIANiWcAEgMaNfkfI9xT2j/VaM75E8WX3M+dLtVMy/YDyd/n/+34x9KhMW/7n3Y+2L6J/8PuC/y/+of8LsO+jH+4jC8YX7xy2ST6hAgSUvaf9qOw8Biph9jkeHOrC1fBmT9tKZ2jwFv+e4a33VnxoIUiPvvJY08vNfep9GFR9vFSMN8PMXPC/ofz8pI5AtcgAP7/qiHmcdrOsc1sLiNaRZiaq8YIEf0Cs6Ss1JegMR3P+K9kW9Jn6z3Ab4nqWmf5Nvg1T02BhROalgs5Y7t5ifIfLPcVWpsD/zuxfnQe3ycyCuyKkqJG1XXxKVG/yb8VY3/ktBHYPPSLHQe3iNd0H0N+fq9dIoziETWunsBooAli98QhfsWvpol4XLP7+NAWadRzOcmyza7SCMy8C6VOqlUBAH9NNClagICH29rfnPbwMVeR9U/34JVSzqDigE61GNXm5VXoXy/4xsnM/92ipOyLexpKHsbn1QnbXwDTKVrJT2d3VbnMvc5N3pY7kKAZU+l/272rr1xhV0cKz1kilFYFbm06I4oz6eD3YUfpwV/wJ0qcmyB8YxsTxc3xhEum6ykOs7ynptLupt7uCj+DO9F26Dz+mhyY9lvMsOU2r8268YM0T2k5UC7ZBgYQbjLpfz46MU89l5mesNcLCJ9TmxavOHr7ogefF4DIlMq7rmcjL20URQXh8kFpVACBo7feTp5mu02fSZvLsyue5JJ9vraXOY48nESeAKt2y5lsRK4yn/ZXmRzGGAPJpnMf2PC1K06JP2QF389jGBw0cPhJvMWax5+zOba9lsU0Ec+6shvNX8vm2jfQx42BmP8de1sFmPG8oiEcSjtcDTODqsg4Hlibal9LfiWMm1ynjsYg4ZqRKdXFDMP15K1y6VrgAVI2/DJwEUv33M3pBYE6PmlJ7u+Ii6Vay1QMj2+S8GPDtCFJ9zIMIo460reCD/C6mqoZQ0bW4oP4u3c9hWvOwOn/7IXTVGF6EFpRjk3lpGsPTb2mgAqfKQq3VqsCLJPw1UbpZtenpE/XhR+2gmfZxmvXlzFqCODSmvXYTwVvsnYOWUv9JoOvj5BxZ2gGgJamaAPs/6HIJ80ufG8a/YqpGWUxXZn7G/YZeYCLVek0PXrFvaRuNiUh1L/5fDwEzZLWTDuInOayfMr0rbHqZ3S2MILXpViu7bzQBUjFPy8lCZufS/HJLT3h8FkAHp2Ejosg/DmvmMelejpS2Nxx5ciMgFH2RGgU/ojfcneF6Bc+H+jBFPWbJccV+X+OrDpjjl2Go5NAnEspKXz2Gpq/33Z+cV3i9wTRnMvrIgqpsZaro8BcnBGrWQ/JQ8mXeW4LZ/SEg4x0YSf64eF1rUPRwYfOKCDs6VAyYCswXjW0CmlmIp6TFJExlKL1uAizHXw8/rHo9oehCzuZkUn8SJph36HxB5lf0UEur+vKvRvcmY9/2WKnI10Zn+sDigYUkwsdMC2f53PtQMP+q7OoWz6ImmtzmavzxKGO41yBGTBaOx+M2qNiSaBsRDOKMLdT5ZRHhQq1W4Etq0GgAA==" pagespeed_url_hash="625036927" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/191230/6-advanced-tips-for-securing-the-applications-on-your-pc-with-emet/" class="title" rel="bookmark">6 Advanced Tips for Securing the Applications on Your PC With EMET</a>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/115041/htg-explains-whats-the-difference-between-ubuntu-linux-mint/" class="title" rel="bookmark"><span><img src="data:image/webp;base64,UklGRqoBAABXRUJQVlA4IJ4BAABwCQCdASo8ACgAPm0skUWkIqGaqQUAQAbEsQBiKgorbyyAB9bAIo2TIaoGns1/xoBuIxC8PNnDqnB0xyAaWLEO50voZVSkI1MaWEa3vyZM6a0eH3AA/vec77PD5xj+Rtn3XIsA2Jtrbiv/xLB8neVKX6bnvuahP+dK/no/SszZ70UB/C51HVaik/YtS5xlbFwJqsXlFlt3wy7MG+2q+fmfDor40jBsa0+wCe3j2BMD/qm/4G62x5KDIOM2RKn+baL7Fnu7qgtJ2/U0tRAkvT1ecOCPEdmNH4gLSd5NzW7gF7EvgHezXNkifOo3qPOeBCyCG1dIrnVFkX1ltCLkLA9dx5EJjhZ1GQyT6Kgh3tO+lsWZ7zXhoaq3d+tWSEmSME9FfAs1JGGoWDvTjgeHN/XOm6u9fj71OYknvgg8rV6ewcOQNalx5DdMwLmCH1rCwjlJYs7UlDppavg24r2R2T/nx8Pj0pF7WekTIBj5HQUJOXJ0dc3b83KrmklSKqX+5E21pdH1ySeoK+GCyRP4GSYtFBT+sSO60D/ksAAAAAA=" pagespeed_url_hash="3061718362" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/115041/htg-explains-whats-the-difference-between-ubuntu-linux-mint/" class="title" rel="bookmark">HTG Explains: What’s the Difference Between Ubuntu &amp; Linux Mint?</a>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/174939/8-reasons-why-even-microsoft-agrees-the-windows-desktop-is-a-nightmare/" class="title" rel="bookmark"><span><img src="data:image/webp;base64,UklGRpgDAABXRUJQVlA4IIwDAADwDwCdASo8ACgAPm0ulkgkIiIhJXgKaIANiWYAnTNVfAfKeaLWmxhHUhibfO7eY3N4Q+RP3jJUq0H27hRXu3Wvox2TdVhnZHTBjj/bB+xQU+a9qCoRLEv1QsgZgfmT5WM+UvdC4ojmxw2zMHSl3NeTqmtAacdTlIQecXOvRxvrDDboaUcUenF4APa91CIfCrocTw3fKqSFNvmuHdT7hXo9+cjB+PiZ3/+yLoSGfnYTtHJeVMcQVqxRTpF8gdpV0+xlrzJqjslmSirpqNbhBvBH1K0pl17J2DVwybLobCQwwmgwTugsZtO/WgoEgONXlefD/8l0hFmhjuIj4FXWEW7ped14YiQLi0VvqL+fiI/Vh/9a2afHnD7C58QphEt30j96cIzvWS0TU8WUDxjT6y6Q+oINmMn8W3N0H1I6AEYK+H2Ki6YLnhPpuLmueH/YXKvhyUzf/zmHv7KaVRjhseDmoSeHj+Drvqn53kN+KwWZvzL56/sTro731TPkUVF9JNf2ewv8VCT3sSmJCHgV1qRD1VWEKnY3oDI6jcgB2qsBT/FclNVflXdw//SAXMZT39amwKahSxLSFozZx8U8Y4M/44ffBpRDfhDfBMs2lgo+tz5eHdVADe0/9grl+icbFHb0ZNi/XeRv+2K3p5FPz6agYMNpz43h7GOEbpLe+mNci8J70JC8j0ysM5z2mQXBoBg5Gz8f9/194eAMVjSc7U/wJtK9UOgoGbFu9LYjnG9eZapKq36kocXmMNf9FC/2XTimfFzLOfBlE/fdPAy904ho6Goe+oEgPpVHyjS1ex5dJ1Xs+ljabE5uYK8SY8JD/+PzOfQDTIgx7Hz/IZbkkjTzTdW/amCDy2gZ0t7KTFTLYSW4YlJYaiR+F7IQ+DujsSvbkPT8qHh6D3ygE4J6J3X3/vx5yJSrbdrdgkxCujYsEMnUoVnpW185Ck5hCNw4lLMCXDEAdwp6u+J9ppr+ze2Wfx78cxG6f9EOrD9Z1j9H7eLpSZ7Dp1DDkhRBkANJbx4lGyFafnyemTykIvcfg94SPMcwN3SUITG72/H21NQBImTsgjCUwmr5DeXvHoB43VCVz+9fdeEcKBG1trRmaUm01Bt8yipo5b/vOBwrn+4xhUV5dgMbfqfSW0MbeHl9DnwpnjFctm1u4Yh2iYcWMC7Upze0aZMRgSBvL9b2gFoGdXxRcrFn1PvifQAAAA==" pagespeed_url_hash="1356423915" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/174939/8-reasons-why-even-microsoft-agrees-the-windows-desktop-is-a-nightmare/" class="title" rel="bookmark">8 Reasons Why Even Microsoft Agrees the Windows Desktop is a Nightmare</a>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/173448/7-skype-tips-for-power-users/" class="title" rel="bookmark"><span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAoCAIAAAAt2Q6oAAAFzElEQVRYw+1Za0xTZxgG8bI5dW7iHFNB5DJgioAbbjpj3IVE0W1ZNjfn1OjMlukuLtmSLdtPs8XEH/uxbMkSEzOzJcbktBZK29MbBQqDgtzDJCXzEiKC0u9yvkOhtOw9UGpPe4BSWuYPT5403/Od0++83+V5L21CAueSoEKhDS6kJ/yBKbHkCko34NB+lUs28lyokiloZqNVclPk9K+bw/X3PIccQrGVLNegHzrF3/91b7WQGWcbKSQjFOCaliqBc53rHrrq8rQhT6/ofb2GDnt9d4a8d91eNOIdHPY66egfN9wXrrsNfcPQAGw2k5mHVYR/FcMsmI5OYbR71PduvfBVm3iiSXilmr7XIDxvJfq+kT12mlKBTrWwnTZyspl92yGW1NBW1whsRbRGBy8nF1hU+SlXhR16GfUbfenW8C897l1V5ItW9sgV9JyJ8HdGwMq9dlpoxmNjYzCTx8vQj/8MQWfToCdRFVgv1+QrIqNKQpzlmfZP2AVr+VkLA5s2mTCs5c9O9/edYiaPf+1xr9Ohb9rFbVZypFE43Sq+VUdhPrLXqVyzoFFukBIWqxEIrhV5brLRunser8/nGPTssJE7bm8Oj6ETGtDTRUarBkayeRz9u2Km6EksUruSVGhlGfq8lfUIozV3PQ2DHrDyp2tDyzT+uSVG4Den9R7BKuSQ/HgEEEIjRZGFgArh7CZrox9EATJ3xoX4OLkQVXIh3r+LIqIB2XFzpve16W/IrZySRodIRo6AxlCI84eYC3E+EFchxgvzLMQFapSmxykVOKCtRDVK1vrpKmiMS215md+YZWUocfK7T5Tjpye+OM9CzDKRErtwpJEdbWQfNLL9dcKJq+xgvbD/bwE+jzSxQjMpqKSQwxxvZMeaWJ6ZHG5i63X4k2b2TgM75GCZevxgCfFJLYZcXFp+lbQhUz7Z3IdjhWpnr6XrxgQutlz3nz9V0FkMUU7UdEzp8vl8UdCBgYGenp7Ozs7u7u7KDqeihl6w0lMtIgDaSzVICuxBd5PUaKE6AiEqmhKd0f39/V1dXVVVVR0dHcaWLkUhwlG29HsA0HnO6T7TObTDRj9sZKV1wmEH+7JdfKNWeLVW2Genu6rpbrvwdh2cdUgexcTgiOgbvybeHdwO9CjSkIcnrr6+vtbJq8LRpijEgw6muT0CgHa2kWQaSAZP1ulxNk8AWTxZo8XpPHnWKCGTJ+kGkj5+NzHYH2wzDcYKRfr+/PLeCWRrbiu7y0Cpwbk28iTDSLZaaYYBwwSkOfAYbIUzA9OAGiLXRDYYcHElXVWO1+nwWj0GutVCE2RyUQXnKEheO4Q48tnTsP6NPF5ZLtkBpTvYt6YCv2SjsLSrtfgxDcoyklS9tOqbzAT8N+zA6gqcaZTWPiFU19zMEbHAQtMMeItZWgkYApxocgWGnd0Ae23AKTqcZoB9xw9WRMw1U0iU99YKANi7kmqab6EQCLZV0u2VFJS0yUzzjERRiEmX+pdcvAWYU2q6WT8QD2RoBxSFmHK2vuT4+a/PaqENfmOtTorMENVh8tB4SothOZZq0AyB2ROf69o9prhL6885jn13+cxvFliz16rpyTax1C581CweaGDgWI462On2oTQdDletjPriczmRW1GIj/7Zu/Z8d+oFZ5RqjnlEDKZ+o+MEGD0e4G/RhzViSI3IBQ0a+MWImzbr56YtEWak3JxpgZms1xPwPvkWUmShz+hwsZUW2yhE0VQdjmtEjJ6uLEcryqSCJ9WAIZBCnQNRFNwndK4oe1gjxlKIwb/nhv+yzwUddy7s1myh9LdBNFQmRFVkQpQJN2IaU+/hPxWQZS+Y39Q0erq8HBdayGI12llNX7TR0lphj134tJm938Ag6YaUYLeNFljpm3XCdht9uYruswsH6tnHzWLS/1i3L7qCoCiAFiTaueN5d46RgB+ENvRssUiOL9VA8s0kxyR1AjabSJ6JLLz/P4ZceVNRWXU9J/oftD/mq3CdWyYAAAAASUVORK5CYII=" pagespeed_url_hash="3372828758" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/173448/7-skype-tips-for-power-users/" class="title" rel="bookmark">7 Skype Tips for Power Users</a>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/172050/htg-explains-should-you-use-a-third-party-uninstaller/" class="title" rel="bookmark"><span><img src="data:image/webp;base64,UklGRqQCAABXRUJQVlA4IJgCAAAQDACdASo8ACgAPm0okEWkIiGYDVYAQAbEsQBgD98HLFDd/DPbbfnliMHVbzcIVw56kPQDMZqsE6kUDl5qJbBKteiW5/7I1g7u6G/LfEWMa8AoWaGvZ5UsEsAlt7H5mGJgDD9WboC6bgAA/v28Zt7q2K1z4qhFYtFXmflzzk/UdwGc5uQiWfB99jm6X/PcI9aG9Pl2w2fgO+5ydb/NFGDiiVSGid8DF5gaTSgqkV3SQrSMpYBDWFjmQNdto23DabPxqIl4lxx3TpKRrUuWpYppP0dpI+cm4EJ+Cn6G/DjvYTZEtu64W4T6Z4LTJuAtVHB9gQVZtZdGyMTZUXkR0F56OnLgX3aWqf07YqZKhqb4AbfW3q+TtZp1wbg08X/v4cuCpmQ5dJ6ZvDuq06DAJNKHo9V5/XV9xgBl5xfUHimdMH2kt3ks0XMnbT7LyZZe2q81O7bgsrtqnTwBKhVJocruC8t5h6h13L2p3ExPm1Uq7LITIPY+/j+zwJr0K2z0JysBl23y595uRJP/tQ19r0djrISe8xRRlYb3sEiCJ4sbgsZeOskiSaxvZq5Odz9w5PvcVd3x4BKPxiec9j74yRlcy42E0W7uGz+neG2ydGCopwpeesq6wrCo1oflKfLAbBnrdllyzfnW26b0dJlI2EeOncjiKoToOeRBFPsSCXvLYgJoEYWMZxmsiM7WdFcnLFZXBqdVzi2pWXUjUHQgNvTJacj4nUA1D4qSmVwWPm2pWDF4x48fRb+ERXBDo55KWciag64fc5fH7/TKh25xkes3fq7jKYKqnF+JhkqbLQXvM/bsW86KdBRrlK8Nnz01iW56V8F8zmNT1BXaKN0MYJ4cJMEqLd+enOJomirCGBXzMTnvKNHYAAAA" pagespeed_url_hash="4022822553" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/172050/htg-explains-should-you-use-a-third-party-uninstaller/" class="title" rel="bookmark">HTG Explains: Should You Use a Third-Party Uninstaller?</a>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/177376/not-all-tablet-styluses-are-equal-capacitive-wacom-and-bluetooth-explained/" class="title" rel="bookmark"><span><img src="data:image/webp;base64,UklGRkQDAABXRUJQVlA4IDgDAADQEACdASo8ACgAPm0wlEekIqIhJXgMAIANiWwAuzOOfcDoeGXwrl4eHbpbkPeqt6LrvX6f0NSPPp35QdquDA8HXoYf6vmz+n/RSUcn7KOfDS4eID4poqFcyffuTNXWDcVViele0pgO1MteP59H56pfjL+1VKM3MOJ4wQm+hOBdzAHipuR4zPWM+EzeOJoQAAD+/i5ylR/+6/sRBuAYt/vknKICG+6F4RsOt97Lv52wzmyE2ui/s9A7KD6+3HvuMRxeO51YV6H9A0/r9fiCqgC1RQUaayCcdnJtL4G/8dv/xMI3R8qOPxPufy45+arjUrlf4nNQVvOcusEn+X29QEsDqZ+KFNNGnzq5ZblncQK4M+7gq4LtLrOYH0bCrOfRgT2N6n45DK+Q9pAyv4m39+tyknrT7C1pv0+FT5XYqXNL0orTDQ0xfBwv/a4qGlNmqIS/GtK2n+f09JCPhYjBLUW63OilXu5D9gEy9oZlHf62jzMMTQXkCDdQvIUFOIR6mA+j7uedW+lu9l5VJf99YY1SNd0PlFOQ4f3nFAw0X0Aeto+ifjBYr1WFsBIaFNzGelVkO/tW2IDwmOc1Z4bX/8ecEez/ZR+15qPwz9JTQfORTtDRDcmP73oaVpGNmSyD22cT/rEaZPTv3A4EXfFzBdVOyuEyCAYTuZwpA2TqGnxdwUgARtATnxukTUP6hIe78ca3uEH+C+9mvD+2qseAzQKr1XssR85Nm9JCfTX6oL1uNWH+FUbuKh44T89QUZnI4HRA6cq75ZUTfcelCxMAw+66SULzSvf1ph6RxuS5iTkazQ2ei0z2i1g8yQCCoC9KK08Inza/3pRL25g/Xv9fwLfp81AoGfY0+eRcu6Y/btp2/9n5uDEfTeUCmiziL3X4nfyc2stepn9PFxsl6YNYeI8Q//xCRxGWocLd0M7r/1BAaoIaSucFpDSTcBxgHNkyZJVIVVM7m5uD/7/8iv/jwWQ3gj+ryxDcI+WyVnQC2TgOl9GGLevhubU0yqVQ40Em4i9rA3f/i+3zy4faUqOGa4HpTEXF54t06rhAG0M019xAuUOUWwVn5qAOAPt6ZcgQaiYNNYcxeAAAAA==" pagespeed_url_hash="3666813457" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/177376/not-all-tablet-styluses-are-equal-capacitive-wacom-and-bluetooth-explained/" class="title" rel="bookmark">Not All Tablet Styluses Are Equal: Capacitive, Wacom, and Bluetooth Explained</a>
+</div>
+<div style="clear:both;"></div>
+</div>
+<div class="sfpost">
+<div class="sfp2">
+<a href="http://www.howtogeek.com/179935/stupid-geek-tricks-how-to-turn-a-windows-8-pc-into-a-chromebook/" class="title" rel="bookmark"><span><img src="data:image/webp;base64,UklGRhgBAABXRUJQVlA4IAwBAAAQCQCdASo8ACgAPm00k0YkI6GhKrv7AIANiWcAzjg/+G0cYSgHAtaDfbYYlzJyHgq7kH9+TdzaUHLf91z34PwF7dubjA6dyYOkSp4nlhKTgwAA/v8ax/t6b2snzBe/XCQbujUtVvHQFhqDIBgu3To/v8m9H3muIVDwwb93g440LPZMSmhA39s9zchWNW/mJnNdZ1RpzttAZaS7ELyUhyBG+HeC2N2NNMQQIJOMuRy1DNv8gmLPD//FfvY9EIFR6aiflmz8g0XkwqcRH6BMLJiZdVsfPg21Ia7cHvFWI+87IvF0B3ErLZyT6H0zgK+7itXxZNdLqH5xyps/3S9GBFlF9+1HLc7P9Os6WwAA" pagespeed_url_hash="2322825808" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></span></a>
+</div>
+<div class="sfp3">
+<a href="http://www.howtogeek.com/179935/stupid-geek-tricks-how-to-turn-a-windows-8-pc-into-a-chromebook/" class="title" rel="bookmark">Stupid Geek Tricks: How to Turn a Windows 8 PC Into a Chromebook</a>
+</div>
+<div style="clear:both;"></div>
+</div>
+</div>
+<div style="clear:both;"></div>	<div style="width:300px;min-height:20px;margin-top:30px;">
+<div style="width:160px;text-align:center;margin-left:auto;margin-right:auto;">
+<!-- tmnp.howtogeek 160x600 BTF -->
+<div id="div-gpt-ad-1342044737928-12">
+<script type="text/javascript">googletag.cmd.push(function(){googletag.display('div-gpt-ad-1342044737928-12');});</script>
+</div>	<div style="padding-top:10px;"></div>
+</div>
+<div style="clear:both;"></div>
+<div id="sidebar-float-widget" style="top: 10px; position: fixed;">
+<div class="sidebar-float-widget-internal">
+<div class="adSystem_ads">
+<div class="html"><div style="margin-bottom:0px"></div>
+<div id="___page_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 320px; height: 106px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 320px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 106px;" tabindex="0" vspace="0" width="100%" id="I1_1410039639201" name="I1_1410039639201" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/page.htm" data-gapiattached="true" title="+Badge"></iframe></div>
+<div style="margin-top:8px;">
+<iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/follow_button.1409790579(1).htm" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 310px; height: 28px;"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','twitter-wjs');</script>
+</div>
+<div style="margin-bottom:15px"></div></div>
+<div style="clear:both"></div>
+</div>
+<div style="clear:both;margin-bottom:20px;"></div>
+</div>
+<div style="clear:both;"></div>
+<div id="div-1342-3" style="margin-left:14px;"><script type="text/javascript">googletag.cmd.push(function(){googletag.display('div-1342-3');});</script></div>	</div>
+<div style="clear:both;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="yui-g" id="sb2">
+<div id="sb3">
+<div id="ns_ad8">
+<div id="sb4">
+<!-- tmnp.howtogeek 728x90 BTF -->
+<div id="div-gpt-ad-1342044737928-14">
+<script type="text/javascript">googletag.cmd.push(function(){googletag.display('div-gpt-ad-1342044737928-14');});</script>
+</div>	</div>
+<div style="clear:both;"></div>
+</div>
+</div>
+</div>
+<div class="yui-g" style=""></div>
+</div>
+<div class="footer" id="ft">
+<div style="width:18%;" class="ftdiv">
+<div class="ftsection" style="">ABOUT</div>
+<ul class="bottomul">
+<li><a href="http://www.howtogeek.com/about/" rel="nofollow">About Us</a></li>
+<li><a href="http://www.howtogeek.com/contact/" rel="nofollow">Contact Us</a></li>
+<li><a href="http://purch.com/" rel="nofollow">Advertising</a></li>
+<li><a href="http://www.howtogeek.com/privacy-policy/" rel="nofollow">Privacy Policy</a></li>
+</ul>
+</div>
+<div style="width: 45%;" class="ftdiv">
+<div class="ftsection" style="color:#FF9854">GET ARTICLES BY EMAIL</div>
+<p id="ftemp">Enter your email address to get our daily newsletter.</p>
+<p>
+</p><form action="http://www.howtogeek.com/em/subscribe" method="get">
+<input type="hidden" name="list" value="weekday">
+<input type="hidden" name="tr" value="footer">
+<input type="text" id="fromaddress2" name="emailaddress" style="z-index:-9;left:-1500;top:-1500;height:1px;width:1px;position:absolute;">
+<input type="text" name="email" id="ftemtxt" style="color:#BBB" value="Enter Your Email Here">
+<input type="submit" id="ftemsub" value="Get Articles by Email" style="background:#55A8DF;">
+</form>
+<p></p>
+<div style="clear:both;"></div>
+</div>
+<div style="width:280px;float:left;">
+<div class="ftsection">FOLLOW US</div>
+<ul class="ftsub" style="float: left;">
+<li class="icon-twitter"><a href="https://twitter.com/intent/user?original_referer=http://www.howtogeek.com&region=following&screen_name=howtogeeksite&tw_p=followbutton&variant=2.0">Twitter</a></li>
+<li class="icon-facebook"><a href="http://facebook.com/thehowtogeek" rel="nofollow">Facebook</a></li>
+</ul>
+<ul class="ftsub" style="float: left;margin-left: 20px;">
+<li class="icon-google-plus"><a href="http://plus.google.com/+howtogeek">Google+</a></li>
+<li class="icon-feed"><a href="http://feeds.howtogeek.com/howtogeek">RSS Feed</a></li>
+</ul>
+<div style="clear:both"></div>
+</div>
+<div style="clear:both"></div><br>
+<div class="copyright" style="font-size: 11px;">Copyright © 2006-2014 How-To Geek, LLC&nbsp; All Rights Reserved.</div>
+</div>
+</div>
+<style>
+    #subscribeoverlay { background: url(/public/images/emailoverlay4.jpg) no-repeat;}
+    #emailoverlaylist { color: #222; }
+    #emailoverlayformbutton {background:#6FC6FF}
+    #emailoverlayformbutton:hover {background:#29A7FA}
+    #emfh2 {color:#000;top:100px;}
+  </style>
+<div class="overlay-bg">
+<div id="subscribeoverlay">
+<a href="http://www.howtogeek.com/howto/41560/how-to-get-ssh-command-line-access-to-windows-7-using-cygwin/#" id="ovclose"></a>
+<h2 id="emfh2"></h2>
+<div id="emftag"></div>
+<ul id="emailoverlaylist">
+<li>Get exclusive articles before everybody else.</li>
+<li>Get downloadable ebooks for free!</li>
+<li>Get geeky trivia, fun facts, and much more.</li>
+</ul>
+<form id="emailoverlayform" method="GET" action="http://www.howtogeek.com/em/subscribe">
+<p>
+<input type="hidden" name="list" value="weekday">
+<input type="hidden" name="tr" value="overlay1">
+</p><p id="emoflbl" style="
+            position: absolute;
+            left: 20px;
+            top: 240px;font-weight:bold;font-size:120%;
+            color: #000;
+        ">Enter Your Email Here to Get Access for Free:</p>
+<input type="text" style="color:#BBB;" id="overlayfrom" name="email" value="Enter Your Email Here">
+<input id="emailoverlayformbutton" type="submit" value="Get Free Content Now" style="">
+<p></p>
+</form>
+<div id="overlayformsuccess">Go check your email!</div>
+<img id="overlayimage" style="position:absolute;left:-9000px;top:-9000px;" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/xemailoverlay4.jpg.pagespeed.ic.14e3DPorCV.webp" pagespeed_url_hash="998281452" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</div>
+</div>
+<!-- Begin comScore Tag -->
+<script>var csDocDomain=document.location.href;document.write(unescape("%3Cscript src='"+(document.location.protocol=="https:"?"https://sb":"http://b")+".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));</script><script src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/beacon.js"></script>
+<script>COMSCORE.beacon({c1:2,c2:"6035753",c3:"6035753",c4:csDocDomain,c5:"Technology - News",c6:"",c15:""});</script>
+<noscript>
+&lt;img src="http://b.scorecardresearch.com/b?c1=2&amp;c2=6035753&amp;c3=6035753&amp;c4=http://www.howtogeek.com&amp;c5=Technology - News&amp;c6=&amp;c15=&amp;cv=1.3&amp;cj=1" style="display:none" width="0" height="0" alt="" pagespeed_url_hash="4059409117"/&gt;
+</noscript>
+<!-- End comScore Tag -->
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-1113647-1','howtogeek.com');ga('send','pageview');</script>
+<!-- tmnp.howtogeek 1x1 ATF -->
+<div id="div-gpt-ad-1342044737928-5">
+<script type="text/javascript">googletag.cmd.push(function(){googletag.display('div-gpt-ad-1342044737928-5');});</script>
+</div>
+<!-- Quantcast Tag -->
+<script type="text/javascript">var _qevents=_qevents||[];(function(){var elem=document.createElement('script');elem.src=(document.location.protocol=="https:"?"https://secure":"http://edge")+".quantserve.com/quant.js";elem.async=true;elem.type="text/javascript";var scpt=document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem,scpt);})();_qevents.push({qacct:"p-e1gWzoEHleH1I"});</script>
+<noscript>
+&lt;div style="display:none;"&gt;
+&lt;img src="//pixel.quantserve.com/pixel/p-e1gWzoEHleH1I.gif" height="1" width="1" alt="Quantcast" pagespeed_url_hash="2976081341"/&gt;
+&lt;/div&gt;
+</noscript>
+<!-- End Quantcast tag -->
+<iframe name="__bkframe" height="0" width="0" frameborder="0" src="javascript:'<html><head></head><body></body></html>'" style="display: none;"></iframe>
+<script type="text/javascript" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/bk-coretag.js"></script>
+<script type="text/javascript">bk_doJSTag(19483,4);</script>
+
+<iframe name="oauth2relay833293609" id="oauth2relay833293609" src="./How To Get SSH Command-Line Access to Windows 7 Using Cygwin_files/postmessageRelay.htm" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><div id="tbl-aug-lpqnmu" class="trc_popover_aug_container"><div id="tbl-aug-kcwne0" class="trc_popover_aug_container"><div id="tbl-aug-qhzwzh" class="trc_popover_aug_container"><div class=" trc_popover trc_popover_fade trc_bottom "><div class=" trc_popover_arrow "></div><iframe frameborder="0" scrolling="no" src="javascript:void(0)" style="width: 100%;"></iframe></div></div></div></div></body></html>
