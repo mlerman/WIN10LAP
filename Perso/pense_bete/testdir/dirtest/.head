@@ -1,0 +1,87 @@
+Faire en sortre que quand je met "quelque chose etre quote" il faut que quand je mouseover dessus
+il y ai le pictogram copyclip <img src="/doc/images/copyclip.png"> et que je puisse copier
+d'un clique ce contenu dans le clipboard
+<hr/>
+Dans create project container
+si rien n'existe,copier les fichiers du projet 
+et pas seulement creer le container
+<hr/>
+faire la meme chose que create container mais pour d'autres disk ou disk network
+<hr/>
+file picker dans linux
+<hr/>
+Quand une page double s'ouvre la duplicate ne ferme pas (toujours) dans Linux
+<hr/>
+choisir les nom de projet pouvant etre des milestone
+all_tax_finished_2015
+<hr/>
+utiliser pense bete comme debut de projet et debut de graph
+avec des sous repertoir de pense bete
+<hr/>
+perma replace spaces in file names with underscore in current directory
+<hr/>
+Mettre des shortcut dans notepad++
+comme des tag HR IMG etc
+ce que je type le plus souvent
+en macro?
+<hr/>
+faire section permanent projects comme Jyra et pense bete
+<hr/>
+memory usage and attribut
+RW normal
+RW volatile
+   Read Write but the memory is volatile and can be written by another agent
+   a mechanisme of locking need to be done
+remote
+   Latency not guaranteed
+   there is a transport cost
+local
+   Guaranteed latency, finite time.
+   no transport cost
+RO
+   Can be used only for read
+   this is the cheapest memory
+WO
+   Write only, like a password field
+
+   
+   
+<hr/>
+le bug du nom de la page different du nom du projet
+est peut etre du au restore de google chrome
+eventuellement faire un fix automatique
+Aussi quand c'est cree avec new <mark>done</mark>
+<hr/>
+pour le favicon issue avec chrome
+creer un projet
+essayer simple example
+puis de plus en plus jusqu'a open-command-prompt-here.html
+<hr/>
+code qui peut etre translate en plusieur instruction sets
+ex to arm
+ex to x86
+mais un core commun native netmory
+translation a deux sens
+native netmory to x86
+arm64 to native netmory
+etc
+doit pouvoir se faire en run time sans perte de cycles 
+<hr/>
+utiliser un local email server comme hmailserver avec google relay
+mais ca ne va pas marcher a cause du port
+en tout cas utiliser un email qui peut etre traiter automatiquement par un program 
+dans l'environement.
+<hr/>
+creer .brief
+une description breve du projet
+doit apparetre en tooltip sur le nom du projet dans le tag H1
+<hr/> 
+mettre qqchose dans .ckpfunc (le checkbox de experimental)
+par example verdict : cannot start server :(
+doit apparaitre en tooltip sur Experimental
+<hr/> 
+aller automatiquement sur le projet dans new.bat
+ca ne marche pas car c'est un process headless sans window associe
+<hr/> 
+
+  

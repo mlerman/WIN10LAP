@@ -1,0 +1,34 @@
+dir : C:/UniServer/www/doc/files/Perso/pense_bete
+urldir : /doc/files/Perso/pense_bete/
+proj_dir : C:/UniServer/www/doc/files/Perso/pense_bete
+dir : C:/UniServer/www/doc/files/Perso/pense_bete
+urldir : /doc/files/Perso/pense_bete/
+proj_dir : C:/UniServer/www/doc/files/Perso/pense_bete
+autoexec.bat exist
+dir : C:/UniServer/www/doc/files/Perso/pense_bete
+urldir : /doc/files/Perso/pense_bete/
+proj_dir : C:/UniServer/www/doc/files/Perso/pense_bete
+autoexec.bat exist
+dir : C:/UniServer/www/doc/files/Perso/pense_bete
+urldir : /doc/files/Perso/pense_bete/
+proj_dir : C:/UniServer/www/doc/files/Perso/pense_bete
+autoexec.bat exist
+dir : C:/UniServer/www/doc/files/Perso/pense_bete
+urldir : /doc/files/Perso/pense_bete/
+proj_dir : C:/UniServer/www/doc/files/Perso/pense_bete
+autoexec.bat exist
+dir : C:/UniServer/www/doc/files/Perso/pense_bete
+urldir : /doc/files/Perso/pense_bete/
+proj_dir : C:/UniServer/www/doc/files/Perso/pense_bete
+autoexec.bat exist
+current dir C:\UniServer\www\common
+dir : C:/UniServer/www/doc/files/Perso/pense_bete
+urldir : /doc/files/Perso/pense_bete/
+proj_dir : C:/UniServer/www/doc/files/Perso/pense_bete
+autoexec.bat exist
+current dir C:\UniServer\www\common
+dir : C:/UniServer/www/doc/files/Perso/pense_bete
+urldir : /doc/files/Perso/pense_bete/
+proj_dir : C:/UniServer/www/doc/files/Perso/pense_bete
+autoexec.bat exist
+current dir C:\UniServer\www\common

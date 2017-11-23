@@ -1,0 +1,249 @@
+
+<hr/>
+est ce qu'il y a un lien entre les sentiment et la volatilite de la memoire
+je constate que l'odinateur n'a pas de memoire volatile au sens humain
+ce qui explique son absence de sentiment
+on peut etudier de facon suivante
+mesurer la volatilite chez l'humain
+mesurer les sentiment chez l'humain
+voir s'il y a une correlation
+les sentiments peuvent etre positives = amour ou negatives = haine
+Est ce qu'on peux creer une intelligence artificielle avec une memoire 
+partiellement volatile pour simuler ces sentiments?
+<hr/>
+ouvrir minimenu non pas avec powershell mais avec javascript
+comme ca camarche aussi avec linux
+<hr/>
+Ecrire un article sur Netmory dans wikipedia
+avec images
+<hr/>
+chercher patent opportunity submition
+<hr/>
+$0 (zero dollar) plus 1% royalty for a non-exclusive, non-transferable license for small businesses 
+See c:\UniServer\www\doc\files\Perso\NETMORY\introduction\Size_Standards_Table.pdf
+for small business classification
+Subsector 334 – Computer and Electronic Product Manufacturing
+<hr/>
+a explorer https://www.patentauction.com/
+<hr/>
+rajouter go to upper project
+<hr/>
+qd je click sur netmory/status il doit automatiquement copier l'application number dans le clipboard
+<hr/>
+Approcher les journalist, aussi microprocessor report.
+<hr/>
+business development linkedIn large corp
+<hr/>
+preparer different types de contrats
+- un pour encourager le development de prototypes
+- un pour build et productions de devices/computers
+- un pour service trade memory
+<hr/>
+pour les sections de frequent copy paste
+mettre en tete la section la plus frequente en haut.
+example C++
+<hr/>
+faire une frame petite discrete et always on top avec des petits link comme
+frequent copy paste
+most recent project
+total commander
+elfinder
+<hr/>
+use 2 panels in notepad++ to compare and edit files
+<hr/>
+faire un script qui test tous les proxy pour une url
+pour voir s'il n ya pas une proxy a micron plus indulgent que d'autres
+<hr/>
+faire un batch qui kill tous les process inutil
+<hr/>
+copier un objet qui contient du scrolling et pouvoir le paster
+dans une page web ou un email avec html
+chercher scrolling text with css
+<hr/>
+dans main.c qd je clicque sur short url 
+il n'ouvre pas la sub window
+pareil pour sf_secure.c
+<hr/>
+separer put et next
+faire next rapide <img src="/doc/images/Arrownext48.png"> avec picker
+utiliser le most recent <img src="/doc/images/recent16.png"/>
+<hr/>
+dans sf_secure.c Linux
+voir date destination et date fichier source
+si le fichier destination est plus recent alert
+si le fichier destination est plus ancien, overwrite sans alert
+pour eviter l'erreur d'oublier de copier le fichier avec put
+<hr/>
+voire comment faire une pause dans uboot
+afin de faire reset apres dans zedboard_flash_spi_with_uboot
+<hr/>
+Explorer ffmpeg
+<hr/>
+Mettre le batch de xilinx_design_tool pour le drive extern
+dans les common files avec icon dvd <img src="/doc/images/dvd.png"/>
+<hr/>
+aussi enregistrer dans local dans alldrives.txt
+uniformiser la facon de detecter les disks
+externes et internes
+info dans le nom de fichier sans l'ouvrir
+avec extension .Iam sous \
+ex:
+On snapdragon bench:
+External_Drive_USB_2T_EXT4_Snapdragon_Android_Source_code_ID_00.Iam
+SD card on Zedboard:
+External_Card_SD_32G_FAT_Zedboard_Boot_image_Linux_ID_00.Iam
+backup flash drive on zedboard:
+External_Flash_USB_32G_FAT_Backup_Zedboard_Projects_ID_00.Iam
+
+drive backup at home
+External_Drive_USB_1T_NTFS_Backup_win7-pc_ID_00.Iam (done)
+drive backup at work
+External_Drive_USB_1T_NTFS_Backup_win7-pc_ID_01.Iam (done)
+batch to check the presence of necessary external disk
+<hr/>
+VLC cursor distortion
+re-installer
+re tester au boulot avec plusieurs ecran. au boulot c'est OK
+<hr/>
+get_cd_directory ne marche pas avec certain destination 
+en locurence quand il y a des parentheses
+comme Program Files (x86)
+<hr/>
+Statistic sur quel icon image je clique le plus.
+<hr/>
+Comme connections faire scan_comm_connections
+<hr/>
+publier faire dictionnaire du language des icons
+<hr/>
+mettre les webconsole dans des sous fenetres separee
+<hr/>
+quand un fichier bat est cree dynamiquement, ex get_dir.bat
+creer aussi l'equivalent pour linux example get_dir.sh
+avec le path corespondant.
+<hr/>
+faire refactor_rename
+just modifie le nom du projet en le laissant au meme endroit.
+util par example quand 2 projets on le meme nom example Makefile
+doit ajuster les links de ceux qui pointent sur ce projet. example 
+les .next des autres projets qui pointent sur ce projet
+ainsi que les .related
+<hr/>
+Augmenter la taille du canevas et des arc dans le graph
+<hr/>
+dans embed ouvrir le fichier get_feu.bat avec notepad++
+<hr/>
+use kitty in place of putty everywhere
+Probleme kitty ne marche pas bien avec les url.
+<hr/>
+Use url in kitty
+<hr/>
+Il faut pouvoir executer un fichier .rn ou .run meme si l'environement
+n'est pas installer. 
+pour .rn tester ne pas essayer de monter le shared drive si ce n'est pas possible
+example tester l'existence d'un fichier local ex winp.txt
+<hr/>
+Avec embed faire url picker comme file chooser
+<hr/>
+faire preprocessor avant de comparer du code
+pour faire une comparaison syntaxique
+example enlever les commentaires
+transformer les tabs
+<hr/>
+faire un icon pour run_install et ne pas le copier
+automatiquement, faire comme cd ou showpdf
+<hr/>
+s'il le input field n'est pas vide, les commandes
+ui_notepad.run, ui_word.run, ui_powerpoint.run, ui_paint.run
+prenne ce nom
+<hr/>
+Example d'alert:
+virtual machine is not running, start it now? Yes Cancel
+<hr/>
+faire saveFileToServer avec la differance avec getFileFromServer
+c'est pas attendre la reponse comme posted write.
+tester en loop
+<hr/>
+essayer getFileFromServer en loop
+faire loop pour creer une dizaine de fichiers en test
+<hr>
+Faire fleche haut pour aller au projet au dessus dans l'arborecense
+<hr>
+Dans l'instant edit, conserver la date/time du document
+pour prevenir un overwrite accidentel.
+<hr>
+everything utilise bcp de memoire
+<hr>
+faire des icons copy to clipboard pour les path des fichier edit et les link html
+<hr>
+pour le bug qd .head est trop large
+eventuellement diviser en page quand ca deviend trop gros
+.head0, .head1, .head2 etc
+avec fleches pour passer de l'un a l'autre
+<hr>
+faire que dans adjust_target(); on ferme la fenetre
+ne marche pss avec chromium sous linux
+aussi dans windows ca ne marche pas toujours
+en particulier apres que chrome restart
+je crois que qd ca marche pas c'est que ca n'a pas fini de loader : faux
+pour tester fermer chrome et re-ouvrir
+<hr>
+faire une table pour que .head ne revienne pas a la ligne
+<hr>
+retour d'eau dans le chauffe eau pour ne pas perdre l'eau durant le chaufage de l'eau.
+avec conduit supplementaire
+<hr>
+guidon de voiture dont l'inertie est proportionelle a la vitesse de la voiture
+<hr>
+close other tabs ne marche pas toujours avec linux
+afficher aussi le title dans debug
+<hr>
+faire projet pre-check example 
+pre_check_android_environment
+faire un program
+<img src="a6.gif">windows shared folder with linux ... OK
+<img src="a6.gif">external USB drive ... OK
+<img src="b6.gif"> Time is too old 
+etc avec des checkbox en couleur
+<hr>
+faire command line get_string_from_web_public
+example 
+get_string_from_web_public netmory_status
+peut utiliser phatomejs et casperjs
+<hr>
+Faire en sortre que quand je met "quelque chose etre quote" 
+il faut que quand je mouseover dessus
+il y ai le pictogram copyclip <img src="/doc/images/copyclip.png"> 
+et que je puisse copier
+d'un clique ce contenu dans le clipboard
+<hr>
+faire la meme chose que create container mais pour d'autres disk ou disk network
+<hr>
+TODO: Quand une page double s'ouvre la duplicate ne ferme pas (toujours) dans Linux
+<hr>
+memory usage and attribut 
+faire livre sur tous les types imaginabbles cacheable, write once 
+RW normal
+RW volatile
+   Read Write but the memory is volatile and can be written by another agent
+   a mechanisme of locking need to be done
+remote
+   Latency not guaranteed
+   there is a transport cost
+local
+   Guaranteed latency, finite time.
+   no transport cost
+RO
+   Can be used only for read
+   this is the cheapest memory
+WO
+   Write only, like a password field   
+<hr>
+le bug du nom de la page different du nom du projet
+est peut etre du au restore de google chrome
+eventuellement faire un fix automatique
+Aussi quand c'est cree avec new done
+<hr>
+pour le favicon issue avec chrome
+creer un projet
+essayer simple example
+puis de plus en plus jusqu'a open-command-prompt-here.html
