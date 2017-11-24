@@ -5,18 +5,20 @@
 #read -s pass
 #sudo mount -t cifs -o username=mlerman,password=$pass,uid=mlerman,gid=users //mlerman-lap/files /home/user/files
 
-# was //mlerman-lap now //laptop-7kqrmtc0 # was past33Z. now 2232 # was //laptop-7kqrmtc0 //172.20.4.131
 
 if [ "$HOSTNAME" = xsjmikhaell50 ]; then
     printf 'This computer is %s\n' "xsjmikhaell50 "
-	sudo mount -t cifs -o username=mikhaell,password="miky est stupide past33X.",uid=mikhaell,gid=users //$IHOST/files /home/user/files
+    pw=$(wget http://win7-pc/local/7E830EC1-48A3-463f-8674-ADFB57734FFB -q -O - )
+    sudo mount -t cifs -o username=mikhaell,password="$pw",uid=mikhaell,gid=users //$IHOST/files /home/user/files
 elif [ "$HOSTNAME" = mlerman-vm-mint ]; then
     printf 'This computer is %s\n' "mlerman-vm-mint "
-	sudo mount.cifs -o username=mikhaell,password="miky est stupide past33X.",uid=mlerman,gid=users //$IHOST.xlnx.xilinx.com/files /home/user/files
-	#sudo mount -t cifs -o username=mlerman,password=2232,uid=mlerman,gid=users //$IHOST/files /home/user/files
+    pw=$(wget http://win7-pc/local/7E830EC1-48A3-463f-8674-ADFB57734FFB -q -O - )
+    sudo mount.cifs -o username=mikhaell,password="$pw",uid=mlerman,gid=users //$IHOST.xlnx.xilinx.com/files /home/user/files
+    #sudo mount -t cifs -o username=mlerman,password="$pw",uid=mlerman,gid=users //$IHOST/files /home/user/files
 elif [ "$HOSTNAME" = mint18 ]; then
     printf 'This computer is %s\n' "mint18 "
-	sudo mount -t cifs -o username=mlerman,password=2232,uid=mlerman,gid=users //$IHOST/files /home/user/files
+    pw=$(wget http://win7-pc/local/1521A845-A144-442e-BA7B-42E7D69B19AE -q -O - )
+    sudo mount -t cifs -o username=mlerman,password="$pw",uid=mlerman,gid=users //$IHOST/files /home/user/files
 fi
 
 
