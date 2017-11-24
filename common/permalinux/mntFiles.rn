@@ -14,8 +14,8 @@ elif [ "$HOSTNAME" = mlerman-vm-mint ]; then
     printf 'This computer is %s\n' "mlerman-vm-mint "
 	sudo mount.cifs -o username=mikhaell,password="miky est stupide past33X.",uid=mlerman,gid=users //$IHOST.xlnx.xilinx.com/files /home/user/files
 	#sudo mount -t cifs -o username=mlerman,password=2232,uid=mlerman,gid=users //$IHOST/files /home/user/files
-elif [ "$HOSTNAME" = vm-mint18 ]; then
-    printf 'This computer is %s\n' "vm-mint18 "
+elif [ "$HOSTNAME" = mint18 ]; then
+    printf 'This computer is %s\n' "mint18 "
 	sudo mount -t cifs -o username=mlerman,password=2232,uid=mlerman,gid=users //$IHOST/files /home/user/files
 fi
 
