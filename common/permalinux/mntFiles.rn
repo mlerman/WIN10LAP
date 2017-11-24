@@ -13,6 +13,7 @@ do
 		echo "mounted"
 		break
 	else
+                # faire ici une seul clause qui marche pour tous comme dans downloadfile.php
                 if [ "$HOSTNAME" = xsjmikhaell50 ]; then
                     printf 'This computer is %s\n' "xsjmikhaell50 "
                     pw=$(wget http://xsjmikhaell30/local/7E830EC1-48A3-463f-8674-ADFB57734FFB -q -O - )
