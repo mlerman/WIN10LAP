@@ -8,11 +8,11 @@
 
 if [ "$HOSTNAME" = xsjmikhaell50 ]; then
     printf 'This computer is %s\n' "xsjmikhaell50 "
-    pw=$(wget http://win7-pc/local/7E830EC1-48A3-463f-8674-ADFB57734FFB -q -O - )
+    pw=$(wget http://xsjmikhaell30/local/7E830EC1-48A3-463f-8674-ADFB57734FFB -q -O - )
     sudo mount -t cifs -o username=mikhaell,password="$pw",uid=mikhaell,gid=users //$IHOST/files /home/user/files
 elif [ "$HOSTNAME" = mlerman-vm-mint ]; then
     printf 'This computer is %s\n' "mlerman-vm-mint "
-    pw=$(wget http://win7-pc/local/7E830EC1-48A3-463f-8674-ADFB57734FFB -q -O - )
+    pw=$(wget http://laptop-7kqrmtc0/local/7E830EC1-48A3-463f-8674-ADFB57734FFB -q -O - )
     sudo mount.cifs -o username=mikhaell,password="$pw",uid=mlerman,gid=users //$IHOST.xlnx.xilinx.com/files /home/user/files
     #sudo mount -t cifs -o username=mlerman,password="$pw",uid=mlerman,gid=users //$IHOST/files /home/user/files
 elif [ "$HOSTNAME" = mint18 ]; then
