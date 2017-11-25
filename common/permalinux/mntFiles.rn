@@ -1,11 +1,6 @@
 [ -f /home/user/files/Engineering/ENVIRONMENT/WINDOWS_BATCH/cloneThisUniserver/favicon.ico ] && echo "Already mounted" && notify-send "The shared folder 'files' is already mounted" && exit || echo "To be mounted"
 [ -d /home/user/files ] && echo 'Directory found' || sudo mkdir -p /home/user/files
 
-#echo "Enter Windows password"
-#read -s pass
-#sudo mount -t cifs -o username=mlerman,password=$pass,uid=mlerman,gid=users //mlerman-lap/files /home/user/files
-
-
 while true;
 do
 	if mount | grep /home/user/files > /dev/null;
