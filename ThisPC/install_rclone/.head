@@ -1,1 +1,95 @@
+C:\UniServer\www\doc\files\ThisPC\install_rclone (master)
+λ rclone config
+2017/11/25 17:04:32 NOTICE: Config file "C:\\Users\\win7\\.config\\rclone\\rclone.conf" not found - using defaults
+No remotes found - make a new one
+n) New remote
+s) Set configuration password
+q) Quit config
+n/s/q> n
+name> remote
+Type of storage to configure.
+Choose a number from below, or type in your own value
+ 1 / Amazon Drive
+   \ "amazon cloud drive"
+ 2 / Amazon S3 (also Dreamhost, Ceph, Minio)
+   \ "s3"
+ 3 / Backblaze B2
+   \ "b2"
+ 4 / Box
+   \ "box"
+ 5 / Dropbox
+   \ "dropbox"
+ 6 / Encrypt/Decrypt a remote
+   \ "crypt"
+ 7 / FTP Connection
+   \ "ftp"
+ 8 / Google Cloud Storage (this is not Google Drive)
+   \ "google cloud storage"
+ 9 / Google Drive
+   \ "drive"
+10 / Hubic
+   \ "hubic"
+11 / Local Disk
+   \ "local"
+12 / Microsoft Azure Blob Storage
+   \ "azureblob"
+13 / Microsoft OneDrive
+   \ "onedrive"
+14 / Openstack Swift (Rackspace Cloud Files, Memset Memstore, OVH)
+   \ "swift"
+15 / QingClound Object Storage
+   \ "qingstor"
+16 / SSH/SFTP Connection
+   \ "sftp"
+17 / Yandex Disk
+   \ "yandex"
+18 / http Connection
+   \ "http"
+Storage> 9
+Google Application Client Id - leave blank normally.
+client_id>
+Google Application Client Secret - leave blank normally.
+client_secret>
+Remote config
+Use auto config?
+ * Say Y if not sure
+ * Say N if you are working on a remote or headless machine or Y didn't work
+y) Yes
+n) No
+y/n> n
+If your browser doesn't open automatically go to the following link: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=202264815644.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&state=43b0988098e69b3ad0baf1e82d7f3eb0
+Log in and authorize rclone for access
+Enter verification code> ***
+Configure this as a team drive?
+y) Yes
+n) No
+y/n> y
+Fetching team drive list...
+No team drives found in your account--------------------
+[remote]
+client_id =
+client_secret =
+token = {"access_token":"***","token_type":"Bearer","refresh_token":"***","expiry":"2017-11-25T18:08:50.385984-08:00"}
+team_drive =
+--------------------
+y) Yes this is OK
+e) Edit this remote
+d) Delete this remote
+y/e/d> y
+Current remotes:
+
+Name                 Type
+====                 ====
+remote               drive
+
+e) Edit existing remote
+n) New remote
+d) Delete remote
+r) Rename remote
+c) Copy remote
+s) Set configuration password
+q) Quit config
+e/n/d/r/c/s/q> q'
+e/n/d/r/c/s/q> q
+<hr/>
 pour les besoins de cette commande j'ai cree un compte google rclone.repo@gmail.com le pass c'est compPI

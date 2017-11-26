@@ -1,0 +1,2 @@
+rclone copy . remote:ThisPC/install_rclone
+pause
