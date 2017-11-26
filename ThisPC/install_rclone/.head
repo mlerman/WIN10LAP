@@ -1,6 +1,6 @@
-C:\UniServer\www\doc\files\ThisPC\install_rclone (master)
+C:UniServerwwwdocfilesThisPCinstall_rclone (master)
 λ rclone config
-2017/11/25 17:04:32 NOTICE: Config file "C:\\Users\\win7\\.config\\rclone\\rclone.conf" not found - using defaults
+2017/11/25 17:04:32 NOTICE: Config file "C:\Users\win7\.config\rclone\rclone.conf" not found - using defaults
 No remotes found - make a new one
 n) New remote
 s) Set configuration password
@@ -10,41 +10,41 @@ name> remote
 Type of storage to configure.
 Choose a number from below, or type in your own value
  1 / Amazon Drive
-   \ "amazon cloud drive"
+    "amazon cloud drive"
  2 / Amazon S3 (also Dreamhost, Ceph, Minio)
-   \ "s3"
+    "s3"
  3 / Backblaze B2
-   \ "b2"
+    "b2"
  4 / Box
-   \ "box"
+    "box"
  5 / Dropbox
-   \ "dropbox"
+    "dropbox"
  6 / Encrypt/Decrypt a remote
-   \ "crypt"
+    "crypt"
  7 / FTP Connection
-   \ "ftp"
+    "ftp"
  8 / Google Cloud Storage (this is not Google Drive)
-   \ "google cloud storage"
+    "google cloud storage"
  9 / Google Drive
-   \ "drive"
+    "drive"
 10 / Hubic
-   \ "hubic"
+    "hubic"
 11 / Local Disk
-   \ "local"
+    "local"
 12 / Microsoft Azure Blob Storage
-   \ "azureblob"
+    "azureblob"
 13 / Microsoft OneDrive
-   \ "onedrive"
+    "onedrive"
 14 / Openstack Swift (Rackspace Cloud Files, Memset Memstore, OVH)
-   \ "swift"
+    "swift"
 15 / QingClound Object Storage
-   \ "qingstor"
+    "qingstor"
 16 / SSH/SFTP Connection
-   \ "sftp"
+    "sftp"
 17 / Yandex Disk
-   \ "yandex"
+    "yandex"
 18 / http Connection
-   \ "http"
+    "http"
 Storage> 9
 Google Application Client Id - leave blank normally.
 client_id>
@@ -57,7 +57,11 @@ Use auto config?
 y) Yes
 n) No
 y/n> n
-If your browser doesn't open automatically go to the following link: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=202264815644.apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&state=43b0988098e69b3ad0baf1e82d7f3eb0
+If your browser doesn't open automatically go to the following link: 
+https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=202264815644.
+apps.googleusercontent.com&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=
+code&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&
+state=43b0988098e69b3ad0baf1e82d7f3eb0
 Log in and authorize rclone for access
 Enter verification code> ***
 Configure this as a team drive?
@@ -91,5 +95,5 @@ s) Set configuration password
 q) Quit config
 e/n/d/r/c/s/q> q'
 e/n/d/r/c/s/q> q
-<hr/>
+<hr>
 pour les besoins de cette commande j'ai cree un compte google rclone.repo@gmail.com le pass c'est compPI
