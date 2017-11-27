@@ -1,0 +1,4 @@
+export DISPLAY=dummy
+echo DISPLAY set to $DISPLAY 
+/cygdrive/c/Xilinx/SDK/2017.2/bin/xsct
+read -p "Press [Enter] key to continue..."
