@@ -1,0 +1,12 @@
+sleep 5 
+dir 
+call ui_test.bat 
+ 
+ 
+ 
+ 
+time 
+ 
+echo "cette ligne a etait rajoutee apres le lancement de la commande"
+echo "ce qui prouve que cela peut se faire avec ajax"
+exit

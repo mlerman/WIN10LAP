@@ -1,0 +1,61 @@
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>sleep 5 
+
+C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>dir 
+ Volume in drive C is Windows
+ Volume Serial Number is 8E54-73FD
+
+ Directory of C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell
+
+11/26/2017  07:35 PM    <DIR>          .
+11/26/2017  07:35 PM    <DIR>          ..
+11/22/2017  01:17 PM               705 .head
+11/12/2017  11:53 AM               471 .htaccess
+11/26/2017  06:40 PM             6,769 .links
+11/21/2017  10:00 PM               707 .recentedit
+11/21/2017  10:00 PM               353 .related
+11/21/2017  10:04 PM                73 .time
+11/26/2017  07:38 PM               133 favicon.bmp
+04/16/2016  11:59 AM               822 favicon.ico
+11/26/2017  07:48 PM                35 input.txt
+04/16/2016  10:27 AM             1,663 open-command-prompt-here.html
+11/26/2017  07:48 PM               183 output
+11/21/2017  10:00 PM               363 README.md
+11/21/2017  10:00 PM            57,416 scr1.png
+11/22/2017  01:17 PM            68,264 scr2.png
+11/21/2017  10:00 PM            21,869 shell.php
+11/26/2017  07:48 PM               532 tst.bat
+11/22/2017  01:17 PM                64 ui_test.bat
+11/22/2017  01:17 PM                 0 ui_test.run
+              18 File(s)        160,422 bytes
+               2 Dir(s)  25,743,355,904 bytes free
+
+C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>call ui_test.bat 
+
+C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>echo 1 
+1
+
+C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>pause
+Press any key to continue . . . 
+
+C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>echo 2 
+2
+
+C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>pause
+Press any key to continue . . . 
+
+C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>echo 3 
+3
+
+C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>pause
+Press any key to continue . . . 
+
+C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>echo final 
+final
+
+C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>pause
+Press any key to continue . . . 
+
+C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>
