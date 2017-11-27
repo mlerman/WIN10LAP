@@ -3,7 +3,7 @@
 if( ! defined( '_JEXEC' ) && ! defined( '_VALID_MOS' ) )
 	die( 'Restricted access' ) ;
 /**
- * @version $Id: extract.php 249 2016-12-11 16:11:03Z soeren $
+ * @version $Id: extract.php 242 2015-08-19 06:29:26Z soeren $
  * @package eXtplorer
  * @copyright soeren 2007-2015
  * @author The eXtplorer project (http://extplorer.net)
@@ -39,10 +39,7 @@ if( ! defined( '_JEXEC' ) && ! defined( '_VALID_MOS' ) )
 class ext_Extract extends ext_Action {
 
 	function execAction( $dir, $item ) {
-
-        if(($GLOBALS["permissions"]&01)!=01) {
-            ext_Result::sendResult('archive', false, ext_Lang::err('accessfunc'));
-        }
+		
 		if( ! ext_isArchive( $item ) ) {
 			ext_Result::sendResult( 'archive', false, $item.': '.ext_Lang::err( 'extract_noarchive' ) ) ;
 		} else {

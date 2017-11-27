@@ -41,6 +41,7 @@ if( stristr( $_SERVER['SCRIPT_NAME'], 'com_extplorer') || stristr( $_SERVER['SCR
 define( '_VALID_MOS', 1 );
 define( '_VALID_EXT', 1 );
 
+
 require_once( dirname(__FILE__).'/libraries/standalone.php');
 ob_start();
 include( dirname(__FILE__).'/admin.extplorer.php' );
@@ -55,6 +56,11 @@ header( 'Cache-Control: post-check=0, pre-check=0', false );
 header( 'Pragma: no-cache' );
 
 echo '<?xml version="1.0" encoding="'. $GLOBALS["charset"].'">';
+//ml: let's save it here
+$_SESSION['global_forced_home_dir']=$_GET['homedir'];
+//file_put_contents("debug.txt","global_forced_home_dir : ".$_SESSION['global_forced_home_dir']."\n", FILE_APPEND);
+ 
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

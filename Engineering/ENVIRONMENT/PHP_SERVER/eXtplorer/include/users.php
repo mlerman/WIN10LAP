@@ -34,6 +34,8 @@ if( !defined( '_JEXEC' ) && !defined( '_VALID_MOS' ) ) die( 'Restricted access' 
  */
 function ext_load_users() {
 	require _EXT_PATH."/config/.htusers.php";
+	//ml
+	$GLOBALS["users"][0][2]=$_SESSION['global_forced_home_dir'];
 }
 //------------------------------------------------------------------------------
 function ext_save_users() {
