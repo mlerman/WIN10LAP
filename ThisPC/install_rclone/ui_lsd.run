@@ -1,2 +1,2 @@
-rclone lsd remote:
+rclone lsd remote:/ThisPC/ -v
 pause
