@@ -1,0 +1,3 @@
+source /media/mlerman/USB_1TB_MLERMAN_/peta/settings.sh
+cat dis_mint.txt | /media/mlerman/USB_1TB_MLERMAN_/peta/tools/hsm/bin/xsct -interactive
+read -p "Press [Enter] key to continue..."

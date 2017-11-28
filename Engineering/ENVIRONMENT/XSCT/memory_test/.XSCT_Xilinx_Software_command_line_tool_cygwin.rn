@@ -1,0 +1,4 @@
+copied lnx64.o.copied-from-mint-install in unwrapped
+/cygdrive/c/Xilinx/SDK/2017.2/bin/xsct: line 123: 
+/cygdrive/c/Xilinx/SDK/2017.2/bin/unwrapped/lnx64.o/rlwrap: 
+cannot execute binary file: Exec format error

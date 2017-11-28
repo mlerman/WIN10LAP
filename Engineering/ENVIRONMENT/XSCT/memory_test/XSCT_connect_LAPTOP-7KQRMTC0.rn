@@ -1,0 +1,4 @@
+source /media/mlerman/USB_1TB_MLERMAN_/peta/settings.sh
+#cat connect_laptop.txt | /media/mlerman/USB_1TB_MLERMAN_/peta/tools/hsm/bin/xsct -interactive
+/media/mlerman/USB_1TB_MLERMAN_/peta/tools/hsm/bin/xsct -interactive -e 'connect -host LAPTOP-7KQRMTC0 -port 3121; targets -set -nocase -filter {name =~ "Cortex-A53*#0"}; puts "should be connected to LAPTOP-7KQRMTC0 hardware server, on target Cortex-A53, try ta"; puts "done"' 
+read -p "Press [Enter] key to continue..."

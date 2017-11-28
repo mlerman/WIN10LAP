@@ -1,0 +1,24 @@
+ls
+./nxt.rn 
+./nxt.rn 
+./nxt.rn 
+./nxt.rn 
+./nxt.rn 
+ls
+./XSCT_Xilinx_Software_command_line_tool.rn 
+pwd
+ls
+./nxt.rn 
+/cygdrive/c/Xilinx/SDK/2017.2/settings64.sh 
+./nxt.rn 
+./nxt.rn 
+./nxt.rn 
+./nxt.rn 
+./nxt.rn 
+./nxt.rn 
+ls
+ls *.rn
+./XSCT_Xilinx_Software_command_line_tool.rn 
+./XSCT_Xilinx_Software_command_line_tool.rn 
+ls
+pwd
