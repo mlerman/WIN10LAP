@@ -1,0 +1,4 @@
+source /media/mlerman/USB_1TB_MLERMAN_/peta/settings.sh
+#source /media/mlerman/USB_1TB_MLERMAN_/Xilinx/Vivado/2017.3/settings64.sh
+/media/mlerman/USB_1TB_MLERMAN_/peta/tools/hsm/bin/xsct
+read -p "Press [Enter] key to continue..."

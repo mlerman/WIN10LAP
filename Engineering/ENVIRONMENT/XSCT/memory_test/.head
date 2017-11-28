@@ -1,10 +1,25 @@
-<img src="scr8.png"/> 
+<img src="scr12.png"/> 
 <hr/> 
-<img src="scr7.png"/> 
+<img src="scr11.png"/> 
 <hr/> 
-<img src="scr3.png"/> 
+<img src="scr10.png"/> 
 <hr/> 
-<img src="scr2.png"/> 
-<hr/> 
-<img src="scr1.png"/> 
-<hr/> 
+So I figured this out. There is another compiled terminfo directory in /lib/terminfo/. 
+I only needed to copy the xterm file from there to the above directory, so:
+sudo cp /lib/terminfo/x/xterm /usr/share/terminfo/x
+c'est deja dans la destination !
+cp: cannot create regular file ‘/usr/share/terminfo/x’: No such file or directory
+
+<hr>
+<img src="scr9.png"> 
+<hr> 
+<img src="scr8.png"> 
+<hr> 
+<img src="scr7.png"> 
+<hr> 
+<img src="scr3.png"> 
+<hr> 
+<img src="scr2.png"> 
+<hr> 
+<img src="scr1.png"> 
+<hr> 
