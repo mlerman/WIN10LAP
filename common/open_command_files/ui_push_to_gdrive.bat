@@ -16,7 +16,7 @@ echo REPONAME=%REPONAME%
 for %%a in (.) do set currentfolder=%%~na
 echo current directory name: %currentfolder%
 
-c:\UniServer\www\doc\files\ThisPC\install_rclone\rclone.exe copy . remote:%THISPLACESLASH% 2>&1
+c:\UniServer\www\doc\files\ThisPC\install_rclone\rclone.exe copy . remote:%THISPLACESLASH% -v 2>&1
 
 
 :end
