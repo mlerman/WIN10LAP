@@ -1,4 +1,5 @@
-set XSCT=call c:\Xilinx\SDK\2017.2\bin\xsct.bat -quiet -interactive
+if exist c:\Xilinx\SDK\2017.2\bin\xsct.bat set XSCT=call c:\Xilinx\SDK\2017.2\bin\xsct.bat -quiet -interactive
+if exist c:\Xilinx\SDK\2017.3\bin\xsct.bat set XSCT=call c:\Xilinx\SDK\2017.3\bin\xsct.bat -quiet -interactive
 
 type mem_test_sequence.txt |  %XSCT%
 

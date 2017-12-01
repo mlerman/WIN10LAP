@@ -1,1 +1,3 @@
-start c:\Xilinx\SDK\2017.2\bin\xsct.bat
+if exist c:\Xilinx\SDK\2017.2\bin\xsct.bat start c:\Xilinx\SDK\2017.2\bin\xsct.bat
+if exist c:\Xilinx\SDK\2017.3\bin\xsct.bat start c:\Xilinx\SDK\2017.3\bin\xsct.bat
+

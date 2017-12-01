@@ -1,4 +1,4 @@
-connect
+connect -host LAPTOP-7KQRMTC0 -port 3121
 targets -set -nocase -filter {name =~ "Cortex-A53*#0"}
 
 rst -processor
