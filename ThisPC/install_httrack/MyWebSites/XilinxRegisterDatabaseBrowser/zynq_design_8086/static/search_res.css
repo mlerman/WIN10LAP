@@ -1,0 +1,68 @@
+.search table
+{
+border-collapse:collapse;
+border:1px solid black;
+font-weight:bold;
+width:100%
+}
+
+.search td, tr
+{
+border:1px solid black;
+font-weight:bold;
+}
+
+.search th
+{
+border:1px solid black;
+background:yellow;
+font-weight:bold;
+}
+
+
+.mod_search th
+{
+border: 1px solid black;
+background:#c0c0FF;
+font-weight:bold;
+width:20%
+}
+
+.header
+{
+color:black;
+font-weight:bold;
+}
+
+.bf_header th
+{
+background:#C0FFC0;
+color:black;
+font-weight:bold;
+}
+
+.count 
+{
+color:blue;
+font-weight:bold;
+}
+
+.result_names
+{
+color:red;
+font-weight:bold;
+cursor:pointer;
+}
+.separator_line
+{
+color:blue;
+font-weight:bold;
+}
+.Xearch
+{
+background-color:#999;
+width:80px;
+font-weight:bolder
+}
+
+
