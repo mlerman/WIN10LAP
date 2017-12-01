@@ -175,9 +175,11 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
     $text.="  sudo mkdir -p /home/user/files\n";
     $text.="  echo \"if error wrong fs type etc try run sudo apt install cifs-utils\";\n"; 
 
-    $text.="  pw=$(wget http://".$_SERVER["HTTP_HOST"]."/local/1521A845-A144-442e-BA7B-42E7D69B19AE -q -O - )\n"; 
-
-    $text.="  sudo mount -t cifs -o username=mlerman,password=\"".'$pw'."\",uid=mlerman,gid=users //".$_SERVER["HTTP_HOST"]."/files /home/user/files\n"; 
+    $text.="  export pw=$(wget http://".$_SERVER["HTTP_HOST"]."/local/1521A845-A144-442e-BA7B-42E7D69B19AE -q -O - )\n"; 
+    $text.="  export mluser=$(wget http://".$_SERVER["HTTP_HOST"]."/local/myusername.txt -q -O - )\n"; 
+	$text.='  echo password is $pw user is $mluser'."\n";
+//".'$mluser'."
+    $text.="  sudo mount -t cifs -o username=".'$mluser'.",password=\"".'$pw'."\",uid=".'$mluser'.",gid=users //".$_SERVER["HTTP_HOST"]."/files /home/user/files\n"; 
     //$text.="  read -p \"Press [Enter] key to continue... \" \n";
     $text.="else \n";
     //$text.="  echo \"The directory exists\";\n"; 
