@@ -180,6 +180,19 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
     $text.="  export pw=$(wget http://".$_SERVER["HTTP_HOST"]."/local/1521A845-A144-442e-BA7B-42E7D69B19AE -q -O - )\n"; 
     $text.="  export mluser=$(wget http://".$_SERVER["HTTP_HOST"]."/local/myusername.txt -q -O - )\n"; 
 	//$text.='  echo password is $pw user is $mluser'."\n";
+	//sudo demande un password
+	
+//Mounting a filesystem does not require superuser privileges under certain conditions, 
+//typically that the entry for the filesystem in /etc/fstab contains a flag that permits 
+//unprivileged users to mount it, typically user. 
+//To allow unprivileged users to mount a CIFS share (but not automount it), 
+//you would add something like the following to /etc/fstab: //server/share /mount/point cifs noauto,user 0 0
+//                                                     ici  //win7-pc/files /home/user/files
+
+// unmount and test again with umount /home/user/files  pb: c'est busy rebooter, fermer les sessions utilisant files ex krusader et terminal
+// mount: only root can use "--options" option
+// devalider le password promp de sudo voir visudo_password_prompt_removal
+	
     $text.="  sudo mount -t cifs -o username=".'$mluser'.",password=\"".'$pw'."\",uid=".'$mluser'.",gid=users //".$_SERVER["HTTP_HOST"]."/files /home/user/files\n"; 
     //$text.="  read -p \"Press [Enter] key to continue... \" \n";
     $text.="else \n";
