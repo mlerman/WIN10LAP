@@ -1,0 +1,2 @@
+sudo visudo
+read -p "Press [Enter] key to continue..."

@@ -1,0 +1,4 @@
+sudo visudo
+In the bottom of the file, type the follow:
+
+mlerman ALL=(ALL) NOPASSWD: ALL
