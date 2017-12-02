@@ -26,8 +26,8 @@ goto end
 )
 echo New project: %2
 md %2
-copy c:\UniServer\www\common\constructor_new_files\.htaccess %2 /Y
-copy c:\UniServer\www\common\constructor_new_files\open-command-prompt-here.html %2 /Y
+copy c:\UniServer\www\doc\files\common\constructor_new_files\.htaccess %2 /Y
+copy c:\UniServer\www\doc\files\common\constructor_new_files\open-command-prompt-here.html %2 /Y
 
 rem if there is specific initialization to this project run it now
 if exist %parentfolder%.bat call %parentfolder%.bat %2 %3 %4 %5 %6 %7 %8 %9

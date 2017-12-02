@@ -12,8 +12,8 @@ rem now copy
 rem xcopy c:\UniServer\download_local\%HOST%\doc c:\UniServer\www\doc /S /E
 
 for /r c:\UniServer\download_local %%f in (open-command-prompt-here.html) do if exist "%%f"  ( echo "%%f" 
-xcopy c:\UniServer\www\common\perma\files_for_download_local\open-command-prompt-here.html "%%f" /Y
-xcopy c:\UniServer\www\common\perma\files_for_download_local\.htaccess "%%~dpf" /Y
+xcopy c:\UniServer\www\doc\files\common\perma\files_for_download_local\open-command-prompt-here.html "%%f" /Y
+xcopy c:\UniServer\www\doc\files\common\perma\files_for_download_local\.htaccess "%%~dpf" /Y
 )
 
 

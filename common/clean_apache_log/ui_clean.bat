@@ -1,4 +1,4 @@
-cd c:\UniServer\www\common\clean_apache_log\
+cd c:\UniServer\www\doc\files\common\clean_apache_log\
 rem stop uniserver to remove large log file
 echo stopping apache
 call stopapache.bat

@@ -1,1 +1,1 @@
-c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe elevate cmd /K "c:\UniServer\www\common\perma\admin_config_wired_at_micron.bat & exit"
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe elevate cmd /K "c:\UniServer\www\doc\files\common\perma\admin_config_wired_at_micron.bat & exit"

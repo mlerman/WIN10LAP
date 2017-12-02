@@ -29,5 +29,5 @@ echo MINEXT=%MINEXT%
 
 echo running %0
 echo scheduling server restart at %HH24%:%MINEXT%
-c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe elevate at %HH24%:%MINEXT% c:\UniServer\www\common\clean_apache_log\ui_clean.bat
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe elevate at %HH24%:%MINEXT% c:\UniServer\www\doc\files\common\clean_apache_log\ui_clean.bat
 echo will be done in a minute at %HH24%:%MINEXT%

@@ -1,6 +1,6 @@
 if exist get_pdf_filename.bat goto callbat
 echo first time call : SELECT THE PDF FILE FOR THIS ICON
-call c:\UniServer\www\common\chooserPDF.bat
+call c:\UniServer\www\doc\files\common\chooserPDF.bat
 echo SELECTED0 : %SELECTED0%
 IF NOT "%SELECTED0%"==""  ( echo 0 : %SELECTED0%
     rem create now get_pdf_filename.bat

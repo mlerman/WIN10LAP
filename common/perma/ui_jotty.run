@@ -12,7 +12,7 @@ echo Not micron
 del wpad.dat /Q
 
 echo %TARGETDIR%
-call c:\UniServer\www\common\chooser.bat
+call c:\UniServer\www\doc\files\common\chooser.bat
 cd c:\UniServer\www\doc\files\ThisPC\install_jotti\
 IF NOT "%SELECTED0%"==""  ( echo 0 : %SELECTED0%
     JottiScan.exe %SELECTED0%

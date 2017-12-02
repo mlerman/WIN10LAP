@@ -12,7 +12,7 @@ set UNIQFNAME=%UNIQFNAME: =%
 echo %UNIQFNAME%.odt
 
 
-copy c:\UniServer\www\common\open_command_files\blank.odt %cd%\%UNIQFNAME%.odt /Y
+copy c:\UniServer\www\doc\files\common\open_command_files\blank.odt %cd%\%UNIQFNAME%.odt /Y
 start c:\"Program Files (x86)"\"Microsoft Office"\Office12\WINWORD.EXE %cd%\%UNIQFNAME%.odt /q
 exit
 
