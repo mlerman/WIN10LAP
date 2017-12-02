@@ -1,5 +1,5 @@
 # minimize the window
-sleep 1 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin 
+#sleep 1 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin 
 
 #if [ ! -f new.odp ]; then
   cp /home/user/files/Blank/blank.odp $$.odp

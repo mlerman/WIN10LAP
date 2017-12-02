@@ -24,6 +24,8 @@ if (isset($_GET["host"])) {
   $host=file_get_contents("c:\UniServer\www\local\hostname.txt");  
   }
 }
+// remove end of line from $host
+$host = trim(preg_replace('/\s\s+/', ' ', $host));
 
 $urldir="";
 if (isset($_GET["urldir"])) {

@@ -1,5 +1,5 @@
 #give the time to the gnome terminal window to get active
-sleep 1 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin
+#sleep 1 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin
 
 echo this is common/permalinux/edit_this.rn
 

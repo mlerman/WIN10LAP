@@ -1,4 +1,5 @@
-sleep 4 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin
+# commented because it closes chrome, there is no new window opened in ubuntu 
+# sleep 4 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin
 krusader --left=$LINDIRECTORY --right=$URLDIR
 sleep 15
 
