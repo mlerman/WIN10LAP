@@ -3,7 +3,7 @@ echo find where the USB drive is mounted
 lsblk -n -l -o MOUNTPOINT | grep media
 USBDRIVE=$(lsblk -n -l -o MOUNTPOINT | grep media)
 echo $USBDRIVE 
-sudo krusader --left=$LINDIRECTORY --right=$USBDRIVE
+krusader --left=$LINDIRECTORY --right=$USBDRIVE
 sleep 15
 
 
