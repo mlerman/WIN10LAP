@@ -1,3 +1,7 @@
+<img src="scr1.png"/>
+<hr/>
+gnome-terminal -e 'sh -c "echo toto && read -p "pause" reply"'
+<hr/>
 ca fait rien
 dans /etc/local.conf ceci: 
 LANG="en_US.UTF-8"

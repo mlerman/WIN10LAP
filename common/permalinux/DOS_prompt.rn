@@ -1,1 +1,3 @@
-wine cmd
+gnome-terminal -e 'sh -c "wine cmd && read -p \"Press a key to exit terminal...\" reply"'
+
+#wine cmd
