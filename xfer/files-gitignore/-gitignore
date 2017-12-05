@@ -1,6 +1,7 @@
 .gitignore
 .htaccess
 .time
+.outtop
 favicon.ico
 favicon.bmp
 open-command-prompt-here.html
@@ -11,6 +12,7 @@ new.txt
 *.exe
 *.xz
 *.o
+*.mp4
 
 
 
