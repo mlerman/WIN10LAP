@@ -1,36 +1,37 @@
-Microsoft Windows [Version 6.1.7601]
-Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
 
 C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>sleep 5 
 
 C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>dir 
  Volume in drive C is Windows
- Volume Serial Number is 8E54-73FD
+ Volume Serial Number is B277-B18E
 
  Directory of C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell
 
-11/26/2017  07:35 PM    <DIR>          .
-11/26/2017  07:35 PM    <DIR>          ..
-11/22/2017  01:17 PM               705 .head
-11/12/2017  11:53 AM               471 .htaccess
-11/26/2017  06:40 PM             6,769 .links
-11/21/2017  10:00 PM               707 .recentedit
-11/21/2017  10:00 PM               353 .related
-11/21/2017  10:04 PM                73 .time
-11/26/2017  07:38 PM               133 favicon.bmp
-04/16/2016  11:59 AM               822 favicon.ico
-11/26/2017  07:48 PM                35 input.txt
-04/16/2016  10:27 AM             1,663 open-command-prompt-here.html
-11/26/2017  07:48 PM               183 output
-11/21/2017  10:00 PM               363 README.md
-11/21/2017  10:00 PM            57,416 scr1.png
-11/22/2017  01:17 PM            68,264 scr2.png
-11/21/2017  10:00 PM            21,869 shell.php
-11/26/2017  07:48 PM               532 tst.bat
-11/22/2017  01:17 PM                64 ui_test.bat
-11/22/2017  01:17 PM                 0 ui_test.run
-              18 File(s)        160,422 bytes
-               2 Dir(s)  25,743,355,904 bytes free
+12/04/2017  05:52 PM    <DIR>          .
+12/04/2017  05:52 PM    <DIR>          ..
+12/04/2017  05:52 PM               687 .head
+11/27/2017  11:27 AM               471 .htaccess
+12/04/2017  02:52 PM             8,010 .links
+11/22/2017  11:23 AM               707 .recentedit
+11/22/2017  11:23 AM               353 .related
+11/27/2017  11:27 AM                74 .time
+12/04/2017  05:52 PM                 1 30782.txt
+12/04/2017  06:05 PM               133 favicon.bmp
+11/27/2017  11:27 AM               822 favicon.ico
+12/04/2017  06:06 PM               189 input.txt
+11/27/2017  11:27 AM             1,663 open-command-prompt-here.html
+12/04/2017  06:06 PM                 0 output
+11/22/2017  11:23 AM               363 README.md
+11/22/2017  11:23 AM            57,416 scr1.png
+11/22/2017  11:23 AM            68,264 scr2.png
+11/22/2017  11:23 AM            21,869 shell.php
+11/27/2017  11:27 AM               532 tst.bat
+11/22/2017  11:23 AM                64 ui_test.bat
+11/22/2017  11:46 AM                 0 ui_test.run
+              19 File(s)        161,618 bytes
+               2 Dir(s)  32,852,762,624 bytes free
 
 C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>call ui_test.bat 
 
@@ -57,5 +58,12 @@ final
 
 C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>pause
 Press any key to continue . . . 
+
+C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>
+C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell> 
+C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell> 
+C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>time 
+The current time is: 18:06:16.83
+Enter the new time:  
 
 C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell>
