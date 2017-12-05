@@ -1,0 +1,1 @@
+cmd_/home/user/files/ThisPCLinux/HIRO_drivers_H50315/r8152-2.09.0/r8152.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/user/files/ThisPCLinux/HIRO_drivers_H50315/r8152-2.09.0/r8152.ko /home/user/files/ThisPCLinux/HIRO_drivers_H50315/r8152-2.09.0/r8152.o /home/user/files/ThisPCLinux/HIRO_drivers_H50315/r8152-2.09.0/r8152.mod.o

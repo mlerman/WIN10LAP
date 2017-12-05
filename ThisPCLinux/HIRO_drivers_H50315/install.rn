@@ -1,0 +1,5 @@
+bzip2 -dk H50294_H50314_H50315-r8152.53-2.09.0.tar.bz2
+
+# la ligne suivante ne marche pas j'ai fait par total_commander
+#tar -xzf H50294_H50314_H50315-r8152.53-2.09.0.tar
+read -p "Press [Enter] key to continue..."

@@ -1,0 +1,2 @@
+/home/user/files/ThisPCLinux/HIRO_drivers_H50315/r8152-2.09.0/r8152.ko
+/home/user/files/ThisPCLinux/HIRO_drivers_H50315/r8152-2.09.0/r8152.o
