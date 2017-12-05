@@ -1,4 +1,10 @@
+Faire un link qui reload la page mais au lieu du host utilise l'ip
+example
 
+pour 
+http://xsjmikhaell30/doc/files/xfer/open-command-prompt-here.html#view
+devient
+http://192.168.1.200/doc/files/xfer/open-command-prompt-here.html#view
 <hr/>
 
 <hr/>
