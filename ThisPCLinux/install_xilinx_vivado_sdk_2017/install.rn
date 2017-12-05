@@ -1,0 +1,3 @@
+chmod +x Xilinx_Vivado_SDK_2017.3_1005_1_Lin64.bin
+sudo ./Xilinx_Vivado_SDK_2017.3_1005_1_Lin64.bin
+read -p "Press [Enter] key to continue..."
