@@ -1,0 +1,5 @@
+@echo off
+cls
+echo testing connection with VM
+start c:\UniServer\www\doc\files\ThisPC\putty\putty.exe -ssh mlerman@mlerman-vm-mint
+exit
