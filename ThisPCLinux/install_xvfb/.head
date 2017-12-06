@@ -1,0 +1,12 @@
+
+<hr/>
+ERROR: You are missing the following system tools required by PetaLinux:
+
+ - chrpath
+ - socat
+ - xterm
+Please check PetaLinux installation guide - required tools and libraries pacakge section for detailed information
+
+<hr/>
+<img src="scr1.png"/> 
+<hr/> 
