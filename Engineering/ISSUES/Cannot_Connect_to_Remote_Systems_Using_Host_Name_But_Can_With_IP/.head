@@ -1,0 +1,9 @@
+inaccessibles a partir de laptop-7kqrmtc0
+<hr/>
+<img src="scr1.png"/> 
+<hr/> 
+D'abord mettre le DNS avec l'IP static
+Trouver le DNS a Xilinx : (copie de Ubuntu)
+Default route : 172.19.129.1
+DNS : 172.19.129.1 et 172.19.128.1
+<hr/> 
