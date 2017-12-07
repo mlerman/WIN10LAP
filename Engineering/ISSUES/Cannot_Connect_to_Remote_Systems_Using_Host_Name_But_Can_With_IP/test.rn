@@ -1,0 +1,2 @@
+gnome-terminal -e 'sh -c "./ping_other && read -p "Press [Enter] key to continue..." reply"'
+read -p "pause"

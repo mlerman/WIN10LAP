@@ -1,3 +1,12 @@
+<img src="scr6.png"/>
+<hr/>
+<img src="scr5.png"/>
+<hr/>
+<img src="scr4.png"/> 
+<hr/> 
+added this line in hosts c:\Windows\System32\drivers\etc\hosts
+      192.168.1.100     laptop-7kqrmtc0          # windows 10 Dell laptop
+
 <img src="scr3.png"/> 
 <hr/> 
 <img src="scr2.png"/> 
