@@ -1,5 +1,10 @@
+
+<hr/>
 faire un icon qui blink si le repertoire courant n'est pas synchronise avec le repo github
 
+faire un wrapper pour les variables d'environement d'un projet
+avec instant edit 
+qui marche avec linux et windows
 
 <hr/>
 
