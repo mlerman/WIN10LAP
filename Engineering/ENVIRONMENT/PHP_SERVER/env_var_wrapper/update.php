@@ -32,9 +32,9 @@ header("Pragma: no-cache"); // HTTP/1.0
 
 
 //THIS WRITES CONTENT TO A TEXT FILE
-//$handle = fopen($_GET['fieldname'].".txt", "w+");
-//fwrite($handle, stripslashes($_GET['content']));
-//fclose($handle);
+$handle = fopen($_GET['fieldname'].".txt", "w+");
+fwrite($handle, stripslashes($_GET['content']));
+fclose($handle);
 
 $fieldname = $_GET['fieldname'];
 echo stripslashes(strip_tags($_GET['content'],"<br><p><img><a><br><strong><em>"));

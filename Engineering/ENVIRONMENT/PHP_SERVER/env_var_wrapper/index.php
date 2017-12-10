@@ -1,7 +1,17 @@
+<?php
+  if (isset($_POST['submit'])) {
+    $envVar = $_POST['envVar'];
+	$txt = "<label>".$envVar."</label>  <span id=\"".$envVar."\" class=\"editText\"></span><hr/>";
+    file_put_contents('entries.html', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+    file_put_contents($envVar.'.txt', "new" , FILE_APPEND | LOCK_EX);
+  }
+?>
+
+
 <html>
 <head>
 <title>Example page: instant edit AJAX-style</title>
-<script type="text/javascript" src="http://www.yvoschaap.com/instantedit/instantedit.js"></script>
+<script type="text/javascript" src="./instantedit.js"></script>
 <style type='text/css'>
 body{
 	font-family: verdana;
@@ -24,7 +34,7 @@ label{
 	font-size: 14px;
 }
 
-#cityName, #cityName_field{
+.editText {
 	font-size: 14px;
 	background-color: #333;
 	color: #fff;
@@ -56,25 +66,52 @@ label{
 <script type="text/javascript">
 setVarsForm("pageID=profileEdit&userID=11&sessionID=28ydk3478Hefwedkbj73bdIB8H");
 </script>
-<label>Your name:</label> <span id="userName" class="editText">John Doe</span><br />
-<label>Your city:</label>  <span id="cityName" class="editText">Rotterdam, NL</span>
+
+<form action="" method="post">
+New environment variable name: <input type="text" name="envVar" value="toto" />&nbsp;
+<input type="submit" name="submit" value="Add new" />
+</form>
+
+<?php
+if(isset($_POST['envVar']) && !empty($_POST['envVar'])) {
+    //echo 'Welcome, ' . $_POST['envVar']; 
+}
+?>
 
 <hr />
-<h1><span id="blogTitle" class="editText">AJAX instant edit script - clean HTML</span></h1>
-<span id="blogText" class="editText">Welcome to my blog. Today i created this instant update script. Click here to try! If you like it you can download and view the source at: yvoschaap.com. Have fun and success.</span>
-<p>Message of the day:<strong><span id="messageDay" class="editText">Time Spend Wishing, Is Time Wasted</span></strong></p>
-<hr>
-<span id="lorumText" class="editText">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut faucibus commodo lacus. Donec egestas magna et risus.<br />
-<br />
-Etiam velit tellus, sagittis eget, pretium eu, sagittis ut, sem. Aliquam est. Nam condimentum. In massa ligula, varius in, aliquet vehicula, facilisis id, ante. Sed purus. Vestibulum tempus facilisis lectus. Phasellus convallis, lorem in bibendum convallis, nunc nisl fringilla sem, ut nonummy turpis nunc sed risus. Aliquam bibendum semper ipsum. <br />
-<br />
-In hac habitasse platea dictumst. Maecenas vulputate, nisl nec tempus rutrum, tortor ligula interdum urna, eget porttitor risus sem eu odio. <br />
-<br />
-Nullam vel leo sed enim sodales euismod. Phasellus volutpat purus sit amet erat. Nulla ut enim. Nullam tempus enim eget lacus. Nulla a nibh eu enim bibendum bibendum. Nunc justo. Vivamus sagittis sollicitudin lacus. Duis lacinia nisi et lectus. Etiam ac felis et est sagittis aliquam. Duis vitae nulla. Nam sed nibh. Mauris fermentum sodales nulla. Nam fringilla. In hac habitasse platea dictumst. Aliquam erat volutpat. Fusce consectetuer. <br />
-</span>
-<p></p>
-<hr>
-<em>note: editted text fields in this example do not save!</em><br />
-<em><a href="http://www.yvoschaap.com/index.php/weblog/ajax_inline_instant_update_text_20">Back to article</a></em>
+<?php 
+  //echo "env var posted : ".$envVar."<br/>\n";
+
+  $strHTML=file_get_contents("entries.html"); 
+  //echo $strHTML;
+  $doc = new DOMDocument();
+  $doc->loadHTML($strHTML);
+  
+  //OK
+  $item_num=0;
+  $spans = $doc->getElementsByTagName('span');
+  $labels = $doc->getElementsByTagName('label');
+  foreach ($spans as $span) {
+	  $elem_label = $doc->getElementsByTagName('label')->item($item_num);
+	  $var_name=$elem_label->nodeValue;
+      //echo "item ".$item_num." ".$span->nodeValue." ".$var_name."<br/>\n";
+	  $elem = $doc->getElementsByTagName('span')->item($item_num);
+	  $strVal=file_get_contents($var_name.".txt");
+	  $elem->nodeValue=$strVal;
+	  $item_num++;
+  }  
+  
+  //$strVal=file_get_contents("cityName.txt");
+  //$elem = $doc->getElementsByTagName('span')->item(0);
+  
+  //$elem->nodeValue=$strVal;
+  
+  echo $doc->saveHTML();
+?>
+<br/>
+<!--
+<label>Your city:</label>  <span id="cityName" class="editText"><?php if ( 0 == filesize( "cityName.txt" ) ) echo "..."; else echo file_get_contents("cityName.txt"); ?></span>
+<hr />
+-->
 </body>
 </html>

@@ -58,7 +58,7 @@ xhr.prototype.send = function(urlget,data) {
 	return false;
 }
 
-var urlBase = "/update.php";
+var urlBase = "./update.php";
 var formVars = "";
 var changing = false;
 
