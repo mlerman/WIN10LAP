@@ -1,9 +1,33 @@
 <?php
   if (isset($_POST['submit'])) {
     $envVar = $_POST['envVar'];
-	$txt = "<label>".$envVar."</label>  <span id=\"".$envVar."\" class=\"editText\"></span><hr/>";
+	$txt = "<a href=\"index.php?delaction=1&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar."</label>  <span id=\"".$envVar."\" class=\"editText\"></span><hr/>";
     file_put_contents('entries.html', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
     file_put_contents($envVar.'.txt', "new" , FILE_APPEND | LOCK_EX);
+  }
+
+  if (isset($_GET['delaction'])) {
+    $file = 'entries.html'; 
+    $fh = fopen($file, 'r') or die('Could not open file: '.$file); 
+    $i = 0; 
+    $content="";
+    while (!feof($fh)) { 
+       $buffer = fgets($fh); 
+   
+       if (strpos($buffer, $_GET["name"]) !== false) {
+         //echo $buffer." skiped<br/>\n";
+       }  else {
+         //echo $buffer."<br/>\n";
+        $content.=$buffer;
+      }   
+      $i++;   
+    } 
+    // close file 
+    fclose($fh); 
+
+    file_put_contents($file, $content);
+
+    unlink($_GET["name"].".txt");
   }
 ?>
 
