@@ -9,10 +9,12 @@ $targetdir="";
   //exit(0);
 
   if (isset($_POST['submit'])) {
-    $envVar = $_POST['envVar'];
-	$txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar."</label>  <span id=\"".$targetdir.'/'.$envVar."\" class=\"editText\"></span><hr/>";
-    file_put_contents($targetdir.'/entries.html', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
-    file_put_contents($targetdir.'/'.$envVar.'.sh.bat', "set ".$envVar."=new" , FILE_APPEND | LOCK_EX);
+    if(isset($_POST['envVar']) && !empty($_POST['envVar'])) {
+      $envVar = $_POST['envVar'];
+	  $txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar."</label>  <span id=\"".$targetdir.'/'.$envVar."\" class=\"editText\"></span><hr/>";
+      file_put_contents($targetdir.'/entries.html', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+      file_put_contents($targetdir.'/'.$envVar.'.sh.bat', "set ".$envVar."=new" , FILE_APPEND | LOCK_EX);
+    }
   }
 
   if (isset($_GET['delaction'])) {
@@ -42,7 +44,7 @@ $targetdir="";
 
 <html>
 <head>
-<title>Example page: instant edit AJAX-style</title>
+<title>Manage environment variables</title>
 <script type="text/javascript" src="./instanteditenv.js"></script>
 <style type='text/css'>
 body{
@@ -100,15 +102,10 @@ setVarsForm("pageID=profileEdit&userID=11&sessionID=28ydk3478Hefwedkbj73bdIB8H")
 </script>
 
 <form action="" method="post">
-New environment variable name: <input type="text" name="envVar" value="toto" />&nbsp;
+New environment variable name: <input type="text" name="envVar" placeholder="Variable name" />&nbsp;
 <input type="submit" name="submit" value="Add new" />
 </form>
 
-<?php
-if(isset($_POST['envVar']) && !empty($_POST['envVar'])) {
-    //echo 'Welcome, ' . $_POST['envVar']; 
-}
-?>
 
 <hr />
 <?php 
