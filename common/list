@@ -3,3 +3,4 @@ param1 is
 linenum is 123
 linenum is a line number
 PARAM1 is a string
+2017_ 1_Su__16_46_33 zipfolder.bat C:\UniServer\www\mlscript\zipfolder.bat 7za.exe a -tzip -mx0 xfer.zip C:\UniServer\www\doc\files\xfer   
