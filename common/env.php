@@ -23,7 +23,7 @@ $targetdir="";
     while (!feof($fh)) { 
        $buffer = fgets($fh); 
    
-       if (strpos($buffer, $_GET["name"]) !== false) {
+       if (strpos($buffer, "<label>".$_GET["name"]."</label>") !== false) {
          //echo $buffer." skiped<br/>\n";
        }  else {
          //echo $buffer."<br/>\n";
@@ -31,10 +31,9 @@ $targetdir="";
       }   
       $i++;   
     } 
-    // close file 
     fclose($fh); 
 
-    file_put_contents($targetdir.'/'.$file, $content);
+    file_put_contents($file, $content);
 
     unlink($targetdir.'/'.$_GET["name"].".sh.bat");
   }
