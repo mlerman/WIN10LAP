@@ -1,18 +1,22 @@
 <?php
 $targetdir="";
   if (isset($_GET['targetdir'])) {
-	  $targetdir=$_GET['targetdir'].'\\';
+	  $targetdir=$_GET['targetdir'];
+	  $targetdir = str_replace('\\', '/', $targetdir);
   }
+  
+  //file_put_contents("debug.txt","targetdir ".$targetdir."\n", FILE_APPEND);
+  //exit(0);
 
   if (isset($_POST['submit'])) {
     $envVar = $_POST['envVar'];
-	$txt = "<a href=\"index.php?delaction=1&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar."</label>  <span id=\"".$envVar."\" class=\"editText\"></span><hr/>";
-    file_put_contents($targetdir.'entries.html', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
-    file_put_contents($targetdir.$envVar.'.sh.bat', "set ".$envVar."=new" , FILE_APPEND | LOCK_EX);
+	$txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar."</label>  <span id=\"".$targetdir.'/'.$envVar."\" class=\"editText\"></span><hr/>";
+    file_put_contents($targetdir.'/entries.html', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+    file_put_contents($targetdir.'/'.$envVar.'.sh.bat', "set ".$envVar."=new" , FILE_APPEND | LOCK_EX);
   }
 
   if (isset($_GET['delaction'])) {
-    $file = $targetdir.'entries.html'; 
+    $file = $targetdir.'/entries.html'; 
     $fh = fopen($file, 'r') or die('Could not open file: '.$file); 
     $i = 0; 
     $content="";
@@ -30,9 +34,9 @@ $targetdir="";
     // close file 
     fclose($fh); 
 
-    file_put_contents($targetdir.$file, $content);
+    file_put_contents($targetdir.'/'.$file, $content);
 
-    unlink($_GET["name"].".sh.bat");
+    unlink($targetdir.'/'.$_GET["name"].".sh.bat");
   }
 ?>
 
@@ -111,7 +115,7 @@ if(isset($_POST['envVar']) && !empty($_POST['envVar'])) {
 <?php 
   //echo "env var posted : ".$envVar."<br/>\n";
 
-  $strHTML=file_get_contents($targetdir."entries.html"); 
+  $strHTML=file_get_contents($targetdir."/entries.html"); 
   //echo $strHTML;
   $doc = new DOMDocument();
   $doc->loadHTML($strHTML);
@@ -125,7 +129,7 @@ if(isset($_POST['envVar']) && !empty($_POST['envVar'])) {
 	  $var_name=$elem_label->nodeValue;
       //echo "item ".$item_num." ".$span->nodeValue." ".$var_name."<br/>\n";
 	  $elem = $doc->getElementsByTagName('span')->item($item_num);
-	  $strVal=file_get_contents($targetdir.$var_name.".sh.bat");
+	  $strVal=file_get_contents($targetdir.'/'.$var_name.".sh.bat");
 	  $elem->nodeValue=$strVal;
 	  $item_num++;
   }  
