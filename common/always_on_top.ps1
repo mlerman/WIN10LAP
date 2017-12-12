@@ -1,5 +1,5 @@
 # ceci appelle le program
-C:\"Program Files (x86)"\Google\Chrome\Application\chrome.exe --new-window --app="data:text/html,<html><body><script>window.moveTo(50,50);window.resizeTo(16,16);window.location='http://win7-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/mini_menu_always_on_top/';</script></body></html>"
+C:\"Program Files (x86)"\Google\Chrome\Application\chrome.exe --new-window --app="data:text/html,<html><body><script>window.moveTo(50,50);window.resizeTo(16,16);window.location='http://localhost/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/mini_menu_always_on_top/';</script></body></html>"
 $name = "chrome"
 
 # ceci appelle le program
