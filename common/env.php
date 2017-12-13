@@ -6,6 +6,7 @@ $targetdir="";
   }
   
   //file_put_contents("debug.txt","targetdir ".$targetdir."\n", FILE_APPEND);
+  //file_put_contents("debug.txt","targetdir ".$targetdir."\n", FILE_APPEND);
   //exit(0);
 
   if (isset($_POST['submit'])) {
@@ -18,6 +19,13 @@ $targetdir="";
   }
 
   if (isset($_GET['delaction'])) {
+	  
+	  
+	$num=-1;
+	if (isset($_GET['num'])) {
+		$num=$_GET['num'];
+	}
+
     $file = $targetdir.'/entries.html'; 
     $fh = fopen($file, 'r') or die('Could not open file: '.$file); 
     $i = 0; 
@@ -25,12 +33,23 @@ $targetdir="";
     while (!feof($fh)) { 
        $buffer = fgets($fh); 
    
-       if (strpos($buffer, "<label>".$_GET["name"]."</label>") !== false) {
-         //echo $buffer." skiped<br/>\n";
-       }  else {
-         //echo $buffer."<br/>\n";
-        $content.=$buffer;
-      }   
+       if (isset($_GET['num'])) {
+         if (strpos($buffer, "<label>".$_GET["name"].".".$num."</label>") !== false) {
+           //echo "=====<label>".$_GET["name"].".".$num."</label>====\n";
+		   // skip
+         }  else {
+           //echo $buffer."<br/>\n";
+           $content.=$buffer;
+        }
+	   } else {
+         if (strpos($buffer, "<label>".$_GET["name"]."</label>") !== false) {
+           //echo $buffer." skiped<br/>\n";
+         }  else {
+           //echo $buffer."<br/>\n";
+           $content.=$buffer;
+         }
+	   }
+	  
       $i++;   
     } 
     fclose($fh); 
@@ -50,8 +69,11 @@ $targetdir="";
    
        if (strpos($buffer, "<label>".$_GET["name"]."</label>") !== false) {
          // TODO
-		$buffer=str_replace("disaction","enaction",$buffer);
+		$buffer=str_replace("disaction=1","enaction=1&num=0",$buffer);
+		$buffer=str_replace("delaction=1","delaction=1&num=0",$buffer);
 		$buffer=str_replace("on.png","off.png",$buffer);
+		// cahnge the name by adding .0
+		$buffer=str_replace("<label>".$_GET["name"]."</label>","<label>".$_GET["name"].".0</label>",$buffer);
         $content.=$buffer;
        }  else {
          //echo $buffer."<br/>\n";
@@ -69,6 +91,8 @@ $targetdir="";
   
 
   if (isset($_GET['enaction'])) {
+	  
+	$num=$_GET['num'];
     $file = $targetdir.'/entries.html'; 
     $fh = fopen($file, 'r') or die('Could not open file: '.$file); 
     $i = 0; 
@@ -76,10 +100,13 @@ $targetdir="";
     while (!feof($fh)) { 
        $buffer = fgets($fh); 
    
-       if (strpos($buffer, "<label>".$_GET["name"]."</label>") !== false) {
+       if (strpos($buffer, "<label>".$_GET["name"].".".$num."</label>") !== false) {
          // TODO
-		$buffer=str_replace("enaction","disaction",$buffer);
+		$buffer=str_replace("enaction=1&num=".$num,"disaction=1",$buffer);
+		$buffer=str_replace("delaction=1&num=".$num,"delaction=1",$buffer);
 		$buffer=str_replace("off.png","on.png",$buffer);
+		// change the name by removing .0
+		$buffer=str_replace(".".$num."</label>","</label>",$buffer);
         $content.=$buffer;
        }  else {
          //echo $buffer."<br/>\n";
@@ -183,7 +210,8 @@ New environment variable name: <input type="text" name="envVar" placeholder="Var
 	  $elem = $doc->getElementsByTagName('span')->item($item_num);
 	  if (file_exists($targetdir.'/'.$var_name.".sh.bat")) {
 		$strVal=file_get_contents($targetdir.'/'.$var_name.".sh.bat");
-	  }	else {
+	  }	else {  // disabled
+		$var_name= str_replace(".0","",$var_name);
 		$strVal=file_get_contents($targetdir.'/'.$var_name.".sh.bat.0");
 	  }
 	  $elem->nodeValue=$strVal;
