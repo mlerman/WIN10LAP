@@ -1,4 +1,64 @@
 <?php
+
+function enable_name_in_entries($name, $num) {
+	global $targetdir;
+    $file = $targetdir.'/entries.html'; 
+    $fh = fopen($file, 'r') or die('Could not open file: '.$file); 
+    $i = 0; 
+    $content="";
+    while (!feof($fh)) { 
+       $buffer = fgets($fh); 
+   
+       if (strpos($buffer, "<label>".$name.".".$num."</label>") !== false) {
+         // TODO
+		$buffer=str_replace("enaction=1&num=".$num,"disaction=1",$buffer);
+		$buffer=str_replace("delaction=1&num=".$num,"delaction=1",$buffer);
+		$buffer=str_replace("off.png","on.png",$buffer);
+		// change the name by removing .0
+		$buffer=str_replace(".".$num."</label>","</label>",$buffer);
+		$buffer=str_replace("/".$name."sh.bat"."sh.bat.".$num,"/".$name, $buffer);
+        $content.=$buffer;
+       }  else {
+         //echo $buffer."<br/>\n";
+        $content.=$buffer;
+      }   
+      $i++;   
+    } 
+    fclose($fh); 
+    file_put_contents($file, $content);  // entries.html
+}
+
+function disable_name_in_entries($name) {
+	global $targetdir;
+    $file = $targetdir.'/entries.html'; 
+    $fh = fopen($file, 'r') or die('Could not open file: '.$file); 
+    $i = 0; 
+    $content="";
+    while (!feof($fh)) { 
+       $buffer = fgets($fh); 
+   
+       if (strpos($buffer, "<label>".$name."</label>") !== false) {
+         // TODO
+		$buffer=str_replace("disaction=1","enaction=1&num=0",$buffer);
+		$buffer=str_replace("delaction=1","delaction=1&num=0",$buffer);
+		$buffer=str_replace("on.png","off.png",$buffer);
+		// cahnge the name by adding .0
+		$buffer=str_replace("<label>".$name."</label>","<label>".$name.".0</label>",$buffer);
+		$buffer=str_replace("/".$name.".sh.bat\"","/".$name.".sh.bat.0\"",$buffer);
+        $content.=$buffer;
+       }  else {
+         //echo $buffer."<br/>\n";
+        $content.=$buffer;
+      }   
+      $i++;   
+    } 
+    fclose($fh); 
+
+    file_put_contents($file, $content);  // entries.html
+	
+}
+
+
 $targetdir="";
   if (isset($_GET['targetdir'])) {
 	  $targetdir=$_GET['targetdir'];
@@ -12,13 +72,14 @@ $targetdir="";
   if (isset($_POST['submit'])) {
     if(isset($_POST['envVar']) && !empty($_POST['envVar'])) {
       $envVar = $_POST['envVar'];
-	  $txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&disaction=1&name=".$envVar."\"><img src=\"/doc/images/on.png\"></a>&nbsp;<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar."</label>  <span id=\"".$targetdir.'/'.$envVar."\" class=\"editText\"></span><hr/>";
+	  $txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&disaction=1&name=".$envVar."\"><img src=\"/doc/images/on.png\"></a>&nbsp;<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar."</label>  <span id=\"".$targetdir.'/'.$envVar.".sh.bat"."\" class=\"editText\"></span><hr/>";
       file_put_contents($targetdir.'/entries.html', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+	  
       file_put_contents($targetdir.'/'.$envVar.'.sh.bat', "set ".$envVar."=new" , FILE_APPEND | LOCK_EX);
     }
   }
 
-  if (isset($_GET['delaction'])) {
+  else if (isset($_GET['delaction'])) {
 	  
 	  
 	$num=-1;
@@ -54,72 +115,72 @@ $targetdir="";
     } 
     fclose($fh); 
 
-    file_put_contents($file, $content);
+    file_put_contents($file, $content); // entries.html
+	
+    if (isset($_GET['num'])) {
+      unlink($targetdir.'/'.$_GET["name"].".sh.bat.".$num);
+	} else {
+      unlink($targetdir.'/'.$_GET["name"].".sh.bat");
+	}
 
-    unlink($targetdir.'/'.$_GET["name"].".sh.bat");
   }
 
-  if (isset($_GET['disaction'])) {
-    $file = $targetdir.'/entries.html'; 
-    $fh = fopen($file, 'r') or die('Could not open file: '.$file); 
-    $i = 0; 
-    $content="";
-    while (!feof($fh)) { 
-       $buffer = fgets($fh); 
-   
-       if (strpos($buffer, "<label>".$_GET["name"]."</label>") !== false) {
-         // TODO
-		$buffer=str_replace("disaction=1","enaction=1&num=0",$buffer);
-		$buffer=str_replace("delaction=1","delaction=1&num=0",$buffer);
-		$buffer=str_replace("on.png","off.png",$buffer);
-		// cahnge the name by adding .0
-		$buffer=str_replace("<label>".$_GET["name"]."</label>","<label>".$_GET["name"].".0</label>",$buffer);
-        $content.=$buffer;
-       }  else {
-         //echo $buffer."<br/>\n";
-        $content.=$buffer;
-      }   
-      $i++;   
-    } 
-    fclose($fh); 
+  else if (isset($_GET['disaction'])) {
+	  
+	$nameexist=false;
+	if ($targetdir.'/'.$_GET["name"].".sh.bat.0") {
+		$nameexist=true;
+		// saving because it will be overwritten
+		copy($targetdir.'/'.$_GET["name"].".sh.bat.0", $targetdir.'/'.$_GET["name"].".sh.bat.0.nameexist");
+		}
 
-    file_put_contents($file, $content);
+	 disable_name_in_entries($_GET["name"]);
 
 	copy($targetdir.'/'.$_GET["name"].".sh.bat", $targetdir.'/'.$_GET["name"].".sh.bat.0");
-    unlink($targetdir.'/'.$_GET["name"].".sh.bat");
+	if(!$nameexist) {
+		copy($targetdir.'/'.$_GET["name"].".sh.bat.0.nameexist",$targetdir.'/'.$_GET["name"].".sh.bat");
+	} else {
+		unlink($targetdir.'/'.$_GET["name"].".sh.bat");
+	}
+	// remove temp file
+	unlink($targetdir.'/'.$_GET["name"].".sh.bat.0.nameexist");
+
+
+	//} else {
+		// un autre avec le meme nom etait deja disabled, ceci le re-enable
+		//enable_name_in_entries($_GET["name"], $num);
+	//}
+	
   }
+
+  else if (isset($_GET['enaction'])) {
+
+	$nameexist=false;
+	if ($targetdir.'/'.$_GET["name"].".sh.bat") {
+		$nameexist=true;
+		// saving because it will be overwritten
+		copy($targetdir.'/'.$_GET["name"].".sh.bat", $targetdir.'/'.$_GET["name"].".sh.bat.nameexist");
+		}
   
-
-  if (isset($_GET['enaction'])) {
-	  
 	$num=$_GET['num'];
-    $file = $targetdir.'/entries.html'; 
-    $fh = fopen($file, 'r') or die('Could not open file: '.$file); 
-    $i = 0; 
-    $content="";
-    while (!feof($fh)) { 
-       $buffer = fgets($fh); 
-   
-       if (strpos($buffer, "<label>".$_GET["name"].".".$num."</label>") !== false) {
-         // TODO
-		$buffer=str_replace("enaction=1&num=".$num,"disaction=1",$buffer);
-		$buffer=str_replace("delaction=1&num=".$num,"delaction=1",$buffer);
-		$buffer=str_replace("off.png","on.png",$buffer);
-		// change the name by removing .0
-		$buffer=str_replace(".".$num."</label>","</label>",$buffer);
-        $content.=$buffer;
-       }  else {
-         //echo $buffer."<br/>\n";
-        $content.=$buffer;
-      }   
-      $i++;   
-    } 
-    fclose($fh); 
+	
+	enable_name_in_entries($_GET["name"], $num);
 
-    file_put_contents($file, $content);
+	copy($targetdir.'/'.$_GET["name"].".sh.bat.".$num, $targetdir.'/'.$_GET["name"].".sh.bat");
+	if(!$nameexist) {
+		copy($targetdir.'/'.$_GET["name"].".sh.bat.nameexist", $targetdir.'/'.$_GET["name"].".sh.bat.".$num);
+	} else {
+		unlink($targetdir.'/'.$_GET["name"].".sh.bat.".$num);
+	}
+	// remove temp file
+	unlink($targetdir.'/'.$_GET["name"].".sh.bat.nameexist");
 
-	copy($targetdir.'/'.$_GET["name"].".sh.bat.0", $targetdir.'/'.$_GET["name"].".sh.bat");
-    unlink($targetdir.'/'.$_GET["name"].".sh.bat.0");
+		
+		
+	//} else {
+		// un autre avec le meme nom etait deja enabled, ceci le disable
+		//disable_name_in_entries($_GET["name"]);
+	//}
   }
   
 ?>
@@ -192,6 +253,12 @@ New environment variable name: <input type="text" name="envVar" placeholder="Var
 
 <hr />
 <?php 
+
+function str_ends_with($haystack, $needle)
+{
+    return substr_compare($haystack, $needle, -strlen($needle)) 
+           === 0;
+}
   //echo "env var posted : ".$envVar."<br/>\n";
 
   $strHTML=file_get_contents($targetdir."/entries.html"); 
@@ -206,14 +273,25 @@ New environment variable name: <input type="text" name="envVar" placeholder="Var
   foreach ($spans as $span) {
 	  $elem_label = $doc->getElementsByTagName('label')->item($item_num);
 	  $var_name=$elem_label->nodeValue;
-      //echo "item ".$item_num." ".$span->nodeValue." ".$var_name."<br/>\n";
+//echo "item ".$item_num." ".$span->nodeValue." ".$var_name."<br/>\n";
 	  $elem = $doc->getElementsByTagName('span')->item($item_num);
-	  if (file_exists($targetdir.'/'.$var_name.".sh.bat")) {
-		$strVal=file_get_contents($targetdir.'/'.$var_name.".sh.bat");
-	  }	else {  // disabled
-		$var_name= str_replace(".0","",$var_name);
-		$strVal=file_get_contents($targetdir.'/'.$var_name.".sh.bat.0");
+	  
+	  // if the label ends with ".0"
+	  if (str_ends_with($var_name, ".0")) {	//disabled
+		  $var_name= str_replace(".0","",$var_name);
+		  $strVal=file_get_contents($targetdir.'/'.$var_name.".sh.bat.0");
+	  } else {
+		  $strVal=file_get_contents($targetdir.'/'.$var_name.".sh.bat");
 	  }
+	  
+	//	if (file_exists($targetdir.'/'.$var_name.".sh.bat")) {
+	//	$strVal=file_get_contents($targetdir.'/'.$var_name.".sh.bat");
+	//  }	else {  // disabled
+	//	$var_name= str_replace(".0","",$var_name);
+	//	$strVal=file_get_contents($targetdir.'/'.$var_name.".sh.bat.0");
+	//  }
+	  
+	  
 	  $elem->nodeValue=$strVal;
 	  $item_num++;
   }  
