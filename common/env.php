@@ -1,16 +1,42 @@
 <?php
-
-function enable_name_in_entries($name, $num) {
+$line_clicked=-1;
+function count_names_in_entries($name) {
+	$count=0;
+	
 	global $targetdir;
     $file = $targetdir.'/entries.html'; 
     $fh = fopen($file, 'r') or die('Could not open file: '.$file); 
-    $i = 0; 
-    $content="";
     while (!feof($fh)) { 
        $buffer = fgets($fh); 
    
-       if (strpos($buffer, "<label>".$name.".".$num."</label>") !== false) {
-         // TODO
+       if (strpos($buffer, "<label>".$name."</label>") !== false) {
+		$count++;
+       }  
+	   
+       if (strpos($buffer, "<label>".$name.".") !== false) {
+		$count++;
+       }  
+	   
+    } 
+    fclose($fh); 
+
+	return $count;
+}
+
+function enable_name_in_entries($name, $num, $except_line) {
+	global $targetdir;
+	global $line_clicked;
+    $file = $targetdir.'/entries.html'; 
+    $fh = fopen($file, 'r') or die('Could not open file: '.$file); 
+    $i = 0; 
+	$done = false;
+    $content="";
+echo "call "; 
+    while (!feof($fh)) { 
+       $buffer = fgets($fh); 
+   
+       if ((strpos($buffer, "<label>".$name.".".$num."</label>") !== false) && (!$done) && ($i != $except_line)){
+echo "en num=".$num." i=".$i." ";
 		$buffer=str_replace("enaction=1&num=".$num,"disaction=1",$buffer);
 		$buffer=str_replace("delaction=1&num=".$num,"delaction=1",$buffer);
 		$buffer=str_replace("off.png","on.png",$buffer);
@@ -18,6 +44,8 @@ function enable_name_in_entries($name, $num) {
 		$buffer=str_replace(".".$num."</label>","</label>",$buffer);
 		$buffer=str_replace("/".$name."sh.bat"."sh.bat.".$num,"/".$name, $buffer);
         $content.=$buffer;
+		$done=true;; // enable only one
+		$line_clicked=$i;
        }  else {
          //echo $buffer."<br/>\n";
         $content.=$buffer;
@@ -28,17 +56,19 @@ function enable_name_in_entries($name, $num) {
     file_put_contents($file, $content);  // entries.html
 }
 
-function disable_name_in_entries($name) {
+function disable_name_in_entries($name, $except_line) {
 	global $targetdir;
+	global $line_clicked;
     $file = $targetdir.'/entries.html'; 
     $fh = fopen($file, 'r') or die('Could not open file: '.$file); 
     $i = 0; 
+	$done = false;
     $content="";
     while (!feof($fh)) { 
        $buffer = fgets($fh); 
    
-       if (strpos($buffer, "<label>".$name."</label>") !== false) {
-         // TODO
+       if ((strpos($buffer, "<label>".$name."</label>") !== false) && (!$done) && ($i != $except_line)){
+echo "dis i=".$i." ";
 		$buffer=str_replace("disaction=1","enaction=1&num=0",$buffer);
 		$buffer=str_replace("delaction=1","delaction=1&num=0",$buffer);
 		$buffer=str_replace("on.png","off.png",$buffer);
@@ -46,6 +76,8 @@ function disable_name_in_entries($name) {
 		$buffer=str_replace("<label>".$name."</label>","<label>".$name.".0</label>",$buffer);
 		$buffer=str_replace("/".$name.".sh.bat\"","/".$name.".sh.bat.0\"",$buffer);
         $content.=$buffer;
+		$done=true; // disable only one
+		$line_clicked=$i;
        }  else {
          //echo $buffer."<br/>\n";
         $content.=$buffer;
@@ -77,8 +109,7 @@ $targetdir="";
 	  
       file_put_contents($targetdir.'/'.$envVar.'.sh.bat', "set ".$envVar."=new" , FILE_APPEND | LOCK_EX);
     }
-  }
-
+  }///////////////////////////////////////////////////////////////////////////////////////
   else if (isset($_GET['delaction'])) {
 	  
 	  
@@ -123,35 +154,33 @@ $targetdir="";
       unlink($targetdir.'/'.$_GET["name"].".sh.bat");
 	}
 
-  }
-
+  }///////////////////////////////////////////////////////////////////////////////////////
   else if (isset($_GET['disaction'])) {
+	// we disable this entry, but we enable another entry
+	$countnames=count_names_in_entries($_GET["name"]);
 	  
 	$nameexist=false;
-	if ($targetdir.'/'.$_GET["name"].".sh.bat.0") {
-		$nameexist=true;
+	if ($countnames > 1) {
+		$nameexist=true;		// we enable the another entry .0
 		// saving because it will be overwritten
 		copy($targetdir.'/'.$_GET["name"].".sh.bat.0", $targetdir.'/'.$_GET["name"].".sh.bat.0.nameexist");
 		}
 
-	 disable_name_in_entries($_GET["name"]);
+	disable_name_in_entries($_GET["name"], -1);
 
 	copy($targetdir.'/'.$_GET["name"].".sh.bat", $targetdir.'/'.$_GET["name"].".sh.bat.0");
 	if($nameexist) {
 		copy($targetdir.'/'.$_GET["name"].".sh.bat.0.nameexist",$targetdir.'/'.$_GET["name"].".sh.bat");
 	} else {
-		//unlink($targetdir.'/'.$_GET["name"].".sh.bat");	// ca marche pour le double pour les fichier mais pas l'affichage
+		unlink($targetdir.'/'.$_GET["name"].".sh.bat");
 	}
-		unlink($targetdir.'/'.$_GET["name"].".sh.bat");		// ca marche pour le single pour les fichiers et l'affichage
 	// remove temp file
 	unlink($targetdir.'/'.$_GET["name"].".sh.bat.0.nameexist");
 
-	//if(!$nameexist) {
-	//	enable_name_in_entries($_GET["name"], 0);
-	//}
-	
-  }
-
+	if($nameexist) {
+		enable_name_in_entries($_GET["name"], 0, $line_clicked);
+	}
+  }///////////////////////////////////////////////////////////////////////////////////////
   else if (isset($_GET['enaction'])) {
 
 	$nameexist=false;
@@ -179,6 +208,10 @@ $targetdir="";
 		
 		
   }
+
+  
+echo "debug: ";
+echo "count_test=".count_names_in_entries("test")." line=".$line_clicked."<br/>\n";
   
 ?>
 
