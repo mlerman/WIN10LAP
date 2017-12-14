@@ -1,0 +1,1 @@
+set TESTVAR=ceci est un test de la variable d'evironment
