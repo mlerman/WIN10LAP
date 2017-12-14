@@ -137,18 +137,17 @@ $targetdir="";
 	 disable_name_in_entries($_GET["name"]);
 
 	copy($targetdir.'/'.$_GET["name"].".sh.bat", $targetdir.'/'.$_GET["name"].".sh.bat.0");
-	if(!$nameexist) {
+	if($nameexist) {
 		copy($targetdir.'/'.$_GET["name"].".sh.bat.0.nameexist",$targetdir.'/'.$_GET["name"].".sh.bat");
 	} else {
-		unlink($targetdir.'/'.$_GET["name"].".sh.bat");
+		//unlink($targetdir.'/'.$_GET["name"].".sh.bat");	// ca marche pour le double pour les fichier mais pas l'affichage
 	}
+		unlink($targetdir.'/'.$_GET["name"].".sh.bat");		// ca marche pour le single pour les fichiers et l'affichage
 	// remove temp file
 	unlink($targetdir.'/'.$_GET["name"].".sh.bat.0.nameexist");
 
-
-	//} else {
-		// un autre avec le meme nom etait deja disabled, ceci le re-enable
-		//enable_name_in_entries($_GET["name"], $num);
+	//if(!$nameexist) {
+	//	enable_name_in_entries($_GET["name"], 0);
 	//}
 	
   }
@@ -167,20 +166,18 @@ $targetdir="";
 	enable_name_in_entries($_GET["name"], $num);
 
 	copy($targetdir.'/'.$_GET["name"].".sh.bat.".$num, $targetdir.'/'.$_GET["name"].".sh.bat");
-	if(!$nameexist) {
+	if($nameexist) {
 		copy($targetdir.'/'.$_GET["name"].".sh.bat.nameexist", $targetdir.'/'.$_GET["name"].".sh.bat.".$num);
+		//disable_name_in_entries($_GET["name"]);
 	} else {
-		unlink($targetdir.'/'.$_GET["name"].".sh.bat.".$num);
+		//unlink($targetdir.'/'.$_GET["name"].".sh.bat.".$num);
 	}
+		unlink($targetdir.'/'.$_GET["name"].".sh.bat.".$num);
 	// remove temp file
 	unlink($targetdir.'/'.$_GET["name"].".sh.bat.nameexist");
 
 		
 		
-	//} else {
-		// un autre avec le meme nom etait deja enabled, ceci le disable
-		//disable_name_in_entries($_GET["name"]);
-	//}
   }
   
 ?>
