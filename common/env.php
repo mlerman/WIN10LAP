@@ -12,17 +12,14 @@ function count_names_in_entries($name) {
        if (strpos($buffer, "<label>".$name."</label>") !== false) {
 		$count++;
        }  
-	   
        if (strpos($buffer, "<label>".$name.".") !== false) {
 		$count++;
        }  
-	   
     } 
     fclose($fh); 
-
 	return $count;
 }
-
+///////////////////////////////////////////////////////////////////////////////
 function enable_name_in_entries($name, $num, $except_line) {
 	global $targetdir;
 	global $line_clicked;
@@ -31,12 +28,12 @@ function enable_name_in_entries($name, $num, $except_line) {
     $i = 0; 
 	$done = false;
     $content="";
-echo "call "; 
+//echo "call "; 
     while (!feof($fh)) { 
        $buffer = fgets($fh); 
    
        if ((strpos($buffer, "<label>".$name.".".$num."</label>") !== false) && (!$done) && ($i != $except_line)){
-echo "en num=".$num." i=".$i." ";
+//echo "en num=".$num." i=".$i." ";
 		$buffer=str_replace("enaction=1&num=".$num,"disaction=1",$buffer);
 		$buffer=str_replace("delaction=1&num=".$num,"delaction=1",$buffer);
 		$buffer=str_replace("off.png","on.png",$buffer);
@@ -55,7 +52,7 @@ echo "en num=".$num." i=".$i." ";
     fclose($fh); 
     file_put_contents($file, $content);  // entries.html
 }
-
+//////////////////////////////////////////////////////////////////////////////
 function disable_name_in_entries($name, $except_line) {
 	global $targetdir;
 	global $line_clicked;
@@ -68,7 +65,7 @@ function disable_name_in_entries($name, $except_line) {
        $buffer = fgets($fh); 
    
        if ((strpos($buffer, "<label>".$name."</label>") !== false) && (!$done) && ($i != $except_line)){
-echo "dis i=".$i." ";
+//echo "dis i=".$i." ";
 		$buffer=str_replace("disaction=1","enaction=1&num=0",$buffer);
 		$buffer=str_replace("delaction=1","delaction=1&num=0",$buffer);
 		$buffer=str_replace("on.png","off.png",$buffer);
@@ -85,11 +82,9 @@ echo "dis i=".$i." ";
       $i++;   
     } 
     fclose($fh); 
-
     file_put_contents($file, $content);  // entries.html
-	
 }
-
+////////////////////////////////////////////////////////////////////////////////
 
 $targetdir="";
   if (isset($_GET['targetdir'])) {
@@ -111,8 +106,6 @@ $targetdir="";
     }
   }///////////////////////////////////////////////////////////////////////////////////////
   else if (isset($_GET['delaction'])) {
-	  
-	  
 	$num=-1;
 	if (isset($_GET['num'])) {
 		$num=$_GET['num'];
@@ -156,9 +149,8 @@ $targetdir="";
 
   }///////////////////////////////////////////////////////////////////////////////////////
   else if (isset($_GET['disaction'])) {
-	// we disable this entry, but we enable another entry
+	// we disable this entry, but we may enable another entry
 	$countnames=count_names_in_entries($_GET["name"]);
-	  
 	$nameexist=false;
 	if ($countnames > 1) {
 		$nameexist=true;		// we enable the another entry .0
@@ -182,9 +174,10 @@ $targetdir="";
 	}
   }///////////////////////////////////////////////////////////////////////////////////////
   else if (isset($_GET['enaction'])) {
-
+	// we enable this entry, but we may disable another entry
+	$countnames=count_names_in_entries($_GET["name"]);
 	$nameexist=false;
-	if ($targetdir.'/'.$_GET["name"].".sh.bat") {
+	if ($countnames > 1) {
 		$nameexist=true;
 		// saving because it will be overwritten
 		copy($targetdir.'/'.$_GET["name"].".sh.bat", $targetdir.'/'.$_GET["name"].".sh.bat.nameexist");
@@ -192,26 +185,28 @@ $targetdir="";
   
 	$num=$_GET['num'];
 	
-	enable_name_in_entries($_GET["name"], $num);
+	enable_name_in_entries($_GET["name"], $num, -1);
 
 	copy($targetdir.'/'.$_GET["name"].".sh.bat.".$num, $targetdir.'/'.$_GET["name"].".sh.bat");
 	if($nameexist) {
 		copy($targetdir.'/'.$_GET["name"].".sh.bat.nameexist", $targetdir.'/'.$_GET["name"].".sh.bat.".$num);
-		//disable_name_in_entries($_GET["name"]);
 	} else {
-		//unlink($targetdir.'/'.$_GET["name"].".sh.bat.".$num);
-	}
 		unlink($targetdir.'/'.$_GET["name"].".sh.bat.".$num);
+	}
+		//unlink($targetdir.'/'.$_GET["name"].".sh.bat.".$num);
 	// remove temp file
 	unlink($targetdir.'/'.$_GET["name"].".sh.bat.nameexist");
+	
 
-		
-		
-  }
+	if($nameexist) {
+		// here we disable another entry
+		disable_name_in_entries($_GET["name"], $line_clicked);
+	}
+  }//////////////////////////////////////////////////////////////////////////////////////////
 
   
-echo "debug: ";
-echo "count_test=".count_names_in_entries("test")." line=".$line_clicked."<br/>\n";
+//echo "debug: ";
+//echo "count_test=".count_names_in_entries("test")." line=".$line_clicked."<br/>\n";
   
 ?>
 
