@@ -46,7 +46,6 @@ echo "en num=".$num." i=".$i." ";
 		$buffer=str_replace("off.png","on.png",$buffer);
 		// change the name by removing .0
 		$buffer=str_replace(".".$num."</label>","</label>",$buffer);
-////// le nom du fichier ne revient pas
 		$buffer=str_replace("/".$name.".sh.bat.".$num,"/".$name.".sh.bat", $buffer);
         $content.=$buffer;
 		$done=true;; // enable only one
@@ -112,7 +111,7 @@ $targetdir="";
 			$txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&disaction=1&name=".$envVar."\"><img src=\"/doc/images/on.png\"></a>&nbsp;<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar."</label>  <span id=\"".$targetdir.'/'.$envVar.".sh.bat"."\" class=\"editText\"></span><hr/>";
 			file_put_contents($targetdir.'/'.$envVar.'.sh.bat', "set ".$envVar."=new" , LOCK_EX);
 	  } else {
-			$txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&enaction=1&name=".$envVar."\"><img src=\"/doc/images/off.png\"></a>&nbsp;<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&num=".($cnt-1)."&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar.".".($cnt-1)."</label>  <span id=\"".$targetdir.'/'.$envVar.".sh.bat.".($cnt-1)."\" class=\"editText\"></span><hr/>";
+			$txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&enaction=1&num=".($cnt-1)."&name=".$envVar."\"><img src=\"/doc/images/off.png\"></a>&nbsp;<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&num=".($cnt-1)."&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar.".".($cnt-1)."</label>  <span id=\"".$targetdir.'/'.$envVar.".sh.bat.".($cnt-1)."\" class=\"editText\"></span><hr/>";
 			file_put_contents($targetdir.'/'.$envVar.'.sh.bat.'.($cnt-1), "set ".$envVar."=new" , LOCK_EX);
 	  }
       file_put_contents($targetdir.'/entries.html', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
@@ -219,9 +218,9 @@ $targetdir="";
   }//////////////////////////////////////////////////////////////////////////////////////////
 
   
-echo "debug: ";
-echo "count_test=".count_names_in_entries("test")." line=".$line_clicked."<br/>\n";
-echo "one_name_state=".$one_name_state."<br/>\n";
+echo "debug: pour l'instant limite a 2 entree par nom"."<br/>\n";
+//echo "count_test=".count_names_in_entries("test")." line=".$line_clicked."<br/>\n";
+//echo "one_name_state=".$one_name_state."<br/>\n";
 
   
 ?>
