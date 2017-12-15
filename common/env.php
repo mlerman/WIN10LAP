@@ -1,9 +1,12 @@
 <?php
 $line_clicked=-1;
+$one_name_state="";
 function count_names_in_entries($name) {
 	$count=0;
 	
 	global $targetdir;
+	global $one_name_state;
+	$state="";
     $file = $targetdir.'/entries.html'; 
     $fh = fopen($file, 'r') or die('Could not open file: '.$file); 
     while (!feof($fh)) { 
@@ -11,9 +14,13 @@ function count_names_in_entries($name) {
    
        if (strpos($buffer, "<label>".$name."</label>") !== false) {
 		$count++;
+		if($count==1)
+				$one_name_state="enabled";
        }  
        if (strpos($buffer, "<label>".$name.".") !== false) {
 		$count++;
+		if($count==1)
+				$one_name_state="disabled";
        }  
     } 
     fclose($fh); 
@@ -69,7 +76,7 @@ function disable_name_in_entries($name, $except_line) {
 		$buffer=str_replace("disaction=1","enaction=1&num=0",$buffer);
 		$buffer=str_replace("delaction=1","delaction=1&num=0",$buffer);
 		$buffer=str_replace("on.png","off.png",$buffer);
-		// cahnge the name by adding .0
+		// change the name by adding .0
 		$buffer=str_replace("<label>".$name."</label>","<label>".$name.".0</label>",$buffer);
 		$buffer=str_replace("/".$name.".sh.bat\"","/".$name.".sh.bat.0\"",$buffer);
         $content.=$buffer;
@@ -95,14 +102,20 @@ $targetdir="";
   //file_put_contents("debug.txt","targetdir ".$targetdir."\n", FILE_APPEND);
   //file_put_contents("debug.txt","targetdir ".$targetdir."\n", FILE_APPEND);
   //exit(0);
-
+/////////////////////////////////////////////////////////////////////////////////////////
   if (isset($_POST['submit'])) {
     if(isset($_POST['envVar']) && !empty($_POST['envVar'])) {
       $envVar = $_POST['envVar'];
-	  $txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&disaction=1&name=".$envVar."\"><img src=\"/doc/images/on.png\"></a>&nbsp;<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar."</label>  <span id=\"".$targetdir.'/'.$envVar.".sh.bat"."\" class=\"editText\"></span><hr/>";
+	  $cnt=count_names_in_entries($envVar);
+	  if(($cnt==0) || ( ($cnt==1) && ($one_name_state=="disabled")   )) {
+			$txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&disaction=1&name=".$envVar."\"><img src=\"/doc/images/on.png\"></a>&nbsp;<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar."</label>  <span id=\"".$targetdir.'/'.$envVar.".sh.bat"."\" class=\"editText\"></span><hr/>";
+			file_put_contents($targetdir.'/'.$envVar.'.sh.bat', "set ".$envVar."=new" , LOCK_EX);
+	  } else {
+			$txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&enaction=1&name=".$envVar."\"><img src=\"/doc/images/off.png\"></a>&nbsp;<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&num=".($cnt-1)."&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar.".".($cnt-1)."</label>  <span id=\"".$targetdir.'/'.$envVar.".sh.bat.".($cnt-1)."\" class=\"editText\"></span><hr/>";
+			file_put_contents($targetdir.'/'.$envVar.'.sh.bat.'.($cnt-1), "set ".$envVar."=new" , LOCK_EX);
+	  }
       file_put_contents($targetdir.'/entries.html', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
 	  
-      file_put_contents($targetdir.'/'.$envVar.'.sh.bat', "set ".$envVar."=new" , FILE_APPEND | LOCK_EX);
     }
   }///////////////////////////////////////////////////////////////////////////////////////
   else if (isset($_GET['delaction'])) {
@@ -205,8 +218,10 @@ $targetdir="";
   }//////////////////////////////////////////////////////////////////////////////////////////
 
   
-//echo "debug: ";
-//echo "count_test=".count_names_in_entries("test")." line=".$line_clicked."<br/>\n";
+echo "debug: ";
+echo "count_test=".count_names_in_entries("test")." line=".$line_clicked."<br/>\n";
+echo "one_name_state=".$one_name_state."<br/>\n";
+
   
 ?>
 
