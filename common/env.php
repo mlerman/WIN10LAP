@@ -35,18 +35,19 @@ function enable_name_in_entries($name, $num, $except_line) {
     $i = 0; 
 	$done = false;
     $content="";
-//echo "call "; 
+echo "call "; 
     while (!feof($fh)) { 
        $buffer = fgets($fh); 
    
        if ((strpos($buffer, "<label>".$name.".".$num."</label>") !== false) && (!$done) && ($i != $except_line)){
-//echo "en num=".$num." i=".$i." ";
+echo "en num=".$num." i=".$i." ";
 		$buffer=str_replace("enaction=1&num=".$num,"disaction=1",$buffer);
 		$buffer=str_replace("delaction=1&num=".$num,"delaction=1",$buffer);
 		$buffer=str_replace("off.png","on.png",$buffer);
 		// change the name by removing .0
 		$buffer=str_replace(".".$num."</label>","</label>",$buffer);
-		$buffer=str_replace("/".$name."sh.bat"."sh.bat.".$num,"/".$name, $buffer);
+////// le nom du fichier ne revient pas
+		$buffer=str_replace("/".$name.".sh.bat.".$num,"/".$name.".sh.bat", $buffer);
         $content.=$buffer;
 		$done=true;; // enable only one
 		$line_clicked=$i;
