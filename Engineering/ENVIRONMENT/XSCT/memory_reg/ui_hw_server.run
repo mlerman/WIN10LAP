@@ -1,0 +1,3 @@
+call c:\Xilinx\Vivado\2017.2\settings64.bat
+hw_server
+pause
