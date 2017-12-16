@@ -35,12 +35,12 @@ function enable_name_in_entries($name, $num, $except_line) {
     $i = 0; 
 	$done = false;
     $content="";
-echo "call "; 
+//echo "call "; 
     while (!feof($fh)) { 
        $buffer = fgets($fh); 
    
        if ((strpos($buffer, "<label>".$name.".".$num."</label>") !== false) && (!$done) && ($i != $except_line)){
-echo "en num=".$num." i=".$i." ";
+//echo "en num=".$num." i=".$i." ";
 		$buffer=str_replace("enaction=1&num=".$num,"disaction=1",$buffer);
 		$buffer=str_replace("delaction=1&num=".$num,"delaction=1",$buffer);
 		$buffer=str_replace("off.png","on.png",$buffer);
@@ -60,7 +60,7 @@ echo "en num=".$num." i=".$i." ";
     file_put_contents($file, $content);  // entries.html
 }
 //////////////////////////////////////////////////////////////////////////////
-function disable_name_in_entries($name, $except_line) {
+function disable_name_in_entries($name, $except_line, $num) {
 	global $targetdir;
 	global $line_clicked;
     $file = $targetdir.'/entries.html'; 
@@ -70,15 +70,17 @@ function disable_name_in_entries($name, $except_line) {
     $content="";
     while (!feof($fh)) { 
        $buffer = fgets($fh); 
-   
+   $nunum=0;
+   $nunum=$num;
        if ((strpos($buffer, "<label>".$name."</label>") !== false) && (!$done) && ($i != $except_line)){
 //echo "dis i=".$i." ";
-		$buffer=str_replace("disaction=1","enaction=1&num=0",$buffer);
-		$buffer=str_replace("delaction=1","delaction=1&num=0",$buffer);
+		$buffer=str_replace("disaction=1","enaction=1&num=".($nunum),$buffer);
+		$buffer=str_replace("delaction=1","delaction=1&num=".($nunum),$buffer);
 		$buffer=str_replace("on.png","off.png",$buffer);
 		// change the name by adding .0
-		$buffer=str_replace("<label>".$name."</label>","<label>".$name.".0</label>",$buffer);
-		$buffer=str_replace("/".$name.".sh.bat\"","/".$name.".sh.bat.0\"",$buffer);
+//echo "xnum=".$num." \n";
+		$buffer=str_replace("<label>".$name."</label>","<label>".$name.".".($nunum)."</label>",$buffer);
+		$buffer=str_replace("/".$name.".sh.bat\"","/".$name.".sh.bat.".($nunum)."\"",$buffer);
         $content.=$buffer;
 		$done=true; // disable only one
 		$line_clicked=$i;
@@ -97,6 +99,10 @@ $targetdir="";
   if (isset($_GET['targetdir'])) {
 	  $targetdir=$_GET['targetdir'];
 	  $targetdir = str_replace('\\', '/', $targetdir);
+  }
+$num=0;
+  if (isset($_GET['num'])) {
+	$num=$_GET['num'];
   }
   
   //file_put_contents("debug.txt","targetdir ".$targetdir."\n", FILE_APPEND);
@@ -119,10 +125,10 @@ $targetdir="";
     }
   }///////////////////////////////////////////////////////////////////////////////////////
   else if (isset($_GET['delaction'])) {
-	$num=-1;
-	if (isset($_GET['num'])) {
-		$num=$_GET['num'];
-	}
+	//$num=-1;
+	//if (isset($_GET['num'])) {
+	//	$num=$_GET['num'];
+	//}
 
     $file = $targetdir.'/entries.html'; 
     $fh = fopen($file, 'r') or die('Could not open file: '.$file); 
@@ -168,19 +174,22 @@ $targetdir="";
 	if ($countnames > 1) {
 		$nameexist=true;		// we enable the another entry .0
 		// saving because it will be overwritten
-		copy($targetdir.'/'.$_GET["name"].".sh.bat.0", $targetdir.'/'.$_GET["name"].".sh.bat.0.nameexist");
+//echo "num=".$num." \n";
+		copy($targetdir.'/'.$_GET["name"].".sh.bat.".$num, $targetdir.'/'.$_GET["name"].".sh.bat.".$num.".nameexist");
 		}
 
-	disable_name_in_entries($_GET["name"], -1);
+	disable_name_in_entries($_GET["name"], -1, $num);
 
-	copy($targetdir.'/'.$_GET["name"].".sh.bat", $targetdir.'/'.$_GET["name"].".sh.bat.0");
+//echo "num=".$num." \n";
+	copy($targetdir.'/'.$_GET["name"].".sh.bat", $targetdir.'/'.$_GET["name"].".sh.bat.".$num);
 	if($nameexist) {
-		copy($targetdir.'/'.$_GET["name"].".sh.bat.0.nameexist",$targetdir.'/'.$_GET["name"].".sh.bat");
+		copy($targetdir.'/'.$_GET["name"].".sh.bat.".$num.".nameexist",$targetdir.'/'.$_GET["name"].".sh.bat");
 	} else {
 		unlink($targetdir.'/'.$_GET["name"].".sh.bat");
 	}
 	// remove temp file
-	unlink($targetdir.'/'.$_GET["name"].".sh.bat.0.nameexist");
+//echo "num=".$num." \n";
+	unlink($targetdir.'/'.$_GET["name"].".sh.bat.".$num.".nameexist");
 
 	if($nameexist) {
 		enable_name_in_entries($_GET["name"], 0, $line_clicked);
@@ -196,7 +205,8 @@ $targetdir="";
 		copy($targetdir.'/'.$_GET["name"].".sh.bat", $targetdir.'/'.$_GET["name"].".sh.bat.nameexist");
 		}
   
-	$num=$_GET['num'];
+	//$num=$_GET['num'];
+//echo "num=".$num." <br/>\n";
 	
 	enable_name_in_entries($_GET["name"], $num, -1);
 
@@ -206,29 +216,30 @@ $targetdir="";
 	} else {
 		unlink($targetdir.'/'.$_GET["name"].".sh.bat.".$num);
 	}
-		//unlink($targetdir.'/'.$_GET["name"].".sh.bat.".$num);
 	// remove temp file
 	unlink($targetdir.'/'.$_GET["name"].".sh.bat.nameexist");
 	
 
 	if($nameexist) {
 		// here we disable another entry
-		disable_name_in_entries($_GET["name"], $line_clicked);
+		disable_name_in_entries($_GET["name"], $line_clicked, $num);
 	}
   }//////////////////////////////////////////////////////////////////////////////////////////
 
   
-echo "debug: pour l'instant limite a 2 entree par nom"."<br/>\n";
+//echo "debug: pour l'instant limite a 2 entree par nom"."<br/>\n";
 //echo "count_test=".count_names_in_entries("test")." line=".$line_clicked."<br/>\n";
 //echo "one_name_state=".$one_name_state."<br/>\n";
 
+$pos=strrpos($targetdir, "/");
+$prjname=substr($targetdir, $pos+1);
   
 ?>
 
 
 <html>
 <head>
-<title>Manage environment variables</title>
+<title>Manage environment variables for <?php echo $prjname; ?></title>
 <script type="text/javascript" src="./instanteditenv.js"></script>
 <style type='text/css'>
 body{
@@ -313,25 +324,23 @@ function str_ends_with($haystack, $needle)
   foreach ($spans as $span) {
 	  $elem_label = $doc->getElementsByTagName('label')->item($item_num);
 	  $var_name=$elem_label->nodeValue;
-//echo "item ".$item_num." ".$span->nodeValue." ".$var_name."<br/>\n";
+//echo "item ".$item_num."-".$span->nodeValue."-".$var_name."<br/>\n";
 	  $elem = $doc->getElementsByTagName('span')->item($item_num);
 	  
-	  // if the label ends with ".0"
-	  if (str_ends_with($var_name, ".0")) {	//disabled
-		  $var_name= str_replace(".0","",$var_name);
-		  $strVal=file_get_contents($targetdir.'/'.$var_name.".sh.bat.0");
+	  $name_in_var="";
+	  $number_in_var=-1;
+	  if ($pos=strrpos($var_name, ".")) {  //disabled
+		$number_in_var=substr($var_name, $pos+1);
+		$name_in_var=substr($var_name, 0, $pos);
+		  $var_name= str_replace(".".$number_in_var,"",$var_name);
+		  $strVal=file_get_contents($targetdir.'/'.$var_name.".sh.bat.".$number_in_var);
+		
 	  } else {
-		  $strVal=file_get_contents($targetdir.'/'.$var_name.".sh.bat");
+		$strVal=file_get_contents($targetdir.'/'.$var_name.".sh.bat"); 
 	  }
 	  
-	//	if (file_exists($targetdir.'/'.$var_name.".sh.bat")) {
-	//	$strVal=file_get_contents($targetdir.'/'.$var_name.".sh.bat");
-	//  }	else {  // disabled
-	//	$var_name= str_replace(".0","",$var_name);
-	//	$strVal=file_get_contents($targetdir.'/'.$var_name.".sh.bat.0");
-	//  }
-	  
-	  
+	//echo "name ".$name_in_var." number ".$number_in_var."<br/>\n";;
+  
 	  $elem->nodeValue=$strVal;
 	  $item_num++;
   }  
