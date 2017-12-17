@@ -1,0 +1,15 @@
+filemanager.php est OK permet de copier des fichiers
+OK mais aleatoire, des fois affiche waiting indefinement
+mais j'ai deja vu marcher
+
+avantage root et path sont differencies
+peut mettre un certain temps avant d'afficher
+mais pas encore tinyfilemanager.php sense etre plus evolue
+affiche indefiniement waiting...
+j'ai jamais vu marcher
+aussi lancer tinyfilemanager.php block filemanager.php
+<hr/>
+admin/admin
+user/12345
+<hr/>
+le login ne marche pas
