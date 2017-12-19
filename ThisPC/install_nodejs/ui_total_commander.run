@@ -1,0 +1,1 @@
+start c:\totalcmd\TOTALCMD.EXE /O "%cd%" "c:\Program Files (x86)\nodejs\" 

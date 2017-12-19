@@ -1,0 +1,4 @@
+rem git clone https://github.com/krishnasrinivas/wetty
+cd wetty
+npm install
+pause

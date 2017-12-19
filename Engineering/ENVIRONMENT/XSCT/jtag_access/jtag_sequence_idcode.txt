@@ -1,0 +1,33 @@
+puts "Connecting to HW_SERVER on $env(HW_SERVER_HOST)"
+connect -host $env(HW_SERVER_HOST) -port 3121
+
+jtag targets -set -filter {name == "xczu3"}
+
+#puts "---------------- Showing jtag targets with selection ----------------"
+jtag targets
+set tcl_interactive false
+
+puts "---------------- sequence ----------------"
+set seqname [jtag sequence]
+$seqname state RESET
+
+$seqname irshift -register idcode -state DRSHIFT 
+$seqname drshift -capture -tdi 0 32
+set result [$seqname run]
+
+puts "---------------- result ----------------"
+puts $result
+
+set b0 [string range $result 0 1]
+set b1 [string range $result 2 3]
+set b2 [string range $result 4 5]
+set b3 [string range $result 6 7]
+
+puts "IDCODE is : $b3$b2$b1$b0"
+
+puts "---------------- finished ----------------"
+
+$seqname delete
+
+disconnect
+exit

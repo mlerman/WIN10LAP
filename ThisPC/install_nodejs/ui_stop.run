@@ -1,0 +1,4 @@
+
+for /F "TOKENS=1,2,*" %%a in ('tasklist /FI "IMAGENAME eq node.exe"') do set MyPID=%%b
+echo %MyPID%
+c:\UniServer\www\doc\files\ThisPC\SendSignal\SendSignal.exe %MyPID%

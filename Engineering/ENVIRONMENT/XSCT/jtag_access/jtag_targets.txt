@@ -1,0 +1,8 @@
+puts "Running init.tcl\nConnecting to HW_SERVER on $env(HW_SERVER_HOST)"
+connect -host $env(HW_SERVER_HOST) -port 3121
+
+puts "---------------- Showing jtag targets ----------------"
+jtag targets
+
+disconnect
+exit

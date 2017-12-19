@@ -1,0 +1,35 @@
+puts "Running init.tcl\nConnecting to HW_SERVER on $env(HW_SERVER_HOST)"
+connect -host $env(HW_SERVER_HOST) -port 3121
+
+puts "JTAG targets with selection"
+jtag targets 3
+puts "----------------  jtag claim   ----------------"
+jtag claim 0xffffffff
+
+#targets -set -nocase -filter {name =~ "Cortex-A53*#0"}
+puts "---------------- Showing jtag targets ----------------"
+jtag targets
+
+puts "---------------- Showing XSDB targets ----------------"
+xsdb targets
+
+puts "----------------   Showing FPGA stat  ----------------"
+xsdb fpga -stat
+
+
+
+#jtag device_properties 0x24738093
+
+#jtag claim 0xffffffff
+#jtag sequence get_pin tck
+
+#jtag sequence irshift ox9
+#jtag sequence drshift -tdi
+
+puts ""
+puts "----------------     jtag disclaim     ----------------"
+jtag disclaim 0xffffffff
+puts "----------------     Finished      ----------------"
+
+disconnect
+exit
