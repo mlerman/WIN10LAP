@@ -1,11 +1,11 @@
-set tcl_interactive false
-puts "Running init.tcl\nConnecting to HW_SERVER on $env(HW_SERVER_HOST)"
+puts "Connecting to HW_SERVER on $env(HW_SERVER_HOST)"
 connect -host $env(HW_SERVER_HOST) -port 3121
 
 jtag targets -set -filter {name == "xczu3"}
 
 #puts "---------------- Showing jtag targets with selection ----------------"
 jtag targets
+set tcl_interactive false
 
 puts "---------------- sequence ----------------"
 set seqname [jtag sequence]
