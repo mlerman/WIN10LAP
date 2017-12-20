@@ -1,0 +1,66 @@
+#-----------------------------------------------------------
+# Vivado v2017.2.1 (64-bit)
+# SW Build 1957588 on Wed Aug  9 16:32:24 MDT 2017
+# IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
+# Start of session at: Wed Dec 20 11:02:32 2017
+# Process ID: 4356
+# Current directory: C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO_TCL/test
+# Command line: vivado.exe -mode tcl
+# Log file: C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO_TCL/test/vivado.log
+# Journal file: C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO_TCL/test\vivado.jou
+#-----------------------------------------------------------
+Vivado% help
+WARNING: [Common 17-20] Did not find any categories for task 'write_dsa_rom'
+Topic Categories:
+Bitgen
+Board
+DRC
+Debug
+Device
+FileIO
+Floorplan
+GUIControl
+IPFlow
+IPIntegrator
+Memory
+Methodology
+Netlist
+Object
+Partition
+PinPlanning
+Power
+Project
+PropertyAndParameter
+Report
+SDC
+Simulation
+SysGen
+Tcl
+TclBuiltIn
+Timing
+ToolLaunch
+Tools
+XDC
+XPS
+projutils
+simulation
+synthesis
+user-written
+xilinxtclstore
+To list help topics by category, type 'help -category <category>'. For example:
+% help -category Project
+
+Vivado% help memory
+ERROR: [Common 17-25] No topics matched 'memory'
+
+Vivado% memory
+invalid command name "memory"
+Vivado% help debug
+ERROR: [Common 17-25] No topics matched 'debug'
+
+Vivado% Memory
+invalid command name "Memory"
+Vivado% help Memory
+ERROR: [Common 17-25] No topics matched 'Memory'
+
+Vivado% 

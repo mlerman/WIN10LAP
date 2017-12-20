@@ -1,0 +1,491 @@
+#-----------------------------------------------------------
+# Vivado v2017.2.1 (64-bit)
+# SW Build 1957588 on Wed Aug  9 16:32:24 MDT 2017
+# IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
+# Start of session at: Wed Dec 20 12:01:09 2017
+# Process ID: 12644
+# Current directory: C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO_TCL/test
+# Command line: vivado.exe -mode tcl
+# Log file: C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO_TCL/test/vivado.log
+# Journal file: C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO_TCL/test\vivado.jou
+#-----------------------------------------------------------
+Vivado% help -category Memory
+WARNING: [Common 17-20] Did not find any categories for task 'write_dsa_rom'
+
+Topic                Description
+implement_mig_cores  Call IP Services to regenerate an IP, then stitch it into 
+                     the current netlist
+
+For help on an individual topic, type 'help <topic>'. For example:
+% help create_project
+
+Vivado% help create_project
+create_project
+
+Description: 
+Create a new project
+
+Syntax: 
+create_project  [-part <arg>] [-force] [-in_memory] [-ip] [-quiet] [-verbose]
+                [<name>] [<dir>]
+
+Returns: 
+new project object
+
+Usage: 
+  Name          Description
+  -------------------------
+  [-part]       Target part
+  [-force]      Overwrite existing project directory
+  [-in_memory]  Create an in-memory project
+  [-ip]         Default GUI behavior is for a managed IP project
+  [-quiet]      Ignore command errors
+  [-verbose]    Suspend message limits during command execution
+  [<name>]      Project name
+  [<dir>]       Directory where the project file is saved
+                Default: .
+
+Categories: 
+Project
+
+Description:
+
+  Creates a Vivado Design Suite project file (.xpr), or a project file for
+  the Vivado Lab Edition (.lpr), in the specified directory.
+
+  For the Vivado Lab Edition: The create_project command has a different
+  command syntax, with fewer options, in the Vivado Lab Edition. The options
+  that are not supported in Vivado Lab Edition are:
+
+   *  -part - The Vivado Lab Edition project (.lpr) does not specify a target
+      part because the current_hw_target and current_hw_device determine the
+      target part.
+
+   *  -ip - The Vivado Lab Edition does not define projects for the Managed
+      IP flow.
+
+  For the Vivado Design Suite: The default project created for the Vivado
+  Design Suite is an RTL project, which defines the project as holding and
+  manage RTL source files in the source fileset. The type of project is
+  determined by the DESIGN_MODE Property on the source fileset when the
+  project is created. To change the project type, use the set_property
+  command to set the DESIGN_MODE property on the current_fileset as follows:
+
+   *  RTL Project - set_property DESIGN_MODE RTL [current_fileset]
+
+   *  Netlist Project - set_property DESIGN_MODE GateLvl [current_fileset]
+
+   *  I/O Planning Project - set_property DESIGN_MODE PinPlanning
+      [current_fileset]
+
+  Refer to the Vivado Design Suite User Guide: System-Level Design Entry
+  (UG895) for more information on the different types of projects.
+
+  This command returns a transcript of its process and the name of the
+  created project, or returns an error if it fails.
+
+Arguments:
+
+  -part <arg> - (Optional) Specifies the Xilinx part to be used for the
+  project. This can be changed after the project is created. If the -part
+  option is not specified, the default part will be used. This option is not
+  supported in Vivado Lab Edition.
+
+  -force - (Optional) This option is required to overwrite an existing
+  project. If the project name is already define in the specified <dir> then
+  you must also specify the -force option for the tool to overwrite the
+  existing project.
+
+  Note: If the existing project is currently open in the tool, the new
+  project will overwrite the existing project on the disk, but both projects
+  will be opened in the tool. In this case you should probably run the
+  close_project command prior to running create_project.
+
+  -in_memory - (Optional) Specifies that the project should be created in the
+  in-memory database of the Vivado Design Suite to support the Non-Project
+  design flow. This project will not result in a project file or directory
+  structure being written to disk. The purpose of the in-memory project is to
+  allow properties usually associated with a project-based design to be
+  associated with the in-memory design of the non-project design flow.
+
+  Note: The use of -in_memory is not part of the standard non-project design
+  flow, and may cause unexpected behaviors in the Vivado tools. For more
+  information on Non-Project Mode refer to the Vivado Design Suite User
+  Guide: Design Flows Overview (UG892).
+
+  -ip - (Optional) Create a project for the Managed IP flow for exploring IP
+  in the IP catalog, customizing IP, and managing a repository of configured
+  IP. Refer to the Vivado Design Suite User Guide: Designing with IP (UG896)
+  for more information on the Managed IP flow. This option is not supported
+  in Vivado Lab Edition.
+
+  -quiet - (Optional) Execute the command quietly, returning no messages from
+  the command. The command also returns TCL_OK regardless of any errors
+  encountered during execution.
+
+  Note: Any errors encountered on the command-line, while launching the
+  command, will be returned. Only errors occurring inside the command will be
+  trapped.
+
+  -verbose - (Optional) Temporarily override any message limits and return
+  all messages from this command.
+
+  Note: Message limits can be defined with the set_msg_config command.
+
+  <name> - (Optional) This argument does not require a parameter name,
+  however, it must appear before the specified <dir>. Since these commands do
+  not have parameters, the tool interprets the first argument as <name> and
+  uses the second argument as <dir>. A project file is created <name> .xpr,
+  (or <name> .lpr) and a project data folder is also created <name> .data and
+  both are written into the specified directory <dir>.
+
+  Note: The project file created by the tool is an RTL source file by
+  default. You must use the set_property command to set the DESIGN_MODE
+  property to change the project from an RTL source project to a Netlist or
+  an I/O Pin Planning project.
+
+  <dir> - (Optional) This argument specifies the directory name to write the
+  new project file into. If the specified directory does not exist a new
+  directory will be created. If the directory is specified with the complete
+  path, the tool uses the specified path name. However, if <dir> is specified
+  without a path, the tool looks for or creates the directory in the current
+  working directory, or the directory from which the tool was launched.
+
+  Note: When creating a project in GUI-mode, the tool appends the filename
+  <name> to the directory name <dir> and creates a project directory with the
+  name <dir> /<name> and places the new project file and project data folder
+  into that project directory.
+
+Examples:
+
+  When run from the Vivado Design Suite, the following example creates a
+  project called project1.xpr in a directory called myDesigns:
+
+    create_project project1 myDesigns
+
+  Note: Because the <dir> is specified as the folder name only, the tool will
+  create the project in the current working directory, or the directory from
+  which the tool was launched.
+
+  When run from the Vivado Lab Edition, this example creates a project called
+  project1.lpr in a directory called myDesigns:
+
+    create_project project1 myDesigns
+
+  The following example creates a project called Proj1 in a directory called
+  FPGA in C:/Designs. In addition, the tool will overwrite an existing
+  project if one is found to exist in the specified location. In the second
+  and third lines, the location of -force is changed to show the flexibility
+  of argument placement.
+
+    create_project Proj1 C:/Designs/FPGA -force 
+    -or- 
+    create_project Proj1 -force C:/Designs/FPGA 
+    -or- 
+    create_project -force Proj1 C:/Designs/FPGA 
+    
+
+  Note: In all cases the first argument without a preceding keyword is
+  interpreted as the <name> variable, and the second argument without a
+  preceding keyword is the <dir> variable.
+
+  The following example creates a project for the Manage IP flow in the
+  specified directory:
+
+    create_project -ip manageIP C:/Data
+
+  The following example creates a new project called pin_project, and then
+  sets the design_mode property as required for an I/O Pin Planning project,
+  and finally opens an IO design:
+
+    create_project pin_project C:/Designs/PinPlanning 
+    set_property design_mode PinPlanning [current_fileset]   
+    open_io_design -name io_1
+
+See Also:
+
+   *  close_project
+   *  current_hw_device
+   *  current_hw_target
+   *  current_project
+   *  open_io_design
+   *  open_project
+   *  save_project_as
+   *  set_property
+
+Vivado% help
+Topic Categories:
+Bitgen
+Board
+DRC
+Debug
+Device
+FileIO
+Floorplan
+GUIControl
+IPFlow
+IPIntegrator
+Memory
+Methodology
+Netlist
+Object
+Partition
+PinPlanning
+Power
+Project
+PropertyAndParameter
+Report
+SDC
+Simulation
+SysGen
+Tcl
+TclBuiltIn
+Timing
+ToolLaunch
+Tools
+XDC
+XPS
+projutils
+simulation
+synthesis
+user-written
+xilinxtclstore
+To list help topics by category, type 'help -category <category>'. For example:
+% help -category Project
+
+Vivado% help Tcl
+Tcl(n)                Tcl Built-In Commands                Tcl(n)
+
+
+
+_________________________________________________________________
+
+NAME
+       Tcl - Tool Command Language
+
+SYNOPSIS
+       Summary of Tcl language syntax.
+_________________________________________________________________
+
+DESCRIPTION
+       The following rules define the syntax and semantics of the
+       Tcl language:
+
+       [1] Commands.
+              A Tcl script is a string  containing  one  or  more
+              commands.   Semi-colons  and  newlines  are command
+              separators unless quoted as described below.  Close
+              brackets  are  command  terminators  during command
+              substitution (see below) unless quoted.
+
+       [2] Evaluation.
+              A command is evaluated in two  steps.   First,  the
+              Tcl  interpreter  breaks the command into words and
+              performs substitutions as described  below.   These
+              substitutions are performed in the same way for all
+              commands.  The first word is used to locate a  com-
+              mand  procedure  to carry out the command, then all
+              of the words of the command are passed to the  com-
+              mand  procedure.   The command procedure is free to
+              interpret each of its words in any  way  it  likes,
+              such  as  an  integer,  variable name, list, or Tcl
+              script.  Different commands interpret  their  words
+              differently.
+
+       [3] Words.
+              Words  of  a  command  are separated by white space
+              (except for newlines,  which  are  command  separa-
+              tors).
+
+       [4] Double quotes.
+              If  the  first  character of a word is double-quote
+              (""") then the word is terminated by the next  dou-
+              ble-quote  character.  If semi-colons, close brack-
+              ets, or white space characters (including newlines)
+              appear  between the quotes then they are treated as
+              ordinary characters and included in the word.  Com-
+              mand substitution, variable substitution, and back-
+              slash substitution are performed on the  characters
+              between the quotes as described below.  The double-
+              quotes are not retained as part of the word.
+
+       [5] Argument expan-                                        |
+       sion.                                    |                 |
+              If  a word starts with the string "{*}" followed by |
+              a non-whitespace character, then the leading  "{*}" |
+              is  removed  and the rest of the word is parsed and |
+              substituted as any other word. After  substitution, |
+              the word is parsed again without substitutions, and |
+              its words are added to the  command  being  substi- |
+              tuted. For instance, "cmd a {*}{b c} d {*}{e f}" is |
+              equivalent to "cmd a b c d e f".
+
+       [6] Braces.
+              If the first character of a word is an  open  brace
+              ("{") and rule [5] does not apply, then the word is
+              terminated  by  the  matching  close  brace  ("}").
+              Braces  nest  within  the word: for each additional
+              open brace there must be an additional close  brace
+              (however,  if  an  open brace or close brace within
+              the word is quoted with a backslash then it is  not
+              counted  in locating the matching close brace).  No
+              substitutions  are  performed  on  the   characters
+              between  the  braces  except  for backslash-newline
+              substitutions described below, nor do  semi-colons,
+              newlines,  close  brackets,  or white space receive
+              any special interpretation.  The word will  consist
+              of exactly the characters between the outer braces,
+              not including the braces themselves.
+
+       [7] Command substitution.
+              If a word contains an open bracket ("[")  then  Tcl
+              performs  command  substitution.   To  do  this  it
+              invokes the Tcl interpreter recursively to  process
+              the  characters following the open bracket as a Tcl
+              script.  The script may contain any number of  com-
+              mands  and  must  be  terminated by a close bracket
+              ("]").  The result of the script (i.e.  the  result
+              of  its  last command) is substituted into the word
+              in place of the brackets and all of the  characters
+              between  them.   There may be any number of command
+              substitutions in a single word.  Command  substitu-
+              tion  is not performed on words enclosed in braces.
+
+       [8] Variable substitution.
+              If a word contains a dollar-sign ("$") followed  by
+              one of the forms described below, then Tcl performs
+              variable substitution:   the  dollar-sign  and  the
+              following  characters  are  replaced in the word by
+              the value of a variable.  Variable substitution may
+              take any of the following forms:
+
+              $name          Name  is  the name of a scalar vari-
+                             able;  the name is a sequence of one
+                             or  more  characters that are a let-
+                             ter, digit, underscore, or namespace
+                             separators (two or more colons).
+
+              $name(index)   Name  gives  the  name  of  an array
+                             variable and index gives the name of
+                             an  element within that array.  Name
+                             must contain only  letters,  digits,
+                             underscores,  and  namespace separa-
+                             tors, and may be  an  empty  string.
+                             Command substitutions, variable sub-
+                             stitutions, and backslash  substitu-
+                             tions  are  performed on the charac-
+                             ters of index.
+
+              ${name}        Name is the name of a  scalar  vari-
+                             able.  It may contain any characters
+                             whatsoever except for close  braces.
+
+              There  may  be any number of variable substitutions
+              in a single word.   Variable  substitution  is  not
+              performed on words enclosed in braces.
+
+       [9] Backslash substitution.
+              If  a  backslash  ("\")  appears within a word then
+              backslash substitution occurs.  In  all  cases  but
+              those  described below the backslash is dropped and
+              the following character is treated as  an  ordinary
+              character  and  included  in the word.  This allows
+              characters such as double quotes,  close  brackets,
+              and  dollar  signs  to be included in words without
+              triggering special processing.  The following table
+              lists the backslash sequences that are handled spe-
+              cially, along with the  value  that  replaces  each
+              sequence.
+
+              \a     Audible alert (bell) (0x7).
+
+              \b     Backspace (0x8).
+
+              \f     Form feed (0xc).
+
+              \n     Newline (0xa).
+
+              \r     Carriage-return (0xd).
+
+              \t     Tab (0x9).
+
+              \v     Vertical tab (0xb).
+
+              \<newline>whiteSpace
+                     A  single space character replaces the back-
+                     slash, newline,  and  all  spaces  and  tabs
+                     after  the newline.  This backslash sequence
+                     is unique in that it is replaced in a  sepa-
+                     rate pre-pass before the command is actually
+                     parsed.  This means that it will be replaced
+                     even  when it occurs between braces, and the
+                     resulting space will be treated  as  a  word
+                     separator  if it is not in braces or quotes.
+
+              \\     Backslash ("\").
+
+              \ooo   The digits ooo (one, two, or three of  them)
+                     give  an  eight-bit octal value for the Uni-
+                     code character that will be  inserted.   The
+                     upper  bits of the Unicode character will be
+                     0.
+
+              \xhh   The hexadecimal digits hh give an  eight-bit
+                     hexadecimal  value for the Unicode character
+                     that will be inserted.  Any number  of  hex-
+                     adecimal digits may be present; however, all
+                     but the last two are ignored (the result  is
+                     always a one-byte quantity).  The upper bits
+                     of the Unicode character will be 0.
+
+              \uhhhh The  hexadecimal  digits  hhhh  (one,   two,
+                     three,  or  four of them) give a sixteen-bit
+                     hexadecimal value for the Unicode  character
+                     that will be inserted.
+
+              Backslash  substitution  is  not performed on words
+              enclosed in braces, except for backslash-newline as
+              described above.
+
+       [10] Comments.
+              If  a hash character ("#") appears at a point where
+              Tcl is expecting the first character of  the  first
+              word  of a command, then the hash character and the
+              characters that follow it, up through the next new-
+              line,  are  treated  as a comment and ignored.  The
+              comment character only  has  significance  when  it
+              appears at the beginning of a command.
+
+       [11] Order of substitution.
+              Each character is processed exactly once by the Tcl
+              interpreter as part of creating the words of a com-
+              mand.  For example, if variable substitution occurs
+              then no further substitutions are performed on  the
+              value  of the variable;  the value is inserted into
+              the word verbatim.  If command substitution  occurs
+              then  the  nested  command is processed entirely by
+              the recursive call to the Tcl interpreter; no  sub-
+              stitutions  are  performed before making the recur-
+              sive call and no additional substitutions are  per-
+              formed on the result of the nested script.
+
+              Substitutions  take  place  from left to right, and
+              each substitution is  evaluated  completely  before
+              attempting  to evaluate the next.  Thus, a sequence
+              like
+                     set y [set x 0][incr x][incr x]
+              will always set the variable y to the value, 012.
+
+       [12] Substitution and word boundaries.
+              Substitutions do not affect the word boundaries  of
+              a  command, except for argument expansion as speci-
+              fied in rule [5].   For  example,  during  variable
+              substitution  the  entire  value  of  the  variable
+              becomes part of a single word, even  if  the  vari-
+              able's value contains spaces.
+
+
+
+Tcl                            8.5                         Tcl(n)
+
+Vivado% 
