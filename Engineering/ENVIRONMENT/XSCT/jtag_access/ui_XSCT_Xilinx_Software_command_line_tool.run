@@ -1,4 +1,14 @@
 call HW_SERVER_HOST.sh.bat
+call JTAG_TARGET_FILTER_NAME.sh.bat
+call TARGET_FILTER_NAME.sh.bat
+
+if "%JTAG_TARGET_FILTER_NAME%" == "xczu3" set IRLEN=6
+if "%JTAG_TARGET_FILTER_NAME%" == "arm_dap" set IRLEN=4
+
+echo IRLEN is %IRLEN%
+rem pause
+
+
 
 if exist c:\Xilinx\SDK\2017.2\bin\xsct.bat start c:\Xilinx\SDK\2017.2\bin\xsct.bat -eval "source init.tcl" -interactive -quiet
 if exist c:\Xilinx\SDK\2017.3\bin\xsct.bat start c:\Xilinx\SDK\2017.3\bin\xsct.bat -eval "source init.tcl" -interactive -quiet

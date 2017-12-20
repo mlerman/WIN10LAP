@@ -1,0 +1,1 @@
+set JTAG_TARGET_FILTER_NAME=xczu3

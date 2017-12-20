@@ -1,0 +1,4 @@
+call VIVADO_VERSION.sh.bat
+call c:\Xilinx\Vivado\%VIVADO_VERSION%\settings64.bat
+hw_server
+pause
