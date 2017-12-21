@@ -1,0 +1,11 @@
+echo connecting...
+# OK mais prompt le password
+ssvnc -viewer xsjmikhaell30
+
+#ssvnc -viewer -passwd pw.txt xsjmikhaell30 
+#Performing standard VNC authentication
+#Cannot read valid password from file "pw.txt"
+
+
+
+read -p "Pause"
