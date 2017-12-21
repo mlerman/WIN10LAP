@@ -111,7 +111,11 @@ $num=0;
 /////////////////////////////////////////////////////////////////////////////////////////
   if (isset($_POST['submit'])) {
     if(isset($_POST['envVar']) && !empty($_POST['envVar'])) {
-      $envVar = $_POST['envVar'];
+    
+	  if(!is_file($targetdir.'/entries.html')){
+	    file_put_contents($targetdir.'/entries.html', "");
+	  }	  
+	  $envVar = $_POST['envVar'];
 	  $cnt=count_names_in_entries($envVar);
 	  if(($cnt==0) || ( ($cnt==1) && ($one_name_state=="disabled")   )) {
 			$txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&disaction=1&name=".$envVar."\"><img src=\"/doc/images/on.png\"></a>&nbsp;<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar."</label>  <span id=\"".$targetdir.'/'.$envVar.".sh.bat"."\" class=\"editText\"></span><hr/>";
