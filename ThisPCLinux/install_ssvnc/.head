@@ -1,3 +1,6 @@
+le fichier password doit etre genere par l'utilitaire 
+vncpasswd
+<hr/>
 ssvnc - a GUI wrapper for SSL and SSH VNC connections.
 
 SYNOPSIS
