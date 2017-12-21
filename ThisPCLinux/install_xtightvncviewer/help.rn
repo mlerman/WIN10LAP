@@ -1,0 +1,2 @@
+vncviewer -help
+read -p "Press [Enter] key to continue..."
