@@ -1,3 +1,7 @@
+faire un mini file manager pour naviger rapidement 
+entre les projet a partir de la page open-command-prompt-here.html
+et eviter de retourner a elfinder chaque fois
+<hr/>
 faire un wrapper pour les clipboard d'un projet
 <hr/>
 faire un icon qui blink si le repertoire courant n'est pas synchronise avec le repo github
