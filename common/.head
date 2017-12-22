@@ -1,4 +1,3 @@
-<img src="scr1.png"/>
 <hr/>
 gnome-terminal -e 'sh -c "echo toto && read -p "pause" reply"'
 <hr/>
