@@ -3,6 +3,5 @@
 #echo TARGETFILE : %TARGETFILE%
 #echo HOST : %HOST%
 #echo URLDIR : %URLDIR%
-
 cd /home/user/files/ThisPCLinux/install_xtightvncviewer
-vncviewer -passwd labpasswd xsjmikhaell30
+vncviewer -passwd labpasswd $HOST
