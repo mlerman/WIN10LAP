@@ -1,4 +1,5 @@
 # git mess up the eof, manually change to linux style
+#
 cd /home/user/files/ThisPCLinux/install_xtightvncviewer
 vncviewer -passwd labpasswd $HOST
 #read -p "Press [Enter] key to continue..."
