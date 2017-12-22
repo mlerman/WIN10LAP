@@ -64,7 +64,7 @@ foreach ($othersites as $value) {
 		$i++;
 		
 		echo '<ul id="CM'.$i.'" class="SimpleContextMenu">'."\n";
-		echo '<li><a href="'.$value.'/doc/files/common/downloadfile.php?fname=ui_tightvnc_remote.run&targetdir=C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\WINDOWS_BATCH\associate_extension&targetfile=associate_extension&urldir=/doc/files/Engineering/ENVIRONMENT/WINDOWS_BATCH/associate_extension/&host='.$host.'&perma=C:\UniServer\www\common\perma"><img src="/doc/images/tightvncs.png"/></a></li>'."\n";
+		echo '<li><a href="'.$value.'/doc/files/common/downloadfile.php?fname=ui_tightvnc_remote.run&host='.$host.'&perma=C:\UniServer\www\common\perma"><img src="/doc/images/tightvncs.png"/></a></li>'."\n";
 		echo '<li><a href="'.$value.'/doc/files/ThisPC/install_uniserver/prompt-action.php?cmd=update_from_anywhere.bat&rawdisplay=1" target="_blank"><img src="/doc/images/update-gear.png" title="Update from here"/></a></li>'."\n";
 		echo '</ul>'."\n";
 
