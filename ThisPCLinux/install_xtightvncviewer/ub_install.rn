@@ -1,0 +1,2 @@
+sudo apt-get install xtightvncviewer
+read -p "Press [Enter] key to continue..."
