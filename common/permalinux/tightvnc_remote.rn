@@ -1,7 +1,2 @@
-#echo running %0 : tightvnc when visualizing remote
-#echo TARGETDIR : %TARGETDIR%
-#echo TARGETFILE : %TARGETFILE%
-#echo HOST : %HOST%
-#echo URLDIR : %URLDIR%
 cd /home/user/files/ThisPCLinux/install_xtightvncviewer
 vncviewer -passwd labpasswd $HOST
