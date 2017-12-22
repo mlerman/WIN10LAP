@@ -1,0 +1,38 @@
+#!/bin/bash 
+# Linux shell file from xsjmikhaell30 
+# current detected os: Linux
+# running tightvnc_remote.rn 
+# Change directory to C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\VIVADO\ZU3 is added by the server script. 
+LINDIRECTORY="/home/user/files/Engineering/ENVIRONMENT/VIVADO/ZU3"; 
+TARGETDIR="C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\VIVADO\ZU3"; 
+TARGETFILE="ZU3"; 
+IHOST="xsjmikhaell30"; 
+HOST="xsjmikhaell30"; 
+URLDIR="/home/user/files/Engineering/ENVIRONMENT/VIVADO/ZU3/"; 
+URL="/doc/files/Engineering/ENVIRONMENT/VIVADO/ZU3/"; 
+if [ ! -d "$LINDIRECTORY" ]; then
+  echo "dir=$LINDIRECTORY"
+  echo "The directory does not exist, Mounting...";
+  sudo mkdir -p /home/user/files
+  echo "if error wrong fs type etc try run sudo apt install cifs-utils";
+  export pw=$(wget http://xsjmikhaell30/local/1521A845-A144-442e-BA7B-42E7D69B19AE -q -O - )
+  export mluser=$(wget http://xsjmikhaell30/local/myusername.txt -q -O - )
+  sudo mount -t cifs -o username=$mluser,password="$pw",uid=$mluser,gid=users //xsjmikhaell30/files /home/user/files
+else 
+  cd $LINDIRECTORY
+fi
+pause(){
+if [ $# -eq 0 ]; then
+   read -p "Press any key to continue . . ."
+else
+   read -p "$*";
+fi
+}
+# ======= original file below this line ======= 
+echo running cd /home/user/files/ThisPCLinux/install_xtightvncviewer
+echo and vncviewer -passwd labpasswd $HOST
+cd /home/user/files/ThisPCLinux/install_xtightvncviewer
+vncviewer -passwd labpasswd $HOST
+read -p "Press [Enter] key to continue..."
+# ======= add auto delete =======
+#rm -- "$0"
