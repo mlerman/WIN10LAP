@@ -1,2 +1,5 @@
+echo running cd /home/user/files/ThisPCLinux/install_xtightvncviewer
+echo and vncviewer -passwd labpasswd $HOST
 cd /home/user/files/ThisPCLinux/install_xtightvncviewer
 vncviewer -passwd labpasswd $HOST
+read -p "Press [Enter] key to continue..."
