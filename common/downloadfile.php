@@ -130,6 +130,12 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 	$perma=$perma."Linux";
   }
 
+  if ($fname=='ui_tightvnc_remote.run') {
+    $fname='tightvnc_remote.rn';
+	$perma=$perma."Linux";
+  }
+
+
     // replace "/doc/files/ThisPCLinux/apt-get_update"
     // with "/home/user/files/ThisPCLinux/apt-get_update"
     $url=$urldir;
