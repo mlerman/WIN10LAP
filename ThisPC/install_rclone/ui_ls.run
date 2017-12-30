@@ -1,2 +1,2 @@
-rclone lsd remote:/ThisPC/ -v
+rclone lsd remote:/ThisPC/install_rclone/ -v
 pause
