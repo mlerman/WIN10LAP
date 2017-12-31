@@ -167,15 +167,15 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
     //$text .="pwd \n";
     //$text.="cd ".$linTargetdir." \n";
 
-    $text.="LINDIRECTORY=\"".$linTargetdir."\"; \n";
-    $text.="TARGETDIR=\"".$targetdir."\"; \n";
-    $text.="TARGETFILE=\"".$targetfile."\"; \n";
-    $text.="IHOST=\"".$_SERVER["HTTP_HOST"]."\"; \n";
-    $text.="HOST=\"".$host."\"; \n";
-    $text.="URLDIR=\"".$urldir."\"; \n";
-    $text.="URL=\"".$url."\"; \n";
+    $text.="export LINDIRECTORY=\"".$linTargetdir."\"; \n";
+    $text.="export TARGETDIR=\"".$targetdir."\"; \n";
+    $text.="export TARGETFILE=\"".$targetfile."\"; \n";
+    $text.="export IHOST=\"".$_SERVER["HTTP_HOST"]."\"; \n";
+    $text.="export HOST=\"".$host."\"; \n";
+    $text.="export URLDIR=\"".$urldir."\"; \n";
+    $text.="export URL=\"".$url."\"; \n";
     if(isset($_GET["param1"])) {
-        $text.="PARAM1=".$param1."\r\n";
+        $text.="export PARAM1=".$param1."\r\n";
       }
     $text.="if [ ! -d \"\$LINDIRECTORY\" ]; then\n"; 
     $text.="  echo \"dir=\$LINDIRECTORY\"\n";
