@@ -198,8 +198,9 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 // unmount and test again with umount /home/user/files  pb: c'est busy rebooter, fermer les sessions utilisant files ex krusader et terminal
 // mount: only root can use "--options" option
 // devalider le password promp de sudo voir visudo_password_prompt_removal
+// vers=2.1 a cause du message erreur : mount error(121): Remote I/O error
 	
-    $text.="  sudo mount -t cifs -o username=".'$mluser'.",password=\"".'$pw'."\",uid=".'$mluser'.",gid=users //".$_SERVER["HTTP_HOST"]."/files /home/user/files\n"; 
+    $text.="  sudo mount -t cifs -o username=".'$mluser'.",password=\"".'$pw'."\",uid=".'$mluser'.",gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/files\n"; 
     //$text.="  read -p \"Press [Enter] key to continue... \" \n";
     $text.="else \n";
     //$text.="  echo \"The directory exists\";\n"; 
