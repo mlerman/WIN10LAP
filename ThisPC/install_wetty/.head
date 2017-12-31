@@ -1,3 +1,11 @@
+git clone https://github.com/chjj/pty.js.git
+git submodule update --init --recursive
+cd pty.js
+npm install -g
+<hr/>
+ npm install node-pty
+
+<hr/>
 <img src="scr3.png"/> 
 <hr/> 
 <img src="scr2.png"/> 
