@@ -1,0 +1,2 @@
+gnome-terminal --geometry=180x25
+read -p "pause 2"
