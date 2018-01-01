@@ -1,0 +1,3 @@
+echo toto
+echo titi>> list2
+echo byebye

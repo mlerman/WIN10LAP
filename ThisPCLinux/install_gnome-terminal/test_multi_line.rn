@@ -1,0 +1,4 @@
+gnome-terminal -e 'sh -c "\
+echo titi && \
+read -p \"Press a key to exit terminal...\" reply"'
+
