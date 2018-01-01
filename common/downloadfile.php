@@ -253,7 +253,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
   header('Content-Disposition: attachment; filename="'.$fname.'"');
   header("Content-Transfer-Encoding: binary");
   //readfile($fname);
-  print($text);
+  print($text);		// linux style
 
 } else {
 
@@ -385,7 +385,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
   header("Content-Transfer-Encoding: binary");
   //readfile($fname);
 
-  print($text);
+  print($text);		// Windows style
   if ($admin) {
     print('c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe elevate cmd /K " call %cd%\.admin.bat & exit"');
   }
