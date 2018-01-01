@@ -1,0 +1,12 @@
+<pre>
+It doesn't work :( gives this error:
+err:ole:marshal_object couldn't get IPSFactory buffer for interface {00000131-0000-0000-c000-000000000046}
+err:ole:marshal_object couldn't get IPSFactory buffer for interface {6d5140c1-7436-11ce-8034-00aa006009fa}
+err:ole:StdMarshalImpl_MarshalInterface Failed to create ifstub, hres=0x80040155
+err:ole:CoMarshalInterface Failed to marshal the interface {6d5140c1-7436-11ce-8034-00aa006009fa}, 80040155
+err:ole:get_local_server_stream Failed: 80040155
+err:ieframe:register_class_object failed to register object 80040155
+wine: Unhandled page fault on read access to 0x00000018 at address 0x7eb58eda (thread 0009), starting debugger...
+err:seh:start_debugger Couldn't start debugger ("winedbg --auto 8 124") (2)
+Read the Wine Developers Guide on how to set up winedbg or another debugger
+</pre>

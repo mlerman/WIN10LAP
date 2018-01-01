@@ -1,0 +1,7 @@
+@echo off
+echo running %0
+echo this is a windows batch
+echo Are you running me with Linux wine?
+echo current directory : %cd%
+echo Exit [X]
+pause 

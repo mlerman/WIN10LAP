@@ -1,0 +1,4 @@
+<pre>
+err:module:attach_process_dlls "winspool.drv" failed to initialize, aborting
+err:module:LdrInitializeThunk Main exe initialization for L"C:\\windows\\system32\\notepad.exe" failed, status c0000005
+</pre>

@@ -1,0 +1,6 @@
+<pre>
+Gives this error:
+fixme:actctx:parse_depend_manifests Could not find dependent assembly L"Microsoft.Windows.Common-Controls" (6.0.0.0)
+err:module:attach_process_dlls "winspool.drv" failed to initialize, aborting
+err:module:LdrInitializeThunk Main exe initialization for L"Z:\\home\\user\\files\\ThisPC\\lister\\lister.exe" failed, status c0000005
+</pre>

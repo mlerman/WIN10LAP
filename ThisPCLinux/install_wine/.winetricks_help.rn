@@ -1,0 +1,5 @@
+<pre>
+Winetricks is a helper script to download and install various redistributable runtime libraries 
+needed to run some programs in Wine. These may include replacements for components of Wine using 
+closed source libraries. <a href="https://wiki.winehq.org/Winetricks">more here</a>
+</pre>

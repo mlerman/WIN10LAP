@@ -1,0 +1,3 @@
+#wine c:/"Program Files"/"Internet Explorer"/iexplore.exe
+wine "/home/mlerman/.wine/drive_c/Program Files/Internet Explorer/iexplore.exe"
+read -p "Press [Enter] key to continue..."

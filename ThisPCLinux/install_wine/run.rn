@@ -1,0 +1,4 @@
+echo "Enter the command to run below"
+#sudo apt-get update
+sudo apt-get install wine
+read -p "Press [Enter] key to continue..."

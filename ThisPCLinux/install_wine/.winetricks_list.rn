@@ -1,0 +1,6 @@
+<pre>
+Return this error message:
+------------------------------------------------------
+wine cmd.exe /c echo '%ProgramFiles%' returned empty string
+------------------------------------------------------
+</pre>

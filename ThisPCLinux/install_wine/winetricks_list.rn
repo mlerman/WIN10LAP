@@ -1,0 +1,2 @@
+sudo winetricks list
+pause
