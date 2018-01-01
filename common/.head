@@ -1,3 +1,5 @@
+<img src="scr1.png"/>
+<hr/>
 <hr/>
 gnome-terminal -e 'sh -c "echo toto && read -p "pause" reply"'
 <hr/>
