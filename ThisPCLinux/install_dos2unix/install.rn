@@ -1,0 +1,2 @@
+sudo apt-get install dos2unix
+read -p "Press [Enter] key to continue..."
