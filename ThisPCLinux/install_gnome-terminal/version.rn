@@ -1,2 +1,2 @@
-wine --version
+gnome-terminal -e 'sh -c "wine --version && read -p \"Press a key to exit terminal...\" reply"'
 read -p "Press [Enter] key to continue..."
