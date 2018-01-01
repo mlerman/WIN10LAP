@@ -144,15 +144,15 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 
   // copy source destination
   if($CurrOS=='Linux') {
-    $text="#!/bin/bash \n";
+    $text="#!/bin/bash "."\n";
   } else {	// this must be android
-    $text="#!/system/bin/sh \n";
+    $text="#!/system/bin/sh "."\n";
   }
-  $text.="# Linux shell file from ".$_SERVER["HTTP_HOST"]." \n";
-  $text.="# current detected os: ".$CurrOS."\r\n";
-  $text.="# running ".$fname." \n";
+  $text.="# Linux shell file from ".$_SERVER["HTTP_HOST"]."\n";
+  $text.="# current detected os: ".$CurrOS."\n";
+  $text.="# running ".$fname." "."\n";
 
-  $text.="# Change directory to ".$targetdir." is added by the server script. \n";
+  $text.="# Change directory to ".$targetdir." is added by the server script. "."\n";
 
   // find the path on linux
   // in windows C:\UniServer\www\doc\files\ThisPC\opensuze_guest\test_run_command
@@ -161,30 +161,30 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
   $pos=strpos("UniServer\\www\\doc\\files\\",$targetdir);
   $linTargetdir="/home/user/".substr($targetdir,$pos+21);
   $linTargetdir=str_replace("\\","/",$linTargetdir);
-  //$text.="#echo \"Change directory to ".$linTargetdir." is added by the server script.\" \n";
+  //$text.="#echo \"Change directory to ".$linTargetdir." is added by the server script.\" "."\n";
 
   if (($fname!="mntFiles.sh")&&($fname!="umntFiles.sh")&&($fname!="testFilesMounted.sh")) {
-    //$text .="pwd \n";
-    //$text.="cd ".$linTargetdir." \n";
+    //$text .="pwd "."\n";
+    //$text.="cd ".$linTargetdir." "."\n";
 
-    $text.="export LINDIRECTORY=\"".$linTargetdir."\"; \n";
-    $text.="export TARGETDIR=\"".$targetdir."\"; \n";
-    $text.="export TARGETFILE=\"".$targetfile."\"; \n";
-    $text.="export IHOST=\"".$_SERVER["HTTP_HOST"]."\"; \n";
-    $text.="export HOST=\"".$host."\"; \n";
-    $text.="export URLDIR=\"".$urldir."\"; \n";
-    $text.="export URL=\"".$url."\"; \n";
+    $text.="export LINDIRECTORY=\"".$linTargetdir."\"; "."\n";
+    $text.="export TARGETDIR=\"".$targetdir."\"; "."\n";
+    $text.="export TARGETFILE=\"".$targetfile."\"; "."\n";
+    $text.="export IHOST=\"".$_SERVER["HTTP_HOST"]."\"; "."\n";
+    $text.="export HOST=\"".$host."\"; "."\n";
+    $text.="export URLDIR=\"".$urldir."\"; "."\n";
+    $text.="export URL=\"".$url."\"; "."\n";
     if(isset($_GET["param1"])) {
-        $text.="export PARAM1=".$param1."\r\n";
+        $text.="export PARAM1=".$param1."\n";
       }
-    $text.="if [ ! -d \"\$LINDIRECTORY\" ]; then\n"; 
-    $text.="  echo \"dir=\$LINDIRECTORY\"\n";
-    $text.="  echo \"The directory does not exist, Mounting...\";\n"; 
-    $text.="  sudo mkdir -p /home/user/files\n";
-    $text.="  echo \"if error wrong fs type etc try run sudo apt install cifs-utils\";\n"; 
+    $text.="if [ ! -d \"\$LINDIRECTORY\" ]; then"."\n"; 
+    $text.="  echo \"dir=\$LINDIRECTORY\""."\n";
+    $text.="  echo \"The directory does not exist, Mounting...\";"."\n"; 
+    $text.="  sudo mkdir -p /home/user/files"."\n";
+    $text.="  echo \"if error wrong fs type etc try run sudo apt install cifs-utils\";"."\n"; 
 
-    $text.="  export pw=$(wget http://".$_SERVER["HTTP_HOST"]."/local/1521A845-A144-442e-BA7B-42E7D69B19AE -q -O - )\n"; 
-    $text.="  export mluser=$(wget http://".$_SERVER["HTTP_HOST"]."/local/myusername.txt -q -O - )\n"; 
+    $text.="  export pw=$(wget http://".$_SERVER["HTTP_HOST"]."/local/1521A845-A144-442e-BA7B-42E7D69B19AE -q -O - )"."\n"; 
+    $text.="  export mluser=$(wget http://".$_SERVER["HTTP_HOST"]."/local/myusername.txt -q -O - )"."\n"; 
 	//$text.='  echo password is $pw user is $mluser'."\n";
 	//sudo demande un password
 	
@@ -200,30 +200,30 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 // devalider le password promp de sudo voir visudo_password_prompt_removal
 // vers=2.1 a cause du message erreur : mount error(121): Remote I/O error
 	
-    $text.="  sudo mount -t cifs -o username=".'$mluser'.",password=\"".'$pw'."\",uid=".'$mluser'.",gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/files\n"; 
-    //$text.="  read -p \"Press [Enter] key to continue... \" \n";
-    $text.="else \n";
-    //$text.="  echo \"The directory exists\";\n"; 
-    $text.="  cd \$LINDIRECTORY\n";
-    $text.="fi\n"; 
+    $text.="  sudo mount -t cifs -o username=".'$mluser'.",password=\"".'$pw'."\",uid=".'$mluser'.",gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/files"."\n"; 
+    //$text.="  read -p \"Press [Enter] key to continue... \" "."\n";
+    $text.="else "."\n";
+    //$text.="  echo \"The directory exists\";"."\n"; 
+    $text.="  cd \$LINDIRECTORY"."\n";
+    $text.="fi"."\n"; 
     // add the function pause so it can be used in linux shell
-    $text.="pause(){\n"; 
-    $text.="if [ $# -eq 0 ]; then\n";
+    $text.="pause(){"."\n"; 
+    $text.="if [ $# -eq 0 ]; then"."\n";
     $text.='   read -p "Press any key to continue . . ."'; 
     $text.="\n"; 
-    $text.="else\n";
+    $text.="else"."\n";
     $text.='   read -p "$*";'; 
     $text.="\n"; 
-    $text.="fi\n";
-    $text.="}\n"; 
+    $text.="fi"."\n";
+    $text.="}"."\n"; 
 
-    //$text.="[ -d \"".$linTargetdir."\" ] && cd \"".$linTargetdir."\" || echo 'The directory does not exist' \n"; 
-    //$text.="test -d \"".$linTargetdir."\" \n";
-    //$text.="read -p \"Press [Enter] key to continue... \" \n";
+    //$text.="[ -d \"".$linTargetdir."\" ] && cd \"".$linTargetdir."\" || echo 'The directory does not exist' "."\n"; 
+    //$text.="test -d \"".$linTargetdir."\" "."\n";
+    //$text.="read -p \"Press [Enter] key to continue... \" "."\n";
   }
 
 
-  $text.="# ======= original file below this line ======= \n";
+  $text.="# ======= original file below this line ======= "."\n";
 
   if(isset($_GET["perma"])) {
 
@@ -236,7 +236,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
   //$textbat=file_get_contents($targetdir."\\".$fname);
   $text.=$textbat;
 
-  $text.="\n# ======= add auto delete =======\n";
+  $text.="\n"."# ======= add auto delete ======="."\n";
   $text.='#rm -- "$0"'."\n";
 
   //file_put_contents($fname, $text);
