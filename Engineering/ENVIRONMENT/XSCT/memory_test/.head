@@ -1,3 +1,5 @@
+<img src="scr15.png"/> 
+<hr/> 
 11:13:51 INFO	: Connected to target on host '127.0.0.1' and port '3121'.
 11:14:06 INFO	: Jtag cable 'Digilent JTAG-SMT2NC 210308A12403' is selected.
 11:14:06 INFO	: 'jtag frequency' command is executed.
