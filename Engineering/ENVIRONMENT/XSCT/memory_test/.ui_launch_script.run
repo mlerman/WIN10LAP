@@ -1,0 +1,5 @@
+This is equivalent to
+Launch on Hardware (System Debugger)
+hello_minimum.elf
+Power cycle the target and launch this at first
+just after the hw_server launch

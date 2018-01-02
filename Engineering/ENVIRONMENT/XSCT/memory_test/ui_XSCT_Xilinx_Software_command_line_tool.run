@@ -1,5 +1,6 @@
 call HW_SERVER_HOST.sh.bat
 
-if exist c:\Xilinx\SDK\2017.2\bin\xsct.bat start c:\Xilinx\SDK\2017.2\bin\xsct.bat -eval "source init.tcl" -interactive -quiet
-if exist c:\Xilinx\SDK\2017.3\bin\xsct.bat start c:\Xilinx\SDK\2017.3\bin\xsct.bat -eval "source init.tcl" -interactive -quiet
+if exist c:\Xilinx\SDK\2017.2\bin\xsct.bat set XSCT=start c:\Xilinx\SDK\2017.2\bin\xsct.bat -eval "source init.tcl" -interactive -quiet
+if exist c:\Xilinx\SDK\2017.3\bin\xsct.bat set XSCT=start c:\Xilinx\SDK\2017.3\bin\xsct.bat -eval "source init.tcl" -interactive -quiet
 
+%XSCT%
