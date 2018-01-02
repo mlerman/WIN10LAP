@@ -1,3 +1,4 @@
 echo toto
 echo titi>> list2
 echo byebye
+read -p "pause blabla" reply
