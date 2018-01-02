@@ -1,3 +1,18 @@
+Following operations will be performed before launching the debugger.
+1. Resets entire system. Clears the FPGA fabric (PL).
+2. Program FPGA fabric (PL).
+3. Runs psu_init to initialize PS.
+4. Request trigger for PL powerup and reset. Required after programming FPGA.
+5. The following processors will be reset and suspended.
+	1) psu_cortexa53_0
+6. All processors in the system will be suspended, and Applications will be downloaded 
+   to the following processors as specified in the Applications tab.
+	1) psu_cortexa53_0 
+	(C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\VIVADO\ZU3\project_1.sdk\hello_minimum\Debug\hello_minimum.elf)
+
+<hr/>
+use 127.0.0.1 if the sdk is up and running
+<hr/>
 <img src="scr14.png"/> 
 <hr/> 
 <img src="scr13.png"/> 
