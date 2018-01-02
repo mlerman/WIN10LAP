@@ -1,3 +1,63 @@
+11:13:51 INFO	: Connected to target on host '127.0.0.1' and port '3121'.
+11:14:06 INFO	: Jtag cable 'Digilent JTAG-SMT2NC 210308A12403' is selected.
+11:14:06 INFO	: 'jtag frequency' command is executed.
+11:14:06 INFO	: Sourcing of 'c:/Xilinx/SDK/2017.2/scripts/sdk/util/zynqmp_utils.tcl' is done.
+11:14:06 INFO	: Context for 'APU' is selected.
+11:14:07 INFO	: Hardware design information is loaded from 'C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO/ZU3/project_1.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+11:14:07 INFO	: 'configparams force-mem-access 1' command is executed.
+11:14:07 INFO	: Context for 'APU' is selected.
+11:14:07 INFO	: Sourcing of 'C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO/ZU3/project_1.sdk/design_1_wrapper_hw_platform_0/psu_init.tcl' is done.
+11:14:07 INFO	: 'psu_init' command is executed.
+11:14:08 INFO	: 'after 1000' command is executed.
+11:14:08 INFO	: 'psu_ps_pl_isolation_removal' command is executed.
+11:14:09 INFO	: 'after 1000' command is executed.
+11:14:09 INFO	: 'psu_ps_pl_reset_config' command is executed.
+11:14:09 INFO	: 'catch {psu_protection}' command is executed.
+11:14:09 INFO	: Context for processor 'psu_cortexa53_0' is selected.
+11:14:09 INFO	: Processor reset is completed for 'psu_cortexa53_0'.
+11:14:10 INFO	: The application 'C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO/ZU3/project_1.sdk/hello_minimum/Debug/hello_minimum.elf' is downloaded to processor 'psu_cortexa53_0'.
+11:14:10 INFO	: 'configparams force-mem-access 0' command is executed.
+11:14:10 INFO	: ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source c:/Xilinx/SDK/2017.2/scripts/sdk/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A12403"} -index 1
+loadhw -hw C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO/ZU3/project_1.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A12403"} -index 1
+source C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO/ZU3/project_1.sdk/design_1_wrapper_hw_platform_0/psu_init.tcl
+psu_init
+after 1000
+psu_ps_pl_isolation_removal
+after 1000
+psu_ps_pl_reset_config
+catch {psu_protection}
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A12403"} -index 1
+rst -processor
+dow C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO/ZU3/project_1.sdk/hello_minimum/Debug/hello_minimum.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:14:10 INFO	: Context for processor 'psu_cortexa53_0' is selected.
+11:14:10 INFO	: 'con' command is executed.
+11:14:10 INFO	: ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Digilent JTAG-SMT2NC 210308A12403"} -index 1
+con
+----------------End of Script----------------
+
+11:14:10 INFO	: Launch script is exported to file 'C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\VIVADO\ZU3\project_1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_hello_minimum.elf_on_local.tcl'
+
+<hr/>
+Following operations will be performed before launching the debugger.
+1. Runs psu_init to initialize PS.
+2. Request trigger for PL powerup and reset. Required after programming FPGA.
+3. The following processors will be reset and suspended.
+	1) psu_cortexa53_0
+4. All processors in the system will be suspended, and Applications will be downloaded 
+   to the following processors as specified in the Applications tab.
+	1) psu_cortexa53_0 
+	(C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\VIVADO\ZU3\project_1.sdk\hello_minimum\Debug\hello_minimum.elf)
+
+<hr/>
 Following operations will be performed before launching the debugger.
 1. Resets entire system. Clears the FPGA fabric (PL).
 2. Program FPGA fabric (PL).
