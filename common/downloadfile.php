@@ -1,5 +1,11 @@
 <?php
 
+$term="";
+if (isset($_GET["term"])) {
+  $term=$_GET["term"];				// term is the name of the terminal typically gnome-terminal or not set
+}
+
+
 $before="";
 if (isset($_GET["before"])) {
   $before=$_GET["before"];				// before is addhr or not set
@@ -233,8 +239,29 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
     $textbat=file_get_contents($targetdir."\\".$fname);
   }
 
-  //$textbat=file_get_contents($targetdir."\\".$fname);
-  $text.=$textbat;
+  //ici gnome-termilaler le fichier
+  //s'il ne contient pas deja le string "gnome-terminal"
+  //alors transformer toute les lignes en un long string separe par des ';'
+  //gnome-terminal -e 'sh -c "ligne 1; ligne 2; ligne 3"'
+  //escaper les double quote
+  if (strpos($textbat, 'gnome-terminal') !== false) {
+    // already using gnome-terminal do nothing
+     $text.=$textbat;
+    
+    } else {
+    // wrap with 
+    //gnome-terminal -e 'sh -c "ligne 1; ligne 2; ligne 3"'
+	
+  	  if( $term == "") {
+        $text.=$textbat;
+	  } else {
+        $tempstr=$term." -e 'sh -c \"";
+        $tempstr.= str_replace("\n", ';', addslashes($textbat));
+        $tempstr.="\"'"."\n";
+        $text.=$tempstr;
+	  }
+    }
+ 
 
   $text.="\n"."# ======= add auto delete ======="."\n";
   $text.='#rm -- "$0"'."\n";

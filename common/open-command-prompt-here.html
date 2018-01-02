@@ -1930,7 +1930,7 @@ if ($handle = opendir($dir)) {
 							$str_bulle_icon_png="comment_exist.png";
 						}
 					}
-						echo '<a class="linuxlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dir).'"  onmouseover="getFileFromServer('.'\'.'.$file.'\''.', function(text){ show(text, this, -1)});">'.$file.'</a>'
+						echo '<a class="linuxlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dir).'&term=gnome-terminal"  onmouseover="getFileFromServer('.'\'.'.$file.'\''.', function(text){ show(text, this, -1)});">'.$file.'</a>'
 							.$str_edit
 							.'<a id="lview'.$i.'" class="inline" href="/viewfile/viewdos.php?fname='.$file.'&targetdir='.$dir.'" onclick="javascript:void window.open(\'/viewfile/viewdos.php?fname='.$file.'&targetdir='.$dir.'\',\'1481602525735\',\'width=980,height=550,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=150,top=50\'); return false;"><img src="/doc/images/view.png" '.$onmouseover_view.' /></a>'
 							// run a linux gui with windows psexec
