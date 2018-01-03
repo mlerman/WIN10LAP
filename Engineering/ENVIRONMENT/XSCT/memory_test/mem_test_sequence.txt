@@ -1,6 +1,6 @@
 set tcl_interactive false
 connect
-targets -set -nocase -filter {name =~ "Cortex-A53*#0"}
+targets -set -nocase -filter {name =~ "$env(TARGET_SET_FILTER)"}
 
 set str "read is "
 set memspace {}

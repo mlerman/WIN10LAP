@@ -1,3 +1,0 @@
-call test.sh.bat
-echo %test%
-pause

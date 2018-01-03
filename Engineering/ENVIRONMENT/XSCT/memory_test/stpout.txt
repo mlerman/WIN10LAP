@@ -1,6 +1,6 @@
 connect -host $env(HW_SERVER_HOST) -port 3121
 
-targets -set -nocase -filter {name =~ "Cortex-A53*#0"}
+targets -set -nocase -filter {name =~ "$env(TARGET_SET_FILTER)"}
 
 stpout
 after 1000

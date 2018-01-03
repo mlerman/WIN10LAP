@@ -5,6 +5,8 @@ if exist c:\Xilinx\SDK\2017.2\bin\xsct.bat set XSCT=call c:\Xilinx\SDK\2017.2\bi
 if exist c:\Xilinx\SDK\2017.3\bin\xsct.bat set XSCT=call c:\Xilinx\SDK\2017.3\bin\xsct.bat -quiet -interactive
 
 call HW_SERVER_HOST.sh.bat
+call TARGET_SET_FILTER.sh.bat
+
 type dis.txt |  %XSCT%
 pause
 

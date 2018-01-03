@@ -1,8 +1,16 @@
 if exist c:\Xilinx\SDK\2017.2\bin\xsct.bat set XSCT=call c:\Xilinx\SDK\2017.2\bin\xsct.bat -quiet -interactive
 if exist c:\Xilinx\SDK\2017.3\bin\xsct.bat set XSCT=call c:\Xilinx\SDK\2017.3\bin\xsct.bat -quiet -interactive
 
+del /Q c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\VIVADO\ZU3\project_1.sdk\hello_minimum\Debug\hello_minimum.elf
 
 call HW_SERVER_HOST.sh.bat
 type build.txt |  %XSCT%
-pause
+
+if exist c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\VIVADO\ZU3\project_1.sdk\hello_minimum\Debug\hello_minimum.elf ( echo Succeeded
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe mediaplay 1500 c:\UniServer\www\doc\files\ThisPC\speech\success.mp3
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe mediaplay 1500 c:\UniServer\www\doc\files\ThisPC\speech\success.mp3
+)
+call c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\WINDOWS_BATCH\mousePause\mp.bat
+
+rem pause
 

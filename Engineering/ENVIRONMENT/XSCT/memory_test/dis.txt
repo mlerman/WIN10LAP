@@ -1,7 +1,7 @@
 #puts "$env(HW_SERVER_HOST)"
 connect -host $env(HW_SERVER_HOST) -port 3121
 
-targets -set -nocase -filter {name =~ "Cortex-A53*#0"} 
+targets -set -nocase -filter {name =~ "$env(TARGET_SET_FILTER)"} 
 
 puts "running dis on HW_server $env(HW_SERVER_HOST)\n-----------\n"
 dis pc 16
