@@ -1,0 +1,3 @@
+# install commands below
+sudo apt-get install hexedit
+read -p "Press [Enter] key to continue..."
