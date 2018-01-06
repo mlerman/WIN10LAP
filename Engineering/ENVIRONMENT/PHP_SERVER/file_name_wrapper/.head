@@ -1,0 +1,12 @@
+faire la meme chose que env_var_wrapper
+mais pour des noms de fichiers
+example
+test.c
+test.c.0
+test.c.1
+test.c.2
+etc
+
+ceci pour manipuler plusieurs versions de fichiers
+et faire des test de compile et executions
+
