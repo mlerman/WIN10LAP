@@ -1,0 +1,25 @@
+#echo "Exporting http_proxy for childs process only"
+#http_proxy=http://proxy.micron.com:8080; export http_proxy
+#echo "$http_proxy" 
+#read -p "Check the variable and press [Enter] key to continue..."
+
+#echo "Enter the command to run below"
+#sudo iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 443 -j ACCEPT
+#read -p "Press [Enter] key to continue..."
+#netstat -nlt 
+#read -p "Press [Enter] key to continue..."
+# install commands below
+# method 1 an official PPA
+sudo add-apt-repository ppa:notepadqq-team/notepadqq
+read -p "Press [Enter] key to continue..."
+sudo apt-get update
+read -p "Press [Enter] key to continue..."
+sudo apt-get install notepadqq
+read -p "Press [Enter] key to continue..."
+#
+# method 2 Download .deb file
+#sudo wget https://launchpad.net/~notepadqq-team/+archive/ubuntu/notepadqq/+files/notepadqq_0.51.0-0%7Ewily1_amd64.deb
+#read -p "Press [Enter] key to continue..."
+## Install .deb file
+#sudo dpkg -i notepadqq_0.51.0-0~wily1_amd64.deb
+#read -p "Press [Enter] key to continue..." 
