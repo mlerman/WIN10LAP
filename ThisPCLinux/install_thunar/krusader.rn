@@ -1,0 +1,6 @@
+#xdotool windowunmap $(xdotool getwindowfocus)
+sleep 4 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin 
+sudo krusader --left=$LINDIRECTORY --right=/etc/apt/apt.conf.d
+sleep 5
+
+
