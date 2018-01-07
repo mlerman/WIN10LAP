@@ -118,11 +118,11 @@ $num=0;
 	  $envVar = $_POST['envVar'];
 	  $cnt=count_names_in_entries($envVar);
 	  if(($cnt==0) || ( ($cnt==1) && ($one_name_state=="disabled")   )) {
-			$txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&disaction=1&name=".$envVar."\"><img src=\"/doc/images/on.png\"></a>&nbsp;<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar."</label>  <span id=\"".$targetdir.'/'.$envVar."\" class=\"editText\"></span><hr/>";
-			file_put_contents($targetdir.'/'.$envVar, "comment for ".$envVar.": new" , LOCK_EX);
+			$txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&disaction=1&name=".$envVar."\"><img src=\"/doc/images/on.png\"></a>&nbsp;<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar."</label>  <span id=\"".$targetdir.'/.'.$envVar."\" class=\"editText\"></span><hr/>";
+			file_put_contents($targetdir.'/.'.$envVar, "comment for ".$envVar.": new" , LOCK_EX);
 	  } else {
-			$txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&enaction=1&num=".($cnt-1)."&name=".$envVar."\"><img src=\"/doc/images/off.png\"></a>&nbsp;<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&num=".($cnt-1)."&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar.".".($cnt-1)."</label>  <span id=\"".$targetdir.'/'.$envVar.".".($cnt-1)."\" class=\"editText\"></span><hr/>";
-			file_put_contents($targetdir.'/'.$envVar.'.'.($cnt-1), "comment for ".$envVar.": new" , LOCK_EX);
+			$txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&enaction=1&num=".($cnt-1)."&name=".$envVar."\"><img src=\"/doc/images/off.png\"></a>&nbsp;<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&num=".($cnt-1)."&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar.".".($cnt-1)."</label>  <span id=\"".$targetdir.'/.'.$envVar.".".($cnt-1)."\" class=\"editText\"></span><hr/>";
+			file_put_contents($targetdir.'/.'.$envVar.'.'.($cnt-1), "comment for ".$envVar.": new" , LOCK_EX);
 	  }
       file_put_contents($targetdir.'/fentries.html', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
 	  
@@ -165,9 +165,9 @@ $num=0;
     file_put_contents($file, $content); // fentries.html
 	
     if (isset($_GET['num'])) {
-      unlink($targetdir.'/'.$_GET["name"].".".$num);
+      unlink($targetdir.'/.'.$_GET["name"].".".$num);
 	} else {
-      unlink($targetdir.'/'.$_GET["name"]);
+      unlink($targetdir.'/.'.$_GET["name"]);
 	}
 
   }///////////////////////////////////////////////////////////////////////////////////////
@@ -179,21 +179,21 @@ $num=0;
 		$nameexist=true;		// we enable the another entry .0
 		// saving because it will be overwritten
 //echo "num=".$num." \n";
-		copy($targetdir.'/'.$_GET["name"].".".$num, $targetdir.'/'.$_GET["name"].".".$num.".nameexist");
+		copy($targetdir.'/.'.$_GET["name"].".".$num, $targetdir.'/.'.$_GET["name"].".".$num.".nameexist");
 		}
 
 	disable_name_in_entries($_GET["name"], -1, $num);
 
 //echo "num=".$num." \n";
-	copy($targetdir.'/'.$_GET["name"], $targetdir.'/'.$_GET["name"].".".$num);
+	copy($targetdir.'/.'.$_GET["name"], $targetdir.'/.'.$_GET["name"].".".$num);
 	if($nameexist) {
-		copy($targetdir.'/'.$_GET["name"].".".$num.".nameexist",$targetdir.'/'.$_GET["name"]);
+		copy($targetdir.'/.'.$_GET["name"].".".$num.".nameexist",$targetdir.'/.'.$_GET["name"]);
 	} else {
-		unlink($targetdir.'/'.$_GET["name"]);
+		unlink($targetdir.'/.'.$_GET["name"]);
 	}
 	// remove temp file
 //echo "num=".$num." \n";
-	unlink($targetdir.'/'.$_GET["name"].".".$num.".nameexist");
+	unlink($targetdir.'/.'.$_GET["name"].".".$num.".nameexist");
 
 	if($nameexist) {
 		enable_name_in_entries($_GET["name"], 0, $line_clicked);
@@ -206,7 +206,7 @@ $num=0;
 	if ($countnames > 1) {
 		$nameexist=true;
 		// saving because it will be overwritten
-		copy($targetdir.'/'.$_GET["name"], $targetdir.'/'.$_GET["name"].".nameexist");
+		copy($targetdir.'/.'.$_GET["name"], $targetdir.'/.'.$_GET["name"].".nameexist");
 		}
   
 	//$num=$_GET['num'];
@@ -214,14 +214,14 @@ $num=0;
 	
 	enable_name_in_entries($_GET["name"], $num, -1);
 
-	copy($targetdir.'/'.$_GET["name"].".".$num, $targetdir.'/'.$_GET["name"]);
+	copy($targetdir.'/.'.$_GET["name"].".".$num, $targetdir.'/.'.$_GET["name"]);
 	if($nameexist) {
-		copy($targetdir.'/'.$_GET["name"].".nameexist", $targetdir.'/'.$_GET["name"].".".$num);
+		copy($targetdir.'/.'.$_GET["name"].".nameexist", $targetdir.'/.'.$_GET["name"].".".$num);
 	} else {
-		unlink($targetdir.'/'.$_GET["name"].".".$num);
+		unlink($targetdir.'/.'.$_GET["name"].".".$num);
 	}
 	// remove temp file
-	unlink($targetdir.'/'.$_GET["name"].".nameexist");
+	unlink($targetdir.'/.'.$_GET["name"].".nameexist");
 	
 
 	if($nameexist) {
@@ -337,10 +337,10 @@ function str_ends_with($haystack, $needle)
 		$number_in_var=substr($var_name, $pos+1);
 		$name_in_var=substr($var_name, 0, $pos);
 		  $var_name= str_replace(".".$number_in_var,"",$var_name);
-		  $strVal=file_get_contents($targetdir.'/'.$var_name.".".$number_in_var);
+		  $strVal=file_get_contents($targetdir.'/.'.$var_name.".".$number_in_var);
 		
 	  } else {
-		$strVal=file_get_contents($targetdir.'/'.$var_name); 
+		$strVal=file_get_contents($targetdir.'/.'.$var_name); 
 	  }
 	  
 	//echo "name ".$name_in_var." number ".$number_in_var."<br/>\n";;
