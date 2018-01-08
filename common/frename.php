@@ -81,7 +81,7 @@ function disable_name_in_entries($name, $except_line, $num) {
 //echo "xnum=".$num." \n";
 		$buffer=str_replace("<label>".$name."</label>","<label>".$name.".".($nunum)."</label>",$buffer);
 		$buffer=str_replace("/".$name."\"","/".$name.".".($nunum)."\"",$buffer);
-        $content.=$buffer;
+		$content.=$buffer;
 		$done=true; // disable only one
 		$line_clicked=$i;
        }  else {
@@ -93,6 +93,21 @@ function disable_name_in_entries($name, $except_line, $num) {
     fclose($fh); 
     file_put_contents($file, $content);  // fentries.html
 }
+////////////////////////////////////////////////////////////////////////////////
+
+//function apply_file_changes($action) {
+//}
+
+////////////////////////////////////////////////////////////////////////////////
+
+function swap_files($file1, $file2) {
+//echo "   swap file1 : ".$file1." <br/>becomes file2 : ".$file2."<br/>\n";
+//echo "    and file2 : ".$file2." <br/>becomes file1 : ".$file1."<br/>\n";
+rename($file1,$file2.".tmpswap");
+rename($file2,$file1);
+rename($file2.".tmpswap",$file2);
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 
 $targetdir="";
@@ -163,6 +178,8 @@ $num=0;
     fclose($fh); 
 
     file_put_contents($file, $content); // fentries.html
+    
+    //apply_file_changes("delaction");
 	
     if (isset($_GET['num'])) {
       unlink($targetdir.'/.'.$_GET["name"].".".$num);
@@ -183,6 +200,9 @@ $num=0;
 		}
 
 	disable_name_in_entries($_GET["name"], -1, $num);
+	
+	//apply_file_changes("disaction");
+
 
 //echo "num=".$num." \n";
 	copy($targetdir.'/.'.$_GET["name"], $targetdir.'/.'.$_GET["name"].".".$num);
@@ -198,6 +218,10 @@ $num=0;
 	if($nameexist) {
 		enable_name_in_entries($_GET["name"], 0, $line_clicked);
 	}
+	
+	swap_files($targetdir.'/'.$_GET["name"], $targetdir.'/'.$_GET["name"].".".$num);
+
+	
   }///////////////////////////////////////////////////////////////////////////////////////
   else if (isset($_GET['enaction'])) {
 	// we enable this entry, but we may disable another entry
@@ -213,6 +237,9 @@ $num=0;
 //echo "num=".$num." <br/>\n";
 	
 	enable_name_in_entries($_GET["name"], $num, -1);
+	
+	//apply_file_changes("enaction");
+
 
 	copy($targetdir.'/.'.$_GET["name"].".".$num, $targetdir.'/.'.$_GET["name"]);
 	if($nameexist) {
@@ -228,6 +255,9 @@ $num=0;
 		// here we disable another entry
 		disable_name_in_entries($_GET["name"], $line_clicked, $num);
 	}
+	
+	swap_files($targetdir.'/'.$_GET["name"].".".$num, $targetdir.'/'.$_GET["name"]);
+	
   }//////////////////////////////////////////////////////////////////////////////////////////
 
   
