@@ -1,0 +1,5 @@
+@echo off
+cls
+call c:\Xilinx\Vivado\2017.2\settings64.bat
+call hw_server -help 
+pause

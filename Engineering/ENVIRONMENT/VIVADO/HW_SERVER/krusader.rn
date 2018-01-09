@@ -1,0 +1,6 @@
+#xdotool windowunmap $(xdotool getwindowfocus)
+#sleep 4 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin 
+krusader --left=$LINDIRECTORY --right=/proj/xbuilds/2017.3_qualified_latest/installs
+sleep 5
+
+

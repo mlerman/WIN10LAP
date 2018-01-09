@@ -1,0 +1,5 @@
+rem call c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\VIVADO\HW_SERVER\Vivado\2017.3\settings64.bat
+call SETTINGS64.sh.bat
+call %SETTINGS64%
+hw_server
+pause

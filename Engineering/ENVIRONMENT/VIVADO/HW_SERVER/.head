@@ -1,0 +1,48 @@
+J'ai enleve les repertoire copie de 
+\\lin.xcoeng2\ifs\test\xbuilds\2017.3.1_released\installs\nt64\Vivado\2017.3\
+car ca prend trop de place
+il y a ce contenu dans C:\Xilinx\ sans doute d'une install web
+<hr/>
+<img src="scr2.png"/> 
+<hr/> 
+Usage: agent [OPTION]...
+Start Target Communication Framework agent.
+  -d               run in daemon mode (output is sent to system logger)
+  -L<file>         enable logging, use -L- to send log to stderr
+  -l<level>        set log level, the level is comma separated list of:
+      alloc        memory allocation and deallocation (0x1)
+      eventcore    main event queue (0x2)
+      waitpid      waitpid() events (0x4)
+      events       low-level debugger events (0x8)
+      protocol     communication protocol (0x20)
+      context      debug context actions (0x40)
+      children     debug context children (0x10)
+      discovery    discovery (0x80)
+      asyncreq     async I/O (0x100)
+      proxy        proxy state (0x200)
+      tcflog       proxy traffic (0x400)
+      elf          ELF reader (0x800)
+      lua          LUA interpreter (0x1000)
+      stack        stack trace service (0x2000)
+      plugin       plugins (0x4000)
+      shutdown     shutdown of subsystems (0x8000)
+  -s<url>          set agent listening port and protocol, default is tcp::3121;Name=Xilinx Hardware Server
+  -S               print server properties in Json format to stdout
+  -I<idle-seconds> exit if are no connections for the specified time
+  -q               do not display version information on startup
+  --init=<file>    evaluate initialization command file
+  -e <command>     evaluate initialization command
+
+<hr/>
+<img src="scr4.png"/> 
+<hr/> 
+<img src="scr3.png"/> 
+<hr/> 
+<img src="scr2.png"/> 
+<hr/> 
+<img src="scr1.png"/> 
+<hr/> 
+\\lin.xcoeng2\ifs\test\xbuilds\2017.3.1_released\installs\nt64\Vivado\2017.3\settings64.bat
+
+<hr/>
+<hr/>
