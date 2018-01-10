@@ -1,6 +1,5 @@
-OK
-Uses env var SETTINGS64
-can launch the HW server from multiple locations
+Uses env variable VVGL
+can run from multiple locations
 c:/Xilinx         OK
 //xsjmikhaell30   OK
 //laptop-7kqrmtc0 OK

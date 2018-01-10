@@ -1,5 +1,6 @@
 @echo off
 cls
-call c:\Xilinx\Vivado\2017.2\settings64.bat
+call SETTINGS64.sh.bat
+call %SETTINGS64%
 call hw_server -help 
 pause
