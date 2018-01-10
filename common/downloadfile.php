@@ -189,7 +189,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
     $text.="  echo \"Mounting ".$_SERVER["HTTP_HOST"]."...\";"."\n"; 
     //$text.="  sudo mkdir -p /home/user/files"."\n";
     $text.="  sudo mkdir -p /home/user/".$host."/files"."\n";
-    $text.="  echo \"if error wrong fs type etc try run sudo apt install cifs-utils\";"."\n"; 
+    //$text.="  echo \"if error wrong fs type etc try run sudo apt install cifs-utils\";"."\n"; 
 
     $text.="  export pw=$(wget http://".$_SERVER["HTTP_HOST"]."/local/1521A845-A144-442e-BA7B-42E7D69B19AE -q -O - )"."\n"; 
 	// a xilinx uid="mlerman" rend bad option
@@ -210,6 +210,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 // vers=2.1 a cause du message erreur : mount error(121): Remote I/O error
 	
     //$text.="  sudo mount -t cifs -o username=".'$mluser'.",password=\"".'$pw'."\",uid=".'$mluser'.",gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/files"."\n"; 
+    $text.="  echo running : sudo mount -t cifs -o username=".'$mluser'.",password=\"".'$pw'."\",uid=".'$mluser'.",gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
     $text.="  sudo mount -t cifs -o username=".'$mluser'.",password=\"".'$pw'."\",uid=".'$mluser'.",gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
 	// now create a symbolic link ex ln -s /home/user/xsjmikhaell30/files /home/user/files
 	// f overwrite existing link
