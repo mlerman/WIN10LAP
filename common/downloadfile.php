@@ -210,7 +210,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 // vers=2.1 a cause du message erreur : mount error(121): Remote I/O error
 	
     //$text.="  sudo mount -t cifs -o username=".'$mluser'.",password=\"".'$pw'."\",uid=".'$mluser'.",gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/files"."\n"; 
-    $text.="  echo running : sudo mount -t cifs -o username=".'$mluser'.",password=\"".'$pw'."\",uid=".'$mluser'.",gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
+    //$text.="  echo running : sudo mount -t cifs -o username=".'$mluser'.",password=\"".'$pw'."\",uid=".'$mluser'.",gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
     $text.="  sudo mount -t cifs -o username=".'$mluser'.",password=\"".'$pw'."\",uid=".'$mluser'.",gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
 	// now create a symbolic link ex ln -s /home/user/xsjmikhaell30/files /home/user/files
 	// f overwrite existing link
