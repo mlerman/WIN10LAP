@@ -1,2 +1,3 @@
 /home/mikhaell/Xilinx/Vivado/2017.3/bin/vivado
+read -p "pause" reply
 
