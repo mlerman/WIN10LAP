@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.3 (64-bit)
+# SW Build 2018833 on Wed Oct  4 19:58:07 MDT 2017
+# IP Build 2016188 on Wed Oct  4 21:52:56 MDT 2017
+# Start of session at: Wed Dec  6 17:25:05 2017
+# Process ID: 9450
+# Current directory: /home/user/files/Engineering/ENVIRONMENT/VIVADO/HW_SERVER
+# Command line: vivado
+# Log file: /home/user/files/Engineering/ENVIRONMENT/VIVADO/HW_SERVER/vivado.log
+# Journal file: /home/user/files/Engineering/ENVIRONMENT/VIVADO/HW_SERVER/vivado.jou
+#-----------------------------------------------------------
+start_gui
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  6 17:25:58 2017...

@@ -1,4 +1,4 @@
 rem c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\VIVADO\HW_SERVER\Vivado\2017.3\bin\unwrapped\win64.o\vvgl.exe c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\VIVADO\HW_SERVER\Vivado\2017.3\bin\vivado.bat
 call VVGL.sh.bat
-c:\Xilinx\Vivado\2017.3\bin\unwrapped\win64.o\vvgl.exe c:\Xilinx\Vivado\2017.3\bin\vivado.bat
+%VVGL% c:\Xilinx\Vivado\2017.3\bin\vivado.bat
 rem pause
