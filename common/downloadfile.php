@@ -186,7 +186,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
     //$text.="if [ ! -d \"\$LINDIRECTORY\" ]; then"."\n"; 
     $text.="if [ ! -d \"/home/user/".$host."/files/common/\" ]; then"."\n"; 
     $text.="  echo \"dir=\$LINDIRECTORY\""."\n";
-    $text.="  echo \"The directory does not exist, Mounting ".$_SERVER["HTTP_HOST"]."...\";"."\n"; 
+    $text.="  echo \"Mounting ".$_SERVER["HTTP_HOST"]."...\";"."\n"; 
     //$text.="  sudo mkdir -p /home/user/files"."\n";
     $text.="  sudo mkdir -p /home/user/".$host."/files"."\n";
     $text.="  echo \"if error wrong fs type etc try run sudo apt install cifs-utils\";"."\n"; 
