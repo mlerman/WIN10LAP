@@ -184,7 +184,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
         $text.="export PARAM1=".$param1."\n";
       }
     //$text.="if [ ! -d \"\$LINDIRECTORY\" ]; then"."\n"; 
-    $text.="if [ ! -d \"/home/user/".$host."/files/common\" ]; then"."\n"; 
+    $text.="if [ ! -d \"/home/user/".$host."/files/common/\" ]; then"."\n"; 
     $text.="  echo \"dir=\$LINDIRECTORY\""."\n";
     $text.="  echo \"The directory does not exist, Mounting ".$_SERVER["HTTP_HOST"]."...\";"."\n"; 
     //$text.="  sudo mkdir -p /home/user/files"."\n";
@@ -192,7 +192,8 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
     $text.="  echo \"if error wrong fs type etc try run sudo apt install cifs-utils\";"."\n"; 
 
     $text.="  export pw=$(wget http://".$_SERVER["HTTP_HOST"]."/local/1521A845-A144-442e-BA7B-42E7D69B19AE -q -O - )"."\n"; 
-    $text.="  export mluser=$(wget http://".$_SERVER["HTTP_HOST"]."/local/myusername.txt -q -O - )"."\n"; 
+	// a xilinx uid="mlerman" rend bad option
+    $text.="  export mluser=$(wget http://".$_SERVER["HTTP_HOST"]."/local/myXusername.txt -q -O - )"."\n";   // myXusername.txt myusername.txt
 	//$text.='  echo password is $pw user is $mluser'."\n";
 	//sudo demande un password
 	
