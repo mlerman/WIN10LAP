@@ -193,7 +193,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 
     $text.="  export pw=$(wget http://".$_SERVER["HTTP_HOST"]."/local/1521A845-A144-442e-BA7B-42E7D69B19AE -q -O - )"."\n"; 
 	// a xilinx uid="mlerman" rend bad option
-    $text.="  export mluser=$(wget http://".$_SERVER["HTTP_HOST"]."/local/myXusername.txt -q -O - )"."\n";   // myXusername.txt myusername.txt
+    $text.="  export mluser=$(wget http://".$_SERVER["HTTP_HOST"]."/local/myusername.txt -q -O - )"."\n";   // myXusername.txt myusername.txt
 	//$text.='  echo password is $pw user is $mluser'."\n";
 	//sudo demande un password
 	
