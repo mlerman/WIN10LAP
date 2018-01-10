@@ -1,1 +1,1 @@
-set VVGL=//xsjmikhaell30/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/vvgl.exe
+set VVGL=//laptop-7kqrmtc0/Xilinx/Vivado/2017.3/bin/unwrapped/win64.o/vvgl.exe
