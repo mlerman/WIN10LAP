@@ -1,0 +1,2 @@
+command:
+sudo ifconfig enx00e04c7700f2 192.168.1.190 netmask 255.255.255.0
