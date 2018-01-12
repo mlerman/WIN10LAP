@@ -183,6 +183,22 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
     if(isset($_GET["param1"])) {
         $text.="export PARAM1=".$param1."\n";
       }
+	  
+    $text.="if [  \"\$HOSTNAME\" = xsjmikhaell50 ]; then"."\n"; 
+    $text.="  printf 'xsjmikhaell50\\n' \n"; 
+    $text.="elif [  \"\$HOSTNAME\" = mlerman-vm-mint ]; then"."\n"; 
+    $text.="  printf 'mlerman-vm-mint\\n' \n"; 
+	
+	$text.="  export http_proxy=proxy\n";
+    $text.="elif [  \"\$HOSTNAME\" = mint18 ]; then"."\n"; 
+    $text.="  printf 'mint18\\n' \n"; 
+    $text.="fi\n"; 
+	  
+	// pause for debug
+    //$text.="  echo http_proxy is \$http_proxy \n"; 
+	//$text.="  read -p \"Press any key to continue . . .\" \n"; 
+	  
+	  
     //$text.="if [ ! -d \"\$LINDIRECTORY\" ]; then"."\n"; 
     $text.="if [ ! -d \"/home/user/".$host."/files/common/\" ]; then"."\n"; 
     $text.="  echo \"dir=\$LINDIRECTORY\""."\n";
@@ -191,7 +207,6 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
     $text.="  sudo mkdir -p /home/user/".$host."/files"."\n";
     //$text.="  echo \"if error wrong fs type etc try run sudo apt install cifs-utils\";"."\n"; 
 
-	$text.="  export http_proxy=proxy\n";
     $text.="  export pw=$(wget http://".$_SERVER["HTTP_HOST"]."/local/1521A845-A144-442e-BA7B-42E7D69B19AE -q -O - )"."\n"; 
 	
 	// a xilinx uid="mlerman" rend bad option
