@@ -238,7 +238,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 	$text.="  sudo ln -sfn /home/user/".$host."/files /home/user/files\n";
 	
 	// pause for debug
-    $text.="  read -p \"Press [Enter] key to continue... \" "."\n";
+    //$text.="  read -p \"Press [Enter] key to continue... \" "."\n";
 	
     $text.="else "."\n";
     //$text.="  echo \"The directory exists\";"."\n"; 
