@@ -184,14 +184,18 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
         $text.="export PARAM1=".$param1."\n";
       }
 	  
+    $text.="  printf 'host ".$host."\\n' \n"; 
+	$uid="mlerman";
+	if($host=="xsjmikhaell30") $uid="mikhaell";
+	
     $text.="if [  \"\$HOSTNAME\" = xsjmikhaell50 ]; then"."\n"; 
-    $text.="  printf 'xsjmikhaell50\\n' \n"; 
+    $text.="  printf 'guest xsjmikhaell50\\n' \n"; 
     $text.="elif [  \"\$HOSTNAME\" = mlerman-vm-mint ]; then"."\n"; 
-    $text.="  printf 'mlerman-vm-mint\\n' \n"; 
+    $text.="  printf 'guest mlerman-vm-mint\\n' \n"; 
 	
 	$text.="  export http_proxy=proxy\n";
     $text.="elif [  \"\$HOSTNAME\" = mint18 ]; then"."\n"; 
-    $text.="  printf 'mint18\\n' \n"; 
+    $text.="  printf 'guest mint18\\n' \n"; 
     $text.="fi\n"; 
 	  
 	// pause for debug
@@ -232,8 +236,8 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
     //$text.="  sudo mount -t cifs -o username=".'$mluser'.",password=\"".'$pw'."\",uid=".'$mluser'.",gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
 	// OK but no write access
     //$str_mount=	"  sudo mount -t cifs -o username=".'$mluser'.",password=".'"'.'$pw'.'"'.",forceuid,gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
-    // uid=0 root proviledge
-	$str_mount=	"  sudo mount -t cifs -o username=".'$mluser'.",password=".'"'.'$pw'.'"'.",uid=0,gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
+    // uid=0 root proviledge does fix the write access denied
+	$str_mount=	"  sudo mount -t cifs -o username=".'$mluser'.",password=".'"'.'$pw'.'"'.",uid=".$uid.",gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
     //$text.="  echo str_mount : ".$str_mount;
     $text.=$str_mount;
 	// now create a symbolic link ex ln -s /home/user/xsjmikhaell30/files /home/user/files
