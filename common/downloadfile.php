@@ -238,7 +238,8 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 	// des fois il semble que cette commande ne marche pas dans le script
 	$text.="  sudo ln -sfn /home/user/".$host."/files /home/user/files\n";
 	// now test the link and eventually pause
-	$text.="  test -L /home/user/files && echo \"symbolic link created successfully\" || echo \"could not create symbolic link /home/user/files\" && sed -n q </dev/tty\n";
+	//$text.="  test -L /home/user/files && echo \"symbolic link created successfully\" || echo \"could not create symbolic link /home/user/files\" && sed -n q </dev/tty\n";
+	$text.="  test -L /home/user/files && echo \"symbolic link created successfully\" || echo \"could not create symbolic link /home/user/files\"\n";
 	
 	// pause for debug
     //$text.="  read -p \"Press [Enter] key to continue... \" "."\n";
