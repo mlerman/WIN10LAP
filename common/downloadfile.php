@@ -237,7 +237,9 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 	// f overwrite existing link
 	$text.="  sudo ln -sf /home/user/".$host."/files /home/user/files\n";
 	
-    //$text.="  read -p \"Press [Enter] key to continue... \" "."\n";
+	// pause for debug
+    $text.="  read -p \"Press [Enter] key to continue... \" "."\n";
+	
     $text.="else "."\n";
     //$text.="  echo \"The directory exists\";"."\n"; 
     $text.="  cd \$LINDIRECTORY"."\n";
@@ -253,8 +255,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
     $text.="fi"."\n";
     $text.="}"."\n"; 
 
-    //$text.="[ -d \"".$linTargetdir."\" ] && cd \"".$linTargetdir."\" || echo 'The directory does not exist' "."\n"; 
-    //$text.="test -d \"".$linTargetdir."\" "."\n";
+ 	// pause for debug
     //$text.="read -p \"Press [Enter] key to continue... \" "."\n";
   }
 
