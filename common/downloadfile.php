@@ -230,7 +230,10 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
     //$text.="  sudo mount -t cifs -o username=".'$mluser'.",password=\"".'$pw'."\",uid=".'$mluser'.",gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/files"."\n"; 
 	// this will expose the password to use just for test and for copy paste the command in the terminal
     //$text.="  sudo mount -t cifs -o username=".'$mluser'.",password=\"".'$pw'."\",uid=".'$mluser'.",gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
-    $str_mount=	"  sudo mount -t cifs -o username=".'$mluser'.",password=".'"'.'$pw'.'"'.",forceuid,gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
+	// OK but no write access
+    //$str_mount=	"  sudo mount -t cifs -o username=".'$mluser'.",password=".'"'.'$pw'.'"'.",forceuid,gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
+    // uid=0 root proviledge
+	$str_mount=	"  sudo mount -t cifs -o username=".'$mluser'.",password=".'"'.'$pw'.'"'.",uid=0,gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
     //$text.="  echo str_mount : ".$str_mount;
     $text.=$str_mount;
 	// now create a symbolic link ex ln -s /home/user/xsjmikhaell30/files /home/user/files
@@ -239,6 +242,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 	$text.="  sudo ln -sfn /home/user/".$host."/files /home/user/files\n";
 	// now test the link and eventually pause
 	//$text.="  test -L /home/user/files && echo \"symbolic link created successfully\" || echo \"could not create symbolic link /home/user/files\" && sed -n q </dev/tty\n";
+	// pause removed
 	$text.="  test -L /home/user/files && echo \"symbolic link created successfully\" || echo \"could not create symbolic link /home/user/files\"\n";
 	
 	// pause for debug
