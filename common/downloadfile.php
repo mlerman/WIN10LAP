@@ -185,7 +185,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
       }
 	  
     $text.="  printf 'host ".$host."\\n' \n"; 
-	$uid="mlerman";
+	$uid="0";
 	if($host=="xsjmikhaell30") $uid="mikhaell";
 	
     $text.="if [  \"\$HOSTNAME\" = xsjmikhaell50 ]; then"."\n"; 
@@ -240,6 +240,13 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 	$str_mount=	"  sudo mount -t cifs -o username=".'$mluser'.",password=".'"'.'$pw'.'"'.",uid=".$uid.",gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
     //$text.="  echo str_mount : ".$str_mount;
     $text.=$str_mount;
+
+	//$text.="    sleep 5\n";
+	// ca ne fait rien
+	$text.="  while [ ! -d \"/home/user/".$host."/files/common\" ]; do\n";
+	$text.="    sleep 1\n";
+	$text.="  done\n";
+		
 	// now create a symbolic link ex ln -s /home/user/xsjmikhaell30/files /home/user/files
 	// f overwrite existing link
 	// des fois il semble que cette commande ne marche pas dans le script
