@@ -185,7 +185,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
       }
 	  
     $text.="  printf 'host ".$host."\\n' \n"; 
-	$uid="1000";
+	$uid="100";
 	if($host=="xsjmikhaell30") $uid="mikhaell";
 	
     $text.="if [  \"\$HOSTNAME\" = xsjmikhaell50 ]; then"."\n"; 
