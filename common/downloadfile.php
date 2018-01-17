@@ -307,7 +307,8 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
   	  if( $term == "") {
         $text.=$textbat;
 	  } else {
-        $tempstr=$term." -e 'sh -c \"";
+        //$tempstr=$term." -e 'sh -c \"";
+        $tempstr=$term." -e 'bash -c \"";
         $tempstr.= str_replace("\n", ';', addslashes($textbat));
         $tempstr.="\"'"."\n";
         $text.=$tempstr;
