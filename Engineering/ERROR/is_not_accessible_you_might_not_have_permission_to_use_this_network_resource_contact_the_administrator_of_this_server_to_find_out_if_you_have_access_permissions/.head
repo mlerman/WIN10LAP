@@ -1,3 +1,10 @@
+You can check that by performing the following steps:
+1. Log on to your desktop machine
+2. Start 'Administrative Tools' --> 'Local Security Settings' (Shortcut: Start --> Run --> Secpol.msc)
+3. Exapnd 'Security Settings' --> 'Local Policies' --> 'User Rights Assignment'
+4. On the right pane, double click 'Access this computer from the network'
+5. Make sure the user account which you use on your laptop exist in the list (or everyone)
+<hr/>
 <img src="scr2.png"/> 
 <hr/> 
 is not accessible. you might not have permission to use this network resource. 
