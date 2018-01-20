@@ -1,3 +1,9 @@
+<img src="scr3.png"/> 
+<hr/> 
+je pense que le pb avec celine-pc est que ce PC est sur un reseau different
+ca il n'est pas sur le wireless, mais sur le wired
+ip 192.168.1.71
+<hr/>
 You can check that by performing the following steps:
 1. Log on to your desktop machine
 2. Start 'Administrative Tools' --> 'Local Security Settings' (Shortcut: Start --> Run --> Secpol.msc)
