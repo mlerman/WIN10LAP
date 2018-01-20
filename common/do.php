@@ -14,7 +14,6 @@ $targetfile="";
 if (isset($_GET["targetfile"])) {
   $targetfile=$_GET["targetfile"];
 } 
-//file_put_contents("c:\\UniServer\\www\\mlscript\\debug.txt", $targetdir."\\".$targetfile."\n", FILE_APPEND); 
 if (!file_exists($targetdir."\\".$targetfile)) {
 	$bool=copy("c:\\UniServer\\www\\doc\\files\\common\\open_command_files\\empty.txt", $targetdir."\\".$targetfile);
 }

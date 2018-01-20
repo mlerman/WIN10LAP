@@ -64,7 +64,6 @@ echo "targetdir is ".$targetdir."<br/>\n";
   $linTargetdir="/home/user/".substr($targetdir,$pos+21);
   $linTargetdir=str_replace("\\","/",$linTargetdir);
 
-  //file_put_contents("c:\\UniServer\\www\\mlscript\\debug.txt", "linTargetdir = ".$linTargetdir." targetfile ".$targetfile."\n", FILE_APPEND); 
 
 //$strcmd="c:\\UniServer\\www\\doc\\files\\ThisPC\\install_pstools\\PsExec64.exe -i 1 -s -d cmd /K cd ".$targetdir." && ".$targetdir."\\".$targetfile."  2>&1 && exit";
 $strcmd="c:\\UniServer\\www\\doc\\files\\ThisPC\\install_kitty\\kitty_portable.exe -ssh mlerman@mlerman-vm-mint -pw normerel -cmd \"export DISPLAY=:0; gnome-terminal --geometry=180x25 --working-directory '".$linTargetdir."' --title 'Launched from Windows host ".$host."' -e './".$targetfile."'; exit\" ";

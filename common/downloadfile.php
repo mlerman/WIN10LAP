@@ -81,7 +81,6 @@ if(
    &&(  ($fname=="ui_edit_this.run")  ||  ($fname=="edit_this.rn")  )
   )
 {
-//file_put_contents("c:\\UniServer\\www\\mlscript\\debug.txt", $targetdir."\\".$targetfile." addhr : condition remplie\n", FILE_APPEND);
 
 $filehead = $targetdir."\\".$targetfile;
 $current = "\n<hr/>\n";

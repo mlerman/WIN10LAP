@@ -14,7 +14,7 @@ if [ -z "$SSH_CONNECTION" ]; then
     zenity --info --text="Press OK\nThis terminal will close [X]" --title="Pause" 
 else 
     echo "Launched from likely remote Windows with SSH";
-    wget --no-proxy --quiet "http://mlerman-lap/mlscript/psexec.php?targetdir=C:\\UniServer\\www\\doc\\files\\Engineering\\ENVIRONMENT\\WINDOWS_BATCH\\mousePause&targetfile=ui_run.run%20%22$(cat .result)%20\nProject%20:%20$PWD%22&urldir=/doc/files/Engineering/ENVIRONMENT/WINDOWS_BATCH/mousePause/&host=mlerman-lap"
+    wget --no-proxy --quiet "http://mlerman-lap/doc/files/common/psexec.php?targetdir=C:\\UniServer\\www\\doc\\files\\Engineering\\ENVIRONMENT\\WINDOWS_BATCH\\mousePause&targetfile=ui_run.run%20%22$(cat .result)%20\nProject%20:%20$PWD%22&urldir=/doc/files/Engineering/ENVIRONMENT/WINDOWS_BATCH/mousePause/&host=mlerman-lap"
 fi  
 #zenity --info --text="Press OK\nThis terminal will close [X]" --title="Pause" 
 

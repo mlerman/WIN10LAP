@@ -58,7 +58,7 @@ setVarsForm("pageID=profileEdit&userID=11&sessionID=28ydk3478Hefwedkbj73bdIB8H")
 </script> 
 
 <fieldset>
-<legend>&nbsp;<a href="/mlscript/download<?php if($CurrOS=='Linux') echo 'Linux';?>file.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'sh'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.head&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/images/notepad-plus-plus.gif"/></a> 
+<legend>&nbsp;<a href="/doc/files/common/download<?php if($CurrOS=='Linux') echo 'Linux';?>file.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'sh'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.head&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/images/notepad-plus-plus.gif"/></a> 
               <small>(.head)</small> Notes: 
 </legend>
 <pre>

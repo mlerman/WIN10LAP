@@ -40,18 +40,7 @@ $othersites = file('c:/UniServer/www/local/allsites.txt', FILE_IGNORE_NEW_LINES 
 </head>
 <body>
 
-<!--
-	<ul id="CM1" class="SimpleContextMenu">
-		<li><a href="http://sjwslab001/mlscript/downloadfile.php?fname=ui_tightvnc_remote.run&targetdir=C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\WINDOWS_BATCH\associate_extension&targetfile=associate_extension&urldir=/doc/files/Engineering/ENVIRONMENT/WINDOWS_BATCH/associate_extension/&host=sjwslab001&perma=C:\UniServer\www\common\perma"><img src="/doc/images/tightvncs.png"/></a></li>
-	</ul>
-
-	<ul id="CM2" class="SimpleContextMenu">
-		<li><a href="http://mlpebu01-lap/mlscript/downloadfile.php?fname=ui_tightvnc_remote.run&targetdir=C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\WINDOWS_BATCH\associate_extension&targetfile=associate_extension&urldir=/doc/files/Engineering/ENVIRONMENT/WINDOWS_BATCH/associate_extension/&host=mlpebu01-lap&perma=C:\UniServer\www\common\perma"><img src="/doc/images/tightvncs.png"/></a></li>
-	</ul>
--->
-
  
-       
           
 <?php
 $i=0;

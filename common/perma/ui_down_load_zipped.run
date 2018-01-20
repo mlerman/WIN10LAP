@@ -12,7 +12,7 @@ if exist %TARGETDIR%\open-command-prompt-here.html set NEWDIR=%TARGETDIR%_
 echo newdir: %NEWDIR%
 if not exist "%NEWDIR%" md %NEWDIR%
 cd %NEWDIR%
-set URL="http://%HOST%/mlscript/zipfolder.php?fname=%TARGETFILE%&targetdir=%TARGETDIR%"
+set URL="http://%HOST%/doc/files/common/zipfolder.php?fname=%TARGETFILE%&targetdir=%TARGETDIR%"
 echo url: %URL%
 
 C:\"Program Files"\cURL\bin\curl -o %TARGETFILE%.zip %URL% 

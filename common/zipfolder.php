@@ -99,7 +99,7 @@ if ($fname!="") {
 
 	// create here the zip file
 	$zipfname=$fname.".zip";
-	exec('cmd.exe /c C:\\UniServer\\www\\mlscript\\zipfolder.bat '." ".$zipfname." ".$targetdirxp);
+	exec('cmd.exe /c C:\\UniServer\\www\\doc\\files\\common\\zipfolder.bat '." ".$zipfname." ".$targetdirxp);
 
 	header('Content-type: "application/octet-stream"');
 	header('Content-Disposition: attachment; filename="'.$zipfname.'"');
@@ -108,7 +108,7 @@ if ($fname!="") {
 	unlink($zipfname);
 } else {
 // TODO check why this error ???
-	exec('cmd.exe /c C:\\UniServer\\www\\mlscript\\zipfolderErr.bat '." ".$zipfname." ".$targetdirxp);
+	exec('cmd.exe /c C:\\UniServer\\www\\doc\\files\\common\\zipfolderErr.bat '." ".$zipfname." ".$targetdirxp);
 }
 
 ?>
