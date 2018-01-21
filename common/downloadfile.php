@@ -262,7 +262,9 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 	
     $text.="else "."\n";
     //$text.="  echo \"The directory exists\";"."\n"; 
-    $text.="  cd \$LINDIRECTORY"."\n";
+	$text.="  sudo ln -sfn /home/user/".$host."/files /home/user/files\n";
+	$text.="  test -L /home/user/files && echo \"symbolic link created successfully\" || echo \"could not create symbolic link /home/user/files\"\n";
+	$text.="  cd \$LINDIRECTORY"."\n";
     $text.="fi"."\n"; 
     // add the function pause so it can be used in linux shell
     $text.="pause(){"."\n"; 
