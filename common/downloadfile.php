@@ -205,11 +205,11 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 	  
 	  
     //$text.="if [ ! -d \"\$LINDIRECTORY\" ]; then"."\n"; 
-    $text.="if [ ! -d \"/home/user/".$host."/files/common/\" ]; then"."\n"; 
+    $text.="if [ ! -d \"/home/user/".$_SERVER["HTTP_HOST"]."/files/common/\" ]; then"."\n"; 
     $text.="  echo \"dir=\$LINDIRECTORY\""."\n";
     $text.="  echo \"Mounting ".$_SERVER["HTTP_HOST"]."...\";"."\n"; 
     //$text.="  sudo mkdir -p /home/user/files"."\n";
-    $text.="  sudo mkdir -p /home/user/".$host."/files"."\n";
+    $text.="  sudo mkdir -p /home/user/".$_SERVER["HTTP_HOST"]."/files"."\n";
     //$text.="  echo \"if error wrong fs type etc try run sudo apt install cifs-utils\";"."\n"; 
 
     $text.="  export pw=$(wget http://".$_SERVER["HTTP_HOST"]."/local/1521A845-A144-442e-BA7B-42E7D69B19AE -q -O - )"."\n"; 
