@@ -244,14 +244,14 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 
 	//$text.="    sleep 5\n";
 	// ca ne fait rien
-	$text.="  while [ ! -d \"/home/user/".$host."/files/common\" ]; do\n";
+	$text.="  while [ ! -d \"/home/user/".$_SERVER["HTTP_HOST"]."/files/common\" ]; do\n";
 	$text.="    sleep 1\n";
 	$text.="  done\n";
 		
 	// now create a symbolic link ex ln -s /home/user/xsjmikhaell30/files /home/user/files
 	// f overwrite existing link
 	// des fois il semble que cette commande ne marche pas dans le script
-	$text.="  sudo ln -sfn /home/user/".$host."/files /home/user/files\n";
+	$text.="  sudo ln -sfn /home/user/".$_SERVER["HTTP_HOST"]."/files /home/user/files\n";
 	// now test the link and eventually pause
 	//$text.="  test -L /home/user/files && echo \"symbolic link created successfully\" || echo \"could not create symbolic link /home/user/files\" && sed -n q </dev/tty\n";
 	// pause removed
@@ -262,7 +262,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 	
     $text.="else "."\n";
     //$text.="  echo \"The directory exists\";"."\n"; 
-	$text.="  sudo ln -sfn /home/user/".$host."/files /home/user/files\n";
+	$text.="  sudo ln -sfn /home/user/".$_SERVER["HTTP_HOST"]."/files /home/user/files\n";
 	$text.="  test -L /home/user/files && echo \"symbolic link created successfully\" || echo \"could not create symbolic link /home/user/files\"\n";
 	$text.="  cd \$LINDIRECTORY"."\n";
     $text.="fi"."\n"; 
