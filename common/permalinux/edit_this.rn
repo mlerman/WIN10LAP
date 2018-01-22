@@ -25,5 +25,5 @@ echo this is common/permalinux/edit_this.rn
 #notepadqq $TARGETFILE
 # with line number
 #gedit $TARGETFILE +3
-echo $LINDIRECTORY/$TARGETFILE>debug.txt
+#echo $LINDIRECTORY/$TARGETFILE>debug.txt
 gedit $TARGETFILE
