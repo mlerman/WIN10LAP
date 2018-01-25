@@ -1,0 +1,4 @@
+# install commands below
+cd /home/user/files/ThisPCLinux/install_xAutoClick/xautoclick-0.31
+./configure
+read -p "Press [Enter] key to continue..." reply

@@ -1,0 +1,7 @@
+None of the xautoclick applications can be build. You need to install the
+development packages of X11, GTK+ and/or QT. Check the documentation of
+your distribution for details.
+
+<hr/>
+<img src="scr1.png"/>
+<hr/>

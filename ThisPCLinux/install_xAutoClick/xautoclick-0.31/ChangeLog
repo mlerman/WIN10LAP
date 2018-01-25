@@ -1,0 +1,33 @@
+ChangeLog
+=========
+
+v0.31
+    * fix compiler check
+    * fix missing include (qt4 gui)
+    * fix linking of fltk version
+
+v0.30
+    * source code cleaned up
+    * added Qt 4 GUI
+    * added FLTK GUI
+
+v0.20
+    * various documentation and typo fixes
+
+v0.19
+    * migration to subversion
+    * increased upper limits on values
+    * fixed visibility bug in qt3 version (lower half of buttons were
+      sometimes not visible)
+
+v0.18	Finished manpage, webpage, small fixes to configure
+v0.17	Fixed a few bugs, added command line parser
+v0.16	Added command line version and preliminary manual page
+v0.15	Added GTK+ 2.0 detection to configure and have the GTK GUI compile
+        and link against it
+v0.14	Cleaner code, fixed some strict ansi compilation issues
+v0.13	Improved build system and added Qt detection to configure
+v0.12	Qt 3.x GUI
+v0.11   ASCII GUI
+v0.10   Basic build system, core and GTK1 GUI
+

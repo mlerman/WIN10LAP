@@ -1,0 +1,9 @@
+Be sure you have the proper development packages for your distribution
+installed (i.e. something like xserver-xorg-dev, gtk2-dev, et cetera).
+
+After that, run:
+
+./configure
+make
+sudo make install
+
