@@ -1,4 +1,6 @@
 # install commands below
 cd /home/user/files/ThisPCLinux/install_xAutoClick/xautoclick-0.31
+sudo apt-get install xorg-dev
 ./configure
+sudo make install
 read -p "Press [Enter] key to continue..." reply
