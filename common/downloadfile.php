@@ -187,7 +187,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 	$uid="100";
 	if($host=="xsjmikhaell30") $uid="mikhaell";
 	if($host=="win7-pc") $uid="mlerman";
-	if($host=="celine-pc") $uid="celine";
+	if($host=="celine-pc") $uid="mlerman";
 	
     $text.="if [  \"\$HOSTNAME\" = xsjmikhaell50 ]; then"."\n"; 
     $text.="  printf 'guest xsjmikhaell50\\n' \n"; 
