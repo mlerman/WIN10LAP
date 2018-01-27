@@ -1,2 +1,3 @@
 echo share files directory so it can be accessed RW by anyone, do all what is needed 
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe elevate cmd /K "net share files=c:\UniServer\www\doc\files /GRANT:Everyone,FULL" 
 pause
