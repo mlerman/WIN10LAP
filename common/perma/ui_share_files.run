@@ -1,3 +1,10 @@
 echo share files directory so it can be accessed RW by anyone, do all what is needed 
+
+rem step 1, set NTFS permission
+rem  “(OI)(CI):F” means Full Control “This Folder, Subfolders and files”
+rem “/inheritance:r” means remove all inherited ACL’s from parent
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe elevate cmd /K "icacls c:\UniServer\www\doc\files /grant:r everyone:(OI)(CI)F /inheritance:r"
+rem step 2, sharing
 c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe elevate cmd /K "net share files=c:\UniServer\www\doc\files /GRANT:Everyone,FULL" 
+
 pause
