@@ -141,7 +141,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
   }
 
 
-    // replace "/doc/files/ThisPCLinux/apt-get_update"
+    // replace    "/doc/files/ThisPCLinux/apt-get_update"
     // with "/home/user/files/ThisPCLinux/apt-get_update"
     $url=$urldir;
     $urldir=str_replace("/doc/","/home/user/",$urldir);  // adjust for linux
