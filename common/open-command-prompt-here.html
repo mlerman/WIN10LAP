@@ -2236,6 +2236,7 @@ var str10="";
 <a href="/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/" target="chartime" onclick="javascript:void window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/','1481656702602','width=800,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=600,top=50');return false;"><img src="/doc/images/copyclip.png" title="frequent copy paste" onmouseover="customAlertRight(str10,'10000','50','300')" /></a><br/><br/>
 <img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" /><br/><br/>
 <?php
+
 if($CurrOS!="Linux")
 {
 	$dirp="perma";
@@ -2247,8 +2248,8 @@ if($CurrOS!="Linux")
 	$file="krusaderHere.rn";
 	echo '<a class="linuxlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dirlocal).'&targetfile='.$prjname.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath($dirpm).'"  onmouseover="getFileFromServer('.'\'.'.$file.'\''.', function(text){ show(text, this, -1)});"><img src="/doc/images/krusader16.png" title="krusader" /></a><br/><br/>';
 }
-?>
-<?php
+
+
 if($CurrOS!="Linux")
 {
 	$dirp="perma";
@@ -2260,6 +2261,20 @@ if($CurrOS!="Linux")
 	$file="copy_path_to_clipboard.rn";
 	echo '<a class="linuxlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dirlocal).'&targetfile='.$prjname.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath($dirpm).'"  onmouseover="getFileFromServer('.'\'.'.$file.'\''.', function(text){ show(text, this, -1)});"><img src="/doc/images/clip16.png" title="Copy path to clipboard" /></a><br/><br/>';
 }
+
+
+if($CurrOS!="Linux")
+{
+	$dirp="perma";
+	$file="ui_DOS_prompt.run";
+	echo '&nbsp;<a class="winlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dir).'&targetfile='.$prjname.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath($dirp).'" '.$onmouseover.'  onclick="this.href=this.href+\'&param1=\'+document.getElementById(\'inpf\').value;" ><img src="/doc/files/common/images/terminal16.png" title="DOS session" /></a><br/><br/>';
+} else
+{
+	$dirpm="permalinux";
+	$file="openTerminal.rn";
+	echo '<a class="linuxlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dirlocal).'&targetfile='.$prjname.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath($dirpm).'"  onmouseover="getFileFromServer('.'\'.'.$file.'\''.', function(text){ show(text, this, -1)});"><img src="/doc/files/common/images/terminal16.png" title="Terminal" /></a><br/><br/>';
+}
+
 ?>
 <a href="#bottom"><img src="/doc/images/dn.png" title="Scroll all the way down"/></a><br/><br/>
 </div>
