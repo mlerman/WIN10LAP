@@ -1,14 +1,14 @@
-test <img src="images/ln-files.png"/>
-<hr/>
-<img src="scr3.png"/> 
-<hr/> 
-<img src="scr2.png"/>
-<hr/>
-<img src="scr1.png"/>
-<hr/>
-<hr/>
+test <img src="images/ln-files.png">
+<hr>
+<img src="scr3.png"> 
+<hr> 
+<img src="scr2.png">
+<hr>
+<img src="scr1.png">
+<hr>
+<hr>
 gnome-terminal -e 'sh -c "echo toto && read -p "pause" reply"'
-<hr/>
+<hr>
 ca fait rien
 dans /etc/local.conf ceci: 
 LANG="en_US.UTF-8"
@@ -25,7 +25,7 @@ LC_TELEPHONE="en_US.UTF-8"
 LC_MEASUREMENT="en_US.UTF-8"
 LC_IDENTIFICATION="en_US.UTF-8"
 LC_ALL="en_US.UTF-8"
-<hr/>
+<hr>
 Error constructing proxy for org.gnome.Terminal:/org/gnome/Terminal/Factory0: The connection is closed
 <hr>
 No protocol specified
