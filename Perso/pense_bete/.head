@@ -1,7 +1,10 @@
-Utiliser le shell web pour rajouter une option d'executer une ligne seulement du batch.
+faire le clipboard avec html5
+<hr/>
+Utiliser le shell web pour rajouter une option d'executer une ligne seulement du batch de maniere arbitrarire.
 Ceci est particulierement ustil pour les script dont on ne sait pas la fiabilite.
 example les install linux.
 l'interface doit permettre d'executer une ligne par un click.
+A la difference d'un execution sequentielle, ceci permet une execution "a la carte"
 en extra on peut marquer la derniere ligne executee
 <hr/>
 faire un mini file manager pour naviger rapidement 
