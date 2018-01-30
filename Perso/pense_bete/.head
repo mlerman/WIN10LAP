@@ -1,3 +1,9 @@
+Utiliser le shell web pour rajouter une option d'executer une ligne seulement du batch.
+Ceci est particulierement ustil pour les script dont on ne sait pas la fiabilite.
+example les install linux.
+l'interface doit permettre d'executer une ligne par un click.
+en extra on peut marquer la derniere ligne executee
+<hr/>
 faire un mini file manager pour naviger rapidement 
 entre les projet a partir de la page open-command-prompt-here.html
 et eviter de retourner a elfinder chaque fois
