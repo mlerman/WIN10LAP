@@ -1932,7 +1932,11 @@ if ($handle = opendir($dir)) {
 						}
 					}
 						echo '<a class="linuxlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dir).'&term=gnome-terminal"  onmouseover="getFileFromServer('.'\'.'.$file.'\''.', function(text){ show(text, this, -1)});">'.$file.'</a>'
+							// to be debug execute
+							.'&nbsp;<a id="lview'.$i.'" class="inline" href="/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell/shell.php?fname='.$file.'&targetdir='.$dir.'" onclick="javascript:void window.open(\'/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell/shell.php?fname='.$file.'&targetdir='.$dir.'\',\'1481602525735\',\'width=980,height=550,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=150,top=50\'); return false;"><img src="/doc/files/common/images/debug16.png" '.$onmouseover_view.' /></a>'
+							// edit
 							.$str_edit
+							// view 
 							.'<a id="lview'.$i.'" class="inline" href="/viewfile/viewdos.php?fname='.$file.'&targetdir='.$dir.'" onclick="javascript:void window.open(\'/viewfile/viewdos.php?fname='.$file.'&targetdir='.$dir.'\',\'1481602525735\',\'width=980,height=550,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=150,top=50\'); return false;"><img src="/doc/images/view.png" '.$onmouseover_view.' /></a>'
 							// run a linux gui with windows psexec
 							.'<a class="winlink" href="/doc/files/common/runinlinux.php?targetdir='.realpath($dir).'&targetfile='.$file.'&urldir='.$urldir.'&host='.$host.'"  onclick=\'psexec(this.href); return false;\' ><img src="/doc/images/linux.png"/></a>'
