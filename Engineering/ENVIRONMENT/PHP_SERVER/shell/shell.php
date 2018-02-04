@@ -14,8 +14,39 @@ if (isset($_GET["cmd"])) {
   $send_cmd=$_GET["cmd"];
 }
 
+$fname="";
+if (isset($_GET["fname"])) {
+  $fname=$_GET["fname"];
+}
+
+$targetdir="";
+if (isset($_GET["targetdir"])) {
+  $targetdir=$_GET["targetdir"];
+}
+
 // this break, only for test
 //echo "running shell.php send_cmd : ".$send_cmd."<br/>";
+//echo "testing<br/>\n";
+//echo "file is $targetdir/$fname<br/>\n";
+
+$lines = file($targetdir.'/'.$fname);
+$tmp_sug = array();
+foreach ($lines as $line) {
+  $tmp_sug[$line] = $line;
+}
+
+/*
+$tmp_sug = array( 'cd \'~\''=>'cd \'~\'',
+                  //'upload'=>'upload',
+		'pwd'=>'pwd',
+		'echo %cd%'=>'echo %cd%',
+		'clear'=>'clear',
+		'dir'=>'dir'
+		);
+*/
+		
+//print_r($tmp_sug);
+//print_r($lines);
 
 function authenticate($u) {
   if (!isset($_SERVER['PHP_AUTH_USER'])) die(header('WWW-Authenticate: Basic realm="shell.php"',401));
@@ -23,6 +54,7 @@ function authenticate($u) {
   if ($_SERVER['PHP_AUTH_PW']=='secret_password') die('change default password in line 2 of shell.php');
 }
 authenticate($users);
+
 
 $commands = array('view','edit','upload','download','own');
 $style = <<<END_OF_STYLE
@@ -42,16 +74,13 @@ function bash()
   global $style;
   global $microAjax;
   global $send_cmd;
+  global $tmp_sug;
   //if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') die('Windows not supported');	//ml removed for testing
   $jsonCommands = json_encode($commands);
-  $suggestions = links(array( 'cd \'~\''=>'cd \'~\'',
-                               //'upload'=>'upload',
-							   'pwd'=>'pwd',
-							   'echo %cd%'=>'echo %cd%',
-							   'clear'=>'clear',
-							   'dir'=>'dir'
-							 )
-					   );
+  $suggestions = links($tmp_sug);
+    
+
+
   if (function_exists('posix_getpwuid'))
 	$processUser = posix_getpwuid(posix_geteuid());
   else {

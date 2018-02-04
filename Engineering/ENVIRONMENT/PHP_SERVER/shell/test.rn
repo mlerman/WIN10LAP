@@ -1,0 +1,9 @@
+echo toto
+echo titi
+echo tutu
+echo tata
+echo bobo
+echo bibi
+echo coucou
+read -p "pause" reply
+echo finish
