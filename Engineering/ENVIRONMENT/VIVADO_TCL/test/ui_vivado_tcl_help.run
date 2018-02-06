@@ -1,0 +1,4 @@
+call VIVADO_VERSION.sh.bat
+call c:\Xilinx\Vivado\%VIVADO_VERSION%\settings64.bat
+
+c:\Xilinx\Vivado\2017.2\bin\vivado.bat -mode tcl -source cmd_help.tcl

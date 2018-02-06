@@ -2,14 +2,11 @@
 # Vivado v2017.2.1 (64-bit)
 # SW Build 1957588 on Wed Aug  9 16:32:24 MDT 2017
 # IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
-# Start of session at: Wed Dec 20 12:01:09 2017
-# Process ID: 12644
+# Start of session at: Mon Jan 29 16:13:18 2018
+# Process ID: 54136
 # Current directory: C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO_TCL/test
-# Command line: vivado.exe -mode tcl
+# Command line: vivado.exe -mode tcl -source cmd_create_test_project.tcl
 # Log file: C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO_TCL/test/vivado.log
 # Journal file: C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO_TCL/test\vivado.jou
 #-----------------------------------------------------------
-help -category Memory
-help create_project
-help
-help Tcl
+source cmd_create_test_project.tcl

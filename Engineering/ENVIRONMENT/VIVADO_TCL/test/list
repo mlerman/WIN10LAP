@@ -1,0 +1,19 @@
+
+****** Vivado v2017.2.1 (64-bit)
+  **** SW Build 1957588 on Wed Aug  9 16:32:24 MDT 2017
+  **** IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source cmd_create_test_project.tcl
+# puts "Running cmd_create_test_project.tcl"
+Running cmd_create_test_project.tcl
+# set design project_1
+# set partname "xcvu3p-ffvc1517-2-e"
+# set projdir c:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO/test_project_creation
+# puts $design
+project_1
+# puts $partname
+xcvu3p-ffvc1517-2-e
+# puts $projdir
+c:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO/test_project_creation
+# create_project -force $design $projdir -part $partname

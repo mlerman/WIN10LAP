@@ -1,2 +1,42 @@
-<img src="scr1.png"/> 
+λ c:\Xilinx\Vivado\2017.2\bin\vivado.bat -help                                     
+vivado                                                                             
+                                                                                   
+Description:                                                                       
+Vivado v2017.2.1 (64-bit)                                                          
+SW Build 1957588 on Wed Aug  9 16:32:24 MDT 2017                                   
+IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017                                   
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.                              
+                                                                                   
+Syntax:                                                                            
+vivado  [-mode <arg>] [-init] [-source <arg>] [-nojournal] [-appjournal]           
+        [-journal <arg>] [-nolog] [-applog] [-log <arg>] [-version]                
+        [-tclargs <arg>] [-tempDir <arg>] [-robot <arg>] [-verbose] [<project>]    
+                                                                                   
+Usage:                                                                             
+  Name           Description                                                       
+  --------------------------                                                       
+  [-mode]        Invocation mode, allowed values are 'gui', 'tcl', and             
+                 'batch'                                                           
+                 Default: gui                                                      
+  [-init]        Source vivado.tcl file                                            
+  [-source]      Source the specified Tcl file                                     
+  [-nojournal]   Do not create a journal file                                      
+  [-appjournal]  Open journal file in append mode                                  
+  [-journal]     Journal file name                                                 
+                 Default: vivado.jou                                               
+  [-nolog]       Do not create a log file                                          
+  [-applog]      Open log file in append mode                                      
+  [-log]         Log file name                                                     
+                 Default: vivado.log                                               
+  [-version]     Output version information and exit                               
+  [-tclargs]     Arguments passed on to tcl argc argv                              
+  [-tempDir]     Temporary directory name.                                         
+  [-robot]       Robot JAR file name.                                               
+  [-verbose]     Suspend message limits during command execution                   
+  [<project>]    Load the specified project (.xpr) or design checkpoint            
+                 (.dcp) file   
+
+
+<hr/>				 
+<img src="scr1.png"/>
 <hr/> 

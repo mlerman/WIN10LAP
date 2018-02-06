@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2017.2.1 (64-bit)
+# SW Build 1957588 on Wed Aug  9 16:32:24 MDT 2017
+# IP Build 1948039 on Wed Aug  9 18:19:28 MDT 2017
+# Start of session at: Mon Jan 29 16:01:30 2018
+# Process ID: 55268
+# Current directory: C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO_TCL/test
+# Command line: vivado.exe -mode tcl -source cmd_create_test_project.tcl
+# Log file: C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO_TCL/test/vivado.log
+# Journal file: C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/VIVADO_TCL/test\vivado.jou
+#-----------------------------------------------------------
+source cmd_create_test_project.tcl
+# puts "Running cmd_create_test_project.tcl"
+Running cmd_create_test_project.tcl
+# set design project_1
+# set partname "xcvu3p-ffvc1517-2-e"
+# set projdir C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\VIVADO\test_project_creation
+# puts "running create_project -force $design $projdir -part $partname"
+running create_project -force project_1 C:UniServerwwwdocilesEngineeringENVIRONMENTVIVADO	est_project_creation -part xcvu3p-ffvc1517-2-e
+# puts running create_project -force $design $projdir -part $partname
+wrong # args: should be "puts ?-nonewline? ?channelId? string"
+    while executing
+"puts running create_project -force $design $projdir -part $partname"
+    (file "cmd_create_test_project.tcl" line 10)
+Vivado% 
