@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0045)http://bashdb.sourceforge.net/bashdb-man.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+
+<link rev="made" href="mailto:root@localhost">
+</head>
+
+<body style="background-color: white">
+
+
+
+<ul id="index">
+  <li><a href="http://bashdb.sourceforge.net/bashdb-man.html#NAME">NAME</a></li>
+  <li><a href="http://bashdb.sourceforge.net/bashdb-man.html#SYNOPSIS">SYNOPSIS</a></li>
+  <li><a href="http://bashdb.sourceforge.net/bashdb-man.html#DESCRIPTION">DESCRIPTION</a></li>
+  <li><a href="http://bashdb.sourceforge.net/bashdb-man.html#OPTIONS">OPTIONS</a></li>
+  <li><a href="http://bashdb.sourceforge.net/bashdb-man.html#BUGS">BUGS</a></li>
+  <li><a href="http://bashdb.sourceforge.net/bashdb-man.html#SEE-ALSO">SEE ALSO</a></li>
+  <li><a href="http://bashdb.sourceforge.net/bashdb-man.html#AUTHOR">AUTHOR</a></li>
+  <li><a href="http://bashdb.sourceforge.net/bashdb-man.html#COPYRIGHT">COPYRIGHT</a></li>
+</ul>
+
+<h1 id="NAME">NAME</h1>
+
+<p>bashdb - bash debugger script</p>
+
+<h1 id="SYNOPSIS">SYNOPSIS</h1>
+
+<p><b>bashdb</b> [<i>options</i>] <i>script-name</i> [--] [<i>script options</i>]</p>
+
+<p><b>bashdb</b> [<i>options</i>] -c <i>execution-string</i></p>
+
+<p><b>bash --debugger</b> [<i>bash-options</i>...] <i>script-name</i> [[--] <i>script options</i>]</p>
+
+<h1 id="DESCRIPTION">DESCRIPTION</h1>
+
+<p><code>bashdb</code> is a bash script to which arranges for another bash script to be debugged.</p>
+
+
+
+The debugger has a similar command interface as <a href="http://sourceware.org/gdb/current/onlinedocs/gdb_toc.html">gdb</a>.
+
+<p>The way this script arranges debugging to occur is by including (or actually "source"-ing) some debug-support code and then sourcing the given script or command string.</p>
+
+<p>One problem with sourcing a debugged script is that the program name stored in $0 will be <code>bashdb</code> rather than the name of the script to be debugged. The debugged script will appear in a call stack not as the top item but as the item below <code>bashdb</code>. If this is of concern, use the last form given above, <code>bash --debugger</code> <i>script-name</i> [<i>script-options</i>].</p>
+
+<p>If you used bashdb script and need to pass options to the script to be debugged, add <code>--</code> after the script name. That will tell bashdb not to try to process any further options.</p>
+
+<p>See the reference manual <a href="http://bashdb.sourceforge.net/bashdb.html">http://bashdb.sourceforge.net/bashdb.html</a> for how to to call the debugger from inside your program or arrange for the debugger to get called when your program is sent a signal.</p>
+
+<h1 id="OPTIONS">OPTIONS</h1>
+
+<dl>
+
+<dt id="h---help">-h | --help</dt>
+<dd>
+
+<p>Print a usage message on standard error and exit with a return code of 100.</p>
+
+<p></p>
+
+</dd>
+<dt id="A---annotation-level">-A | --annotation <i>level</i></dt>
+<dd>
+
+<p>Sets to output additional stack and status information which allows front-ends such as emacs to track what's going on without polling.</p>
+
+<p>This is needed in for regression testing. Using this option is equivalent to issuing:</p>
+
+<pre><code>  set annotation LEVEL</code></pre>
+
+<p>inside the debugger.</p>
+
+<p></p>
+
+</dd>
+<dt id="B---basename">-B | --basename</dt>
+<dd>
+
+<p>In places where a filename appears in debugger output give just the basename only. This is needed in for regression testing. Using this option is equivalent to issuing:</p>
+
+<pre><code>  set basename on</code></pre>
+
+<p>inside the debugger.</p>
+
+<p></p>
+
+</dd>
+<dt id="n-nx">-n | nx</dt>
+<dd>
+
+<p>Normally the debugger will read debugger commands in <code>~/.bashdbinit</code> if that file exists before accepting user interaction. <code>.bashdbinit</code> is analogus to Perl's <code>.perldb</code> or GNU gdb's <code>.gdbinit</code>: a user might want to create such a debugger profile to add various user-specific customizations.</p>
+
+<p>Using the <code>-n</code> option this initialization file will not be read. This is useful in regression testing or in tracking down a problem with one's <code>.bashdbinit</code> profile.</p>
+
+<p></p>
+
+</dd>
+<dt id="c-command-string">-c <i>command-string</i></dt>
+<dd>
+
+<p>Instead of specifying the name of a script file, one can give an execution string that is to be debugged. Use this option to do that.</p>
+
+<p>If you invoke the debugger via <code>bash --debugger</code>, the filename that will appear in source listing or in a call stack trace will be the artificial name *BOGUS*.</p>
+
+<p></p>
+
+</dd>
+<dt id="q---quiet">-q | --quiet</dt>
+<dd>
+
+<p>Do not print introductory version and copyright information. This is again useful in regression testing where we don't want to include a changeable copyright date in the regression-test matching.</p>
+
+<p></p>
+
+</dd>
+<dt id="x-debugger-cmdfile">-x <i>debugger-cmdfile</i></dt>
+<dd>
+
+<p>Run the debugger commands <i>debugger-cmdfile</i> before accepting user input. These commands are read however after any <code>.bashdbinit</code> commands. Again this is useful running regression-testing debug scripts.</p>
+
+<p></p>
+
+</dd>
+<dt id="L---library-debugger-library">-L | --library <i>debugger-library</i></dt>
+<dd>
+
+<p>The debugger needs to source or include a number of functions and these reside in a library. If this option is not given the default location of library is relative to the installed bashdb script: <code>../lib/bashdb</code>.</p>
+
+<p></p>
+
+</dd>
+<dt id="T---tempdir-temporary-file-directory">-T | --tempdir <i>temporary-file-directory</i></dt>
+<dd>
+
+<p>The debugger needs to make use of some temporary filesystem storage to save persistent information across a subshell return or in order to evaluate an expression. The default directory is <code>/tmp</code> but you can use this option to set the directory where debugger temporary files will be created.</p>
+
+<p></p>
+
+</dd>
+<dt id="t---tty-tty-name">-t | --tty <i>tty-name</i></dt>
+<dd>
+
+<p>Debugger output usually goes to a terminal rather than STDOUT which the debugged program may use. Determination of the tty or pseudo-tty is normally done automatically. However if you want to control where the debugger output goes, use this option.</p>
+
+<p>If you want output to go to STDOUT use &amp;1. Note: the '&amp;' may have to be escaped or quoted to avoid shell interpretation with forking.</p>
+
+<p></p>
+
+</dd>
+<dt id="V---version">-V | --version</dt>
+<dd>
+
+<p>Show version number and no-warranty and exit with return code 1.</p>
+
+</dd>
+<dt id="X---trace">-X | --trace</dt>
+<dd>
+
+<p>Similar to "<code>set -x</code>" line tracing except that by default the location of each line, the bash level, and subshell level are printed. You might be able to get something roughly similar if you set <code>PS4</code> as follows</p>
+
+<pre><code>    export PS4='(${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]}\n'</code></pre>
+
+<p>In contrast however to "<code>set -x</code>" tracing, indentation of the original program is also preserved in the source output. And if you interrupt the program with a break (a <code>SIGINT</code> signal), you will go into the debugger (assuming your program doesn't trap <code>SIGINT</code>).</p>
+
+<p></p>
+
+</dd>
+</dl>
+
+<h1 id="BUGS">BUGS</h1>
+
+<p>The <code>bashdb</code> script and <code>--debugger</code> option assume a version of bash with debugging support. That is you can't debug bash scripts using the standard-issue version 2.05b bash or earlier versions. In versions after 3.0, debugging should have been enabled when bash was built. (I think this is usually the case though.) If you try to run the bashdb script on such as shell, may get the message:</p>
+
+<pre><code>  Sorry, you need to use a debugger-enabled version of bash.</code></pre>
+
+<p>Debugging startup time can be slow especially on large bash scripts. Scripts created by GNU autoconf are at thousands of lines line and it is not uncommon for them to be tens of thousands of lines.</p>
+
+<p>There is a provision to address this problem by including a fast file-to-array read routine (readarray), but the bashdb package has to be compiled in a special way which needs access to the bash source code and objects.</p>
+
+<p>Another reason of the debugger slowness is that the debugger has to intercept every line and check to see if some action is to be taken for this and this is all in bash code. A better and faster architecture would be for the debugger to register a list of conditions or stopping places inside the bash code itself and have it arrange to call the debugger only when a condition requiring the debugger arises. Checks would be faster as this would be done in C code and access to internal structures would make this more efficient.</p>
+
+<h1 id="SEE-ALSO">SEE ALSO</h1>
+
+<ul>
+
+<li><p><a href="http://bashdb.sourceforge.net/bashdb.html">http://bashdb.sourceforge.net/bashdb.html</a> - an extensive reference manual.</p>
+
+</li>
+<li><p><a href="http://bashdb.sourceforge.net/">http://bashdb.sourceforge.net</a> - the homepage for the project</p>
+
+</li>
+<li><p><a href="http://www.gnu.org/software/bash/manual/bashref.html">http://www.gnu.org/software/bash/manual/bashref.html</a> - bash reference manual</p>
+
+</li>
+</ul>
+
+<h1 id="AUTHOR">AUTHOR</h1>
+
+<p>The current version is maintained (or not) by Rocky Bernstein.</p>
+
+<h1 id="COPYRIGHT">COPYRIGHT</h1>
+
+<pre><code>  Copyright (C) 2003, 2006-2007, 2016 Rocky Bernstein
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA</code></pre>
+
+<p><i>$Id: bashdb-man.pod 2016/08/13 16:30:00 rockyb Exp $</i></p>
+
+
+
+
+
+
+
+</body></html>

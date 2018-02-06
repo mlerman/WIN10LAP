@@ -1,0 +1,7 @@
+gnome-terminal -e 'bash -c "bashdb -q \"$(zenity --file-selection)\""'
+
+
+#bashdb -q "$(zenity --file-selection)"
+read -p "Press [Enter] key to continue..."
+
+

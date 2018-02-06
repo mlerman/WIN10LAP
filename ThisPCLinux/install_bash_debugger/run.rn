@@ -1,0 +1,2 @@
+bashdb -q test.rn
+read -p "Press [Enter] key to continue..."
