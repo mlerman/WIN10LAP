@@ -1,0 +1,17 @@
+<html>
+<body>
+
+<p>other p</p>
+
+<div id="main">
+<p>p1 text</p>
+<p>p2 text</p>
+</div>
+
+<script type="text/javascript">
+x=document.getElementById("main");
+document.write(x.childNodes[1].firstChild.nodeValue);  // show p2 with IE and P1 with the other browsers
+</script>
+
+</body>
+</html>

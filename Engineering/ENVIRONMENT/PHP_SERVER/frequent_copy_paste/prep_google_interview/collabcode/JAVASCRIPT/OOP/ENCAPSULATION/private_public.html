@@ -1,0 +1,35 @@
+<script type="text/javascript">
+function Person()
+{
+  this.publicMember = "foo";
+  this.privilegedMethod = function() { return privateMethod(); }
+
+  var privateMember = "bar";
+  function privateMethod()
+  {
+    return "hello";
+  }
+}
+
+// Public methods
+Person.prototype = 
+{
+  getDate: function() { return new Date(); },
+  getWorld: function() { return "world"; }
+}
+// Bonus: Public static method
+Person.kill = function()
+{
+  return "dead";
+}
+ 
+ 
+var me = new Person();
+alert(me.publicMember);		// foo
+alert(me.privateMember);	// undefined
+alert(me.privilegedMethod());	// hello
+alert(me.getWorld());		// world
+alert(me.kill());
+alert(me.getWorld());		// world
+</script>
+

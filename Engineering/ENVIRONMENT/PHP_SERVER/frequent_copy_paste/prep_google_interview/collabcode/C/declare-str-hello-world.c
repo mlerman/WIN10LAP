@@ -1,0 +1,1 @@
+char str[] = "Hello World";

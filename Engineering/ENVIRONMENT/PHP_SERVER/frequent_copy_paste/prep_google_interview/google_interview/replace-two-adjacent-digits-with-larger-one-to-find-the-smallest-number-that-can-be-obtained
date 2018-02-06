@@ -1,0 +1,2460 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Replace two adjacent digits with larger one to find the smallest number that can be obtained | LeetCode Discuss</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta name="content-type" content="text/html; charset=UTF-8" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta property="og:site_name" content="LeetCode Discuss" />
+	<meta name="keywords" />
+	<meta name="msapplication-badge" content="frequency=30; polling-uri=https://discuss.leetcode.com/sitemap.xml" />
+	<meta name="msapplication-square150x150logo" content="/uploads/system/site-logo.png" />
+	<meta name="title" content="Replace two adjacent digits with larger one to find the smallest number that can be obtained" />
+	<meta name="description" content="You are given an integer X. You must choose two adjacent digits and replace them with the larger of these two digits. For example, from the integer X = 233614, you can obtain: 33614 (by replacing 23 with 3); 23614 (by replacing 33 with 3 or 36 with 6); 23..." />
+	<meta property="og:title" content="Replace two adjacent digits with larger one to find the smallest number that can be obtained" />
+	<meta property="og:description" content="You are given an integer X. You must choose two adjacent digits and replace them with the larger of these two digits. For example, from the integer X = 233614, you can obtain: 33614 (by replacing 23 with 3); 23614 (by replacing 33 with 3 or 36 with 6); 23..." />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="https://discuss.leetcode.com/topic/55360/replace-two-adjacent-digits-with-larger-one-to-find-the-smallest-number-that-can-be-obtained" />
+	<meta property="og:image" content="https://discuss.leetcode.com/uploads/system/site-logo.png" />
+	<meta property="og:image:url" content="https://discuss.leetcode.com/uploads/system/site-logo.png" />
+	<meta property="article:published_time" content="2016-08-23T23:46:05.384Z" />
+	<meta property="article:modified_time" content="2017-01-24T01:50:59.280Z" />
+	<meta property="article:section" content="Google" />
+	<link rel="stylesheet" type="text/css" href="/stylesheet.css?1d8e5fa7-c76b-4ab8-bd30-2b401f61f3a1" />
+	
+	<link rel="icon" type="image/x-icon" href="/favicon.ico?1d8e5fa7-c76b-4ab8-bd30-2b401f61f3a1" />
+	<link rel="manifest" href="/manifest.json" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon" />
+	<link rel="icon" sizes="36x36" href="/uploads/system/touchicon-36.png" />
+	<link rel="icon" sizes="48x48" href="/uploads/system/touchicon-48.png" />
+	<link rel="icon" sizes="72x72" href="/uploads/system/touchicon-72.png" />
+	<link rel="icon" sizes="96x96" href="/uploads/system/touchicon-96.png" />
+	<link rel="icon" sizes="144x144" href="/uploads/system/touchicon-144.png" />
+	<link rel="icon" sizes="192x192" href="/uploads/system/touchicon-192.png" />
+	<link rel="stylesheet" href="/plugins/nodebb-plugin-markdown/styles/github.css" />
+	<link rel="alternate" type="application/rss+xml" href="https://discuss.leetcode.com/topic/55360.rss" />
+	<link rel="up" href="https://discuss.leetcode.com/category/457/google" />
+	<link rel="next" href="https://discuss.leetcode.com/topic/55360/replace-two-adjacent-digits-with-larger-one-to-find-the-smallest-number-that-can-be-obtained?page=2" />
+
+	<!--[if lt IE 9]>
+  		<script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/2.3.0/es5-shim.min.js"></script>
+  		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  		<script>__lt_ie_9__ = 1;</script>
+	<![endif]-->
+
+	<script>
+		var RELATIVE_PATH = "";
+		var config = JSON.parse('{"relative_path":"","version":"1.1.0","siteTitle":"LeetCode Discuss","browserTitle":"LeetCode Discuss","titleLayout":"&#123;pageTitle&#125; | &#123;browserTitle&#125;","showSiteTitle":false,"minimumTitleLength":"3","maximumTitleLength":"255","minimumPostLength":"12","maximumPostLength":"32767","minimumTagsPerTopic":"0","maximumTagsPerTopic":"5","minimumTagLength":"3","maximumTagLength":"30","hasImageUploadPlugin":false,"useOutgoingLinksPage":false,"allowGuestSearching":false,"allowGuestUserSearching":false,"allowGuestHandles":true,"allowFileUploads":true,"allowTopicsThumbnail":false,"usePagination":false,"disableChat":false,"socketioTransports":["websocket"],"websocketAddress":"","maxReconnectionAttempts":"3","reconnectionDelay":"1500","topicsPerPage":"20","postsPerPage":"20","maximumFileSize":"2048","theme:id":"nodebb-theme-leetcode","theme:src":"","defaultLang":"en_US","userLang":"en_US","loggedIn":false,"cache-buster":"1d8e5fa7-c76b-4ab8-bd30-2b401f61f3a1","requireEmailConfirmation":false,"topicPostSort":"oldest_to_newest","categoryTopicSort":"newest_to_oldest","csrf_token":"WYc2hPbu-TDt6nGG5DaDS4QOC8VyV9lkUXiY","searchEnabled":true,"bootswatchSkin":"default","hideSubCategories":true,"hideCategoryLastPost":true,"composer-default":{"composeRouteEnabled":"off","defaultPlaceHolder":"If you want to include code in your post,\\r\\nplease surround your code block with 3 backticks ```. \\r\\nFor example:\\r\\n```\\r\\ndef helloWorld():\\r\\n    pass\\r\\n````"},"markdown":{"highlight":1,"theme":"github.css"},"sessionSharing":{}}');
+		var app = {
+			template: "topic",
+			user: JSON.parse('{"uid":0,"username":"Guest","userslug":"","email":"","picture":"","status":"offline","banned":false,"reputation":0,"email:confirmed":false,"isAdmin":false,"isGlobalMod":false}')
+		};
+	</script>
+	<script src="/nodebb.min.js?1d8e5fa7-c76b-4ab8-bd30-2b401f61f3a1"></script>
+<script>
+	require.config({
+		baseUrl: "/src/modules",
+		waitSeconds: 3,
+		urlArgs: "1d8e5fa7-c76b-4ab8-bd30-2b401f61f3a1",
+		paths: {
+			'forum': '../client',
+			'admin': '../admin',
+			'vendor': '../../vendor',
+			'plugins': '../../plugins'
+		}
+	});
+</script>
+
+	
+
+	
+		<style type="text/css">.topic .posts .content pre{max-height:600px;font-size:12px}.topic .posts .content blockquote{font-size:14px;font-style:italic;background-color:#f8f8f8}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}</style>
+</head>
+
+<body class="page-topic page-topic-55360 page-topic-replace-two-adjacent-digits-with-larger-one-to-find-the-smallest-number-that-can-be-obtained skin-default">
+	<nav id="menu" class="hidden">
+		<section class="menu-profile">
+			
+		</section>
+
+		<section class="menu-section" data-section="navigation">
+			<h3 class="menu-section-title">Navigation</h3>
+			<ul class="menu-section-list"></ul>
+		</section>
+
+		
+	</nav>
+
+	<main id="panel">
+		<nav class="navbar navbar-default navbar-fixed-top header" id="header-menu" component="navbar">
+			<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" id="mobile-menu">
+					<span component="notifications/icon" class="notification-icon fa fa-fw fa-bell-o" data-content="0"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<a href="/">
+					<img alt="" class=" forum-logo" src="/uploads/system/site-logo.png" />
+				</a>
+				
+
+				<div component="navbar/title" class="visible-xs hidden">
+					<span></span>
+				</div>
+			</div>
+
+			<div id="nav-dropdown" class="hidden-xs">
+												<ul id="logged-out-menu" class="nav navbar-nav navbar-right">
+					
+					<li>
+						<a href="/login">
+							<i class="fa fa-sign-in visible-xs-inline"></i>
+							<span>Login</span>
+						</a>
+					</li>
+				</ul>
+								<ul class="nav navbar-nav navbar-right">
+					<li>
+						<form id="search-form" class="navbar-form navbar-right hidden-xs" role="search" method="GET" action="">
+							<button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="Search"></i></button>
+							<div class="hidden" id="search-fields">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Search" name="query" value="">
+									<a href="#"><i class="fa fa-gears fa-fw advanced-search-link"></i></a>
+								</div>
+								<button type="submit" class="btn btn-default hide">Search</button>
+							</div>
+						</form>
+					</li>
+					<li class="visible-xs" id="search-menu">
+						<a href="/search">
+							<i class="fa fa-search fa-fw"></i> Search
+						</a>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right hidden-xs">
+					<li>
+						<a href="#" id="reconnect" class="hide" title="Connection to LeetCode Discuss has been lost, attempting to reconnect...">
+							<i class="fa fa-check"></i>
+						</a>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right pagination-block visible-lg visible-md">
+					<li class="dropdown">
+						<i class="fa fa-angle-double-up pointer fa-fw pagetop"></i>
+						<i class="fa fa-angle-up pointer fa-fw pageup"></i>
+
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<span class="pagination-text"></span>
+						</a>
+
+						<i class="fa fa-angle-down pointer fa-fw pagedown"></i>
+						<i class="fa fa-angle-double-down pointer fa-fw pagebottom"></i>
+
+						<div class="progress-container">
+							<div class="progress-bar"></div>
+						</div>
+
+						<ul class="dropdown-menu" role="menu">
+  							<input type="text" class="form-control" id="indexInput" placeholder="Enter index">
+  						</ul>
+					</li>
+				</ul>
+
+				<ul id="main-nav" class="nav navbar-nav">
+															<li class="">
+						<a href="/categories" title="Categories" >
+														<i class="fa fa-fw fa-list"></i>
+
+														<span class="visible-xs-inline">Categories</span>
+						</a>
+					</li>
+									
+														<li class="">
+						<a href="/recent" title="Recent" >
+														<i class="fa fa-fw fa-clock-o"></i>
+
+														<span class="visible-xs-inline">Recent</span>
+						</a>
+					</li>
+														<li class="">
+						<a href="/popular" title="Popular" >
+														<i class="fa fa-fw fa-fire"></i>
+
+														<span class="visible-xs-inline">Popular</span>
+						</a>
+					</li>
+														<li class="">
+						<a href="/users" title="Users" >
+														<i class="fa fa-fw fa-user"></i>
+
+														<span class="visible-xs-inline">Users</span>
+						</a>
+					</li>
+														<li class="">
+						<a href="/groups" title="Groups" >
+														<i class="fa fa-fw fa-group"></i>
+
+														<span class="visible-xs-inline">Groups</span>
+						</a>
+					</li>
+									
+				</ul>
+			</div>
+
+			</div>
+		</nav>
+		<div class="container" id="content">
+	<noscript>
+		<div class="alert alert-danger">
+			<p>
+				Your browser does not seem to support JavaScript. As a result, your viewing experience will be diminished, and you have been placed in <strong>read-only mode</strong>.
+			</p>
+			<p>
+				Please download a browser that supports JavaScript, or enable it if it's disabled (i.e. NoScript).
+			</p>
+		</div>
+	</noscript>
+<ol class="breadcrumb">
+		<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb" >
+		<a href="/" itemprop="url">
+			<span itemprop="title">
+				Home
+				
+			</span>
+		</a>
+	</li>
+	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb" >
+		<a href="/category/5/interview-questions" itemprop="url">
+			<span itemprop="title">
+				Interview Questions
+				
+			</span>
+		</a>
+	</li>
+	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb" >
+		<a href="/category/457/google" itemprop="url">
+			<span itemprop="title">
+				Google
+				
+			</span>
+		</a>
+	</li>
+	<li component="breadcrumb/current" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb" class="active">
+		
+			<span itemprop="title">
+				Replace two adjacent digits with larger one to find the smallest number that can be obtained
+												<a target="_blank" href="/topic/55360.rss"><i class="fa fa-rss-square"></i></a>
+			</span>
+		
+	</li>
+</ol>
+<div widget-area="header"></div>
+<div class="row">
+	<div class="topic col-lg-9 col-sm-12" no-widget-class="topic col-lg-12 col-sm-12" no-widget-target="sidebar">
+
+		<h1 component="post/header" class="hidden-xs" itemprop="name">
+
+			<i class="pull-left fa fa-thumb-tack hidden"></i> <i class="pull-left fa fa-lock hidden"></i> <span class="topic-title" component="topic/title">Replace two adjacent digits with larger one to find the smallest number that can be obtained</span>
+
+			<span class="browsing-users hidden hidden-xs hidden-sm pull-right">
+				<span>browsing</span>
+				<div component="topic/browsing/list" class="thread_active_users active-users inline-block"></div>
+				<small class="hidden">
+					<i class="fa fa-users"></i> <span component="topic/browsing/count" class="user-count"></span>
+				</small>
+			</span>
+		</h1>
+
+		<div component="topic/deleted/message" class="alert alert-warning hidden">This topic has been deleted. Only users with topic management privileges can see it.</div>
+
+	<hr class="visible-xs" style="margin-bottom: 0" />
+
+		<ul component="topic" class="posts" data-tid="55360" data-cid="457">
+							<li component="post" class=""data-index="0" data-pid="123857" data-uid="30022" data-timestamp="1471995965445" data-username="redbear" data-userslug="redbear" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="0" name="0"></a>
+
+					<meta itemprop="datePublished" content="2016-08-23T23:46:05.445Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="9">9</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/redbear">
+										<div component="user/picture" data-uid="30022" class="user-icon" style="background-color: #ff5722;">R</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/redbear" itemprop="author" data-username="redbear" data-uid="30022">redbear</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+					
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="9" data-uid="30022" class='formatted-number reputation'>9</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p>You are given an integer X. You must choose two adjacent digits and replace them with the larger of these two digits.</p>
+<p>For example, from the integer X = 233614, you can obtain:<br/>
+33614 (by replacing 23 with 3);<br/>
+23614 (by replacing 33 with 3 or 36 with 6);<br/>
+23364 (by replacing 61 with 6 or 14 with 4);</p>
+<p>You want to find the smallest number that can be obtained from X by replacing two adjacent digits with the larger of the two. In the above example, the smallest such number is 23364.</p>
+<p>Write a function:</p>
+<pre><code>class Solution &#123;public int solution (int X);&#125;
+</code></pre>
+<p>that, given a positive integer X, returns the smallest number that can be obtained from X by replacing two adjacent digits with the larger of the two.</p>
+<p>For example, given X = 233614, the function should return 23364, as explained above.</p>
+<p>Assume that:</p>
+<pre><code>X is an integer within the range [10..1,000,000,000].
+</code></pre>
+<p>In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/123857"><span class="timeago" title="2016-08-23T23:46:05.445Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+										<div class="post-bar-placeholder"></div>
+				</li>
+						<li component="post" class=""data-index="1" data-pid="123910" data-uid="47382" data-timestamp="1472009969761" data-username="tony.mu101999" data-userslug="tony-mu101999" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="1" name="1"></a>
+
+					<meta itemprop="datePublished" content="2016-08-24T03:39:29.761Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="1">1</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/tony-mu101999">
+										<div class="user-img">
+						<img component="user/picture" data-uid="47382" src="/uploads/profile/47382-profileimg.jpg" align="left" itemprop="image" />
+					</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/tony-mu101999" itemprop="author" data-username="tony.mu101999" data-uid="47382">tony.mu101999</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+					
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="11" data-uid="47382" class='formatted-number reputation'>11</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p>Had no clue how to do this. I believe I ended up converting them to strings and compare the individual characters, which is so damned dumb lol. I&#39;m curious how would everyone else solve this?</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/123910"><span class="timeago" title="2016-08-24T03:39:29.761Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="2" data-pid="123961" data-uid="50714" data-timestamp="1472023296602" data-username="henryly94" data-userslug="henryly94" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="2" name="2"></a>
+
+					<meta itemprop="datePublished" content="2016-08-24T07:21:36.602Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="1">1</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/henryly94">
+										<div component="user/picture" data-uid="50714" class="user-icon" style="background-color: #009688;">H</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/henryly94" itemprop="author" data-username="henryly94" data-uid="50714">henryly94</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+					
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="4" data-uid="50714" class='formatted-number reputation'>4</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p>I haven&#39;t figure out the best way yet. But there&#39;s one thing for sure that we should skip the ascent sequence front MSB, the reason is trivial.</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/123961"><span class="timeago" title="2016-08-24T07:21:36.602Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="3" data-pid="124207" data-uid="14" data-timestamp="1472103661394" data-username="elmirap" data-userslug="elmirap" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="3" name="3"></a>
+
+					<meta itemprop="datePublished" content="2016-08-25T05:41:01.394Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="0">0</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/elmirap">
+										<div class="user-img">
+						<img component="user/picture" data-uid="14" src="/uploads/profile/14-profileimg.jpeg" align="left" itemprop="image" />
+					</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/elmirap" itemprop="author" data-username="elmirap" data-uid="14">elmirap</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+										<button component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="123961"><i class="fa fa-reply"></i> @henryly94</button>
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="88" data-uid="14" class='formatted-number reputation'>88</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p>I tried with this one</p>
+<pre><code>
+def smallestNumber(num):
+    digits = [int(i) for i in str(num)]            
+    l = len(digits) - 1     
+    if (len(digits) == 2):
+        return max(digits[0], digits[l])
+    else:        
+        if digits[l - 2] &gt; digits[l - 1]  and digits[l - 1]  &gt; digits[l] :
+            digits[l - 1]  = digits[l]
+        else:
+            digits[l - 1] = max(digits[l - 1], digits[l])
+        return reduce(lambda x, y: 10 * x + y, digits[0:l], 0)</code></pre>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/124207"><span class="timeago" title="2016-08-25T05:41:01.394Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="4" data-pid="124370" data-uid="22963" data-timestamp="1472160750576" data-username="pushazhiniao" data-userslug="pushazhiniao" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="4" name="4"></a>
+
+					<meta itemprop="datePublished" content="2016-08-25T21:32:30.576Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="0">0</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/pushazhiniao">
+										<div component="user/picture" data-uid="22963" class="user-icon" style="background-color: #ff5722;">P</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/pushazhiniao" itemprop="author" data-username="pushazhiniao" data-uid="22963">pushazhiniao</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+					
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="63" data-uid="22963" class='formatted-number reputation'>63</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p>Go through all the replacement and keep track of the min one.</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/124370"><span class="timeago" title="2016-08-25T21:32:30.576Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="5" data-pid="124451" data-uid="51973" data-timestamp="1472183343174" data-username="Olivia" data-userslug="olivia" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="5" name="5"></a>
+
+					<meta itemprop="datePublished" content="2016-08-26T03:49:03.174Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="1">1</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/olivia">
+										<div component="user/picture" data-uid="51973" class="user-icon" style="background-color: #e65100;">O</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/olivia" itemprop="author" data-username="Olivia" data-uid="51973">Olivia</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+					
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="1" data-uid="51973" class='formatted-number reputation'>1</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p>Is my thought too simple? Here is what I think:</p>
+<p>By replacing two digit a,b with one digit X, in anyway the number gets smaller.<br/>
+As x = max(a,b), so the number always gets larger than keep &#34;a&#34; at its position. So try to avoid replacing at the most significant part.<br/>
+All this leaves us only 1 choice, that is replacing the last two digits... the impact is only max(a,b) - min(a,b) comparing with other (max(a,b) - min(a, b)) * 10^?</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/124451"><span class="timeago" title="2016-08-26T03:49:03.174Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="6" data-pid="124478" data-uid="55175" data-timestamp="1472192190541" data-username="cau-seoi-dyun-dou" data-userslug="cau-seoi-dyun-dou" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="6" name="6"></a>
+
+					<meta itemprop="datePublished" content="2016-08-26T06:16:30.541Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="0">0</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/cau-seoi-dyun-dou">
+										<div component="user/picture" data-uid="55175" class="user-icon" style="background-color: #3f51b5;">C</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/cau-seoi-dyun-dou" itemprop="author" data-username="cau-seoi-dyun-dou" data-uid="55175">cau-seoi-dyun-dou</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+										<button component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="123961"><i class="fa fa-reply"></i> @henryly94</button>
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="1" data-uid="55175" class='formatted-number reputation'>1</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p><a class="plugin-mentions-a" href="https://discuss.leetcode.com/uid/50714">@henryly94</a> The question says to focus on correctness than performance. So probably a brute force is good enough.</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/124478"><span class="timeago" title="2016-08-26T06:16:30.541Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="7" data-pid="124479" data-uid="14" data-timestamp="1472192562171" data-username="elmirap" data-userslug="elmirap" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="7" name="7"></a>
+
+					<meta itemprop="datePublished" content="2016-08-26T06:22:42.171Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="0">0</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/elmirap">
+										<div class="user-img">
+						<img component="user/picture" data-uid="14" src="/uploads/profile/14-profileimg.jpeg" align="left" itemprop="image" />
+					</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/elmirap" itemprop="author" data-username="elmirap" data-uid="14">elmirap</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+										<button component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="124478"><i class="fa fa-reply"></i> @cau-seoi-dyun-dou</button>
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="88" data-uid="14" class='formatted-number reputation'>88</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p><a class="plugin-mentions-a" href="https://discuss.leetcode.com/uid/55175">@cau-seoi-dyun-dou</a> we should prove that we only need last 3 digits to find a solution. I think that it is very easy to prove it and will leave it to yourself</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/124479"><span class="timeago" title="2016-08-26T06:22:42.171Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="8" data-pid="124515" data-uid="50714" data-timestamp="1472202564061" data-username="henryly94" data-userslug="henryly94" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="8" name="8"></a>
+
+					<meta itemprop="datePublished" content="2016-08-26T09:09:24.061Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="0">0</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/henryly94">
+										<div component="user/picture" data-uid="50714" class="user-icon" style="background-color: #009688;">H</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/henryly94" itemprop="author" data-username="henryly94" data-uid="50714">henryly94</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+										<button component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="124478"><i class="fa fa-reply"></i> @cau-seoi-dyun-dou</button>
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="4" data-uid="50714" class='formatted-number reputation'>4</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p><a class="plugin-mentions-a" href="https://discuss.leetcode.com/uid/55175">@cau-seoi-dyun-dou</a> I understand, just some little thought</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/124515"><span class="timeago" title="2016-08-26T09:09:24.061Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="9" data-pid="124738" data-uid="55387" data-timestamp="1472289956074" data-username="ryancg" data-userslug="ryancg" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="9" name="9"></a>
+
+					<meta itemprop="datePublished" content="2016-08-27T09:25:56.074Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="0">0</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/ryancg">
+										<div component="user/picture" data-uid="55387" class="user-icon" style="background-color: #f44336;">R</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/ryancg" itemprop="author" data-username="ryancg" data-uid="55387">ryancg</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+					
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="0" data-uid="55387" class='formatted-number reputation'>0</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p>I have a Ruby implementation:</p>
+<pre><code>str = &#34;233614&#34;
+
+def smaller_number(str)
+  smaller = nil
+  for i in 0 ... str.size
+    new_str = str.dup
+
+    if i == (str.size - 1)
+      break
+    end
+
+    max = [new_str[i].to_i, new_str[i+1].to_i].max
+
+    if max == new_str[i]
+      new_str[i+1] = &#39;&#39;
+    else
+      new_str[i] = &#39;&#39;
+    end
+
+    if smaller.nil?
+      smaller = new_str.to_i
+    else
+      if smaller &gt; new_str.to_i
+        puts &#34;#&#123;smaller&#125; &gt; #&#123;new_str&#125;&#34;
+        smaller = new_str.to_i
+      else
+        puts &#34;#&#123;smaller&#125; &lt; #&#123;new_str&#125;&#34;
+        smaller = new_str.to_i
+      end
+    end
+  end
+
+  puts smaller
+end
+
+smaller_number(str)
+</code></pre>
+<p>Is this dumb?</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/124738"><span class="timeago" title="2016-08-27T09:25:56.074Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="10" data-pid="125544" data-uid="43075" data-timestamp="1472492751968" data-username="Murdocc007" data-userslug="murdocc007" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="10" name="10"></a>
+
+					<meta itemprop="datePublished" content="2016-08-29T17:45:51.968Z">
+					<meta itemprop="dateModified" content="2016-09-18T17:06:30.730Z">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="1">1</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/murdocc007">
+										<div component="user/picture" data-uid="43075" class="user-icon" style="background-color: #f44336;">M</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/murdocc007" itemprop="author" data-username="Murdocc007" data-uid="43075">Murdocc007</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+					
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="2" data-uid="43075" class='formatted-number reputation'>2</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p>Here&#39;s the idea, start from the rightmost index towards left and keep moving till the current  element(ith index) is less than the previous element(i+1th index). If it is greater than the previous element then,remove the i+1 element and return.<br/>
+If the number keeps on increasing from left to right then remove the element at index 1.</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/125544"><span class="timeago" title="2016-08-29T17:45:51.968Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon "></i>
+
+			<small data-editor="murdocc007" component="post/editor" class="hidden">last edited by Murdocc007 <span class="timeago" title="2016-09-18T17:06:30.730Z"></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="11" data-pid="127303" data-uid="56953" data-timestamp="1472969037742" data-username="deshpana" data-userslug="deshpana" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="11" name="11"></a>
+
+					<meta itemprop="datePublished" content="2016-09-04T06:03:57.742Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="1">1</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/deshpana">
+										<div component="user/picture" data-uid="56953" class="user-icon" style="background-color: #e65100;">D</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/deshpana" itemprop="author" data-username="deshpana" data-uid="56953">deshpana</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+					
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="1" data-uid="56953" class='formatted-number reputation'>1</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p>We can utilize Heap or Priority queue in this case. Java solution is as below -</p>
+<pre><code>public int obtainSmallest(int num)&#123;
+
+		String strNum = String.valueOf(num);
+		PriorityQueue&lt;Integer&gt; queue = new PriorityQueue&lt;&gt;();
+			
+		for(int i=0; i&lt;strNum.length()-1; i++){
+			String newString = i == 0 ? &#34;&#34; : strNum.substring(0,i);
+			if(strNum.charAt(i) &gt; strNum.charAt(i+1)){
+				newString += strNum.charAt(i) + strNum.substring(i+2, strNum.length());
+			&#125;else&#123;
+				newString += strNum.charAt(i+1) + strNum.substring(i+2, strNum.length());
+			&#125;
+			queue.add(Integer.valueOf(newString));
+		}
+		
+		return queue.poll();
+		
+	}
+</code></pre>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/127303"><span class="timeago" title="2016-09-04T06:03:57.742Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="12" data-pid="130789" data-uid="59243" data-timestamp="1473879146866" data-username="J" data-userslug="j" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="12" name="12"></a>
+
+					<meta itemprop="datePublished" content="2016-09-14T18:52:26.866Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="0">0</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/j">
+										<div component="user/picture" data-uid="59243" class="user-icon" style="background-color: #3f51b5;">J</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/j" itemprop="author" data-username="J" data-uid="59243">J</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+										<button component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="124207"><i class="fa fa-reply"></i> @elmirap</button>
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="0" data-uid="59243" class='formatted-number reputation'>0</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p><a class="plugin-mentions-a" href="https://discuss.leetcode.com/uid/14">@elmirap</a> Your solution is wrong.</p>
+<p>EX: input 177763. Your solution gives 17773. But if you combine any of the two 7&#39;s you get 17763.</p>
+<p>17763 &lt; 17773</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/130789"><span class="timeago" title="2016-09-14T18:52:26.866Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="13" data-pid="131134" data-uid="283" data-timestamp="1473995772877" data-username="vishalhemnani" data-userslug="vishalhemnani" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="13" name="13"></a>
+
+					<meta itemprop="datePublished" content="2016-09-16T03:16:12.877Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="5">5</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/vishalhemnani">
+										<div component="user/picture" data-uid="283" class="user-icon" style="background-color: #ff5722;">V</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/vishalhemnani" itemprop="author" data-username="vishalhemnani" data-uid="283">vishalhemnani</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+					
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="133" data-uid="283" class='formatted-number reputation'>133</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p>Here&#39;s my approach-</p>
+<ul>
+<li>Find the first non-increasing sequence from the left of size &gt; 2 and replace the first 2 digits of this sequence.</li>
+<li>Else, replace the last 2 digits.</li>
+</ul>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/131134"><span class="timeago" title="2016-09-16T03:16:12.877Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="14" data-pid="131468" data-uid="50828" data-timestamp="1474112814393" data-username="tyasink" data-userslug="tyasink" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="14" name="14"></a>
+
+					<meta itemprop="datePublished" content="2016-09-17T11:46:54.393Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="0">0</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/tyasink">
+										<div component="user/picture" data-uid="50828" class="user-icon" style="background-color: #e91e63;">T</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/tyasink" itemprop="author" data-username="tyasink" data-uid="50828">tyasink</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+										<button component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="124479"><i class="fa fa-reply"></i> @elmirap</button>
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="2" data-uid="50828" class='formatted-number reputation'>2</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p><a class="plugin-mentions-a" href="https://discuss.leetcode.com/uid/14">@elmirap</a> how abaout 654321, we need to remove 5 here</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/131468"><span class="timeago" title="2016-09-17T11:46:54.393Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="15" data-pid="131472" data-uid="14" data-timestamp="1474114070649" data-username="elmirap" data-userslug="elmirap" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="15" name="15"></a>
+
+					<meta itemprop="datePublished" content="2016-09-17T12:07:50.649Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="0">0</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/elmirap">
+										<div class="user-img">
+						<img component="user/picture" data-uid="14" src="/uploads/profile/14-profileimg.jpeg" align="left" itemprop="image" />
+					</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/elmirap" itemprop="author" data-username="elmirap" data-uid="14">elmirap</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+										<button component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="131468"><i class="fa fa-reply"></i> @tyasink</button>
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="88" data-uid="14" class='formatted-number reputation'>88</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p><a class="plugin-mentions-a" href="https://discuss.leetcode.com/uid/50828">@tyasink</a> yes, seems there is a flaw in algorithm</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/131472"><span class="timeago" title="2016-09-17T12:07:50.649Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="16" data-pid="131506" data-uid="50828" data-timestamp="1474126211204" data-username="tyasink" data-userslug="tyasink" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="16" name="16"></a>
+
+					<meta itemprop="datePublished" content="2016-09-17T15:30:11.204Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="0">0</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/tyasink">
+										<div component="user/picture" data-uid="50828" class="user-icon" style="background-color: #e91e63;">T</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/tyasink" itemprop="author" data-username="tyasink" data-uid="50828">tyasink</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+										<button component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="125544"><i class="fa fa-reply"></i> @Murdocc007</button>
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="2" data-uid="50828" class='formatted-number reputation'>2</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p><a class="plugin-mentions-a" href="https://discuss.leetcode.com/uid/43075">@Murdocc007</a> said in <a href="/post/125544">Replace two adjacent digits with larger one to find the smallest number that can be obtained</a>:</p>
+<blockquote>
+<p>Here&#39;s the idea, start from the rightmost index towards left and keep moving till the current  element(ith index) is less than the previous element(i+1th index). If it is less than the previous element then,remove the current(i) element and return.<br/>
+If the number keeps on increasing from left to right then remove the element at index 1.</p>
+</blockquote>
+<p>how about 121 or 2321</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/131506"><span class="timeago" title="2016-09-17T15:30:11.204Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="17" data-pid="131736" data-uid="1372" data-timestamp="1474187176328" data-username="abi93k" data-userslug="abi93k" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="17" name="17"></a>
+
+					<meta itemprop="datePublished" content="2016-09-18T08:26:16.328Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="0">0</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/abi93k">
+										<div component="user/picture" data-uid="1372" class="user-icon" style="background-color: #ff5722;">A</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/abi93k" itemprop="author" data-username="abi93k" data-uid="1372">abi93k</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+										<button component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="127303"><i class="fa fa-reply"></i> @deshpana</button>
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="28" data-uid="1372" class='formatted-number reputation'>28</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p><a class="plugin-mentions-a" href="https://discuss.leetcode.com/uid/56953">@deshpana</a> What is the use of a PriorityQueue here ?<br/>
+We can just maintain a single variable to track the current minimum.</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/131736"><span class="timeago" title="2016-09-18T08:26:16.328Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="18" data-pid="131841" data-uid="43075" data-timestamp="1474218402170" data-username="Murdocc007" data-userslug="murdocc007" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="18" name="18"></a>
+
+					<meta itemprop="datePublished" content="2016-09-18T17:06:42.170Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="0">0</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/murdocc007">
+										<div component="user/picture" data-uid="43075" class="user-icon" style="background-color: #f44336;">M</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/murdocc007" itemprop="author" data-username="Murdocc007" data-uid="43075">Murdocc007</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+										<button component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="131506"><i class="fa fa-reply"></i> @tyasink</button>
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="2" data-uid="43075" class='formatted-number reputation'>2</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p><a class="plugin-mentions-a" href="https://discuss.leetcode.com/uid/50828">@tyasink</a> made the changes.</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/131841"><span class="timeago" title="2016-09-18T17:06:42.170Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="19" data-pid="131843" data-uid="50828" data-timestamp="1474218949001" data-username="tyasink" data-userslug="tyasink" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="19" name="19"></a>
+
+					<meta itemprop="datePublished" content="2016-09-18T17:15:49.001Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="1">1</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/tyasink">
+										<div component="user/picture" data-uid="50828" class="user-icon" style="background-color: #e91e63;">T</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/tyasink" itemprop="author" data-username="tyasink" data-uid="50828">tyasink</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+										<button component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="125544"><i class="fa fa-reply"></i> @Murdocc007</button>
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="2" data-uid="50828" class='formatted-number reputation'>2</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p><a class="plugin-mentions-a" href="https://discuss.leetcode.com/uid/43075">@Murdocc007</a> said in <a href="/post/125544">Replace two adjacent digits with larger one to find the smallest number that can be obtained</a>:</p>
+<p>If I understand your algorithm correctly, there are some cases that fail</p>
+<blockquote>
+<p>Here&#39;s the idea, start from the rightmost index towards left and keep moving till the current  element(ith index) is less than the previous element(i+1th index). If it is greater than the previous element then,remove the i+1 element and return.</p>
+</blockquote>
+<p>sample input: 2321<br/>
+your solution: 232<br/>
+correct solution: 231</p>
+<blockquote>
+<p>If the number keeps on increasing from left to right then remove the element at index 1.</p>
+</blockquote>
+<p>sample input: 1234<br/>
+your solution: 134<br/>
+correct solution: 124</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/131843"><span class="timeago" title="2016-09-18T17:15:49.001Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+						<li component="post" class=""data-index="20" data-pid="131844" data-uid="283" data-timestamp="1474219045781" data-username="vishalhemnani" data-userslug="vishalhemnani" itemscope itemtype="http://schema.org/Comment">
+					<a component="post/anchor" data-index="20" name="20"></a>
+
+					<meta itemprop="datePublished" content="2016-09-18T17:17:25.781Z">
+					<meta itemprop="dateModified" content="">
+
+<div class="post-body">
+		<div class="vote-buttons">
+		<div component="post/upvote" href="#" class="">
+			<i class="fa fa-caret-up vote-button"></i>
+		</div>
+
+		<div class="vote-count" component="post/vote-count" data-votes="0">0</div>
+
+				<div class="vote-size" component="post/downvote" href="#" class="">
+			<i class="fa fa-caret-down vote-button"></i>
+		</div>
+	</div>
+
+	<div class="answer">
+		<div class="avatar-meta">
+			<span class="icon">
+				<a href="/user/vishalhemnani">
+										<div component="user/picture" data-uid="283" class="user-icon" style="background-color: #ff5722;">V</div>
+					<i component="user/status" class="fa fa-circle status offline" title="Offline"></i>
+
+				</a>
+			</span>
+
+			<div class="user-info">
+				<span class="username">
+					<a href="/user/vishalhemnani" itemprop="author" data-username="vishalhemnani" data-uid="283">vishalhemnani</a>
+					<span>
+
+
+
+						
+					</span>
+				</span>
+
+				<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
+										<button component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="131843"><i class="fa fa-reply"></i> @tyasink</button>
+
+					<span>
+						
+					</span>
+				</div>
+
+				<div class="reputation-info">
+					Reputation: <i class='fa fa-star'></i> <span component="user/reputation" data-reputation="133" data-uid="283" class='formatted-number reputation'>133</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="content" component="post/content" itemprop="text">
+			<p><a class="plugin-mentions-a" href="https://discuss.leetcode.com/uid/50828">@tyasink</a> Try my approach. Still haven&#39;t found a failing case.</p>
+
+		</div>
+
+		<small class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block date-info pull-left">
+			<a class="permalink" style="text-decoration: none" href="/post/131844"><span class="timeago" title="2016-09-18T17:17:25.781Z"></span></a>
+
+			<i class="fa fa-pencil-square pointer edit-icon hidden"></i>
+
+			<small data-editor="" component="post/editor" class="hidden">last edited by  <span class="timeago" title=""></span></small>
+
+		</small>
+
+		<small class="action-info pull-right">
+			
+
+			<span class="post-tools">
+				<a component="post/reply" href="#" class="no-select hidden">Reply</a>
+				<a component="post/quote" href="#" class="no-select hidden">Quote</a>
+			</span>
+
+<span component="post/tools" class="dropdown moderator-tools hidden">
+	<a href="#" data-toggle="dropdown"><i class="fa fa-fw fa-ellipsis-v"></i></a>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu"></ul>
+</span>
+
+		</small>
+		<div class="clearfix"></div>
+	</div>
+
+</div>
+
+<hr class="no-space" />
+
+					
+				</li>
+		</ul>
+
+		<div class="post-bar">
+<div class="clearfix with-space">
+	<div class="tags pull-left">
+		
+	</div>
+
+	<div class="topic-main-buttons pull-right">
+		<span class="loading-indicator btn pull-left hidden" done="0">
+			<span class="hidden-xs">Loading More Posts</span> <i class="fa fa-refresh fa-spin"></i>
+		</span>
+
+<div class="stats hidden-xs">
+	<span component="topic/post-count" class="human-readable-number" title="52">52</span><br />
+	<small>Posts</small>
+</div>
+<div class="stats hidden-xs">
+	<span class="human-readable-number" title="12124">12124</span><br />
+	<small>Views</small>
+</div>
+
+<div component="topic/reply/container" class="btn-group action-bar hidden">
+	<button class="btn btn-primary" component="topic/reply">Reply</button>
+	<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu pull-right" role="menu">
+		<li><a href="#" component="topic/reply-as-topic">Reply as topic</a></li>
+	</ul>
+</div>
+
+<a href="/login" class="btn btn-primary">Log in to reply</a>
+
+<a class="btn btn-info" id="back_to_leetcode" href=https://leetcode.com/problems/{category._imported_slug} style="display: none;">
+	<span class="visible-sm-inline visible-md-inline visible-lg-inline">Back To Leetcode</span>
+</a>
+<script>
+    if ('{category._imported_parentCid}' == '1') {
+        $('#back_to_leetcode').show();
+    }
+</script>
+
+		
+
+
+
+
+
+
+	</div>
+</div>
+<hr class="no-space" />
+
+		</div>
+
+		
+
+		<div class="visible-xs visible-sm pagination-block text-center">
+			<div class="progress-bar"></div>
+			<div class="wrapper">
+				<i class="fa fa-2x fa-angle-double-up pointer fa-fw pagetop"></i>
+				<i class="fa fa-2x fa-angle-up pointer fa-fw pageup"></i>
+				<span class="pagination-text"></span>
+				<i class="fa fa-2x fa-angle-down pointer fa-fw pagedown"></i>
+				<i class="fa fa-2x fa-angle-double-down pointer fa-fw pagebottom"></i>
+			</div>
+		</div>
+	</div>
+	<div widget-area="sidebar" class="col-lg-3 col-sm-12"></div>
+</div>
+<div widget-area="footer"></div>
+
+<noscript>
+<div component="pagination" class="text-center pagination-container">
+	<ul class="pagination hidden-xs">
+		<li class="previous pull-left disabled">
+			<a href="?page=1" data-page="1"><i class="fa fa-chevron-left"></i> </a>
+		</li>
+
+								<li class="page active" >
+				<a href="?page=1" data-page="1">1</a>
+			</li>
+							<li class="page" >
+				<a href="?page=2" data-page="2">2</a>
+			</li>
+							<li class="page" >
+				<a href="?page=3" data-page="3">3</a>
+			</li>
+
+		<li class="next pull-right">
+			<a href="?page=2" data-page="2"> <i class="fa fa-chevron-right"></i></a>
+		</li>
+	</ul>
+
+	<ul class="pagination hidden-sm hidden-md hidden-lg">
+		<li class="first disabled">
+			<a href="?page=1" data-page="1"><i class="fa fa-fast-backward"></i> </a>
+		</li>
+		
+		<li class="previous disabled">
+			<a href="?page=1" data-page="1"><i class="fa fa-chevron-left"></i> </a>
+		</li>
+
+		<li component="pagination/select-page" class="page select-page">
+			<a href="#">1 / 3</a>
+		</li>
+		
+		<li class="next">
+			<a href="?page=2" data-page="2"> <i class="fa fa-chevron-right"></i></a>
+		</li>
+		
+		<li class="last">
+			<a href="?page=3" data-page="3"><i class="fa fa-fast-forward"></i> </a>
+		</li>
+	</ul>
+</div>
+</noscript>
+		</div><!-- END container -->
+	</main>
+
+	<div class="hide">
+<script type="text/tpl" data-template="500">
+<div class="alert alert-danger">
+	<strong>Internal error.</strong>
+	<p>Oops! Looks like something went wrong!</p>
+	<p></p>
+	
+
+</div>
+</script>
+	</div>
+
+
+	<div class="topic-search hidden">
+		<div class="btn-group">
+			<button type="button" class="btn btn-default count"></button>
+			<button type="button" class="btn btn-default prev"><i class="fa fa-fw fa-angle-up"></i></button>
+			<button type="button" class="btn btn-default next"><i class="fa fa-fw fa-angle-down"></i></button>
+		</div>
+	</div>
+	<div component="toaster/tray" class="alert-window"></div>
+
+	<script>
+		require(['forum/footer']);
+	</script>
+</body>
+</html>
+<script id="ajaxify-data" type="application/json">{"tid":55360,"uid":30022,"cid":"457","mainPid":123857,"title":"Replace two adjacent digits with larger one to find the smallest number that can be obtained","slug":"55360/replace-two-adjacent-digits-with-larger-one-to-find-the-smallest-number-that-can-be-obtained","timestamp":1471995965384,"lastposttime":1485222659280,"postcount":52,"viewcount":12124,"locked":false,"deleted":false,"pinned":false,"teaserPid":"164608","titleRaw":"Replace two adjacent digits with larger one to find the smallest number that can be obtained","timestampISO":"2016-08-23T23:46:05.384Z","lastposttimeISO":"2017-01-24T01:50:59.280Z","posts":[{"pid":123857,"uid":30022,"tid":55360,"content":"<p>You are given an integer X. You must choose two adjacent digits and replace them with the larger of these two digits.<\/p>\n<p>For example, from the integer X = 233614, you can obtain:<br/>\n33614 (by replacing 23 with 3);<br/>\n23614 (by replacing 33 with 3 or 36 with 6);<br/>\n23364 (by replacing 61 with 6 or 14 with 4);<\/p>\n<p>You want to find the smallest number that can be obtained from X by replacing two adjacent digits with the larger of the two. In the above example, the smallest such number is 23364.<\/p>\n<p>Write a function:<\/p>\n<pre><code>class Solution {public int solution (int X);}\n<\/code><\/pre>\n<p>that, given a positive integer X, returns the smallest number that can be obtained from X by replacing two adjacent digits with the larger of the two.<\/p>\n<p>For example, given X = 233614, the function should return 23364, as explained above.<\/p>\n<p>Assume that:<\/p>\n<pre><code>X is an integer within the range [10..1,000,000,000].\n<\/code><\/pre>\n<p>In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.<\/p>\n","timestamp":1471995965445,"reputation":2,"editor":null,"edited":0,"deleted":false,"upvotes":9,"downvotes":0,"votes":9,"timestampISO":"2016-08-23T23:46:05.445Z","editedISO":"","index":0,"user":{"username":"redbear","userslug":"redbear","lastonline":1471995561431,"picture":"","fullname":"","signature":"","reputation":9,"postcount":2,"banned":false,"status":"offline","uid":30022,"groupTitle":null,"icon:text":"R","icon:bgColor":"#ff5722","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":123910,"uid":47382,"tid":55360,"content":"<p>Had no clue how to do this. I believe I ended up converting them to strings and compare the individual characters, which is so damned dumb lol. I&#39;m curious how would everyone else solve this?<\/p>\n","timestamp":1472009969761,"reputation":0,"editor":null,"edited":0,"deleted":false,"upvotes":1,"downvotes":0,"votes":1,"timestampISO":"2016-08-24T03:39:29.761Z","editedISO":"","index":1,"user":{"username":"tony.mu101999","userslug":"tony-mu101999","lastonline":1486484038303,"picture":"/uploads/profile/47382-profileimg.jpg","fullname":"Tony Mu","signature":"","reputation":11,"postcount":23,"banned":false,"status":"offline","uid":47382,"groupTitle":"","icon:text":"T","icon:bgColor":"#ff5722","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":123961,"uid":50714,"tid":55360,"content":"<p>I haven&#39;t figure out the best way yet. But there&#39;s one thing for sure that we should skip the ascent sequence front MSB, the reason is trivial.<\/p>\n","timestamp":1472023296602,"reputation":0,"editor":null,"edited":0,"deleted":false,"upvotes":1,"downvotes":0,"votes":1,"timestampISO":"2016-08-24T07:21:36.602Z","editedISO":"","index":2,"user":{"username":"henryly94","userslug":"henryly94","lastonline":1479348899743,"picture":"","fullname":"","signature":"","reputation":4,"postcount":9,"banned":false,"status":"offline","uid":50714,"groupTitle":null,"icon:text":"H","icon:bgColor":"#009688","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":124207,"uid":14,"tid":55360,"content":"<p>I tried with this one<\/p>\n<pre><code>\ndef smallestNumber(num):\n    digits = [int(i) for i in str(num)]            \n    l = len(digits) - 1     \n    if (len(digits) == 2):\n        return max(digits[0], digits[l])\n    else:        \n        if digits[l - 2] &gt; digits[l - 1]  and digits[l - 1]  &gt; digits[l] :\n            digits[l - 1]  = digits[l]\n        else:\n            digits[l - 1] = max(digits[l - 1], digits[l])\n        return reduce(lambda x, y: 10 * x + y, digits[0:l], 0)<\/code><\/pre>\n","timestamp":1472103661394,"reputation":0,"editor":null,"edited":0,"deleted":false,"toPid":"123961","upvotes":0,"downvotes":0,"votes":0,"timestampISO":"2016-08-25T05:41:01.394Z","editedISO":"","index":3,"parent":{"username":"henryly94"},"user":{"username":"elmirap","userslug":"elmirap","lastonline":1484295655243,"picture":"/uploads/profile/14-profileimg.jpeg","fullname":"","signature":"","reputation":88,"postcount":674,"banned":false,"status":"offline","uid":14,"groupTitle":"contributors","icon:text":"E","icon:bgColor":"#3f51b5","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":124370,"uid":22963,"tid":55360,"content":"<p>Go through all the replacement and keep track of the min one.<\/p>\n","timestamp":1472160750576,"reputation":0,"editor":null,"edited":0,"deleted":false,"upvotes":0,"downvotes":0,"votes":0,"timestampISO":"2016-08-25T21:32:30.576Z","editedISO":"","index":4,"user":{"username":"pushazhiniao","userslug":"pushazhiniao","lastonline":1473131929969,"picture":"","fullname":"","signature":"","reputation":63,"postcount":75,"banned":false,"status":"offline","uid":22963,"groupTitle":null,"icon:text":"P","icon:bgColor":"#ff5722","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":124451,"uid":51973,"tid":55360,"content":"<p>Is my thought too simple? Here is what I think:<\/p>\n<p>By replacing two digit a,b with one digit X, in anyway the number gets smaller.<br/>\nAs x = max(a,b), so the number always gets larger than keep &#34;a&#34; at its position. So try to avoid replacing at the most significant part.<br/>\nAll this leaves us only 1 choice, that is replacing the last two digits... the impact is only max(a,b) - min(a,b) comparing with other (max(a,b) - min(a, b)) * 10^?<\/p>\n","timestamp":1472183343174,"reputation":0,"editor":null,"edited":0,"deleted":false,"upvotes":1,"downvotes":0,"votes":1,"timestampISO":"2016-08-26T03:49:03.174Z","editedISO":"","index":5,"user":{"username":"Olivia","userslug":"olivia","lastonline":1476763206096,"picture":"","fullname":"Olivia","signature":"","reputation":1,"postcount":1,"banned":false,"status":"offline","uid":51973,"groupTitle":"","icon:text":"O","icon:bgColor":"#e65100","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":124478,"uid":55175,"tid":55360,"content":"<p><a class=\"plugin-mentions-a\" href=\"https://discuss.leetcode.com/uid/50714\">@henryly94<\/a> The question says to focus on correctness than performance. So probably a brute force is good enough.<\/p>\n","timestamp":1472192190541,"reputation":0,"editor":null,"edited":0,"deleted":false,"toPid":"123961","upvotes":0,"downvotes":0,"votes":0,"timestampISO":"2016-08-26T06:16:30.541Z","editedISO":"","index":6,"parent":{"username":"henryly94"},"user":{"username":"cau-seoi-dyun-dou","userslug":"cau-seoi-dyun-dou","lastonline":1473652503449,"picture":"","fullname":"","signature":"","reputation":1,"postcount":13,"banned":false,"status":"offline","uid":55175,"groupTitle":null,"icon:text":"C","icon:bgColor":"#3f51b5","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":124479,"uid":14,"tid":55360,"content":"<p><a class=\"plugin-mentions-a\" href=\"https://discuss.leetcode.com/uid/55175\">@cau-seoi-dyun-dou<\/a> we should prove that we only need last 3 digits to find a solution. I think that it is very easy to prove it and will leave it to yourself<\/p>\n","timestamp":1472192562171,"reputation":0,"editor":null,"edited":0,"deleted":false,"toPid":"124478","upvotes":0,"downvotes":0,"votes":0,"timestampISO":"2016-08-26T06:22:42.171Z","editedISO":"","index":7,"parent":{"username":"cau-seoi-dyun-dou"},"user":{"username":"elmirap","userslug":"elmirap","lastonline":1484295655243,"picture":"/uploads/profile/14-profileimg.jpeg","fullname":"","signature":"","reputation":88,"postcount":674,"banned":false,"status":"offline","uid":14,"groupTitle":"contributors","icon:text":"E","icon:bgColor":"#3f51b5","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":124515,"uid":50714,"tid":55360,"content":"<p><a class=\"plugin-mentions-a\" href=\"https://discuss.leetcode.com/uid/55175\">@cau-seoi-dyun-dou<\/a> I understand, just some little thought<\/p>\n","timestamp":1472202564061,"reputation":0,"editor":null,"edited":0,"deleted":false,"toPid":"124478","upvotes":0,"downvotes":0,"votes":0,"timestampISO":"2016-08-26T09:09:24.061Z","editedISO":"","index":8,"parent":{"username":"cau-seoi-dyun-dou"},"user":{"username":"henryly94","userslug":"henryly94","lastonline":1479348899743,"picture":"","fullname":"","signature":"","reputation":4,"postcount":9,"banned":false,"status":"offline","uid":50714,"groupTitle":null,"icon:text":"H","icon:bgColor":"#009688","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":124738,"uid":55387,"tid":55360,"content":"<p>I have a Ruby implementation:<\/p>\n<pre><code>str = &#34;233614&#34;\n\ndef smaller_number(str)\n  smaller = nil\n  for i in 0 ... str.size\n    new_str = str.dup\n\n    if i == (str.size - 1)\n      break\n    end\n\n    max = [new_str[i].to_i, new_str[i+1].to_i].max\n\n    if max == new_str[i]\n      new_str[i+1] = &#39;&#39;\n    else\n      new_str[i] = &#39;&#39;\n    end\n\n    if smaller.nil?\n      smaller = new_str.to_i\n    else\n      if smaller &gt; new_str.to_i\n        puts &#34;#{smaller} &gt; #{new_str}&#34;\n        smaller = new_str.to_i\n      else\n        puts &#34;#{smaller} &lt; #{new_str}&#34;\n        smaller = new_str.to_i\n      end\n    end\n  end\n\n  puts smaller\nend\n\nsmaller_number(str)\n<\/code><\/pre>\n<p>Is this dumb?<\/p>\n","timestamp":1472289956074,"reputation":0,"editor":null,"edited":0,"deleted":false,"upvotes":0,"downvotes":0,"votes":0,"timestampISO":"2016-08-27T09:25:56.074Z","editedISO":"","index":9,"user":{"username":"ryancg","userslug":"ryancg","lastonline":1474266211362,"picture":"","fullname":"","signature":"","reputation":0,"postcount":1,"banned":false,"status":"offline","uid":55387,"groupTitle":null,"icon:text":"R","icon:bgColor":"#f44336","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":125544,"uid":43075,"tid":55360,"content":"<p>Here&#39;s the idea, start from the rightmost index towards left and keep moving till the current  element(ith index) is less than the previous element(i+1th index). If it is greater than the previous element then,remove the i+1 element and return.<br/>\nIf the number keeps on increasing from left to right then remove the element at index 1.<\/p>\n","timestamp":1472492751968,"reputation":0,"editor":{"username":"Murdocc007","userslug":"murdocc007","uid":43075},"edited":1474218390730,"deleted":false,"upvotes":1,"downvotes":0,"votes":1,"timestampISO":"2016-08-29T17:45:51.968Z","editedISO":"2016-09-18T17:06:30.730Z","index":10,"user":{"username":"Murdocc007","userslug":"murdocc007","lastonline":1475325616307,"picture":"","fullname":"","signature":"","reputation":2,"postcount":11,"banned":false,"status":"offline","uid":43075,"groupTitle":null,"icon:text":"M","icon:bgColor":"#f44336","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":127303,"uid":56953,"tid":55360,"content":"<p>We can utilize Heap or Priority queue in this case. Java solution is as below -<\/p>\n<pre><code>public int obtainSmallest(int num){\n\n\t\tString strNum = String.valueOf(num);\n\t\tPriorityQueue&lt;Integer&gt; queue = new PriorityQueue&lt;&gt;();\n\t\t\t\n\t\tfor(int i=0; i&lt;strNum.length()-1; i++){\n\t\t\tString newString = i == 0 ? &#34;&#34; : strNum.substring(0,i);\n\t\t\tif(strNum.charAt(i) &gt; strNum.charAt(i+1)){\n\t\t\t\tnewString += strNum.charAt(i) + strNum.substring(i+2, strNum.length());\n\t\t\t}else{\n\t\t\t\tnewString += strNum.charAt(i+1) + strNum.substring(i+2, strNum.length());\n\t\t\t}\n\t\t\tqueue.add(Integer.valueOf(newString));\n\t\t}\n\t\t\n\t\treturn queue.poll();\n\t\t\n\t}\n<\/code><\/pre>\n","timestamp":1472969037742,"reputation":0,"editor":null,"edited":0,"deleted":false,"upvotes":1,"downvotes":0,"votes":1,"timestampISO":"2016-09-04T06:03:57.742Z","editedISO":"","index":11,"user":{"username":"deshpana","userslug":"deshpana","lastonline":1486423753910,"picture":"","fullname":"","signature":"","reputation":1,"postcount":7,"banned":false,"status":"offline","uid":56953,"groupTitle":null,"icon:text":"D","icon:bgColor":"#e65100","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":130789,"uid":59243,"tid":55360,"content":"<p><a class=\"plugin-mentions-a\" href=\"https://discuss.leetcode.com/uid/14\">@elmirap<\/a> Your solution is wrong.<\/p>\n<p>EX: input 177763. Your solution gives 17773. But if you combine any of the two 7&#39;s you get 17763.<\/p>\n<p>17763 &lt; 17773<\/p>\n","timestamp":1473879146866,"reputation":0,"editor":null,"edited":0,"deleted":false,"toPid":"124207","upvotes":0,"downvotes":0,"votes":0,"timestampISO":"2016-09-14T18:52:26.866Z","editedISO":"","index":12,"parent":{"username":"elmirap"},"user":{"username":"J","userslug":"j","lastonline":1474680965956,"picture":"","fullname":"","signature":"","reputation":0,"postcount":1,"banned":false,"status":"offline","uid":59243,"groupTitle":null,"icon:text":"J","icon:bgColor":"#3f51b5","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":131134,"uid":283,"tid":55360,"content":"<p>Here&#39;s my approach-<\/p>\n<ul>\n<li>Find the first non-increasing sequence from the left of size &gt; 2 and replace the first 2 digits of this sequence.<\/li>\n<li>Else, replace the last 2 digits.<\/li>\n<\/ul>\n","timestamp":1473995772877,"reputation":0,"editor":null,"edited":0,"deleted":false,"upvotes":5,"downvotes":0,"votes":5,"timestampISO":"2016-09-16T03:16:12.877Z","editedISO":"","index":13,"user":{"username":"vishalhemnani","userslug":"vishalhemnani","lastonline":1485662120415,"picture":"","fullname":"","signature":"","reputation":133,"postcount":28,"banned":false,"status":"offline","uid":283,"groupTitle":null,"icon:text":"V","icon:bgColor":"#ff5722","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":131468,"uid":50828,"tid":55360,"content":"<p><a class=\"plugin-mentions-a\" href=\"https://discuss.leetcode.com/uid/14\">@elmirap<\/a> how abaout 654321, we need to remove 5 here<\/p>\n","timestamp":1474112814393,"reputation":0,"editor":null,"edited":0,"deleted":false,"toPid":"124479","upvotes":0,"downvotes":0,"votes":0,"timestampISO":"2016-09-17T11:46:54.393Z","editedISO":"","index":14,"parent":{"username":"elmirap"},"user":{"username":"tyasink","userslug":"tyasink","lastonline":1480378832216,"picture":"","fullname":"","signature":"","reputation":2,"postcount":7,"banned":false,"status":"offline","uid":50828,"groupTitle":null,"icon:text":"T","icon:bgColor":"#e91e63","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":131472,"uid":14,"tid":55360,"content":"<p><a class=\"plugin-mentions-a\" href=\"https://discuss.leetcode.com/uid/50828\">@tyasink<\/a> yes, seems there is a flaw in algorithm<\/p>\n","timestamp":1474114070649,"reputation":0,"editor":null,"edited":0,"deleted":false,"toPid":"131468","upvotes":0,"downvotes":0,"votes":0,"timestampISO":"2016-09-17T12:07:50.649Z","editedISO":"","index":15,"parent":{"username":"tyasink"},"user":{"username":"elmirap","userslug":"elmirap","lastonline":1484295655243,"picture":"/uploads/profile/14-profileimg.jpeg","fullname":"","signature":"","reputation":88,"postcount":674,"banned":false,"status":"offline","uid":14,"groupTitle":"contributors","icon:text":"E","icon:bgColor":"#3f51b5","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":131506,"uid":50828,"tid":55360,"content":"<p><a class=\"plugin-mentions-a\" href=\"https://discuss.leetcode.com/uid/43075\">@Murdocc007<\/a> said in <a href=\"/post/125544\">Replace two adjacent digits with larger one to find the smallest number that can be obtained<\/a>:<\/p>\n<blockquote>\n<p>Here&#39;s the idea, start from the rightmost index towards left and keep moving till the current  element(ith index) is less than the previous element(i+1th index). If it is less than the previous element then,remove the current(i) element and return.<br/>\nIf the number keeps on increasing from left to right then remove the element at index 1.<\/p>\n<\/blockquote>\n<p>how about 121 or 2321<\/p>\n","timestamp":1474126211204,"reputation":0,"editor":null,"edited":0,"deleted":false,"toPid":"125544","upvotes":0,"downvotes":0,"votes":0,"timestampISO":"2016-09-17T15:30:11.204Z","editedISO":"","index":16,"parent":{"username":"Murdocc007"},"user":{"username":"tyasink","userslug":"tyasink","lastonline":1480378832216,"picture":"","fullname":"","signature":"","reputation":2,"postcount":7,"banned":false,"status":"offline","uid":50828,"groupTitle":null,"icon:text":"T","icon:bgColor":"#e91e63","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":131736,"uid":1372,"tid":55360,"content":"<p><a class=\"plugin-mentions-a\" href=\"https://discuss.leetcode.com/uid/56953\">@deshpana<\/a> What is the use of a PriorityQueue here ?<br/>\nWe can just maintain a single variable to track the current minimum.<\/p>\n","timestamp":1474187176328,"reputation":0,"editor":null,"edited":0,"deleted":false,"toPid":"127303","upvotes":0,"downvotes":0,"votes":0,"timestampISO":"2016-09-18T08:26:16.328Z","editedISO":"","index":17,"parent":{"username":"deshpana"},"user":{"username":"abi93k","userslug":"abi93k","lastonline":1481614060817,"picture":"","fullname":"Abhishek Kannan","signature":"","reputation":28,"postcount":12,"banned":false,"status":"offline","uid":1372,"groupTitle":"","icon:text":"A","icon:bgColor":"#ff5722","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":131841,"uid":43075,"tid":55360,"content":"<p><a class=\"plugin-mentions-a\" href=\"https://discuss.leetcode.com/uid/50828\">@tyasink<\/a> made the changes.<\/p>\n","timestamp":1474218402170,"reputation":0,"editor":null,"edited":0,"deleted":false,"toPid":"131506","upvotes":0,"downvotes":0,"votes":0,"timestampISO":"2016-09-18T17:06:42.170Z","editedISO":"","index":18,"parent":{"username":"tyasink"},"user":{"username":"Murdocc007","userslug":"murdocc007","lastonline":1475325616307,"picture":"","fullname":"","signature":"","reputation":2,"postcount":11,"banned":false,"status":"offline","uid":43075,"groupTitle":null,"icon:text":"M","icon:bgColor":"#f44336","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":131843,"uid":50828,"tid":55360,"content":"<p><a class=\"plugin-mentions-a\" href=\"https://discuss.leetcode.com/uid/43075\">@Murdocc007<\/a> said in <a href=\"/post/125544\">Replace two adjacent digits with larger one to find the smallest number that can be obtained<\/a>:<\/p>\n<p>If I understand your algorithm correctly, there are some cases that fail<\/p>\n<blockquote>\n<p>Here&#39;s the idea, start from the rightmost index towards left and keep moving till the current  element(ith index) is less than the previous element(i+1th index). If it is greater than the previous element then,remove the i+1 element and return.<\/p>\n<\/blockquote>\n<p>sample input: 2321<br/>\nyour solution: 232<br/>\ncorrect solution: 231<\/p>\n<blockquote>\n<p>If the number keeps on increasing from left to right then remove the element at index 1.<\/p>\n<\/blockquote>\n<p>sample input: 1234<br/>\nyour solution: 134<br/>\ncorrect solution: 124<\/p>\n","timestamp":1474218949001,"reputation":0,"editor":null,"edited":0,"deleted":false,"toPid":"125544","upvotes":1,"downvotes":0,"votes":1,"timestampISO":"2016-09-18T17:15:49.001Z","editedISO":"","index":19,"parent":{"username":"Murdocc007"},"user":{"username":"tyasink","userslug":"tyasink","lastonline":1480378832216,"picture":"","fullname":"","signature":"","reputation":2,"postcount":7,"banned":false,"status":"offline","uid":50828,"groupTitle":null,"icon:text":"T","icon:bgColor":"#e91e63","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0},{"pid":131844,"uid":283,"tid":55360,"content":"<p><a class=\"plugin-mentions-a\" href=\"https://discuss.leetcode.com/uid/50828\">@tyasink<\/a> Try my approach. Still haven&#39;t found a failing case.<\/p>\n","timestamp":1474219045781,"reputation":0,"editor":null,"edited":0,"deleted":false,"toPid":"131843","upvotes":0,"downvotes":0,"votes":0,"timestampISO":"2016-09-18T17:17:25.781Z","editedISO":"","index":20,"parent":{"username":"tyasink"},"user":{"username":"vishalhemnani","userslug":"vishalhemnani","lastonline":1485662120415,"picture":"","fullname":"","signature":"","reputation":133,"postcount":28,"banned":false,"status":"offline","uid":283,"groupTitle":null,"icon:text":"V","icon:bgColor":"#ff5722","banned_until":0,"banned_until_readable":"Not Banned","custom_profile_info":[]},"favourited":false,"upvoted":false,"downvoted":false,"selfPost":false,"display_moderator_tools":false,"display_move_tools":false,"display_post_menu":0}],"category":{"cid":457,"name":"Google","description":"","icon":"hidden","bgColor":"#fffff","color":"#333","slug":"457/google","parentCid":"5","topic_count":132,"post_count":1166,"disabled":false,"order":457,"link":"","numRecentReplies":1,"class":"col-md-3 col-xs-6","imageClass":"cover","descriptionParsed":"","image":"/uploads/category/category-457.png","totalPostCount":1166,"totalTopicCount":132,"backgroundImage":"/uploads/category/category-457.png"},"thread_tools":[],"tags":[],"isFollowing":false,"isNotFollowing":true,"isIgnoring":false,"bookmark":null,"postSharing":[],"unreplied":false,"related":[],"breadcrumbs":[{"text":"[[global:home]]","url":"/"},{"text":"Interview Questions","url":"/category/5/interview-questions"},{"text":"Google","url":"/category/457/google"},{"text":"Replace two adjacent digits with larger one to find the smallest number that can be obtained"}],"privileges":{"topics:reply":false,"read":true,"topics:read":true,"view_thread_tools":false,"editable":false,"deletable":false,"view_deleted":false,"isAdminOrMod":false,"disabled":false,"tid":"55360","uid":0},"topicStaleDays":365,"reputation:disabled":false,"downvote:disabled":false,"feeds:disableRSS":false,"bookmarkThreshold":5,"postEditDuration":0,"postDeleteDuration":0,"scrollToMyPost":true,"rssFeedUrl":"/topic/55360.rss","pagination":{"rel":[{"rel":"next","href":"https://discuss.leetcode.com/topic/55360/replace-two-adjacent-digits-with-larger-one-to-find-the-smallest-number-that-can-be-obtained?page=2"}],"pages":[{"page":1,"active":true,"qs":"page=1"},{"page":2,"active":false,"qs":"page=2"},{"page":3,"active":false,"qs":"page=3"}],"currentPage":1,"pageCount":3,"prev":{"page":1,"active":false,"qs":"page=1"},"next":{"page":2,"active":true,"qs":"page=2"}},"loggedIn":false,"relative_path":"","template":{"name":"topic","topic":true},"url":"/topic/55360/replace-two-adjacent-digits-with-larger-one-to-find-the-smallest-number-that-can-be-obtained","bodyClass":"page-topic page-topic-55360 page-topic-replace-two-adjacent-digits-with-larger-one-to-find-the-smallest-number-that-can-be-obtained"}</script>

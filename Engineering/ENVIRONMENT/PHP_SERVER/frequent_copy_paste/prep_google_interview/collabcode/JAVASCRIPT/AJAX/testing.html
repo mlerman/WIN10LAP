@@ -1,0 +1,38 @@
+<html>
+<head>
+<script type="text/javascript">
+function getobj(){
+  var obj;
+  if(window.XMLHttpRequest){
+  obj=new XMLHttpRequest();
+  }
+  else if(window.ActiveXObject){
+  obj=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  else
+    alert("no AJAX");
+return obj;
+}
+
+function dowork(){
+  obj=getobj();		// global or public
+  if(obj!=null){
+    obj.open("GET", "ajaxphp.php?inputText="+document.getElementById("in").value, true);
+	obj.send(null);
+	obj.onreadystatechange=setout;
+  }
+}
+
+function setout(){
+  if((obj.readyState==4)&&(obj.status==200)){
+    txt=obj.responseText;
+    document.getElementById("out").value=txt;
+	}
+}
+</script>
+</head>
+<body>
+<input type="text" id="in" value="" onkeyup="dowork();" />
+<input type="text" id="out" value="" />
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+
+<script type="text/javascript"> 
+window.onload=function()
+{
+   if(!document.getElementById || !document.createElement){alert("oops"); return;}
+   var newcss=document.createElement('link');
+   newcss.type='text/css';
+   newcss.href='external.css';
+   newcss.rel='stylesheet';
+   document.getElementsByTagName('head')[0].appendChild(newcss);
+}
+</script>
+
+
+<p id="id1">p1</p>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>  
+<html>
+
+<form action="" method="get">  
+    <p>  
+        10 + 5 = <output name="sum"></output>  
+    </p>  
+    <button type="submit"> Calculate </button>  
+</form>  
+  
+<script>  
+(function() {  
+    var f = document.forms[0];  
+  
+    if ( typeof f['sum'] !== 'undefined' ) {  
+        f.addEventListener('submit', function(e) {  
+            f['sum'].value = 15;  
+            e.preventDefault();  
+        }, false);  
+    }  
+    else { alert('Your browser is not ready yet.'); }  
+})();  
+</script> 
+
+</html>

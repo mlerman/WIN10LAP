@@ -1,0 +1,2 @@
+node hello.js
+pause

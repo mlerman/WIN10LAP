@@ -1,0 +1,1 @@
+printf("\n i: %d j:%d k:%d", i, j, k);

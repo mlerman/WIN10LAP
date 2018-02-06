@@ -1,0 +1,6 @@
+There are 5 status code classes:
+1xx: info
+2xx: success ex 200
+3xx: redirection ex 301 moved permanently
+4xx: client error ex 404 not found and 403 forbidden
+5xx: server error ex 500 internal server error

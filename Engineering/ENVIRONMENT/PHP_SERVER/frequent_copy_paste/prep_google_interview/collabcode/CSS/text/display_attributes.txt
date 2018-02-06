@@ -1,0 +1,29 @@
+none			The element will not be displayed at all
+
+block			The element is displayed as a block element, 
+			does not tolerate any HTML elements next to it
+
+inline	(default)	has no line break before or after it, and 
+			it tolerates HTML elements next to it
+
+list-item		it has a bullet in front of it
+
+run-in			inline, float a gauche, break line avant mais pas apres.
+			permet au text apres l'element de s'afficher sur la meme
+			ligne. inconsistant entre browsers.
+			
+autres valeurs:
+
+compact
+marker
+table
+inline-table
+table-row-group
+table-header-group
+table-footer-group
+table-row
+table-column-group
+table-column
+table-cell
+table-caption
+inherit

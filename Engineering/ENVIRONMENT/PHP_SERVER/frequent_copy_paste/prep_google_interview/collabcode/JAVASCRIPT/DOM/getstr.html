@@ -1,0 +1,41 @@
+<html>
+
+<head>
+
+<script type="text/javascript">
+
+function getXmlDoc()
+{
+  txt="<CATALOG><CD>";
+  txt=txt+"<TITLE>Everyday Italian</TITLE>";
+  txt=txt+"<ARTIST>Giada De Laurentiis</ARTIST>";
+  txt=txt+"<YEAR>2005</YEAR></CD><CD>";
+  txt=txt+"<TITLE>Empire Burlesque</TITLE>";
+  txt=txt+"<ARTIST>Bob Dylan</ARTIST>";
+  txt=txt+"<YEAR>1985</YEAR>";
+  txt=txt+"</CD></CATALOG>";
+
+  if (window.DOMParser)
+    {
+    parser=new DOMParser();
+    xmlDoc=parser.parseFromString(txt,"text/xml");
+    }
+  else // Internet Explorer
+    {
+    xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+    xmlDoc.async=false;
+    xmlDoc.loadXML(txt);
+    } 
+  return xmlDoc;
+}
+xmlDoc=getXmlDoc();
+allBooks=xmlDoc.getElementsByTagName("CD");
+alert(allBooks.length)
+</script>
+
+</head>
+
+<body>
+</body>
+
+</html>

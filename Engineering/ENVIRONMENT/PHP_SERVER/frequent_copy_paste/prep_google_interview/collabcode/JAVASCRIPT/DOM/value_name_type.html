@@ -1,0 +1,19 @@
+<html>
+<body>
+
+<p id="intro">Hello World!</p>
+
+<script type="text/javascript">
+txt=document.getElementById("intro").childNodes[0].nodeValue;
+document.write("<p>p nodeValue: " + txt + "</p>");
+
+nm=document.getElementById("intro").childNodes[0].nodeName;
+document.write("<p>p nodeName: " + nm + "</p>");
+
+tp=document.getElementById("intro").childNodes[0].nodeType;
+document.write("<p>p nodeType: " + tp + "</p>");
+
+</script>
+
+</body>
+</html>

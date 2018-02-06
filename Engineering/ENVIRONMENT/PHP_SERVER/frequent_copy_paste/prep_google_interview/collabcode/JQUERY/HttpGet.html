@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+      $("#driver").click(function(event){
+          $.get( 
+             "http://siliconkit.com/ajax/result.php",
+             { name: "Zara" },
+             function(data) {
+                $('#stage').html(data);
+             }
+
+          );
+      });
+   });
+</script>
+
+</head>
+
+<body>
+
+   <p>Click on the button to load result.html file:</p>
+   <div id="stage" style="background-color:blue;">
+          STAGE
+   </div>
+   <input type="button" id="driver" value="Load Data" />
+<a href="http://siliconkit.com/ajax/HttpGet.html">This need to run on the server</a>
+</body>
+</html>

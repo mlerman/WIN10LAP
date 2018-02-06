@@ -1,0 +1,61 @@
+a retenir:
+===============
+rien 	-> selectione les tag
+,		-> grouping
+.		-> class
+#		-> id
+:		-> narrow down la selection du tag
+[]		-> narrow down la selection avec qq chose sur l'attribut
+===============
++ > ~	-> relation entre 2 tag: suivi parent precedance
+===============
+^ $ * 	-> narrow down avec le contenue du string de l'attribut dans les bracket []
+===============
+
+.intro 		Selects all elements with class="intro"
+#firstname 	Selects the element with id="firstname"
+* 		Selects all elements
+p 		Selects all <p> elements
+div,p 		Selects all <div> elements and all <p> elements --> grouping
+div p 		Selects all <p> elements inside <div> elements
+div>p 		Selects all <p> elements where the parent is a <div> element
+div+p 		Selects all <p> elements that are placed immediately after <div> elements
+
+[target] 	Selects all elements with a target attribute
+[target=_blank] Selects all elements with target="_blank"
+[title~=flower] Selects all elements with a title attribute containing the word "flower"
+[lang|=en] 	Selects all elements with a lang attribute value starting with "en"
+
+a:link 		Selects all unvisited links
+a:visited 	Selects all visited links
+a:active 	Selects the active link
+a:hover 	Selects links on mouse over
+input:focus 	Selects the input element which has focus
+p:first-letter 	Selects the first letter of every <p> element
+p:first-line 	Selects the first line of every <p> element
+p:first-child 	Selects every <p> element that is the first child of its parent
+p:before 	Insert content before every <p> element
+p:after 	Insert content after every <p> element
+p:lang(it) 	Selects every <p> element with a lang attribute value starting with "it"
+
+p~ul 		Selects every <ul> element that are preceded by a <p> element
+a[src^="https"] Selects every <a> element whose src attribute value begins with "https"
+a[src$=".pdf"] 	Selects every <a> element whose src attribute value ends with ".pdf"
+a[src*="w3schools"] 	Selects every <a> element whose src attribute value contains the substring "w3schools"
+p:first-of-type 	Selects every <p> element that is the first <p> element of its parent
+p:last-of-type 	Selects every <p> element that is the last <p> element of its parent
+p:only-of-type 	Selects every <p> element that is the only <p> element of its parent
+p:only-child 	Selects every <p> element that is the only child of its parent
+p:nth-child(2) 	Selects every <p> element that is the second child of its parent
+p:nth-last-child(2) 	Selects every <p> element that is the second child of its parent, counting from the last child
+p:nth-of-type(2) 	Selects every <p> element that is the second <p> element of its parent
+p:nth-last-of-type(2) 	Selects every <p> element that is the second <p> element of its parent, counting from the last child
+p:last-child 	Selects every <p> element that is the last child of its parent
+:root 	Selects the document’s root element
+p:empty 	Selects every <p> element that has no children (including text nodes)
+#news:target 	Selects the current active #news element (clicked on a URL containing that anchor name)
+input:enabled 	Selects every enabled <input> element
+input:disabled 	Selects every disabled <input> element
+input:checked 	Selects every checked <input> element
+:not(p) 	Selects every element that is not a <p> element
+::selection 	Selects the portion of an element that is selected by a user

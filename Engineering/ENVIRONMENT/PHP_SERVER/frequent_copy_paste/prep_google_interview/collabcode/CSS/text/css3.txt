@@ -1,0 +1,7 @@
+Due to the modularization, different modules have different stability and statuses.
+As of November 2011, there are over fifty CSS modules published from the CSS Working Group.
+Three of them
+	Selectors Level 3, 
+	Namespaces and 
+	Color
+became W3C Recommendations in 2011.

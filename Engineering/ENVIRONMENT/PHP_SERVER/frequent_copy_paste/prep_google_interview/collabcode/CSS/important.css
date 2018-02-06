@@ -1,0 +1,5 @@
+p
+{
+  background: green !important; /* Major browsers other than IE 6 and below respect the importance immediately */
+  background: red; /* IE 6 and below use this value instead, even though the above was marked as important */
+}

@@ -1,0 +1,25 @@
+<script type="text/javascript">
+function f1()
+{
+   var val1=1;		// local
+} 
+
+f1();
+alert(typeof val1);	// undefined
+
+function f2()
+{
+   val2=2;		// global
+} 
+
+f2();
+alert(val2);	// OK
+
+function f3()
+{
+   window.val3=3; 	// global
+} 
+
+f3();
+alert(val3);	// OK
+</script>

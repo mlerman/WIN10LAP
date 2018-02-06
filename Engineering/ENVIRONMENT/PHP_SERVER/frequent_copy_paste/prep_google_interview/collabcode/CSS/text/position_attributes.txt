@@ -1,0 +1,9 @@
+absolute		The element is positioned relative to its first positioned (not static) ancestor element
+
+relative		The element is positioned relative to its normal position
+
+static	(default)	Elements renders in order, as they appear in the document flow.
+
+fixed			The element is positioned relative to the browser window
+
+inherit			The value of the position property is inherited from the parent element

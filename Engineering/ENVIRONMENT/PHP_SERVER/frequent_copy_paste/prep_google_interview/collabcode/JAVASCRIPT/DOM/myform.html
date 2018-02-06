@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<form action="#">
+<input type="button" value="go">
+</form>
+
+
+<form name="myform" action="#">
+<input type="button" value="go">
+<input type="text" name="field" value="gu">
+</form>
+
+
+<script type="text/javascript">
+alert(document.forms["myform"].elements["field"].value);
+alert(document.forms[1].elements[1].value);
+alert(document.myform.field.value);
+</script>
+
+</body>
+</html>

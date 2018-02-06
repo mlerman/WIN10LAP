@@ -1,0 +1,18 @@
+Most in-CSS hacks deal with selector bugs. The following is a list of browser version ranges 
+and the beginnings of selectors that are known to select elements in them. 
+Note that because these hacks rely on browser bugs or missing features, results may vary in some lesser-known 
+or future browsers. All of these selectors use valid CSS.
+
+
+IE 6 and below
+    * html {}
+IE 7 and below
+    *:first-child+html {} * html {}
+IE 7 only
+    *:first-child+html {}
+IE 7 and modern browsers only
+    html>body {}
+Modern browsers only (not IE 7)
+    html>/**/body {}
+Recent Opera versions 9 and below
+    html:first-child {} 

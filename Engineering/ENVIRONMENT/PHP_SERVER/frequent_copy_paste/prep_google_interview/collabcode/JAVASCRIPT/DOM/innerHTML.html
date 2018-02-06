@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<script type="text/javascript">
+document.write(document.getElementById("intro").innerHTML +"<br/>");
+// here it is not OK because it is not rendered yet
+//document.write(document.getElementById("intro").childNodes[0].nodeValue +"<br/>");
+</script>
+</head>
+</body>
+<p id="intro">toto</p>
+
+<script type="text/javascript">
+// but here it is OK
+elem=document.getElementById("intro");
+document.write(elem.childNodes[0].nodeValue +"<br/>");
+</script>
+
+</html>

@@ -1,0 +1,27 @@
+<?php
+$tab=array(-10,-7,-1,3,7,9,11);
+
+print_r($tab);
+
+
+function sumtozero($tb) {
+  $pivot=intval(count($tb)/2);
+  echo ' count='.count($tb);
+  echo ' pivot='.$pivot;
+  $head=0;
+  $tail=count($tb)-1;
+
+  do {
+  if(($tb[$head]+$tb[$tail])==0) 
+    return true;
+  while(($tb[$head]+$tb[$tail])>0)
+    $tail--;
+  while(($tb[$head]+$tb[$tail])<0)
+    $head++;
+  } while($head<=$tail);
+  return false;
+}
+
+sumtozero($tab);
+
+?>

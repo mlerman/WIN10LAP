@@ -1,0 +1,1 @@
+With JQUERY this file changetxt.txt does not need to be on the server at siliconkit.com/ajax/changetxt.txt

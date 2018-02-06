@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<script type="text/javascript">
+selem=document.createElement("script");
+selem.type="text/javascript";				// was selem.setAttribute("type","text/javascript");
+selem.src="alert.js";						// was selem.setAttribute("src","alert.js");
+elems=document.getElementsByTagName("head");
+elems[0].appendChild(selem);
+</script>
+</head>
+</body>
+
+</html>

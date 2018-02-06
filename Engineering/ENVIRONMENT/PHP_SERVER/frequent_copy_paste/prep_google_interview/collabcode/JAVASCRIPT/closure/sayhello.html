@@ -1,0 +1,17 @@
+<!DOCTYPE html>  
+<html>
+<head>
+<script type="text/javascript">
+function sayHello2(name) {
+  var text = 'Hello ' + name; // local variable
+  var sayAlert = function() { alert(text); }
+  return sayAlert;
+}
+</script>
+</head>
+<body>
+<input type="submit" value="click" onclick="var sh=sayHello2('toto'); sh();" ><br/>
+var sh=sayHello2('toto'); // after this call the value 'toto' is retained in the variable sh<br/>
+sh();
+</body>
+</html>

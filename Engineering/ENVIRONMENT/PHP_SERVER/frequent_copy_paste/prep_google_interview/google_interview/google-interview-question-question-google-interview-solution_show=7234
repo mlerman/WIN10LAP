@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Google interview Question (This is the a question from recent google interview can i get solution for this in JAVA) - GeeksforGeeks Q&amp;A</title>
+		<meta property="og:title" content="Google interview Question (This is the a question from recent google interview can i get solution for this in JAVA) - GeeksforGeeks Q&amp;A">
+			<meta property="og:site_name" content="GeeksforGeeks Q&amp;A" >
+				<meta property="og:url" content="/6922/google-interview-question-question-google-interview-solution?show=7234">
+					<meta name="description" content="You are given a listing of directories and files in a file system. Each directory and file ... not counting the storage required for input arguments).">
+					<meta name="keywords" content="java">
+					<link rel="stylesheet" href="http://dzuche4k9vrzr.cloudfront.net/qa-theme/GeeksforGeeks/syntaxhighlighter/styles/shCoreDefault.css">
+					<link rel="stylesheet" href="http://qa.geeksforgeeks.org/qa-theme/GeeksforGeeks/qa-styles.css">
+					<link rel="canonical" href="qa.geeksforgeeks.org/6922/google-interview-question-question-google-interview-solution">
+					<link rel="next" href="../../6922/google-interview-question-question-google-interview-solution?start=10#a_list_title" >
+					<link rel="search" type="application/opensearchdescription+xml" title="GeeksforGeeks Q&amp;A" href="../../opensearch.xml">
+					<meta name=viewport content="width=device-width, initial-scale=1">
+
+  <script type="text/javascript">
+    window._mNHandle = window._mNHandle || {};
+    window._mNHandle.queue = window._mNHandle.queue || [];
+    medianet_versionId = "121199"; 
+    (function() {
+        var sct = document.createElement("script"),
+        sctHl = document.getElementsByTagName("script")[0],
+        isSSL = 'https:' == document.location.protocol;
+        sct.type = "text/javascript";
+        sct.src = (isSSL ? 'https:' : 'http:') + '//contextual.media.net/dmedianet.js?cid=8CU3I4396' + (isSSL ? '&https=1' : '')+'';
+        sct.async = "async";
+        sctHl.parentNode.insertBefore(sct, sctHl);
+    })();
+    </script>
+					<script> var qa_root = '.\/'; var qa_request = ''; </script>
+					<script defer src="http://dzuche4k9vrzr.cloudfront.net/qa-theme/GeeksforGeeks/syntaxhighlighter/scripts/shCore.js"></script>
+					<script defer src="http://dzuche4k9vrzr.cloudfront.net/qa-theme/GeeksforGeeks/syntaxhighlighter/scripts/shAutoloader.js"></script>
+					<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+					<script async src="http://dzuche4k9vrzr.cloudfront.net/qa-content/qa-page.js?"></script>
+					<script async src="http://dzuche4k9vrzr.cloudfront.net/qa-content/ckeditor/ckeditor.js"></script>
+					<script defer src="http://dzuche4k9vrzr.cloudfront.net/qa-theme/GeeksforGeeks/gfg.js"></script>
+					<script>
+					var qa_root = '..\/..\/';
+					var qa_request = '6922\/google-interview-question-question-google-interview-solution';
+					var qa_oldonload = window.onload;
+					window.onload = function() {
+						if (typeof qa_oldonload == 'function')
+							qa_oldonload();
+						
+						qa_element_revealed=document.getElementById('anew');
+					};
+					</script>
+					<script src="../../qa-content/jquery-1.11.2.min.js"></script>
+					<script src="../../qa-content/qa-page.js?1.7.0"></script>
+					<script src="../../qa-content/qa-question.js?1.7.0"></script>
+				</head>
+				<body
+					class="qa-template-question qa-body-js-off"
+					>
+					<script>
+  window.fbAsyncInit=function() {
+    FB.init({
+      appId      : '380853768781431',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+					<script>
+						var b=document.getElementsByTagName('body')[0];
+						b.className=b.className.replace('qa-body-js-off', 'qa-body-js-on');
+					</script>
+					<div id="qa-login-bar"><div id="qa-login-group">
+							<div class="qa-nav-user"><a class="qa-nav-user-link" href="http://auth.geeksforgeeks.org/?to=http://qa.geeksforgeeks.org/">Login</a></div>
+							<div class="qa-nav-user">
+								<ul class="qa-nav-user-list">
+									<li class="qa-nav-user-item qa-nav-user-register">
+										<a href="../../register?to=6922%2Fgoogle-interview-question-question-google-interview-solution%3Fshow%3D7234" class="qa-nav-user-link">Register</a>
+									</li>
+								</ul>
+								<div class="qa-nav-user-clear">
+								</div>
+							</div>
+					</div></div>
+					<div class="qa-body-wrapper">
+						
+						<div class="qa-header">
+							<div><div class="qa-logo">
+									<a href="http://qa.geeksforgeeks.org">GeeksforGeeks Q&A </a>
+								</div>
+								<div class="qa-logo" style="line-height:normal !important; width: 225px; position: relative; height:0px; left: 29px;" >
+                                <script>
+                                  (function() {
+                                    var cx = '005855190823060106138:vpj3psa3rbm';
+                                    var gcse = document.createElement('script');
+                                    gcse.type = 'text/javascript';
+                                    gcse.async = true;
+                                    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                                        '//cse.google.com/cse.js?cx=' + cx;
+                                    var s = document.getElementsByTagName('script')[0];
+                                    s.parentNode.insertBefore(gcse, s);
+                                  })();
+                                </script>
+                                <gcse:search></gcse:search>
+                        </div>
+								<div style="float:right; position:relative; top:0px;" class="qa-logo">
+									<a href="http://geeksforgeeks.org">GeeksforGeeks</a>
+							</div></div>
+							<div class="qa-header-clear">
+							</div>
+						</div> <!-- END qa-header -->
+						
+						<div class="qa-main-shadow" style="position:relative; top:0px;">
+							
+							<div class="qa-main-wrapper">
+								
+								<div class="qa-nav-main">
+									<ul class="qa-nav-main-list">
+										<li class="qa-nav-main-item qa-nav-main-activity">
+											<a href="../../activity" class="qa-nav-main-link">All Activity</a>
+										</li>
+										<li class="qa-nav-main-item qa-nav-main-">
+											<a href="../../" class="qa-nav-main-link">Q&amp;A</a>
+										</li>
+										<li class="qa-nav-main-item qa-nav-main-questions">
+											<a href="../../questions" class="qa-nav-main-link">Questions</a>
+										</li>
+										<li class="qa-nav-main-item qa-nav-main-hot">
+											<a href="../../hot" class="qa-nav-main-link">Hot!</a>
+										</li>
+										<li class="qa-nav-main-item qa-nav-main-unanswered">
+											<a href="../../unanswered" class="qa-nav-main-link">Unanswered</a>
+										</li>
+										<li class="qa-nav-main-item qa-nav-main-tag">
+											<a href="../../tags" class="qa-nav-main-link">Tags</a>
+										</li>
+										<li class="qa-nav-main-item qa-nav-main-user">
+											<a href="../../users" class="qa-nav-main-link">Users</a>
+										</li>
+										<li class="qa-nav-main-item qa-nav-main-ask">
+											<a href="../../ask" class="qa-nav-main-link">Ask a Question</a>
+										</li>
+									</ul>
+									<div class="styled-select">
+										<select class=qa-nav-main-responsive>
+											<option class="qa-nav-main-responsive-item" value="../../activity">
+												All Activity
+											</option>
+											<option class="qa-nav-main-responsive-item" value="../../">
+												Q&amp;A
+											</option>
+											<option class="qa-nav-main-responsive-item" value="../../questions">
+												Questions
+											</option>
+											<option class="qa-nav-main-responsive-item" value="../../hot">
+												Hot!
+											</option>
+											<option class="qa-nav-main-responsive-item" value="../../unanswered">
+												Unanswered
+											</option>
+											<option class="qa-nav-main-responsive-item" value="../../tags">
+												Tags
+											</option>
+											<option class="qa-nav-main-responsive-item" value="../../users">
+												Users
+											</option>
+											<option class="qa-nav-main-responsive-item" value="../../ask">
+												Ask a Question
+											</option>
+									</select></div>
+									<div class="qa-nav-main-clear">
+									</div>
+								</div>
+								<div class="qa-sidepanel">
+									<h2><a href="http://qa.geeksforgeeks.org/ask">Ask a Question</a></h2>
+
+&nbsp;
+
+<h2><a href="http://qa.geeksforgeeks.org/ask">Start Coding Today</a></h2>
+
+&nbsp;
+
+
+
+&nbsp;
+  <div id="244571511">
+  	<script type="text/javascript">
+	  try {
+		   window._mNHandle.queue.push(function () {
+		   	window._mNDetails.loadTag("244571511", "300x250", "244571511");
+		  	});
+		  }
+	  catch (error) {}
+	</script>
+  </div>
+
+<h2><a href="http://geeksquiz.com/">GeeksQuiz</a></h2>
+<h2><a href="http://code.geeksforgeeks.org/">GeeksforGeeksIDE</a></h2>
+<h2><a href="http://www.geeksforgeeks.org/data-structures/">Data Structures</a></h2>
+<h2><a href="http://www.geeksforgeeks.org/fundamentals-of-algorithms/">Algorithms</a></h2>
+<h2><a href="http://www.geeksforgeeks.org/about/interview-corner/">Interview Experiences</a></h2>
+
+  <div id="857014257">
+  	<script type="text/javascript">
+	  try {
+		   window._mNHandle.queue.push(function () {
+		   	window._mNDetails.loadTag("857014257", "160x600", "857014257");
+		  	});
+		  }
+	  catch (error) {}
+	</script>
+  </div>
+
+<h2><a href="http://www.geeksforgeeks.org/c/">C Programming</a></h2>
+<h2><a href="http://www.geeksforgeeks.org/c-plus-plus/">C++ Programming</a></h2>
+<h2><a href="http://www.geeksforgeeks.org/java/">Java Programming</a></h2>
+<h2><a href="http://geeksquiz.com/gate-corner-2/">GATE CS</a></h2>
+<h2><a href="http://geeksquiz.com/amazon-books/">Books</a></h2>
+								</div>
+								
+								<div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
+								<div class="qa-main">
+									<h1>
+										<a href="../../6922/google-interview-question-question-google-interview-solution">
+											<span class="entry-title">Google interview Question (This is the a question from recent google interview can i get solution for this in JAVA)</span>
+										</a>
+									</h1>
+									<div class="qa-part-q-view">
+										<div class="qa-q-view  hentry question" id="q6922">
+											<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+												<div class="qa-q-view-stats">
+												</div>
+												<input type="hidden" name="code" value="0-1485694589-f965cf9d684450630a9ffdedaaec3bc3736d3093">
+											</form>
+											<div class="qa-q-view-main">
+												<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+													<div class="qa-q-view-content">
+														<a name="6922"></a><div class="entry-content"><p>You are given a listing of directories and files in a file system. Each directory and file has a name, which is a non-empty<br>
+string consisting of alphanumerical characters. Additionally, the name of each file contains a single dot character; the part<br>
+of the name starting with the dot is called the extension. Directory names do not contain any dots. All the names are case-<br>
+sensitive.<br>
+Each entry is listed on a separate line. Every directory is followed by the listing of its contents indented by one space<br>
+character. The contents of the root directory are not indented.<br>
+Here is a sample listing:<br>
+dir1<br>
+&nbsp;dir11<br>
+&nbsp;dir12<br>
+&nbsp; picture.jpeg<br>
+&nbsp; dir 121<br>
+&nbsp; &nbsp;file1.txt<br>
+dir2<br>
+&nbsp;file2.gif<br>
+We have three files (picture.jpeg, file1.txt and file2.gif) and six directories (dir1, dir11, dir12, dir121, dir2 and the<br>
+root directory). Directory dir12 contains two files (picture.jpeg and file1.txt) and an empty directory (dir121). The root<br>
+directory contains two directories (dir1&nbsp;and dir2).<br>
+The absolute path of a directory is a string containing the names of directories which have to be traversed (from the root<br>
+directory) to reach the directory, separated by slash characters. For example, the absolute path to the directory dir121 is<br>
+dir1/dir12/dir121&quot;. Note that there is no &quot;drive letter&quot;, such as &quot;C: &quot;, and each absolute path starts with a slash. The<br>
+absolute path of a root directory is The image files are the files with extensions .jpeg, .png or .gif (and only these extensions). We are only interested in directories that directly contain image files (that is, without looking in their subdirectories). We want to find the total length<br>
+of the absolute paths to all the directories that directly contain at least one image file. For example, in the file system<br>
+described above there are two directories that directly contain image files: &quot;/dir1/dir12&quot; and &quot;Mia&quot;. Directory &quot;/dir1&quot;<br>
+doesn&#39;t directly contain any image files. The total length of the absolute paths &quot;/dir1/dir12&quot; and &quot;/dir2&quot; is 11 + 5 = 16.<br>
+Write a function:</p>
+
+<p>int solution(char *S);</p>
+
+<p>that, given a string S consisting of N characters which contains the listing of a file system, returns the total of lengths (in<br>
+characters) modulo 1,000,000,007 of the absolute paths to all the directories directly containing at least one image file. For<br>
+example, given the sample listing shown above, the function should return 16, as explained above. If there are no image<br>
+files in the listing, the function should return 0.<br>
+Assume that:<br>
+N is an integer within the range [1..3,000,000];<br>
+string S consists only of alphanumerical characters (a-z and/or A-Z and/or 0-9), spaces, dots (.) and end-<br>
+of-line characters;<br>
+string S is a correct listing of a file system contents.</p>
+
+<p>Complexity:<br>
+expected worst-case time complexity is 0(N);<br>
+expected worst-case space complexity is 0(N) (not counting the storage required for input arguments).</p></div>
+													</div>
+													<div class="qa-q-view-tags">
+														<ul class="qa-q-view-tag-list">
+															<li class="qa-q-view-tag-item"><a href="../../tag/java" rel="tag" class="qa-tag-link">java</a></li>
+														</ul>
+													</div>
+													<span class="qa-q-view-avatar-meta">
+														<span class="qa-q-view-meta">
+															<a href="../../6922/google-interview-question-question-google-interview-solution" class="qa-q-view-what">asked</a>
+															<span class="qa-q-view-when">
+																<span class="qa-q-view-when-data"><span class="published updated"><span class="value-title" title="2016-03-05T00:36:33+0000">Mar 5, 2016</span></span></span>
+															</span>
+															<span class="qa-q-view-who">
+																<span class="qa-q-view-who-pad">by </span>
+																<span class="qa-q-view-who-data"><span class="vcard author"><a href="../../user/Nikhil+Bharadwaj" class="qa-user-link url fn entry-title nickname">Nikhil Bharadwaj</a></span></span>
+															</span>
+														</span>
+													</span>
+													<div class="qa-q-view-buttons">
+														<input name="q_doflag" onclick="qa_show_waiting_after(this, false);" value="flag" title="Flag this question as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+														<input name="q_doanswer" id="q_doanswer" onclick="return qa_toggle_element('anew')" value="answer" title="Answer this question" type="submit" class="qa-form-light-button qa-form-light-button-answer">
+														<input name="q_docomment" onclick="return qa_toggle_element('c6922')" value="comment" title="Add a comment on this question" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+													</div>
+													
+													<div class="qa-q-view-c-list" id="c6922_list">
+														<div class="qa-c-list-item  hentry comment" id="c7728">
+															<div class="qa-c-item-content">
+																<a name="7728"></a><div class="entry-content"><p>would appreciate clean explanation format</p></div>
+															</div>
+															<div class="qa-c-item-footer">
+																<span class="qa-c-item-avatar-meta">
+																	<span class="qa-c-item-avatar">
+																		<a href="../../user/Rakesh+Sharad+Navale" class="qa-avatar-link"><img src="../../?qa=image&amp;qa_blobid=4166581597916882206&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></a>
+																	</span>
+																	<span class="qa-c-item-meta">
+																		<a href="../../6922/google-interview-question-question-google-interview-solution?show=7728#c7728" class="qa-c-item-what">commented</a>
+																		<span class="qa-c-item-when">
+																			<span class="qa-c-item-when-data"><span class="published updated"><span class="value-title" title="2016-05-10T08:44:05+0000">May 10, 2016</span></span></span>
+																		</span>
+																		<span class="qa-c-item-who">
+																			<span class="qa-c-item-who-pad">by </span>
+																			<span class="qa-c-item-who-data"><span class="vcard author"><a href="../../user/Rakesh+Sharad+Navale" class="qa-user-link url fn entry-title nickname">Rakesh Sharad Navale</a></span></span>
+																		</span>
+																	</span>
+																</span>
+																<div class="qa-c-item-buttons">
+																	<input name="c7728_doflag" onclick="return qa_comment_click(7728, 6922, 6922, this);" value="flag" title="Flag this comment as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+																	<input name="q_docomment" onclick="return qa_toggle_element('c6922')" value="reply" title="Reply to this comment" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+																</div>
+															</div>
+															<div class="qa-c-item-clear">
+															</div>
+														</div> <!-- END qa-c-item -->
+														<div class="qa-c-list-item  hentry comment" id="c7967">
+															<div class="qa-c-item-content">
+																<a name="7967"></a><div class="entry-content"><p>Could you please provide a sample input string? There are many things that are not clear from the explanation.</p></div>
+															</div>
+															<div class="qa-c-item-footer">
+																<span class="qa-c-item-avatar-meta">
+																	<span class="qa-c-item-meta">
+																		<a href="../../6922/google-interview-question-question-google-interview-solution?show=7967#c7967" class="qa-c-item-what">commented</a>
+																		<span class="qa-c-item-when">
+																			<span class="qa-c-item-when-data"><span class="published updated"><span class="value-title" title="2016-06-06T18:42:58+0000">Jun 6, 2016</span></span></span>
+																		</span>
+																		<span class="qa-c-item-who">
+																			<span class="qa-c-item-who-pad">by </span>
+																			<span class="qa-c-item-who-data"><span class="vcard author"><a href="../../user/pablin" class="qa-user-link url fn entry-title nickname">pablin</a></span></span>
+																		</span>
+																	</span>
+																</span>
+																<div class="qa-c-item-buttons">
+																	<input name="c7967_doflag" onclick="return qa_comment_click(7967, 6922, 6922, this);" value="flag" title="Flag this comment as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+																	<input name="q_docomment" onclick="return qa_toggle_element('c6922')" value="reply" title="Reply to this comment" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+																</div>
+															</div>
+															<div class="qa-c-item-clear">
+															</div>
+														</div> <!-- END qa-c-item -->
+													</div> <!-- END qa-c-list -->
+													
+													<input type="hidden" name="code" value="0-1485694589-9fd29c9d4041e61ad72e466cc680c0c66626e5c4">
+													<input type="hidden" name="qa_click" value="">
+												</form>
+												<div class="qa-c-form" id="c6922" style="display:none;">
+													<h2>Please <a href="../../login?to=6922%2Fgoogle-interview-question-question-google-interview-solution">log in</a> or <a href="../../register?to=6922%2Fgoogle-interview-question-question-google-interview-solution">register</a> to add a comment.</h2>
+												</div> <!-- END qa-c-form -->
+												
+											</div> <!-- END qa-q-view-main -->
+											<div class="qa-q-view-clear">
+											</div>
+										</div> <!-- END qa-q-view -->
+										
+									</div>
+									<div class="qa-part-a-list">
+										<h2 id="a_list_title">19 Answers</h2>
+										<div class="qa-a-list" id="a_list">
+											
+											<div class="qa-a-list-item  hentry answer" id="a7149">
+												<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+													<div class="qa-voting qa-voting-net" id="voting_7149">
+														<div class="qa-vote-buttons qa-vote-buttons-net">
+															<input title="Click to vote up" name="vote_7149_1_a7149" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+															<input title="Click to vote down" name="vote_7149_-1_a7149" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+														</div>
+														<div class="qa-vote-count qa-vote-count-net">
+															<span class="qa-netvote-count">
+																<span class="qa-netvote-count-data">+2<span class="votes-up"><span class="value-title" title="2"></span></span><span class="votes-down"><span class="value-title" title="0"></span></span></span><span class="qa-netvote-count-pad"> votes</span>
+															</span>
+														</div>
+														<div class="qa-vote-clear">
+														</div>
+													</div>
+													<input type="hidden" name="code" value="0-1485694589-f965cf9d684450630a9ffdedaaec3bc3736d3093">
+												</form>
+												<div class="qa-a-item-main">
+													<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+														<div class="qa-a-selection">
+														</div>
+														<div class="qa-a-item-content">
+															<a name="7149"></a><div class="entry-content"><pre class="brush: cpp;">namespace ConsoleApplication1
+{
+    public class Program
+    {
+        // second question
+        public static int solution2(string s)
+        {
+            int length = 0, fileNum = 0;
+            string allDir = "", lastDir = "";
+            string[] eachdir = s.Split(new string[] { "\n" }, StringSplitOptions.None);
+            int countOfSpace = 0;
+            bool getThisDir = false;
+
+            for (int i = 0; i &lt; eachdir.Length; i++)
+            {
+                if (eachdir[i].Contains(".jpeg") || eachdir[i].Contains(".gif"))
+                {
+                    fileNum++;
+                    countOfSpace = numSpace(eachdir[i]);
+                    getThisDir = false;
+                    for (int j = i-1; j &gt;= 0; j--)
+                    {
+                        if (numSpace(eachdir[j]) != numSpace(lastDir))
+                        {
+                            getThisDir = false;
+                        }
+                        if (numSpace(eachdir[j]) &gt;= countOfSpace)
+                        {
+                            continue;
+                        }
+                        if (countOfSpace == 0)
+                        {
+                            break;
+                        }
+
+                        if (eachdir[j].Contains(getSpace(countOfSpace - 1)) &amp;&amp; getThisDir == false &amp;&amp; !eachdir[j].Contains("."))
+                        {
+                            if (getSpace(countOfSpace - 1) == "")
+                            {
+                                allDir += eachdir[j] + "\\";
+                            }
+                            else
+                            {
+                                allDir += eachdir[j].Replace(getSpace(countOfSpace - 1), "") + "\\";
+                            }
+                            countOfSpace -= 1;
+                            getThisDir = true;
+                            lastDir = eachdir[j];
+                        }
+                    }
+                }
+            }
+
+            foreach (char c in allDir)
+            {
+                if (c == '\\')
+                {
+                    continue;
+                }
+
+                length++;
+            }
+
+            return length - fileNum;
+        }
+
+        public static string getSpace(int num)
+        {
+            string s = "";
+            if (num &lt; 0)
+            {
+                return "";
+            }
+            for (int i = 1; i &lt;= num; i++)
+            {
+                s += " ";
+            }
+
+            return s;
+        }
+
+        public static int numSpace(string s)
+        {
+            int count = 0;
+            string space = " ";
+            for (int i = 0; i &lt; s.Length; i++)
+            {
+                if (s.Contains(space))
+                {
+                    count++;
+                }
+                space += " ";
+            }
+
+            return count;
+        }
+
+
+        public static void Main(string[] args)
+        {
+            string listDir = "dir1\n dir11\n dir12\n  picture.jpeg\n  dir121\n   file1.txt\ndir2\n file2.gif";
+           
+            // Keep the console window open in debug mode.
+            Console.WriteLine(solution2(listDir));
+            Console.ReadKey();
+        }
+    }
+}</pre>
+
+<p>C# actually. Not a good way though</p></div>
+														</div>
+														<span class="qa-a-item-avatar-meta">
+															<span class="qa-a-item-meta">
+																<a href="../../6922/google-interview-question-question-google-interview-solution?show=7149#a7149" class="qa-a-item-what">answered</a>
+																<span class="qa-a-item-when">
+																	<span class="qa-a-item-when-data"><span class="published updated"><span class="value-title" title="2016-03-19T16:53:09+0000">Mar 19, 2016</span></span></span>
+																</span>
+																<span class="qa-a-item-who">
+																	<span class="qa-a-item-who-pad">by </span>
+																	<span class="qa-a-item-who-data">anonymous</span>
+																</span>
+															</span>
+														</span>
+														<div class="qa-a-item-buttons">
+															<input name="a7149_doflag" onclick="return qa_answer_click(7149, 6922, this);" value="flag" title="Flag this answer as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+															<input name="a7149_dofollow" value="ask related question" title="Ask a new question relating to this answer" type="submit" class="qa-form-light-button qa-form-light-button-follow">
+															<input name="a7149_docomment" onclick="return qa_toggle_element('c7149')" value="comment" title="Add a comment on this answer" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+														</div>
+														
+														<div class="qa-a-item-c-list" style="display:none;" id="c7149_list">
+														</div> <!-- END qa-c-list -->
+														
+														<input type="hidden" name="code" value="0-1485694589-c4d8681ecd385a4aefb57803a22444683fd5c4bc">
+														<input type="hidden" name="qa_click" value="">
+													</form>
+													<div class="qa-c-form" id="c7149" style="display:none;">
+														<h2>Please <a href="../../login?to=6922%2Fgoogle-interview-question-question-google-interview-solution">log in</a> or <a href="../../register?to=6922%2Fgoogle-interview-question-question-google-interview-solution">register</a> to add a comment.</h2>
+													</div> <!-- END qa-c-form -->
+													
+												</div> <!-- END qa-a-item-main -->
+												<div class="qa-a-item-clear">
+												</div>
+											</div> <!-- END qa-a-list-item -->
+											
+											<div class="qa-a-list-item  hentry answer" id="a7969">
+												<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+													<div class="qa-voting qa-voting-net" id="voting_7969">
+														<div class="qa-vote-buttons qa-vote-buttons-net">
+															<input title="Click to vote up" name="vote_7969_1_a7969" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+															<input title="Click to vote down" name="vote_7969_-1_a7969" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+														</div>
+														<div class="qa-vote-count qa-vote-count-net">
+															<span class="qa-netvote-count">
+																<span class="qa-netvote-count-data">+2<span class="votes-up"><span class="value-title" title="6"></span></span><span class="votes-down"><span class="value-title" title="4"></span></span></span><span class="qa-netvote-count-pad"> votes</span>
+															</span>
+														</div>
+														<div class="qa-vote-clear">
+														</div>
+													</div>
+													<input type="hidden" name="code" value="0-1485694589-f965cf9d684450630a9ffdedaaec3bc3736d3093">
+												</form>
+												<div class="qa-a-item-main">
+													<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+														<div class="qa-a-selection">
+														</div>
+														<div class="qa-a-item-content">
+															<a name="7969"></a><div class="entry-content"><p>After analyzing the requirement, here is my solution:</p>
+
+<p>public static int printSum(String s){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String[] arr=s.split(&quot;\n&quot;);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int sum=0, spaces=0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for(int i=arr.length-1;i&gt;=0;i--){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String line=arr[i];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(line.contains(&quot;.gif&quot;) | line.contains(&quot;.jpeg&quot;) ){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; spaces=line.length()-line.trim().length();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(spaces&gt; line.length()-line.trim().length() ){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sum+=line.trim().length()+1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; spaces--;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sum++;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return sum;<br>
+}</p></div>
+														</div>
+														<span class="qa-a-item-avatar-meta">
+															<span class="qa-a-item-meta">
+																<a href="../../6922/google-interview-question-question-google-interview-solution?show=7969#a7969" class="qa-a-item-what">answered</a>
+																<span class="qa-a-item-when">
+																	<span class="qa-a-item-when-data"><span class="published updated"><span class="value-title" title="2016-06-06T23:27:08+0000">Jun 6, 2016</span></span></span>
+																</span>
+																<span class="qa-a-item-who">
+																	<span class="qa-a-item-who-pad">by </span>
+																	<span class="qa-a-item-who-data"><span class="vcard author"><a href="../../user/Shishir.n" class="qa-user-link url fn entry-title nickname">Shishir.n</a></span></span>
+																</span>
+																<span class="qa-a-item-flags">
+																	<span class="qa-a-item-flags-data">2</span><span class="qa-a-item-flags-pad"> flags</span>
+																</span>
+															</span>
+														</span>
+														<div class="qa-a-item-buttons">
+															<input name="a7969_doflag" onclick="return qa_answer_click(7969, 6922, this);" value="flag" title="Flag this answer as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+															<input name="a7969_dofollow" value="ask related question" title="Ask a new question relating to this answer" type="submit" class="qa-form-light-button qa-form-light-button-follow">
+															<input name="a7969_docomment" onclick="return qa_toggle_element('c7969')" value="comment" title="Add a comment on this answer" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+														</div>
+														
+														<div class="qa-a-item-c-list" id="c7969_list">
+															<div class="qa-c-list-item  hentry comment" id="c7998">
+																<div class="qa-c-item-content">
+																	<a name="7998"></a><div class="entry-content"><p>Good one man! I like the solution.&nbsp;</p></div>
+																</div>
+																<div class="qa-c-item-footer">
+																	<span class="qa-c-item-avatar-meta">
+																		<span class="qa-c-item-meta">
+																			<a href="../../6922/google-interview-question-question-google-interview-solution?show=7998#c7998" class="qa-c-item-what">commented</a>
+																			<span class="qa-c-item-when">
+																				<span class="qa-c-item-when-data"><span class="published updated"><span class="value-title" title="2016-06-08T15:10:02+0000">Jun 8, 2016</span></span></span>
+																			</span>
+																			<span class="qa-c-item-who">
+																				<span class="qa-c-item-who-pad">by </span>
+																				<span class="qa-c-item-who-data"><span class="vcard author"><a href="../../user/Roshan27" class="qa-user-link url fn entry-title nickname">Roshan27</a></span></span>
+																			</span>
+																		</span>
+																	</span>
+																	<div class="qa-c-item-buttons">
+																		<input name="c7998_doflag" onclick="return qa_comment_click(7998, 6922, 7969, this);" value="flag" title="Flag this comment as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+																		<input name="a7969_docomment" onclick="return qa_toggle_element('c7969')" value="reply" title="Reply to this comment" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+																	</div>
+																</div>
+																<div class="qa-c-item-clear">
+																</div>
+															</div> <!-- END qa-c-item -->
+															<div class="qa-c-list-item  hentry comment" id="c7999">
+																<div class="qa-c-item-content">
+																	<a name="7999"></a><div class="entry-content"><p>Can you explain why used sum++ in last line?&nbsp;</p></div>
+																</div>
+																<div class="qa-c-item-footer">
+																	<span class="qa-c-item-avatar-meta">
+																		<span class="qa-c-item-meta">
+																			<a href="../../6922/google-interview-question-question-google-interview-solution?show=7999#c7999" class="qa-c-item-what">commented</a>
+																			<span class="qa-c-item-when">
+																				<span class="qa-c-item-when-data"><span class="published updated"><span class="value-title" title="2016-06-08T17:31:00+0000">Jun 8, 2016</span></span></span>
+																			</span>
+																			<span class="qa-c-item-who">
+																				<span class="qa-c-item-who-pad">by </span>
+																				<span class="qa-c-item-who-data"><span class="vcard author"><a href="../../user/Vamsi34" class="qa-user-link url fn entry-title nickname">Vamsi34</a></span></span>
+																			</span>
+																		</span>
+																	</span>
+																	<div class="qa-c-item-buttons">
+																		<input name="c7999_doflag" onclick="return qa_comment_click(7999, 6922, 7969, this);" value="flag" title="Flag this comment as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+																		<input name="a7969_docomment" onclick="return qa_toggle_element('c7969')" value="reply" title="Reply to this comment" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+																	</div>
+																</div>
+																<div class="qa-c-item-clear">
+																</div>
+															</div> <!-- END qa-c-item -->
+															<div class="qa-c-list-item  hentry comment" id="c8043">
+																<div class="qa-c-item-content">
+																	<a name="8043"></a><div class="entry-content"><p>Lol. You copied my solution word for word. Not cool man! not cool!</p></div>
+																</div>
+																<div class="qa-c-item-footer">
+																	<span class="qa-c-item-avatar-meta">
+																		<span class="qa-c-item-meta">
+																			<a href="../../6922/google-interview-question-question-google-interview-solution?show=8043#c8043" class="qa-c-item-what">commented</a>
+																			<span class="qa-c-item-when">
+																				<span class="qa-c-item-when-data"><span class="published updated"><span class="value-title" title="2016-06-13T03:41:24+0000">Jun 13, 2016</span></span></span>
+																			</span>
+																			<span class="qa-c-item-who">
+																				<span class="qa-c-item-who-pad">by </span>
+																				<span class="qa-c-item-who-data"><span class="vcard author"><a href="../../user/dark_knight" class="qa-user-link url fn entry-title nickname">dark_knight</a></span></span>
+																			</span>
+																			<span class="qa-c-item-flags">
+																				<span class="qa-c-item-flags-data">1</span><span class="qa-c-item-flags-pad"> flag</span>
+																			</span>
+																		</span>
+																	</span>
+																	<div class="qa-c-item-buttons">
+																		<input name="c8043_doflag" onclick="return qa_comment_click(8043, 6922, 7969, this);" value="flag" title="Flag this comment as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+																		<input name="a7969_docomment" onclick="return qa_toggle_element('c7969')" value="reply" title="Reply to this comment" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+																	</div>
+																</div>
+																<div class="qa-c-item-clear">
+																</div>
+															</div> <!-- END qa-c-item -->
+														</div> <!-- END qa-c-list -->
+														
+														<input type="hidden" name="code" value="0-1485694589-f0c238d841f8db5efd546076a74c1b13c30b86b5">
+														<input type="hidden" name="qa_click" value="">
+													</form>
+													<div class="qa-c-form" id="c7969" style="display:none;">
+														<h2>Please <a href="../../login?to=6922%2Fgoogle-interview-question-question-google-interview-solution">log in</a> or <a href="../../register?to=6922%2Fgoogle-interview-question-question-google-interview-solution">register</a> to add a comment.</h2>
+													</div> <!-- END qa-c-form -->
+													
+												</div> <!-- END qa-a-item-main -->
+												<div class="qa-a-item-clear">
+												</div>
+											</div> <!-- END qa-a-list-item -->
+											
+											<div class="qa-a-list-item  hentry answer" id="a7234">
+												<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+													<div class="qa-voting qa-voting-net" id="voting_7234">
+														<div class="qa-vote-buttons qa-vote-buttons-net">
+															<input title="Click to vote up" name="vote_7234_1_a7234" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+															<input title="Click to vote down" name="vote_7234_-1_a7234" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+														</div>
+														<div class="qa-vote-count qa-vote-count-net">
+															<span class="qa-netvote-count">
+																<span class="qa-netvote-count-data">+1<span class="votes-up"><span class="value-title" title="1"></span></span><span class="votes-down"><span class="value-title" title="0"></span></span></span><span class="qa-netvote-count-pad"> vote</span>
+															</span>
+														</div>
+														<div class="qa-vote-clear">
+														</div>
+													</div>
+													<input type="hidden" name="code" value="0-1485694589-f965cf9d684450630a9ffdedaaec3bc3736d3093">
+												</form>
+												<div class="qa-a-item-main">
+													<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+														<div class="qa-a-selection">
+														</div>
+														<div class="qa-a-item-content">
+															<a name="7234"></a><div class="entry-content"><p>This is my solution in JAVA. I didn&#39;t ample test it though.</p>
+
+<pre class="brush: java;">public int solution (String S) {
+	String[] tokens = S.split("\n");
+	int length_sum = 0;
+	for(int i = tokens.length - 1, spaces = 0; i &gt;= 0; i--) {
+		if(tokens[i].contains("jpeg") || tokens[i].contains("gif") || tokens[i].contains("png"))
+			spaces = tokens[i].length() - tokens[i].trim().length();
+		if(!tokens[i].contains(".") &amp;&amp; (tokens[i].length() - tokens[i].trim().length() + 1) == spaces) {
+			length_sum += tokens[i].trim().length() + 1;
+			spaces--;
+		}
+	}
+	return length_sum;
+}</pre>
+
+<p>&nbsp;</p></div>
+														</div>
+														<span class="qa-a-item-avatar-meta">
+															<span class="qa-a-item-meta">
+																<a href="../../6922/google-interview-question-question-google-interview-solution?show=7234#a7234" class="qa-a-item-what">answered</a>
+																<span class="qa-a-item-when">
+																	<span class="qa-a-item-when-data"><span class="published"><span class="value-title" title="2016-03-28T07:24:32+0000">Mar 28, 2016</span></span></span>
+																</span>
+																<span class="qa-a-item-who">
+																	<span class="qa-a-item-who-pad">by </span>
+																	<span class="qa-a-item-who-data">anonymous</span>
+																</span>
+																<br>
+																<span class="qa-a-item-what">edited</span>
+																<span class="qa-a-item-when">
+																	<span class="qa-a-item-when-data"><span class="updated"><span class="value-title" title="2016-03-28T20:11:11+0000">Mar 28, 2016</span></span></span>
+																</span>
+															</span>
+														</span>
+														<div class="qa-a-item-buttons">
+															<input name="a7234_doflag" onclick="return qa_answer_click(7234, 6922, this);" value="flag" title="Flag this answer as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+															<input name="a7234_dofollow" value="ask related question" title="Ask a new question relating to this answer" type="submit" class="qa-form-light-button qa-form-light-button-follow">
+															<input name="a7234_docomment" onclick="return qa_toggle_element('c7234')" value="comment" title="Add a comment on this answer" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+														</div>
+														
+														<div class="qa-a-item-c-list" style="display:none;" id="c7234_list">
+														</div> <!-- END qa-c-list -->
+														
+														<input type="hidden" name="code" value="0-1485694589-edb8cd774724ed8cc27ed9e794d0cf7c9e1eb603">
+														<input type="hidden" name="qa_click" value="">
+													</form>
+													<div class="qa-c-form" id="c7234" style="display:none;">
+														<h2>Please <a href="../../login?to=6922%2Fgoogle-interview-question-question-google-interview-solution">log in</a> or <a href="../../register?to=6922%2Fgoogle-interview-question-question-google-interview-solution">register</a> to add a comment.</h2>
+													</div> <!-- END qa-c-form -->
+													
+												</div> <!-- END qa-a-item-main -->
+												<div class="qa-a-item-clear">
+												</div>
+											</div> <!-- END qa-a-list-item -->
+											
+											<div class="qa-a-list-item  hentry answer" id="a7075">
+												<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+													<div class="qa-voting qa-voting-net" id="voting_7075">
+														<div class="qa-vote-buttons qa-vote-buttons-net">
+															<input title="Click to vote up" name="vote_7075_1_a7075" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+															<input title="Click to vote down" name="vote_7075_-1_a7075" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+														</div>
+														<div class="qa-vote-count qa-vote-count-net">
+															<span class="qa-netvote-count">
+																<span class="qa-netvote-count-data">0<span class="votes-up"><span class="value-title" title="0"></span></span><span class="votes-down"><span class="value-title" title="0"></span></span></span><span class="qa-netvote-count-pad"> votes</span>
+															</span>
+														</div>
+														<div class="qa-vote-clear">
+														</div>
+													</div>
+													<input type="hidden" name="code" value="0-1485694589-f965cf9d684450630a9ffdedaaec3bc3736d3093">
+												</form>
+												<div class="qa-a-item-main">
+													<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+														<div class="qa-a-selection">
+														</div>
+														<div class="qa-a-item-content">
+															<a name="7075"></a><div class="entry-content"><p>Here is the solution in c#. It solves the crux of the problem. But does not take inputs in the afore mentioned format. <a rel="nofollow" href="http://ideone.com/uA0Sbs" target="_blank">http://ideone.com/uA0Sbs</a>&nbsp;</p></div>
+														</div>
+														<span class="qa-a-item-avatar-meta">
+															<span class="qa-a-item-meta">
+																<a href="../../6922/google-interview-question-question-google-interview-solution?show=7075#a7075" class="qa-a-item-what">answered</a>
+																<span class="qa-a-item-when">
+																	<span class="qa-a-item-when-data"><span class="published updated"><span class="value-title" title="2016-03-12T16:24:32+0000">Mar 12, 2016</span></span></span>
+																</span>
+																<span class="qa-a-item-who">
+																	<span class="qa-a-item-who-pad">by </span>
+																	<span class="qa-a-item-who-data"><span class="vcard author"><a href="../../user/cp" class="qa-user-link url fn entry-title nickname">cp</a></span></span>
+																</span>
+															</span>
+														</span>
+														<div class="qa-a-item-buttons">
+															<input name="a7075_doflag" onclick="return qa_answer_click(7075, 6922, this);" value="flag" title="Flag this answer as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+															<input name="a7075_dofollow" value="ask related question" title="Ask a new question relating to this answer" type="submit" class="qa-form-light-button qa-form-light-button-follow">
+															<input name="a7075_docomment" onclick="return qa_toggle_element('c7075')" value="comment" title="Add a comment on this answer" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+														</div>
+														
+														<div class="qa-a-item-c-list" style="display:none;" id="c7075_list">
+														</div> <!-- END qa-c-list -->
+														
+														<input type="hidden" name="code" value="0-1485694589-1c147ff6621c47f8963b8e1e457d155444eb7372">
+														<input type="hidden" name="qa_click" value="">
+													</form>
+													<div class="qa-c-form" id="c7075" style="display:none;">
+														<h2>Please <a href="../../login?to=6922%2Fgoogle-interview-question-question-google-interview-solution">log in</a> or <a href="../../register?to=6922%2Fgoogle-interview-question-question-google-interview-solution">register</a> to add a comment.</h2>
+													</div> <!-- END qa-c-form -->
+													
+												</div> <!-- END qa-a-item-main -->
+												<div class="qa-a-item-clear">
+												</div>
+											</div> <!-- END qa-a-list-item -->
+											
+											<div class="qa-a-list-item  hentry answer" id="a7689">
+												<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+													<div class="qa-voting qa-voting-net" id="voting_7689">
+														<div class="qa-vote-buttons qa-vote-buttons-net">
+															<input title="Click to vote up" name="vote_7689_1_a7689" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+															<input title="Click to vote down" name="vote_7689_-1_a7689" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+														</div>
+														<div class="qa-vote-count qa-vote-count-net">
+															<span class="qa-netvote-count">
+																<span class="qa-netvote-count-data">0<span class="votes-up"><span class="value-title" title="0"></span></span><span class="votes-down"><span class="value-title" title="0"></span></span></span><span class="qa-netvote-count-pad"> votes</span>
+															</span>
+														</div>
+														<div class="qa-vote-clear">
+														</div>
+													</div>
+													<input type="hidden" name="code" value="0-1485694589-f965cf9d684450630a9ffdedaaec3bc3736d3093">
+												</form>
+												<div class="qa-a-item-main">
+													<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+														<div class="qa-a-selection">
+														</div>
+														<div class="qa-a-item-content">
+															<a name="7689"></a><div class="entry-content"><p>Last login: Sat May&nbsp; 7 17:42:32 on ttys001</p>
+
+<p>Yus-MacBook-Pro:programming Claude$ ls&nbsp;</p>
+
+<p>a.out&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;checksize.c&nbsp;&nbsp; &nbsp;findMissing.c&nbsp;&nbsp; &nbsp;linkListAdder.c&nbsp;&nbsp; &nbsp;practice.c&nbsp;&nbsp; &nbsp;test.c&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;testtest.c</p>
+
+<p>atoi.c&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;findMax.c&nbsp;&nbsp; &nbsp;hashfunction.c&nbsp;&nbsp; &nbsp;practice&nbsp;&nbsp; &nbsp;stack.c&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;test2.c&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;uniquestring.c</p>
+
+<p>Yus-MacBook-Pro:programming Claude$ vim&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; struct strBucket* next;</p>
+
+<p>}strBucket;&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>strBucket* splitStr(char* str){</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; if (str == NULL) {</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;Invalid path\n&quot;);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return NULL;&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; char* temp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; strBucket *head, *node;&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; node = NULL;&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; temp = strtok(str, &quot;\n&quot;);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; while (temp != NULL){</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; head = (strBucket*)malloc(sizeof(strBucket)*1);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; head-&gt;str = temp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; head-&gt;next = node;&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; node = head; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; temp = strtok(NULL, &quot;\n&quot;);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; return head;&nbsp;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>int countSpace(char* str){</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; int count = 0;&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; while(str[count] == &#39; &#39;){</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; count++;&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; } &nbsp; &nbsp; &nbsp; &nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; return count;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>int calTotalLen(char* str){</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; strBucket* head = splitStr(str);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; int space = 0;&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; int totLen = 0;&nbsp; &nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; while (head !=NULL){</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(strstr(head-&gt;str,&quot;jpeg&quot;)!=NULL||strstr(head-&gt;str,&quot;png&quot;)!=NULL||strstr(head-&gt;str,&quot;gif&quot;)!=NULL){</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; space = countSpace(head-&gt;str);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if(strchr(head-&gt;str,&#39;.&#39;)==NULL &amp;&amp; (countSpace(head-&gt;str)+1)== space){</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; totLen = totLen + strlen(head-&gt;str) - space + 2;&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; space--;&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; head = head-&gt;next;&nbsp;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; return totLen;&nbsp;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p>
+
+<p>int main(){</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; char c[80] = &quot;dir1\n dir11\n dir12\n&nbsp; picture.jpeg\n&nbsp; dir121\n &nbsp; file1.txt\ndir2\n file2.gif\n&quot;;</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; int len = calTotalLen(c);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;The total length is %d\n&quot;,len);</p>
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp; return 0;&nbsp;</p>
+
+<p>}</p>
+
+<p>&nbsp;</p></div>
+														</div>
+														<span class="qa-a-item-avatar-meta">
+															<span class="qa-a-item-meta">
+																<a href="../../6922/google-interview-question-question-google-interview-solution?show=7689#a7689" class="qa-a-item-what">answered</a>
+																<span class="qa-a-item-when">
+																	<span class="qa-a-item-when-data"><span class="published updated"><span class="value-title" title="2016-05-08T03:42:14+0000">May 8, 2016</span></span></span>
+																</span>
+																<span class="qa-a-item-who">
+																	<span class="qa-a-item-who-pad">by </span>
+																	<span class="qa-a-item-who-data">Cloudyxz</span>
+																</span>
+															</span>
+														</span>
+														<div class="qa-a-item-buttons">
+															<input name="a7689_doflag" onclick="return qa_answer_click(7689, 6922, this);" value="flag" title="Flag this answer as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+															<input name="a7689_dofollow" value="ask related question" title="Ask a new question relating to this answer" type="submit" class="qa-form-light-button qa-form-light-button-follow">
+															<input name="a7689_docomment" onclick="return qa_toggle_element('c7689')" value="comment" title="Add a comment on this answer" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+														</div>
+														
+														<div class="qa-a-item-c-list" style="display:none;" id="c7689_list">
+														</div> <!-- END qa-c-list -->
+														
+														<input type="hidden" name="code" value="0-1485694589-b755eef9c5413ce27f4675e0d5307b84b57aaf9d">
+														<input type="hidden" name="qa_click" value="">
+													</form>
+													<div class="qa-c-form" id="c7689" style="display:none;">
+														<h2>Please <a href="../../login?to=6922%2Fgoogle-interview-question-question-google-interview-solution">log in</a> or <a href="../../register?to=6922%2Fgoogle-interview-question-question-google-interview-solution">register</a> to add a comment.</h2>
+													</div> <!-- END qa-c-form -->
+													
+												</div> <!-- END qa-a-item-main -->
+												<div class="qa-a-item-clear">
+												</div>
+											</div> <!-- END qa-a-list-item -->
+											
+											<div class="qa-a-list-item  hentry answer" id="a7942">
+												<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+													<div class="qa-voting qa-voting-net" id="voting_7942">
+														<div class="qa-vote-buttons qa-vote-buttons-net">
+															<input title="Click to vote up" name="vote_7942_1_a7942" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+															<input title="Click to vote down" name="vote_7942_-1_a7942" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+														</div>
+														<div class="qa-vote-count qa-vote-count-net">
+															<span class="qa-netvote-count">
+																<span class="qa-netvote-count-data">0<span class="votes-up"><span class="value-title" title="5"></span></span><span class="votes-down"><span class="value-title" title="5"></span></span></span><span class="qa-netvote-count-pad"> votes</span>
+															</span>
+														</div>
+														<div class="qa-vote-clear">
+														</div>
+													</div>
+													<input type="hidden" name="code" value="0-1485694589-f965cf9d684450630a9ffdedaaec3bc3736d3093">
+												</form>
+												<div class="qa-a-item-main">
+													<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+														<div class="qa-a-selection">
+														</div>
+														<div class="qa-a-item-content">
+															<a name="7942"></a><div class="entry-content"><p>Lol for guy who wrote 100 lines of code! You will not pass an interview if you solve this problem with more than 15 lines of code.</p>
+
+<p><strong>Here is an elegant solution in Java:</strong></p>
+
+<pre class="brush: java;"> public static int printSum(String s){
+        String[] arr=s.split("\n");
+        int sum=0, spaces=0;
+        for(int i=arr.length-1;i&gt;=0;i--){
+            String line=arr[i];
+            if(line.contains(".gif") | line.contains(".jpeg") ){
+                spaces=line.length()-line.trim().length();
+            }
+            if(spaces&gt; line.length()-line.trim().length() ){
+                sum+=line.trim().length()+1;
+                spaces--;
+            }
+        }
+        return sum;
+ }</pre>
+
+<p>&nbsp;</p></div>
+														</div>
+														<span class="qa-a-item-avatar-meta">
+															<span class="qa-a-item-meta">
+																<a href="../../6922/google-interview-question-question-google-interview-solution?show=7942#a7942" class="qa-a-item-what">answered</a>
+																<span class="qa-a-item-when">
+																	<span class="qa-a-item-when-data"><span class="published updated"><span class="value-title" title="2016-06-03T22:37:53+0000">Jun 3, 2016</span></span></span>
+																</span>
+																<span class="qa-a-item-who">
+																	<span class="qa-a-item-who-pad">by </span>
+																	<span class="qa-a-item-who-data"><span class="vcard author"><a href="../../user/dark_knight" class="qa-user-link url fn entry-title nickname">dark_knight</a></span></span>
+																</span>
+															</span>
+														</span>
+														<div class="qa-a-item-buttons">
+															<input name="a7942_doflag" onclick="return qa_answer_click(7942, 6922, this);" value="flag" title="Flag this answer as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+															<input name="a7942_dofollow" value="ask related question" title="Ask a new question relating to this answer" type="submit" class="qa-form-light-button qa-form-light-button-follow">
+															<input name="a7942_docomment" onclick="return qa_toggle_element('c7942')" value="comment" title="Add a comment on this answer" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+														</div>
+														
+														<div class="qa-a-item-c-list" id="c7942_list">
+															<div class="qa-c-list-item " >
+																<a href="?state=showcomments-7942&amp;show=7942#a7942" onclick="return qa_show_comments(6922, 7942, this);" class="qa-c-item-expand">Show 15 previous comments</a>
+																<div class="qa-c-item-footer">
+																	<span class="qa-c-item-avatar-meta">
+																		<span class="qa-c-item-meta">
+																		</span>
+																	</span>
+																</div>
+																<div class="qa-c-item-clear">
+																</div>
+															</div> <!-- END qa-c-item -->
+															<div class="qa-c-list-item  hentry comment" id="c8157">
+																<div class="qa-c-item-content">
+																	<a name="8157"></a><div class="entry-content"><p>My answers don&#39;t represent Google in any way, shape or form. As far as your stock goes, do as you please. You won&#39;t be missed.&nbsp;</p>
+
+<p>Google hiring decisions are made purely on your technical problem solving skills not on your communication or people&#39;s skills. If you need a job where you are judged solely on your communication skills, then Google is not a place for you, nor is Apple nor Amazon, nor Facebook, nor Palantir, nor Microsoft.</p></div>
+																</div>
+																<div class="qa-c-item-footer">
+																	<span class="qa-c-item-avatar-meta">
+																		<span class="qa-c-item-meta">
+																			<a href="../../6922/google-interview-question-question-google-interview-solution?show=8157#c8157" class="qa-c-item-what">commented</a>
+																			<span class="qa-c-item-when">
+																				<span class="qa-c-item-when-data"><span class="published updated"><span class="value-title" title="2016-06-25T22:59:55+0000">Jun 25, 2016</span></span></span>
+																			</span>
+																			<span class="qa-c-item-who">
+																				<span class="qa-c-item-who-pad">by </span>
+																				<span class="qa-c-item-who-data"><span class="vcard author"><a href="../../user/dark_knight" class="qa-user-link url fn entry-title nickname">dark_knight</a></span></span>
+																			</span>
+																		</span>
+																	</span>
+																	<div class="qa-c-item-buttons">
+																		<input name="c8157_doflag" onclick="return qa_comment_click(8157, 6922, 7942, this);" value="flag" title="Flag this comment as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+																		<input name="a7942_docomment" onclick="return qa_toggle_element('c7942')" value="reply" title="Reply to this comment" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+																	</div>
+																</div>
+																<div class="qa-c-item-clear">
+																</div>
+															</div> <!-- END qa-c-item -->
+															<div class="qa-c-list-item  hentry comment" id="c9013">
+																<div class="qa-c-item-content">
+																	<a name="9013"></a><div class="entry-content"><p>Truly the simplest solution! At first,&nbsp;thought that it was complex and&nbsp;required the use of regular expressions.</p></div>
+																</div>
+																<div class="qa-c-item-footer">
+																	<span class="qa-c-item-avatar-meta">
+																		<span class="qa-c-item-meta">
+																			<a href="../../6922/google-interview-question-question-google-interview-solution?show=9013#c9013" class="qa-c-item-what">commented</a>
+																			<span class="qa-c-item-when">
+																				<span class="qa-c-item-when-data"><span class="published updated"><span class="value-title" title="2016-08-20T19:58:40+0000">Aug 20, 2016</span></span></span>
+																			</span>
+																			<span class="qa-c-item-who">
+																				<span class="qa-c-item-who-pad">by </span>
+																				<span class="qa-c-item-who-data"><span class="vcard author"><a href="../../user/ganga" class="qa-user-link url fn entry-title nickname">ganga</a></span></span>
+																			</span>
+																		</span>
+																	</span>
+																	<div class="qa-c-item-buttons">
+																		<input name="c9013_doflag" onclick="return qa_comment_click(9013, 6922, 7942, this);" value="flag" title="Flag this comment as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+																		<input name="a7942_docomment" onclick="return qa_toggle_element('c7942')" value="reply" title="Reply to this comment" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+																	</div>
+																</div>
+																<div class="qa-c-item-clear">
+																</div>
+															</div> <!-- END qa-c-item -->
+															<div class="qa-c-list-item  hentry comment" id="c9258">
+																<div class="qa-c-item-content">
+																	<a name="9258"></a><div class="entry-content"><p>what is two image on the same dir(with the same indent). this can only calculate one.</p></div>
+																</div>
+																<div class="qa-c-item-footer">
+																	<span class="qa-c-item-avatar-meta">
+																		<span class="qa-c-item-meta">
+																			<a href="../../6922/google-interview-question-question-google-interview-solution?show=9258#c9258" class="qa-c-item-what">commented</a>
+																			<span class="qa-c-item-when">
+																				<span class="qa-c-item-when-data"><span class="published updated"><span class="value-title" title="2016-09-01T17:28:05+0000">Sep 1, 2016</span></span></span>
+																			</span>
+																			<span class="qa-c-item-who">
+																				<span class="qa-c-item-who-pad">by </span>
+																				<span class="qa-c-item-who-data"><span class="vcard author"><a href="../../user/eva1991" class="qa-user-link url fn entry-title nickname">eva1991</a></span></span>
+																			</span>
+																		</span>
+																	</span>
+																	<div class="qa-c-item-buttons">
+																		<input name="c9258_doflag" onclick="return qa_comment_click(9258, 6922, 7942, this);" value="flag" title="Flag this comment as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+																		<input name="a7942_docomment" onclick="return qa_toggle_element('c7942')" value="reply" title="Reply to this comment" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+																	</div>
+																</div>
+																<div class="qa-c-item-clear">
+																</div>
+															</div> <!-- END qa-c-item -->
+															<div class="qa-c-list-item  hentry comment" id="c9589">
+																<div class="qa-c-item-content">
+																	<a name="9589"></a><div class="entry-content"><p>Seems second if where spaced are added to sum will never be true? &nbsp;</p>
+
+<p>dir1<br>
+&nbsp;dir11<br>
+&nbsp;dir12<br>
+&nbsp; picture.jpeg &nbsp;// &nbsp;14 &nbsp;- 12&nbsp;= 2 &nbsp; &nbsp; &nbsp;( since 2 &lt; 12, it fails second if check)<br>
+&nbsp; dir 121<br>
+&nbsp; &nbsp;file1.txt<br>
+dir2<br>
+&nbsp;file2.gif &nbsp; &nbsp;// 10 - 9 = 1&nbsp;&nbsp; &nbsp; ( &nbsp;this too fails &nbsp;second if check&nbsp;) &nbsp; &nbsp;so sum will be returned as &nbsp;0 &nbsp;or am I missing something?</p></div>
+																</div>
+																<div class="qa-c-item-footer">
+																	<span class="qa-c-item-avatar-meta">
+																		<span class="qa-c-item-avatar">
+																			<a href="../../user/Emon+Mishra" class="qa-avatar-link"><img src="../../?qa=image&amp;qa_blobid=7964314840745980248&amp;qa_size=20" width="20" height="20" class="qa-avatar-image" alt=""></a>
+																		</span>
+																		<span class="qa-c-item-meta">
+																			<a href="../../6922/google-interview-question-question-google-interview-solution?show=9589#c9589" class="qa-c-item-what">commented</a>
+																			<span class="qa-c-item-when">
+																				<span class="qa-c-item-when-data"><span class="published updated"><span class="value-title" title="2016-09-21T04:30:35+0000">Sep 21, 2016</span></span></span>
+																			</span>
+																			<span class="qa-c-item-who">
+																				<span class="qa-c-item-who-pad">by </span>
+																				<span class="qa-c-item-who-data"><span class="vcard author"><a href="../../user/Emon+Mishra" class="qa-user-link url fn entry-title nickname">Emon Mishra</a></span></span>
+																			</span>
+																		</span>
+																	</span>
+																	<div class="qa-c-item-buttons">
+																		<input name="c9589_doflag" onclick="return qa_comment_click(9589, 6922, 7942, this);" value="flag" title="Flag this comment as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+																		<input name="a7942_docomment" onclick="return qa_toggle_element('c7942')" value="reply" title="Reply to this comment" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+																	</div>
+																</div>
+																<div class="qa-c-item-clear">
+																</div>
+															</div> <!-- END qa-c-item -->
+															<div class="qa-c-list-item  hentry comment" id="c9809">
+																<div class="qa-c-item-content">
+																	<a name="9809"></a><div class="entry-content"><p>This solution does not account for multiple images in a directory.</p>
+
+<p>Eg:<br>
+This solution will not work for<br>
+<br>
+dir1<br>
+&nbsp;dir11<br>
+&nbsp;dir12<br>
+&nbsp; picture.jpeg<br>
+&nbsp;&nbsp;picture2.jpeg<br>
+&nbsp; dir 121<br>
+&nbsp; &nbsp;file1.txt<br>
+dir2<br>
+&nbsp;file2.gif&nbsp;</p>
+
+<p>&nbsp;OR this one</p>
+
+<p>&nbsp;</p>
+
+<p>dir1<br>
+&nbsp;dir11​<br>
+&nbsp;image.jpeg<br>
+&nbsp;dir12<br>
+&nbsp; picture.jpeg<br>
+&nbsp; dir 121<br>
+&nbsp; &nbsp;file1.txt<br>
+dir2<br>
+&nbsp;file2.gif&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<pre class="brush: java;">public static int printSum(String s){
+       String[] arr=s.split("\n");
+       int sum=0, spaces=0, multiplier=1;
+       for(int i=arr.length-1;i&gt;=0;i--){
+           String line=arr[i];
+           if(line.contains(".gif") | line.contains(".jpeg") ){
+               if(space &gt; 0) {
+                  multiplier++;
+               } else {
+                  spaces=line.length()-line.trim().length();   
+               }
+           }
+           if(spaces&gt; line.length()-line.trim().length() ){
+               sum+=line.trim().length()+1 * multiplier;
+               spaces--;
+               if(spaces == 0) {
+                   multiplier = 1;
+               }
+           }
+       }
+       return sum;
+}</pre>
+
+<p>For this you need a multiplier aswell&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p></div>
+																</div>
+																<div class="qa-c-item-footer">
+																	<span class="qa-c-item-avatar-meta">
+																		<span class="qa-c-item-meta">
+																			<a href="../../6922/google-interview-question-question-google-interview-solution?show=9809#c9809" class="qa-c-item-what">commented</a>
+																			<span class="qa-c-item-when">
+																				<span class="qa-c-item-when-data"><span class="published updated"><span class="value-title" title="2016-10-07T19:50:32+0000">Oct 7, 2016</span></span></span>
+																			</span>
+																			<span class="qa-c-item-who">
+																				<span class="qa-c-item-who-pad">by </span>
+																				<span class="qa-c-item-who-data"><span class="vcard author"><a href="../../user/parthgh" class="qa-user-link url fn entry-title nickname">parthgh</a></span></span>
+																			</span>
+																		</span>
+																	</span>
+																	<div class="qa-c-item-buttons">
+																		<input name="c9809_doflag" onclick="return qa_comment_click(9809, 6922, 7942, this);" value="flag" title="Flag this comment as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+																		<input name="a7942_docomment" onclick="return qa_toggle_element('c7942')" value="reply" title="Reply to this comment" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+																	</div>
+																</div>
+																<div class="qa-c-item-clear">
+																</div>
+															</div> <!-- END qa-c-item -->
+														</div> <!-- END qa-c-list -->
+														
+														<input type="hidden" name="code" value="0-1485694589-073cf0908a6c4b297202143d39c16028e33e2abc">
+														<input type="hidden" name="qa_click" value="">
+													</form>
+													<div class="qa-c-form" id="c7942" style="display:none;">
+														<h2>Please <a href="../../login?to=6922%2Fgoogle-interview-question-question-google-interview-solution">log in</a> or <a href="../../register?to=6922%2Fgoogle-interview-question-question-google-interview-solution">register</a> to add a comment.</h2>
+													</div> <!-- END qa-c-form -->
+													
+												</div> <!-- END qa-a-item-main -->
+												<div class="qa-a-item-clear">
+												</div>
+											</div> <!-- END qa-a-list-item -->
+											
+											<div class="qa-a-list-item  hentry answer" id="a8233">
+												<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+													<div class="qa-voting qa-voting-net" id="voting_8233">
+														<div class="qa-vote-buttons qa-vote-buttons-net">
+															<input title="Click to vote up" name="vote_8233_1_a8233" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+															<input title="Click to vote down" name="vote_8233_-1_a8233" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+														</div>
+														<div class="qa-vote-count qa-vote-count-net">
+															<span class="qa-netvote-count">
+																<span class="qa-netvote-count-data">0<span class="votes-up"><span class="value-title" title="0"></span></span><span class="votes-down"><span class="value-title" title="0"></span></span></span><span class="qa-netvote-count-pad"> votes</span>
+															</span>
+														</div>
+														<div class="qa-vote-clear">
+														</div>
+													</div>
+													<input type="hidden" name="code" value="0-1485694589-f965cf9d684450630a9ffdedaaec3bc3736d3093">
+												</form>
+												<div class="qa-a-item-main">
+													<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+														<div class="qa-a-selection">
+														</div>
+														<div class="qa-a-item-content">
+															<a name="8233"></a><div class="entry-content">What would be the most efficient way to do this, if we were to find the total length of all absolute paths to the image files?</div>
+														</div>
+														<span class="qa-a-item-avatar-meta">
+															<span class="qa-a-item-meta">
+																<a href="../../6922/google-interview-question-question-google-interview-solution?show=8233#a8233" class="qa-a-item-what">answered</a>
+																<span class="qa-a-item-when">
+																	<span class="qa-a-item-when-data"><span class="published updated"><span class="value-title" title="2016-07-03T21:58:21+0000">Jul 3, 2016</span></span></span>
+																</span>
+																<span class="qa-a-item-who">
+																	<span class="qa-a-item-who-pad">by </span>
+																	<span class="qa-a-item-who-data">ian26</span>
+																</span>
+															</span>
+														</span>
+														<div class="qa-a-item-buttons">
+															<input name="a8233_doflag" onclick="return qa_answer_click(8233, 6922, this);" value="flag" title="Flag this answer as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+															<input name="a8233_dofollow" value="ask related question" title="Ask a new question relating to this answer" type="submit" class="qa-form-light-button qa-form-light-button-follow">
+															<input name="a8233_docomment" onclick="return qa_toggle_element('c8233')" value="comment" title="Add a comment on this answer" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+														</div>
+														
+														<div class="qa-a-item-c-list" style="display:none;" id="c8233_list">
+														</div> <!-- END qa-c-list -->
+														
+														<input type="hidden" name="code" value="0-1485694589-b3bf181ef6913e62d9dbbcd2bb8247357f8b0fcb">
+														<input type="hidden" name="qa_click" value="">
+													</form>
+													<div class="qa-c-form" id="c8233" style="display:none;">
+														<h2>Please <a href="../../login?to=6922%2Fgoogle-interview-question-question-google-interview-solution">log in</a> or <a href="../../register?to=6922%2Fgoogle-interview-question-question-google-interview-solution">register</a> to add a comment.</h2>
+													</div> <!-- END qa-c-form -->
+													
+												</div> <!-- END qa-a-item-main -->
+												<div class="qa-a-item-clear">
+												</div>
+											</div> <!-- END qa-a-list-item -->
+											
+											<div class="qa-a-list-item  hentry answer" id="a8764">
+												<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+													<div class="qa-voting qa-voting-net" id="voting_8764">
+														<div class="qa-vote-buttons qa-vote-buttons-net">
+															<input title="Click to vote up" name="vote_8764_1_a8764" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+															<input title="Click to vote down" name="vote_8764_-1_a8764" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+														</div>
+														<div class="qa-vote-count qa-vote-count-net">
+															<span class="qa-netvote-count">
+																<span class="qa-netvote-count-data">0<span class="votes-up"><span class="value-title" title="0"></span></span><span class="votes-down"><span class="value-title" title="0"></span></span></span><span class="qa-netvote-count-pad"> votes</span>
+															</span>
+														</div>
+														<div class="qa-vote-clear">
+														</div>
+													</div>
+													<input type="hidden" name="code" value="0-1485694589-f965cf9d684450630a9ffdedaaec3bc3736d3093">
+												</form>
+												<div class="qa-a-item-main">
+													<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+														<div class="qa-a-selection">
+														</div>
+														<div class="qa-a-item-content">
+															<a name="8764"></a><div class="entry-content"><p>Java solution using Stack to keep track of directory level.</p>
+
+<pre class="brush: java;">class Directory {
+    String fileName;
+    int level;
+    int currLength;
+}
+
+public class AbsoluteImagePathLength {
+    public static void main(String[] args) {
+        AbsoluteImagePathLength obj = new AbsoluteImagePathLength();
+        String S = "dir1\n dir11\n dir12\n  picture.jpeg\n  dir121\n  file1.txt\ndir2\n file2.gif";
+        int len = obj.getPathSum(S);
+        System.out.println(len);
+    }
+
+
+    public int getPathSum(String s){
+        String[] dirs = s.split("\n");
+        Stack&lt;Directory&gt; stack = new Stack&lt;&gt;();              //Only push directories to stack
+
+        int maxLen = 0;
+        for(String dir : dirs) {
+
+            int currLevel = 0;
+            while (dir.charAt(currLevel) == ' ')            //calculate current level by counting spaces
+                currLevel++;
+
+            String name = dir.substring(currLevel);      //substring except space
+
+            if (name.contains(".")) {      //File
+                if (name.contains(".jpeg") || name.contains(".gif") || name.contains(".png")) {  //img file
+                    if(stack.peek().level == currLevel){                        //checks if another dir found at same level, then remove previous dir
+                        stack.pop();
+                    }
+                    int absLength = (stack.isEmpty() ? 1 : stack.peek().currLength + 1) + name.length();
+                    maxLen += absLength;
+                }
+            } else {      //Dir
+                while (!stack.isEmpty() &amp;&amp; stack.peek().level &gt;= currLevel) {   //checks if another dir found at same level, then remove previous dir
+                    stack.pop();
+                }
+
+                Directory directory = new Directory();
+                directory.fileName = name;
+                directory.level = currLevel;
+                directory.currLength = (currLevel == 0 ? 1 : stack.peek().currLength + 1) + name.length();
+
+                stack.push(directory);
+            }
+        }
+        return maxLen;
+    }
+}</pre>
+
+<p>&nbsp;</p></div>
+														</div>
+														<span class="qa-a-item-avatar-meta">
+															<span class="qa-a-item-meta">
+																<a href="../../6922/google-interview-question-question-google-interview-solution?show=8764#a8764" class="qa-a-item-what">answered</a>
+																<span class="qa-a-item-when">
+																	<span class="qa-a-item-when-data"><span class="published updated"><span class="value-title" title="2016-08-06T06:54:11+0000">Aug 6, 2016</span></span></span>
+																</span>
+																<span class="qa-a-item-who">
+																	<span class="qa-a-item-who-pad">by </span>
+																	<span class="qa-a-item-who-data"><span class="vcard author"><a href="../../user/SandeepK" class="qa-user-link url fn entry-title nickname">SandeepK</a></span></span>
+																</span>
+															</span>
+														</span>
+														<div class="qa-a-item-buttons">
+															<input name="a8764_doflag" onclick="return qa_answer_click(8764, 6922, this);" value="flag" title="Flag this answer as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+															<input name="a8764_dofollow" value="ask related question" title="Ask a new question relating to this answer" type="submit" class="qa-form-light-button qa-form-light-button-follow">
+															<input name="a8764_docomment" onclick="return qa_toggle_element('c8764')" value="comment" title="Add a comment on this answer" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+														</div>
+														
+														<div class="qa-a-item-c-list" style="display:none;" id="c8764_list">
+														</div> <!-- END qa-c-list -->
+														
+														<input type="hidden" name="code" value="0-1485694589-9549f4453efcf5b83e0fd84d86712693a1145e45">
+														<input type="hidden" name="qa_click" value="">
+													</form>
+													<div class="qa-c-form" id="c8764" style="display:none;">
+														<h2>Please <a href="../../login?to=6922%2Fgoogle-interview-question-question-google-interview-solution">log in</a> or <a href="../../register?to=6922%2Fgoogle-interview-question-question-google-interview-solution">register</a> to add a comment.</h2>
+													</div> <!-- END qa-c-form -->
+													
+												</div> <!-- END qa-a-item-main -->
+												<div class="qa-a-item-clear">
+												</div>
+											</div> <!-- END qa-a-list-item -->
+											
+											<div class="qa-a-list-item  hentry answer" id="a8774">
+												<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+													<div class="qa-voting qa-voting-net" id="voting_8774">
+														<div class="qa-vote-buttons qa-vote-buttons-net">
+															<input title="Click to vote up" name="vote_8774_1_a8774" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+															<input title="Click to vote down" name="vote_8774_-1_a8774" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+														</div>
+														<div class="qa-vote-count qa-vote-count-net">
+															<span class="qa-netvote-count">
+																<span class="qa-netvote-count-data">0<span class="votes-up"><span class="value-title" title="0"></span></span><span class="votes-down"><span class="value-title" title="0"></span></span></span><span class="qa-netvote-count-pad"> votes</span>
+															</span>
+														</div>
+														<div class="qa-vote-clear">
+														</div>
+													</div>
+													<input type="hidden" name="code" value="0-1485694589-f965cf9d684450630a9ffdedaaec3bc3736d3093">
+												</form>
+												<div class="qa-a-item-main">
+													<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+														<div class="qa-a-selection">
+														</div>
+														<div class="qa-a-item-content">
+															<a name="8774"></a><div class="entry-content"><p>Hi all, here is my Java Solution with few tests included to test directly using &quot;Run on IDE&quot; button.</p>
+
+<pre class="brush: java;">public class UnqAbsImgPaths {
+    public static void main(String[] args) {
+        String pathLists1 = "dir1\n dir11\n dir12\n  picture.jpeg\n  dir121\n  file1.txt\ndir2\n file2.gif";
+        String pathLists2 = "dir1\n dir11\n dir12\n  picture.jpeg\n  dir121\n  file1.png\ndir2\n file2.gif";
+        String pathLists3 = "dir1\n dir11\n dir12\n  picture.jpeg\n  dir121\n   file1.png\ndir2\n file2.gif";
+        String pathLists4 = "dir1\n dir11\n dir12\n  dir121\n  file1.txt\ndir2";
+        String pathLists5 = "";
+
+        System.out.println("length of pathLists1 is: " + solution(pathLists1));
+        System.out.println("length of pathLists2 is: " + solution(pathLists2));
+        System.out.println("length of pathLists3 is: " + solution(pathLists3));
+        System.out.println("length of pathLists4 is: " + solution(pathLists4));
+        System.out.println("length of pathLists5 is: " + solution(pathLists5));
+    }
+
+    static int solution(String S) {
+        String[] files = S.split("\n");
+        String unqAbsImgPaths = "";
+        for (int i = 0; i &lt; files.length; i++) {
+            String fName = files[i], absImgPath = "";
+            if (fName.endsWith(".jpeg") || fName.endsWith(".png") || fName.endsWith(".gif")) {
+                int j = i;
+                do {
+                    int spacesCurr = files[j].length() - files[j].trim().length();
+                    int spacesPrev = files[j - 1].length() - files[j - 1].trim().length();
+                    if (spacesCurr &gt; spacesPrev) {
+                        absImgPath = "/" + files[--j].trim() + absImgPath;
+                        if (spacesCurr == 0 || spacesPrev == 0) {
+                            break;
+                        }
+                    }
+                    j--;
+                } while (j &gt; 0);
+                if (!unqAbsImgPaths.endsWith(absImgPath)) {
+                    unqAbsImgPaths += absImgPath;
+                }
+            }
+        }
+        return unqAbsImgPaths.length();
+    }
+}
+</pre>
+
+<p>&nbsp;</p></div>
+														</div>
+														<span class="qa-a-item-avatar-meta">
+															<span class="qa-a-item-meta">
+																<a href="../../6922/google-interview-question-question-google-interview-solution?show=8774#a8774" class="qa-a-item-what">answered</a>
+																<span class="qa-a-item-when">
+																	<span class="qa-a-item-when-data"><span class="published"><span class="value-title" title="2016-08-06T18:12:50+0000">Aug 6, 2016</span></span></span>
+																</span>
+																<span class="qa-a-item-who">
+																	<span class="qa-a-item-who-pad">by </span>
+																	<span class="qa-a-item-who-data"><span class="vcard author"><a href="../../user/ramanand.patil" class="qa-user-link url fn entry-title nickname">ramanand.patil</a></span></span>
+																</span>
+																<br>
+																<span class="qa-a-item-what">edited</span>
+																<span class="qa-a-item-when">
+																	<span class="qa-a-item-when-data"><span class="updated"><span class="value-title" title="2016-08-06T18:19:48+0000">Aug 6, 2016</span></span></span>
+																</span>
+																<span class="qa-a-item-who">
+																	<span class="qa-a-item-who-pad">by </span><span class="qa-a-item-who-data"><a href="../../user/ramanand.patil" class="qa-user-link url fn entry-title nickname">ramanand.patil</a></span>
+																</span>
+															</span>
+														</span>
+														<div class="qa-a-item-buttons">
+															<input name="a8774_doflag" onclick="return qa_answer_click(8774, 6922, this);" value="flag" title="Flag this answer as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+															<input name="a8774_dofollow" value="ask related question" title="Ask a new question relating to this answer" type="submit" class="qa-form-light-button qa-form-light-button-follow">
+															<input name="a8774_docomment" onclick="return qa_toggle_element('c8774')" value="comment" title="Add a comment on this answer" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+														</div>
+														
+														<div class="qa-a-item-c-list" id="c8774_list">
+															<div class="qa-c-list-item  hentry comment" id="c8775">
+																<div class="qa-c-item-content">
+																	<a name="8775"></a><div class="entry-content"><p>Somehow this is not giving correct answer on GFG IDE.</p></div>
+																</div>
+																<div class="qa-c-item-footer">
+																	<span class="qa-c-item-avatar-meta">
+																		<span class="qa-c-item-meta">
+																			<a href="../../6922/google-interview-question-question-google-interview-solution?show=8775#c8775" class="qa-c-item-what">commented</a>
+																			<span class="qa-c-item-when">
+																				<span class="qa-c-item-when-data"><span class="published updated"><span class="value-title" title="2016-08-06T18:29:04+0000">Aug 6, 2016</span></span></span>
+																			</span>
+																			<span class="qa-c-item-who">
+																				<span class="qa-c-item-who-pad">by </span>
+																				<span class="qa-c-item-who-data"><span class="vcard author"><a href="../../user/ramanand.patil" class="qa-user-link url fn entry-title nickname">ramanand.patil</a></span></span>
+																			</span>
+																		</span>
+																	</span>
+																	<div class="qa-c-item-buttons">
+																		<input name="c8775_doflag" onclick="return qa_comment_click(8775, 6922, 8774, this);" value="flag" title="Flag this comment as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+																		<input name="a8774_docomment" onclick="return qa_toggle_element('c8774')" value="reply" title="Reply to this comment" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+																	</div>
+																</div>
+																<div class="qa-c-item-clear">
+																</div>
+															</div> <!-- END qa-c-item -->
+															<div class="qa-c-list-item " id="q10089">
+																<a href="../../10089/how-is-it-o-n" class="qa-c-item-link">How is it O(n)?</a>
+																<div class="qa-c-item-footer">
+																	<span class="qa-c-item-avatar-meta">
+																		<span class="qa-c-item-meta">
+																			<span class="qa-c-item-what">asked</span>
+																			<span class="qa-c-item-when">
+																				<span class="qa-c-item-when-data">Oct 29, 2016</span>
+																			</span>
+																			<span class="qa-c-item-who">
+																				<span class="qa-c-item-who-pad">by </span>
+																				<span class="qa-c-item-who-data">Amit Shah</span>
+																			</span>
+																		</span>
+																	</span>
+																</div>
+																<div class="qa-c-item-clear">
+																</div>
+															</div> <!-- END qa-c-item -->
+														</div> <!-- END qa-c-list -->
+														
+														<input type="hidden" name="code" value="0-1485694589-a3f800c6c345b77904a00d33b0be90ea93712026">
+														<input type="hidden" name="qa_click" value="">
+													</form>
+													<div class="qa-c-form" id="c8774" style="display:none;">
+														<h2>Please <a href="../../login?to=6922%2Fgoogle-interview-question-question-google-interview-solution">log in</a> or <a href="../../register?to=6922%2Fgoogle-interview-question-question-google-interview-solution">register</a> to add a comment.</h2>
+													</div> <!-- END qa-c-form -->
+													
+												</div> <!-- END qa-a-item-main -->
+												<div class="qa-a-item-clear">
+												</div>
+											</div> <!-- END qa-a-list-item -->
+											
+											<div class="qa-a-list-item  hentry answer" id="a8778">
+												<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+													<div class="qa-voting qa-voting-net" id="voting_8778">
+														<div class="qa-vote-buttons qa-vote-buttons-net">
+															<input title="Click to vote up" name="vote_8778_1_a8778" onclick="return qa_vote_click(this);" type="submit" value="+" class="qa-vote-first-button qa-vote-up-button"> 
+															<input title="Click to vote down" name="vote_8778_-1_a8778" onclick="return qa_vote_click(this);" type="submit" value="&ndash;" class="qa-vote-second-button qa-vote-down-button"> 
+														</div>
+														<div class="qa-vote-count qa-vote-count-net">
+															<span class="qa-netvote-count">
+																<span class="qa-netvote-count-data">0<span class="votes-up"><span class="value-title" title="0"></span></span><span class="votes-down"><span class="value-title" title="0"></span></span></span><span class="qa-netvote-count-pad"> votes</span>
+															</span>
+														</div>
+														<div class="qa-vote-clear">
+														</div>
+													</div>
+													<input type="hidden" name="code" value="0-1485694589-f965cf9d684450630a9ffdedaaec3bc3736d3093">
+												</form>
+												<div class="qa-a-item-main">
+													<form method="post" action="../../6922/google-interview-question-question-google-interview-solution?show=7234">
+														<div class="qa-a-selection">
+														</div>
+														<div class="qa-a-item-content">
+															<a name="8778"></a><div class="entry-content"><pre class="brush: java;">import java.util.Stack;
+
+public class Solution {
+	public class Files {
+		public Files(String file, int i, int j) {
+			this.fileName = file;
+			this.length = i;
+			this.noOfSpaces = j;
+		}
+		String fileName;
+		int length;
+		int noOfSpaces;
+	}
+	Stack&lt;Files&gt; files = new Stack&lt;Files&gt;();
+	
+	public void solution(String S) {
+		int sum = 0;
+		String[] splitStr = S.split("\n");
+		int noOfSpaces = splitStr[0].length() - splitStr[0].trim().length();
+		files.push(new Files(splitStr[0], splitStr[0].trim().length() + 1, noOfSpaces));
+		for(int i = 1; i &lt; splitStr.length; i++) {
+			if(noOfSpaces &lt; splitStr[i].length() - splitStr[i].trim().length()) {
+				noOfSpaces = splitStr[i].length() - splitStr[i].trim().length();
+				files.push(new Files(splitStr[i], files.peek().length + splitStr[i].trim().length() + 1, noOfSpaces));
+			} else {
+				while(!files.isEmpty() &amp;&amp; files.peek().noOfSpaces &gt;= splitStr[i].length() - splitStr[i].trim().length()) {
+					files.pop();
+				}
+				noOfSpaces = splitStr[i].length() - splitStr[i].trim().length();
+				if(files.empty())
+					files.push(new Files(splitStr[i], splitStr[i].trim().length() + 1, noOfSpaces));
+				else
+					files.push(new Files(splitStr[i], files.peek().length + splitStr[i].trim().length() + 1, noOfSpaces));
+			}
+			if (splitStr[i].contains(".gif") || splitStr[i].contains(".jpeg")) {
+				sum += files.peek().length;
+			}
+		}
+		System.out.println(sum);
+	}
+
+	public static void main(String args[]) {
+		Solution s = new Solution();
+		//String S = "dir1\n dir11\n dir12\n  picture.jpeg\n  dir121\n  file1.txt\ndir2\n file2.gif";
+		String S = "dir1\n dir11\n  dir111\n   picture.gif\n   text1.txt\n  dir112\n   sample1.jpeg\n dir12\n  sample2.gif";
+		s.solution(S);
+	}
+}
+</pre>
+
+<p>&nbsp;</p></div>
+														</div>
+														<span class="qa-a-item-avatar-meta">
+															<span class="qa-a-item-meta">
+																<a href="../../6922/google-interview-question-question-google-interview-solution?show=8778#a8778" class="qa-a-item-what">answered</a>
+																<span class="qa-a-item-when">
+																	<span class="qa-a-item-when-data"><span class="published updated"><span class="value-title" title="2016-08-07T02:43:33+0000">Aug 7, 2016</span></span></span>
+																</span>
+																<span class="qa-a-item-who">
+																	<span class="qa-a-item-who-pad">by </span>
+																	<span class="qa-a-item-who-data"><span class="vcard author"><a href="../../user/Ashish+Bhumkar" class="qa-user-link url fn entry-title nickname">Ashish Bhumkar</a></span></span>
+																</span>
+															</span>
+														</span>
+														<div class="qa-a-item-buttons">
+															<input name="a8778_doflag" onclick="return qa_answer_click(8778, 6922, this);" value="flag" title="Flag this answer as spam or inappropriate" type="submit" class="qa-form-light-button qa-form-light-button-flag">
+															<input name="a8778_dofollow" value="ask related question" title="Ask a new question relating to this answer" type="submit" class="qa-form-light-button qa-form-light-button-follow">
+															<input name="a8778_docomment" onclick="return qa_toggle_element('c8778')" value="comment" title="Add a comment on this answer" type="submit" class="qa-form-light-button qa-form-light-button-comment">
+														</div>
+														
+														<div class="qa-a-item-c-list" style="display:none;" id="c8778_list">
+														</div> <!-- END qa-c-list -->
+														
+														<input type="hidden" name="code" value="0-1485694589-20f851b3557b406678944b42071bb79972eefbbb">
+														<input type="hidden" name="qa_click" value="">
+													</form>
+													<div class="qa-c-form" id="c8778" style="display:none;">
+														<h2>Please <a href="../../login?to=6922%2Fgoogle-interview-question-question-google-interview-solution">log in</a> or <a href="../../register?to=6922%2Fgoogle-interview-question-question-google-interview-solution">register</a> to add a comment.</h2>
+													</div> <!-- END qa-c-form -->
+													
+												</div> <!-- END qa-a-item-main -->
+												<div class="qa-a-item-clear">
+												</div>
+											</div> <!-- END qa-a-list-item -->
+											
+										</div> <!-- END qa-a-list -->
+										
+									</div>
+									<div class="qa-part-a-form">
+										<div class="qa-a-form" id="anew">
+											<h2>Please <a href="../../login?to=6922%2Fgoogle-interview-question-question-google-interview-solution">log in</a> or <a href="../../register?to=6922%2Fgoogle-interview-question-question-google-interview-solution">register</a> to answer this question.</h2>
+										</div> <!-- END qa-a-form -->
+										
+									</div>
+									<div class="qa-page-links">
+										<span class="qa-page-links-label">Page:</span>
+										<ul class="qa-page-links-list">
+											<li class="qa-page-links-item">
+												<span class="qa-page-selected">1</span>
+											</li>
+											<li class="qa-page-links-item">
+												<a href="../../6922/google-interview-question-question-google-interview-solution?start=10#a_list_title" class="qa-page-link">2</a>
+											</li>
+											<li class="qa-page-links-item">
+												<a href="../../6922/google-interview-question-question-google-interview-solution?start=10#a_list_title" class="qa-page-next">next &raquo;</a>
+											</li>
+										</ul>
+										<div class="qa-page-links-clear">
+										</div>
+									</div>
+								</div> <!-- END qa-main -->
+								
+							</div> <!-- END main-wrapper -->
+						</div> <!-- END main-shadow -->
+					</div> <!-- END body-wrapper -->
+					<div class="qa-footer-bottom-group">
+						<div class="qa-footer">
+							<div class="qa-nav-footer">
+								<ul class="qa-nav-footer-list">
+									<li class="qa-nav-footer-item qa-nav-footer-feedback">
+										<a href="../../feedback" class="qa-nav-footer-link">Send feedback</a>
+									</li>
+								</ul>
+								<div class="qa-nav-footer-clear">
+								</div>
+							</div>
+							<div class="qa-attribution">
+								<a href="http://www.geeksforgeeks.org/about/contact-us/">Contact Us</a>&nbsp;&nbsp;&nbsp;<a href="http://www.geeksforgeeks.org/new/ad.htm">Advertise with Us</a> &nbsp;&nbsp;<a href="http://www.geeksforgeeks.org/about/">About Us</a>
+							</div>
+							<div class="qa-footer-clear">
+							</div>
+						</div> <!-- END qa-footer -->
+						
+					</div> <!-- END footer-bottom-group -->
+					
+					<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64263797-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+					<div style="position:absolute; left:-9999px; top:-9999px;">
+						<span id="qa-waiting-template" class="qa-waiting">...</span>
+					</div>
+				</body>
+			</html>
+<!--
+It's no big deal, but your HTML could not be indented properly. To fix, please:
+1. Use this->output() to output all HTML.
+2. Balance all paired tags like <td>...</td> or <div>...</div>.
+3. Use a slash at the end of unpaired tags like <img/> or <input/>.
+Thanks!
+-->

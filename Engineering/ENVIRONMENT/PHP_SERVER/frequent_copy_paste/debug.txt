@@ -1,0 +1,18 @@
+all post data : Array
+(
+    [lang] => english
+    [homedir] => C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste
+)
+
+all post data : Array
+(
+    [lang] => english
+    [homedir] => C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste
+)
+
+all post data : Array
+(
+    [lang] => english
+    [homedir] => C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste
+)
+

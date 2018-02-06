@@ -1,0 +1,6 @@
+selector [, selector2, ...] [:pseudo-class] {
+ property: value;
+ [property2: value2;
+ ...]
+}
+/* comment */

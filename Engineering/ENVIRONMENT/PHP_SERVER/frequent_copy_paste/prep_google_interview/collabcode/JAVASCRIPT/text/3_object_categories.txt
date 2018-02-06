@@ -1,0 +1,3 @@
+Native: Stringm Number, Array, Image, Date, Math, etc
+Host: windows, document, forms etc
+User-defined: defined by the programmer

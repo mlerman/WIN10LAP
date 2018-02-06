@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script type="text/javascript">
+function getobj(){
+  if(window.XMLHttpRequest)
+    return new XMLHttpRequest();
+  else if(window.ActiveXObject)
+    return new ActiveXObject("Microsoft.XMLHTTP");
+  else {
+    alert("no ajax");
+	return null;
+	}
+  }  
+obj=getobj();
+if(obj!=null){
+  obj.open("GET","books.xml", false);
+  obj.send(null);
+  xmldoc=obj.responseXML;
+  books=xmldoc.getElementsByTagName("CD");
+  alert(books.length);
+  document.write("first record: "+books[0].childNodes[1].childNodes[0].nodeValue+"<br/>"); 
+}
+</script>
+</body>
+</html>

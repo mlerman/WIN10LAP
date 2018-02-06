@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<script type="text/javascript">
+pelem=document.createElement("p");
+telem=document.createTextNode("something");
+pelem.setAttribute("style","color:red; font-weight:bold"); // but NOT pelem.style="color:red; font-weight:bold";
+pelem.appendChild(telem);
+elems=document.getElementsByTagName("body");
+elems[0].appendChild(pelem);
+</script>
+</head>
+</body>
+
+</html>
