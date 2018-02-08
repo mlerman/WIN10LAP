@@ -311,7 +311,20 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
         //$tempstr=$term." -e 'sh -c \"";  // sh: 1: source not found, pause OK
         $tempstr=$term." -e 'bash -c \"";	// commence a executer le fichier source mais syntax error, pause OK
         //$tempstr=$term." -e 'csh -c \"";	// pas de pause
-        $tempstr.= str_replace("\n", ';', addslashes($textbat));
+        
+        
+
+$array = explode("\n",$textbat);
+foreach($array as $arr) {
+    if (substr('$arr', 0, 1) != '#') {
+    //if(!(preg_match("^#\s",$arr))) {
+        $output[] = $arr;
+    }
+}
+$textbat_no_comments = implode("\n",$output);
+        
+        
+        $tempstr.= str_replace("\n", ';', addslashes($textbat_no_comments));
         $tempstr.="\"'"."\n";
         $text.=$tempstr;
 	  }
