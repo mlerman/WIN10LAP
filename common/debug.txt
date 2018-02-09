@@ -1,0 +1,4 @@
+echo toto
+echo titi
+echo tutu
+read -p "pause" reply

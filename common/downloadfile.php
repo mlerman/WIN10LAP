@@ -313,15 +313,18 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
         //$tempstr=$term." -e 'csh -c \"";	// pas de pause
         
         
-
-$array = explode("\n",$textbat);
-foreach($array as $arr) {
-    if (substr('$arr', 0, 1) != '#') {
-    //if(!(preg_match("^#\s",$arr))) {
-        $output[] = $arr;
-    }
-}
-$textbat_no_comments = implode("\n",$output);
+		// remove all comment lines starting with #
+		$array = explode("\n",$textbat);
+		foreach($array as $arr) {
+			if (
+				   (!(substr($arr, 0, 1) === "#"))	// not a comment line
+			    && ($arr != "")						// not an empty line
+			   ) {
+				$output[] = $arr;
+			}
+		}
+		$textbat_no_comments = implode("\n",$output);
+//file_put_contents("debug.txt", $textbat_no_comments);
         
         
         $tempstr.= str_replace("\n", ';', addslashes($textbat_no_comments));
