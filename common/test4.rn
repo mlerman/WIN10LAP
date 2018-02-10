@@ -1,0 +1,1 @@
+read -p 'pause 2 with single quotes' reply

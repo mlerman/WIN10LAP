@@ -309,7 +309,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
         $text.=$textbat;
 	  } else {
         //$tempstr=$term." -e 'sh -c \"";  // sh: 1: source not found, pause OK
-        $tempstr=$term." -e 'bash -c \"";	// commence a executer
+        $tempstr=$term." -e $'bash -c \"";	// commence a executer
 											// la suite de ce string est quote et double-quote
         //$tempstr=$term." -e 'csh -c \"";	// pas de pause
         
@@ -319,18 +319,19 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 		foreach($array as $arr) {
 			if (
 				   (!(substr($arr, 0, 1) === "#"))	// not a comment line
-			    && ($arr != "")						// not an empty line
+			    //&& ($arr != "")						// not an empty line 
+				&& (!(strlen(trim($arr)) == 0))		// not spaces or empty line
 													// TODO: voire aussi si la ligne ne contient que des blancs et tab etc
 			   ) {
 				$output[] = $arr;
 			}
 		}
 		$textbat_no_comments = implode("\n",$output);
-//file_put_contents("debug.txt", $textbat_no_comments);
         
         
-        $tempstr.= str_replace("\n", ';', addcslashes($textbat_no_comments,'"'));	// TODO
+        $tempstr.= str_replace("\n", ';', addcslashes($textbat_no_comments,'"\''));	// TODO
         $tempstr.="\"'"."\n";					// ferme 
+//file_put_contents("debug.txt", $tempstr);
         $text.=$tempstr;
 	  }
     }

@@ -4,12 +4,10 @@ echo toto
 echo titi
 # comment
 echo tutu
-# la prochaine ligne il y a un blanc, not ok
-# 
+# la prochaine ligne il y a des blancs et tabs, ok
+	       
+echo 'toto tutu'
 # OK
 read -p "pause 1 with double quotes" reply
-# not OK
-#read -p 'pause 2 with single quotes' reply
-# not OK
-#read -p \'pause 3 with single quotes escaped\' reply
+
 
