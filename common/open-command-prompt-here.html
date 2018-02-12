@@ -1943,7 +1943,9 @@ if ($handle = opendir($dir)) {
 							//.'<a class="winlink" href="/doc/files/common/runinlinux.php?targetdir='.realpath($dir).'&targetfile='.$file.'&urldir='.$urldir.'&host='.$host.'"  onclick=\'psexec(this.href); \' ><img src="/doc/images/linux.png"/></a>'
 							// cygwin
 							.'<a class="winlink" href="/doc/files/common/downloadfile.php?fname=ui_run_with_cygwin.run&targetdir='.realpath($dir).'&targetfile='.$file.'&perma='.realpath("permalinux").'"><img src="/doc/images/cygwin16.png"/></a>'
-						// add comment bull icon
+							// add to constructor
+							.'&nbsp;<a href="/doc/files/common/copy_to_constructor.php?fname='.$file.'&targetdir='.$dir.'&urldir='.$urldir.'&host='.$host.'." onclick="javascript:void window.open(\'/doc/files/common/copy_to_constructor.php?fname='.$file.'&targetdir='.$dir.'&urldir='.$urldir.'&host='.$host.'\',\'1481602525735\',\'width=980,height=550,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=150,top=50\'); return false;"><img src="/doc/files/common/images/constructor.ico" title="Add this to _constructor" /></a>'
+							// add comment bull icon
 							.'&nbsp;<a id="lbulle'.$i.'" class="inline" href="/doc/files/common/downloadfile.php?fname='.($CurrOS!='Linux'?'ui_':'').'edit_this.'.($CurrOS!='Linux'?'run':'rn').'&targetdir='.realpath($dir).'&targetfile=.'.$file.'&perma='.realpath("perma").($CurrOS!='Linux'?'':'Linux').'"  ><img src="/doc/images/'.$str_bulle_icon_png.'"   '.$onmouseover.'/></a>';
 							
 						echo '<br/>';

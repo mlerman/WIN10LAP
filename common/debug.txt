@@ -1,1 +1,1 @@
-gnome-terminal -e $'bash -c "sshpass -p \'miky est stupide past33X.\' ssh wafer3 -X < dsp_dfx_cssd_sanity_test.sh;read -p \"pause\" reply"'
+gnome-terminal --geometry=180x25

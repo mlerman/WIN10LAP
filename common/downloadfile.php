@@ -122,6 +122,11 @@ if($CurrOS=='Windows XP') {
 $targetdirxp=str_replace("C:\\UniServer\\www\\doc\\files", "y:\\files", $targetdir);
 $drive="y:";
 }
+
+$prefix_string="$";
+if ($_SERVER["HTTP_HOST"]=="win7-pc") {
+  $prefix_string="";
+}
 ///////////////////////////////////////////// Linux ///////////////////////////////////
 if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 
@@ -286,11 +291,12 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 
   if(isset($_GET["perma"])) {
 
-    $textbat=file_get_contents($perma."\\".$fname);
+  $textbat.=file_get_contents($perma."\\".$fname);
   } else {
 
     $textbat=file_get_contents($targetdir."\\".$fname);
   }
+
 
   //ici gnome-termilaler le fichier
   //s'il ne contient pas deja le string "gnome-terminal"
@@ -299,6 +305,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
   //escaper les double quote
   if (strpos($textbat, 'gnome-terminal') !== false) {
     // already using gnome-terminal do nothing
+//file_put_contents("debug.txt", $textbat);
      $text.=$textbat;
     
     } else {
@@ -308,8 +315,12 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
   	  if( $term == "") {
         $text.=$textbat;
 	  } else {
-        //$tempstr=$term." -e 'sh -c \"";  // sh: 1: source not found, pause OK
-        $tempstr=$term." -e $'bash -c \"";	// commence a executer
+
+          $textbat='echo -ne "\033]0; Started in $LINDIRECTORY | running '.$fname.' | from '.$_SERVER["HTTP_HOST"].'\007"'."\n".$textbat;
+	  
+	  //$tempstr=$term." -e 'sh -c \"";  // sh: 1: source not found, pause OK
+//        $tempstr=$term." -e $'bash -c \"";	// commence a executer
+        $tempstr=$term." -e ".$prefix_string."'bash -c \"";	// commence a executer
 											// la suite de ce string est quote et double-quote
         //$tempstr=$term." -e 'csh -c \"";	// pas de pause
         
