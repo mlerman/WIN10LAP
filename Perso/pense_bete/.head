@@ -1,3 +1,28 @@
+utiliser des tag qui puissent etre interprete par downloadfile.php
+example
+{[PRJNAME]}     install_bash_debugger
+{[PRJPATHLIN]}  /home/user/files/ThisPCLinux/install_bash_debugger/  URLDIR
+{[PRJPATHWIN]}  c:/UniServer/www/doc/files/ThisPCLinux/install_bash_debugger/
+{[LOCALURL]}    /doc/files/ThisPCLinux/install_bash_debugger/  URL
+{[HOST}]        win7-pc
+
+comme ca on peut fair un fichier .run et ecrire dedans
+echo {[HOST]}
+quel interet puisqu'on peut ecrire
+echo %HOST%
+ou 
+echo $HOST
+l'interet c'est qu'on peut ecrire de maniere unifie echo {[HOST]}
+quel que soit l'OS
+de meme pour {[PRJPATH]}
+
+en poussant cette idee plus loin on peut appliquer aux commandes
+{[SETVAR]} sera remplacer soit par "set" soit par "export"
+voir http://tldp.org/LDP/abs/html/dosbatch.html
+si le nom n'est pas trouve dans la list alors considerer comme une variable d'environement
+example 
+echo {[PATH]} sera transformw en %PATH% ou $PATH selon l'OS
+<hr/>
 quand je hover mouse sur un tag H1 plus que 3 sec automatiquement le copier dans le clipboard
 <hr/>
 le nom qui convient est
