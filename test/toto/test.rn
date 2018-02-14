@@ -1,0 +1,5 @@
+echo 1
+echo 2
+echo 3
+# c'est un essai
+read -p "pause"
