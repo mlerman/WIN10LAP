@@ -1,3 +1,6 @@
+faire qu'on puisse effacer un arc dans le directed graph avec un icon delete
+juste enleve les lignes correspondante dans .next et .previous
+<hr/>
 utiliser des tag qui puissent etre interprete par downloadfile.php
 example
 {[PRJNAME]}     install_bash_debugger
