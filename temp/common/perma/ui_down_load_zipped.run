@@ -1,0 +1,24 @@
+echo running %0
+echo TARGETDIR : %TARGETDIR%
+echo TARGETFILE : %TARGETFILE%
+echo HOST : %HOST%
+echo URLDIR : %URLDIR%
+
+set NEWDIR=%TARGETDIR%
+echo Project already exists. ctr-c to cancel !!! Press a to overwrite
+if exist %TARGETDIR%\open-command-prompt-here.html pause
+if exist %TARGETDIR%\open-command-prompt-here.html set NEWDIR=%TARGETDIR%_
+
+echo newdir: %NEWDIR%
+if not exist "%NEWDIR%" md %NEWDIR%
+cd %NEWDIR%
+set URL="http://%HOST%/mlscript/zipfolder.php?fname=%TARGETFILE%&targetdir=%TARGETDIR%"
+echo url: %URL%
+
+C:\"Program Files"\cURL\bin\curl -o %TARGETFILE%.zip %URL% 
+c:\UniServer\www\doc\files\ThisPC\install_7zip\7za.exe x %TARGETFILE%.zip -o..
+if exist %TARGETFILE%.zip del %TARGETFILE%.zip /Q
+if exist %TARGETFILE% rd %TARGETFILE%
+cd ..
+if exist %TARGETFILE%_ rd %TARGETFILE%_
+

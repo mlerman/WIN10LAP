@@ -1,0 +1,34 @@
+<img src="scr3.png"/> 
+<hr/> 
+<img src="scr2.png"/>
+<hr/>
+<img src="scr1.png"/>
+<hr/>
+<hr/>
+gnome-terminal -e 'sh -c "echo toto && read -p "pause" reply"'
+<hr/>
+ca fait rien
+dans /etc/local.conf ceci: 
+LANG="en_US.UTF-8"
+LC_CTYPE="en_US.UTF-8"
+LC_NUMERIC="en_US.UTF-8"
+LC_TIME="en_US.UTF-8"
+LC_COLLATE="C"
+LC_MONETARY="en_US.UTF-8"
+LC_MESSAGES="en_US.UTF-8"
+LC_PAPER="en_US.UTF-8"
+LC_NAME="en_US.UTF-8"
+LC_ADDRESS="en_US.UTF-8"
+LC_TELEPHONE="en_US.UTF-8"
+LC_MEASUREMENT="en_US.UTF-8"
+LC_IDENTIFICATION="en_US.UTF-8"
+LC_ALL="en_US.UTF-8"
+<hr/>
+Error constructing proxy for org.gnome.Terminal:/org/gnome/Terminal/Factory0: The connection is closed
+<hr>
+No protocol specified
+Failed to connect to Mir: Failed to connect to server socket: No such file or directory
+Unable to init server: Could not connect: Connection refused
+Failed to parse arguments: Cannot open display: 
+
+<hr>

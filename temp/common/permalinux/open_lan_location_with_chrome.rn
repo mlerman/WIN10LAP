@@ -1,0 +1,3 @@
+chromium-browser http://$HOST$URL
+#chromium-browser http://$HOST${URLDIR/\/home\/user\/files/\/doc\/files}
+

@@ -1,0 +1,9 @@
+#sleep 4 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin
+#echo find where the USB drive is mounted
+#lsblk -n -l -o MOUNTPOINT | grep media
+#USBDRIVE=$(lsblk -n -l -o MOUNTPOINT | grep media)
+#echo $USBDRIVE 
+krusader --left=$LINDIRECTORY --right=$HOME/Downloads
+sleep 15
+
+

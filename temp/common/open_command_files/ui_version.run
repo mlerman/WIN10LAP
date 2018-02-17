@@ -1,0 +1,5 @@
+@echo off
+cls
+echo Write below the command that shows the revision of this program
+c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\WINDOWS_BATCH\mousePause\mp.bat "Click 'OK' to exit [X]"
+

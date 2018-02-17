@@ -1,0 +1,4 @@
+source test.sh.bat
+echo $test
+read -p pause
+

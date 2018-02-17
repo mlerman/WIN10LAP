@@ -1,0 +1,28 @@
+#give the time to the gnome terminal window to get active
+#sleep 1 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin
+
+echo this is common/permalinux/edit_this.rn
+
+# this is OK for a number, but otherwise $PARAM1 never shows as number???
+#PARAM1=987
+echo debut>list
+echo param1 is $PARAM1>>list
+declare -i linenum=123
+echo linenum is $linenum>>list
+
+if [[ $linenum =~ ^[0-9]+$ ]] ; then
+   echo "linenum is a line number" >>list
+else
+   echo "linenum is a string" >>list
+fi
+
+if [[ $PARAM1 =~ ^[0-9]+$ ]] ; then
+   echo "PARAM1 is a line number" >>list
+else
+   echo "PARAM1 is a string" >>list
+fi
+
+#notepadqq $TARGETFILE
+# with line number
+#gedit $TARGETFILE +3
+gedit $TARGETFILE

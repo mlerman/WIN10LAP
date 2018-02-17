@@ -1,0 +1,6 @@
+cd %cd%
+if not exist .cliptab copy c:\UniServer\www\doc\files\common\open_command_files\.cliptab .cliptab
+start notepad.exe %cd%\.cliptab
+exit
+
+

@@ -1,0 +1,27 @@
+echo running %0
+echo TARGETDIR : %TARGETDIR%
+echo HOST : %HOST%
+echo URLDIR : %URLDIR%
+
+if exist "c:\UniServer\download_local\" rd /q /s "c:\UniServer\download_local"
+md \UniServer\download_local
+cd \UniServer\download_local
+c:\"Program Files (x86)"\GnuWin32\bin\wget.exe -r -np http://%HOST%%URLDIR%
+
+rem now copy
+rem xcopy c:\UniServer\download_local\%HOST%\doc c:\UniServer\www\doc /S /E
+
+for /r c:\UniServer\download_local %%f in (open-command-prompt-here.html) do if exist "%%f"  ( echo "%%f" 
+xcopy c:\UniServer\www\doc\files\common\perma\files_for_download_local\open-command-prompt-here.html "%%f" /Y
+xcopy c:\UniServer\www\doc\files\common\perma\files_for_download_local\.htaccess "%%~dpf" /Y
+)
+
+
+RoboCopy c:\UniServer\download_local\%HOST%\doc c:\UniServer\www\doc /S /E /XF index.html*
+rem add those 2 files
+rem xcopy files_for_download_local\*.* ..\%1\ /Y
+
+
+
+rem remove again
+pause

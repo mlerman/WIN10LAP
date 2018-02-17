@@ -1,0 +1,6 @@
+@echo run make in folder hello_world_cpp
+set HOME=%cd%
+rem c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe elevate C:\cygwin64\bin\mintty.exe -i /Cygwin-Terminal.ico -s 110,50 -
+start C:\cygwin64\bin\mintty.exe -i /Cygwin-Terminal.ico -s 110,50 -
+
+rem avec l'elevated il ne prend pas le home directory

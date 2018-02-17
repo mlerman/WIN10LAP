@@ -1,0 +1,6 @@
+# minimize the window
+#sleep 1 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin 
+dos2unix "$(zenity --file-selection)"
+read -p "Press [Enter] key to continue..."
+
+

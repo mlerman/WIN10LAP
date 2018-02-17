@@ -1,0 +1,4 @@
+@echo off
+cls
+start c:\UniServer\www\doc\files\ThisPC\putty\putty.exe -ssh mlerman:password@192.168.199.131
+exit

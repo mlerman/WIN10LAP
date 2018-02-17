@@ -1,0 +1,2 @@
+wine --version
+read -p "Press [Enter] key to continue..."

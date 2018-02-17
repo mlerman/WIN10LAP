@@ -1,0 +1,10 @@
+cls
+echo HOST=%HOST%
+echo URLDIR=%URLDIR%
+set udir=%URLDIR:~5%
+set udir=%udir:/=\%
+echo target=\\%HOST%\%udir%
+set URL=https://drive.google.com/drive/my-drive
+echo going to %URL%
+start C:\"Program Files (x86)"\Google\Chrome\Application\chrome.exe %URL%
+

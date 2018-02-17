@@ -1,0 +1,4 @@
+#sleep 1 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin 
+xdg-open .
+sleep 5
+#read -p "Press [Enter] key to continue..."
