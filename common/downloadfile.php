@@ -371,6 +371,9 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 
 ///////////////////////////////////////////// Windows 7 ///////////////////////////////////
 
+
+
+
   // OK the client is windows but how if the link was for linux
   // let's try fix this
   // if fname==krusaderHere.rn then ui_total_commander.run
@@ -463,6 +466,24 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
   $text.="rem ======= original file below this line ======= & @echo on\r\n";
   $text.="cls\r\n";
 
+  
+$array = explode("\n",$textbat);
+foreach($array as $arr) {
+	if (
+	     (substr($arr, 0, 7) === "export ")		// the line starts with "export " to change with "set "
+  	   ) {
+		$pos = strrpos($arr, "export");			// do only if it starts with and no other "export" there
+		if ($pos == 0) 	$arr = str_replace("export ","set ",$arr);
+  	     }
+	$output[] = $arr;
+}
+$textbat = implode("\n",$output);
+
+  
+  
+  
+  
+  
   if (!$admin) {
     $text.=$textbat;
     $text.="\r\n"."rem ======= add auto delete =======\r\n";
