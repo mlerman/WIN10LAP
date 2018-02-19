@@ -1,0 +1,4 @@
+echo on
+export toto=titi
+echo %toto%
+pause
