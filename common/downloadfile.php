@@ -127,6 +127,9 @@ $prefix_string="$";
 if ($_SERVER["HTTP_HOST"]=="win7-pc") {
   $prefix_string="";
 }
+if ($_SERVER["HTTP_HOST"]=="xsjmikhaell30") {
+  $prefix_string="";
+}
 ///////////////////////////////////////////// Linux ///////////////////////////////////
 if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 
