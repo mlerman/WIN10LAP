@@ -323,7 +323,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 	  
 	  //$tempstr=$term." -e 'sh -c \"";  // sh: 1: source not found, pause OK
 //        $tempstr=$term." -e $'bash -c \"";	// commence a executer
-        $tempstr=$term." -e ".$prefix_string."'bash -c \"";	// commence a executer
+        $tempstr=$term." --geometry=180x25 -e ".$prefix_string."'bash -c \"";	// commence a executer
 											// la suite de ce string est quote et double-quote
         //$tempstr=$term." -e 'csh -c \"";	// pas de pause
         
