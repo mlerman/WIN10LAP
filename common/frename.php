@@ -45,8 +45,10 @@ function enable_name_in_entries($name, $num, $except_line) {
 		$buffer=str_replace("delaction=1&num=".$num,"delaction=1",$buffer);
 		$buffer=str_replace("off.png","on.png",$buffer);
 		// change the name by removing .0
+		// swap les labels
 		$buffer=str_replace(".".$num."</label>","</label>",$buffer);
-		$buffer=str_replace("/".$name.".".$num,"/".$name, $buffer);
+		// swap les id
+		$buffer=str_replace("/.".$name.".".$num,"/.".$name, $buffer);
         $content.=$buffer;
 		$done=true;; // enable only one
 		$line_clicked=$i;
@@ -79,8 +81,10 @@ function disable_name_in_entries($name, $except_line, $num) {
 		$buffer=str_replace("on.png","off.png",$buffer);
 		// change the name by adding .0
 //echo "xnum=".$num." \n";
+		// swap les label
 		$buffer=str_replace("<label>".$name."</label>","<label>".$name.".".($nunum)."</label>",$buffer);
-		$buffer=str_replace("/".$name."\"","/".$name.".".($nunum)."\"",$buffer);
+		// swap les ids
+		$buffer=str_replace("/.".$name."\"","/.".$name.".".($nunum)."\"",$buffer);
 		$content.=$buffer;
 		$done=true; // disable only one
 		$line_clicked=$i;
