@@ -1377,7 +1377,7 @@ if($param1!="") echo ";";
 
 <fieldset style="float: left;">
 <legend>Status: </legend>
-<input type="checkbox" name=".ckbuild" <?php echo file_get_contents($proj_dir."/.ckbuild"); ?> onclick="getFileFromServer('/doc/files/common/write_ckfile.php?target=<?php echo $proj_dir."/.ckbuild"; ?>&value='+this.checked, function(text){ show_write(text)});"> Build Successfully<br/>
+<input type="checkbox" name=".ckbuild" <?php echo file_get_contents($proj_dir."/.public"); ?> onclick="getFileFromServer('/doc/files/common/write_ckfile.php?target=<?php echo $proj_dir."/.public"; ?>&value='+this.checked, function(text){ show_write(text)});"> Public<br/>
 <input type="checkbox" name=".ckpfunc" <?php echo file_get_contents($proj_dir."/.ckpfunc"); ?> onclick="getFileFromServer('/doc/files/common/write_ckfile.php?target=<?php echo $proj_dir."/.ckpfunc"; ?>&value='+this.checked, function(text){ show_write(text)});"> Experimental<br/>
 <input type="checkbox" name=".ckffunc" <?php echo file_get_contents($proj_dir."/.ckffunc"); ?> onclick="getFileFromServer('/doc/files/common/write_ckfile.php?target=<?php echo $proj_dir."/.ckffunc"; ?>&value='+this.checked, function(text){ show_write(text)});"> Fully functional<br/>
 </fieldset>
