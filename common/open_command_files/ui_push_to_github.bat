@@ -9,27 +9,32 @@ set THISPLACEBACKSLASH=%THISPLACE%
 set THISPLACE=%THISPLACE:\=-%
 
 set THISPLACESLASH=%THISPLACESLASH:\=/%
-echo THISPLACE=%THISPLACE%
-echo THISPLACESLASH=%THISPLACESLASH%
-echo THISPLACEBACKSLASH=%THISPLACEBACKSLASH%
-echo REPONAME=%REPONAME%
+rem echo THISPLACE=%THISPLACE%
+rem echo THISPLACESLASH=%THISPLACESLASH%
+rem echo THISPLACEBACKSLASH=%THISPLACEBACKSLASH%
+rem echo REPONAME=%REPONAME%
 for %%a in (.) do set currentfolder=%%~na
-echo current directory name: %currentfolder%
+rem echo current directory name: %currentfolder%
 
 cd c:\UniServer\www\doc\files\
 
-if "%COMPUTERNAME%" == "LAPTOP-7KQRMTC0" ( echo this is LAPTOP-7KQRMTC0 WIN10LAP
-  echo user is mlerman
+rem type %THISPLACEBACKSLASH%\.public 2>&1
+
+find /c "checked" %THISPLACEBACKSLASH%\.public >nul
+if %errorlevel% equ 1 goto notpublic
+
+if "%COMPUTERNAME%" == "LAPTOP-7KQRMTC0" ( rem echo this is LAPTOP-7KQRMTC0 WIN10LAP
+  rem echo user is mlerman
   git config --global --unset http.proxy
 )
 
-if "%COMPUTERNAME%" == "WIN7-PC" ( echo this is WIN7-PC 
-  echo user is mlerman
+if "%COMPUTERNAME%" == "WIN7-PC" ( rem echo this is WIN7-PC 
+  rem echo user is mlerman
   git config --global --unset http.proxy
 )
 
-if "%COMPUTERNAME%" == "XSJMIKHAELL30" ( echo this is XSJMIKHAELL30 
-  echo user is mikhaell
+if "%COMPUTERNAME%" == "XSJMIKHAELL30" ( rem echo this is XSJMIKHAELL30 
+  rem echo user is mikhaell
   git config --global http.proxy proxy:8080
 )
 
@@ -61,6 +66,10 @@ git push origin master 2>&1
 rem returning to the directory
 :test
 cd %THISDIR%
+
+goto end
+:notpublic
+echo Not allowed
 
 :end
 rem pause
