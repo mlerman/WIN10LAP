@@ -26,14 +26,6 @@ echo parentfolder : %parentfolder%>>readme.md
 echo.>>readme.md
 
 
-rem echo HOST : %HOST%>>readme.md
-rem echo.>>readme.md
-rem echo URLDIR : %URLDIR%>>readme.md
-rem echo.>>readme.md
-rem echo TARGETDIR : %TARGETDIR%>>readme.md
-rem echo ___>>readme.md
-
-
 :test
 rem echo [%currentfolder% - %HOST%]^(http://%HOST%%URLDIR%open-command-prompt-here.html^)>>readme.md
 set MACHINESERVING=win7-pc
@@ -47,5 +39,5 @@ echo [%currentfolder% - %MACHINESERVING%]^(http://%MACHINESERVING%/doc/files/%TH
 
 echo.>>readme.md
 
-echo add basic files >>readme.md
+echo [new in %currentfolder%]^(http://localhost/doc/files/%THISPLACESLASH%/open-command-prompt-here.html^)>>readme.md
 rem pause
