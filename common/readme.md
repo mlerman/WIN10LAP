@@ -7,4 +7,4 @@ parentfolder : files
 [common - xsjmikhaell30](http://xsjmikhaell30/doc/files/common/open-command-prompt-here.html)
 [common - laptop-7kqrmtc0](http://laptop-7kqrmtc0/doc/files/common/open-command-prompt-here.html)
 
-add basic files 
+[new in common](http://localhost/doc/files/common/open-command-prompt-here.html)
