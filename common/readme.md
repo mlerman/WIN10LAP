@@ -2,13 +2,9 @@ currentfolder : common
 
 parentfolder : files
 
-HOST : 
+[common - win7-pc](http://win7-pc/doc/files/common/open-command-prompt-here.html)
+[common - celine-pc](http://celine-pc/doc/files/common/open-command-prompt-here.html)
+[common - xsjmikhaell30](http://xsjmikhaell30/doc/files/common/open-command-prompt-here.html)
+[common - laptop-7kqrmtc0](http://laptop-7kqrmtc0/doc/files/common/open-command-prompt-here.html)
 
-URLDIR : 
-
-TARGETDIR : 
-___
-[common - win7-pc](http://win7-pcopen-command-prompt-here.html)
-[common - celine-pc](http://celine-pcopen-command-prompt-here.html)
-[common - xsjmikhaell30](http://xsjmikhaell30open-command-prompt-here.html)
-[common - laptop-7kqrmtc0](http://laptop-7kqrmtc0open-command-prompt-here.html)
+add basic files 
