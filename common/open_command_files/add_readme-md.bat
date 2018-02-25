@@ -34,7 +34,7 @@ echo.>>readme.md
 
 set MACHINESERVING=celine-pc
 echo [%currentfolder% : %MACHINESERVING%]^(http://%MACHINESERVING%/doc/files/%THISPLACESLASH%/open-command-prompt-here.html^)>>readme.md
-echo [new]^(http://%MACHINESERVING%/doc/files/%THISPLACESLASH%/open-command-prompt-here.html^)>>readme.md
+echo - [new]^(http://%MACHINESERVING%/doc/files/%THISPLACESLASH%/open-command-prompt-here.html^)>>readme.md
 echo.>>readme.md
 
 set MACHINESERVING=xsjmikhaell30
