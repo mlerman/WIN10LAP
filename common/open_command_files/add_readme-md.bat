@@ -29,7 +29,8 @@ echo.>>readme.md
 :test
 rem echo [%currentfolder% - %HOST%]^(http://%HOST%%URLDIR%open-command-prompt-here.html^)>>readme.md
 set MACHINESERVING=win7-pc
-echo [%currentfolder% - %MACHINESERVING%]^(http://%MACHINESERVING%/doc/files/%THISPLACESLASH%/open-command-prompt-here.html^)>>readme.md
+echo [%currentfolder% : %MACHINESERVING%]^(http://%MACHINESERVING%/doc/files/%THISPLACESLASH%/open-command-prompt-here.html^)>>readme.md
+echo.>>readme.md
 
 set MACHINESERVING=celine-pc
 echo [%currentfolder% : %MACHINESERVING%]^(http://%MACHINESERVING%/doc/files/%THISPLACESLASH%/open-command-prompt-here.html^)>>readme.md
