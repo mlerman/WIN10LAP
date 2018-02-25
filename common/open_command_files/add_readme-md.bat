@@ -32,6 +32,7 @@ set MACHINESERVING=win7-pc
 echo [%currentfolder% - %MACHINESERVING%]^(http://%MACHINESERVING%/doc/files/%THISPLACESLASH%/open-command-prompt-here.html^)>>readme.md
 set MACHINESERVING=celine-pc
 echo [%currentfolder% - %MACHINESERVING%]^(http://%MACHINESERVING%/doc/files/%THISPLACESLASH%/open-command-prompt-here.html^)>>readme.md
+echo [new in %currentfolder%]^(http://%MACHINESERVING%/doc/files/%THISPLACESLASH%/open-command-prompt-here.html^)>>readme.md
 set MACHINESERVING=xsjmikhaell30
 echo [%currentfolder% - %MACHINESERVING%]^(http://%MACHINESERVING%/doc/files/%THISPLACESLASH%/open-command-prompt-here.html^)>>readme.md
 set MACHINESERVING=laptop-7kqrmtc0
@@ -39,5 +40,4 @@ echo [%currentfolder% - %MACHINESERVING%]^(http://%MACHINESERVING%/doc/files/%TH
 
 echo.>>readme.md
 
-echo [new in %currentfolder%]^(http://localhost/doc/files/%THISPLACESLASH%/open-command-prompt-here.html^)>>readme.md
 rem pause
