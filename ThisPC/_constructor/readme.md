@@ -2,12 +2,6 @@ currentfolder : _constructor
 
 parentfolder : ThisPC
 
-HOST : 
-
-URLDIR : 
-
-TARGETDIR : 
-___
 [_constructor - win7-pc](http://win7-pc/doc/files/ThisPC/_constructor/open-command-prompt-here.html)
 [_constructor - celine-pc](http://celine-pc/doc/files/ThisPC/_constructor/open-command-prompt-here.html)
 [_constructor - xsjmikhaell30](http://xsjmikhaell30/doc/files/ThisPC/_constructor/open-command-prompt-here.html)
