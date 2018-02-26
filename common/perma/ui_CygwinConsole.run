@@ -1,0 +1,1 @@
+start c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe elevate C:\cygwin64\bin\mintty.exe -i /Cygwin-Terminal.ico -s 110,50 -e 
