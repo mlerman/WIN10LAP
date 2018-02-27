@@ -1277,8 +1277,9 @@ $githuburl="https://github.com/mlerman/WIN10LAP/tree/master".$display_link;
 &nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="pullpush" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/ui_ls_to_gdrive.bat','pullpush','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/google-drive-icon.png" title="Google drive listing" /></a>&nbsp;
 
 &nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="addreadmemd" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/add_readme-md.bat','addreadmemd','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/readme16.png" title="Add readme.md" /></a>&nbsp;
+<!-- not needed called directly from readme.md
 &nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="overwritenew" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/overwritenew.bat','addreadmemd','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/overwrite.jpg" title="overwrite new" /></a>&nbsp;
-
+-->
 
 &nbsp;<span><?php if (file_exists($dir."/.outtop")) { echo file_get_contents($dir."/.outtop");} ?></span>
 
