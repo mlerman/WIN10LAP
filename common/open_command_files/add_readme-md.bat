@@ -30,19 +30,23 @@ echo.>>readme.md
 rem echo [%currentfolder% - %HOST%]^(http://%HOST%%URLDIR%open-command-prompt-here.html^)>>readme.md
 set MACHINESERVING=win7-pc
 echo [%currentfolder% : %MACHINESERVING%]^(http://%MACHINESERVING%/doc/files/%THISPLACESLASH%/open-command-prompt-here.html^)>>readme.md
+echo - [new]^(http://%MACHINESERVING%/doc/files/common/prompt-action.php^?rawdisplay=1^&HOME_DIRECTORY=C:/UniServer/www/doc/files/%THISPLACESLASH%^&cmd=c:/UniServer/www/doc/files/common/open_command_files/overwritenew.bat^)>>readme.md
 echo.>>readme.md
 
 set MACHINESERVING=celine-pc
 echo [%currentfolder% : %MACHINESERVING%]^(http://%MACHINESERVING%/doc/files/%THISPLACESLASH%/open-command-prompt-here.html^)>>readme.md
-echo - [new]^(http://%MACHINESERVING%/doc/files/%THISPLACESLASH%/open-command-prompt-here.html^)>>readme.md
+echo - [new]^(http://%MACHINESERVING%/doc/files/common/prompt-action.php^?rawdisplay=1^&HOME_DIRECTORY=C:/UniServer/www/doc/files/%THISPLACESLASH%^&cmd=c:/UniServer/www/doc/files/common/open_command_files/overwritenew.bat^)>>readme.md
 echo.>>readme.md
 
 set MACHINESERVING=xsjmikhaell30
 echo [%currentfolder% : %MACHINESERVING%]^(http://%MACHINESERVING%/doc/files/%THISPLACESLASH%/open-command-prompt-here.html^)>>readme.md
+echo - [new]^(http://%MACHINESERVING%/doc/files/common/prompt-action.php^?rawdisplay=1^&HOME_DIRECTORY=C:/UniServer/www/doc/files/%THISPLACESLASH%^&cmd=c:/UniServer/www/doc/files/common/open_command_files/overwritenew.bat^)>>readme.md
+              
 echo.>>readme.md
 
 set MACHINESERVING=laptop-7kqrmtc0
 echo [%currentfolder% : %MACHINESERVING%]^(http://%MACHINESERVING%/doc/files/%THISPLACESLASH%/open-command-prompt-here.html^)>>readme.md
+echo - [new]^(http://%MACHINESERVING%/doc/files/common/prompt-action.php^?rawdisplay=1^&HOME_DIRECTORY=C:/UniServer/www/doc/files/%THISPLACESLASH%^&cmd=c:/UniServer/www/doc/files/common/open_command_files/overwritenew.bat^)>>readme.md
 echo.>>readme.md
 
 echo.>>readme.md
