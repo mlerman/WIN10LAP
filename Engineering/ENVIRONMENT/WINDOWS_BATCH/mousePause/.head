@@ -1,0 +1,31 @@
+Don't rename mp.bat. It is used elsewhere.
+
+MsgBox(prompt[, buttons][, title][, helpfile, context])
+
+Arguments
+prompt
+String expression displayed as the message in the dialog box. 
+The maximum length of prompt is approximately 1024 characters, 
+depending on the width of the characters used. 
+If prompt consists of more than one line, 
+you can separate the lines using a carriage return character (Chr(13)), 
+a linefeed character (Chr(10)), 
+or carriage return–linefeed character combination (Chr(13) & Chr(10)) 
+between each line.
+buttons
+Numeric expression that is the sum of values specifying 
+the number and type of buttons to display, 
+the icon style to use, the identity of the default button, 
+and the modality of the message box. See Settings section for values. 
+If omitted, the default value for buttons is 0.
+title
+String expression displayed in the title bar of the dialog box. 
+If you omit title, the application name is placed in the title bar.
+helpfile
+String expression that identifies the Help file to use to provide 
+context-sensitive Help for the dialog box. If helpfile is provided, 
+context must also be provided. Not available on 16-bit platforms.
+context
+Numeric expression that identifies the Help context number assigned 
+by the Help author to the appropriate Help topic. If context is provided, 
+helpfile must also be provided. Not available on 16-bit platforms.

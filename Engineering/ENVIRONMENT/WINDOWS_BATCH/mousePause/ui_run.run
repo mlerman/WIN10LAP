@@ -1,0 +1,11 @@
+@echo off
+rem call mp.bat %1
+
+set str=%1
+rem if empty put something
+if %str%.==. ( set str="Press OK" )
+
+rem remove quote
+set str=%str:"=%
+
+c:\UniServer\www\doc\files\ThisPC\install_MessageBox\MessageBox.exe /W:60 /C:Pause /M:%str%

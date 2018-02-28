@@ -1,0 +1,9 @@
+
+
+call yesno.bat "Vote Yes for toto and No for titi"
+echo YesNo is %YesNo%
+
+if %YesNo%.==6.  echo That's a Yes for toto president
+if %YesNo%.==7.  echo That's a No for titi president
+
+pause
