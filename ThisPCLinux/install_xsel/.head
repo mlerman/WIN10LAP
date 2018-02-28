@@ -1,0 +1,2 @@
+marche avec echo $PWD
+pwd | tout seul ne marche pas

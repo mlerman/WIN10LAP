@@ -1,0 +1,3 @@
+echo "Enter the command to run below"
+sudo apt-get install xsel
+read -p "Press [Enter] key to continue..."

@@ -1,0 +1,5 @@
+echo 'the happy face :) and content' | xsel -ib
+
+# show clipboard
+xsel -b
+read -p "Press [Enter] key to continue..."
