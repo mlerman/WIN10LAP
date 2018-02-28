@@ -1,0 +1,17 @@
+set NEXTURL1=http://mlerman-lap/doc/files/Engineering/ENVIRONMENT/WINDOWS_BATCH/create_html_popup_message_with_link/open-command-prompt-here.html
+set NEXTTARGET1=create_html_popup_message_with_link
+set NEXTURL2=
+set NEXTTARGET2=
+set NEXTURL3=
+set NEXTTARGET3=
+@echo off
+cls
+echo Hello...
+rem             icon     title        message
+notify-send -i important "important" "You should upgrade your software"
+notify-send -i error "error" "You should upgrade your software"
+notify-send -i notification "notification" "You should upgrade your software"
+
+rem optionally redirect with a next link uncomment as needed
+rem start C:\"Program Files (x86)"\Google\Chrome\Application\chrome.exe --app=http://mlerman-lap/common/next.php?step1=%NEXTURL1%^&target1=%NEXTTARGET1%^&step2=%NEXTURL2%^&target2=%NEXTTARGET2%^&step3=%NEXTURL3%^&target3=%NEXTTARGET3%
+rem pause

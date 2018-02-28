@@ -1,0 +1,19 @@
+Usage
+notify-send [-i ICON] [-t TIMEOUT] "TITLE" ["MESSAGE"]
+Options:
+ICON: specifies an icon to display. The possible values are: info | important | error. Default: info.
+
+TIMEOUT: specifies the timeout in milliseconds at which to expire the notification. Default: 10000
+
+TITLE: message title.
+
+MESSAGE: message text.
+
+Examples:
+notify-send "My Message"
+
+notify-send "Title" "Message"
+
+notify-send -i error "Error" "File not found"
+
+notify-send -i important "Attention!" "You should upgrade your software"
