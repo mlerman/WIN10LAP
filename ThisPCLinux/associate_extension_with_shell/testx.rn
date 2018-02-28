@@ -1,0 +1,13 @@
+gnome-terminal -x bash -c "echo \"toto titi\" && \
+echo \"more lines\" && \
+echo \"more lines\" && \
+echo \"more lines\" && \
+echo \"more lines\" && \
+echo \"more lines\" && \
+echo \"more lines\" && \
+echo \"more lines\" && \
+echo \"more lines\" && \
+echo \"more lines\" && \
+echo \"more lines\" && \
+read -p \"pause\" reply"
+

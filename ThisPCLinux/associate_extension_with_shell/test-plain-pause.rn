@@ -1,0 +1,3 @@
+echo test
+read -p "Press [Enter] key to continue..."
+sleep 5

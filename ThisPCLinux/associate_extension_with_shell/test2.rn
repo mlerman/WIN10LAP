@@ -1,0 +1,4 @@
+#ok
+#gnome-terminal -e 'sh -c "echo toto > toto.txt"'
+
+gnome-terminal -e 'sh -c "echo toto && read -p "pause" reply"'

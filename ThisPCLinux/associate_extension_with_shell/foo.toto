@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo this is foo.toto
+echo I am trying to associate this file with callrn
+echo using thunar "use custome command"
+read -p "Press [Enter] key to continue..."
+

@@ -1,0 +1,45 @@
+<img src="scr6.png"/>
+<hr/>
+<img src="scr5.png"/>
+<hr/>
+
+<img src="scr4.png"> 
+<hr/>
+/home/mikhaell/Downloads/test-plain-pause (16).rn: 31: read: arg count
+
+<hr/>
+<img src="scr3.png"> 
+<hr/>
+essayon d'associer avec thunar "use a custome command"
+un fichier .toto avec un script batch callrn
+
+On ne voit pas la fenetre
+qd c'est lance sans gnome-terminal
+voir si on peux forcer l'afficahge
+<hr/>
+associer avec cette commande ?
+gnome-terminal -e test.rn
+<hr/>
+<img src="scr2.png"> 
+use thunar
+Right click a file with the extension you want to change and select: "Open with other application" 
+You will end up with something that should look a lot like 
+the following and the association you make in thunar will apply to nautilus:
+<hr>
+le bouton add est devalide
+<img src="scr1.png"> 
+Je n'arrive pas a trouver le program shell
+ 
+Select such a file,
+Right-click,
+Choose Properties,
+Select the Open With tab,
+Click on Show other applications,
+Select your script (should be The script that manages .ext files),
+Click Set as default, and finally press
+Close.
+<hr> 
+ 
+<hr> 
+ 
+<hr> 

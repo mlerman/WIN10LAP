@@ -1,0 +1,11 @@
+echo "" 
+read -p "Press [Enter] key to continue..." reply
+#sleep 4
+gnome-terminal -x bash -c "echo \"toto titi\" && read -p \"pause\" reply"
+
+
+
+
+
+
+

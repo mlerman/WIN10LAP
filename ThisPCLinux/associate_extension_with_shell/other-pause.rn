@@ -1,0 +1,2 @@
+echo toto
+sed -n q </dev/tty
