@@ -1,0 +1,5 @@
+@echo off
+echo this is test.run
+echo params = %1 %2 etc
+echo all: %*
+pause

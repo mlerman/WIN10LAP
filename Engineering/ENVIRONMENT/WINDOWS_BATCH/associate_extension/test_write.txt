@@ -1,0 +1,2 @@
+if this file is copied over
+then the shared directory is writeable
