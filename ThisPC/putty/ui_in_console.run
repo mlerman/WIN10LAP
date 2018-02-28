@@ -1,0 +1,1 @@
+plink -ssh -l mlerman -pw normerel mlerman-vm-mint

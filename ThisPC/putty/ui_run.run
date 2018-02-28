@@ -1,0 +1,5 @@
+@echo off
+cls
+echo %cd%
+start putty.exe
+

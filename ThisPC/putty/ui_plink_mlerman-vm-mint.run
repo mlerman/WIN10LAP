@@ -1,0 +1,2 @@
+plink -ssh -l mlerman -pw normerel mlerman-vm-mint "export DISPLAY=:0; cd /home/user/files/Engineering/ENVIRONMENT/LINUX/uboot; ./build.rn; exit"
+pause
