@@ -1,0 +1,361 @@
+dir
+ls
+help
+path
+set
+pwd
+cd
+cd
+pwd
+dir
+dir
+dir
+pwd
+whoami
+help
+ver
+dir
+ls
+ls -l
+ls -a
+gl
+ls
+pwd
+cd
+echo %cd%
+echo toto
+whoami
+set
+cmd
+ping 10.52.20.31
+cmd
+ping 192.168.1.10
+ipconfig
+C:\"Program Files (x86)"\Google\Chrome\Application\chrome.exe --help
+C:\"Program Files (x86)"\Google\Chrome\Application\chrome.exe /?
+ping 192.168.245.133
+ping 192.168.245.133
+cd ..
+dir _svn /ad /s
+dir firewall /ad /s
+start /?
+psexec.exe 
+calc.exe
+calc.exe
+echo %cd%
+cd
+ssh
+sshpass
+plink --help
+plink -ssh -l mlerman -pw normerel mlerman-vm-mint
+plink -ssh -l mlerman -pw normerel mlerman-vm-mint "pwd; ls -l"
+exit
+plink mlerman-vm-mint
+plink -ssh -l mlerman -pw normerel mlerman-vm-mint "cd /home/user/files/Engineering/ENVIRONMENT/LINUX/uboot; ./build.rn"
+plink -ssh -l mlerman -pw normerel mlerman-vm-mint "export DISPLAY=:0; cd /home/user/files/Engineering/ENVIRONMENT/LINUX/uboot; ./build.rn; exit"
+ping git-server-ebu
+ping git-server-ebu
+net send localhost Some message to display
+Msg * "insert your message here" 
+Msg * "http://google.com" 
+mshta "about:<script>alert('Hello, world!');close()</script>"
+C:\"Program Files (x86)"\Google\Chrome\Application\chrome.exe --help
+C:\"Program Files (x86)"\Google\Chrome\Application\chrome.exe /?
+C:\"Program Files (x86)"\Google\Chrome\Application\chrome.exe --app=http://ntmio.com
+doskey
+doskey /?
+mp titi
+doskey /?
+mp toto
+mp
+wscript.exe /?
+mp
+doskey /?
+doskey /history
+mp
+p
+mp
+mp
+doskey /history
+doskey /?
+doskey /macros
+mp toto
+zip --help
+zip -h
+dir *.exe
+7za -h
+dir
+dir
+13_0_2_ZeroXIII.exe /?
+13_0_2_ZeroXIII.exe --help
+explorer
+explorer --help
+explorer /?
+explorer /select,c:\windows\calc.exe
+w32tm /query /configuration
+w32tm /query /configuration
+ping mlerman-vm-mint
+net use l: \\mlerman-vm-mint past33X. /user:mlerman 
+net use \\mlerman-vm-mint past33X. /user:mlerman 
+net use o: \\mlerman-vm-mint past33X. /user:mlerman 
+net use * \\mlerman-vm-mint
+net use * \\mlerman-vm-mint\lfiles
+net use \\mlerman-vm-mint\lfiles past33X. /user:mlerman
+net use z: /d
+paint
+winword
+cd C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\WINDOWS_BATCH\autohotkey!
+ipconfig
+ipconfig
+ping 10.52.20.31
+ping 169.254.94.43
+ping 10.52.20.31
+ping 169.254.94.43
+dir get*
+get_file_size_in_hex.bat 
+ping 169.254.94.50
+ping 169.254.94.50
+cd build\
+dir
+NaxosPOC.exe 
+ping 169.254.94.50
+ping 169.254.94.50
+NaxosPOC.exe 
+cd build\
+dir
+set
+setup_env_vars.bat 
+set > toto
+set
+set
+dir
+PathLengthChecker
+PathLengthChecker
+ipconfig
+ping 192.168.1.66
+ipconfig
+ipconfig /all
+PathLengthChecker
+ipconfig
+ping 192.168.1.66
+ipconfig
+ipconfig /all
+ping 192.168.22.22
+ping 192.168.22.40
+ping 192.168.1.66
+set
+echo %APPDATA%\Everything\Everything.ini
+echo %APPDATA%\Everything\Everything.ini
+Dir | Rename-Item -NewName { $_.Name -replace " ","_" }
+Dir 
+Dir |
+dir *.img >list
+cd
+dir
+dir *.img
+dir *.img > list
+type list
+autoexec
+pwd
+path
+for %%a in (*.*) do ( echo %%a )
+for %a in (*.*) do ( echo %a )
+autoexec
+pwd
+path
+for %%a in (*.*) do ( echo %%a )
+for %a in (*.*) do ( echo %a )
+findstr "Qualcomm" list
+findstr /I "USB Serial Port" list
+findstr /l "USB Serial Port" list
+findstr /x "USB Serial Port" list
+findstr /v "USB Serial Port" list
+findstr ""USB Serial Port"" list
+findstr "Serial Port" list
+findstr "USB Serial Port" list
+findstr /L "USB Serial Port" list
+findstr /R "USB Serial Port" list
+findstr /C:"USB Serial Port" list
+findstr /?
+dir /b
+hello.ps1 
+findstr /R "USB Serial Port" list
+findstr /C:"USB Serial Port" list
+findstr /?
+dir /b
+hello.ps1 
+ping win7-pc
+netstat
+ipconfig
+netstat
+ipconfig
+ping win7-pc -n 30
+ping win7-pc -?
+ping win7-pc -t
+gdb hellogdb.exe
+dir
+gdb hellogdb.exe
+echo http://win7-pc/doc/files/ThisPCLinux/install_zync_boot_bin/open-command-prompt-here.html#view
+start http://google.com
+start putty://127.0.0.1
+start ssh://127.0.0.1
+kitty_portable.exe -convert-dir
+dir
+plink
+plink -ssh -l mlerman -pw normerel mlerman-vm-mint "export DISPLAY=:0; cd /home/user/files/Engineering/ENVIRONMENT/LINUX/uboot; ./build.rn; exit"
+plink -ssh -l mlerman -pw normerel mlerman-vm-mint "export DISPLAY=:0; cd /home/user/files/Engineering/ENVIRONMENT/LINUX/uboot; ./build.rn; exit"
+http://win7-pc/s/r
+show_link.bat 
+ping http://l7-hdt
+ping l7-hdt
+tidy
+curl
+curl google.com
+curl www.google.com
+curl 
+curl --help
+tidy
+curl
+curl google.com
+curl www.google.com
+curl 
+curl --help
+WMIC
+WMIC /?
+wmic computersystem get name
+ping 198.105.254.130
+ping 192.168.1.72
+ping win7-pc.local
+ping win7-pc
+echo %HOSTNAME%
+set
+echo $HOST
+ping attlocal.net
+echo %HOST%
+ping win7-lap.attlocal.net
+ping win7-pc.attlocal.net
+ping win7-lap.attlocal.net
+ping win7-pc.attlocal.net
+dir
+ping win7-pc.attlocal.net
+dir
+dir
+ping win7-pc.attlocal.net
+dir
+echo %ConEmuDir%
+dir
+dir
+dir
+usermessage.vbs
+sleep 1
+sleep 2
+ipconfig /all
+java -version
+java -version
+PowerShell run.ps
+PowerShell run.ps
+tasklist
+tasklist chrome
+tasklist /?
+tasklist 
+tasklist
+tasklist chrome
+tasklist /?
+tasklist 
+git remote add origin https://github.com/mlerman/FizzBuzz.git
+commit -m "first commit"
+git commit -m "first commit"
+git remote add origin https://github.com/mlerman/Engineering-ENVIRONMENT-WINDOWS_LINUX-COMMAND_LINE_C-fizzbuzz.git
+git push -u origin master
+path
+make
+gcc
+path
+make
+gcc
+gcc --version
+path
+gcc
+gcc --version
+path
+cls
+ipconfig
+cls
+ipconfig
+arp -a
+arp -a
+ping 172.20.4.247 
+ping 172.20.4.88
+ipconfig
+ping 172.20.0.154
+ping 172.20.4.88
+ipconfig
+ping 172.20.0.154
+ls
+telnet 10.0.0.1
+telnet 10.255.244.105
+ping 10.172.58.32
+ipconfig /flushdns
+ipconfig /flushdns
+c:\UniServer\www\doc\files\ThisPC\install_kitty\kitty_portable.exe
+ipconfig
+ipconfig /renew
+curl
+curl --help
+curl
+curl --help
+ping -h
+ping -n 1 google.com
+hostname google.com
+hostname 127.0.0.1
+nslookup siliconkit.com
+nslookup google.com
+pathping google.com
+ping -h
+path
+path
+telnet 10.255.244.105
+telnet --help
+git init --shared=0777
+git init --shared=0777
+git init --shared=0777
+git init --shared=0777
+set THISPLACE=Sandbox-test
+echo %THISPLACE%
+curl -u 'mlerman' https://api.github.com/user/repos -d '{"name":"%THISPLACE%"}'
+curl -u mlerman https://api.github.com/user/repos -d '{"name":"%THISPLACE%"}'
+git remote add origin https://github.com/mlerman/ATCOMCAST/%THISPLACE%.git
+ping siliconkit.com
+ping google.com
+ipconfig
+ipconfig
+ipconfig /all
+ipconfig /all
+ssh -i /home/mlerman/.ssh/id_rsa mlerma201@96.118.162.135
+ls /
+cd /
+pwd
+ls
+cd home
+cd
+ls
+ls /
+mkdir /home/mlerman/.ssh
+md /home/mlerman/.ssh
+md /home
+mkdir /home
+ssh -i Mint_keys/id_rsa mlerma201@96.118.162.135
+pwd
+ssh
+path
+ping 10.255.244.103
+ping 10.255.244.105
+ping 10.255.244.41
+telnet /?
+telnet /?
+echo %ConEmuDir%
+echo %CMDER_ROOT%
+echo toto
+echo titi
+echo tutu
+toto

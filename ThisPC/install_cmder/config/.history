@@ -1,0 +1,152 @@
+ssh --help
+scp
+sleep 3
+dir
+UUDECODE.EXE 
+UUDECODE.EXE favicon.ico 
+ping 10.255.244.105
+ipconfig
+ls
+uuencode ui_get.run 
+base64
+base64 --help
+base64 --help
+ping 10.255.244.105
+ipconfig
+ls
+uuencode ui_get.run 
+base64 --help
+base64 -d test_self_heal
+base64 -d out.b64
+base64 -d test_self_heal.b64
+base64 -d test_self_heal_temp.b64 
+base64 -d test_self_heal_temp
+findstr /?
+more  test_self_heal_temp.b64 
+more  /y test_self_heal_temp.b64 
+more +3 test_self_heal_temp.b64 
+more +58 test_self_heal_temp.b64 
+more +58 putty.log 
+more +10 putty.log 
+more +20 putty.log 
+more /?
+type /?
+sfk
+c:\UniServer\www\doc\files\ThisPC\install_sfk\sfk.exe tail -line=48 test_self_heal_temp.b64
+c:\UniServer\www\doc\files\ThisPC\install_sfk\sfk.exe tail  test_self_heal_temp.b64
+c:\UniServer\www\doc\files\ThisPC\install_sfk\sfk.exe tail -help
+c:\UniServer\www\doc\files\ThisPC\install_sfk\sfk.exe /?
+c:\UniServer\www\doc\files\ThisPC\install_sfk\sfk.exe 
+c:\UniServer\www\doc\files\ThisPC\install_sfk\sfk.exe tail
+cls
+c:\UniServer\www\doc\files\ThisPC\install_sfk\sfk.exe tail -lines=48 test_self_heal_temp.b64
+c:\UniServer\www\doc\files\ThisPC\install_sfk\sfk.exe head
+pscp
+base64
+base64 -d
+base64 -d >toto
+snmpwalk
+SnmpWalk.exe
+ping -6 2001:0558:4000:001a:aeb3:13ff:fe03:6372
+del /?
+ping 2001:0558:4000:001a:aeb3:13ff:fe02:d462
+ping 2001:0558:4000:001a:aeb3:13ff:fe02:d462
+ping 2001:0558:4000:001a:aeb3:13ff:fe02:d462
+ping win7-pc
+c:\UniServer\www\doc\files\ThisPC\install_pstools\PsExec64.exe -i 1 -s -d cmd /K cd C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\frequent_copy_paste && C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\frequent_copy_paste\ui_test.run  2>&1 && exit
+jq
+dir
+jq-win64.exe 
+jq-win64.exe 
+cd temp
+dir
+type output.json | c:\UniServer\www\doc\files\ThisPC\install_jq\jq-win64.exe
+c:\UniServer\www\doc\files\ThisPC\install_jq\jq-win64.exe
+c:\UniServer\www\doc\files\ThisPC\install_jq\jq-win64.exe output.json 
+c:\UniServer\www\doc\files\ThisPC\install_jq\jq-win64.exe ".[] | .download_url" output.json 
+ping 127.0.0.1:3121
+ping 127.0.0.1
+c:\Xilinx\SDK\2017.2\bin\xsct.bat < xsctcmd.txt
+start c:\UniServer\www\doc\files\ThisPC\install_kitty\kitty_portable.exe -sendcmd "bootm 0x30000000\n"
+ping 192.168.1.1
+ping 192.168.1.3
+sh.SendKeys("tt");
+sh
+sh --help
+sh --help
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe win show title "project_1.sdk - Debug - hello_world/src/helloworld.c - Xilinx SDK"
+nircmd
+nircmd
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe win show class "Notepad++"
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe win show class Notepad++
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe win show class 
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe win show  
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmd.exe win show class "Notepad++"
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe win show class "Notepad++"
+sleep 10
+git
+git
+git
+path
+git
+git
+curl
+set
+ping proxy:8080
+ping proxy
+sh --help
+sh --help
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe win show title "project_1.sdk - Debug - hello_world/src/helloworld.c - Xilinx SDK"
+nircmd
+nircmd
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe win show class "Notepad++"
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe win show class Notepad++
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe win show class 
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe win show  
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmd.exe win show class "Notepad++"
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe win show class "Notepad++"
+sleep 10
+git
+git
+git
+path
+git
+git
+curl
+set
+ping proxy:8080
+ping proxy
+git commit -am "fixing conflict" .time
+git commit -m "fixing conflict" .time
+git mergetool
+git merge --abort
+git config --global user.email "michael_lerman@yahoo.com"
+git config --global user.name "Mikhael Lerman"
+git config --global core.safecrlf false
+git commit -m "after mergetool"
+git status
+cd ..
+cd Engineering\
+cd ENVIRONMENT\
+cd WINDOWS_BATCH\
+cd github_commands\
+cd ATCOMCAST\
+dir
+cd \Temp\
+ui_pull_from_github.bat 
+git commit -m "commit from command line"
+git status
+tracert 192.168.1.100
+ping 192.168.1.100
+ping -c 2 172.19.31.254
+ping 172.19.31.254
+ping --help
+ping --help
+ping laptop-7kqrmtc0
+ping xsjmikhaell50
+c:\UniServer\www\files\common\constructor_new.bat C:\UniServer\www\doc\files\ThisPCLinux\_constructor install_xAutoClick
+echo un >test
+echo deux >test.0
+echo trois >test.1
+echo quatre >test.2
+rclone config

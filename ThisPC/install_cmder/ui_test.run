@@ -1,0 +1,4 @@
+@echo off
+cls
+Cmder.exe /?
+pause
