@@ -1,3 +1,5 @@
+<img src="scr1.png"/> 
+<hr/> 
 C:UniServerwwwdocfilesThisPCinstall_rclone (master)
 λ rclone config
 2017/11/25 17:04:32 NOTICE: Config file "C:\Users\win7\.config\rclone\rclone.conf" not found - using defaults

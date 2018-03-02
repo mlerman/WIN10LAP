@@ -10,3 +10,4 @@ goto :EOF
 for %%a in (*.msi) do (
   start %%a
 )
+pause
