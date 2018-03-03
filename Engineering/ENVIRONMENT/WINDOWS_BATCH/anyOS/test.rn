@@ -1,4 +1,4 @@
-:; echo "Hi, I’m ${SHELL}."; exit $?
+:; echo "Hi, I am ${SHELL}."; read -p pause; exit $?
 @ECHO OFF
 ECHO I'm %COMSPEC%
 pause
