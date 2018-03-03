@@ -1,4 +1,6 @@
-:; echo "Hi, I am ${SHELL}."; read -p pause; exit $?
-@ECHO OFF
-ECHO I'm %COMSPEC%
-pause
+#|| goto :batch_part
+ echo $PATH
+#exiting the bash part
+exit
+:batch_part
+ echo %PATH%
