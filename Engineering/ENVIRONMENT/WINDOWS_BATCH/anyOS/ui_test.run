@@ -1,6 +1,8 @@
 #|| goto :batch_part
- echo $PATH
+ echo $SHELL
+ read -p pause
 #exiting the bash part
 exit
 :batch_part
- echo %PATH%
+ echo %COMSPEC%
+ pause
