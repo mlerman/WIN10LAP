@@ -130,9 +130,43 @@ if ($_SERVER["HTTP_HOST"]=="win7-pc") {
 if ($_SERVER["HTTP_HOST"]=="xsjmikhaell30") {
   $prefix_string="";
 }
+
+
+// HTTP_USER_AGENT
+//file_put_contents("debug.txt", "HTTP_USER_AGENT : ".$_SERVER["HTTP_USER_AGENT"]."\n" , FILE_APPEND);
+
+file_put_contents("debug.txt", "les var d'environement sans utilise GET mais avec le referer\n" , FILE_APPEND);
+if($host=="") $host=$_SERVER["HTTP_HOST"];
+file_put_contents("debug.txt", "HTTP_HOST : ".$host."\n" , FILE_APPEND);
+// REQUEST_URI
+file_put_contents("debug.txt", "REQUEST_URI : ".$_SERVER["REQUEST_URI"]."\n" , FILE_APPEND);
+// REQUEST_URI : /doc/files/common/downloadfile.php?fname=openTerminal.rn&targetdir=C:\UniServer\www\doc\files\common&targetfile=common&urldir=/doc/files/common/&host=celine-pc&perma=C:\UniServer\www\doc\files\common\permalinux
+// HTTP_REFERER
+file_put_contents("debug.txt", "HTTP_REFERER : ".$_SERVER["HTTP_REFERER"]."\n" , FILE_APPEND);
+
+$str_ref=$_SERVER["HTTP_REFERER"];
+$pos=strrpos($str_ref,"/");
+//file_put_contents("debug.txt", "pos : ".$pos."\n" , FILE_APPEND);
+$str_path=substr($str_ref,0,$pos);
+file_put_contents("debug.txt", "str_path : ".$str_path."\n" , FILE_APPEND);
+$pos=strrpos($str_path,"/");
+$prjname=substr($str_ref,$pos+1);
+$pos=strrpos($prjname,"/");
+$prjname=substr($prjname,0,$pos);
+//file_put_contents("debug.txt", "prjname : ".$prjname."\n" , FILE_APPEND);
+$pos=strpos($str_path,"/doc/");
+$linpath=substr($str_path,$pos);
+$linpath=str_replace("/doc/files/","/home/user/files/",$linpath);
+file_put_contents("debug.txt", "linpath : ".$linpath."\n" , FILE_APPEND);
+$winpathforwardslash=str_replace("/home/user/files/","c:/UniServer/www/doc/files/",$linpath);
+file_put_contents("debug.txt", "winpathforwardslash : ".$winpathforwardslash."\n" , FILE_APPEND);
+$winpath=str_replace("/","\\",$winpathforwardslash);
+file_put_contents("debug.txt", "winpath : ".$winpath."\n" , FILE_APPEND);
+
 ///////////////////////////////////////////// Linux ///////////////////////////////////
 if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 
+  $prjpath=$linpath;
   $targetdir = rtrim($targetdir, '\\');
 
   // OK the client is Linux but how if the link was for Windows
@@ -180,10 +214,21 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
     //$text .="pwd "."\n";
     //$text.="cd ".$linTargetdir." "."\n";
 
+    // $prjname
+    $text.="# from REFERER :"."\n";    
+    $text.="export PRJNAME=\"".$prjname."\"; "."\n";
+    // $linpath
+    $text.="export LINPATH=\"".$linpath."\"; "."\n";
+    // $winpathforwardslash
+    $text.="export WINPATHFORWARDSLASH=\"".$winpathforwardslash."\"; "."\n";
+    // $winpath
+    $text.="export WINPATH=\"".$winpath."\"; "."\n";
+    $text.="export PRJPATH=\"".$prjpath."\"; "."\n";
     $text.="export LINDIRECTORY=\"".$linTargetdir."\"; "."\n";
     $text.="export TARGETDIR=\"".$targetdir."\"; "."\n";
     $text.="export TARGETFILE=\"".$targetfile."\"; "."\n";
     $text.="export IHOST=\"".$_SERVER["HTTP_HOST"]."\"; "."\n";
+    $text.="# from GET :"."\n";    
     $text.="export HOST=\"".$host."\"; "."\n";
     $text.="export URLDIR=\"".$urldir."\"; "."\n";
     $text.="export URL=\"".$url."\"; "."\n";
@@ -374,6 +419,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 
 ///////////////////////////////////////////// Windows 7 ///////////////////////////////////
 
+    $prjpath=$winpath;
 
 
 
@@ -413,7 +459,16 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
   $text.="rem perma is ".$perma."\r\n";
   //$text.="rem Change directory to ".$targetdirxp." is added by the server script.\r\n";
   $text.="rem Change directory added by the server script.\r\n";
+  $text.="rem from REFERER :\r\n";
+  $text.="set PRJNAME=".$prjname."\r\n";
+  $text.="set LINPATH=".$linpath."\r\n";
+//$winpathforwardslash  
+  $text.="set WINPATHFORWARDSLASH=".$winpathforwardslash."\r\n";
+  $text.="set WINPATH=".$winpath."\r\n";
+  $text.="set PRJPATH=".$prjpath."\r\n";
+
   $text.="set HOST=".$host."\r\n";
+  $text.="rem from GET :\r\n";
   $text.="set URLDIR=".$urldir."\r\n";
   $text.="set TARGETDIR=".$targetdirxp."\r\n";
   $text.="set TARGETFILE=".$targetfile."\r\n";

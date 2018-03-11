@@ -1,3 +1,55 @@
-set toto=titi
-echo %toto%
-pause
+les var d'environement sans utilise GET mais avec le referer
+HTTP_HOST : celine-pc
+REQUEST_URI : /doc/files/common/downloadfile.php?fname=openTerminal.rn&targetdir=C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell&targetfile=shell&urldir=/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell/&host=celine-pc&perma=C:\UniServer\www\doc\files\common\permalinux
+HTTP_REFERER : http://celine-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell/open-command-prompt-here.html
+str_path : http://celine-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+linpath : /home/user/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+winpathforwardslash : c:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+les var d'environement sans utilise GET mais avec le referer
+HTTP_HOST : celine-pc
+REQUEST_URI : /doc/files/common/downloadfile.php?fname=openTerminal.rn&targetdir=C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell&targetfile=shell&urldir=/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell/&host=celine-pc&perma=C:\UniServer\www\doc\files\common\permalinux
+HTTP_REFERER : http://celine-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell/open-command-prompt-here.html
+str_path : http://celine-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+linpath : /home/user/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+winpathforwardslash : c:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+winpath : c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell
+les var d'environement sans utilise GET mais avec le referer
+HTTP_HOST : celine-pc
+REQUEST_URI : /doc/files/common/downloadfile.php?fname=openTerminal.rn&targetdir=C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell&targetfile=shell&urldir=/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell/&host=celine-pc&perma=C:\UniServer\www\doc\files\common\permalinux
+HTTP_REFERER : http://celine-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell/open-command-prompt-here.html
+str_path : http://celine-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+linpath : /home/user/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+winpathforwardslash : c:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+winpath : c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell
+les var d'environement sans utilise GET mais avec le referer
+HTTP_HOST : celine-pc
+REQUEST_URI : /doc/files/common/downloadfile.php?fname=openTerminal.rn&targetdir=C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell&targetfile=shell&urldir=/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell/&host=celine-pc&perma=C:\UniServer\www\doc\files\common\permalinux
+HTTP_REFERER : http://celine-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell/open-command-prompt-here.html
+str_path : http://celine-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+linpath : /home/user/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+winpathforwardslash : c:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+winpath : c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell
+les var d'environement sans utilise GET mais avec le referer
+HTTP_HOST : celine-pc
+REQUEST_URI : /doc/files/common/downloadfile.php?fname=openTerminal.rn&targetdir=C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell&targetfile=shell&urldir=/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell/&host=celine-pc&perma=C:\UniServer\www\doc\files\common\permalinux
+HTTP_REFERER : http://celine-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell/open-command-prompt-here.html
+str_path : http://celine-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+linpath : /home/user/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+winpathforwardslash : c:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+winpath : c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell
+les var d'environement sans utilise GET mais avec le referer
+HTTP_HOST : celine-pc
+REQUEST_URI : /doc/files/common/downloadfile.php?fname=edit_this.rn&targetdir=C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell&targetfile=test2.rn&perma=C:/UniServer/www/doc/files/common/permalinux
+HTTP_REFERER : http://celine-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell/open-command-prompt-here.html
+str_path : http://celine-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+linpath : /home/user/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+winpathforwardslash : c:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+winpath : c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell
+les var d'environement sans utilise GET mais avec le referer
+HTTP_HOST : celine-pc
+REQUEST_URI : /doc/files/common/downloadfile.php?fname=test2.rn&targetdir=C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell&term=gnome-terminal
+HTTP_REFERER : http://celine-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell/open-command-prompt-here.html
+str_path : http://celine-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+linpath : /home/user/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+winpathforwardslash : c:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
+winpath : c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell
