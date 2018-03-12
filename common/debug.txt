@@ -53,3 +53,59 @@ str_path : http://celine-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
 linpath : /home/user/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
 winpathforwardslash : c:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/shell
 winpath : c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\shell
+les var d'environement sans utilise GET mais avec le referer
+HTTP_HOST : xsjmikhaell30
+REQUEST_URI : /doc/files/common/downloadfile.php?fname=ui_test.run&targetdir=C:\UniServer\www\doc\files\common&admin=0&param1=
+HTTP_REFERER : http://xsjmikhaell30/doc/files/common/open-command-prompt-here.html
+str_path : http://xsjmikhaell30/doc/files/common
+linpath : /home/user/files/common
+winpathforwardslash : c:/UniServer/www/doc/files/common
+winpath : c:\UniServer\www\doc\files\common
+les var d'environement sans utilise GET mais avec le referer
+HTTP_HOST : xsjmikhaell30
+REQUEST_URI : /doc/files/common/downloadfile.php?fname=ui_edit_this.run&targetdir=C:\UniServer\www\doc\files\common&targetfile=ui_test.run&perma=C:\UniServer\www\doc\files\common\perma
+HTTP_REFERER : http://xsjmikhaell30/doc/files/common/open-command-prompt-here.html
+str_path : http://xsjmikhaell30/doc/files/common
+linpath : /home/user/files/common
+winpathforwardslash : c:/UniServer/www/doc/files/common
+winpath : c:\UniServer\www\doc\files\common
+les var d'environement sans utilise GET mais avec le referer
+HTTP_HOST : xsjmikhaell30
+REQUEST_URI : /doc/files/common/downloadfile.php?fname=ui_test.run&targetdir=C:\UniServer\www\doc\files\common&admin=0&param1=&param1=
+HTTP_REFERER : http://xsjmikhaell30/doc/files/common/open-command-prompt-here.html
+str_path : http://xsjmikhaell30/doc/files/common
+linpath : /home/user/files/common
+winpathforwardslash : c:/UniServer/www/doc/files/common
+winpath : c:\UniServer\www\doc\files\common
+les var d'environement sans utilise GET mais avec le referer
+HTTP_HOST : xsjmikhaell30
+REQUEST_URI : /doc/files/common/downloadfile.php?fname=ui_test.run&targetdir=C:\UniServer\www\doc\files\common&admin=0&param1=&param1=&param1=
+HTTP_REFERER : http://xsjmikhaell30/doc/files/common/open-command-prompt-here.html
+str_path : http://xsjmikhaell30/doc/files/common
+linpath : /home/user/files/common
+winpathforwardslash : c:/UniServer/www/doc/files/common
+winpath : c:\UniServer\www\doc\files\common
+les var d'environement sans utilise GET mais avec le referer
+HTTP_HOST : xsjmikhaell30
+REQUEST_URI : /doc/files/common/downloadfile.php?fname=ui_test.run&targetdir=C:\UniServer\www\doc\files\common&admin=0&param1=&param1=&param1=&param1=
+HTTP_REFERER : http://xsjmikhaell30/doc/files/common/open-command-prompt-here.html
+str_path : http://xsjmikhaell30/doc/files/common
+linpath : /home/user/files/common
+winpathforwardslash : c:/UniServer/www/doc/files/common
+winpath : c:\UniServer\www\doc\files\common
+les var d'environement sans utilise GET mais avec le referer
+HTTP_HOST : xsjmikhaell30
+REQUEST_URI : /doc/files/common/downloadfile.php?fname=ui_edit_this.run&targetdir=C:\UniServer\www\doc\files\common&targetfile=test.rn&perma=C:\UniServer\www\doc\files\common\perma
+HTTP_REFERER : http://xsjmikhaell30/doc/files/common/open-command-prompt-here.html
+str_path : http://xsjmikhaell30/doc/files/common
+linpath : /home/user/files/common
+winpathforwardslash : c:/UniServer/www/doc/files/common
+winpath : c:\UniServer\www\doc\files\common
+les var d'environement sans utilise GET mais avec le referer
+HTTP_HOST : xsjmikhaell30
+REQUEST_URI : /doc/files/common/downloadfile.php?fname=test.rn&targetdir=C:\UniServer\www\doc\files\common&term=gnome-terminal
+HTTP_REFERER : http://xsjmikhaell30/doc/files/common/open-command-prompt-here.html
+str_path : http://xsjmikhaell30/doc/files/common
+linpath : /home/user/files/common
+winpathforwardslash : c:/UniServer/www/doc/files/common
+winpath : c:\UniServer\www\doc\files\common

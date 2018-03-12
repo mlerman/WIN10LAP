@@ -1,1 +1,7 @@
+echo $PRJNAME
+echo $LINPATH
+echo $WINPATHFORWARDSLASH
+echo $WINPATH
+echo $PRJPATH
+echo $HOST
 read -p "Pause" reply
