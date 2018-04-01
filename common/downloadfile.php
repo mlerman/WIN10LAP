@@ -135,20 +135,20 @@ if ($_SERVER["HTTP_HOST"]=="xsjmikhaell30") {
 // HTTP_USER_AGENT
 //file_put_contents("debug.txt", "HTTP_USER_AGENT : ".$_SERVER["HTTP_USER_AGENT"]."\n" , FILE_APPEND);
 
-file_put_contents("debug.txt", "les var d'environement sans utilise GET mais avec le referer\n" , FILE_APPEND);
+//file_put_contents("debug.txt", "les var d'environement sans utilise GET mais avec le referer\n" , FILE_APPEND);
 if($host=="") $host=$_SERVER["HTTP_HOST"];
-file_put_contents("debug.txt", "HTTP_HOST : ".$host."\n" , FILE_APPEND);
+//file_put_contents("debug.txt", "HTTP_HOST : ".$host."\n" , FILE_APPEND);
 // REQUEST_URI
-file_put_contents("debug.txt", "REQUEST_URI : ".$_SERVER["REQUEST_URI"]."\n" , FILE_APPEND);
+//file_put_contents("debug.txt", "REQUEST_URI : ".$_SERVER["REQUEST_URI"]."\n" , FILE_APPEND);
 // REQUEST_URI : /doc/files/common/downloadfile.php?fname=openTerminal.rn&targetdir=C:\UniServer\www\doc\files\common&targetfile=common&urldir=/doc/files/common/&host=celine-pc&perma=C:\UniServer\www\doc\files\common\permalinux
 // HTTP_REFERER
-file_put_contents("debug.txt", "HTTP_REFERER : ".$_SERVER["HTTP_REFERER"]."\n" , FILE_APPEND);
+//file_put_contents("debug.txt", "HTTP_REFERER : ".$_SERVER["HTTP_REFERER"]."\n" , FILE_APPEND);
 
 $str_ref=$_SERVER["HTTP_REFERER"];
 $pos=strrpos($str_ref,"/");
 //file_put_contents("debug.txt", "pos : ".$pos."\n" , FILE_APPEND);
 $str_path=substr($str_ref,0,$pos);
-file_put_contents("debug.txt", "str_path : ".$str_path."\n" , FILE_APPEND);
+//file_put_contents("debug.txt", "str_path : ".$str_path."\n" , FILE_APPEND);
 $pos=strrpos($str_path,"/");
 $prjname=substr($str_ref,$pos+1);
 $pos=strrpos($prjname,"/");
@@ -157,11 +157,11 @@ $prjname=substr($prjname,0,$pos);
 $pos=strpos($str_path,"/doc/");
 $linpath=substr($str_path,$pos);
 $linpath=str_replace("/doc/files/","/home/user/files/",$linpath);
-file_put_contents("debug.txt", "linpath : ".$linpath."\n" , FILE_APPEND);
+//file_put_contents("debug.txt", "linpath : ".$linpath."\n" , FILE_APPEND);
 $winpathforwardslash=str_replace("/home/user/files/","c:/UniServer/www/doc/files/",$linpath);
-file_put_contents("debug.txt", "winpathforwardslash : ".$winpathforwardslash."\n" , FILE_APPEND);
+//file_put_contents("debug.txt", "winpathforwardslash : ".$winpathforwardslash."\n" , FILE_APPEND);
 $winpath=str_replace("/","\\",$winpathforwardslash);
-file_put_contents("debug.txt", "winpath : ".$winpath."\n" , FILE_APPEND);
+//file_put_contents("debug.txt", "winpath : ".$winpath."\n" , FILE_APPEND);
 
 ///////////////////////////////////////////// Linux ///////////////////////////////////
 if(($CurrOS=='Linux')||($CurrOS=='Android')) {
