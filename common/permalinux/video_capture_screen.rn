@@ -1,0 +1,26 @@
+# minimize the window
+#sleep 1 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin 
+
+COUNTER=1
+echo vid$COUNTER.mp4
+while [ -f ./vid$COUNTER.mp4 ]; do
+  echo The counter is $COUNTER
+  let COUNTER=COUNTER+1 
+done
+echo available filename is vid$COUNTER.mp4
+#if [ ! -f ./vid$COUNTER.mp4 ]; then
+#cp /home/user/files/Blank/blank.mp4 vid$COUNTER.mp4
+#fi 
+
+#cp .head temp
+#echo '<img src="vid'$COUNTER'.mp4"/>' > .head
+#echo '<hr/>' >> .head
+#cat temp>>.head
+#rm temp
+
+gnome-terminal -e 'vlc screen:// -I rc --one-instance --screen-left=60 --screen-top=60 --screen-width=1000 --screen-height=800 --sout "#transcode{vcodec=h264,vb=800,fps=5,scale=1,acodec=none}:duplicate{dst=std{access=file,mux=mp4,dst='vid$COUNTER.mp4'}}"'
+
+#read -p "Press [Enter] key to continue..."
+
+
+
