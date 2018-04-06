@@ -1,0 +1,11 @@
+TODO:
+voir comment on peut appeler une fonction de la fenetre editor a partir de 
+la fenetre open_command-line-prompt-here
+puis executer top.ICEcoder.goToLine()
+ou faire d'autres control highlight search etc
+<hr/>
+TODO:
+ouvrir la page de l'editeur si elle n'est pas deja ouverte
+mettre avec elfinder
+<hr>
+pass: numero cherry

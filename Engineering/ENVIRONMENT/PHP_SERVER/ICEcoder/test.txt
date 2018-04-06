@@ -1,0 +1,8 @@
+this is a test 
+file
+for IceCoder
+located at /doc/test.txt
+test in the console of index.php (the file manager panel on the left)
+with
+top.ICEcoder.openFile("/doc/test.txt")
+Undefined mais ca marche

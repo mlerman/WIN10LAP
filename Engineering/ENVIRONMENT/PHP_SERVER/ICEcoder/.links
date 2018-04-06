@@ -1,0 +1,10 @@
+ 
+<a href='http://win7-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/' target='editor'>test link</a> a editer, premier click, s'ouvre dans une nouvelle tab<br/>
+<a href='#' onclick='alert("toto")' >toto</a><br/>
+<a href='#' onclick='wdw = window.open("", "editor"); wdw.fAlert(); return false;' >call fAlert() in another frame</a><br/>
+<a href='#' onclick='wdw = window.open("", "editor"); wdw.open_test_txt(); return false;' >call open_test_txt() in another frame</a><br/>
+<a href='#' onclick='wdw = window.open("", "editor"); wdw.open_editor_path("/Blank/test.txt"); return false;' >call open_editor_path(path) in another frame</a><br/>
+<a href='#' onclick='openOnce("http://win7-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/", "editor", "/Blank/test.txt");  return false;' >call open_editor_path(path) in another frame and openOnce()</a><br/>
+<br/>
+<a href='https://icecoder.net/'>https://icecoder.net/</a><br/>
+<a href='http://win7-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/openFile.php?target=/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/test.txt'>http://win7-pc/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/openFile.php?target=/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder/test.txt</a> Ne marche pas<br/>
