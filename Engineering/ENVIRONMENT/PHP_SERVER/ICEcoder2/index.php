@@ -344,6 +344,9 @@ ICEcoder.setLayout('dontSetEditor');
 function fAlert() {
     alert('fAlert dans index.php');
 }
+
+var editorCallBack = function() { }; //reference holder only
+
 function open_test_txt() {
     top.ICEcoder.openFile('/Blank/test.txt');
 }
