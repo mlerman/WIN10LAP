@@ -864,16 +864,26 @@ if (typeof obj === 'undefined') {
 
 var ICEcoderWin;
 
+function EditorIsNowOpened (file) {
+	alert("coucou");
+	//ICEcoderWin.open_editor_path(file);
+}
+
+
 function openOnce(url, target, file){
-    // open a blank "target" window
-    // or get the reference to the existing "target" window
     var ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50', true);
-	//ICEcoderWin = winref;
-	
+
+
+	//ICEcoderWin.onload = function() { ICEcoderWin.editorCallBack = EditorIsNowOpened; };
+	//ICEcoderWin.onload = function() { alert("tutu"); };
+	//ICEcoderWin.addEventListener('DOMContentLoaded', function() { alert("tutu"); }, false);
+	//TODO il n y a rien qui marche, faire example dans projet separer pour detecter qu'une fenetre a fini de loader
+
     // if the "target" window was just opened, change its url
     if(ICEcoderWin.location.href === 'about:blank'){
         ICEcoderWin.location.href = url;
     }
+	
 	
 	ICEcoderWin.open_editor_path(file);
 	// test go to line 3
@@ -1025,7 +1035,7 @@ if(isNaN(total)) {
 
  totalBeforeIncrement=total;
  console.log("time stored in localStorage: "+totalBeforeIncrement);
- totalFromFile=<?php echo $timeFromFileLast; ?>;
+ totalFromFile=<?php echo $timeFromFileLast; ?>
  console.log("time read from file .time: "+totalFromFile);
 
  if (totalFromFile != totalBeforeIncrement) {
