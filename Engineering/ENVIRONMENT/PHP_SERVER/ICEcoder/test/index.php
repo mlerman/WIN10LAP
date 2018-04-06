@@ -22,6 +22,7 @@ unitTestResults.innerHTML = "";
 // Set test file name & location
 $testFile = "test-file1.txt";
 $testFileFullPath = str_replace("\\","/",dirname($_SERVER['PHP_SELF']))."/".$testFile;
+//file_put_contents("debug.txt",$testFileFullPath."\n", FILE_APPEND);
 // Delete any existing test file and create a new one
 if (file_exists($testFile)) {unlink ($testFile);};
 $fh = fopen($testFile, 'w') or die("<script>noCreate='FAIL Could not create test file';console.log(noCreate);unitTestResults.innerHTML = noCreate;</script>");

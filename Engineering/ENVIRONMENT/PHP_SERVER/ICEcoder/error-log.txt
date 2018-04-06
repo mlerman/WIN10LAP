@@ -1,0 +1,7 @@
+[06-Apr-2018 21:49:50 Europe/London] PHP Notice:  Undefined index: file in C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\ICEcoder\lib\file-control-xhr.php on line 25
+[06-Apr-2018 21:49:50 Europe/London] PHP Notice:  Undefined variable: finalAction in C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\ICEcoder\lib\file-control-xhr.php on line 604
+[06-Apr-2018 21:49:50 Europe/London] PHP Notice:  Undefined index: timeStart in C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\ICEcoder\lib\file-control-xhr.php on line 605
+[06-Apr-2018 21:49:50 Europe/London] PHP Notice:  Undefined variable: doNext in C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\ICEcoder\lib\file-control-xhr.php on line 609
+[06-Apr-2018 21:49:52 Europe/London] PHP Warning:  file_get_contents(http://icecoder.net/latest-version): failed to open stream: HTTP request failed!  in C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\ICEcoder\lib\file-control-xhr.php on line 545
+[06-Apr-2018 21:49:52 Europe/London] PHP Warning:  filemtime(): stat failed for http://icecoder.net/latest-version in C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\ICEcoder\lib\file-control-xhr.php on line 590
+[06-Apr-2018 21:49:52 Europe/London] PHP Warning:  filesize(): stat failed for http://icecoder.net/latest-version in C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\ICEcoder\lib\file-control-xhr.php on line 599
