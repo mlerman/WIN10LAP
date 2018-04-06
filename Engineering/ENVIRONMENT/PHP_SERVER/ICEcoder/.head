@@ -1,5 +1,9 @@
+<img src="scr2.png"/> 
+<hr/> 
+<img src="scr1.png"/> 
+<hr/> 
 TODO:
-voir comment on peut appeler une fonction de la fenetre editor a partir de 
+voir comment on peut appeler une fonction de la fenetre editor a partir de
 la fenetre open_command-line-prompt-here
 puis executer top.ICEcoder.goToLine()
 ou faire d'autres control highlight search etc
