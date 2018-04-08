@@ -5,4 +5,39 @@ csrf|s:32:"75df845278bd135bcc03dc4a2e809cac";text|a:24:{s:6:"editor";a:20:{s:6:"
 
 It is not recommended you set your token here however and is more secure to enter it when requested by ICEcoder as that will keep it in session only.
 
-However, if you work in a trusted and secure environment, it is more efficient to set it here.";s:22:"Sorry cannot commit...";s:42:"Sorry, cannot commit settings in demo mode";s:6:"update";s:6:"update";}s:15:"settings-update";a:3:{s:23:"Cannot update config...";s:65:"Cannot update config file. Please set public write permissions on";s:13:"and try again";s:13:"and try again";s:17:"and press refresh";s:17:"and press refresh";}s:7:"updater";a:1:{s:20:"Update appears to...";s:31:"Update appears to be successful";}s:13:"find-in-files";a:9:{s:23:"Enter path to search in";s:23:"Enter path to search in";s:76:"Enter semicolon-separated masks of files to look at (e.g. *.php;*.html;*.js)";s:76:"Enter semicolon-separated masks of files to look at (e.g. *.php;*.html;*.js)";s:12:"Type of text";s:12:"Type of text";s:10:"Fixed text";s:10:"Fixed text";s:18:"Regular expression";s:18:"Regular expression";s:14:"Case sensitive";s:14:"Case sensitive";s:3:"Yes";s:3:"Yes";s:2:"No";s:2:"No";s:6:"Search";s:6:"Search";}}loggedIn|b:1;username|b:0;findFilesExclude|a:9:{i:0;s:4:".doc";i:1;s:4:".gif";i:2;s:4:".jpg";i:3;s:5:".jpeg";i:4;s:4:".pdf";i:5;s:4:".png";i:6;s:4:".swf";i:7;s:4:".xml";i:8;s:4:".zip";}bannedFiles|a:1:{i:0;s:0:"";}allowedIPs|a:1:{i:0;s:1:"*";}githubDiff|b:0;
+However, if you work in a trusted and secure environment, it is more efficient to set it here.";s:22:"Sorry cannot commit...";s:42:"Sorry, cannot commit settings in demo mode";s:6:"update";s:6:"update";}s:15:"settings-update";a:3:{s:23:"Cannot update config...";s:65:"Cannot update config file. Please set public write permissions on";s:13:"and try again";s:13:"and try again";s:17:"and press refresh";s:17:"and press refresh";}s:7:"updater";a:1:{s:20:"Update appears to...";s:31:"Update appears to be successful";}s:13:"find-in-files";a:9:{s:23:"Enter path to search in";s:23:"Enter path to search in";s:76:"Enter semicolon-separated masks of files to look at (e.g. *.php;*.html;*.js)";s:76:"Enter semicolon-separated masks of files to look at (e.g. *.php;*.html;*.js)";s:12:"Type of text";s:12:"Type of text";s:10:"Fixed text";s:10:"Fixed text";s:18:"Regular expression";s:18:"Regular expression";s:14:"Case sensitive";s:14:"Case sensitive";s:3:"Yes";s:3:"Yes";s:2:"No";s:2:"No";s:6:"Search";s:6:"Search";}}loggedIn|b:1;username|b:0;findFilesExclude|a:9:{i:0;s:4:".doc";i:1;s:4:".gif";i:2;s:4:".jpg";i:3;s:5:".jpeg";i:4;s:4:".pdf";i:5;s:4:".png";i:6;s:4:".swf";i:7;s:4:".xml";i:8;s:4:".zip";}bannedFiles|a:1:{i:0;s:0:"";}allowedIPs|a:1:{i:0;s:1:"*";}githubDiff|b:0;user|s:6:"celine";pass|s:52:"89d41feac0a4c796c150e9e51abe65e54dfe8a0655d9947c35be";cwd|s:88:"C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\ICEcoder2\plugins\terminal";history|a:10:{i:0;s:4:"quit";i:1;s:4:"exit";i:2;s:9:"echo %cd%";i:3;s:2:"cd";i:4;s:5:"cd ..";i:5;s:5:"ls -l";i:6;s:2:"ls";i:7;s:3:"dir";i:8;s:3:"pwd";i:9;s:9:"echo toto";}output|s:1266:"nt authority\system@:>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+nt authority\system@:>dir
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+nt authority\system@:>echo toto
+toto
+nt authority\system@:>pwd
+'pwd' is not recognized as an internal or external command,
+operable program or batch file.
+nt authority\system@:>echo %cd%
+C:\UniServer\usr\local\apache2
+nt authority\system@:>dir
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+nt authority\system@:>dir
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+nt authority\system@:>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+nt authority\system@:>ls -l
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+nt authority\system@:>cd ..
+nt authority\system@:>echo %cd%
+C:\UniServer\usr\local\apache2
+nt authority\system@:>cd
+nt authority\system@:>echo %cd%
+C:\UniServer\usr\local\apache2
+nt authority\system@:>exit
+nt authority\system@:>quit
+'quit' is not recognized as an internal or external command,
+operable program or batch file.
+";js_command_hist|s:88:""", "quit", "exit", "echo %cd%", "cd", "cd ..", "ls -l", "ls", "dir", "pwd", "echo toto"";prompt|s:20:"nt authority\system@";

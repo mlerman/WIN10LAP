@@ -39,11 +39,11 @@ $ICEcoderUserSettings = array(
 "bugFileCheckTimer"	=> 0,
 "bugFileMaxLines"	=> 0,
 "githubAuthToken"	=> "",
-"plugins"		=> array(),
+"plugins"		=> array(	array("Terminal - Console shell","plugins/terminal/icon.png","","plugins/terminal","_blank","")	),
 "ftpSites"		=> array(),
 "githubLocalPaths"	=> array(),
 "githubRemotePaths"	=> array(),
-"previousFiles"		=> "",
+"previousFiles"		=> "C:|UniServer|www|doc|files|common|open-command-prompt-here.html",
 "last10Files"		=> "C:|UniServer|www|doc|files|Engineering|ENVIRONMENT|PHP_SERVER|ICEcoder2|.head,C:|UniServer|www|doc|files|Engineering|ENVIRONMENT|PHP_SERVER|ICEcoder|.head,C:|UniServer|www|doc|files|Engineering|ENVIRONMENT|DVE|dsp_dfx_cssd_mode_pr_cssd_mode_test|.head,C:|UniServer|www|doc|files|common|open-command-prompt-here.html,C:|UniServer|www|doc|files|Engineering|ENVIRONMENT|DVE|dsp_dfx_cssd_mode_pr_cssd_mode_test|ui_total_commander.run,C:|UniServer|www|doc|files|common|.head,C:|UniServer|www|doc|files|Engineering|ENVIRONMENT|PHP_SERVER|ICEcoder2|test|test-file1.txt",
 "favoritePaths"		=> array()
 );
