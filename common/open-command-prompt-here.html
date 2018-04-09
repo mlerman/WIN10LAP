@@ -871,8 +871,20 @@ function EditorIsNowOpened (file) {
 
 
 function openOnce(url, target, file){
-    var ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50', true);
 
+
+
+    if (file=="") { // open but hide the window
+      ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50 visible=no', true);
+      // I don't know how to hide it so let's minimize it
+      ICEcoderWin.resizeTo(10,10);
+      ICEcoderWin.moveTo(1000,1000);
+      
+    } else {
+      ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50', true);
+      ICEcoderWin.resizeTo(1200,640);
+      ICEcoderWin.moveTo(100,50);
+    }
 
 	//ICEcoderWin.onload = function() { ICEcoderWin.editorCallBack = EditorIsNowOpened; };
 	//ICEcoderWin.onload = function() { alert("tutu"); };
@@ -890,7 +902,6 @@ function openOnce(url, target, file){
 	//window.top.ICEcoder.goToLine(3);
 	//ICEcoderWin.goToLine(3);
     return ICEcoderWin;
-	//return false;
 }
 
 function onradioclick(val) {
@@ -1019,6 +1030,9 @@ window.onload=function(){
 
  //alert("time="+time);
 }
+
+
+
 
 totalIsNan=false;
 
@@ -1192,6 +1206,19 @@ function caller()
   $(document).ready(function() {
     Tipped.create('.inline');
   });
+  
+  
+function openIceCoderWin() {
+
+    //if (ICEcoderWin == undefined) alert("undefined");
+    //else alert ("OK");
+
+    //ICEcoderWin = window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/', "editor", 'width=1200,height=640,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50', true);
+
+openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor","");
+
+}  
+  
 </script>
 
 
@@ -1199,7 +1226,7 @@ function caller()
 </head>
 <!-- was onload="gfaddlink=document.getElementById('idfaddlink').value" -->
 
-<body onload="document.getElementById('idfaddlink').value='';">
+<body onload="document.getElementById('idfaddlink').value=''; openIceCoderWin();">
 <script> 
 setVarsForm("pageID=profileEdit&userID=11&sessionID=<?php echo $urldir;?>"); 
 </script> 
@@ -1419,7 +1446,7 @@ if ($no_favicon)     echo "&nbsp;<a href=\"https://www.google.com/search?q=".$pr
 
 <fieldset>
 <legend>&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.head&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/images/notepad-plus-plus.gif"/></a> 
-        <a href="/doc/files/common/do.php?&targetdir=<?php echo realpath($dir); ?>&targetfile=.head" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>.head");  return true;'><img src="/doc/images/text.png"/></a>
+        <a href="/doc/files/common/do.php?&targetdir=<?php echo realpath($dir); ?>&targetfile=.head" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>.head");  return false;'><img src="/doc/images/text.png"/></a>
 		&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.head&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>&before=addhr"><img src="/doc/images/embedicon.png"/></a> 
               <small>(.head)</small> Notes: 
 </legend>
