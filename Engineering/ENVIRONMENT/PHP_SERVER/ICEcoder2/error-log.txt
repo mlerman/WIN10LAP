@@ -70,3 +70,6 @@
 [08-Apr-2018 19:56:43 Europe/London] PHP Notice:  Undefined variable: fileName in C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\ICEcoder2\lib\file-control-xhr.php on line 990
 [08-Apr-2018 19:56:47 Europe/London] PHP Warning:  filemtime(): stat failed for http://icecoder.net/latest-version in C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\ICEcoder2\lib\file-control-xhr.php on line 959
 [08-Apr-2018 19:56:47 Europe/London] PHP Warning:  filesize(): stat failed for http://icecoder.net/latest-version in C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\ICEcoder2\lib\file-control-xhr.php on line 981
+[09-Apr-2018 12:31:25 Europe/London] PHP Notice:  Undefined variable: fileLoc in C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\ICEcoder2\lib\file-control-xhr.php on line 989
+[09-Apr-2018 12:31:25 Europe/London] PHP Notice:  Undefined variable: fileName in C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\ICEcoder2\lib\file-control-xhr.php on line 989
+[09-Apr-2018 12:31:25 Europe/London] PHP Notice:  Undefined variable: fileName in C:\UniServer\www\doc\files\Engineering\ENVIRONMENT\PHP_SERVER\ICEcoder2\lib\file-control-xhr.php on line 990

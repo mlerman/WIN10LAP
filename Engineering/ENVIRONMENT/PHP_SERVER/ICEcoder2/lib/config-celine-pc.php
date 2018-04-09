@@ -43,8 +43,8 @@ $ICEcoderUserSettings = array(
 "ftpSites"		=> array(),
 "githubLocalPaths"	=> array(),
 "githubRemotePaths"	=> array(),
-"previousFiles"		=> "C:|UniServer|www|doc|files|common|open-command-prompt-here.html",
-"last10Files"		=> "C:|UniServer|www|doc|files|Engineering|ENVIRONMENT|PHP_SERVER|ICEcoder2|.head,C:|UniServer|www|doc|files|Engineering|ENVIRONMENT|PHP_SERVER|ICEcoder|.head,C:|UniServer|www|doc|files|Engineering|ENVIRONMENT|DVE|dsp_dfx_cssd_mode_pr_cssd_mode_test|.head,C:|UniServer|www|doc|files|common|open-command-prompt-here.html,C:|UniServer|www|doc|files|Engineering|ENVIRONMENT|DVE|dsp_dfx_cssd_mode_pr_cssd_mode_test|ui_total_commander.run,C:|UniServer|www|doc|files|common|.head,C:|UniServer|www|doc|files|Engineering|ENVIRONMENT|PHP_SERVER|ICEcoder2|test|test-file1.txt",
+"previousFiles"		=> "C:|UniServer|www|doc|files|common|.previous",
+"last10Files"		=> "C:|UniServer|www|doc|files|common|.previous,C:|UniServer|www|doc|files|xfer|.head,C:|UniServer|www|doc|files|common|instantedithead.js,C:|UniServer|www|doc|files|common|updatehead.php,C:|UniServer|www|viewfile|viewdos.php,C:|UniServer|www|doc|files|common|write_ckfile.php,C:|UniServer|www|doc|files|common|psexec.php,C:|UniServer|www|doc|files|common|downloadfile.php,C:|UniServer|www|doc|files|common|open-command-prompt-here.html,C:|UniServer|www|doc|files|common|test5.rn",
 "favoritePaths"		=> array()
 );
 ?>
