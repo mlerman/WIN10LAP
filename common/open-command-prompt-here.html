@@ -2904,7 +2904,33 @@ echo("alert('".$fcontent."');\n");
 echo("</script>\n");
 }
 ?>
+<script>
+function testIce() {
 
+//if (ICEcoderWin==NULL) alert("ICEcoderWin is NULL");
+
+if (ICEcoderWin.closed) {
+  //alert("Cannot run unit tests because IceCoder closed");
+  ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50', true);
+  ICEcoderWin.resizeTo(1200,640);
+  ICEcoderWin.moveTo(100,50);
+  
+} else {
+  //alert("testIce, will close open tabs");
+  var ww = ICEcoderWin.innerWidth;
+  //alert("window width is "+ww);
+  ICEcoderWin.focus();
+  if (ww < 200) {
+    ICEcoderWin.resizeTo(1200, 640);
+    ICEcoderWin.focus();
+  }
+  ICEcoderWin.filesFrame.contentWindow.frames['testControl'].location.href = '/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/test';
+}
+//top.ICEcoder
+}
+</script>
+
+    <a nohref="" onclick="testIce();" style="cursor: pointer">testIce()</a><br/><br/><br/>
 
 
 <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "/doc/files/common/permalinux/mntFiles.rn");  return false;'><img src="/doc/images/text.png" title="mntFiles.rn"/></a>&nbsp; 
@@ -2921,3 +2947,4 @@ echo("</script>\n");
 <!--//-->
 </body>
 </html>
+<!--//-->
