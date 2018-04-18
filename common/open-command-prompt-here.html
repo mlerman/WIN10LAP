@@ -1634,14 +1634,12 @@ fclose($handle);
     <td><hr /></td>
   </tr>
 </table>
-
 <img src="/doc/images/EditData16.png" title="Drag and drop full file path in this field" style="float: left;" /><span style="float: left;">&nbsp;</span>
 <form name="faddedit" method="get" action="/doc/files/common/addedit.php"  style="float: left;" >
 <input type="text" name="path" id="dropedit" onmouseout="onInputChgEdit(this.value)" onblur="onInputChgEdit(this.value)" size="200" />
 <input type="hidden" name="parent" value=<?php echo $display_link;?> />
 </form>
 <br/ style="clear: both;">
-
 <div id="fedit">
 <?php echo file_get_contents($proj_dir."/.recentedit"); ?>
 
@@ -1665,6 +1663,8 @@ $('#fedit a').each(function () {
 <?php
 }
 ?>
+<small>raccourci notepad++: &amp;param1=search/string ou &amp;param1=numeroDeLigne</small>
+
 </div>
 
 <?php
