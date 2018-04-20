@@ -872,8 +872,6 @@ function EditorIsNowOpened (file) {
 
 function openOnce(url, target, file){
 
-
-
     if (file=="") { // open but hide the window
       ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50 visible=no', true);
       // I don't know how to hide it so let's minimize it
@@ -2906,30 +2904,72 @@ echo("</script>\n");
 ?>
 <script>
 function testIce() {
-
-//if (ICEcoderWin==NULL) alert("ICEcoderWin is NULL");
-
-if (ICEcoderWin.closed) {
-  //alert("Cannot run unit tests because IceCoder closed");
-  ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50', true);
-  ICEcoderWin.resizeTo(1200,640);
-  ICEcoderWin.moveTo(100,50);
-  
-} else {
-  //alert("testIce, will close open tabs");
-  var ww = ICEcoderWin.innerWidth;
-  //alert("window width is "+ww);
-  ICEcoderWin.focus();
-  if (ww < 200) {
-    ICEcoderWin.resizeTo(1200, 640);
-    ICEcoderWin.focus();
-  }
-  ICEcoderWin.filesFrame.contentWindow.frames['testControl'].location.href = '/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/test';
+	if (ICEcoderWin.closed) {
+		//alert("Cannot run unit tests because IceCoder closed");
+		ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50', true);
+		ICEcoderWin.resizeTo(1200,640);
+		ICEcoderWin.moveTo(100,50);
+	} else {
+		//alert("testIce, will close open tabs");
+		var ww = ICEcoderWin.innerWidth;
+		//alert("window width is "+ww);
+		ICEcoderWin.focus();
+		if (ww < 200) {
+			ICEcoderWin.resizeTo(1200, 640);
+			ICEcoderWin.focus();
+		}
+	ICEcoderWin.filesFrame.contentWindow.frames['testControl'].location.href = '/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/test';
+	}
 }
-//top.ICEcoder
+
+function testIceMl() {
+	if (ICEcoderWin.closed) {
+		//alert("Cannot run unit tests because IceCoder closed");
+		ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50', true);
+		ICEcoderWin.resizeTo(1200,640);
+		ICEcoderWin.moveTo(100,50);
+	} else {
+		//alert("testIce, will close open tabs");
+		var ww = ICEcoderWin.innerWidth;
+		//alert("window width is "+ww);
+		ICEcoderWin.focus();
+		if (ww < 200) {
+			ICEcoderWin.resizeTo(1200, 640);
+			ICEcoderWin.focus();
+		}
+	ICEcoderWin.filesFrame.contentWindow.frames['testControl'].location.href = '/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/test/index_ml.php';
+	}
 }
+
+
+function openOnceTest(url, target, file){
+    if (file=="") { // open but hide the window
+      ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50 visible=no', true);
+      // I don't know how to hide it so let's minimize it
+      ICEcoderWin.resizeTo(10,10);
+      ICEcoderWin.moveTo(1000,1000);
+      
+    } else {
+      ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50', true);
+      ICEcoderWin.resizeTo(1200,640);
+      ICEcoderWin.moveTo(100,50);
+    }
+    if(ICEcoderWin.location.href === 'about:blank'){
+        ICEcoderWin.location.href = url;
+    }
+	
+	
+	ICEcoderWin.open_editor_path(file);
+	// test go to line 3
+	//window.top.ICEcoder.goToLine(3);
+	//ICEcoderWin.goToLine(3);
+    return ICEcoderWin;
+}
+
 </script>
 
+	<a nohref="" onclick='openOnceTest("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor","/doc/files/common/ui_test.run");' style="cursor: pointer">openOnceTest()</a><br/>
+	<a nohref="" onclick="testIceMl();" style="cursor: pointer">testIceMl()</a><br/>
     <a nohref="" onclick="testIce();" style="cursor: pointer">testIce()</a><br/><br/><br/>
 
 
