@@ -6,19 +6,20 @@ Open file, update document, save file, highlight line, add tag wrappers, duplica
 
 <html>
 <head>
-<title>ICEcoder Test Suite</title>
+<title>ICEcoder interface to MiKL's environment</title>
 <meta name="robots" content="noindex, nofollow">
 <script src="object-watch.js?microtime=<?php echo microtime(true);?>"></script>
 </head>
 
 <script>
 ICEcoder=top.ICEcoder;
-if(ICEcoder.openFiles.length>0) {ICEcoder.closeAllTabs();}
+//if(ICEcoder.openFiles.length>0) {ICEcoder.closeAllTabs();}
 unitTestResults = top.ICEcoder.content.contentWindow.document.getElementById('unitTestResults');
 unitTestResults.innerHTML = "";
 </script>
 
 <?php
+/*
 // Set test file name & location
 $testFile = "test-file1.txt";
 $testFileFullPath = str_replace("\\","/",dirname($_SERVER['PHP_SELF']))."/".$testFile;
@@ -27,6 +28,40 @@ if (file_exists($testFile)) {unlink ($testFile);};
 $fh = fopen($testFile, 'w') or die("<script>noCreate='FAIL Could not create test file';console.log(noCreate);unitTestResults.innerHTML = noCreate;</script>");
 fwrite($fh, 'initial text');
 fclose($fh);
+*/
+
+
+$targetfile="";
+if (isset($_GET["targetfile"])) {
+  $targetfile=$_GET["targetfile"];
+} 
+
+$targetdir="";
+if (isset($_GET["targetdir"])) {
+  $targetdir=$_GET["targetdir"];
+} 
+
+$param1="";
+if (isset($_GET["param1"])) {
+  $param1=$_GET["param1"];
+}
+
+$gotoLine = -1;
+if($param1!="") {
+	
+	if (!ctype_digit($param1)) {
+
+		$file_content = file_get_contents($targetdir.$targetfile);
+		$content_before_string = strstr($file_content, $param1, true);
+
+		if (false !== $content_before_string) {
+			$gotoLine = count(explode(PHP_EOL, $content_before_string));
+			//die("String $string found at line number: $line");
+		}
+
+	}
+}
+
 ?>
 
 <body onLoad="runTests()">
@@ -36,6 +71,8 @@ function runTests() {
 	o = {p: 'start'};	// var used to test another var has changed
 	t = 0;			// tries
 	s = 0;			// successful tests
+	//alert("<?php echo $targetdir.$targetfile;?>");
+	//alert("<?php echo $gotoLine;?>");
 	test.openFile();	// start the first test
 }
 
@@ -44,6 +81,7 @@ test = {
 		title = "Open file";
 		o.p = ICEcoder.openFiles[0];
 		t = 0;
+		/*
 		x = setInterval(function() {
 			wait();
 			cM = ICEcoder.getcMInstance();
@@ -51,17 +89,35 @@ test = {
 				testResult("+ GOOD",title+". Took "+t+"ms",x);
 				ICEcoder.serverMessage();
 				top.ICEcoder.serverQueue("del",0);
-				test.updateDoc();	// le prochain test
-			} else if (t==1000) {
+				//test.updateDoc();	// le prochain test
+			} else if (t==1) {
 				testResult("- FAIL",title+". Took "+t+"ms",x);
 				testStopped();
 			}
 			o.p = ICEcoder.openFiles[0];
 			t++;
-		alert("end openFile "+"<?php echo $testFileFullPath?>");
-		},10000);
-		alert("start openFile "+"<?php echo $testFileFullPath?>");
-		result = ICEcoder.openFile('<?php echo $testFileFullPath?>');
+		},1);
+		*/
+		
+		var url_string = window.location.href
+		var url = new URL(url_string);
+		var targetdir = url.searchParams.get("targetdir");
+		targetdir = targetdir.replace("c:/UniServer/www", "");
+		//alert(targetdir);
+		var targetfile = url.searchParams.get("targetfile");
+		var param1 = url.searchParams.get("param1");
+		//alert(targetdir+targetfile);
+
+		result = ICEcoder.openFile(targetdir+targetfile);
+		<?php
+		if ($gotoLine != -1) echo "param1 = ".$gotoLine.";\n";
+		?>
+		if (param1!="") {
+			if (!isNaN(param1)) ICEcoder.goToLine(param1);
+			else {
+				alert(param1);
+			}
+		}
 	},
 
 	updateDoc: function() {
