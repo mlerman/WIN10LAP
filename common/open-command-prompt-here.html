@@ -2922,7 +2922,7 @@ function testIce() {
 	}
 }
 
-function testIceMl() {
+function edit_with_icecoder(url, target, targetdir, targetfile, search_or_line) {
 	if (ICEcoderWin.closed) {
 		//alert("Cannot run unit tests because IceCoder closed");
 		ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50', true);
@@ -2937,7 +2937,7 @@ function testIceMl() {
 			ICEcoderWin.resizeTo(1200, 640);
 			ICEcoderWin.focus();
 		}
-	ICEcoderWin.filesFrame.contentWindow.frames['testControl'].location.href = '/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/test/index_ml.php';
+	ICEcoderWin.filesFrame.contentWindow.frames['testControl'].location.href = url+'test/edit_with_icecoder.php?targetdir='+targetdir+'&targetfile='+targetfile+'&param1='+search_or_line;
 	}
 }
 
@@ -2969,7 +2969,7 @@ function openOnceTest(url, target, file){
 </script>
 
 	<a nohref="" onclick='openOnceTest("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor","/doc/files/common/ui_test.run");' style="cursor: pointer">openOnceTest()</a><br/>
-	<a nohref="" onclick="testIceMl();" style="cursor: pointer">testIceMl()</a><br/>
+	<a nohref="" onclick="edit_with_icecoder('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/', 'editor', 'c:/UniServer/www/doc/files/common/', 'open-command-prompt-here.html', 'ICECODER_TESTING');" style="cursor: pointer">edit_with_icecoder()</a><br/>
     <a nohref="" onclick="testIce();" style="cursor: pointer">testIce()</a><br/><br/><br/>
 
 
