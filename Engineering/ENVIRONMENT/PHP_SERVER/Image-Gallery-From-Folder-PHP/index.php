@@ -19,12 +19,15 @@
 
 
 			<?php
-
+			//echo "<script>alert('".dirname( realpath( __FILE__ ) )."');</script>";
+			//echo "<script>alert('".$_GET['HOME_DIRECTORY']."');</script>";
 /* ========================================================================== */
 
-			$qt_folder_name = 'images'; // change this to a folder of your choice for images
+			//$qt_folder_name = 'images'; // change this to a folder of your choice for images
+			$qt_folder_name = '.';
 			$qt_handle = opendir( dirname( realpath( __FILE__ ) ) . '/' . $qt_folder_name . '/' );
-
+			$qt_handle = opendir( $_GET['HOME_DIRECTORY']  . '/' . $qt_folder_name . '/');
+			
 /* ========================================================================== */
 
 			$qt_counter = 0;
@@ -32,11 +35,20 @@
 			while( $qt_file = readdir( $qt_handle ) ) :
 
 				if( $qt_file !== '.' && $qt_file !== '..' ) :
+				
+				
+				       $array = explode('.', $qt_file);
+				       $extension = end($array);
+				       if ($extension != "png") continue;
+				
 
 					$qt_counter++;
 
-					$qt_file_path = $qt_folder_name . '/' . $qt_file;
-
+					//$qt_file_path = $qt_folder_name . '/' . $qt_file;
+					$prefix=$_GET['HOME_DIRECTORY'];
+					$prefix=str_replace("C:/UniServer/www/doc/","/doc/",$prefix);
+					$qt_file_path = $prefix . '/' . $qt_file;
+			//echo "<script>alert('".$qt_file_path."');</script>";
 					?>
 
 <!-- ======================================================================= -->
