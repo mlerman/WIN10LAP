@@ -23,7 +23,7 @@ $ICEcoderUserSettings = array(
 "bannedPaths"	=> array("/var/www/.git","/var/www/sites/all/modules","/var/www/sites/default/files"),
 "allowedIPs"	=> array("*"),
 "autoLogoutMins"	=> 0,
-"theme"	=> "base16-light",
+"theme"	=> "default",
 "fontSize"	=> "13px",
 "lineWrapping"	=> false,
 "lineNumbers"	=> true,
@@ -43,8 +43,8 @@ $ICEcoderUserSettings = array(
 "ftpSites"		=> array(),
 "githubLocalPaths"	=> array(),
 "githubRemotePaths"	=> array(),
-"previousFiles"		=> "C:|UniServer|www|doc|files|common|.previous",
-"last10Files"		=> "C:|UniServer|www|doc|files|common|.previous,C:|UniServer|www|doc|files|xfer|.head,C:|UniServer|www|doc|files|common|instantedithead.js,C:|UniServer|www|doc|files|common|updatehead.php,C:|UniServer|www|viewfile|viewdos.php,C:|UniServer|www|doc|files|common|write_ckfile.php,C:|UniServer|www|doc|files|common|psexec.php,C:|UniServer|www|doc|files|common|downloadfile.php,C:|UniServer|www|doc|files|common|open-command-prompt-here.html,C:|UniServer|www|doc|files|common|test5.rn",
+"previousFiles"		=> "C:|UniServer|www|doc|files|Engineering|ENVIRONMENT|PHP_SERVER|Image-Gallery-From-Folder-PHP|index.php",
+"last10Files"		=> "C:|UniServer|www|doc|files|Engineering|ENVIRONMENT|PHP_SERVER|Image-Gallery-From-Folder-PHP|index.php,C:|UniServer|www|doc|files|common|.previous,C:|UniServer|www|doc|files|xfer|.head,C:|UniServer|www|doc|files|common|instantedithead.js,C:|UniServer|www|doc|files|common|updatehead.php,C:|UniServer|www|viewfile|viewdos.php,C:|UniServer|www|doc|files|common|write_ckfile.php,C:|UniServer|www|doc|files|common|psexec.php,C:|UniServer|www|doc|files|common|downloadfile.php,C:|UniServer|www|doc|files|common|open-command-prompt-here.html",
 "favoritePaths"		=> array()
 );
 ?>
