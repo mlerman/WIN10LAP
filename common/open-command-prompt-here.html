@@ -1691,42 +1691,26 @@ if ( file_exists("/UniServer/www".$dir_loc."/scr1.png"))
 <table width="100%">
   <tr>
     <td><hr /></td>
-    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><span><a href="#view"><span class="winlink" ><img src="/doc/images/eye.gif"></span></a>&nbsp;<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<strong>Screenshots</strong></span></td>
+    <td style="width:1px; padding: 0 10px; white-space: nowrap;">
+      <span>
+	<a href="#view"><span class="winlink" >
+	  <img src="/doc/images/eye.gif"></a>
+	  </span>
+	  &nbsp;<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />
+	  &nbsp;
+	  <strong>
+	    <a nohref="" style="cursor:pointer" onclick="window.open('/doc/files//Engineering/ENVIRONMENT/PHP_SERVER/Image-Gallery-From-Folder-PHP/index.php?HOME_DIRECTORY=<?php echo $proj_dir;?>','gallery','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;">Screenshots</a>
+	  </strong>
+      </span>
+    </td>
     <td><hr /></td>
   </tr>
 </table>
 <?php
-  echo '<iframe src="/UberGallery/index.php?urldir='.$urldir.'" width="100%" height="600px"></iframe>';
+  //echo '<iframe src="/UberGallery/index.php?urldir='.$urldir.'" width="100%" height="600px"></iframe>';
   // let's replace the iframe with a div and include the code of index.php in this page
   echo "<div>";
-  /* 
-    // Include the UberGallery class
-    include('/UberGallery/resources/UberGallery.php');
-
-    // Initialize the UberGallery object
-    $gallery = new UberGallery();
-
-    // Initialize the gallery array
-    //$galleryArray = $gallery->readImageDirectory('..'.'/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/UberGallery');
-	//$galleryArray = $gallery->readImageDirectory('..'.$_GET['urldir']);
-	$galleryArray = $gallery->readImageDirectory($urldir);
-
-    // Define theme path
-    if (!defined('THEMEPATH')) {
-        define('THEMEPATH', $gallery->getThemePath());
-    }
-
-    // Set path to theme index
-    $themeIndex = $gallery->getThemePath(true) . '/index.php';
-
-    // Initialize the theme
-    if (file_exists($themeIndex)) {
-        include($themeIndex);
-    } else {
-        die('ERROR: Failed to initialize theme');
-    }   
-	*/
-	  echo "</div>";
+  echo "</div>";
 }
 ?>
 
