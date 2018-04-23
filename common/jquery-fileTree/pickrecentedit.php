@@ -66,7 +66,7 @@
 					//alert("<?php echo $_GET['headpath']; ?>"); 		// :/UniServer/www/doc/files
 					//alert("<?php echo $_GET['drive']; ?><?php echo $_GET['headpath']; ?><?php echo $_GET['parent']; ?>"); 
 
-					window.location.href = 'closePageRecentEdit.php?parent=<?php echo $_GET['parent']; ?>&linkwith='+file+'&drive=<?php echo $_GET['drive']; ?>';
+					window.location.href = 'closePageRecentEdit.php?parent=<?php echo $_GET['parent']; ?>&linkwith='+file+'&drive=<?php echo $_GET['drive']; ?>&param1=<?php echo $_GET['param1']; ?>';
 					setTimeout(function(){
 					// refresh parent 
 					opener.location.reload();

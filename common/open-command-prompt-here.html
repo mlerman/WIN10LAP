@@ -1404,11 +1404,11 @@ client2.on( "ready", function( readyEvent ) { document.getElementById("copy-butt
 var prjname="<?php echo $prjname; ?>";
 
 <?php 
-if($param1!="") echo "var param1= "; 
+if($param1!="") echo "var param1=\""; 
 $param1_q = strpos($param1, ' ') ? '"' . $param1 . '"' : $param1; // put quotes if contains space
 $param1_q = str_replace(PHP_EOL, '', $param1_q);	// remove newline
 echo $param1_q; 
-if($param1!="") echo ";"; 
+if($param1!="") echo "\";"; 
  ?>
 </script>
 </h1>
@@ -1623,7 +1623,15 @@ fclose($handle);
     <td><hr /></td>
     <td style="width:1px; padding: 0 10px; white-space: nowrap;"><a href="#view"><span><img src="/doc/images/eye.gif"></span></a>&nbsp;<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" /></span>&nbsp;<strong>Frequent Edit</strong>&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.recentedit&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/images/notepad-plus-plus.gif" title="Edit this section"/></a>
 	    <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>.recentedit");  return false;'><img src="/doc/images/text.png"/></a>
-	&nbsp;<a href="/doc/files/common/jquery-fileTree/pickrecentedit.php?drive=c&parent=<?php echo $display_link;?>&headpath=:/UniServer/www/doc/files" target="pickf" onclick="javascript:void window.open('/doc/files/common/jquery-fileTree/pickrecentedit.php?drive=c&parent=<?php echo $display_link;?>&headpath=:/UniServer/www/doc/files','1481656702602','width=550,height=750,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/add_file.png" title="C:\"/></a>
+<script>
+function recentedit_plus() {
+// rajouter le contenu de l'input field inpg
+var search_or_line_number = document.getElementById('inpg').value;
+//alert(search_or_line_number);
+window.open('/doc/files/common/jquery-fileTree/pickrecentedit.php?drive=c&param1='+search_or_line_number+'&parent=<?php echo $display_link;?>&headpath=:/UniServer/www/doc/files','1481656702602','width=550,height=750,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');
+}
+</script>
+		&nbsp;<a href="/doc/files/common/jquery-fileTree/pickrecentedit.php?drive=c&parent=<?php echo $display_link;?>&headpath=:/UniServer/www/doc/files" target="pickf" onclick="recentedit_plus(); return false;"><img src="/doc/images/add_file.png" title="C:\"/></a>
 	<!--
 	&nbsp;&nbsp;<a href="/jquery-fileTree/pickrecentedit.php?drive=//&parent=<?php echo $display_link;?>&headpath=mlerman-vm-mint/lfiles" target="pickf"><img src="/doc/images/add_file.png" title="M:\"/></a> 
 	-->
@@ -2968,7 +2976,7 @@ function openOnceTest(url, target, file){
 <iframe id="other" src="/doc/files/common/othersites.php?urldir=<?php echo $urldir; ?>" />
 <br/><br/><br/>
 
-<!--//-->
+<!--/ tototititutu /-->
 </body>
 </html>
 <!--//-->
