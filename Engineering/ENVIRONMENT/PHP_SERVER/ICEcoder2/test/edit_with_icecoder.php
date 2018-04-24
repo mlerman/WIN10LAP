@@ -53,9 +53,9 @@ if($param1!="") {
 
 		$file_content = file_get_contents($targetdir.$targetfile);
 		$content_before_string = strstr($file_content, $param1, true);
-
 		if (false !== $content_before_string) {
-			$gotoLine = count(explode(PHP_EOL, $content_before_string));
+			//$gotoLine = count(explode(PHP_EOL, $content_before_string));		// returns sometimes 1
+			$gotoLine = count(explode("\n", $content_before_string));
 			//die("String $string found at line number: $line");
 		}
 
@@ -72,6 +72,7 @@ function runTests() {
 	t = 0;			// tries
 	s = 0;			// successful tests
 	//alert("<?php echo $targetdir.$targetfile;?>");
+	//alert("<?php echo $_GET['param1']; ?>");
 	//alert("<?php echo $gotoLine;?>");
 	test.openFile();	// start the first test
 }
@@ -81,23 +82,6 @@ test = {
 		title = "Open file";
 		o.p = ICEcoder.openFiles[0];
 		t = 0;
-		/*
-		x = setInterval(function() {
-			wait();
-			cM = ICEcoder.getcMInstance();
-			if (cM && "undefined" != typeof ICEcoder.openFiles[0]) {
-				testResult("+ GOOD",title+". Took "+t+"ms",x);
-				ICEcoder.serverMessage();
-				top.ICEcoder.serverQueue("del",0);
-				//test.updateDoc();	// le prochain test
-			} else if (t==1) {
-				testResult("- FAIL",title+". Took "+t+"ms",x);
-				testStopped();
-			}
-			o.p = ICEcoder.openFiles[0];
-			t++;
-		},1);
-		*/
 		
 		var url_string = window.location.href
 		var url = new URL(url_string);
@@ -112,6 +96,7 @@ test = {
 		<?php
 		if ($gotoLine != -1) echo "param1 = ".$gotoLine.";\n";
 		?>
+
 		if (param1!="") {
 			if (!isNaN(param1)) ICEcoder.goToLine(param1);
 			else {
