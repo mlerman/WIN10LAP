@@ -1,0 +1,3 @@
+echo %CURRENTFOLDER%
+echo %CD%
+pause
