@@ -1,9 +1,5 @@
 <html>
 <body>
-
-
-    
-    
 <script>
 var arr_blank = // each line: ['string value to be copied with newlines', 'string to be shown'],
     [ 
@@ -143,20 +139,12 @@ var arr_of_arr =
 	arr_php,		// arr_php
 	arr_admin		// arr_admin
 	];
-var clicked_id;
 
-function bindme(id) {
-    //alert('bindme'+' id is '+id);
-    var clipboard = new ClipboardJS('#'+id, { text: function() { return document.getElementById(id).getAttribute('data-clipboard-text');  } });
-
-}
-	
 document.write("<table width='100%'><tr><td><a href='#batch'>Batch</a></td><td><a href='#shell'>Shell</a></td><td><a href='#html'>HTML</a></td><td><a href='#c_cpp'>C/C++</a></td><td><a href='#js'>Javascript</a></td><td><a href='#php'>PHP</a></td><td><a href='#admin'>Admin</a></td></tr></table>");
 //<![CDATA[
-var strid="";
 for(arr_of_arr_index=0; arr_of_arr_index<arr_of_arr.length; arr_of_arr_index++ )
 {
-  strid="";
+  var strid="";
   switch(arr_of_arr_index)
   {
   case 0: document.write("<h3><a name='batch'></a>Batch</h3>");
@@ -184,18 +172,73 @@ for(arr_of_arr_index=0; arr_of_arr_index<arr_of_arr.length; arr_of_arr_index++ )
   }
   for(ii=0; ii<arr_of_arr[arr_of_arr_index].length; ii++)
   {
-  // this display the links in the body
-  document.write("<br/>&nbsp;<span class='btn' id='copy_button_"+strid+"_"+ii+"' data-clipboard-text='"+arr_of_arr[arr_of_arr_index][ii][0]+"' title='copy to clipboard'  onmouseover='this.style.backgroundColor=white;' clicked_id=this.id; onclick='bindme(this.id); window.close();'><img src=\"/doc/images/copyclip.png\"/>&nbsp;"+arr_of_arr[arr_of_arr_index][ii][1]+"</span>");
+  document.write("<br/>&nbsp;<span id='copy_button_"+strid+"_"+ii+"' data-clipboard-text='"+arr_of_arr[arr_of_arr_index][ii][0]+"' title='copy to clipboard'  onmouseover='this.style.backgroundColor=white' onclick='window.close();'><img src=\"/doc/images/copyclip.png\"/>&nbsp;"+arr_of_arr[arr_of_arr_index][ii][1]+"</span>");
   }
   document.write("<br/><hr/>");
 }
-
 //]]>
 
 </script>
 
 
-<script src="./dist/clipboard.min.js"></script>
+
+
+
+    
+<script src="zeroclipboard-2.2.0/dist/ZeroClipboard.js"></script>
+<script>
+//<![CDATA[
+document.write("<scr"+"ipt>");
+
+for(ii=1; ii<=50; ii++)
+{
+document.write("var client"+ii+" = new ZeroClipboard( document.getElementById(\"copy_button_"+ii+"\") );");
+document.write("client"+ii+".on( \"ready\", function( readyEvent ) { document.getElementById(\"copy_button_"+ii+"\").style.backgroundColor = 'white'; client"+ii+".on( \"aftercopy\", function( event ) { document.getElementById(\"copy_button_"+ii+"\").style.backgroundColor = 'lightgray'; } ); } );");
+}
+
+
+arr_batch.forEach(function(arritem, arrindex) {
+  document.write("var client_batch_"+arrindex+" = new ZeroClipboard( document.getElementById(\"copy_button_batch_"+arrindex+"\") );");
+  document.write("client_batch_"+arrindex+".on( \"ready\", function( readyEvent ) { document.getElementById(\"copy_button_batch_"+arrindex+"\").style.backgroundColor = 'white'; client_batch_"+arrindex+".on( \"aftercopy\", function( event ) { document.getElementById(\"copy_button_batch_"+arrindex+"\").style.backgroundColor = 'lightgray'; } ); } );");
+});
+
+arr_shell.forEach(function(arritem, arrindex) {
+  document.write("var client_shell_"+arrindex+" = new ZeroClipboard( document.getElementById(\"copy_button_shell_"+arrindex+"\") );");
+  document.write("client_shell_"+arrindex+".on( \"ready\", function( readyEvent ) { document.getElementById(\"copy_button_shell_"+arrindex+"\").style.backgroundColor = 'white'; client_shell_"+arrindex+".on( \"aftercopy\", function( event ) { document.getElementById(\"copy_button_shell_"+arrindex+"\").style.backgroundColor = 'lightgray'; } ); } );");
+});
+
+arr_html.forEach(function(arritem, arrindex) {
+  document.write("var client_html_"+arrindex+" = new ZeroClipboard( document.getElementById(\"copy_button_html_"+arrindex+"\") );");
+  document.write("client_html_"+arrindex+".on( \"ready\", function( readyEvent ) { document.getElementById(\"copy_button_html_"+arrindex+"\").style.backgroundColor = 'white'; client_html_"+arrindex+".on( \"aftercopy\", function( event ) { document.getElementById(\"copy_button_html_"+arrindex+"\").style.backgroundColor = 'lightgray'; } ); } );");
+});
+
+arr_c_cpp.forEach(function(arritem, arrindex) {
+  document.write("var client_c_cpp_"+arrindex+" = new ZeroClipboard( document.getElementById(\"copy_button_c_cpp_"+arrindex+"\") );");
+  document.write("client_c_cpp_"+arrindex+".on( \"ready\", function( readyEvent ) { document.getElementById(\"copy_button_c_cpp_"+arrindex+"\").style.backgroundColor = 'white'; client_c_cpp_"+arrindex+".on( \"aftercopy\", function( event ) { document.getElementById(\"copy_button_c_cpp_"+arrindex+"\").style.backgroundColor = 'lightgray'; } ); } );");
+});
+
+arr_js.forEach(function(arritem, arrindex) {
+  document.write("var client_js_"+arrindex+" = new ZeroClipboard( document.getElementById(\"copy_button_js_"+arrindex+"\") );");
+  document.write("client_js_"+arrindex+".on( \"ready\", function( readyEvent ) { document.getElementById(\"copy_button_js_"+arrindex+"\").style.backgroundColor = 'white'; client_js_"+arrindex+".on( \"aftercopy\", function( event ) { document.getElementById(\"copy_button_js_"+arrindex+"\").style.backgroundColor = 'lightgray'; } ); } );");
+});
+
+arr_php.forEach(function(arritem, arrindex) {
+  document.write("var client_php_"+arrindex+" = new ZeroClipboard( document.getElementById(\"copy_button_php_"+arrindex+"\") );");
+  document.write("client_php_"+arrindex+".on( \"ready\", function( readyEvent ) { document.getElementById(\"copy_button_php_"+arrindex+"\").style.backgroundColor = 'white'; client_php_"+arrindex+".on( \"aftercopy\", function( event ) { document.getElementById(\"copy_button_php_"+arrindex+"\").style.backgroundColor = 'lightgray'; } ); } );");
+});
+
+arr_admin.forEach(function(arritem, arrindex) {
+  document.write("var client_admin_"+arrindex+" = new ZeroClipboard( document.getElementById(\"copy_button_admin_"+arrindex+"\") );");
+  document.write("client_admin_"+arrindex+".on( \"ready\", function( readyEvent ) { document.getElementById(\"copy_button_admin_"+arrindex+"\").style.backgroundColor = 'white'; client_admin_"+arrindex+".on( \"aftercopy\", function( event ) { document.getElementById(\"copy_button_admin_"+arrindex+"\").style.backgroundColor = 'lightgray'; } ); } );");
+});
+
+document.write("</scr"+"ipt>");
+//]]>
+</script>
+
+
+<script>
+ </script>
  <br/>
 <div align="center" style="border:1px solid red">
  <small>to edit this file go to <a href="/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/open-command-prompt-here.html">frequent_copy_paste</a></small>
