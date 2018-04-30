@@ -1401,7 +1401,7 @@ alert(  'current : ' + window.name
 </script>
 <!--a href="<?php echo $urldir; ?>open-command-prompt-here.html" target="<?php echo $prjname; ?>" title="Re-open in tab target <?php echo $prjname; ?>"><?php echo $prjname; ?></a-->
 <?php echo $prjname; ?>
-&nbsp;<span id="copy-button-2" data-clipboard-text="<?php echo $prjname; ?>" title="copy project name to clipboard" onmouseover="this.style.backgroundColor = 'white'" ><img src="/doc/images/copyclip.png"/></span>
+&nbsp;<span id="copy-button-2" data-clipboard-text="<?php echo $prjname; ?>" title="copy project name to clipboard" onmouseover="this.style.backgroundColor = 'white'" onclick='bindme(this.id);'><img src="/doc/images/copyclip.png"/></span>
 &nbsp;<a href="/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/d3_directed_graph/project_graph.php?target=<?php echo $urldir; ?>" onclick="javascript:void window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/d3_directed_graph/project_graph.php?target=<?php echo $urldir; ?>','1481602525735','width=980,height=550,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;" ><img src="/doc/images/digraph.gif" /></a>
 &nbsp;<span onclick="debug();"><img src=/doc/images/debug.png /></span>
 &nbsp;<span onclick="adjust_target();" id="animreload" style="display:none"><img src=/doc/images/loader_grayblue.gif /></span>
@@ -2280,7 +2280,6 @@ document.write(result);
 <a href="#view" ><span><img src="/doc/images/eye.gif" title="Scroll to view programs"></a><br/><br/>
 <a href="#" id="lastrecentproj2" onmouseover="getLastProject();" title="most recent project not set"><img src="/doc/images/recent16.png"  /></a><br/><br/>
 <script>
-//var str10="<span id='copy-button-10' data-clipboard-text='blahblah' onmouseover='this.style.backgroundColor = "+'"white"'+"'>&nbsp;<img src=/doc/images/copyclip.png /> </span>copy me&nbsp;";
 var str10="";
 </script>
 <a href="/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/" target="chartime" onclick="javascript:void window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/','1481656702602','width=800,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=600,top=50');return false;"><img src="/doc/images/copyclip.png" title="frequent copy paste" onmouseover="customAlertRight(str10,'10000','50','300')" /></a><br/><br/>
