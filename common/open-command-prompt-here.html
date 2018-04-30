@@ -1113,6 +1113,14 @@ function onInputChgEdit(val) {
   gfaddedit=val;
 }
 
+gfaddclip="";
+function onInputChgClip(val) {
+  if (val!=gfaddclip) {
+    document.faddclip.submit();
+  }
+  gfaddclip=val;
+}
+
 gfaddsound="";
 function onInputChgSound(val) {
   if (val!=gfaddsound) {
@@ -2018,7 +2026,28 @@ if ($handle = opendir($dir)) {
 <table width="100%">
   <tr>
     <td><hr /></td>
-    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><a href="#view"><span><img src="/doc/images/eye.gif"></a>&nbsp;<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload"  />&nbsp;<strong>Perma batch </strong><small>PARAM1:</small>&nbsp;<input size="6" id="inpf"/></td>
+    <td style="width:1px; padding: 0 10px; white-space: nowrap;">
+      <a href="#view"><span><img src="/doc/images/eye.gif"></a>
+      &nbsp;<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload"  />
+      &nbsp;<strong>Save clipboard </strong><small>label:</small>&nbsp;<input size="6" id="inph"/></td>
+    <td><hr /></td>
+  </tr>
+</table>
+<img src="/doc/images/copyclip.png" title="Drag and drop clipboard text in this field" style="float: left;" /><span style="float: left;">&nbsp;</span>
+<form name="faddclip" method="get" action="/doc/files/common/addclip.php"  style="float: left;" >
+<input type="text" name="path" id="dropclip" onmouseout="onInputChgClip(this.value)" onblur="onInputChgClip(this.value)" size="104%" />
+<input type="hidden" name="parent" value=<?php echo $display_link;?> /> <!-- mettre ici le contenu du filed id inph -->
+</form>
+<br/ style="clear: both;">
+
+
+<table width="100%">
+  <tr>
+    <td><hr /></td>
+    <td style="width:1px; padding: 0 10px; white-space: nowrap;">
+      <a href="#view"><span><img src="/doc/images/eye.gif"></a>
+      &nbsp;<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload"  />
+      &nbsp;<strong>Perma batch </strong><small>PARAM1:</small>&nbsp;<input size="6" id="inpf"/></td>
     <td><hr /></td>
   </tr>
 </table>
