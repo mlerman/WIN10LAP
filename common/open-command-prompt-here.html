@@ -2375,7 +2375,7 @@ function adjustWindow(){  // not used not working
 //ml: http://mlerman-lap/s/19
 
 var listItemAnchors = document.getElementsByTagName('a');
-
+//ml icons
 for (i = 0; i < listItemAnchors.length; i++) {
 	var s=listItemAnchors[i].innerText;
 	if(s.indexOf("layout") > -1) {
@@ -2395,6 +2395,9 @@ for (i = 0; i < listItemAnchors.length; i++) {
 	  }
 	if(s.indexOf("total_commander_src") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/files/common/images/total_commander_src_icon.jpg' title='"+s+"'/>";
+	  }
+	if(s.indexOf("total_commander_rtl") > -1) {
+	  listItemAnchors[i].innerHTML="<img src='/doc/files/common/images/total_commander_rtl_icon.png' title='"+s+"'/>";
 	  }
 	if(s.indexOf("total_commander_ftp") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/files/common/images/total_commander_ftp_icon.jpg' title='"+s+"'/>";
@@ -2803,8 +2806,6 @@ for (i = 0; i < listItemAnchors.length; i++) {
 	if(s.indexOf("push_files.r") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/files/common/images/copyover48.png' title='"+s+"'/>";
 	  }
-
-
 }
 
 for (i = 0; i < listItemAnchors.length; i++) {
