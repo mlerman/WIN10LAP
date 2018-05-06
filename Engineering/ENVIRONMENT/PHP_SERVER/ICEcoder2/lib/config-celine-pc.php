@@ -44,7 +44,7 @@ $ICEcoderUserSettings = array(
 "githubLocalPaths"	=> array(),
 "githubRemotePaths"	=> array(),
 "previousFiles"		=> "C:|UniServer|www|doc|files|common|open-command-prompt-here.html",
-"last10Files"		=> "C:|UniServer|www|doc|files|Engineering|ENVIRONMENT|PHP_SERVER|Image-Gallery-From-Folder-PHP|index.php,C:|UniServer|www|doc|files|common|.previous,C:|UniServer|www|doc|files|xfer|.head,C:|UniServer|www|doc|files|common|instantedithead.js,C:|UniServer|www|doc|files|common|updatehead.php,C:|UniServer|www|viewfile|viewdos.php,C:|UniServer|www|doc|files|common|write_ckfile.php,C:|UniServer|www|doc|files|common|psexec.php,C:|UniServer|www|doc|files|common|downloadfile.php,C:|UniServer|www|doc|files|common|open-command-prompt-here.html",
+"last10Files"		=> "C:|UniServer|www|doc|files|Engineering|ENVIRONMENT|PHP_SERVER|ICEcoder2|.head,C:|UniServer|www|404.html,C:|UniServer|www|404.php,C:|UniServer|www|doc|files|common|open-command-prompt-here.html,C:|UniServer|www|doc|files|common|.head,C:|UniServer|www|doc|files|Engineering|ENVIRONMENT|PHP_SERVER|Image-Gallery-From-Folder-PHP|index.php,C:|UniServer|www|doc|files|common|.previous,C:|UniServer|www|doc|files|xfer|.head,C:|UniServer|www|doc|files|common|instantedithead.js,C:|UniServer|www|doc|files|common|updatehead.php",
 "favoritePaths"		=> array()
 );
 ?>
