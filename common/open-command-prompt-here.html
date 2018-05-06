@@ -2023,20 +2023,32 @@ if ($handle = opendir($dir)) {
 <!--#include virtual="/doc/files/common/perma-here.inc"-->
 </div>
 
+
 <table width="100%">
   <tr>
     <td><hr /></td>
     <td style="width:1px; padding: 0 10px; white-space: nowrap;">
       <a href="#view"><span><img src="/doc/images/eye.gif"></a>
       &nbsp;<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload"  />
-      &nbsp;<strong>Save clipboard </strong><small>label:</small>&nbsp;<input size="6" id="inph"/></td>
+      &nbsp;<strong>Save clipboard </strong><small>label:</small>&nbsp;<input size="6" id="inph" onblur="updateLabel(this.value);"/></td>
     <td><hr /></td>
   </tr>
 </table>
+
+<script>
+    function updateLabel(text) {
+        document.getElementById('cliplabel').value=text;
+        //alert(text);
+    }
+</script>
+
 <img src="/doc/images/copyclip.png" title="Drag and drop clipboard text in this field" style="float: left;" /><span style="float: left;">&nbsp;</span>
+
+
 <form name="faddclip" method="get" action="/doc/files/common/addclip.php"  style="float: left;" >
 <input type="text" name="path" id="dropclip" onmouseout="onInputChgClip(this.value)" onblur="onInputChgClip(this.value)" size="104%" />
 <input type="hidden" name="parent" value=<?php echo $display_link;?> /> <!-- mettre ici le contenu du filed id inph -->
+<input type="hidden" name="label" id="cliplabel"/>
 </form>
 <br/ style="clear: both;">
 
