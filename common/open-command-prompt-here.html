@@ -1165,15 +1165,25 @@ var admin_array_added = false;
  ?>;
  
  
-function bindme(id) {
+function bindme(id, mode) {
     //alert('bindme'+' id is '+id);
+    if (mode==1) {
+      valToClip=document.getElementById(id).value;
+    //alert(valToClip);
+      document.getElementById(id).setAttribute('data-clipboard-text', valToClip);
+    //alert(document.getElementById(id).getAttribute('data-clipboard-text'));	//OK
+    //var clipboard = new ClipboardJS('#'+id, { text: function() { return document.getElementById(id).value;  } });
+    }
+    
     var clipboard = new ClipboardJS('#'+id, { text: function() { return document.getElementById(id).getAttribute('data-clipboard-text');  } });
     
-    setTimeout(function(){ console.log("copied in clipboard")},1000);
-    document.getElementById(id).style.backgroundColor = 'lightgray';
+    if(mode==0) {
+      setTimeout(function(){ console.log("copied in clipboard")},1000);
+      document.getElementById(id).style.backgroundColor = 'lightgray';
+    } 
 
 }
- 
+
 
 function customAlertRight(msg,duration, right, top)		// http://mlerman-lap/s/W
 {
@@ -1193,7 +1203,7 @@ function customAlertRight(msg,duration, right, top)		// http://mlerman-lap/s/W
  {
    for(ii=0; ii<arr_admin.length; ii++)
    {
-     document.getElementById('customdivright').innerHTML +="<br/>&nbsp;<span id='copy_button_admin_"+ii+"' data-clipboard-text='"+arr_admin[ii][0]+"' title='copy to clipboard' style='cursor:pointer'  onmouseover='this.style.backgroundColor=white' onclick='bindme(this.id);'><img src=\"/doc/images/copyclip.png\"/>&nbsp;"+arr_admin[ii][1]+"</span>";
+     document.getElementById('customdivright').innerHTML +="<br/>&nbsp;<span id='copy_button_admin_"+ii+"' data-clipboard-text='"+arr_admin[ii][0]+"' title='copy to clipboard' style='cursor:pointer'  onmouseover='this.style.backgroundColor=white' onclick='bindme(this.id, 0);'><img src=\"/doc/images/copyclip.png\"/>&nbsp;"+arr_admin[ii][1]+"</span>";
    }
    admin_array_added=true;
  }
@@ -1409,14 +1419,16 @@ alert(  'current : ' + window.name
 </script>
 <!--a href="<?php echo $urldir; ?>open-command-prompt-here.html" target="<?php echo $prjname; ?>" title="Re-open in tab target <?php echo $prjname; ?>"><?php echo $prjname; ?></a-->
 <?php echo $prjname; ?>
-&nbsp;<span id="copy-button-2" data-clipboard-text="<?php echo $prjname; ?>" title="copy project name to clipboard" onmouseover="this.style.backgroundColor = 'white'" onclick='bindme(this.id);'><img src="/doc/images/copyclip.png"/></span>
+&nbsp;<span id="copy-button-2" data-clipboard-text="<?php echo $prjname; ?>" title="copy project name to clipboard" onmouseover="this.style.backgroundColor = 'white'" onclick='bindme(this.id, 0);'><img src="/doc/images/copyclip.png"/></span>
 &nbsp;<a href="/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/d3_directed_graph/project_graph.php?target=<?php echo $urldir; ?>" onclick="javascript:void window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/d3_directed_graph/project_graph.php?target=<?php echo $urldir; ?>','1481602525735','width=980,height=550,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;" ><img src="/doc/images/digraph.gif" /></a>
 &nbsp;<span onclick="debug();"><img src=/doc/images/debug.png /></span>
 &nbsp;<span onclick="adjust_target();" id="animreload" style="display:none"><img src=/doc/images/loader_grayblue.gif /></span>
 
 <script>
+/*
 var client2 = new ZeroClipboard( document.getElementById("copy-button-2") );
 client2.on( "ready", function( readyEvent ) { document.getElementById("copy-button-2").style.backgroundColor = 'white'; client2.on( "aftercopy", function( event ) { document.getElementById("copy-button-2").style.backgroundColor = 'lightgray'; } ); } );
+*/
 </script>
 
 <script>
@@ -2044,9 +2056,8 @@ if ($handle = opendir($dir)) {
 
 <img src="/doc/images/copyclip.png" title="Drag and drop clipboard text in this field" style="float: left;" /><span style="float: left;">&nbsp;</span>
 
-
 <form name="faddclip" method="get" action="/doc/files/common/addclip.php"  style="float: left;" >
-<input type="text" name="path" id="dropclip" onmouseout="onInputChgClip(this.value)" onblur="onInputChgClip(this.value)" size="104%" />
+<input type="text" name="path" id="dropclip" data-clipboard-text="something" onmouseout="bindme(this.id, 1); onInputChgClip(this.value);" onblur="onInputChgClip(this.value);" size="104%" />
 <input type="hidden" name="parent" value=<?php echo $display_link;?> /> <!-- mettre ici le contenu du filed id inph -->
 <input type="hidden" name="label" id="cliplabel"/>
 </form>

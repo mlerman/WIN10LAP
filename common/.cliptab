@@ -1,11 +1,9 @@
     [ 
-    ['toto', 'toto'] ,
-    ['titi', 'titi'] ,
-    ['tutu', 'tutu'] ,
-    ['tata', 'tata'] ,
-    ['coucou', 'coucou'] ,
-    ['caca', 'label de caca'] ,
-    ['cul', 'label de cul'] ,
-    ['test', 'ltest'] ,
-    ['re-test sans label', 're-test sans label'] 
+    ['bibi', 'bibi'] ,
+    ['bobo', 'bobo'] ,
+    ['jaja', 'jaja'] ,
+    ['coucouc', 'coucouc'] ,
+    ['s', 's'] ,
+    ['ok', 'ok'] ,
+    ['chaud', 'chaud'] 
     ]
