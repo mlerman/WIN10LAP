@@ -39,6 +39,8 @@ in
     ]
 
 */
+
+$path=addslashes($path);	// escape the backslashes
 if ($label=="") $label=$path;
 if(strstr($strfile, "] \n    ]")) {
 

@@ -1048,7 +1048,7 @@ if(isNaN(total)) {
 
  totalBeforeIncrement=total;
  console.log("time stored in localStorage: "+totalBeforeIncrement);
- totalFromFile=<?php echo $timeFromFileLast; ?>
+ totalFromFile=<?php echo $timeFromFileLast.";"; ?>
  console.log("time read from file .time: "+totalFromFile);
 
  if (totalFromFile != totalBeforeIncrement) {
@@ -1203,7 +1203,7 @@ function customAlertRight(msg,duration, right, top)		// http://mlerman-lap/s/W
  {
    for(ii=0; ii<arr_admin.length; ii++)
    {
-     document.getElementById('customdivright').innerHTML +="<br/>&nbsp;<span id='copy_button_admin_"+ii+"' data-clipboard-text='"+arr_admin[ii][0]+"' title='copy to clipboard' style='cursor:pointer'  onmouseover='this.style.backgroundColor=white' onclick='bindme(this.id, 0);'><img src=\"/doc/images/copyclip.png\"/>&nbsp;"+arr_admin[ii][1]+"</span>";
+     document.getElementById('customdivright').innerHTML +="<br/>&nbsp;<span id='copy_button_admin_"+ii+"' data-clipboard-text='"+arr_admin[ii][0]+"' title='copy to clipboard' style='cursor:pointer'  onmouseover='this.style.backgroundColor=\"white\"' onclick='bindme(this.id, 0);'><img src=\"/doc/images/copyclip.png\"/>&nbsp;"+arr_admin[ii][1]+"</span>";
    }
    admin_array_added=true;
  }
