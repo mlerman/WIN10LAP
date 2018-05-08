@@ -12,6 +12,12 @@ $parent_dir = "/doc/files".$_GET['parent'];
 $cliptab="c:/UniServer/www/doc/files".$parent.".cliptab";
 echo ".cliptab path=".$cliptab."<br/>\n";
 
+
+if(!file_exists($cliptab)) {
+  file_put_contents($cliptab, "    [ \n    ['', ''] \n    ]\n");
+}
+
+
 $strfile = file_get_contents( $cliptab ); // get the contents, and echo it out.
 //echo $strfile;
 
