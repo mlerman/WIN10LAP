@@ -4,4 +4,6 @@ echo $WINPATHFORWARDSLASH
 echo $WINPATH
 echo $PRJPATH
 echo $HOST
+source toto.sh.bat
+echo $toto
 read -p "Pause" reply

@@ -1,0 +1,3 @@
+call toto.sh.bat
+echo %toto%
+pause
