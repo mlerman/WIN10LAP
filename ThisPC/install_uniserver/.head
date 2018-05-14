@@ -1,0 +1,75 @@
+Faire ui_clean.run
+efface access.log
+tmp files etc
+<hr/>
+mettre a jour update_from_anywhere.bat.non
+pour l'update avec le gui
+<hr/>
+<pre>
+TODO: enlever update.bat
+essayer de rentrer automatiquement le password mysql
+UniServerZ ne marche pas avec open_command_prompt_here.html
+<hr/>
+TODO: zipper en chunk de 50M max
+TODO: Essayer de copier par le LAN example \\win7-pc\public\uniserver.zip
+      utiliser pour ca la variable %HOST%
+      aussi verifier la taille de uniserver.zip dans %FSIZE%
+DONE: faire que l'update se face en local cad sans ui_
+      rajouter dans le context menu de elfinder iframe othersites_root.php
+      un icon pour update. Ceci doit generer l'update en un click et silencieusement
+
+Ceci est un install batch file qui est independant de cet environment
+s'execute du repertoire Download
+ce batch installe l'environment
+il installe uniserver Coral_8_9_2.exe
+il downloader uniserver.zip le clone
+il overwrite tout les fichierss
+
+Voici comment faire. 
+Venir sur cette page depuis l'ordinateur client
+Cliquer sur ui_install_from_anywhere.bat ou bien ui_update_from_anywhere.bat
+Attention : Ne peuvent pas etre changer en .run
+
+Mais auparavant il fallait d'abord creer le zip avec cloneThisUniserver
+ 
+
+</pre>
+<br/>last clone on Wed 02/03/2016 15:40:57.25 
+<br/>last clone on Wed 02/03/2016 16:14:54.04 
+<br/>last clone on Sat 02/06/2016 20:44:58.98 
+<br/>last clone on Wed 02/10/2016 10:20:37.94 
+<br/>last clone on Fri 02/26/2016 15:10:14.53 
+<br/>last clone on Wed 03/02/2016 12:53:18.84 
+<br/>last clone on Wed 03/02/2016 13:19:05.49 
+<br/>last clone on Fri 03/04/2016 20:56:01.49 
+<br/>last clone on Sun 03/27/2016 17:03:38.95 
+<br/>last clone on Mon 03/28/2016 11:16:16.20 
+<br/>last clone on Fri 04/08/2016 16:01:28.25 
+<br/>last clone on Mon 04/11/2016 13:37:12.44 
+<br/>last clone on Sun 07/10/2016  9:30:37.31 
+<br/>last clone on Fri 07/29/2016 19:31:19.42 
+<br/>last clone on Fri 07/29/2016 19:37:05.24 
+<br/>last clone on Sun 08/14/2016 16:33:48.81 
+<br/>last clone on Sun 08/21/2016 15:57:16.68 
+<br/>last clone on Sun 08/21/2016 15:58:09.02 
+<br/>last clone on Sun 08/21/2016 21:04:26.47 
+<br/>last clone on Sun 08/21/2016 21:12:29.28 
+<br/>last clone on Sun 08/21/2016 21:36:16.64 
+<br/>last clone on Sun 08/21/2016 21:37:58.38 
+<br/>last clone on Sun 08/21/2016 22:32:24.15 
+<br/>last clone on Mon 08/29/2016 21:21:44.08 
+<br/>last clone on Tue 09/06/2016 19:52:18.46 
+<br/>last clone on Sat 10/15/2016 21:15:42.75 
+<br/>last clone on Mon 12/26/2016 18:23:57.82 
+<br/>last clone on Sat 03/25/2017 20:33:49.85 
+<br/>last clone on Sun 03/26/2017 14:44:43.63 
+<br/>last clone on Sun 03/26/2017 14:51:40.33 
+<br/>last clone on Tue 06/20/2017 20:27:01.75 
+<br/>last clone on Mon 09/11/2017 15:13:24.71 
+<br/>last clone on Mon 09/11/2017 16:00:06.39 
+<br/>last clone on Mon 09/25/2017  9:54:44.33 
+<br/>last clone on Sat 05/12/2018 20:46:42.01 
+<br/>last clone on Sat 05/12/2018 20:53:01.22 
+<br/>last clone on Sat 05/12/2018 22:24:58.21 
+<br/>last clone on Sun 05/13/2018  8:15:29.12 
+<br/>last clone on Sun 05/13/2018 10:55:03.39 
