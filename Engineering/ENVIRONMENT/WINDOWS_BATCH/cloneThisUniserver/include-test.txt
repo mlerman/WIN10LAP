@@ -1,0 +1,2 @@
+c:\UniServer\alt_diag\
+c:\UniServer\cgi-bin\

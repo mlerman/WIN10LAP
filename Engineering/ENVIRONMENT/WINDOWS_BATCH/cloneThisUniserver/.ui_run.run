@@ -1,0 +1,8 @@
+<pre>
+Ceci compresse le contenu de ce webserver.
+Effacer d'abord les logs d'apache2 pour reduire
+la taille du fichier zip.
+voir dans core/apache2/logs
+aussi effacer UniSever/tmp/
+</pre>
+<iframe src="/doc/magnifier/magnify.php?fname=/doc/files/Engineering/ENVIRONMENT/WINDOWS_BATCH/cloneThisUniserver/scr1.png" width="780px" height="600px"></iframe> 

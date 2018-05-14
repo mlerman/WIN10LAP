@@ -1,0 +1,17 @@
+c:\UniServer\alt_diag\
+c:\UniServer\cgi-bin\
+c:\UniServer\docs\
+c:\UniServer\download_local\
+c:\UniServer\etc\
+c:\UniServer\home\
+c:\UniServer\htpasswd\
+c:\UniServer\msmtp\
+c:\UniServer\openssl\
+c:\UniServer\plugins\
+c:\UniServer\ssl\
+c:\UniServer\tmp\
+c:\UniServer\uni_con\
+c:\UniServer\usr\
+c:\UniServer\help.exe
+c:\UniServer\Start_as_program.exe
+c:\UniServer\Start_as_service.exe

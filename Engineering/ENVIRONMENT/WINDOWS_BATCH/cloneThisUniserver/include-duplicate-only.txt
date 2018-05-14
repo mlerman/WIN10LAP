@@ -1,0 +1,5 @@
+c:\UniServer\www\home\
+c:\UniServer\www\doc\css\
+c:\UniServer\www\doc\images\
+c:\UniServer\www\doc\.htaccess
+c:\UniServer\www\doc\index.php

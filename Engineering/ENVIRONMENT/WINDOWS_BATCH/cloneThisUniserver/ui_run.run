@@ -1,0 +1,33 @@
+@echo off
+if not exist "c:\UniServer\www\doc\files\public\" mkdir c:\UniServer\www\doc\files\public
+echo Creating a zip file of Uniserver 
+if exist uniserver.z* del uniserver.z* /Q
+if exist c:\UniServer\www\doc\files\public\uniserver.z* del c:\UniServer\www\doc\files\public\uniserver.z* /Q
+
+rem c:\UniServer\www\doc\files\ThisPC\install_7zip\7za.exe a -tzip -mx0 -xr@exclude.txt uniserver.zip c:\UniServer\
+rem problem include file does not accept duplicate file names even with different path
+rem c:\UniServer\www\doc\files\ThisPC\install_7zip\7za.exe a -tzip -mx0 -xr@exclude.txt -i@include-1.txt uniserver.zip 
+rem c:\UniServer\www\doc\files\ThisPC\install_7zip\7za.exe u -tzip -mx0 -xr@exclude.txt -i@include-2.txt uniserver.zip
+rem oublie 7z
+
+copy c:\UniServer\www\doc\files\ThisPC\install_uniserver\update_from_anywhere.bat.non c:\UniServer\www\doc\files\ThisPC\install_uniserver\update_from_anywhere.bat /Y
+
+c:\UniServer\www\doc\files\ThisPC\install_zip\zip.exe -s 64 -r uniserver.zip -@ < include0.txt
+
+rem prevent from using the update on mlerman-lap and overwrite the progress
+rem but OK to use it elsewhere
+del c:\UniServer\www\doc\files\ThisPC\install_uniserver\update_from_anywhere.bat /Q
+
+rem copy uniserver.zip c:\UniServer\www\doc\files\public\uniserver.zip /Y
+copy uniserver.z* c:\UniServer\www\doc\files\public\ /Y
+
+cd c:\UniServer\www\doc\files\ThisPC\install_uniserver\
+call cre_bat.bat
+
+echo ^<br/^>last clone on %date% %time% >> c:\UniServer\www\doc\files\Engineering\ENVIRONMENT\WINDOWS_BATCH\cloneThisUniserver\.head
+echo ^<br/^>last clone on %date% %time% >> c:\UniServer\www\doc\files\ThisPC\install_uniserver\.head
+
+
+
+:end
+pause
