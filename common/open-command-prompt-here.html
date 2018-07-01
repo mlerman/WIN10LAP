@@ -879,6 +879,7 @@ function openOnce(url, target, file){
       ////ICEcoderWin.resizeTo(10,10);
       ICEcoderWin.moveTo(-10000,-10000);
       //setTimeout(function(){ ICEcoderWin.close(); }, 3000);
+      //setTimeout(function(){ ICEcoderWin.alert(ICEcoderWin.name); }, 3000);  //editor
 
     } else {
       ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50', true);
@@ -897,7 +898,9 @@ function openOnce(url, target, file){
     }
 	
 	
-	ICEcoderWin.open_editor_path(file);
+    //ICEcoderWin.open_editor_path(file);
+    setTimeout(function(){ ICEcoderWin.open_editor_path(file); }, 2000);
+
 	// test go to line 3
 	//window.top.ICEcoder.goToLine(3);
 	//ICEcoderWin.goToLine(3);
