@@ -874,11 +874,12 @@ function EditorIsNowOpened (file) {
 function openOnce(url, target, file){
 
     if (file=="") { // open but hide the window
-      ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50 visible=no', true);
-      // I don't know how to hide it so let's minimize it
-      ICEcoderWin.resizeTo(10,10);
-      ICEcoderWin.moveTo(1000,1000);
-      
+      ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=no,menubar=no,location=no,status=no,scrollbars=no,resizable=no,left=10000,top=10000,visible=none, width=10, height=10', true);
+      //// I don't know how to hide it so let's minimize it
+      ////ICEcoderWin.resizeTo(10,10);
+      ICEcoderWin.moveTo(-10000,-10000);
+      //setTimeout(function(){ ICEcoderWin.close(); }, 3000);
+
     } else {
       ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50', true);
       ICEcoderWin.resizeTo(1200,640);
@@ -3000,7 +3001,7 @@ function edit_with_icecoder(url, target, targetdir, targetfile, search_or_line) 
 
 function openOnceTest(url, target, file){
     if (file=="") { // open but hide the window
-      ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50 visible=no', true);
+      ICEcoderWin = window.open('', target, 'width=1200,height=640,toolbar=no,menubar=no,location=no,status=no,scrollbars=no,resizable=no,left=10000,top=10000,visible=none', true);
       // I don't know how to hide it so let's minimize it
       ICEcoderWin.resizeTo(10,10);
       ICEcoderWin.moveTo(1000,1000);
