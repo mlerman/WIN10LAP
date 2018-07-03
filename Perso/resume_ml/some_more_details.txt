@@ -1,0 +1,64 @@
+To give you a better idea of my work, here some more details on my project for security at Micron
+
+. build all the stages of Linux
+  . compile device tree
+  . configure and cross-compile u-boot
+  . configure and cross-compile uimage
+  . Used Xilinx SDK to create binary
+  . Create ramdisk
+. enabled communication with target through multiple channels
+  . UART over USB
+  . ethernet SSH
+  . scp and winscp
+  . web http
+  . created a portable bench that works out of the box anywhere using a USB hub and different protocols over USB via the appropriate adapters.
+. modified FSBL
+  . succeed to use GBD to trace FSBL with the JTAG
+. modified u-boot
+  . Added new mnemonics as sub-command to SF u-boot command
+  . Defined the SACRED interface: Settings, Accept, Continue, Recover, Enable, Disable
+. created securespi.c protocol driver for secure SPI flash ROM
+. created a flash utility as secure flash in user mode but talking to the securespi protocole driver
+. created a server cgi : spitoolcgi.c. This program also talk to the protocole driver
+  . implemented hmac sh2-256 crypto function into spitoolcgi.c
+. created a web client app to interface spitoolcgi
+  . communication between the web client and the cgi uses AJAX and JSON 
+  . implemented the crypto fonction also in the web client in javascript
+. Defined the architecture of the secure boot flow on Linux
+  . possible interruption during autoboot
+  . the SACRED interface
+  . defined a secure stage that at the reset vector
+. Bring up and verification of the secure commands of the boot ROM
+  . all 10 commands tested in their basic options
+  . worked closely with the programmer of the micro-controller inside the SPI
+  . Probed the SPI bus when necessary with a Logic Analyzer
+  . compared output with chip tester log
+  . Created 3 sections in the web tool
+    . about 50 predefined operation in programmed button
+    . HMAC generator in section 2
+    . added the possibility to send raw commands to the SPI device
+    . Also added limitted scripting capability in the tool with Javascript
+  . programmed and understood all key derivation : root key, session key and command key
+. proposed improvement for next revision
+. identified flaws in corner cases
+. created a demo and recorded in video
+. defined an evaluation kit
+. Supported external company that created 2 demos for trade shows
+  . support with coding, visits platform configuration and features verification
+  . proposed a solution to speed up boot time drastically
+. Built an ultime environment for managing project efficiently
+  . one click for most complicated tasks
+  . Easy save of most command line batch/powershell and Linux shell scripts
+  . uniform web interface for Windows and Linux
+  . interact with Windows 7 program and Linux Mint in VMware virtual machine
+  . Can run programs in Linux from windows and vice versa
+  . Tasks are organized hierarchically in a directed graph for easy navigation between tasks
+  . Easy creation of documentation, screenshots and video capture
+  . Integration with Jira
+  . Integration with sharepoint
+  . Local use of git for saving history
+  . Use notpad++
+  . integrates IceCoder online editor
+  . integrates webconsole
+  . integrates elfinder
+  . Can jump directly from program outputs (putty, terminal, web, etc) to related source code

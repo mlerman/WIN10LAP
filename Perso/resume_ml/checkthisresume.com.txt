@@ -1,0 +1,94 @@
+Michael Lerman
+2462 Booksin Ave, San Jose CA, 95125
+408-564-9578 | Michael_lerman@yahoo.com
+profile
+This profile is about a motivated engineer looking for the next challenging role. 
+I have been working many years in the semiconductor-ASIC-PC industry as a hardsoft engineer and manager. 
+I am now interested in a role in the technologies of the future.
+
+Education
+Technion, Israel Institute of Technology	Haifa, Israel
+BSC - Bachelor of Science in Computer Engineering	1987-1990
+IUT OF PARIS	Paris, France
+DUT – Diplome Universitaire de Technology in Computer Science	1985-1987
+Project at the Observatory of Paris, Astrophysical section of Meudon, spatial research department (DESPA).
+
+Experience
+Micron 	Milpitas, CA
+Software Engineer - Senior	2013 – now
+Embedded Business Unit
+SPI Secure Boot
+AMD 	Sunnyvale, CA
+System Engineering - Manager	2000-2013
+Bring up and validation
+Hardware Debug Tools
+STMicroelectronics	San Jose, CA
+Manager System Solution	1994 – 2000
+Managed a multi-disciplinary team. Developed hardware and software for a single chip PC & DVD device. 
+Application Engineer. (1994-1997) Support to the CPU business and core logic in Europe. 
+Normerel	Buc, France
+Hardware Design Engineer	1990 – 1994
+Design of desktop PC motherboards and digital electronic systems.
+Skills
+
+Software development and hardware bring up
+x86 PC chipset system architecture
+Arm v7
+From the lowest level firmware and driver to the highest level Web UI
+Xilinx Zynq embedded Linux with Zedboard
+UEFI x64 Shell application
+Embedded firmware development for 8051 with Keil
+Scripting with various languages: Perl, Batch, PHP, Python
+C/C++/C# Visual Studio 
+Windows and LINUX
+Timing Signal Analysis and Usage model
+Keysight LA and scope
+DDR3, DDR4, SPI, NAND
+Full stack Web and Network development
+Frontend HTML, CSS, Javascript
+Backend server side native CGI, PHP, Node.js
+Databases: MySQL, SQlite, MSAccess.
+JAVA applet with JNI
+Socket network programming
+WAMP site Administration
+Payment gateway and shopping Cart
+PDF with TCPDF PDFTK
+Imaging with ImageMagick
+Data parsing, BNF, XML, XSLT, RegEx
+Graphing with D2, Chartjs
+Embedded
+Beaglebone, RaspberyPi, Freedom
+Specialities
+Embedded Linux
+SPI Secure boot
+JTAG
+Test automation
+Debug tools
+Web UI UX
+Memory
+Patents and Awards
+
+Patents
+
+SLEEP PROCESSOR: 20090313492
+AUTO-SLEEP ARRAY: 20100058089 
+MEMORY DEVICE HAVING A MEMORY SLEEP LOGIC AND METHODS THEREFORE.
+EASY FLASH: 20100146159
+MEMORY FLASH APPARATUS AND METHOD FOR PROVIDING DEVICE UPGRADES OVER A STANDARD INTERFACE.
+NETMORY (Patent Pending) 20160048477
+
+Awards
+
+Spotlight Award on Aug 2010 for the outstanding contribution to the SB900 Bring up effort through the development of Register Explorer
+
+Other
+
+Languages
+French
+English
+Hebrew
+Arabic
+
+US and EU citizen
+
+Find this resume online at http://checkthisresume.com 
