@@ -51,6 +51,8 @@ git config --global core.safecrlf false
 git config --global core.autocrlf false
 git config --global status.showUntrackedFiles no
 
+git config credential.helper store --file c:\UniServer\www\local\.git-credentials
+
 rem remove previous add
 rem ceci efface les fichier dans le repo github
 rem git rm -r --cached c:\UniServer\www\doc\files\ >nul
