@@ -51,7 +51,7 @@ git config --global core.safecrlf false
 git config --global core.autocrlf false
 git config --global status.showUntrackedFiles no
 
-git config --global credential.helper "store --file c:\UniServer\www\local\.git-credentials"
+rem git config --global credential.helper "store --file c:\UniServer\www\local\.git-credentials"
 
 rem remove previous add
 rem ceci efface les fichier dans le repo github
@@ -65,7 +65,7 @@ git update-index --no-assume-unchanged c:\UniServer\www\doc\files\%THISPLACEBACK
 rem add only this project and subdir
 git add -A %THISPLACEBACKSLASH%\ 2>&1
 call c:\UniServer\www\local\set_git_usep.bat 2>&1
-git remote set-url origin https://%GITUSEP%@github.com/mlerman/%REPONAME%.git 2>&1
+@git remote set-url origin https://%GITUSEP%@github.com/mlerman/%REPONAME%.git 2>&1
 rem git status
 rem commit only this directory
 git commit -m "commit for %currentfolder% project from %COMPUTERNAME%" -- %THISPLACEBACKSLASH%\ 2>&1
