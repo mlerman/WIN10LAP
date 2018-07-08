@@ -29,6 +29,11 @@ if "%COMPUTERNAME%" == "WIN7-PC" ( echo this is WIN7-PC
   git config --global --unset http.proxy
 )
 
+if "%COMPUTERNAME%" == "DESKTOP-MCQS4FT" ( rem echo this is WIN7-PC 
+  rem echo user is mlerman
+  git config --global --unset http.proxy
+)
+
 if "%COMPUTERNAME%" == "XSJMIKHAELL30" ( echo this is XSJMIKHAELL30 
   echo user is mikhaell
   git config --global http.proxy proxy:8080
