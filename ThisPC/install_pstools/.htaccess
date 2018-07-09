@@ -1,0 +1,21 @@
+
+AddType text/html .html
+AddOutputFilter INCLUDES .html
+
+Options +Includes
+
+AddType application/x-httpd-php .html
+
+RewriteEngine on # Turn on the rewriting engine
+RewriteRule open-command-prompt-here.html /doc/files/common/open-command-prompt-here.html?&requri=%{REQUEST_URI}&reqfname=%{REQUEST_FILENAME} [L]
+RewriteRule prompt-action.php /doc/files/common/prompt-action.php [L]
+RewriteRule prompt-action-save.php /doc/files/common/prompt-action-save.php [L]
+
+
+AuthUserFile c:\UniServer\www\doc\files\ThisPC\htpasswd\.htpasswd  
+AuthName "ml area" 
+AuthType Basic 
+Require user mlerman
+<Limit GET POST> 
+require valid-user 
+</Limit> 

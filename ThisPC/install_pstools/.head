@@ -1,0 +1,20 @@
+Avec l'option -i 0
+Couldn't install PSEXESVC service:
+Access is denied.
+<hr>
+error:
+PsExec v2.2 - Execute processes remotely
+Copyright (C) 2001-2016 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+Couldn't access 127.0.0.1:
+Access is denied.
+Press any key to continue . . .
+<hr>
+PsExec v2.2 - Execute processes remotely
+Copyright (C) 2001-2016 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+PsExec could not start Console:
+Logon failure: unknown user name or bad password.
+Press any key to continue . . .

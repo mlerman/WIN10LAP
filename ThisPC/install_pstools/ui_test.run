@@ -1,0 +1,3 @@
+rem PsExec64.exe \\mlerman-lap -u WINNTDOM\mlerman -p past33Z. -d  c:\UniServer\www\doc\files\ThisPC\putty\putty.exe
+PsExec64.exe \\laptop-7kqrmtc0 -u mlerman -p 2232 -d  c:\UniServer\www\doc\files\ThisPC\putty\putty.exe
+pause

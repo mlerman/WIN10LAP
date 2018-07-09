@@ -1,0 +1,8 @@
+goto takhless
+
+:takhless
+PsExec64.exe \\laptop-7kqrmtc0 -i -s -d  c:\UniServer\www\doc\files\ThisPC\putty\putty.exe
+
+
+
+pause
