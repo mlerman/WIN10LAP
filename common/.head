@@ -1,11 +1,2 @@
-gnome-terminal -e 'sh -c "echo toto && read -p "pause" reply"'
-<hr>
-
-Error constructing proxy for org.gnome.Terminal:/org/gnome/Terminal/Factory0: The connection is closed
-<hr>
-No protocol specified
-Failed to connect to Mir: Failed to connect to server socket: No such file or directory
-Unable to init server: Could not connect: Connection refused
-Failed to parse arguments: Cannot open display: 
-
+cleared
 <hr>
