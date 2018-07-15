@@ -1,1 +1,1 @@
-setenv tutu je suis stupide
+setenv tutu 2222
