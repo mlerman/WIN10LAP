@@ -1,0 +1,3 @@
+call tutu.sh.bat
+echo %tutu%
+pause

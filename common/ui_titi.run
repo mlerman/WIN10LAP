@@ -1,0 +1,3 @@
+call titi.sh.bat
+echo %titi%
+pause

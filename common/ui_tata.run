@@ -1,0 +1,3 @@
+call tata.sh.bat
+echo %tata%
+pause

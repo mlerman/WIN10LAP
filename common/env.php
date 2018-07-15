@@ -119,10 +119,21 @@ $num=0;
 	  $cnt=count_names_in_entries($envVar);
 	  if(($cnt==0) || ( ($cnt==1) && ($one_name_state=="disabled")   )) {
 			$txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&disaction=1&name=".$envVar."\"><img src=\"/doc/images/on.png\"></a>&nbsp;<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar."</label>  <span id=\"".$targetdir.'/'.$envVar.".sh.bat"."\" class=\"editText\"></span><hr/>";
-			file_put_contents($targetdir.'/'.$envVar.'.sh.bat', "export ".$envVar."=new" , LOCK_EX);  // was set
+//file_put_contents("debug.txt",$_POST['syntax']."\n", FILE_APPEND);
+			if($_POST['syntax']=="export")
+			  file_put_contents($targetdir.'/'.$envVar.'.sh.bat', "export ".$envVar."=new" , LOCK_EX);  // was set
+			if($_POST['syntax']=="setenv")
+			  file_put_contents($targetdir.'/'.$envVar.'.sh.bat', "setenv ".$envVar." new" , LOCK_EX);  // was set
+			if($_POST['syntax']=="set")
+			  file_put_contents($targetdir.'/'.$envVar.'.sh.bat', "set ".$envVar."=new" , LOCK_EX);  // was set
 	  } else {
 			$txt = "<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&enaction=1&num=".($cnt-1)."&name=".$envVar."\"><img src=\"/doc/images/off.png\"></a>&nbsp;<a href=\"".$_SERVER["PHP_SELF"]."?targetdir=".$targetdir."&delaction=1&num=".($cnt-1)."&name=".$envVar."\"><img src=\"/doc/images/delete.png\"></a>&nbsp;<label>".$envVar.".".($cnt-1)."</label>  <span id=\"".$targetdir.'/'.$envVar.".sh.bat.".($cnt-1)."\" class=\"editText\"></span><hr/>";
-			file_put_contents($targetdir.'/'.$envVar.'.sh.bat.'.($cnt-1), "export ".$envVar."=new" , LOCK_EX);  // was set
+			if($_POST['syntax']=="export")
+			  file_put_contents($targetdir.'/'.$envVar.'.sh.bat.'.($cnt-1), "export ".$envVar."=new" , LOCK_EX);  // was set
+			if($_POST['syntax']=="setenv")
+			  file_put_contents($targetdir.'/'.$envVar.'.sh.bat.'.($cnt-1), "setenv ".$envVar." new" , LOCK_EX);  // was set
+			if($_POST['syntax']=="set")
+			  file_put_contents($targetdir.'/'.$envVar.'.sh.bat.'.($cnt-1), "set ".$envVar."=new" , LOCK_EX);  // was set
 	  }
       file_put_contents($targetdir.'/entries.html', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
 	  
@@ -302,7 +313,10 @@ setVarsForm("pageID=profileEdit&userID=11&sessionID=28ydk3478Hefwedkbj73bdIB8H")
 
 <form action="" method="post">
 New environment variable name: <input type="text" name="envVar" placeholder="Variable name" />&nbsp;
-<input type="submit" name="submit" value="Add new" />
+<input type="submit" name="submit" value="Add new" /> 
+  <input type="radio" name="syntax" value="export" checked> export |
+  <input type="radio" name="syntax" value="setenv"> setenv |
+  <input type="radio" name="syntax" value="set"> set  
 </form>
 
 
