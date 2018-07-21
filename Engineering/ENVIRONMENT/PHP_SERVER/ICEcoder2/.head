@@ -1,2 +1,4 @@
+ICEcoder ne marche pas a l'interieur d'une iframe
+a cause de reference DOM a top
 <img src="scr1.png"/>
 <hr/>
