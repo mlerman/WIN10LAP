@@ -36,7 +36,37 @@ class Project extends Common
 
     public function __construct()
     {
+		//ml commented
         $this->projects = getJSON('projects.php');
+file_put_contents("debug.txt",print_r($this->projects, true));
+/*
+Array
+(
+    [0] => Array
+        (
+            [name] => common
+            [path] => C:/UniServer/www/doc/files/common
+        )
+
+    [1] => Array
+        (
+            [name] => Codiad
+            [path] => C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad
+        )
+
+);
+*/
+file_put_contents("debug.txt",$_SERVER[REQUEST_URI], FILE_APPEND);
+file_put_contents("debug.txt","\nprjname=".$_GET["prjname"]." prjpath=".$_GET["prjpath"], FILE_APPEND);
+
+//ml works forces those projects
+//$this->projects = array();
+//array_push($this->projects,array("name"=>"common","path"=>"C:/UniServer/www/doc/files/common"));
+//array_push($this->projects,array("name"=>"Codiac","path"=>"C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad"));
+
+//$this->projects = array();
+//array_push($this->projects,array("name"=>'"'.$_GET["prjname"].'"',"path"=>'"'.$_GET["prjpath"].'"'));
+
         if (file_exists(BASE_PATH . "/data/" . $_SESSION['user'] . '_acl.php')) {
             $this->assigned = getJSON($_SESSION['user'] . '_acl.php');
         }

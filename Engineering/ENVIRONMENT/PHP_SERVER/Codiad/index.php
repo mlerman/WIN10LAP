@@ -174,7 +174,7 @@ if(isset($_SESSION['theme'])) {
     // AUTHENTICATED
     //////////////////////////////////////////////////////////////////
 
-    }else{
+    }else{	//ml in session
 
     ?>
 
@@ -410,9 +410,13 @@ if(isset($_SESSION['theme'])) {
         //////////////////////////////////////////////////////////////////
 
         // JS
+		//ml 
+        echo('<script>var prjname="'.$_GET["name"].'"; var prjpath="'.$_GET["path"].'";</script>"');
+		
         foreach($components as $component){
             if(file_exists(COMPONENTS . "/" . $component . "/init.js")){
                 echo('<script src="components/'.$component.'/init.js"></script>"');
+file_put_contents("debug.txt","components/".$component."/init.js\n", FILE_APPEND);
             }
         }
         
@@ -423,6 +427,7 @@ if(isset($_SESSION['theme'])) {
         }
 
     }
+file_put_contents("debug.txt",$_SERVER[REQUEST_URI], FILE_APPEND);
 
     ?>
 

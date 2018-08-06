@@ -10,6 +10,8 @@
 
     $(function() {
         codiad.project.init();
+//alert("components/project/init.js : codiad.project.init");
+//alert("prjname = "+parent.prjname+", prjpath = "+parent.prjpath);
     });
 
     codiad.project = {
@@ -45,7 +47,7 @@
         //////////////////////////////////////////////////////////////////
 
         loadCurrent: function() {
-            $.get(this.controller + '?action=get_current', function(data) {
+            $.get(this.controller + '?action=get_current&prjname='+prjname+'&prjpath='+prjpath, function(data) {
                 var projectInfo = codiad.jsend.parse(data);
                 if (projectInfo != 'error') {
                     $('#file-manager')
