@@ -71,9 +71,18 @@ if(isset($_SESSION['theme'])) {
     }
     ?>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+	
+<script>	
+function open_current_project() {
+	//alert('<?php echo $_GET["path"]; ?>');
+	//codiad.project.open('<?php echo $_GET["path"]; ?>');
+	//codiad.project.open('C:/UniServer/www/doc/files/common');  // cet appel ne marche pas dans ce context
+	
+}
+</script>
 </head>
 
-<body>
+<body onload="open_current_project();">
     <script>
     var i18n = (function(lang) {
         return function(word,args) {
