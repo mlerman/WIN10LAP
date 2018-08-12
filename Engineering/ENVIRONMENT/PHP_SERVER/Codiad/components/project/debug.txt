@@ -2,16 +2,16 @@ Array
 (
     [0] => Array
         (
-            [name] => Codiad
-            [path] => C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad
-        )
-
-    [1] => Array
-        (
             [name] => common
             [path] => C:/UniServer/www/doc/files/common
         )
 
+    [1] => Array
+        (
+            [name] => Codiad
+            [path] => C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad
+        )
+
 )
-/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/project/controller.php?action=get_current
-prjname= prjpath=
+/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/project/controller.php?action=get_current&prjname=common&prjpath=C:/UniServer/www/doc/files/common
+prjname=common prjpath=C:/UniServer/www/doc/files/common

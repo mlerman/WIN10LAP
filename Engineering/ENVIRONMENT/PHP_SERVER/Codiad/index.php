@@ -110,7 +110,7 @@ function open_current_project() {
     <script src="js/message.js"></script>
     <script src="js/jsend.js"></script>
     <script src="js/instance.js?v=<?php echo time(); ?>"></script>
-    <div id="message"></div>
+   <div id="message"></div>
     <?php
 
     //////////////////////////////////////////////////////////////////
@@ -186,10 +186,9 @@ function open_current_project() {
     }else{	//ml in session
 
     ?>
+   <div id="workspace">
 
-    <div id="workspace">
-
-        <div id="sb-left" class="sidebar">
+       <div id="sb-left" class="sidebar">
             <div id="sb-left-title">
                 <a id="lock-left-sidebar" class="icon-lock icon"></a>
                 <?php if (!common::isWINOS()) { ?>
@@ -296,6 +295,16 @@ function open_current_project() {
             <div id="root-editor-wrapper"></div>
 
             <div id="editor-bottom-bar">
+<script>
+function ml(){
+	//alert("ml "+"<?php echo $_GET["path"]; ?>");
+	//var current_project=codiad.project.get_current();	// error
+	//alert("ml "+current_project);
+	codiad.project.open('<?php echo $_GET["path"]; ?>');
+	//	alert("done ml");
+}
+</script>
+<a class="ico-wrapper" style="color:yellow" onclick="ml();">ml</a>
                 <a id="settings" class="ico-wrapper"><span class="icon-doc-text"></span><?php i18n("Settings"); ?></a>
                 
                 <?php
@@ -422,7 +431,8 @@ function open_current_project() {
 		//ml 
         echo('<script>var prjname="'.$_GET["name"].'"; var prjpath="'.$_GET["path"].'";</script>"');
 		
-        foreach($components as $component){
+ file_put_contents("debug.txt",$_SERVER[REQUEST_URI]);
+       foreach($components as $component){
             if(file_exists(COMPONENTS . "/" . $component . "/init.js")){
                 echo('<script src="components/'.$component.'/init.js"></script>"');
 file_put_contents("debug.txt","components/".$component."/init.js\n", FILE_APPEND);
@@ -436,9 +446,7 @@ file_put_contents("debug.txt","components/".$component."/init.js\n", FILE_APPEND
         }
 
     }
-file_put_contents("debug.txt",$_SERVER[REQUEST_URI], FILE_APPEND);
 
     ?>
-
 </body>
 </html>
