@@ -13,5 +13,5 @@ Array
         )
 
 )
-/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/project/controller.php?action=get_current&prjname=common&prjpath=C:/UniServer/www/doc/files/common
-prjname=common prjpath=C:/UniServer/www/doc/files/common
+/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/project/controller.php?action=get_current&prjname=Codiad&prjpath=C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad
+prjname=Codiad prjpath=C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad

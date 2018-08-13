@@ -296,15 +296,20 @@ function open_current_project() {
 
             <div id="editor-bottom-bar">
 <script>
-function ml(){
+function ml_1(){
 	//alert("ml "+"<?php echo $_GET["path"]; ?>");
 	//var current_project=codiad.project.get_current();	// error
 	//alert("ml "+current_project);
 	codiad.project.open('<?php echo $_GET["path"]; ?>');
 	//	alert("done ml");
 }
+function ml_2(){
+	// faire un form et post pour creer un project
+	alert("ml_2");
+}
 </script>
-<a class="ico-wrapper" style="color:yellow" onclick="ml();">ml</a>
+<a class="ico-wrapper" style="color:yellow" onclick="ml_1();">1</a>&nbsp;
+<a class="ico-wrapper" style="color:yellow" onclick="ml_2();">2</a>&nbsp;
                 <a id="settings" class="ico-wrapper"><span class="icon-doc-text"></span><?php i18n("Settings"); ?></a>
                 
                 <?php
