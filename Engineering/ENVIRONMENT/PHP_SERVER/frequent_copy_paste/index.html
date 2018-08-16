@@ -148,7 +148,12 @@ var clicked_id;
 
 function bindme(id) {
     //alert('bindme'+' id is '+id);
-    var clipboard = new ClipboardJS('#'+id, { text: function() { return document.getElementById(id).getAttribute('data-clipboard-text');  } });
+	var clipboard_data = document.getElementById(id).getAttribute('data-clipboard-text');
+	//alert(clipboard_data);
+	var parent_div_prevclip=window.opener.document.getElementById('prevclip');
+	parent_div_prevclip.innerHTML=clipboard_data;
+
+    var clipboard = new ClipboardJS('#'+id, { text: function() { return clipboard_data  } });
 
 }
 	
@@ -201,7 +206,8 @@ for(arr_of_arr_index=0; arr_of_arr_index<arr_of_arr.length; arr_of_arr_index++ )
 <div align="center" style="border:1px solid red">
  <small>to edit this file go to <a href="/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/open-command-prompt-here.html">frequent_copy_paste</a></small>
 </div>
-  
+
+ 
 </body>
 
 </html>
