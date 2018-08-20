@@ -305,11 +305,26 @@ function ml_1(){
 }
 function ml_2(){
 	// faire un form et post pour creer un project
-	alert("ml_2");
+	codiad.project.list();
+	//alert("ml_2");
+}
+function ml_3(){
+	alert("ml_3");
 }
 </script>
 <a class="ico-wrapper" style="color:yellow" onclick="ml_1();">1</a>&nbsp;
 <a class="ico-wrapper" style="color:yellow" onclick="ml_2();">2</a>&nbsp;
+<a class="ico-wrapper" style="color:yellow" onclick="ml_3();">3</a>&nbsp;
+
+<a class="ico-wrapper" style="color:yellow" onclick="codiad.project.create();">4</a>&nbsp;
+
+<!--
+<a class="ico-wrapper" style="color:yellow" onclick="document.getElementById('creform').submit(); return false">4</a>&nbsp;
+<form id="creform" action="codiad.project.create()">
+<input type="hidden" name="project_name" value="<?php echo $_GET["name"]; ?>">
+<input type="hidden" name="project_path" value="<?php echo $_GET["path"]; ?>">
+</form>
+ -->
                 <a id="settings" class="ico-wrapper"><span class="icon-doc-text"></span><?php i18n("Settings"); ?></a>
                 
                 <?php
