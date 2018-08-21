@@ -311,20 +311,29 @@ function ml_2(){
 function ml_3(){
 	alert("ml_3");
 }
+
+function create_with_ajax() {
+	
+$.post( "/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/project/controller.php?action=create&project_name=<?php echo $_GET["name"]; ?>&project_path=<?php echo $_GET["path"]; ?>&git_repo=&git_branch=master")
+  .done(function( data ) {
+    //alert( "Data Loaded: " + data );
+	var t = JSON.parse(data);
+	//alert( t['status'] );
+	if (t['status'] == 'error') alert(data);
+  });	
+
+}
 </script>
 <a class="ico-wrapper" style="color:yellow" onclick="ml_1();">1</a>&nbsp;
 <a class="ico-wrapper" style="color:yellow" onclick="ml_2();">2</a>&nbsp;
 <a class="ico-wrapper" style="color:yellow" onclick="ml_3();">3</a>&nbsp;
-
-<a class="ico-wrapper" style="color:yellow" onclick="codiad.project.create();">4</a>&nbsp;
-
 <!--
-<a class="ico-wrapper" style="color:yellow" onclick="document.getElementById('creform').submit(); return false">4</a>&nbsp;
-<form id="creform" action="codiad.project.create()">
-<input type="hidden" name="project_name" value="<?php echo $_GET["name"]; ?>">
-<input type="hidden" name="project_path" value="<?php echo $_GET["path"]; ?>">
-</form>
- -->
+<a class="ico-wrapper" style="color:yellow" href="/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/project/controller.php?action=create&project_name=<?php echo $_GET["name"]; ?>&project_path=<?php echo $_GET["path"]; ?>&git_repo=&git_branch=master">4</a>&nbsp;
+-->
+
+<a class="ico-wrapper" style="color:yellow" onclick="create_with_ajax();">4</a>&nbsp;
+
+
                 <a id="settings" class="ico-wrapper"><span class="icon-doc-text"></span><?php i18n("Settings"); ?></a>
                 
                 <?php
