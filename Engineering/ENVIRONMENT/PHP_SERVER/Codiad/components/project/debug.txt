@@ -2,14 +2,14 @@ Array
 (
     [0] => Array
         (
-            [name] => Codiad
-            [path] => C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad
+            [name] => common
+            [path] => C:/UniServer/www/doc/files/common
         )
 
     [1] => Array
         (
-            [name] => common
-            [path] => C:/UniServer/www/doc/files/common
+            [name] => Codiad
+            [path] => C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad
         )
 
     [2] => Array
@@ -19,5 +19,5 @@ Array
         )
 
 )
-/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/project/controller.php?action=delete&project_path=C%3A%2FUniServer%2Fwww%2Fdoc%2Ffiles%2FEngineering%2FENVIRONMENT%2FPHP_SERVER%2Ffrequent_copy_paste
-prjname= prjpath=
+/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/project/controller.php?action=get_current&prjname=Codiad&prjpath=C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad
+prjname=Codiad prjpath=C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad
