@@ -1,0 +1,4 @@
+call get_DESTINATIONPATH.bat
+set FILEN=%PRJNAME%
+xcopy %FILEN% %DESTINATIONPATH%%FILEN% /D /y
+pause

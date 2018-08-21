@@ -1,0 +1,5 @@
+this is to test codiad
+I want that in such circumstances when we go to this page,
+we automatically open this file toto.txt in the body of the HTML page of the project.
+
+This project and this page have been created for that purpose.

@@ -1,0 +1,8 @@
+@echo off
+call get_DESTINATIONPATH.bat
+set FILEN=%PRJNAME%
+set RIGHTPANEL=%DESTINATIONPATH%%FILEN%
+echo RIGHTPANEL is %RIGHTPANEL%
+if NOT "%RIGHTPANEL%"=="" ( echo RIGHTPANEL is %RIGHTPANEL%
+  start c:\totalcmd\TOTALCMD.EXE /O "%cd%/%FILEN%" "%RIGHTPANEL%"
+) 

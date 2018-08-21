@@ -1,0 +1,1 @@
+set DESTINATIONPATH=h:\afx-client\afx\
