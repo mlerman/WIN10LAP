@@ -1,0 +1,4 @@
+dans gitignore il y a config.php
+j'ai modifier config.php pour qu'il soit universelle.
+maintenant il peut etre omit de .gitignore
+<hr/> 
