@@ -314,8 +314,35 @@ function ml_2(){
 	//alert("ml_2");
 }
 function ml_3(){
-	alert("ml_3");
+	// open a file
+	// if a file with the same name as the project name exist, then open it
+	// example project name is toto.txt and a file named toto.txt exists in the directory
+	// http://laptop-7kqrmtc0/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/filemanager/controller.php?action=open&path=C%3A%2FUniServer%2Fwww%2Fdoc%2Ffiles%2FFILE%2FTEST%2Ftoto.txt%2Ftoto.txt
+	//alert("ml_3 exist "+ '<?php echo $_GET["path"]; ?>'+'/'+'<?php echo $_GET["name"]; ?>');
+
+	<?php
+	if (file_exists($_GET["path"].'/'.$_GET["name"])) {
+	?>
+		//alert("ml_3 exist "+ '<?php echo $_GET["path"]; ?>'+'/'+'<?php echo $_GET["name"]; ?>');
+		open_file_with_ajax();
+	<?php
+	}
+	?>
 }
+
+
+function open_file_with_ajax() {
+$.post( "/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/filemanager/controller.php?action=open&path=<?php echo $_GET['path']; ?>/<?php echo $_GET['name']; ?>")
+  .done(function( data ) {
+    alert( "Data Loaded: " + data );
+	var t = JSON.parse(data);
+	//alert( t['status'] );
+	if (t['status'] == 'error') console.log(data);
+  });	
+
+}
+
+
 
 function create_project_with_ajax() {
 	
@@ -330,13 +357,16 @@ $.post( "/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/project
 	//alert("pause");
 	//codiad.project.open('<?php echo $_GET["path"]; ?>');
   });	
-  
+
+}
+
+
 $(document).ready(function(){
 // your code
 	//alert("ready 2 - au milieu");
 });  
 
-}
+
 </script>
 <a class="ico-wrapper" style="color:yellow" onclick="ml_1();">1</a>&nbsp;
 <a class="ico-wrapper" style="color:yellow" onclick="ml_2();">2</a>&nbsp;

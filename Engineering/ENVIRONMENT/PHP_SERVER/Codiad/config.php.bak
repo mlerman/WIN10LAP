@@ -15,7 +15,7 @@ define("BASE_PATH", "C:/UniServer/www/doc/files/Engineering/ENVIRONMENT/PHP_SERV
 
 // BASE URL TO CODIAD (without trailing slash)
 $hostname=gethostname();	// desktop-mcqs4ft
-define("BASE_URL", $hostname."/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad");
+define("BASE_URL", "laptop-7kqrmtc0/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad");
 
 // THEME : default, modern or clear (look at /themes)
 define("THEME", "default");
