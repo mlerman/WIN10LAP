@@ -320,6 +320,16 @@ function ml_3(){
 	// http://laptop-7kqrmtc0/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/filemanager/controller.php?action=open&path=C%3A%2FUniServer%2Fwww%2Fdoc%2Ffiles%2FFILE%2FTEST%2Ftoto.txt%2Ftoto.txt
 	//alert("ml_3 exist "+ '<?php echo $_GET["path"]; ?>'+'/'+'<?php echo $_GET["name"]; ?>');
 
+/*	
+il y a 4 operation
+
+http://laptop-7kqrmtc0/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/filemanager/controller.php?action=open&path=C%3A%2FUniServer%2Fwww%2Fdoc%2Ffiles%2FFILE%2FTEST%2Ftoto.txt%2Ftoto.txt
+http://laptop-7kqrmtc0/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/editor/ace-editor/mode-text.js
+http://laptop-7kqrmtc0/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/active/controller.php?action=add&path=C%3A%2FUniServer%2Fwww%2Fdoc%2Ffiles%2FFILE%2FTEST%2Ftoto.txt%2Ftoto.txt
+http://laptop-7kqrmtc0/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/active/controller.php?action=check&path=C%3A%2FUniServer%2Fwww%2Fdoc%2Ffiles%2FFILE%2FTEST%2Ftoto.txt%2Ftoto.txt	
+http://laptop-7kqrmtc0/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/user/controller.php?action=verify	
+	
+*/	
 	<?php
 	if (file_exists($_GET["path"].'/'.$_GET["name"])) {
 	?>
