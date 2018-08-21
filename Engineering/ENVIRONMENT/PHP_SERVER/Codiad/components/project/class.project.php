@@ -38,7 +38,7 @@ class Project extends Common
     {
 		//ml commented
         $this->projects = getJSON('projects.php');
-file_put_contents("debug.txt",print_r($this->projects, true));
+//file_put_contents("debug.txt",print_r($this->projects, true));
 /*
 Array
 (
@@ -56,8 +56,8 @@ Array
 
 );
 */
-file_put_contents("debug.txt",$_SERVER[REQUEST_URI], FILE_APPEND);
-file_put_contents("debug.txt","\nprjname=".$_GET["prjname"]." prjpath=".$_GET["prjpath"], FILE_APPEND);
+//file_put_contents("debug.txt",$_SERVER[REQUEST_URI], FILE_APPEND);
+//file_put_contents("debug.txt","\nprjname=".$_GET["prjname"]." prjpath=".$_GET["prjpath"], FILE_APPEND);
 
 //ml works forces those projects
 //$this->projects = array();

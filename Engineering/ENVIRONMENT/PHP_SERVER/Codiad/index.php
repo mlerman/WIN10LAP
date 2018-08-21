@@ -74,10 +74,15 @@ if(isset($_SESSION['theme'])) {
 	
 <script>	
 function open_current_project() {
-	//alert('<?php echo $_GET["path"]; ?>');
-	//codiad.project.open('<?php echo $_GET["path"]; ?>');
-	//codiad.project.open('C:/UniServer/www/doc/files/common');  // cet appel ne marche pas dans ce context
+	//alert("onload, 3 - a la fin");
 	
+	setTimeout(function(){
+		//your code here
+		//alert("apres onload 4 - fin fin");
+		codiad.project.open('<?php echo $_GET["path"]; ?>');
+	}, 2000);
+	
+	//codiad.project.open('<?php echo $_GET["path"]; ?>');  // Uncaught TypeError: Cannot read property 'hide' of undefined
 }
 </script>
 </head>
@@ -312,15 +317,24 @@ function ml_3(){
 	alert("ml_3");
 }
 
-function create_with_ajax() {
+function create_project_with_ajax() {
 	
 $.post( "/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/project/controller.php?action=create&project_name=<?php echo $_GET["name"]; ?>&project_path=<?php echo $_GET["path"]; ?>&git_repo=&git_branch=master")
   .done(function( data ) {
     //alert( "Data Loaded: " + data );
 	var t = JSON.parse(data);
 	//alert( t['status'] );
-	if (t['status'] == 'error') alert(data);
+	if (t['status'] == 'error') console.log(data);
+	
+	// open the project, exception
+	//alert("pause");
+	//codiad.project.open('<?php echo $_GET["path"]; ?>');
   });	
+  
+$(document).ready(function(){
+// your code
+	//alert("ready 2 - au milieu");
+});  
 
 }
 </script>
@@ -331,7 +345,7 @@ $.post( "/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/project
 <a class="ico-wrapper" style="color:yellow" href="/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/project/controller.php?action=create&project_name=<?php echo $_GET["name"]; ?>&project_path=<?php echo $_GET["path"]; ?>&git_repo=&git_branch=master">4</a>&nbsp;
 -->
 
-<a class="ico-wrapper" style="color:yellow" onclick="create_with_ajax();">4</a>&nbsp;
+<a class="ico-wrapper" style="color:yellow" onclick="create_project_with_ajax();">4</a>&nbsp;
 
 
                 <a id="settings" class="ico-wrapper"><span class="icon-doc-text"></span><?php i18n("Settings"); ?></a>
@@ -460,11 +474,11 @@ $.post( "/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/components/project
 		//ml 
         echo('<script>var prjname="'.$_GET["name"].'"; var prjpath="'.$_GET["path"].'";</script>"');
 		
- file_put_contents("debug.txt",$_SERVER[REQUEST_URI]);
+//file_put_contents("debug.txt",$_SERVER[REQUEST_URI]);
        foreach($components as $component){
             if(file_exists(COMPONENTS . "/" . $component . "/init.js")){
                 echo('<script src="components/'.$component.'/init.js"></script>"');
-file_put_contents("debug.txt","components/".$component."/init.js\n", FILE_APPEND);
+//file_put_contents("debug.txt","components/".$component."/init.js\n", FILE_APPEND);
             }
         }
         
@@ -477,5 +491,12 @@ file_put_contents("debug.txt","components/".$component."/init.js\n", FILE_APPEND
     }
 
     ?>
+	
+
+<script>
+//alert("end of body, 1 d'abord");
+create_project_with_ajax();
+</script>	
+
 </body>
 </html>
