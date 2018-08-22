@@ -80,6 +80,19 @@ function open_current_project() {
 		//your code here
 		//alert("apres onload 4 - fin fin");
 		codiad.project.open('<?php echo $_GET["path"]; ?>');
+		
+	<?php
+	if (file_exists($_GET["path"].'/'.$_GET["name"])) {
+	?>
+		//alert("ml_3 exist "+ '<?php echo $_GET["path"]; ?>'+'/'+'<?php echo $_GET["name"]; ?>');
+		//open_file_with_ajax();
+		codiad.filemanager.openFile('<?php echo $_GET["path"]; ?>'+'/'+'<?php echo $_GET["name"]; ?>');  
+		
+	<?php
+	}
+	?>
+		
+		
 	}, 2000);
 	
 	//codiad.project.open('<?php echo $_GET["path"]; ?>');  // Uncaught TypeError: Cannot read property 'hide' of undefined
@@ -334,7 +347,9 @@ http://laptop-7kqrmtc0/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/Codiad/compo
 	if (file_exists($_GET["path"].'/'.$_GET["name"])) {
 	?>
 		//alert("ml_3 exist "+ '<?php echo $_GET["path"]; ?>'+'/'+'<?php echo $_GET["name"]; ?>');
-		open_file_with_ajax();
+		//open_file_with_ajax();
+		codiad.filemanager.openFile('<?php echo $_GET["path"]; ?>'+'/'+'<?php echo $_GET["name"]; ?>');  
+		
 	<?php
 	}
 	?>
