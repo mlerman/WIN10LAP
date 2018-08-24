@@ -144,8 +144,11 @@ var arr_of_arr =
 	];
 var clicked_id;
 
+
 function bindme(id) {
-    //alert('bindme'+' id is '+id);
+	console.log(rearrange_order);
+    alert('bindme'+' id is '+id);
+	
 	var clipboard_data = document.getElementById(id).getAttribute('data-clipboard-text');
 	//alert(clipboard_data);
 	var parent_div_prevclip=window.opener.document.getElementById('prevclip');
@@ -158,38 +161,38 @@ function bindme(id) {
 document.write("<table width='100%'><tr><td><a href='#batch'>Batch</a></td><td><a href='#shell'>Shell</a></td><td><a href='#html'>HTML</a></td><td><a href='#c_cpp'>C/C++</a></td><td><a href='#js'>Javascript</a></td><td><a href='#php'>PHP</a></td><td><a href='#admin'>Admin</a></td></tr></table>");
 //<![CDATA[
 var strid="";
+
+
+var rearrange_order = [0, 1, 2, 3, 4, 5, 6];	//ok
+//var rearrange_order = [1, 2, 3, 4, 5, 6, 0];	// OK
+//var rearrange_order = [2, 4, 6, 0, 5, 1, 3];	// OK
+
+var strid_tab = ["batch", "shell", "html", "c_cpp", "js", "php", "admin"];
 for(arr_of_arr_index=0; arr_of_arr_index<arr_of_arr.length; arr_of_arr_index++ )
 {
   strid="";
-  switch(arr_of_arr_index)
+  switch(rearrange_order[arr_of_arr_index])
   {
   case 0: document.write("<h3><a name='batch'></a>Batch</h3>");
-          strid="batch";
 			break;
   case 1: document.write("<h3><a name='shell'>Shell</h3></a>");
-          strid="shell";
 			break;
   case 2: document.write("<h3><a name='html'></a>HTML</h3>");
-          strid="html";
 			break;
   case 3: document.write("<h3><a name='c_cpp'></a>C/C++</h3>");
-          strid="c_cpp";
 			break;
   case 4: document.write("<h3><a name='js'></a>Javascript</h3>");
-          strid="js";
 			break;
   case 5: document.write("<h3><a name='php'></a>PHP</h3>");
-          strid="php";
 			break;
   case 6: document.write("<h3><a name='admin'></a>Admin</h3>");
-          strid="admin";
 			break;
-  
   }
-  for(ii=0; ii<arr_of_arr[arr_of_arr_index].length; ii++)
+  strid=strid_tab[rearrange_order[arr_of_arr_index]];
+  for(ii=0; ii<arr_of_arr[rearrange_order[arr_of_arr_index]].length; ii++)
   {
   // this display the links in the body
-  document.write("<br/>&nbsp;<span class='btn' id='copy_button_"+strid+"_"+ii+"' data-clipboard-text='"+arr_of_arr[arr_of_arr_index][ii][0]+"' title='copy to clipboard' style='cursor:pointer' onmouseover='this.style.backgroundColor=white;' clicked_id=this.id; onclick='bindme(this.id); window.close();'><img src=\"/doc/images/copyclip.png\"/>&nbsp;"+arr_of_arr[arr_of_arr_index][ii][1]+"</span>");
+  document.write("<br/>&nbsp;<span class='btn' id='copy_button_"+strid+"_"+ii+"' data-clipboard-text='"+arr_of_arr[rearrange_order[arr_of_arr_index]][ii][0]+"' title='copy to clipboard' style='cursor:pointer' onmouseover='this.style.backgroundColor=white;' clicked_id=this.id; onclick='bindme(this.id); window.close();'><img src=\"/doc/images/copyclip.png\"/>&nbsp;"+arr_of_arr[rearrange_order[arr_of_arr_index]][ii][1]+"</span>");
   }
   document.write("<br/><hr/>");
 }
