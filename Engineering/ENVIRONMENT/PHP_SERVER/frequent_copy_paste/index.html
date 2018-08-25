@@ -145,9 +145,30 @@ var arr_of_arr =
 var clicked_id;
 
 
-function bindme(id) {
-	console.log(rearrange_order);
-    alert('bindme'+' id is '+id);
+function bindme(id, section) {
+    //alert('bindme'+' id is '+id +" section is "+section);
+    
+    found=-1;
+    for (ii=0; ii<rearrange_order.length ; ii++) {
+    	//console.log(rearrange_order[ii]);
+    	if(rearrange_order[ii]==section) found=ii;
+    }
+    //console.log("found = "+found);
+    let temp = rearrange_order[found];
+    
+    for (ii=found; ii>=1 ; ii--) {
+    	rearrange_order[ii]=rearrange_order[ii-1];
+    }
+    rearrange_order[0]=temp;
+    
+    
+    //for (ii=0; ii<rearrange_order.length ; ii++) {
+    // 	console.log(rearrange_order[ii]);
+    //}
+    
+    localStorage.setItem("rearrange_order", JSON.stringify(rearrange_order));
+    
+    //alert("found is " + found + " order is " + rearrange_order);
 	
 	var clipboard_data = document.getElementById(id).getAttribute('data-clipboard-text');
 	//alert(clipboard_data);
@@ -166,6 +187,11 @@ var strid="";
 var rearrange_order = [0, 1, 2, 3, 4, 5, 6];	//ok
 //var rearrange_order = [1, 2, 3, 4, 5, 6, 0];	// OK
 //var rearrange_order = [2, 4, 6, 0, 5, 1, 3];	// OK
+
+rearrange_order = JSON.parse(localStorage.getItem("rearrange_order"));
+
+//alert(rearrange_order);
+
 
 var strid_tab = ["batch", "shell", "html", "c_cpp", "js", "php", "admin"];
 for(arr_of_arr_index=0; arr_of_arr_index<arr_of_arr.length; arr_of_arr_index++ )
@@ -189,10 +215,11 @@ for(arr_of_arr_index=0; arr_of_arr_index<arr_of_arr.length; arr_of_arr_index++ )
 			break;
   }
   strid=strid_tab[rearrange_order[arr_of_arr_index]];
+  section=rearrange_order[arr_of_arr_index];
   for(ii=0; ii<arr_of_arr[rearrange_order[arr_of_arr_index]].length; ii++)
   {
   // this display the links in the body
-  document.write("<br/>&nbsp;<span class='btn' id='copy_button_"+strid+"_"+ii+"' data-clipboard-text='"+arr_of_arr[rearrange_order[arr_of_arr_index]][ii][0]+"' title='copy to clipboard' style='cursor:pointer' onmouseover='this.style.backgroundColor=white;' clicked_id=this.id; onclick='bindme(this.id); window.close();'><img src=\"/doc/images/copyclip.png\"/>&nbsp;"+arr_of_arr[rearrange_order[arr_of_arr_index]][ii][1]+"</span>");
+  document.write("<br/>&nbsp;<span class='btn' id='copy_button_"+strid+"_"+ii+"' data-clipboard-text='"+arr_of_arr[rearrange_order[arr_of_arr_index]][ii][0]+"' title='copy to clipboard' style='cursor:pointer' onmouseover='this.style.backgroundColor=\'white\';' clicked_id=this.id; onclick='bindme(this.id,"+section+"); window.close();'><img src=\"/doc/images/copyclip.png\"/>&nbsp;"+arr_of_arr[rearrange_order[arr_of_arr_index]][ii][1]+"</span>");
   }
   document.write("<br/><hr/>");
 }
