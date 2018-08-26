@@ -222,7 +222,7 @@ for(arr_of_arr_index=0; arr_of_arr_index<arr_of_arr.length; arr_of_arr_index++ )
   for(ii=0; ii<arr_of_arr[rearrange_order[arr_of_arr_index]].length; ii++)
   {
   // this display the links in the body
-  document.write("<br/>&nbsp;<span class='btn' id='copy_button_"+strid+"_"+ii+"' data-clipboard-text='"+arr_of_arr[rearrange_order[arr_of_arr_index]][ii][0]+"' title='copy to clipboard' style='cursor:pointer' onmouseover='this.style.backgroundColor=\'white\';' clicked_id=this.id; onclick='bindme(this.id,"+section+"); window.close();'><img src=\"/doc/images/copyclip.png\"/>&nbsp;"+arr_of_arr[rearrange_order[arr_of_arr_index]][ii][1]+"</span>");
+  document.write("<br/>&nbsp;<span class='btn' id='copy_button_"+strid+"_"+ii+"' data-clipboard-text='"+arr_of_arr[rearrange_order[arr_of_arr_index]][ii][0]+"' title='copy to clipboard' style='cursor:pointer' onmouseover='this.style.backgroundColor=\'white\';' clicked_id=this.id; onclick='bindme(this.id,"+section+"); window.close();'><img src=\"/doc/images/copyclip.png\"/>&nbsp;<img src='copy_button_"+strid+"_"+ii+".gif'>&nbsp;"+arr_of_arr[rearrange_order[arr_of_arr_index]][ii][1]+"</span>");
   }
   document.write("<br/><hr/>");
 }
