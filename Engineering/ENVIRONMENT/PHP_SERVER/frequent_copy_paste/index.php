@@ -1,7 +1,16 @@
 <html>
 <body>
 
+<?php 
 
+echo "<!-- "; 
+
+echo " test zone ";
+
+echo "-->"; 
+
+
+?>
     
     
 <script>
@@ -120,8 +129,8 @@ var arr_admin = // each line: ['string value to be copied with newlines', 'strin
     ['408-564-9578', '408-564-9578'], 
     ['2462 Booksin Ave &#10;San Jose CA 95125', '2462 Booksin Ave San Jose CA 95125'], 
     ['2462 Booksin Ave', '2462 Booksin Ave'], 
-    ['miky est stupide ', 'stupid blancs'],
-    ['mikyeststupide', 'stupid'],
+    ['<?php echo file_get_contents('../../../../../../local/C7911B96-4115-406f-8BAE-551E4112AC2E.txt'); ?>', 'stupid blancs'],
+    ['<?php echo file_get_contents('../../../../../../local/32D00D3E-92DA-4d69-872C-4D06C232F91A.txt'); ?>', 'stupid'],
     //['Mikhael Lerman &#10;570 Alder Drive &#10;Milpitas CA 95035 &#10;408-822-0180', 'Mikhael Lerman 570 Alder Drive Milpitas CA 95035 408-822-0180'],
     //['1140537', '1140537 (Micron Employee number)'],
     //['127650', '127650 (Micron cost center)'],
