@@ -1,3 +1,5 @@
+goto endwpad
+
 if exist wpad.dat del wpad.dat /Q
 c:\UniServer\www\doc\files\ThisPC\install_curl_static\curl.exe -O http://htmlprod-vip.micron.com/wpad.dat
 findstr /m "proxy.micron.com" wpad.dat
