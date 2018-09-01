@@ -254,7 +254,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
     $text.="fi\n"; 
 	  
 	// pause for debug
-    //$text.="  echo http_proxy is \$http_proxy \n"; 
+    $text.="  echo http_proxy is \$http_proxy \n"; 
 	//$text.="  read -p \"Press any key to continue . . .\" \n"; 
 	  
 	  
