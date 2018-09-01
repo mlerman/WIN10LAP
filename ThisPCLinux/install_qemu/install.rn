@@ -1,0 +1,3 @@
+#sudo apt-get install qemu
+sudo apt install qemu qemu-kvm libvirt-bin
+read -p "Press Enter key to continue..."

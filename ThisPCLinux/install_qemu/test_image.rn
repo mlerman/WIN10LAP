@@ -1,0 +1,2 @@
+sudo qemu-system-x86_64 -m 1024 -boot d -enable-kvm -smp 3 -net nic -net user -hda testing-image.img -cdrom ubuntu-18.04.1-desktop-amd64.iso
+read -p "Press_Enter_key_to_continue" reply

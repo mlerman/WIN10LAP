@@ -1,0 +1,2 @@
+sudo qemu-img create -f qcow2 testing-image.img 10G
+read -p "Press Enter key to continue..." reply
