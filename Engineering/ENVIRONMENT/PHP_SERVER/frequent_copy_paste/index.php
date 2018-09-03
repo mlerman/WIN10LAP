@@ -85,11 +85,11 @@ var arr_c_cpp = // each line: ['string value to be copied with newlines', 'strin
     ['int isprime(int n)&#10;{&#10;    int i, flag = 0;&#10;&#10;    if (n<2) return 0;&#10;    for(i=2; i<=n/2; ++i)&#10;    {&#10;        // condition for nonprime number&#10;        if(n%i==0)&#10;        {&#10;            flag=1;&#10;            break;&#10;        }&#10;    }&#10;&#10;    return !flag;&#10;}', 'function isprim(int n)'],
     //['printk("%s:%s:%d ml: %s http://mlerman-lap/s/K \\n",__FILE__,__func__,__LINE__, "something");&#10;', 'printk("%s:%s:%d ml: %s http://mlerman-lap/s/K \\n",__FILE__,__func__,__LINE__, "something");'] ,
     ['#include <stdio.h>&#10;#include <string.h>&#10;&#10;int recurse(unsigned int i) &#10;{&#10;&#10;   if(i <= 1) &#10;   {&#10;      return 1;&#10;   }&#10;   return i * recurse(i - 1);&#10;}&#10;&#10;int main()&#10;{&#10;  int i;&#10;  &#10;  i=recurse(4);&#10;  printf("\\n i: %d", i);&#10;  return 0;&#10;}&#10;', 'skeleton for recurse, factoriel | <mark>full</mark> | OK'],
-    ['#include<stdio.h>&#10; &#10;int Fibonacci(int n)&#10;{&#10;   if ( n == 0 ) return 0;&#10;   else if ( n == 1 ) return 1;&#10;   else return ( Fibonacci(n-1) + Fibonacci(n-2) );&#10;} &#10;&#10;main()&#10;{&#10;   int n=5, i = 0, c;&#10;   printf("\\n");&#10; &#10;   for ( c = 1 ; c <= n ; c++ )&#10;   {&#10;      printf("%d\\n", Fibonacci(i));&#10;      i++; &#10;   }&#10; &#10;   return 0;&#10;}&#10;', 'recurse, fibonacci serie | <mark>full</mark> | OK'],
-    ['#include<stdio.h>&#10; &#10;int main()&#10;{&#10;   int n=5, first = 0, second = 1, next, c;&#10; &#10;   printf("\\n",n);&#10;   for ( c = 0 ; c < n ; c++ )&#10;   {&#10;      if ( c <= 1 )&#10;         next = c;&#10;      else&#10;      {&#10;         next = first + second;&#10;         first = second;&#10;         second = next;&#10;      }&#10;      printf("%d\\n",next);&#10;   }&#10; &#10;   return 0;&#10;}', 'normal, fibonacci serie | <mark>full</mark> | OK'],
+    ['#include<stdio.h>&#10; &#10;int Fibonacci(int n)&#10;{&#10;   if ( n == 0 ) return 0;&#10;   else if ( n == 1 ) return 1;&#10;   else return ( Fibonacci(n-1) + Fibonacci(n-2) );&#10;} &#10;&#10;int main()&#10;{&#10;   int n=5, i = 0, c;&#10;   printf("\\n");&#10; &#10;   for ( c = 1 ; c <= n ; c++ )&#10;   {&#10;      printf("%d\\n", Fibonacci(i));&#10;      i++; &#10;   }&#10; &#10;   return 0;&#10;}&#10;', 'recurse, fibonacci serie | <mark>full</mark> | OK'],
+    ['#include<stdio.h>&#10; &#10;int main()&#10;{&#10;   int n=5, first = 0, second = 1, next, c;&#10; &#10;   printf("\\n");&#10;   for ( c = 0 ; c < n ; c++ )&#10;   {&#10;      if ( c <= 1 )&#10;         next = c;&#10;      else&#10;      {&#10;         next = first + second;&#10;         first = second;&#10;         second = next;&#10;      }&#10;      printf("%d\\n",next);&#10;   }&#10; &#10;   return 0;&#10;}', 'normal, fibonacci serie | <mark>full</mark> | OK'],
     ['#include <stdio.h>&#10;#include <stdlib.h>&#10;&#10;int main()&#10;{&#10;  struct node {&#10;   int data;&#10;   struct node *next;&#10;  }*start, *elem1, *elem2, *elem3;&#10;&#10;  struct node *temp, *last ;&#10;&#10;  elem1 = (struct node*) malloc(sizeof(struct node));&#10;  elem1->data = 1;&#10;&#10;  start = elem1;&#10;&#10;  elem2 = (struct node*) malloc(sizeof(struct node));&#10;  elem2->data = 2;&#10;  elem1->next=elem2;&#10;&#10;  elem3 = (struct node*) malloc(sizeof(struct node));&#10;  elem3->data = 3;&#10;  elem2->next=elem3;&#10;&#10;  elem3->next=NULL;&#10;  &#10;  temp = start;&#10;&#10;  do {&#10;      printf("data : %d next : %p\\n", temp->data, temp->next); &#10;      last = temp;&#10;      temp = temp->next;&#10;  } while(last->next);&#10; &#10;  return 0;&#10;}&#10;', 'linked list with scan | <mark>full</mark> | OK'],
     ['#include <stdio.h>&#10;#include <ctype.h>&#10;#include <stdlib.h>&#10;#include <math.h>&#10; &#10;long int Sum_of_Digits(long int Number)&#10;{&#10;    static long int sum=0;&#10;    if (Number==0) return(sum);&#10;    else sum=sum+Number%10+Sum_of_Digits(Number/10);&#10;    return(sum);&#10;}&#10; &#10;int main()&#10;{&#10;    long int Sum_dig=Sum_of_Digits(12345);&#10;    printf("%ld", Sum_dig);&#10;    return(0);&#10;} ', 'sum_of_digits of a long number | <mark>full</mark> | OK'],
-    ['#include <stdio.h>&#10;typedef struct TreeNode &#10;{&#10;  int element;&#10;  struct TreeNode *left, *right;&#10;} TreeNode;&#10;TreeNode *displayTree(TreeNode *node)&#10;{&#10;  //display the full tree&#10;  if(node==NULL)&#10;  {&#10;    return node;&#10;  }&#10;  displayTree(node->left);&#10;  printf("| %d ", node->element); &#10;  displayTree(node->right);&#10;  return node;&#10;}&#10;&#10;int main()&#10;{&#10;  TreeNode myTreeRoot, myTreeLeft, myTreeRight, myTreeRightChild;&#10;  &#10;  myTreeRoot.element=1;&#10;  myTreeRoot.left=&myTreeLeft;&#10;  myTreeRoot.right=&myTreeRight;&#10;  &#10;  myTreeLeft.element=2;&#10;  myTreeLeft.left=NULL;&#10;  myTreeLeft.right=NULL;&#10;  &#10;  myTreeRight.element=3;&#10;  myTreeRight.left=&myTreeRightChild;&#10;  myTreeRight.right=NULL;&#10;  myTreeRightChild.element=4;  myTreeRightChild.left=NULL;&#10;  myTreeRightChild.right=NULL;&#10;  displayTree(&myTreeRoot);&#10;  return 0;&#10;}&#10;', 'binary tree node with init | <mark>full</mark> | OK']
+    ['#include <stdio.h>&#10;typedef struct TreeNode &#10;{&#10;  int element;&#10;  struct TreeNode *left, *right;&#10;} TreeNode;&#10;TreeNode *displayTree(TreeNode *node)&#10;{&#10;  //display the full tree&#10;  if(node==NULL)&#10;  {&#10;    return node;&#10;  }&#10;  displayTree(node->left);&#10;  printf("| %d ", node->element); &#10;  displayTree(node->right);&#10;  return node;&#10;}&#10;&#10;int main()&#10;{&#10;  TreeNode myTreeRoot, myTreeLeft, myTreeRight, myTreeRightChild;&#10;  &#10;  myTreeRoot.element=1;&#10;  myTreeRoot.left=&myTreeLeft;&#10;  myTreeRoot.right=&myTreeRight;&#10;  &#10;  myTreeLeft.element=2;&#10;  myTreeLeft.left=NULL;&#10;  myTreeLeft.right=NULL;&#10;  &#10;  myTreeRight.element=3;&#10;  myTreeRight.left=&myTreeRightChild;&#10;  myTreeRight.right=NULL;&#10;&#10;  myTreeRightChild.element=4;&#10;  myTreeRightChild.left=NULL;&#10;  myTreeRightChild.right=NULL;&#10;&#10;  displayTree(&myTreeRoot);&#10;  return 0;&#10;}&#10;', 'binary tree node with init | <mark>full</mark> | OK']
     ];
 
 var arr_js = // each line: ['string value to be copied with newlines', 'string to be shown'],
@@ -116,19 +116,19 @@ var arr_php = // each line: ['string value to be copied with newlines', 'string 
     ];
 var arr_admin = // each line: ['string value to be copied with newlines', 'string to be shown'],
     [ 
-    ['95125', '95125'], 
+    ['95125', '5) 95125'], 
     ['Indeed', 'Indeed'], 
-    ['Mikhael', 'Mikhael'], 
-    ['Lerman', 'Lerman'], 
-    ['San Jose', 'San Jose'], 
+    ['Mikhael', '1) Mikhael'], 
+    ['Lerman', '2) Lerman'], 
+    ['San Jose', '4) San Jose'], 
     ['Mikhael Lerman', 'Mikhael Lerman'], 
     ['michael_lerman@yahoo.com', 'michael_lerman@yahoo.com'],
     ['celine_lerman@yahoo.com', 'celine_lerman@yahoo.com'],
     ['mikhaell@xilinx.com', 'mikhaell@xilinx.com'],
     ['408-978-2232', '408-978-2232'], 
-    ['408-564-9578', '408-564-9578'], 
+    ['408-564-9578', '6) 408-564-9578'], 
     ['2462 Booksin Ave &#10;San Jose CA 95125', '2462 Booksin Ave San Jose CA 95125'], 
-    ['2462 Booksin Ave', '2462 Booksin Ave'], 
+    ['2462 Booksin Ave', '3) 2462 Booksin Ave'], 
     ['<?php echo file_get_contents('../../../../../../local/C7911B96-4115-406f-8BAE-551E4112AC2E.txt'); ?>', 'stupid blancs'],
     ['<?php echo file_get_contents('../../../../../../local/32D00D3E-92DA-4d69-872C-4D06C232F91A.txt'); ?>', 'stupid'],
     //['Mikhael Lerman &#10;570 Alder Drive &#10;Milpitas CA 95035 &#10;408-822-0180', 'Mikhael Lerman 570 Alder Drive Milpitas CA 95035 408-822-0180'],
