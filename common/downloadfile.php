@@ -247,13 +247,14 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
     $text.="elif [  \"\$HOSTNAME\" = mlerman-vm-mint ]; then"."\n"; 
     $text.="  printf 'guest mlerman-vm-mint\\n' \n"; 
 	
-	$text.="  export http_proxy=proxy\n";
+	//$text.="  export http_proxy=proxy\n";
+	$text.="  unset http_proxy\n";
     $text.="elif [  \"\$HOSTNAME\" = mint18 ]; then"."\n"; 
     $text.="  printf 'guest mint18\\n' \n"; 
     $text.="fi\n"; 
 	  
 	// pause for debug
-    //$text.="  echo http_proxy is \$http_proxy \n"; 
+    $text.="  echo http_proxy is \$http_proxy \n"; 
 	//$text.="  read -p \"Press any key to continue . . .\" \n"; 
 	  
 	  
@@ -272,6 +273,9 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
     $text.="  export mluser=$(wget http://".$_SERVER["HTTP_HOST"]."/local/myusername.txt -q -O - )"."\n";   // myXusername.txt myusername.txt
 	//$text.='  echo password is $pw user is $mluser'."\n";
 	//sudo demande un password
+
+	// pause for debug
+    //$text.="  read -p \"Press [Enter] key to continue... \" "."\n";
 	
 //Mounting a filesystem does not require superuser privileges under certain conditions, 
 //typically that the entry for the filesystem in /etc/fstab contains a flag that permits 
@@ -294,6 +298,9 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 	$str_mount=	"  sudo mount -t cifs -o username=".'$mluser'.",password=".'"'.'$pw'.'"'.",uid=".$uid.",gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
     //$text.="  echo str_mount : ".$str_mount;
     $text.=$str_mount;
+
+	// pause for debug
+    //$text.="  read -p \"Press [Enter] key to continue... \" "."\n";
 
 	//$text.="    sleep 5\n";
 	// ca ne fait rien
@@ -364,10 +371,13 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
         $text.=$textbat;
 	  } else {
 
-          $textbat='echo -ne "\033]0; Started in $LINDIRECTORY | running '.$fname.' | from '.$_SERVER["HTTP_HOST"].'\007"'."\n".$textbat;
+		  // insert title
+		  if ($_SERVER["HTTP_HOST"]=="xsjmikhaell30") {		// this works in ubuntu but not in Mint
+               $textbat='echo -ne "\033]0; Started in $LINDIRECTORY | running '.$fname.' | from '.$_SERVER["HTTP_HOST"].'\007"'."\n".$textbat;
+		  }
 	  
-	  //$tempstr=$term." -e 'sh -c \"";  // sh: 1: source not found, pause OK
-//        $tempstr=$term." -e $'bash -c \"";	// commence a executer
+	   //$tempstr=$term." -e 'sh -c \"";  // sh: 1: source not found, pause OK
+       //$tempstr=$term." -e $'bash -c \"";	// commence a executer
         $tempstr=$term." --geometry=180x25 -e ".$prefix_string."'bash -c \"";	// commence a executer
 											// la suite de ce string est quote et double-quote
         //$tempstr=$term." -e 'csh -c \"";	// pas de pause

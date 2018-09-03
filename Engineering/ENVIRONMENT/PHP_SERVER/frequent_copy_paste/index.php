@@ -39,7 +39,7 @@ var arr_shell = // each line: ['string value to be copied with newlines', 'strin
     ['ps -Adef | grep mikhaell', 'ps -Adef | grep mikhaell'], 
     ['rm -rf removeMeAllWithMySbdirs', 'rm -rf removeMeAllWithMySbdirs'], 
     ['mkdir -p createMeIfNotExist', 'mkdir -p createMeIfNotExist'], 
-    ['read -p "Press [Enter] key to continue..." reply', 'read -p "Press [Enter] key to continue..." reply'], 
+    ['read -p "Press Enter key to continue..." reply', 'read -p "Press [Enter] key to continue..." reply'], 
     //['http_proxy=http://proxy.micron.com:8080; export http_proxy', 'http_proxy=http://proxy.micron.com:8080; export http_proxy']
     ['#!/bin/sh&#10;i=1;&#10;&#10;while [[ i -le 100 ]] ;&#10;do&#10;  echo $i;&#10;  i=$((i+1));&#10;done;', 'while loop <mark>full</mark>'] 
     ];
