@@ -62,7 +62,8 @@
 				
 				$('#fileTreeDemo_2').fileTree(
 										{ 
-											root: '../../doc/files/', 
+											//root: '../../doc/files/', 
+											root: '../../../', 
 											script: 'connectors/jqueryFileTree.php', 
 											folderEvent: 'click', 
 											expandSpeed: 750, 
@@ -70,9 +71,8 @@
 											multiFolder: false 
 										}, 
 										function(file) { 
-											//alert(file);
-											//alert("<?php echo $_GET['parent']; ?>");
-											window.location.href = '<?php echo $_GET['close']; ?>.php?parent=<?php echo $_GET['parent']; ?>&linkwith='+file.substring(15);
+								//alert("file : " + file + ", parent : " + "<?php echo $_GET['parent']; ?>" + ", close : " + "<?php echo $_GET['close'] ?>.php ");
+											window.location.href = '<?php echo $_GET['close']; ?>.php?parent=<?php echo $_GET['parent']; ?>&linkwith='+file.substring(8);
 										}
 									);
 				

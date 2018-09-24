@@ -60,7 +60,7 @@ $with_name=substr($with_name,$pos+1);
 echo "with_name=".$with_name."<br/>\n";
 
 // highlight " . " pour mieux voir
-$link_next="<a href='/doc/files/common/download" . $linuxstr . "file.php?fname=" . $commanderstr . "&targetdir=C:" . $parent_dir . "&urldir=" . $link_next_dir_url . "&perma=C:\UniServer\www\common\perma" . $linuxstr . "'><img src='/doc/images/" . $commanderpng . "' /></a>&nbsp;" . '<a href="/doc/files' . $_GET['linkwith'] . '" target="' . $with_name . '" class="inline" id="idnext"  onmouseover="getFileFromServer(\'' . $link_next_dir_url . '/.brief\', function(text){ Tipped.create(\'#\'+\'idnext\', \'<pre>\'+text+\'</pre>\'); });">' . $with_name . '</a>' . $icon_with . "<br/>\n";
+$link_next="<a href='/doc/files/common/download" . $linuxstr . "file.php?fname=" . $commanderstr . "&targetdir=C:" . $parent_dir . "&urldir=" . $link_next_dir_url . "&perma=C:/UniServer/www/doc/files/common/perma" . $linuxstr . "'><img src='/doc/images/" . $commanderpng . "' /></a>&nbsp;" . '<a href="/doc/files' . $_GET['linkwith'] . '" target="' . $with_name . '" class="inline" id="idnext"  onmouseover="getFileFromServer(\'' . $link_next_dir_url . '/.brief\', function(text){ Tipped.create(\'#\'+\'idnext\', \'<pre>\'+text+\'</pre>\'); });">' . $with_name . '</a>' . $icon_with . "<br/>\n";
 echo "link_with=".$link_next;
 
 
@@ -78,7 +78,7 @@ if(file_exists($parent_dir."ui_run.run")){
 	echo "exists !<br/>\n"; 
 	$icon_back="<a href='/doc/files/common/download".$linuxstr."file.php?fname=ui_run.run&targetdir=".$parent_dir."&admin=0'><img src='/doc/images/Play-1-Hot-icon.png'/></a>";
 }
-$link_parent="<a href='/doc/files/common/download".$linuxstr."file.php?fname=".$commanderstr."&targetdir=C:".$link_next_dir."&urldir=".$parent_dir_url."&perma=C:\UniServer\www\common\perma".$linuxstr."'><img src='/doc/images/".$commanderpng."' /></a>&nbsp;".'<a href="/doc/files'.$_GET['parent'].'open-command-prompt-here.html" target="'.$parent_name.'">'.$parent_name.'</a>'.$icon_back."<br/>\n";
+$link_parent="<a href='/doc/files/common/download".$linuxstr."file.php?fname=".$commanderstr."&targetdir=C:".$link_next_dir."&urldir=".$parent_dir_url."&perma=C:/UniServer/www/doc/files/common/perma".$linuxstr."'><img src='/doc/images/".$commanderpng."' /></a>&nbsp;".'<a href="/doc/files'.$_GET['parent'].'open-command-prompt-here.html" target="'.$parent_name.'">'.$parent_name.'</a>'.$icon_back."<br/>\n";
 echo "link_parent=".$link_parent;
 
 
