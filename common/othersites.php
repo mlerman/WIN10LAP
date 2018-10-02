@@ -54,7 +54,7 @@ foreach ($othersites as $value) {
 	} else {
 		if(http_response($value.'/doc/favicon.ico')) {
 			$tag_othersite='<img src="'.$value.'/doc/favicon.ico" title="create project container in '.$value.'" height="16" width="16"/>';
-			echo '&nbsp;<a href="/common/create_project_container.php?host='.$value.'&urldir='.$urldir.'" target="_parent">'.$tag_othersite.'</a>';
+			echo '&nbsp;<a href="/doc/files/common/create_project_container.php?host='.$value.'&urldir='.$urldir.'" target="_parent">'.$tag_othersite.'</a>';
 		}
 	}
 }
