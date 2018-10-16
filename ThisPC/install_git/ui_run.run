@@ -1,0 +1,5 @@
+@echo off
+cls
+echo Hello...
+rem cd %HOMEDRIVE%%HOMEPATH%
+"C:\Program Files (x86)\Git\bin\wish.exe" "C:\Program Files (x86)\Git\libexec\git-core\git-gui"

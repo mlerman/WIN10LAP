@@ -1,0 +1,5 @@
+@echo off
+cls
+echo directory of file
+echo use left for the current project directory
+start c:\totalcmd\TOTALCMD.EXE /O "%cd%/open-command-prompt-here.html" "C:\Program Files (x86)\Git\libexec\git-core\git-gui"
