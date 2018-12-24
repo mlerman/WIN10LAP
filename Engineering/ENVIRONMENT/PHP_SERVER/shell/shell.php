@@ -35,7 +35,7 @@ foreach ($lines as $line) {
   $tmp_sug[$line] = $line;
 }
 
-/*
+/* 
 $tmp_sug = array( 'cd \'~\''=>'cd \'~\'',
                   //'upload'=>'upload',
 		'pwd'=>'pwd',
@@ -43,7 +43,7 @@ $tmp_sug = array( 'cd \'~\''=>'cd \'~\'',
 		'clear'=>'clear',
 		'dir'=>'dir'
 		);
-*/
+ */
 		
 //print_r($tmp_sug);
 //print_r($lines);
@@ -400,7 +400,7 @@ function command()
   }
   else
   { chdir($dir);
-    $output=myshellexec($command." 2>&1");
+    $output=myshellexec($command/*." 2>&1"*/);  // en commentaire sinon n'affiche rien sur http://desktop-mcqs4ft
   }
   if (substr($dir,0,strlen($home))==$home) $dir = '~'.substr($dir,strlen($home));
   $output = $processUser['name'].'@'.php_uname('n').':'.$olddir.'$ '.$command."\n".$output;
