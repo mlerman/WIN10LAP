@@ -1,4 +1,4 @@
-rem @echo off
+@echo off
 set REPONAME=WIN10LAP
 set THISDIR=%CD%
 
