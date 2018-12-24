@@ -150,3 +150,8 @@ echo deux >test.0
 echo trois >test.1
 echo quatre >test.2
 rclone config
+sendkeys
+Sendkeys
+cd WebShell\
+dir *.py
+webshell.py
