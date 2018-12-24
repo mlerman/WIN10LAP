@@ -58,13 +58,13 @@ git update-index --no-assume-unchanged %THISPLACEBACKSLASH%\*
 
 
 rem add only this project and subdir
-git add -A %THISPLACEBACKSLASH%\  2>&1
+git add -A %THISPLACEBACKSLASH%\  
 call c:\UniServer\www\local\set_git_usep.bat
-@git remote set-url origin https://%GITUSEP%@github.com/mlerman/%REPONAME%.git  2>&1
+@git remote set-url origin https://%GITUSEP%@github.com/mlerman/%REPONAME%.git  
 rem git status
 rem git commit -m "commit for %currentfolder% project from %COMPUTERNAME%"
 rem echo username hint: ati, password hint: nrl14
-git pull origin master 2>&1
+git pull origin master 
 
 
 rem returning to the directory
