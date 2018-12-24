@@ -295,7 +295,7 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 	// OK but no write access
     //$str_mount=	"  sudo mount -t cifs -o username=".'$mluser'.",password=".'"'.'$pw'.'"'.",forceuid,gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
     // uid=0 root proviledge does fix the write access denied
-	$str_mount=	"  sudo mount -t cifs -o username=".'$mluser'.",password=".'"'.'$pw'.'"'.",uid=".$uid.",gid=users,vers=2.1 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
+	$str_mount=	"  sudo mount -t cifs -o username=".'$mluser'.",password=".'"'.'$pw'.'"'.",rw,uid=".$uid.",gid=users,vers=2.1,file_mode=0777,dir_mode=0777 //".$_SERVER["HTTP_HOST"]."/files /home/user/".$host."/files"."\n"; 
     //$text.="  echo str_mount : ".$str_mount;
     $text.=$str_mount;
 
@@ -326,6 +326,10 @@ if(($CurrOS=='Linux')||($CurrOS=='Android')) {
 	$text.="  test -L /home/user/files && echo \"symbolic link created successfully\" || echo \"could not create symbolic link /home/user/files\"\n";
 	$text.="  cd \$LINDIRECTORY"."\n";
     $text.="fi"."\n"; 
+
+	// pause for debug
+    //$text.="  read -p \"Press [Enter] key to continue... \" "."\n";
+
     // add the function pause so it can be used in linux shell
     $text.="pause(){"."\n"; 
     $text.="if [ $# -eq 0 ]; then"."\n";

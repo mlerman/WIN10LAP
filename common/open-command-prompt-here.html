@@ -1315,7 +1315,8 @@ if($CurrOS!="Linux")
 &nbsp;<a title="Email the URL of this page to a friend" href="#" onclick="javascript:window.location='mailto:?subject=[<?php echo $prjname; ?>] Check this project&body=Here the link to my project : %22<?php echo $prjname; ?>%22. %0AFor this page, please do NOT use Windows Internet Explorer (iexplore.exe). Go for Chrome, Firefox, Opera or Safari. %0AYou also need to be on the intranet of Micron. %0A' + window.location;"><img src="/doc/images/email16.png"/></a></a>&nbsp;
 &nbsp;<a href="/doc/files/common/env.php&targetdir=<?php echo $dir; ?>" target="env" onclick="javascript:void window.open('/doc/files/common/env.php?targetdir=<?php echo $dir; ?>','1481656702602','width=800,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/Programming-Variable-icon16.png" title="Manage environment variables" /></a>
 &nbsp;<a href="/doc/files/common/env.php&targetdir=<?php echo $dir; ?>" target="env" onclick="javascript:void window.open('/doc/files/common/frename.php?targetdir=<?php echo $dir; ?>','1481656702602','width=800,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/Programming-Variable-icon16.png" title="Manage file names" /></a>
-&nbsp;<a href="/doc/files/Perso/pense_bete/open-command-prompt-here.html" target="pense_bete"><img src="/doc/images/idea.png" title="Go to pense_bete" /></a>&nbsp;
+&nbsp;<a href="http://105.128.82.53:8090/display/EDT/PM1725a+Health+Code+Release+History" target="confluence"><img src="/doc/files/common/images/confluenceA.png" title="Go to Confluence branch a" /></a>&nbsp;
+&nbsp;<a href="http://105.128.82.53:8090/display/EDT/PM1723b+Health+Code+Release+History" target="confluence"><img src="/doc/files/common/images/confluenceB.png" title="Go to Confluence branch b" /></a>&nbsp;
 &nbsp;<a href="http://<?php echo $clienthost.$dir_loc; ?>/../_constructor/open-command-prompt-here.html" target="_constructor"><img src="/doc/images/constructor.ico" title="Go to _constructor" /></a>&nbsp;
 &nbsp;<a href="/doc/chartjs/samples/bar.php?target=<?php echo $proj_dir."/.time"; ?>" target="chartime" onclick="javascript:void window.open('/doc/chartjs/samples/bar.php?target=<?php echo $proj_dir."/.time"; ?>','1481656702602','width=1600,height=750,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/chart.png" title="usage history"/></a>
 &nbsp;<a href="/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/" target="chartime" onclick="javascript:void window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/','1481656702602','width=800,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/copyclip.png" title="frequent copy paste" /></a>
@@ -2852,6 +2853,9 @@ for (i = 0; i < listItemAnchors.length; i++) {
 	  }
 	if(s.indexOf("push_files.r") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/files/common/images/copyover48.png' title='"+s+"'/>";
+	  }
+	if(s.indexOf("codecompare.r") > -1) {
+	  listItemAnchors[i].innerHTML="<img src='/doc/files/common/images/codecompare.png' title='"+s+"'/>";
 	  }
 }
 

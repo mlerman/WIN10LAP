@@ -1,4 +1,4 @@
-@echo off
+rem @echo off
 set REPONAME=WIN10LAP
 set THISDIR=%CD%
 
@@ -63,13 +63,26 @@ git update-index --assume-unchanged c:\UniServer\www\doc\files\*
 git update-index --no-assume-unchanged c:\UniServer\www\doc\files\%THISPLACEBACKSLASH%\*
 
 rem add only this project and subdir
-git add -A %THISPLACEBACKSLASH%\ 2>&1
-call c:\UniServer\www\local\set_git_usep.bat 2>&1
-@git remote set-url origin https://%GITUSEP%@github.com/mlerman/%REPONAME%.git 2>&1
+
+rem git add -A %THISPLACEBACKSLASH%\ 2>&1
+git add -A %THISPLACEBACKSLASH%\
+
+rem call c:\UniServer\www\local\set_git_usep.bat 2>&1
+call c:\UniServer\www\local\set_git_usep.bat
+
+rem @git remote set-url origin https://%GITUSEP%@github.com/mlerman/%REPONAME%.git 2>&1
+@git remote set-url origin https://%GITUSEP%@github.com/mlerman/%REPONAME%.git
+
+
 rem git status
 rem commit only this directory
-git commit -m "commit for %currentfolder% project from %COMPUTERNAME%" -- %THISPLACEBACKSLASH%\ 2>&1
-git push origin master 2>&1
+
+rem git commit -m "commit for %currentfolder% project from %COMPUTERNAME%" -- %THISPLACEBACKSLASH%\ 2>&1
+git commit -m "commit for %currentfolder% project from %COMPUTERNAME%" -- %THISPLACEBACKSLASH%\
+
+rem git push origin master 2>&1
+git push origin master
+
 rem returning to the directory
 :test
 cd %THISDIR%

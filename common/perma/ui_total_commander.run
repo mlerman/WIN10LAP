@@ -1,1 +1,6 @@
-start c:\totalcmd\TOTALCMD.EXE /O "%TARGETDIR%" "C:/UniServer/www%URLDIR%"
+rem start c:\totalcmd\TOTALCMD.EXE /O "%TARGETDIR%" "C:/UniServer/www%URLDIR%"
+set "variable=C:/UniServer/www%URLDIR%
+set "variable=%variable:/=\%"
+start C:\"Program Files"\"Double Commander"\doublecmd.exe -C --no-console --no-splash %TARGETDIR% "%variable%"
+rem bring to front
+c:\UniServer\www\doc\files\ThisPC\nircmd\nircmdc.exe win activate title "Double Commander 0.8.4 beta build 8272M; 2018/08/18"

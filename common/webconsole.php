@@ -6,8 +6,9 @@
 // URL: http://web-console.org
 
 // Disable login (don't ask for credentials, be careful)
-// Example: $NO_LOGIN = true;
-$NO_LOGIN = false;
+// Example: 
+$NO_LOGIN = true;
+//$NO_LOGIN = false;
 
 // Single-user credentials
 // Example: $USER = 'user'; $PASSWORD = 'password';

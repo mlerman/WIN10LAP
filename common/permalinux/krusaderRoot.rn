@@ -1,6 +1,8 @@
 # commented because it closes chrome, there is no new window opened in ubuntu 
 # sleep 4 && termwin=$(xdotool search --name Terminal getactivewindow) && xdotool windowunmap $termwin
-sudo krusader --left=$LINDIRECTORY --right=$URLDIR
+#sudo krusader --left=$LINDIRECTORY --right=$URLDIR
+sudo /home/user/files/ThisPCLinux/double_commander/doublecmd -C -L $LINDIRECTORY -R $URLDIR
+
 sleep 15
 
 
