@@ -49,17 +49,17 @@ git update-index --assume-unchanged c:\UniServer\www\doc\files\*
 git update-index --no-assume-unchanged %THISPLACEBACKSLASH%\*
 
 rem add only this project and subdir
-git add -A %THISPLACEBACKSLASH%\  2>&1
-git remote set-url origin https://mlerman@github.com/mlerman/%REPONAME%.git  2>&1
-git remote update 2>&1
-git fetch origin 2>&1
+git add -A %THISPLACEBACKSLASH%\  	
+git remote set-url origin https://mlerman@github.com/mlerman/%REPONAME%.git  
+git remote update 
+git fetch origin 
 
 rem a commit will delete a file in the repo
 rem git commit -m "before checkout" 2>&1
 
-git reset --hard origin/master 2>&1
+git reset --hard origin/master 
 
-git checkout HEAD %THISPLACEBACKSLASH%\ 2>&1
+git checkout HEAD %THISPLACEBACKSLASH%\ 
 
 rem returning to the directory
 :test
