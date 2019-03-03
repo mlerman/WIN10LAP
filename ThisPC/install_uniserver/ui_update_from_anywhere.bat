@@ -1,5 +1,8 @@
-set FSIZE=35964671
-set HOST=win7-pc
+set FSIZE=24701918
+rem set HOST=laptop-7kqrmtc0
+rem at Samsung the name is not resolved
+set HOST=105.128.56.241
+set PROXY_OPTION=-x 192.168.57.33:80
 if "%SKIPDELETE%"=="SKIP" echo preserve previous downloads of the large zip files
 echo SKIPDELETE is %SKIPDELETE%
 if NOT "%SKIPDELETE%"=="SKIP" echo no
@@ -10,7 +13,7 @@ ECHO creating a new update.log > update.log
 echo running %0 in folder %cd%
 set UNISERVEREXIST=no
 if exist c:\UniServer\www\local\hostname.txt set UNISERVEREXIST=yes
-echo if the browser ask Run or Save, choose save
+echo if the browser ask Run or Save, choose save in the Downloads directory
 echo ================================= curl.exe =============================
 if exist curl.exe goto FoundIt0
 if exist curl*.exe del curl*.exe /Q
@@ -32,7 +35,7 @@ rem download unzip
 if exist unzip.exe goto FoundIt3
 if exist unzip*.exe del unzip*.exe /Q
 rem start http://%HOST%/doc/files/ThisPC/install_zip/unzip.exe
-curl.exe -O "http://%HOST%/doc/files/ThisPC/install_zip/unzip.exe"
+curl.exe %PROXY_OPTION% -O "http://%HOST%/doc/files/ThisPC/install_zip/unzip.exe"
 
 SET LookForFile="unzip.exe"
 :CheckForFile3
@@ -48,7 +51,7 @@ rem download zip
 if exist zip.exe goto FoundIt3b
 del zip*.exe /Q
 rem start http://%HOST%/doc/files/ThisPC/install_zip/zip.exe
-curl.exe -O "http://%HOST%/doc/files/ThisPC/install_zip/zip.exe"
+curl.exe %PROXY_OPTION% -O "http://%HOST%/doc/files/ThisPC/install_zip/zip.exe"
 
 SET LookForFile="zip.exe"
 :CheckForFile3b
@@ -67,7 +70,7 @@ if NOT "%SKIPDELETE%"=="SKIP" del uniserver*.zip /Q
   if exist uniserver.zip goto CheckForFile2z
 
 rem start http://%HOST%/doc/files/Engineering/ENVIRONMENT/WINDOWS_BATCH/cloneThisUniserver/uniserver.zip 
-curl.exe -O "http://%HOST%/doc/files/public/uniserver.zip"
+curl.exe %PROXY_OPTION% -O "http://%HOST%/doc/files/public/uniserver.zip"
 :CheckForFile2z
 SET LookForFile="uniserver.zip"
 :CheckForFile2
@@ -92,7 +95,7 @@ set /a c=01
   if NOT "%SKIPDELETE%"=="SKIP" del uniserver.z%Var% /Q
   if exist uniserver.z%Var% goto CheckForFile2a
   echo downloading from "http://%HOST%/doc/files/public/uniserver.z%Var%"  >> update.log
-  curl.exe -O "http://%HOST%/doc/files/public/uniserver.z%Var%"
+  curl.exe %PROXY_OPTION% -O "http://%HOST%/doc/files/public/uniserver.z%Var%"
   if not ERRORLEVEL 0 goto suite
 
 :CheckForFile2a

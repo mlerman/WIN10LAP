@@ -1,5 +1,5 @@
-set FSIZE=35964671
-set HOST=win7-pc
+set FSIZE=24701918
+set HOST=laptop-7kqrmtc0
 echo running %0 in folder %cd% >> update.log
 set UNISERVEREXIST=no
 if exist c:\UniServer\www\local\hostname.txt set UNISERVEREXIST=yes

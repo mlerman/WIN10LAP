@@ -39,7 +39,7 @@ rem pause
 
 vc_redist.x86.exe /install /passive /norestart
 
-goto skipthis1
+rem goto skipthis1
 rem it is done by ui_update_from_anywhere -----------------------------------------
 
 echo ================================= UniServerZ.zip =============================
@@ -77,7 +77,7 @@ rem cd C:\UniServer\www\doc\files\ThisPC\install_uniserver
 
 
 rem pause Press Enter pour continuer
-
+ 
 :suiteupdate
 rem download clone
 
@@ -119,9 +119,11 @@ copy c:\UniServer\www\doc\files\ThisPC\install_total_commander\wincmd.key c:\tot
 echo run with and associate extention with callrun.bat
 echo also with chrome always open files of this type
 
+
+goto skipZ
 echo next extract to c:\
 pause
-start c:\UniServer\www\doc\files\ThisPC\install_uniserver\13_0_2_ZeroXIII.exe
+start /WAIT c:\UniServer\www\doc\files\ThisPC\install_uniserver\13_0_2_ZeroXIII.exe
 
 xcopy c:\UniServerZ\core c:\UniServer\core /s /Y
 xcopy c:\UniServerZ\db_backup_restore c:\UniServer\db_backup_restore /s /Y
@@ -135,6 +137,7 @@ xcopy c:\UniServerZ\UniController.exe c:\UniServer\UniController.exe /Y
 pause
 start c:\UniServer\UniController.exe
 pause
+:skipZ
 echo %COMPUTERNAME%
 start C:\"Program Files (x86)"\Google\Chrome\Application\chrome.exe http://%COMPUTERNAME%/doc/elfinder.html
 
