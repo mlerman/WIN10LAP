@@ -7,4 +7,5 @@ echo target=\\%HOST%\%udir%
 rem net use \\%HOST%\%udir% /delete
 rem net use \\%HOST%\%udir% /user:%HOST%\Guest lab123
 
+rem il faut que il soit dabord shared avec ui_share_files.run
 start \\%HOST%\%udir%

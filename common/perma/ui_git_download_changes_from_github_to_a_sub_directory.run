@@ -36,12 +36,17 @@ cd from_github_repo
 if exist output.json del output.json /Q
 
 set PROXYARG=
-if "%COMPUTERNAME%" == "XSJMIKHAELL30" ( echo this is XSJMIKHAELL30 
+if "%COMPUTERNAME%" == "XSJMIKHAELL30" ( echo this is XSJMIKHAELL30 at Xilinx
   echo user is mikhaell
   set PROXYARG=-x proxy:8080
 )
+rem 9728NRD-MLERMA
+if "%COMPUTERNAME%" == "9728NRD-MLERMA" ( echo this is 9728NRD-MLERMA at Samsung
+  echo user is m.lerman
+  set PROXYARG=-x 192.168.57.33:80
+)
 
-echo PROXYARG is %PROXYARG%
+echo PROXYARG is %PROXYARG% COMPUTERNAME is %COMPUTERNAME%
 
 rem c:\"Program Files"\cURL\bin\curl.exe  -H 'Accept: application/vnd.github.v3.raw' -O -L -o output.json https://api.github.com/repos/mlerman/WIN10LAP/contents/%THISPLACESLASH%/
 c:\UniServer\www\doc\files\ThisPC\install_curl_static\curl.exe %PROXYARG% -H 'Accept: application/vnd.github.v3.raw' -O -L -o output.json https://api.github.com/repos/mlerman/WIN10LAP/contents/%THISPLACESLASH%/ 

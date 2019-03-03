@@ -1,3 +1,4 @@
+set NOTEPAD_PATH=c:\"Program Files (x86)"\Notepad++\notepad++.exe
 for /f "delims=" %%a  in ("%TARGETFILE%") do set "Extension=%%~xa"
 
 if /i "%Extension%"==".elf" ( echo %TARGETFILE% is a bin executable
@@ -90,9 +91,9 @@ goto EOF
 
 if /i "%TARGETFILE%"==".head" ( echo .head file
 rem if not exist create .head and go to line 2
-if not exist "%cd%\%TARGETFILE%" echo.>%cd%\%TARGETFILE% & echo ^<hr/^>>>%cd%\%TARGETFILE% & echo.>>%cd%\%TARGETFILE% & echo ^<hr/^>>>%cd%\%TARGETFILE% & echo.>>%cd%\%TARGETFILE% & echo ^<hr/^>>>%cd%\%TARGETFILE% & start c:\"Program Files (x86)"\Notepad++\notepad++.exe -n2 %cd%\%TARGETFILE%
+if not exist "%cd%\%TARGETFILE%" echo.>%cd%\%TARGETFILE% & echo ^<hr/^>>>%cd%\%TARGETFILE% & echo.>>%cd%\%TARGETFILE% & echo ^<hr/^>>>%cd%\%TARGETFILE% & echo.>>%cd%\%TARGETFILE% & echo ^<hr/^>>>%cd%\%TARGETFILE% & start %NOTEPAD_PATH% -n2 %cd%\%TARGETFILE%
 rem if exist don't go to line 2
-if exist "%cd%\%TARGETFILE%" start c:\"Program Files (x86)"\Notepad++\notepad++.exe %cd%\%TARGETFILE%
+if exist "%cd%\%TARGETFILE%" start %NOTEPAD_PATH% %cd%\%TARGETFILE%
 goto EOF
 )
 
@@ -103,7 +104,7 @@ SET "var="&for /f "delims=0123456789" %%i in ("%PARAM1%") do set var=%%i
 if defined var (goto :string_line) else (goto :numeric_line)
 
 :numeric_line
-start c:\"Program Files (x86)"\Notepad++\notepad++.exe %TARGETDIR%%TARGETFILE% -n%PARAM1%
+start %NOTEPAD_PATH% %TARGETDIR%%TARGETFILE% -n%PARAM1%
 goto EOF
 
 
@@ -111,10 +112,10 @@ goto EOF
   for /f "delims=:" %%N in ('findstr /n /C:"%PARAM1%" %TARGETDIR%%TARGETFILE%') do  ( set line=%%N
 )
 echo found line = %line%
-start c:\"Program Files (x86)"\Notepad++\notepad++.exe %TARGETDIR%%TARGETFILE% -n%line%
+start %NOTEPAD_PATH% %TARGETDIR%%TARGETFILE% -n%line%
 goto EOF
 )
 
 if not exist "%cd%\%TARGETFILE%" copy nul %cd%\%TARGETFILE%
-start c:\"Program Files (x86)"\Notepad++\notepad++.exe %cd%\%TARGETFILE%
+start %NOTEPAD_PATH% %cd%\%TARGETFILE%
 

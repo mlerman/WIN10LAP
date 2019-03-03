@@ -56,7 +56,7 @@ if (file_exists($dir."/autoexec.bat")) {
 $icon_run="";
 if (file_exists("/UniServer/www".$dir_loc."/ui_run.run")) {
 	//echo "<script>alert('".$dir_loc."');</script>";
-	$icon_run="<a href='/doc/files/common/downloadfile.php?fname=ui_run.run&targetdir=/UniServer/www".$dir_loc."&admin=0'><img src='/doc/images/Play-1-Hot-icon.png'/></a>";
+	$icon_run="<a href='/doc/files/common/downloadfile.php?fname=ui_run.run&targetdir=/UniServer/www".$dir_loc."&admin=0'><img src='/doc/files/common/images//Play-1-Hot-icon.png'/></a>";
 }
 
 include 'oslist.php';
@@ -83,10 +83,10 @@ $mac="mac";
 $CurrOS="Linux";
 }
 //echo "CurrOS is -".$CurrOS."-".$android."<br/>";
-if (($CurrOS=="Linux")&&($android=="")&&($mac=="")) echo "<img src='/doc/images/linux.png' title='You are running Linux'>&nbsp;";
-if ($android=="Android") echo "<img src='/doc/images/android_ico.png' title='You are running Android'>&nbsp;";
-if ($mac=="mac") echo "<img src='/doc/images/osx.png' title='You are running Android'>&nbsp;";
-if (($CurrOS=="Windows 7")||($CurrOS=="Windows 10")) echo "<img src='/doc/images/Windows16.png' title='You are running Windows 7'>&nbsp;";
+if (($CurrOS=="Linux")&&($android=="")&&($mac=="")) echo "<img src='/doc/files/common/images//linux.png' title='You are running Linux'>&nbsp;";
+if ($android=="Android") echo "<img src='/doc/files/common/images//android_ico.png' title='You are running Android'>&nbsp;";
+if ($mac=="mac") echo "<img src='/doc/files/common/images//osx.png' title='You are running Android'>&nbsp;";
+if (($CurrOS=="Windows 7")||($CurrOS=="Windows 10")) echo "<img src='/doc/files/common/images//Windows16.png' title='You are running Windows 7'>&nbsp;";
 //echo "HTTP_USER_AGENT is ".$_SERVER['HTTP_USER_AGENT']."<br/>";
 
 
@@ -333,7 +333,7 @@ iframe {
 }
 
 .run_box + label{
-    background:url('/doc/images/run-unchecked.png') no-repeat;
+    background:url('/doc/files/common/images//run-unchecked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -345,7 +345,7 @@ iframe {
 }
 
 .run_box:checked + label{
-    background:url('/doc/images/run-checked.png') no-repeat;
+    background:url('/doc/files/common/images//run-checked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -365,7 +365,7 @@ iframe {
 }
 
 .hlp_box + label{
-    background:url('/doc/images/help-unchecked.png') no-repeat;
+    background:url('/doc/files/common/images//help-unchecked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -377,7 +377,7 @@ iframe {
 }
 
 .hlp_box:checked + label{
-    background:url('/doc/images/help-checked.png') no-repeat;
+    background:url('/doc/files/common/images//help-checked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -397,7 +397,7 @@ iframe {
 }
 
 .pdf_box + label{
-    background:url('/doc/images/pdf-unchecked.png') no-repeat;
+    background:url('/doc/files/common/images//pdf-unchecked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -409,7 +409,7 @@ iframe {
 }
 
 .pdf_box:checked + label{
-    background:url('/doc/images/pdf-checked.png') no-repeat;
+    background:url('/doc/files/common/images//pdf-checked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -429,7 +429,7 @@ iframe {
 }
 
 .pty_box + label{
-    background:url('/doc/images/putty-unchecked.png') no-repeat;
+    background:url('/doc/files/common/images//putty-unchecked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -441,7 +441,7 @@ iframe {
 }
 
 .pty_box:checked + label{
-    background:url('/doc/images/putty-checked.png') no-repeat;
+    background:url('/doc/files/common/images//putty-checked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -461,7 +461,7 @@ iframe {
 }
 
 .ssh_box + label{
-    background:url('/doc/images/putty-unchecked.png') no-repeat;
+    background:url('/doc/files/common/images//putty-unchecked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -473,7 +473,7 @@ iframe {
 }
 
 .ssh_box:checked + label{
-    background:url('/doc/images/putty-checked.png') no-repeat;
+    background:url('/doc/files/common/images//putty-checked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -493,7 +493,7 @@ iframe {
 }
 
 .ver_box + label{
-    background:url('/doc/images/version-unchecked.png') no-repeat;
+    background:url('/doc/files/common/images//version-unchecked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -505,7 +505,7 @@ iframe {
 }
 
 .ver_box:checked + label{
-    background:url('/doc/images/version-checked.png') no-repeat;
+    background:url('/doc/files/common/images//version-checked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -525,7 +525,7 @@ iframe {
 }
 
 .ftp_box + label{
-    background:url('/doc/images/totalcommander16ftp-unchecked.png') no-repeat;
+    background:url('/doc/files/common/images//totalcommander16ftp-unchecked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -537,7 +537,7 @@ iframe {
 }
 
 .ftp_box:checked + label{
-    background:url('/doc/images/totalcommander16ftp-checked.png') no-repeat;
+    background:url('/doc/files/common/images//totalcommander16ftp-checked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -557,7 +557,7 @@ iframe {
 }
 
 .cd_box + label{
-    background:url('/doc/images/totalcommander16-unchecked.png') no-repeat;
+    background:url('/doc/files/common/images//totalcommander16-unchecked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -569,7 +569,7 @@ iframe {
 }
 
 .cd_box:checked + label{
-    background:url('/doc/images/totalcommander16-checked.png') no-repeat;
+    background:url('/doc/files/common/images//totalcommander16-checked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -590,7 +590,7 @@ iframe {
 }
 
 .reg_box + label{
-    background:url('/doc/images/regedit-unchecked.png') no-repeat;
+    background:url('/doc/files/common/images//regedit-unchecked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -602,7 +602,7 @@ iframe {
 }
 
 .reg_box:checked + label{
-    background:url('/doc/images/regedit-checked.png') no-repeat;
+    background:url('/doc/files/common/images//regedit-checked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -622,7 +622,7 @@ iframe {
 }
 
 .bld_box + label{
-    background:url('/doc/images/build-unchecked.png') no-repeat;
+    background:url('/doc/files/common/images//build-unchecked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -634,7 +634,7 @@ iframe {
 }
 
 .bld_box:checked + label{
-    background:url('/doc/images/build-checked.png') no-repeat;
+    background:url('/doc/files/common/images//build-checked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -654,7 +654,7 @@ iframe {
 }
 
 .bed_box + label{
-    background:url('/doc/images/iFrame16-unchecked.png') no-repeat;
+    background:url('/doc/files/common/images//iFrame16-unchecked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -666,7 +666,7 @@ iframe {
 }
 
 .bed_box:checked + label{
-    background:url('/doc/images/iFrame16-checked.png') no-repeat;
+    background:url('/doc/files/common/images//iFrame16-checked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -686,7 +686,7 @@ iframe {
 }
 
 .scp_box + label{
-    background:url('/doc/images/winscp16-unchecked.png') no-repeat;
+    background:url('/doc/files/common/images//winscp16-unchecked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -698,7 +698,7 @@ iframe {
 }
 
 .scp_box:checked + label{
-    background:url('/doc/images/winscp16-checked.png') no-repeat;
+    background:url('/doc/files/common/images//winscp16-checked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -718,7 +718,7 @@ iframe {
 }
 
 .ie_box + label{
-    background:url('/doc/images/iexplore16-unchecked.png') no-repeat;
+    background:url('/doc/files/common/images//iexplore16-unchecked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -730,7 +730,7 @@ iframe {
 }
 
 .ie_box:checked + label{
-    background:url('/doc/images/iexplore16-checked.png') no-repeat;
+    background:url('/doc/files/common/images//iexplore16-checked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -751,7 +751,7 @@ iframe {
 }
 
 .cod_box + label{
-    background:url('/doc/images/code-unchecked.png') no-repeat;
+    background:url('/doc/files/common/images//code-unchecked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -763,7 +763,7 @@ iframe {
 }
 
 .cod_box:checked + label{
-    background:url('/doc/images/code-checked.png') no-repeat;
+    background:url('/doc/files/common/images//code-checked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -783,7 +783,7 @@ iframe {
 }
 
 .jir_box + label{
-    background:url('/doc/images/jira16-unchecked.png') no-repeat;
+    background:url('/doc/files/common/images//jira16-unchecked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -795,7 +795,7 @@ iframe {
 }
 
 .jir_box:checked + label{
-    background:url('/doc/images/jira16-checked.png') no-repeat;
+    background:url('/doc/files/common/images//jira16-checked.png') no-repeat;
     height: 16px;
     width: 17px;
     display:inline-block;
@@ -1207,7 +1207,7 @@ function customAlertRight(msg,duration, right, top)		// http://mlerman-lap/s/W
  {
    for(ii=0; ii<arr_admin.length; ii++)
    {
-     document.getElementById('customdivright').innerHTML +="<br/>&nbsp;<span id='copy_button_admin_"+ii+"' data-clipboard-text='"+arr_admin[ii][0]+"' title='copy to clipboard' style='cursor:pointer'  onmouseover='this.style.backgroundColor=\"white\"' onclick='bindme(this.id, 0);'><img src=\"/doc/images/copyclip.png\"/>&nbsp;"+arr_admin[ii][1]+"</span>";
+     document.getElementById('customdivright').innerHTML +="<br/>&nbsp;<span id='copy_button_admin_"+ii+"' data-clipboard-text='"+arr_admin[ii][0]+"' title='copy to clipboard' style='cursor:pointer'  onmouseover='this.style.backgroundColor=\"white\"' onclick='bindme(this.id, 0);'><img src=\"/doc/files/common/images//copyclip.png\"/>&nbsp;"+arr_admin[ii][1]+"</span>";
    }
    admin_array_added=true;
  }
@@ -1288,8 +1288,8 @@ getFileFromServer('/local/recentfirst.php', function(text){
 }
 </script>
 
-<a href="http://<?php echo $linkip; ?>"><img src="/doc/images/adresse-ip.png"/></a>&nbsp;
-<a href="http://<?php echo $linkname; ?>"><img src="/doc/images/adresse-name.png"/></a>&nbsp;
+<a href="http://<?php echo $linkip; ?>"><img src="/doc/files/common/images/adresse-ip.png"/></a>&nbsp;
+<a href="http://<?php echo $linkname; ?>"><img src="/doc/files/common/images/adresse-name.png"/></a>&nbsp;
 <?php
 if ($icon_run!="") {
   echo "&nbsp;".$icon_run."&nbsp;";
@@ -1300,28 +1300,36 @@ if($CurrOS!="Linux")
 {
   $dirp="perma";
   $file="ui_total_commander.run";
-  echo '&nbsp;<a class="winlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dir).'&targetfile='.$prjname.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath($dirp).'" '.$onmouseover.'  onclick="this.href=this.href+\'&param1=\'+document.getElementById(\'inpf\').value;" ><img src="/doc/images/totalcommander16.png" title="Total commander" /></a>';  
+  echo '&nbsp;<a class="winlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dir).'&targetfile='.$prjname.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath($dirp).'" '.$onmouseover.'  onclick="this.href=this.href+\'&param1=\'+document.getElementById(\'inpf\').value;" ><img src="/doc/files/common/images/totalcommander16.png" title="Total commander" /></a>';  
 } else
 {
 	$dirpm="permalinux";
 	$file="krusaderHere.rn";
-	echo '<a class="linuxlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dir).'&targetfile='.$prjname.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath($dirpm).'"  onmouseover="getFileFromServer('.'\'.'.$file.'\''.', function(text){ show(text, this, -1)});"><img src="/doc/images/krusader16.png" title="krusader" /></a>';
+	echo '<a class="linuxlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dir).'&targetfile='.$prjname.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath($dirpm).'"  onmouseover="getFileFromServer('.'\'.'.$file.'\''.', function(text){ show(text, this, -1)});"><img src="/doc/files/common/images/krusader16.png" title="krusader" /></a>';
 }
 ?>
 <!-- top links http://mlerman-lap/s/O -->
-&nbsp;<a href="http://<?php echo $clienthost; ?>/doc/elfinder.html" id="homelink" target="elfinder"><img src="/doc/images/home.png" title="Go to <?php echo $clienthost; ?> elfinder" id="hometitle" /></a>&nbsp;
-&nbsp;<a href="http://<?php echo $clienthost.$dir_loc; ?>/open-command-prompt-here.html" id="homelink"><img src="/doc/images/createproject.png" title="Go to <?php echo $clienthost; ?> and create project" id="hometitleb"/></a>&nbsp;
-&nbsp;<a href="/doc/files/common/zipfolder.php?fname=<?php echo $prjname; ?>&targetdir=<?php echo realpath($dir); ?>&debug=12345678"><img src="/doc/images/compress-icon.png" title="Download this folder zipped"/></a>&nbsp;
-&nbsp;<a title="Email the URL of this page to a friend" href="#" onclick="javascript:window.location='mailto:?subject=[<?php echo $prjname; ?>] Check this project&body=Here the link to my project : %22<?php echo $prjname; ?>%22. %0AFor this page, please do NOT use Windows Internet Explorer (iexplore.exe). Go for Chrome, Firefox, Opera or Safari. %0AYou also need to be on the intranet of Micron. %0A' + window.location;"><img src="/doc/images/email16.png"/></a></a>&nbsp;
-&nbsp;<a href="/doc/files/common/env.php&targetdir=<?php echo $dir; ?>" target="env" onclick="javascript:void window.open('/doc/files/common/env.php?targetdir=<?php echo $dir; ?>','1481656702602','width=800,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/Programming-Variable-icon16.png" title="Manage environment variables" /></a>
-&nbsp;<a href="/doc/files/common/env.php&targetdir=<?php echo $dir; ?>" target="env" onclick="javascript:void window.open('/doc/files/common/frename.php?targetdir=<?php echo $dir; ?>','1481656702602','width=800,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/Programming-Variable-icon16.png" title="Manage file names" /></a>
-&nbsp;<a href="http://105.128.82.53:8090/display/EDT/PM1725a+Health+Code+Release+History" target="confluence"><img src="/doc/files/common/images/confluenceA.png" title="Go to Confluence branch a" /></a>&nbsp;
-&nbsp;<a href="http://105.128.82.53:8090/display/EDT/PM1723b+Health+Code+Release+History" target="confluence"><img src="/doc/files/common/images/confluenceB.png" title="Go to Confluence branch b" /></a>&nbsp;
-&nbsp;<a href="http://<?php echo $clienthost.$dir_loc; ?>/../_constructor/open-command-prompt-here.html" target="_constructor"><img src="/doc/images/constructor.ico" title="Go to _constructor" /></a>&nbsp;
-&nbsp;<a href="/doc/chartjs/samples/bar.php?target=<?php echo $proj_dir."/.time"; ?>" target="chartime" onclick="javascript:void window.open('/doc/chartjs/samples/bar.php?target=<?php echo $proj_dir."/.time"; ?>','1481656702602','width=1600,height=750,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/chart.png" title="usage history"/></a>
-&nbsp;<a href="/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/" target="chartime" onclick="javascript:void window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/','1481656702602','width=800,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/copyclip.png" title="frequent copy paste" /></a>
-&nbsp;<a href="#" id="lastrecentproj" onmouseover="getLastProject();" title="most recent project not set"><img src="/doc/images/recent16.png"  /></a>
-&nbsp;<a href="<?php echo $urldir; ?>"><img src="/doc/images/chrome16.png" title="index.html" /></a>
+&nbsp;<a href="http://<?php echo $clienthost; ?>/doc/elfinder.html" id="homelink" target="elfinder"><img src="/doc/files/common/images/home.png" title="Go to <?php echo $clienthost; ?> elfinder" id="hometitle" /></a>&nbsp;
+&nbsp;<a href="http://<?php echo $clienthost.$dir_loc; ?>/open-command-prompt-here.html" id="homelink"><img src="/doc/files/common/images/createproject.png" title="Go to <?php echo $clienthost; ?> and create project" id="hometitleb"/></a>&nbsp;
+&nbsp;<a href="/doc/files/common/zipfolder.php?fname=<?php echo $prjname; ?>&targetdir=<?php echo realpath($dir); ?>&debug=12345678"><img src="/doc/files/common/images/compress-icon.png" title="Download this folder zipped"/></a>&nbsp;
+<?php
+  $dirp="perma";
+  $file="ui_download_unzip_move.run";
+  echo '&nbsp;<a class="winlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dir).'&targetfile='.$prjname.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath($dirp).'" '.$onmouseover.'  onclick="this.href=this.href+\'&param1=\'+document.getElementById(\'inpf\').value;" ><img src="/doc/files/common/images/download16.png" title="Download unzip and move this folder" /></a>';  
+?>
+<!--
+&nbsp;<a href="/doc/files/common/zipfolder.php?fname=<?php echo $prjname; ?>&targetdir=<?php echo realpath($dir); ?>&debug=12345678"><img src="/doc/files/common/images/download16.png" title="Download unzip and move this folder"/></a>&nbsp;
+-->
+&nbsp;<a title="Email the URL of this page to a friend" href="#" onclick="javascript:window.location='mailto:?subject=[<?php echo $prjname; ?>] Check this project&body=Here the link to my project : %22<?php echo $prjname; ?>%22. %0AFor this page, please do NOT use Windows Internet Explorer (iexplore.exe). Go for Chrome, Firefox, Opera or Safari. %0AYou also need to be on the intranet of Micron. %0A' + window.location;"><img src="/doc/files/common/images/email16.png"/></a></a>&nbsp;
+&nbsp;<a href="/doc/files/common/env.php&targetdir=<?php echo $dir; ?>" target="env" onclick="javascript:void window.open('/doc/files/common/env.php?targetdir=<?php echo $dir; ?>','1481656702602','width=800,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/Programming-Variable-icon16.png" title="Manage environment variables" /></a>
+&nbsp;<a href="/doc/files/common/env.php&targetdir=<?php echo $dir; ?>" target="env" onclick="javascript:void window.open('/doc/files/common/frename.php?targetdir=<?php echo $dir; ?>','1481656702602','width=800,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/Programming-Variable-icon16.png" title="Manage file names" /></a>
+&nbsp;<a href="http://105.128.82.53:8090/display/EDT/PM1725a+Health+Code+Release+History" target="confluence"><img src="/doc/files/common/images/A16.png" title="Go to Confluence branch a" /></a>&nbsp;
+&nbsp;<a href="http://105.128.82.53:8090/display/EDT/PM1723b+Health+Code+Release+History" target="confluence"><img src="/doc/files/common/images/B16.png" title="Go to Confluence branch b" /></a>&nbsp;
+&nbsp;<a href="http://<?php echo $clienthost.$dir_loc; ?>/../_constructor/open-command-prompt-here.html" target="_constructor"><img src="/doc/files/common/images/constructor.ico" title="Go to _constructor" /></a>&nbsp;
+&nbsp;<a href="/doc/chartjs/samples/bar.php?target=<?php echo $proj_dir."/.time"; ?>" target="chartime" onclick="javascript:void window.open('/doc/chartjs/samples/bar.php?target=<?php echo $proj_dir."/.time"; ?>','1481656702602','width=1600,height=750,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/chart.png" title="usage history"/></a>
+&nbsp;<a href="/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/" target="chartime" onclick="javascript:void window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/','1481656702602','width=800,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/copyclip.png" title="frequent copy paste" /></a>
+&nbsp;<a href="#" id="lastrecentproj" onmouseover="getLastProject();" title="most recent project not set"><img src="/doc/files/common/images/recent16.png"  /></a>
+&nbsp;<a href="<?php echo $urldir; ?>"><img src="/doc/files/common/images/chrome16.png" title="index.html" /></a>
 <?php
 //$githuburl=$urldir;
 //$githuburl=str_replace("/doc/files/","",$githuburl);
@@ -1332,21 +1340,24 @@ $githuburl="https://github.com/mlerman/WIN10LAP/tree/master".$display_link;
   $code = str_replace("\\","\\\\",$code);
   //echo $code;
 ?>
-&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="shorturl" onclick="window.open('/s/?code=<?php echo $code; ?>','shortenanurl','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/url_in_code.png" title="Add short URL in source code" /></a>
-&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="shorturl" onclick="window.open('/doc/files/common/webconsole.php?HOME_DIRECTORY=<?php echo $proj_dir;?>','wconsole','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/command_promt-16.png" title="Console Windows" /></a>
-&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="shorturl" onclick="window.open('http://mlerman-vm-mint/doc/files/common/webconsole.php?HOME_DIRECTORY=<?php echo $proj_dir_lin;?>','wconsole','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/command_promt-16.png" title="Console Linux" /></a>
-&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="shorturl" onclick="window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/eXtplorer/index.php?lang=english&homedir=<?php echo $proj_dir;?>','shortenanurl','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/extplorer16.png" title="ExtPlorer" /></a>
+&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="shorturl" onclick="window.open('/s/?code=<?php echo $code; ?>','shortenanurl','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/url_in_code.png" title="Add short URL in source code" /></a>
+&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="shorturl" onclick="window.open('/doc/files/common/webconsole.php?HOME_DIRECTORY=<?php echo $proj_dir;?>','wconsole','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/command_promt-16.png" title="Console Windows" /></a>
+&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="shorturl" onclick="window.open('http://mlerman-vm-mint/doc/files/common/webconsole.php?HOME_DIRECTORY=<?php echo $proj_dir_lin;?>','wconsole','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/command_promt-16.png" title="Console Linux" /></a>
+&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="shorturl" onclick="window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/eXtplorer/index.php?lang=english&homedir=<?php echo $proj_dir;?>','shortenanurl','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/extplorer16.png" title="ExtPlorer" /></a>
 
-&nbsp;<a href="<?php echo $githuburl; ?>"><img src="/doc/images/github16.png" title="show in github" /></a>
-&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="pullpush" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/ui_pull_from_github.bat','pullpush','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/github_dn16.png" title="Github pull" /></a>&nbsp;
-&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="pullpush" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/ui_push_to_github.bat','pullpush','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/github_up16.png" title="Github push" /></a>&nbsp;
-&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="pullpush" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/ui_checkout_from_github_throw_away_local_changes.bat','pullpush','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/github_dn16b.png" title="Github checkout throw away local changes" /></a>&nbsp;
+&nbsp;<a href="<?php echo $githuburl; ?>"><img src="/doc/files/common/images/github16.png" title="show in github" /></a>
+&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="pullpush" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/ui_pull_from_github.bat','pullpush','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/github_dn16.png" title="Github pull" /></a>&nbsp;
+&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="pullpush" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/ui_push_to_github.bat','pullpush','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/github_up16.png" title="Github push" /></a>&nbsp;
+&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="pullpush" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/ui_checkout_from_github_throw_away_local_changes.bat','pullpush','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/github_dn16b.png" title="Github checkout throw away local changes" /></a>&nbsp;
 
-&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="pullpush" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/ui_pull_from_gdrive.bat','pullpush','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/google-drive-dn.png" title="Google drive pull" /></a>&nbsp;
-&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="pullpush" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/ui_push_to_gdrive.bat','pullpush','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/google-drive-up.png" title="Google drive push" /></a>&nbsp;
-&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="pullpush" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/ui_ls_to_gdrive.bat','pullpush','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/google-drive-icon.png" title="Google drive listing" /></a>&nbsp;
+&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="pullpush" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/ui_pull_from_gdrive.bat','pullpush','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/google-drive-dn.png" title="Google drive pull" /></a>&nbsp;
+&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="pullpush" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/ui_push_to_gdrive.bat','pullpush','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/google-drive-up.png" title="Google drive push" /></a>&nbsp;
+&nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="pullpush" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/ui_ls_to_gdrive.bat','pullpush','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/google-drive-icon.png" title="Google drive listing" /></a>&nbsp;
 
 &nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="addreadmemd" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/add_readme-md.bat','addreadmemd','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/readme16.png" title="Add readme.md" /></a>&nbsp;
+
+&nbsp;<a href="http://105.128.82.29:8080/secure/RapidBoard.jspa?rapidView=199" target="myjira"><img src="/doc/files/common/images/jira16.png" title="My JIRA board" /></a>&nbsp;
+
 <!-- not needed called directly from readme.md
 &nbsp;<a href="javascript:alert('onclick event sometimes was not fired');" target="overwritenew" onclick="window.open('/doc/files/common/prompt-action.php?rawdisplay=1&HOME_DIRECTORY=<?php echo $proj_dir;?>&cmd=c:/UniServer/www/doc/files/common/open_command_files/overwritenew.bat','addreadmemd','width=600,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/overwrite.jpg" title="overwrite new" /></a>&nbsp;
 -->
@@ -1357,18 +1368,18 @@ $githuburl="https://github.com/mlerman/WIN10LAP/tree/master".$display_link;
 <fieldset style="float: left;">
 
 <fieldset style="float: left;">
-<legend>&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.previous&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>" ><img src="/doc/images/notepad-plus-plus.gif"/></a>
-        <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>.previous");  return false;'><img src="/doc/images/text.png"/></a>
-              <a href="/doc/files/common/jquery-fileTree/pickrelated.php?parent=<?php echo $display_link;?>&close=closePagePrevious" target="pickf" onclick="javascript:void window.open('/doc/files/common/jquery-fileTree/pickrelated.php?parent=<?php echo $display_link;?>&close=closePagePrevious','1481656702602','width=550,height=750,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/add_file.png"/></a>
-        &nbsp;<img src="/doc/images/Arrowprevious48.png"/> 
+<legend>&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.previous&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>" ><img src="/doc/files/common/images/notepad-plus-plus.gif"/></a>
+        <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>.previous");  return false;'><img src="/doc/files/common/images/text.png"/></a>
+              <a href="/doc/files/common/jquery-fileTree/pickrelated.php?parent=<?php echo $display_link;?>&close=closePagePrevious" target="pickf" onclick="javascript:void window.open('/doc/files/common/jquery-fileTree/pickrelated.php?parent=<?php echo $display_link;?>&close=closePagePrevious','1481656702602','width=550,height=750,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/add_file.png"/></a>
+        &nbsp;<img src="/doc/files/common/images/Arrowprevious48.png"/> 
 </legend>
 <?php echo file_get_contents($proj_dir."/.previous"); ?>
 </fieldset>
 <fieldset>
-<legend>&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.next&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/images/notepad-plus-plus.gif"/></a>
-        <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>.next");  return false;'><img src="/doc/images/text.png"/></a>
-              <a href="/doc/files/common/jquery-fileTree/pickrelated.php?parent=<?php echo $display_link;?>&close=closePageNext" target="pickf" onclick="javascript:void window.open('/doc/files/common/jquery-fileTree/pickrelated.php?parent=<?php echo $display_link;?>&close=closePageNext','1481656702602','width=550,height=750,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/add_file.png"/></a>
-        &nbsp;<img src="/doc/images/Arrownext48.png"/> 
+<legend>&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.next&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/files/common/images/notepad-plus-plus.gif"/></a>
+        <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>.next");  return false;'><img src="/doc/files/common/images/text.png"/></a>
+              <a href="/doc/files/common/jquery-fileTree/pickrelated.php?parent=<?php echo $display_link;?>&close=closePageNext" target="pickf" onclick="javascript:void window.open('/doc/files/common/jquery-fileTree/pickrelated.php?parent=<?php echo $display_link;?>&close=closePageNext','1481656702602','width=550,height=750,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/add_file.png"/></a>
+        &nbsp;<img src="/doc/files/common/images/Arrownext48.png"/> 
 </legend>
 <?php echo file_get_contents($proj_dir."/.next"); ?>
 </fieldset>
@@ -1423,10 +1434,10 @@ alert(  'current : ' + window.name
 </script>
 <!--a href="<?php echo $urldir; ?>open-command-prompt-here.html" target="<?php echo $prjname; ?>" title="Re-open in tab target <?php echo $prjname; ?>"><?php echo $prjname; ?></a-->
 <?php echo $prjname; ?>
-&nbsp;<span id="copy-button-2" data-clipboard-text="<?php echo $prjname; ?>" title="copy project name to clipboard" onmouseover="this.style.backgroundColor = 'white'" onclick='bindme(this.id, 0);'><img src="/doc/images/copyclip.png"/></span>
-&nbsp;<a href="/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/d3_directed_graph/project_graph.php?target=<?php echo $urldir; ?>" onclick="javascript:void window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/d3_directed_graph/project_graph.php?target=<?php echo $urldir; ?>','1481602525735','width=980,height=550,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;" ><img src="/doc/images/digraph.gif" /></a>
-&nbsp;<span onclick="debug();"><img src=/doc/images/debug.png /></span>
-&nbsp;<span onclick="adjust_target();" id="animreload" style="display:none"><img src=/doc/images/loader_grayblue.gif /></span>
+&nbsp;<span id="copy-button-2" data-clipboard-text="<?php echo $prjname; ?>" title="copy project name to clipboard" onmouseover="this.style.backgroundColor = 'white'" onclick='bindme(this.id, 0);'><img src="/doc/files/common/images/copyclip.png"/></span>
+&nbsp;<a href="/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/d3_directed_graph/project_graph.php?target=<?php echo $urldir; ?>" onclick="javascript:void window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/d3_directed_graph/project_graph.php?target=<?php echo $urldir; ?>','1481602525735','width=980,height=550,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;" ><img src="/doc/files/common/images/digraph.gif" /></a>
+&nbsp;<span onclick="debug();"><img src=/doc/files/common/images//debug.png /></span>
+&nbsp;<span onclick="adjust_target();" id="animreload" style="display:none"><img src=/doc/files/common/images//loader_grayblue.gif /></span>
 
 <script>
 /*
@@ -1461,9 +1472,9 @@ if($param1!="") echo "\";";
 
 
 <fieldset style="float: left;">
-<legend>&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.related&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/images/notepad-plus-plus.gif"/></a>
-    <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>.related");  return false;'><img src="/doc/images/text.png"/></a>
-              <a href="/doc/files/common/jquery-fileTree/pickrelated.php?parent=<?php echo $display_link;?>&close=closePage" target="pickf" onclick="javascript:void window.open('/doc/files/common/jquery-fileTree/pickrelated.php?parent=<?php echo $display_link;?>&close=closePage','1481656702602','width=550,height=750,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/images/add_file.png"/></a>
+<legend>&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.related&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/files/common/images/notepad-plus-plus.gif"/></a>
+    <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>.related");  return false;'><img src="/doc/files/common/images/text.png"/></a>
+              <a href="/doc/files/common/jquery-fileTree/pickrelated.php?parent=<?php echo $display_link;?>&close=closePage" target="pickf" onclick="javascript:void window.open('/doc/files/common/jquery-fileTree/pickrelated.php?parent=<?php echo $display_link;?>&close=closePage','1481656702602','width=550,height=750,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/add_file.png"/></a>
         &nbsp;<small>(.related)</small> Related: 
 </legend>
 <?php echo file_get_contents($proj_dir."/.related"); ?>
@@ -1480,9 +1491,9 @@ if ($no_favicon)     echo "&nbsp;<a href=\"https://www.google.com/search?q=".$pr
 
 
 <fieldset>
-<legend>&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.head&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/images/notepad-plus-plus.gif"/></a> 
-        <a href="/doc/files/common/do.php?&targetdir=<?php echo realpath($dir); ?>&targetfile=.head" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>.head");  return false;'><img src="/doc/images/text.png"/></a>
-		&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.head&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>&before=addhr"><img src="/doc/images/embedicon.png"/></a> 
+<legend>&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.head&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/files/common/images/notepad-plus-plus.gif"/></a> 
+        <a href="/doc/files/common/do.php?&targetdir=<?php echo realpath($dir); ?>&targetfile=.head" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>.head");  return false;'><img src="/doc/files/common/images/text.png"/></a>
+		&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.head&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>&before=addhr"><img src="/doc/files/common/images/embedicon.png"/></a> 
               <small>(.head)</small> Notes: 
 </legend>
 <pre>
@@ -1502,9 +1513,9 @@ $escaped_link_cut.="favicon.ico";
 //$icon_run="";
 //if (file_exists("/UniServer/www".$dir_loc."/ui_run.run")) {
 //	//echo "<script>alert('".$dir_loc."');</script>";
-//	$icon_run="<a href='/doc/files/common/downloadfile.php?fname=ui_run.run&targetdir=/UniServer/www".$dir_loc."&admin=0'><img src='/doc/images/Play-1-Hot-icon.png'/></a>";
+//	$icon_run="<a href='/doc/files/common/downloadfile.php?fname=ui_run.run&targetdir=/UniServer/www".$dir_loc."&admin=0'><img src='/doc/files/common/images//Play-1-Hot-icon.png'/></a>";
 //}
-$file_data = '<a href="/doc/files/common/delete_line_in_recent.php?line='.uniqid().'" onclick="delEntry(this.href); return false;"><img src="/doc/images/delete.png"/></a>&nbsp;<a href="'.$dir_loc.'/open-command-prompt-here.html" target="'.$prjname.'"><img src="'.$dir_loc.'/favicon.ico"  height="16" width="16"/>'.$display_link.'</a>'.$icon_run."<br/>\n";
+$file_data = '<a href="/doc/files/common/delete_line_in_recent.php?line='.uniqid().'" onclick="delEntry(this.href); return false;"><img src="/doc/files/common/images/delete.png"/></a>&nbsp;<a href="'.$dir_loc.'/open-command-prompt-here.html" target="'.$prjname.'"><img src="'.$dir_loc.'/favicon.ico"  height="16" width="16"/>'.$display_link.'</a>'.$icon_run."<br/>\n";
 $ignorebefore=109;
 
 
@@ -1556,7 +1567,7 @@ if(substr($file_data,$ignorebefore)!=substr($firstline,$ignorebefore)) {		// onl
   </tr>
 </table>
 
-<img src="/doc/images/command_promt-16.png" title="Run a command or input PARAM1" style="float: left;" /><span style="float: left;">&nbsp;</span>
+<img src="/doc/files/common/images/command_promt-16.png" title="Run a command or input PARAM1" style="float: left;" /><span style="float: left;">&nbsp;</span>
 <form name="fform" id="f1" action="prompt-action.php" method="get" style="display: inline; float: left;" target="_raw_<?php echo $prjname; ?>">
 	<table align="left" valign="top" width="100%" border="0"><tbody>
 	<tr>
@@ -1569,7 +1580,7 @@ if(substr($file_data,$ignorebefore)!=substr($firstline,$ignorebefore)) {		// onl
 </form>
 <input type="submit" value="Run" onclick="return OnButtonRun();" />
 <input type="submit" value="Save" onclick="return OnButtonRunSave();" />
-<a href="#view" onclick="location.reload(true);"><img src="/doc/images/eye.gif"/></a>
+<a href="#view" onclick="location.reload(true);"><img src="/doc/files/common/images/eye.gif"/></a>
 <input type="submit" value="goto new" id="gotonew" onclick="OnGotoNew();"/>
 
 <script type="text/javascript">
@@ -1624,8 +1635,8 @@ function psexec(phpfile) {
 <table width="100%" style="clear: both;">
   <tr>
     <td><hr /></td>
-    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=specific-here.inc&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/images/notepad-plus-plus.gif"/></a>
-    <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>specific-here.inc");  return false;'><img src="/doc/images/text.png"/></a>
+    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=specific-here.inc&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/files/common/images/notepad-plus-plus.gif"/></a>
+    <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>specific-here.inc");  return false;'><img src="/doc/files/common/images/text.png"/></a>
 	&nbsp;<strong>Saved commands specific to this &#34;<script>document.write("<?php echo $prjname; ?>");</script>&#34; project </strong><small>(stored in web page, see specific-here.inc, runs on Windows server)</small></td>
     <td><hr /></td>
   </tr>
@@ -1658,8 +1669,8 @@ fclose($handle);
 <table width="100%" style="clear: both;">
   <tr>
     <td><hr /></td>
-    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><a href="#view"><span><img src="/doc/images/eye.gif"></span></a>&nbsp;<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" /></span>&nbsp;<strong>Frequent Edit</strong>&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.recentedit&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/images/notepad-plus-plus.gif" title="Edit this section"/></a>
-	    <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>.recentedit");  return false;'><img src="/doc/images/text.png"/></a>
+    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><a href="#view"><span><img src="/doc/files/common/images/eye.gif"></span></a>&nbsp;<img src="/doc/files/common/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" /></span>&nbsp;<strong>Frequent Edit</strong>&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.recentedit&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/files/common/images/notepad-plus-plus.gif" title="Edit this section"/></a>
+	    <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>.recentedit");  return false;'><img src="/doc/files/common/images/text.png"/></a>
 <script>
 function recentedit_plus() {
 // rajouter le contenu de l'input field inpg
@@ -1668,16 +1679,16 @@ var search_or_line_number = document.getElementById('inpg').value;
 window.open('/doc/files/common/jquery-fileTree/pickrecentedit.php?drive=c&param1='+search_or_line_number+'&parent=<?php echo $display_link;?>&headpath=:/UniServer/www/doc/files','1481656702602','width=550,height=750,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');
 }
 </script>
-		&nbsp;<a href="/doc/files/common/jquery-fileTree/pickrecentedit.php?drive=c&parent=<?php echo $display_link;?>&headpath=:/UniServer/www/doc/files" target="pickf" onclick="recentedit_plus(); return false;"><img src="/doc/images/add_file.png" title="C:\"/></a>
+		&nbsp;<a href="/doc/files/common/jquery-fileTree/pickrecentedit.php?drive=c&parent=<?php echo $display_link;?>&headpath=:/UniServer/www/doc/files" target="pickf" onclick="recentedit_plus(); return false;"><img src="/doc/files/common/images/add_file.png" title="C:\"/></a>
 	<!--
-	&nbsp;&nbsp;<a href="/doc/files/common/jquery-fileTree/pickrecentedit.php?drive=//&parent=<?php echo $display_link;?>&headpath=mlerman-vm-mint/lfiles" target="pickf"><img src="/doc/images/add_file.png" title="M:\"/></a> 
+	&nbsp;&nbsp;<a href="/doc/files/common/jquery-fileTree/pickrecentedit.php?drive=//&parent=<?php echo $display_link;?>&headpath=mlerman-vm-mint/lfiles" target="pickf"><img src="/doc/files/common/images/add_file.png" title="M:\"/></a> 
 	-->
 	<small>Search string or line number:</small>&nbsp;<input size="6" id="inpg"/>
 	</td>
     <td><hr /></td>
   </tr>
 </table>
-<img src="/doc/images/EditData16.png" title="Drag and drop full file path in this field" style="float: left;" /><span style="float: left;">&nbsp;</span>
+<img src="/doc/files/common/images/EditData16.png" title="Drag and drop full file path in this field" style="float: left;" /><span style="float: left;">&nbsp;</span>
 <form name="faddedit" method="get" action="/doc/files/common/addedit.php"  style="float: left;" >
 <input type="text" name="path" id="dropedit" onmouseout="onInputChgEdit(this.value)" onblur="onInputChgEdit(this.value)" size="200" />
 <input type="hidden" name="parent" value=<?php echo $display_link;?> />
@@ -1719,7 +1730,7 @@ if ($feu!="") {
 <table width="100%">
   <tr>
     <td><hr /></td>
-    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><span><a href="#view"><span class="winlink" ><img src="/doc/images/eye.gif"></span></a>&nbsp;<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<strong>Formatted external URL </strong></span></td>
+    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><span><a href="#view"><span class="winlink" ><img src="/doc/files/common/images/eye.gif"></span></a>&nbsp;<img src="/doc/files/common/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<strong>Formatted external URL </strong></span></td>
     <td><hr /></td>
   </tr>
 </table>
@@ -1739,9 +1750,9 @@ if ( file_exists("/UniServer/www".$dir_loc."/scr1.png"))
     <td style="width:1px; padding: 0 10px; white-space: nowrap;">
       <span>
 	<a href="#view"><span class="winlink" >
-	  <img src="/doc/images/eye.gif"></a>
+	  <img src="/doc/files/common/images/eye.gif"></a>
 	  </span>
-	  &nbsp;<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />
+	  &nbsp;<img src="/doc/files/common/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />
 	  &nbsp;
 	  <strong>
 	    <a nohref="" style="cursor:pointer" onclick="window.open('/doc/files//Engineering/ENVIRONMENT/PHP_SERVER/Image-Gallery-From-Folder-PHP/index.php?HOME_DIRECTORY=<?php echo $proj_dir;?>','gallery','width=1200,height=600,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;">Screenshots</a>
@@ -1763,7 +1774,7 @@ if ( file_exists("/UniServer/www".$dir_loc."/scr1.png"))
 <table width="100%">
   <tr>
     <td><hr /></td>
-    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><span><a href="#view"><span class="winlink" ><img src="/doc/images/eye.gif"></span></a>&nbsp;<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<strong>Windows batch files in this &#34;<script>document.write("<?php echo $prjname; ?>");</script>&#34; project </strong><small>(non-interactive, stored in batch files, runs on Windows server)</small></span></td>
+    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><span><a href="#view"><span class="winlink" ><img src="/doc/files/common/images/eye.gif"></span></a>&nbsp;<img src="/doc/files/common/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<strong>Windows batch files in this &#34;<script>document.write("<?php echo $prjname; ?>");</script>&#34; project </strong><small>(non-interactive, stored in batch files, runs on Windows server)</small></span></td>
     <td><hr /></td>
   </tr>
 </table>
@@ -1810,14 +1821,14 @@ doc.close();
   <tr>
     <td><hr /></td>
     <td style="width:1px; padding: 0 10px; white-space: nowrap;">
-		<img src="/doc/images/up.png" onclick="window.scrollTo(0, 0);" style="cursor:pointer" title="Scroll all the way up">
-		&nbsp;<a href="#view"><img src="/doc/images/eye.gif"></a>&nbsp;<a href="#feu"><img src="/doc/images/link-icon.gif" onclick="location.reload(true);"></a>
-	    &nbsp;<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />
-		<img src="/doc/images/detach16.gif" onclick="open_div_in_window();">
+		<img src="/doc/files/common/images/up.png" onclick="window.scrollTo(0, 0);" style="cursor:pointer" title="Scroll all the way up">
+		&nbsp;<a href="#view"><img src="/doc/files/common/images/eye.gif"></a>&nbsp;<a href="#feu"><img src="/doc/files/common/images/link-icon.gif" onclick="location.reload(true);"></a>
+	    &nbsp;<img src="/doc/files/common/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />
+		<img src="/doc/files/common/images/detach16.gif" onclick="open_div_in_window();">
 		&nbsp;<span class="winlink" >
 		<strong>Interactive windows batch files in this &#34;<script>document.write("<?php echo $prjname; ?>");</script>&#34; project </strong>
 		<small>(download and run local)</small>
-		&nbsp;<input size="6" id="addf" value="ui_test.run"/><a href="#" onclick="AddFile('addf');"><img src="/doc/images/add_file.png"></a>  
+		&nbsp;<input size="6" id="addf" value="ui_test.run"/><a href="#" onclick="AddFile('addf');"><img src="/doc/files/common/images/add_file.png"></a>  
         <div class="checkbox_wrapper">
             <input type="checkbox" class="cd_box" name=".ckcd" <?php echo file_get_contents($proj_dir."/.ckcd"); ?> onclick="getFileFromServer('/doc/files/common/write_ckfile.php?target=<?php echo $proj_dir."/.ckcd"; ?>&value='+this.checked, function(text){ show_write(text)}); location.reload(true);"/>
             <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd</label>
@@ -1897,7 +1908,7 @@ if ($handle = opendir($dir)) {
         if ($file != '.' && $file != '..') {
 			if(!is_dir($dir.'/'.$file)) {		// don't display directories
 				$rest = strtoupper(substr($file, -4));
-				if(($rest==".BAT") || ($rest==".RUN") || ($rest==".LNK")) {							// display only .bat files
+				if( /*($rest==".BAT") || */($rest==".RUN") || ($rest==".LNK")) {							// display only .bat files
 					$admin=0;
 					if (substr($file,0,3)=="ai_") $admin=1;
 					if((substr($file,0,3)=="ui_")||($admin)||($rest==".LNK")) {			// only interactive commands
@@ -1917,21 +1928,21 @@ if ($handle = opendir($dir)) {
 					}
 						echo '<a class="winlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dir).'&admin='.$admin.'" onclick="this.href=this.href+\'&param1=\'+document.getElementById(\'cmdinput\').value;"   >'.$file.'</a>'
 						// edit icon:
-							.' <a class="winlink" href="/doc/files/common/downloadfile.php?fname=ui_edit_this.run&targetdir='.realpath($dir).'&targetfile='.$file.'&perma='.realpath($dirperma).'"><img src="/doc/images/notepad-plus-plus.gif"/></a>'
-							.'<a href="#" onclick=\'openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "'.$urldir.$file.'");  return false;\'><img src="/doc/images/text.png"/></a>'
+							.' <a class="winlink" href="/doc/files/common/downloadfile.php?fname=ui_edit_this.run&targetdir='.realpath($dir).'&targetfile='.$file.'&perma='.realpath($dirperma).'"><img src="/doc/files/common/images/notepad-plus-plus.gif"/></a>'
+							.'<a href="#" onclick=\'openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "'.$urldir.$file.'");  return false;\'><img src="/doc/files/common/images/text.png"/></a>'
 							
 						// view icon xxx                                                                                                                 // window.open replace with alert to test
-							.'<a id="view'.$i.'" class="inline" href="/viewfile/viewdos.php?fname='.$file.'&targetdir='.$dir.'" onclick="javascript:void window.open(\'/viewfile/viewdos.php?fname='.$file.'&targetdir='.$dir.'\',\'1481602525735\',\'width=980,height=550,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=150,top=50\'); return false;"><img src="/doc/images/view.png" '.$onmouseover_view.' /></a>'
+							.'<a id="view'.$i.'" class="inline" href="/viewfile/viewdos.php?fname='.$file.'&targetdir='.$dir.'" onclick="javascript:void window.open(\'/viewfile/viewdos.php?fname='.$file.'&targetdir='.$dir.'\',\'1481602525735\',\'width=980,height=550,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=150,top=50\'); return false;"><img src="/doc/files/common/images/view.png" '.$onmouseover_view.' /></a>'
 						// windows psexec icon
-							.'<a href="/doc/files/common/psexec.php?targetdir='.realpath($dir).'&targetfile='.$file.'&urldir='.$urldir.'&host='.$host.'"  onclick=\'psexec(this.href); return false;\' ><img src="/doc/images/Windows16.png" title="System" /></a>'
+							.'<a href="/doc/files/common/psexec.php?targetdir='.realpath($dir).'&targetfile='.$file.'&urldir='.$urldir.'&host='.$host.'"  onclick=\'psexec(this.href); return false;\' ><img src="/doc/files/common/images/Windows16.png" title="System" /></a>'
 						// for debug showing the output, without return false
-						//	.'<a href="/doc/files/common/psexec.php?targetdir='.realpath($dir).'&targetfile='.$file.'&urldir='.$urldir.'&host='.$host.'"  onclick=\'psexec(this.href); \' ><img src="/doc/images/Windows16.png"/></a>'
+						//	.'<a href="/doc/files/common/psexec.php?targetdir='.realpath($dir).'&targetfile='.$file.'&urldir='.$urldir.'&host='.$host.'"  onclick=\'psexec(this.href); \' ><img src="/doc/files/common/images/Windows16.png"/></a>'
 						// wine icon
-							.'<a class="linuxlink" href="/doc/files/common/downloadfile.php?fname=wine_this.rn&targetdir='.realpath($dir).'&targetfile='.$file.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath("permalinux").'"  ><img src="/doc/images/wine16.png"/></a>'
+							.'<a class="linuxlink" href="/doc/files/common/downloadfile.php?fname=wine_this.rn&targetdir='.realpath($dir).'&targetfile='.$file.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath("permalinux").'"  ><img src="/doc/files/common/images/wine16.png"/></a>'
 						// add comment bull icon
-							.'<a id="bulle'.$i.'" class="inline" href="/doc/files/common/downloadfile.php?fname='.($CurrOS!='Linux'?'ui_':'').'edit_this.'.($CurrOS!='Linux'?'run':'rn').'&targetdir='.realpath($dir).'&targetfile=.'.$file.'&perma='.realpath($dirperma).($CurrOS!='Linux'?'':'Linux').'"  ><img src="/doc/images/'.$str_bulle_icon_png.'"   '.$onmouseover.'/></a>'
+							.'<a id="bulle'.$i.'" class="inline" href="/doc/files/common/downloadfile.php?fname='.($CurrOS!='Linux'?'ui_':'').'edit_this.'.($CurrOS!='Linux'?'run':'rn').'&targetdir='.realpath($dir).'&targetfile=.'.$file.'&perma='.realpath($dirperma).($CurrOS!='Linux'?'':'Linux').'"  ><img src="/doc/files/common/images/'.$str_bulle_icon_png.'"   '.$onmouseover.'/></a>'
 						// add screenshot camera icon
-							.'&nbsp;<a class="winlink" href="/doc/files/common/downloadfile.php?fname=ui_screenshot.run&targetdir='.realpath($dir).'&urldir='.$urldir.'&targetfile=.'.$file.'&perma='.realpath($dirperma).'"><img src="/doc/images/screenshot.png"/></a>';
+							.'&nbsp;<a class="winlink" href="/doc/files/common/downloadfile.php?fname=ui_screenshot.run&targetdir='.realpath($dir).'&urldir='.$urldir.'&targetfile=.'.$file.'&perma='.realpath($dirperma).'"><img src="/doc/files/common/images/screenshot.png"/></a>';
 						echo '<br/>';
 						$i++;
 					}
@@ -1946,7 +1957,7 @@ if ($handle = opendir($dir)) {
 <table width="100%">
   <tr>
     <td><hr /></td>
-    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><img src="/doc/images/refresh.gif"onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<span class="linuxlink" ><strong>Linux shell files in this &#34;<script>document.write("<?php echo $prjname; ?>");</script>&#34; project </strong><small>(download and run local)</small>&nbsp;<input size="6" id="addfl" value="test.rn"/><a href="#" onclick="AddFile('addfl');"><img src="/doc/images/add_file.png"></a>
+    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><img src="/doc/files/common/images/refresh.gif"onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<span class="linuxlink" ><strong>Linux shell files in this &#34;<script>document.write("<?php echo $prjname; ?>");</script>&#34; project </strong><small>(download and run local)</small>&nbsp;<input size="6" id="addfl" value="test.rn"/><a href="#" onclick="AddFile('addfl');"><img src="/doc/files/common/images/add_file.png"></a>
 	
         <div class="checkbox_wrapper">
             <input type="checkbox" class="run_box" name=".cklrun" <?php echo file_get_contents($proj_dir."/.cklrun"); ?> onclick="getFileFromServer('/doc/files/common/write_ckfile.php?target=<?php echo $proj_dir."/.cklrun"; ?>&value='+this.checked, function(text){ show_write(text)}); location.reload(true);"/>
@@ -1980,11 +1991,11 @@ if ($handle = opendir($dir)) {
 				if(($rest==".SH") || ($rest==".RN")) {							// display only .bat files
 						$str_edit="";
 						if($CurrOS=="Linux") {
-							$str_edit = ' <a class="linuxlink" href="/doc/files/common/downloadfile.php?fname=edit_this.rn&targetdir='.realpath($dir).'&targetfile='.$file.'&perma='.realpath("permalinux").'"><img src="/doc/images/notepad-plus-plus.gif"/></a>';
+							$str_edit = ' <a class="linuxlink" href="/doc/files/common/downloadfile.php?fname=edit_this.rn&targetdir='.realpath($dir).'&targetfile='.$file.'&perma='.realpath("permalinux").'"><img src="/doc/files/common/images/notepad-plus-plus.gif"/></a>';
 						} else {
-							$str_edit = ' <a class="winlink" href="/doc/files/common/downloadfile.php?fname=ui_edit_this.run&targetdir='.realpath($dir).'&targetfile='.$file.'&perma='.realpath("perma").'"><img src="/doc/images/notepad-plus-plus.gif"/></a>';
+							$str_edit = ' <a class="winlink" href="/doc/files/common/downloadfile.php?fname=ui_edit_this.run&targetdir='.realpath($dir).'&targetfile='.$file.'&perma='.realpath("perma").'"><img src="/doc/files/common/images/notepad-plus-plus.gif"/></a>';
 						}
-						$str_edit.='<a href="#" onclick=\'openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "'.$urldir.$file.'");  return false;\'><img src="/doc/images/text.png"/></a>';
+						$str_edit.='<a href="#" onclick=\'openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "'.$urldir.$file.'");  return false;\'><img src="/doc/files/common/images/text.png"/></a>';
 					if (file_exists ( $dir.'/.'.$file )) {	// prevent error messages in console 404 not found
 							$onmouseover='onmouseover="getFileFromServer('.'\'.'.$file.'\''.', function(text){ show(text, this, '.$i.', \'lbulle\')});"';
 					} else {
@@ -2006,16 +2017,16 @@ if ($handle = opendir($dir)) {
 							// edit
 							.$str_edit
 							// view 
-							.'<a id="lview'.$i.'" class="inline" href="/viewfile/viewdos.php?fname='.$file.'&targetdir='.$dir.'" onclick="javascript:void window.open(\'/viewfile/viewdos.php?fname='.$file.'&targetdir='.$dir.'\',\'1481602525735\',\'width=980,height=550,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=150,top=50\'); return false;"><img src="/doc/images/view.png" '.$onmouseover_view.' /></a>'
+							.'<a id="lview'.$i.'" class="inline" href="/viewfile/viewdos.php?fname='.$file.'&targetdir='.$dir.'" onclick="javascript:void window.open(\'/viewfile/viewdos.php?fname='.$file.'&targetdir='.$dir.'\',\'1481602525735\',\'width=980,height=550,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=150,top=50\'); return false;"><img src="/doc/files/common/images/view.png" '.$onmouseover_view.' /></a>'
 							// run a linux gui with windows psexec
-							.'<a class="winlink" href="/doc/files/common/runinlinux.php?targetdir='.realpath($dir).'&targetfile='.$file.'&urldir='.$urldir.'&host='.$host.'"  onclick=\'psexec(this.href); return false;\' ><img src="/doc/images/linux.png"/></a>'
-							//.'<a class="winlink" href="/doc/files/common/runinlinux.php?targetdir='.realpath($dir).'&targetfile='.$file.'&urldir='.$urldir.'&host='.$host.'"  onclick=\'psexec(this.href); \' ><img src="/doc/images/linux.png"/></a>'
+							.'<a class="winlink" href="/doc/files/common/runinlinux.php?targetdir='.realpath($dir).'&targetfile='.$file.'&urldir='.$urldir.'&host='.$host.'"  onclick=\'psexec(this.href); return false;\' ><img src="/doc/files/common/images/linux.png"/></a>'
+							//.'<a class="winlink" href="/doc/files/common/runinlinux.php?targetdir='.realpath($dir).'&targetfile='.$file.'&urldir='.$urldir.'&host='.$host.'"  onclick=\'psexec(this.href); \' ><img src="/doc/files/common/images/linux.png"/></a>'
 							// cygwin
-							.'<a class="winlink" href="/doc/files/common/downloadfile.php?fname=ui_run_with_cygwin.run&targetdir='.realpath($dir).'&targetfile='.$file.'&perma='.realpath("permalinux").'"><img src="/doc/images/cygwin16.png"/></a>'
+							.'<a class="winlink" href="/doc/files/common/downloadfile.php?fname=ui_run_with_cygwin.run&targetdir='.realpath($dir).'&targetfile='.$file.'&perma='.realpath("permalinux").'"><img src="/doc/files/common/images/cygwin16.png"/></a>'
 							// add to constructor
 							.'&nbsp;<a href="/doc/files/common/copy_to_constructor.php?fname='.$file.'&targetdir='.$dir.'&urldir='.$urldir.'&host='.$host.'." onclick="javascript:void window.open(\'/doc/files/common/copy_to_constructor.php?fname='.$file.'&targetdir='.$dir.'&urldir='.$urldir.'&host='.$host.'\',\'1481602525735\',\'width=980,height=550,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=150,top=50\'); return false;"><img src="/doc/files/common/images/constructor.ico" title="Add this to _constructor" /></a>'
 							// add comment bull icon
-							.'&nbsp;<a id="lbulle'.$i.'" class="inline" href="/doc/files/common/downloadfile.php?fname='.($CurrOS!='Linux'?'ui_':'').'edit_this.'.($CurrOS!='Linux'?'run':'rn').'&targetdir='.realpath($dir).'&targetfile=.'.$file.'&perma='.realpath("perma").($CurrOS!='Linux'?'':'Linux').'"  ><img src="/doc/images/'.$str_bulle_icon_png.'"   '.$onmouseover.'/></a>';
+							.'&nbsp;<a id="lbulle'.$i.'" class="inline" href="/doc/files/common/downloadfile.php?fname='.($CurrOS!='Linux'?'ui_':'').'edit_this.'.($CurrOS!='Linux'?'run':'rn').'&targetdir='.realpath($dir).'&targetfile=.'.$file.'&perma='.realpath("perma").($CurrOS!='Linux'?'':'Linux').'"  ><img src="/doc/files/common/images/'.$str_bulle_icon_png.'"   '.$onmouseover.'/></a>';
 							
 						echo '<br/>';
 						$i++;
@@ -2031,7 +2042,7 @@ if ($handle = opendir($dir)) {
 <table width="100%">
   <tr>
     <td><hr /></td>
-    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><a href="#view"><span><img src="/doc/images/eye.gif"></a>&nbsp;<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<strong>Perma commands </strong><small>(runs on Windows server)</small></td>
+    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><a href="#view"><span><img src="/doc/files/common/images/eye.gif"></a>&nbsp;<img src="/doc/files/common/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<strong>Perma commands </strong><small>(runs on Windows server)</small></td>
     <td><hr /></td>
   </tr>
 </table>
@@ -2045,8 +2056,8 @@ if ($handle = opendir($dir)) {
   <tr>
     <td><hr /></td>
     <td style="width:1px; padding: 0 10px; white-space: nowrap;">
-      <a href="#view"><span><img src="/doc/images/eye.gif"></a>
-      &nbsp;<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload"  />
+      <a href="#view"><span><img src="/doc/files/common/images/eye.gif"></a>
+      &nbsp;<img src="/doc/files/common/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload"  />
       &nbsp;<strong>Save clipboard </strong><small>label:</small>&nbsp;<input size="6" id="inph" onblur="updateLabel(this.value);"/></td>
     <td><hr /></td>
   </tr>
@@ -2059,7 +2070,7 @@ if ($handle = opendir($dir)) {
     }
 </script>
 
-<img src="/doc/images/copyclip.png" title="Drag and drop clipboard text in this field" style="float: left;" /><span style="float: left;">&nbsp;</span>
+<img src="/doc/files/common/images/copyclip.png" title="Drag and drop clipboard text in this field" style="float: left;" /><span style="float: left;">&nbsp;</span>
 
 <form name="faddclip" method="get" action="/doc/files/common/addclip.php"  style="float: left;" >
 <input type="text" name="path" id="dropclip" data-clipboard-text="something" onmouseout="bindme(this.id, 1); onInputChgClip(this.value);" onblur="onInputChgClip(this.value);" size="104%" />
@@ -2073,8 +2084,8 @@ if ($handle = opendir($dir)) {
   <tr>
     <td><hr /></td>
     <td style="width:1px; padding: 0 10px; white-space: nowrap;">
-      <a href="#view"><span><img src="/doc/images/eye.gif"></a>
-      &nbsp;<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload"  />
+      <a href="#view"><span><img src="/doc/files/common/images/eye.gif"></a>
+      &nbsp;<img src="/doc/files/common/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload"  />
       &nbsp;<strong>Perma batch </strong><small>PARAM1:</small>&nbsp;<input size="6" id="inpf"/></td>
     <td><hr /></td>
   </tr>
@@ -2156,14 +2167,14 @@ echo "<hr/>\n";
 <table width="100%">
   <tr>
     <td><hr /></td>
-    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<strong>Drag and drop url links in the box below</strong>&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.links&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/images/notepad-plus-plus.gif" title="Edit this section"/></a>
-    <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>.links");  return false;'><img src="/doc/images/text.png"/></a>
+    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><img src="/doc/files/common/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<strong>Drag and drop url links in the box below</strong>&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.links&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/files/common/images/notepad-plus-plus.gif" title="Edit this section"/></a>
+    <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>.links");  return false;'><img src="/doc/files/common/images/text.png"/></a>
 	
 	</td>
     <td><hr /></td>
   </tr>
 </table>
-<img src="/doc/images/link.png" title="Drag and drop url links in this field" style="float: left;" /><span style="float: left;">&nbsp;</span>
+<img src="/doc/files/common/images/link.png" title="Drag and drop url links in this field" style="float: left;" /><span style="float: left;">&nbsp;</span>
 <form name="faddlink" method="get" action="/doc/files/common/addlink.php" style="float: left;" >
 <input type="text" name="url" id="idfaddlink" onmouseout="onInputChg(this.value)" onblur="onInputChg(this.value)" size="200" />
 <input type="hidden" name="parent" value=<?php echo $display_link;?> />
@@ -2175,14 +2186,14 @@ echo "<hr/>\n";
 <table width="100%">
   <tr>
     <td><hr /></td>
-    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<strong>Make a sound alert when the following file changes</strong>&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.sound&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/images/notepad-plus-plus.gif" title="Edit this section"/></a>
-    <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>.sound");  return false;'><img src="/doc/images/text.png"/></a>
+    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><img src="/doc/files/common/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<strong>Make a sound alert when the following file changes</strong>&nbsp;<a href="/doc/files/common/downloadfile.php?fname=<?php if($CurrOS!='Linux') echo 'ui_';?>edit_this.<?php if($CurrOS!='Linux') echo 'run'; else echo 'rn'?>&targetdir=<?php echo realpath($dir); ?>&targetfile=.sound&perma=<?php if($CurrOS!='Linux') echo realpath('perma'); else echo realpath('permalinux'); ?>"><img src="/doc/files/common/images/notepad-plus-plus.gif" title="Edit this section"/></a>
+    <a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "<?php echo $urldir; ?>.sound");  return false;'><img src="/doc/files/common/images/text.png"/></a>
 	</td>
     <td><hr /></td>
   </tr>
 </table>
 
-<img src="/doc/images/speaker.png" title="Drag and drop full file path in this field" style="float: left;" /><span style="float: left;">&nbsp;</span>
+<img src="/doc/files/common/images/speaker.png" title="Drag and drop full file path in this field" style="float: left;" /><span style="float: left;">&nbsp;</span>
 <form name="faddsound" method="get" action="/doc/files/common/addsound.php" style="float: left;" >
 <input type="text" name="path" id="dropsound" onmouseout="onInputChgSound(this.value)" onblur="onInputChgSound(this.value)" size="200" />
 <input type="hidden" name="parent" value=<?php echo $display_link;?> />
@@ -2198,7 +2209,7 @@ $path_sound = str_replace("\\", "\\\\", $path_sound);
 <table width="100%">
   <tr>
     <td><hr /></td>
-    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<strong>Codiad</strong></td>
+    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><img src="/doc/files/common/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<strong>Codiad</strong></td>
     <td><hr /></td>
   </tr>
 </table>
@@ -2252,7 +2263,7 @@ function tick_ftime_check() {
 <table width="100%">
   <tr>
     <td><hr /></td>
-    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<strong>Drag and drop files in the iframe below</strong></td>
+    <td style="width:1px; padding: 0 10px; white-space: nowrap;"><img src="/doc/files/common/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" />&nbsp;<strong>Drag and drop files in the iframe below</strong></td>
     <td><hr /></td>
   </tr>
 </table>
@@ -2350,29 +2361,32 @@ document.write(result);
 <hr/>
 
 <div id="fixed-div"> <!-- http://mlerman-lap/s/N  -->
-<img src="/doc/images/up.png" onclick="window.scrollTo(0, 0);" style="cursor:pointer" title="Scroll all the way up" /><br/><br/>
-<a href="#view" ><span><img src="/doc/images/eye.gif" title="Scroll to view programs"></a><br/><br/>
-<a href="#" id="lastrecentproj2" onmouseover="getLastProject();" title="most recent project not set"><img src="/doc/images/recent16.png"  /></a><br/><br/>
+<img src="/doc/files/common/images/up.png" onclick="window.scrollTo(0, 0);" style="cursor:pointer" title="Scroll all the way up" /><br/><br/>
+<a href="#view" ><span><img src="/doc/files/common/images/eye.gif" title="Scroll to view programs"></a><br/><br/>
+<a href="/doc/files/common/env.php&targetdir=<?php echo $dir; ?>" target="env" onclick="javascript:void window.open('/doc/files/common/env.php?targetdir=<?php echo $dir; ?>','1481656702602','width=800,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=100,top=50');return false;"><img src="/doc/files/common/images/Programming-Variable-icon16.png" title="Manage environment variables" /></a><br/><br/>
+<!--
+<a href="#" id="lastrecentproj2" onmouseover="getLastProject();" title="most recent project not set"><img src="/doc/files/common/images/recent16.png"  /></a><br/><br/>
+-->
 <script>
 var str10="";
 </script>
-<a href="/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/" target="chartime" onclick="javascript:void window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/','1481656702602','width=800,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=600,top=50');return false;"><img src="/doc/images/copyclip.png" title="frequent copy paste" onmouseover="customAlertRight(str10,'10000','50','300')" /></a>
+<a href="/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/" target="chartime" onclick="javascript:void window.open('/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/frequent_copy_paste/','1481656702602','width=800,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=600,top=50');return false;"><img src="/doc/files/common/images/copyclip.png" title="frequent copy paste" onmouseover="customAlertRight(str10,'10000','50','300')" /></a>
 <div id="prevclip">none</div>
 <br/>
 
-<img src="/doc/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" /><br/><br/>
+<img src="/doc/files/common/images/refresh.gif" onclick="location.reload(true);" style="cursor:pointer" title="Reload" /><br/><br/>
 <?php
 
 if($CurrOS!="Linux")
 {
 	$dirp="perma";
 	$file="ui_total_commander.run";
-	echo '&nbsp;<a class="winlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dir).'&targetfile='.$prjname.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath($dirp).'" '.$onmouseover.'  onclick="this.href=this.href+\'&param1=\'+document.getElementById(\'inpf\').value;" ><img src="/doc/images/totalcommander16.png" title="Total commander" /></a><br/><br/>';
+	echo '&nbsp;<a class="winlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dir).'&targetfile='.$prjname.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath($dirp).'" '.$onmouseover.'  onclick="this.href=this.href+\'&param1=\'+document.getElementById(\'inpf\').value;" ><img src="/doc/files/common/images/totalcommander16.png" title="Total commander" /></a><br/><br/>';
 } else
 {
 	$dirpm="permalinux";
 	$file="krusaderHere.rn";
-	echo '<a class="linuxlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dirlocal).'&targetfile='.$prjname.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath($dirpm).'"  onmouseover="getFileFromServer('.'\'.'.$file.'\''.', function(text){ show(text, this, -1)});"><img src="/doc/images/krusader16.png" title="krusader" /></a><br/><br/>';
+	echo '<a class="linuxlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dirlocal).'&targetfile='.$prjname.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath($dirpm).'"  onmouseover="getFileFromServer('.'\'.'.$file.'\''.', function(text){ show(text, this, -1)});"><img src="/doc/files/common/images/krusader16.png" title="krusader" /></a><br/><br/>';
 }
 
 
@@ -2380,12 +2394,12 @@ if($CurrOS!="Linux")
 {
 	$dirp="perma";
 	$file="ui_copy_path_to_clipboard.run";
-	echo '&nbsp;<a class="winlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dir).'&targetfile='.$prjname.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath($dirp).'" '.$onmouseover.'  onclick="this.href=this.href+\'&param1=\'+document.getElementById(\'inpf\').value;" ><img src="/doc/images/clip16.png" title="Copy path to clipboard" /></a><br/><br/>';
+	echo '&nbsp;<a class="winlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dir).'&targetfile='.$prjname.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath($dirp).'" '.$onmouseover.'  onclick="this.href=this.href+\'&param1=\'+document.getElementById(\'inpf\').value;" ><img src="/doc/files/common/images/clip16.png" title="Copy path to clipboard" /></a><br/><br/>';
 } else
 {
 	$dirpm="permalinux";
 	$file="copy_path_to_clipboard.rn";
-	echo '<a class="linuxlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dirlocal).'&targetfile='.$prjname.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath($dirpm).'"  onmouseover="getFileFromServer('.'\'.'.$file.'\''.', function(text){ show(text, this, -1)});"><img src="/doc/images/clip16.png" title="Copy path to clipboard" /></a><br/><br/>';
+	echo '<a class="linuxlink" href="/doc/files/common/downloadfile.php?fname='.$file.'&targetdir='.realpath($dirlocal).'&targetfile='.$prjname.'&urldir='.$urldir.'&host='.$host.'&perma='.realpath($dirpm).'"  onmouseover="getFileFromServer('.'\'.'.$file.'\''.', function(text){ show(text, this, -1)});"><img src="/doc/files/common/images/clip16.png" title="Copy path to clipboard" /></a><br/><br/>';
 }
 
 
@@ -2402,7 +2416,7 @@ if($CurrOS!="Linux")
 }
 
 ?>
-<a href="#bottom"><img src="/doc/images/dn.png" title="Scroll all the way down"/></a><br/><br/>
+<a href="#bottom"><img src="/doc/files/common/images/dn.png" title="Scroll all the way down"/></a><br/><br/>
 </div>
 
 <div id="fixed-div-top">
@@ -2596,6 +2610,9 @@ for (i = 0; i < listItemAnchors.length; i++) {
 	  }
 	if(s.indexOf("run.rn") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/files/common/images/application_run.png' title='"+s+"'/>";
+	  }
+	if(s.indexOf("ui_rerun.run") > -1) {
+	  listItemAnchors[i].innerHTML="<img src='/doc/files/common/images/application_re_run.png' title='"+s+"'/>";
 	  }
 	if(s.indexOf("ai_run") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/files/common/images/application_run_admin.png' title='"+s+"'/>";
@@ -2857,6 +2874,9 @@ for (i = 0; i < listItemAnchors.length; i++) {
 	if(s.indexOf("codecompare.r") > -1) {
 	  listItemAnchors[i].innerHTML="<img src='/doc/files/common/images/codecompare.png' title='"+s+"'/>";
 	  }
+	if(s.indexOf("remove.r") > -1) {
+	  listItemAnchors[i].innerHTML="<img src='/doc/files/common/images/remove.png' title='"+s+"'/>";
+	  }
 }
 
 for (i = 0; i < listItemAnchors.length; i++) {
@@ -3057,14 +3077,14 @@ function openOnceTest(url, target, file){
     <a nohref="" onclick="testIce();" style="cursor: pointer">testIce()</a><br/><br/><br/>
 
 
-<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "/doc/files/common/permalinux/mntFiles.rn");  return false;'><img src="/doc/images/text.png" title="mntFiles.rn"/></a>&nbsp; 
-<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "/doc/files/common/open-command-prompt-here.html");  return false;'><img src="/doc/images/text.png" title="open-command-prompt-here.html"/></a>&nbsp; 
-<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "/doc/files/common/downloadfile.php");  return false;'><img src="/doc/images/text.png" title="downloadfile.php"/></a>&nbsp; 
-<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "/doc/files/common/instantedithead.js");  return false;'><img src="/doc/images/text.png" title="instantedithead.js"/></a>&nbsp; 
-<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "/doc/files/common/updatehead.php");  return false;'><img src="/doc/images/text.png" title="updatehead.php"/></a>&nbsp; 
-<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "/viewfile/viewdos.php");  return false;'><img src="/doc/images/text.png" title="viewdos.php"/></a>&nbsp; 
-<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "/doc/files/common/write_ckfile.php");  return false;'><img src="/doc/images/text.png" title="write_ckfile.php"/></a>&nbsp; 
-<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "/doc/files/common/psexec.php");  return false;'><img src="/doc/images/text.png" title="psexec.php"/></a>&nbsp; 
+<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "/doc/files/common/permalinux/mntFiles.rn");  return false;'><img src="/doc/files/common/images/text.png" title="mntFiles.rn"/></a>&nbsp; 
+<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "/doc/files/common/open-command-prompt-here.html");  return false;'><img src="/doc/files/common/images/text.png" title="open-command-prompt-here.html"/></a>&nbsp; 
+<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "/doc/files/common/downloadfile.php");  return false;'><img src="/doc/files/common/images/text.png" title="downloadfile.php"/></a>&nbsp; 
+<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "/doc/files/common/instantedithead.js");  return false;'><img src="/doc/files/common/images/text.png" title="instantedithead.js"/></a>&nbsp; 
+<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "/doc/files/common/updatehead.php");  return false;'><img src="/doc/files/common/images/text.png" title="updatehead.php"/></a>&nbsp; 
+<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "/viewfile/viewdos.php");  return false;'><img src="/doc/files/common/images/text.png" title="viewdos.php"/></a>&nbsp; 
+<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "/doc/files/common/write_ckfile.php");  return false;'><img src="/doc/files/common/images/text.png" title="write_ckfile.php"/></a>&nbsp; 
+<a href="#" onclick='openOnce("/doc/files/Engineering/ENVIRONMENT/PHP_SERVER/ICEcoder2/", "editor", "/doc/files/common/psexec.php");  return false;'><img src="/doc/files/common/images/text.png" title="psexec.php"/></a>&nbsp; 
 <iframe id="other" src="/doc/files/common/othersites.php?urldir=<?php echo $urldir; ?>" />
 <br/><br/><br/>
 

@@ -1,0 +1,32 @@
+set "variable=C:/UniServer/www%URLDIR%
+set "variable=%variable:/=\%"
+rem start C:\"Program Files"\"Double Commander"\doublecmd.exe -C --no-console --no-splash %TARGETDIR% "%variable%"
+echo TARGETDIR %TARGETDIR%
+echo HOST %HOST%
+echo URLDIR %URLDIR%
+echo PRJNAME %PRJNAME%
+pause
+set PROXY_OPTION=-x 192.168.57.33:80
+rem set PROXY_OPTION=
+rem set HOST=laptop-7kqrmtc0
+set HOST=105.128.56.241
+cd %USERPROFILE%\Downloads
+if exist OK.zip del OK.zip /Q
+set DOWNURL="http://%HOST%/doc/files/common/zipfolder.php?fname=%PRJNAME%&targetdir=%TARGETDIR%&debug=12345678"
+
+echo %DOWNURL%
+C:\UniServer\www\doc\files\ThisPC\install_curl_static\curl.exe %PROXY_OPTION% -o OK.zip %DOWNURL%
+if not exist OK.zip goto error
+C:\UniServer\www\doc\files\ThisPC\install_zip\unzip.exe OK.zip -d c:\
+
+:clean
+if exist OK.zip del OK.zip /Q
+
+goto end
+:error
+echo OK.zip not found
+goto end
+
+:end
+echo finished,HOST is hardcoded to %HOST%
+pause
