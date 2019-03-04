@@ -23,41 +23,25 @@ rem type %THISPLACEBACKSLASH%\.public 2>&1
 find /c "checked" %THISPLACEBACKSLASH%\.public >nul
 if %errorlevel% equ 1 goto notpublic
 
-rem en fait it faut tester par rapport au network pas le nom de la machine
 if "%COMPUTERNAME%" == "LAPTOP-7KQRMTC0" ( rem echo this is LAPTOP-7KQRMTC0 WIN10LAP
   rem echo user is mlerman
   git config --global --unset http.proxy
-  goto set_proxy
-  rem goto done_proxy
-
 )
 
 if "%COMPUTERNAME%" == "WIN7-PC" ( rem echo this is WIN7-PC 
   rem echo user is mlerman
   git config --global --unset http.proxy
-  goto done_proxy
 )
 
 if "%COMPUTERNAME%" == "DESKTOP-MCQS4FT" ( rem echo this is WIN7-PC 
   rem echo user is mlerman
   git config --global --unset http.proxy
-  goto done_proxy
-
 )
 
 if "%COMPUTERNAME%" == "XSJMIKHAELL30" ( rem echo this is XSJMIKHAELL30 
   rem echo user is mikhaell
   git config --global http.proxy proxy:8080
-  goto done_proxy
 )
-
-:set_proxy
-call C:\UniServer\www\doc\files\common\global_settings\HTTP_PROXY.sh.bat
-call C:\UniServer\www\doc\files\common\global_settings\PROXY_PORT.sh.bat
-git config --global http.proxy %HTTP_PROXY%:%PROXY_PORT%
-
-
-:done_proxy
 
 
 
